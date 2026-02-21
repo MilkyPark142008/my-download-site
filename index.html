@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCL 启动器下载站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1e293b;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        .announcement {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .announcement-header {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #856404;
+        }
+        .announcement-content p {
+            margin-bottom: 0.5rem;
+        }
+        .note {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .welcome {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .welcome h1 {
+            font-size: 2.2rem;
+            color: #0d6efd;
+            margin-bottom: 0.5rem;
+        }
+        .welcome p {
+            font-size: 1.1rem;
+            color: #475569;
+        }
+        .card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            transition: transform 0.2s;
+            margin-bottom: 1.5rem;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #0d6efd;
+        }
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .version {
+            background: #e9ecef;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+        .size {
+            background: #e9ecef;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: #0d6efd;
+            color: white;
+            text-decoration: none;
+            border-radius: 2rem;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: background 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .download-btn:hover {
+            background: #0b5ed7;
+        }
+        .download-btn:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        .footer a {
+            color: #0d6efd;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 公告区（你可以自由修改文字） -->
+        <div class="announcement">
+            <div class="announcement-header">📢 重要公告</div>
+            <div class="announcement-content">
+                <p>这里是你的公告内容，可以修改成任何你想说的话。</p>
+                <p>例如：版本更新通知、防骗提醒、赞助感谢等。</p>
+                <p class="note">下载时请不要多次点击按钮，避免服务器压力。</p>
+            </div>
+        </div>
+
+        <!-- 欢迎区 -->
+        <div class="welcome">
+            <h1>🎉 FCL 启动器下载站 🎉</h1>
+            <p>每小时自动同步官方最新版本，无需手动更新。</p>
+        </div>
+
+        <!-- 下载卡片 -->
+        <div class="card" id="downloadCard">
+            <h2>FCL 启动器</h2>
+            <div class="info-row">
+                <span class="version" id="version">加载中...</span>
+                <span class="size" id="size">加载中...</span>
+            </div>
+            <a href="#" class="download-btn" id="downloadBtn" target="_blank">⬇️ 下载最新版</a>
+        </div>
+
+        <!-- 底部信息 -->
+        <div class="footer">
+            <p>如果喜欢这个站，可以 <a href="#">赞助</a> 或帮忙宣传！</p>
+            <p>数据每小时自动同步自 <a href="https://github.com/FCL-Team/FoldCraftLauncher" target="_blank">FCL-Team/FoldCraftLauncher</a></p>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            const versionEl = document.getElementById('version');
+            const sizeEl = document.getElementById('size');
+            const downloadBtn = document.getElementById('downloadBtn');
+
+            // 禁用按钮直到获取到数据
+            downloadBtn.style.pointerEvents = 'none';
+            downloadBtn.style.opacity = '0.6';
+            downloadBtn.textContent = '获取版本中...';
+
+            // 请求本地的 latest.json（和 index.html 在同一个仓库）
+            fetch('/latest.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`无法获取 latest.json (HTTP ${response.status})`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // 提取版本号
+                    const version = data.tag_name || '未知版本';
+                    versionEl.textContent = `版本: ${version}`;
+
+                    // 提取下载链接和文件大小
+                    let downloadUrl = '#';
+                    let fileSize = '未知大小';
+
+                    if (data.assets && data.assets.length > 0) {
+                        // 优先选取 .apk 文件，如果没有就取第一个
+                        const apkAsset = data.assets.find(asset => asset.name.endsWith('.apk'));
+                        const targetAsset = apkAsset || data.assets[0];
+
+                        if (targetAsset) {
+                            downloadUrl = targetAsset.browser_download_url;
+                            // 将字节转换为 MB，保留两位小数
+                            const sizeInMB = (targetAsset.size / (1024 * 1024)).toFixed(2);
+                            fileSize = `${sizeInMB} MB`;
+                        }
+                    }
+
+                    // 更新下载按钮和文件大小
+                    downloadBtn.href = downloadUrl;
+                    downloadBtn.textContent = '⬇️ 下载最新版';
+                    downloadBtn.style.pointerEvents = 'auto';
+                    downloadBtn.style.opacity = '1';
+
+                    sizeEl.textContent = `大小: ${fileSize}`;
+                })
+                .catch(error => {
+                    console.error('获取版本信息失败:', error);
+                    versionEl.textContent = '版本: 获取失败';
+                    sizeEl.textContent = '大小: 未知';
+                    downloadBtn.textContent = '暂无法获取下载链接';
+                    downloadBtn.style.pointerEvents = 'none';
+                    downloadBtn.style.opacity = '0.6';
+                });
+        })();
+    </script>
+</body>
+</html>
