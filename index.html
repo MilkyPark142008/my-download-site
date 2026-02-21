@@ -55,29 +55,6 @@
 .header p {
     font-size: 1rem;
     color: #475569;
-}
-/* 版本信息条 */
-.version-bar {
-    background: white;
-    border-radius: 30px;
-    padding: 10px 18px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    font-size: 0.95rem;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-.version-bar .version-tag {
-    background: #e9ecef;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-weight: 500;
-}
-.version-bar .update-time {
-    color: #6c757d;
 }/* 可折叠模块 - 简约文件夹风格 */
 .fcl-module {
     background: white;
@@ -119,6 +96,25 @@
     font-size: 0.9rem;
     color: #6c757d;
     margin-left: auto;
+}
+/* 模块内版本信息条 */
+.module-version {
+    background: #f1f5f9;
+    border-radius: 20px;
+    padding: 6px 12px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+}
+.module-version .version-tag {
+    background: #e2e8f0;
+    padding: 2px 10px;
+    border-radius: 16px;
+    font-weight: 500;
 }
 /* 下载卡片网格 */
 .download-grid {
@@ -220,13 +216,7 @@
         <div class="announcement">
             <h3>📢 公告</h3>
             <p>根据设备架构选择对应版本。下载请勿多次点击。</p>
-            <p class="note">最新更新：2026-02-21 18时37分</p>
-        </div>
-
-        <!-- 版本信息条（FCL专用） -->
-        <div class="version-bar" id="versionBar">
-            <span class="version-tag" id="versionTag">加载中...</span>
-            <span class="update-time" id="updateTime"></span>
+            <p class="note">最新更新：2026-02-21 18时54分</p>
         </div><!-- ========= FCL 启动器模块 ========= -->
 <div class="fcl-module">
     <div class="module-header" id="fclHeader">
@@ -235,6 +225,11 @@
         </h2>
         <span class="arrow" id="toggleArrow">▶</span>
         <p>点击标题折叠</p>
+    </div>
+    <!-- 模块内版本信息 -->
+    <div class="module-version" id="fclVersionInfo">
+        <span class="version-tag">📌 最新: 加载中...</span>
+        <span>⏳</span>
     </div>
     <!-- 下载卡片容器 (默认折叠) -->
     <div id="downloadContainer" class="download-grid" style="display: none;">
@@ -248,6 +243,11 @@
             </h2>
             <span class="arrow" id="mgArrow">▶</span>
             <p>点击标题折叠</p>
+        </div>
+        <!-- 模块内版本信息 -->
+        <div class="module-version" id="mgVersionInfo">
+            <span class="version-tag">📌 最新: 加载中...</span>
+            <span>⏳</span>
         </div>
         <!-- 卡片容器 (默认折叠) -->
         <div id="mgContainer" class="download-grid" style="display: none;">
@@ -292,15 +292,16 @@
         function formatDate(isoString) {
             if (!isoString) return '';
             const date = new Date(isoString);
-            return date.toLocaleString('zh-CN', { hour12: false });
+            return date.toLocaleString('zh-CN', { hour12: false, year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit' }).replace(/\//g,'-');
         }
 
         // ----- FCL 启动器模块 -----
-        const versionTag = document.getElementById('versionTag');
-        const updateTimeEl = document.getElementById('updateTime');
         const container = document.getElementById('downloadContainer');
         const fclHeader = document.getElementById('fclHeader');
         const toggleArrow = document.getElementById('toggleArrow');
+        const fclVersionInfo = document.getElementById('fclVersionInfo');
+        const fclVersionTag = fclVersionInfo.querySelector('.version-tag');
+        const fclVersionTime = fclVersionInfo.querySelector('span:last-child');
 
         // 折叠功能 (默认折叠)
         let isFclCollapsed = true;
@@ -327,9 +328,9 @@
     })
     .then(data => {
         const version = data.tag_name || '未知版本';
-        versionTag.textContent = `📌 最新: ${version}`;
+        fclVersionTag.textContent = `📌 最新: ${version}`;
         const published = data.published_at;
-        updateTimeEl.textContent = published ? `🕒 发布于: ${formatDate(published)}` : '';
+        fclVersionTime.textContent = published ? `🕒 ${formatDate(published)}` : '';
 
         const assets = data.assets || [];
         if (assets.length === 0) {
@@ -370,11 +371,14 @@
     .catch(error => {
         console.error('FCL加载失败:', error);
         container.innerHTML = `<div class="no-assets">❌ 加载失败，请稍后重试。<br>${error.message}</div>`;
-        versionTag.textContent = '📌 版本: 加载失败';
+        fclVersionTag.textContent = '📌 最新: 加载失败';
     });// ----- MobileGlues 模块 -----
             const mgContainer = document.getElementById('mgContainer');
             const mgHeader = document.getElementById('mgHeader');
             const mgArrow = document.getElementById('mgArrow');
+            const mgVersionInfo = document.getElementById('mgVersionInfo');
+            const mgVersionTag = mgVersionInfo.querySelector('.version-tag');
+            const mgVersionTime = mgVersionInfo.querySelector('span:last-child');
 
             let isMgCollapsed = true;
             mgHeader.classList.add('collapsed');
@@ -400,6 +404,11 @@
                     return response.json();
                 })
                 .then(data => {
+                    const version = data.tag_name || '未知版本';
+                    mgVersionTag.textContent = `📌 最新: ${version}`;
+                    const published = data.published_at;
+                    mgVersionTime.textContent = published ? `🕒 ${formatDate(published)}` : '';
+
                     const assets = data.assets || [];
                     if (assets.length === 0) {
                         mgContainer.innerHTML = '<div class="no-assets">⚠️ 暂无可用下载文件</div>';
@@ -439,6 +448,7 @@
                 .catch(error => {
                     console.error('MobileGlues加载失败:', error);
                     mgContainer.innerHTML = `<div class="no-assets">❌ 加载失败，请稍后重试。<br>${error.message}</div>`;
+                    mgVersionTag.textContent = '📌 最新: 加载失败';
                 });
         })();
     </script>
