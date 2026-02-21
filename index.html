@@ -20,156 +20,160 @@
         .container {
             max-width: 1200px;
             margin: 2rem auto;
-        }
-        /* 公告卡片 */
-        .announcement {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 1.5rem 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            border-left: 5px solid #ffd700;
-        }
-        .announcement h3 {
-            color: #333;
-            margin-bottom: 0.5rem;
-            font-size: 1.3rem;
-        }
-        .announcement p {
-            color: #555;
-            line-height: 1.6;
-        }
-        .announcement .note {
-            font-size: 0.9rem;
-            color: #888;
-            margin-top: 0.5rem;
-        }
-        /* 头部 */
-        .header {
-            text-align: center;
-            margin-bottom: 3rem;
-            color: white;
-        }
-        .header h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            margin-bottom: 0.5rem;
-        }
-        .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        /* 版本信息条 */
-        .version-bar {
-            background: rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
-            border-radius: 50px;
-            padding: 1rem 2rem;
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .version-bar .version-tag {
-            background: rgba(255,255,255,0.3);
-            padding: 0.3rem 1rem;
-            border-radius: 30px;
-            font-weight: 500;
-        }
-        .version-bar .update-time {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-        /* 模块头部 */
-        .module-header {
-            text-align: left;
-            margin: 2rem 0 1rem 0;
-            color: white;
-        }
-        .module-header h2 {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 0.3rem;
-        }
-        .module-header p {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-        /* 下载卡片网格 */
-        .download-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .card {
+        }/* 公告卡片 */
+.announcement {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-left: 5px solid #ffd700;
+}
+.announcement h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+.announcement p {
+    color: #555;
+    line-height: 1.6;
+}
+.announcement .note {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 0.5rem;
+}/* 头部 */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: white;
+}
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    margin-bottom: 0.5rem;
+}
+.header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+/* 版本信息条 */
+.version-bar {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.version-bar .version-tag {
+    background: rgba(255,255,255,0.3);
+    padding: 0.3rem 1rem;
+    border-radius: 30px;
+    font-weight: 500;
+}
+.version-bar .update-time {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}/* 文件夹模块 - 模拟大文件夹效果 */
+.fcl-module-folder {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    padding: 2rem 2rem 2.5rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+/* 模块头部（文件夹标题） */
+.module-header {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    color: #333;
+    border-bottom: 2px dashed #aaa;
+    padding-bottom: 0.8rem;
+}
+.module-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.module-header p {
+    font-size: 1rem;
+    color: #555;
+}
+/* 下载卡片网格 */
+.download-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}.card {
             background: white;
-            border-radius: 24px;
-            padding: 1.8rem;
-            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #eee;
             display: flex;
             flex-direction: column;
         }
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 30px 40px -10px rgba(0,0,0,0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
         .card .arch-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 0.5rem;
         }
         .card .arch-name {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
         .card .file-info {
-            color: #718096;
-            font-size: 0.95rem;
+            color: #666;
+            font-size: 0.9rem;
             margin: 0.5rem 0 1rem;
             flex-grow: 1;
         }
         .card .file-info span {
             display: block;
-            margin: 0.3rem 0;
+            margin: 0.2rem 0;
         }
         .card .download-btn {
             display: inline-block;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-decoration: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 40px;
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
             font-weight: 600;
             text-align: center;
             transition: opacity 0.2s;
+            font-size: 0.95rem;
+            margin-top: auto;
             border: none;
             cursor: pointer;
-            font-size: 1rem;
-            margin-top: auto;
         }
         .card .download-btn:hover {
             opacity: 0.9;
-        }
-        .card .download-btn:disabled {
-            background: #cbd5e0;
-            cursor: not-allowed;
         }
         /* 架构特定颜色 */
         .arch-arm64 { color: #2c3e50; }
         .arch-armeabi { color: #27ae60; }
         .arch-x86 { color: #2980b9; }
         .arch-x86_64 { color: #8e44ad; }
-        .arch-all { color:#d35400;}
+        .arch-all { color: #d35400; }
         /* 无文件提示 */
         .no-assets {
             background: white;
@@ -183,9 +187,9 @@
         /* 底部 */
         .footer {
             text-align: center;
-            margin-top: 3rem;
+            margin-top: 2rem;
             color: rgba(255,255,255,0.8);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
         .footer a {
             color: white;
@@ -193,10 +197,9 @@
         }
         .loading {
             text-align: center;
-            padding: 3rem;
+            padding: 2rem;
             color: white;
             font-size: 1.2rem;
-            grid-column: 1 / -1;
         }
     </style>
 </head>
@@ -220,15 +223,16 @@
             <span class="version-tag" id="versionTag">加载版本中...</span>
             <span class="update-time" id="updateTime"></span>
         </div>
-
-        <!-- FCL启动器模块 -->
+        <!-- 大文件夹：FCL启动器模块 -->
+    <div class="fcl-module-folder">
         <div class="module-header">
-            <h2>📦 FCL 启动器</h2>
+            <h2>📁 FCL 启动器 <span style="font-size:1rem; color:#666;">(点击下方文件下载)</span></h2>
             <p>选择适合你设备架构的版本下载</p>
         </div>
         <!-- 下载卡片容器 -->
-    <div id="downloadContainer" class="download-grid">
-        <!-- 动态生成的卡片会插入这里 -->
+        <div id="downloadContainer" class="download-grid">
+            <!-- 动态生成的卡片会插入这里 -->
+        </div>
     </div>
 
     <!-- 底部 -->
@@ -238,50 +242,50 @@
     </div>
 </div>
 <script>
-    (function() {
-        const versionTag = document.getElementById('versionTag');
-        const updateTimeEl = document.getElementById('updateTime');
-        const container = document.getElementById('downloadContainer');
+        (function() {
+            const versionTag = document.getElementById('versionTag');
+            const updateTimeEl = document.getElementById('updateTime');
+            const container = document.getElementById('downloadContainer');
 
-        container.innerHTML = '<div class="loading">⏳ 加载版本信息中...</div>';
+            container.innerHTML = '<div class="loading">⏳ 加载版本信息中...</div>';
 
-        function getArchFromFilename(filename) {
-            const lower = filename.toLowerCase();
-            if (lower.includes('arm64-v8a')) return 'arm64';
-            if (lower.includes('armeabi-v7a')) return 'armeabi';
-            if (lower.includes('x86_64')) return 'x86_64';
-            if (lower.includes('x86') && !lower.includes('x86_64')) return 'x86';
-            if (lower.includes('all')) return 'all';
-            return 'other';
-        }
-
-        function getArchInfo(arch) {
-            switch(arch) {
-                case 'arm64': return { name: 'ARM64', icon: '📱', className: 'arch-arm64' };
-                case 'armeabi': return { name: 'ARMv7', icon: '📲', className: 'arch-armeabi' };
-                case 'x86': return { name: 'x86', icon: '💻', className: 'arch-x86' };
-                case 'x86_64': return { name: 'x86_64', icon: '🖥️', className: 'arch-x86_64' };
-                case 'all': return { name: '通用版', icon: '📦', className: 'arch-all' };
-                default: return { name: '其他', icon: '📄', className: '' };
+            function getArchFromFilename(filename) {
+                const lower = filename.toLowerCase();
+                if (lower.includes('arm64-v8a')) return 'arm64';
+                if (lower.includes('armeabi-v7a')) return 'armeabi';
+                if (lower.includes('x86_64')) return 'x86_64';
+                if (lower.includes('x86') && !lower.includes('x86_64')) return 'x86';
+                if (lower.includes('all')) return 'all';
+                return 'other';
             }
-        }
 
-        function formatSize(bytes) {
-            if (bytes === 0) return '0 B';
-            const k = 1024;
-            const sizes = ['B', 'KB', 'MB', 'GB'];
-            const i = Math.floor(Math.log(bytes) / Math.log(k));
-            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-        }
+            function getArchInfo(arch) {
+                switch(arch) {
+                    case 'arm64': return { name: 'ARM64', icon: '📱', className: 'arch-arm64' };
+                    case 'armeabi': return { name: 'ARMv7', icon: '📲', className: 'arch-armeabi' };
+                    case 'x86': return { name: 'x86', icon: '💻', className: 'arch-x86' };
+                    case 'x86_64': return { name: 'x86_64', icon: '🖥️', className: 'arch-x86_64' };
+                    case 'all': return { name: '通用版', icon: '📦', className: 'arch-all' };
+                    default: return { name: '其他', icon: '📄', className: '' };
+                }
+            }
 
-        function formatDate(isoString) {
-            if (!isoString) return '';
-            const date = new Date(isoString);
-            return date.toLocaleString('zh-CN', { hour12: false });
-        }
+            function formatSize(bytes) {
+                if (bytes === 0) return '0 B';
+                const k = 1024;
+                const sizes = ['B', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+            }
 
-        fetch('/latest.json')
-        .then(response => {
+            function formatDate(isoString) {
+                if (!isoString) return '';
+                const date = new Date(isoString);
+                return date.toLocaleString('zh-CN', { hour12: false });
+            }
+
+            fetch('/latest.json')
+                .then(response => {
                     if (!response.ok) {
                         throw new Error(`无法获取 latest.json (HTTP ${response.status})`);
                     }
@@ -342,7 +346,6 @@
                 .catch(error => {
                     console.error('获取版本信息失败:', error);
                     container.innerHTML = `<div class="no-assets">❌ 加载失败，请稍后重试。<br>${error.message}</div>`;
-                    versionTag.textContent = '📌 版本: 加载失败';
                 });
         })();
     </script>
