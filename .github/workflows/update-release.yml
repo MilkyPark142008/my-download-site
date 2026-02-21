@@ -2,27 +2,33 @@ name: Update Latest Release Info
 
 on:
   schedule:
-    - cron: '*/30 * * * *'   # 每30分钟运行一次（每小时的第0和第30分钟）
-  workflow_dispatch:       # 允许手动触发，方便测试
+    - cron: '0 * * * *'   # 每小时运行一次
+  workflow_dispatch:       # 允许手动触发
 
 jobs:
   update:
     runs-on: ubuntu-latest
     permissions:
-      contents: write      # 赋予写入仓库的权限
+      contents: write      # 允许写入仓库
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Fetch latest release from GitHub API
+      # 获取 FCL 最新 release
+      - name: Fetch FCL latest release
         run: |
-          curl -s https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases/latest > latest.json
+          curl -s https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases/latest > fcl.json
 
+      # 获取 MobileGlues 最新 release
+      - name: Fetch MobileGlues latest release
+        run: |
+          curl -s https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/latest > mobileglues.json
+
+      # 提交并推送更改（仅当文件有变化时）
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add latest.json
-          # 只有当文件有变化时才提交
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update latest release info"
+          git add fcl.json mobileglues.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update release info"
           git push
