@@ -222,7 +222,7 @@
         <div class="announcement">
             <h3>📢 公告</h3>
             <p>根据设备架构选择对应版本。下载请勿多次点击。</p>
-            <p class="note">你好内容</p>
+            <p class="note">你好-17:42-内容</p>
         </div>
 
         <!-- 版本信息条 -->
@@ -257,18 +257,21 @@
             const moduleHeader = document.getElementById('fclHeader');
             const toggleArrow = document.getElementById('toggleArrow');
 
-            // 折叠功能
-            let isCollapsed = false;
-            moduleHeader.addEventListener('click', () => {
-                isCollapsed = !isCollapsed;
-                if (isCollapsed) {
-                    moduleHeader.classList.add('collapsed');
-                    toggleArrow.textContent = '▶'; // 右箭头表示折叠
-                } else {
-                    moduleHeader.classList.remove('collapsed');
-                    toggleArrow.textContent = '▼'; // 下箭头表示展开
-                }
-            });
+            // 折叠功能 - 默认折叠
+let isCollapsed = true; // 改为 true 使默认折叠
+// 立即应用初始折叠状态
+moduleHeader.classList.add('collapsed');
+toggleArrow.textContent = '▶'; // 右箭头表示折叠
+moduleHeader.addEventListener('click', () => {
+    isCollapsed = !isCollapsed;
+    if (isCollapsed) {
+        moduleHeader.classList.add('collapsed');
+        toggleArrow.textContent = '▶';
+    } else {
+        moduleHeader.classList.remove('collapsed');
+        toggleArrow.textContent = '▼';
+    }
+});
 
             // 显示加载中
             container.innerHTML = '<div class="loading">⏳ 加载版本信息中...</div>';
@@ -353,15 +356,15 @@
                         const displayName = asset.name.length > 30 ? asset.name.substring(0, 27) + '...' : asset.name;
 
                         cardsHtml += `
-                            <div class="card">
-                                <div class="arch-icon">${archInfo.icon}</div>
-                                <div class="arch-name ${archInfo.className}">${archInfo.name}</div>
-                                class="file-info">
-    <span>📄 ${displayName}</span>
-    <span>💾 ${sizeFormatted}</span>
-</div>
-<a href="${asset.browser_download_url}" class="download-btn" target="_blank" rel="noopener">⬇️ 下载</a>
-</div>
+    <div class="card">
+        <div class="arch-icon">${archInfo.icon}</div>
+        <div class="arch-name ${archInfo.className}">${archInfo.name}</div>
+        <div class="file-info">
+            <span>📄 ${displayName}</span>
+            <span>💾 ${sizeFormatted}</span>
+        </div>
+        <a href="${asset.browser_download_url}" class="download-btn" target="_blank" rel="noopener">⬇️ 下载</a>
+    </div>
 `;
                     });
 
