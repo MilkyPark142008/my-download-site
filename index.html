@@ -85,6 +85,21 @@
             font-size: 0.9rem;
             opacity: 0.8;
         }
+        /* 模块头部 */
+        .module-header {
+            text-align: left;
+            margin: 2rem 0 1rem 0;
+            color: white;
+        }
+        .module-header h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        .module-header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
         /* 下载卡片网格 */
         .download-grid {
             display: grid;
@@ -149,12 +164,12 @@
             background: #cbd5e0;
             cursor: not-allowed;
         }
-        /* 架构特定颜色（可选） */
+        /* 架构特定颜色 */
         .arch-arm64 { color: #2c3e50; }
         .arch-armeabi { color: #27ae60; }
         .arch-x86 { color: #2980b9; }
         .arch-x86_64 { color: #8e44ad; }
-        .arch-all { color: #d35400; }
+        .arch-all { color:#d35400;}
         /* 无文件提示 */
         .no-assets {
             background: white;
@@ -200,82 +215,79 @@
             <p class="note">请根据你的设备架构选择对应版本。下载时不要多次点击按钮。</p>
         </div>
 
-        <!-- 版本信息栏（动态更新） -->
+        <!-- 版本信息条（动态更新） -->
         <div class="version-bar" id="versionBar">
             <span class="version-tag" id="versionTag">加载版本中...</span>
             <span class="update-time" id="updateTime"></span>
         </div>
 
+        <!-- FCL启动器模块 -->
+        <div class="module-header">
+            <h2>📦 FCL 启动器</h2>
+            <p>选择适合你设备架构的版本下载</p>
+        </div>
         <!-- 下载卡片容器 -->
-        <div id="downloadContainer" class="download-grid">
-            <!-- 动态生成的卡片会插入这里 -->
-        </div>
-        <!-- 底部 -->
-        <div class="footer">
-            <p>如果喜欢这个站，可以 <a href="#">赞助</a> 或帮忙宣传！</p>
-            <p>数据每小时同步自 <a href="https://github.com/FCL-Team/FoldCraftLauncher" target="_blank">FCL-Team/FoldCraftLauncher</a></p>
-        </div>
+    <div id="downloadContainer" class="download-grid">
+        <!-- 动态生成的卡片会插入这里 -->
     </div>
 
-    <script>
-        (function() {
-            // DOM 元素
-            const versionTag = document.getElementById('versionTag');
-            const updateTimeEl = document.getElementById('updateTime');
-            const container = document.getElementById('downloadContainer');
+    <!-- 底部 -->
+    <div class="footer">
+        <p>如果喜欢这个站，可以 <a href="#">赞助</a> 或帮忙宣传！</p>
+        <p>数据每小时同步自 <a href="https://github.com/FCL-Team/FoldCraftLauncher" target="_blank">FCL-Team/FoldCraftLauncher</a></p>
+    </div>
+</div>
+<script>
+    (function() {
+        const versionTag = document.getElementById('versionTag');
+        const updateTimeEl = document.getElementById('updateTime');
+        const container = document.getElementById('downloadContainer');
 
-            // 显示加载中
-            container.innerHTML = '<div class="loading">⏳ 加载版本信息中...</div>';
+        container.innerHTML = '<div class="loading">⏳ 加载版本信息中...</div>';
 
-            // 从文件名中识别架构（基于你提供的文件名）
-            function getArchFromFilename(filename) {
-                const lower = filename.toLowerCase();
-                if (lower.includes('arm64-v8a')) return 'arm64';
-                if (lower.includes('armeabi-v7a')) return 'armeabi';
-                if (lower.includes('x86_64')) return 'x86_64';
-                if (lower.includes('x86') && !lower.includes('x86_64')) return 'x86'; // 避免 x86_64 被误判为 x86
-                if (lower.includes('all')) return 'all';
-                return 'other';
+        function getArchFromFilename(filename) {
+            const lower = filename.toLowerCase();
+            if (lower.includes('arm64-v8a')) return 'arm64';
+            if (lower.includes('armeabi-v7a')) return 'armeabi';
+            if (lower.includes('x86_64')) return 'x86_64';
+            if (lower.includes('x86') && !lower.includes('x86_64')) return 'x86';
+            if (lower.includes('all')) return 'all';
+            return 'other';
+        }
+
+        function getArchInfo(arch) {
+            switch(arch) {
+                case 'arm64': return { name: 'ARM64', icon: '📱', className: 'arch-arm64' };
+                case 'armeabi': return { name: 'ARMv7', icon: '📲', className: 'arch-armeabi' };
+                case 'x86': return { name: 'x86', icon: '💻', className: 'arch-x86' };
+                case 'x86_64': return { name: 'x86_64', icon: '🖥️', className: 'arch-x86_64' };
+                case 'all': return { name: '通用版', icon: '📦', className: 'arch-all' };
+                default: return { name: '其他', icon: '📄', className: '' };
             }
+        }
 
-            // 获取架构的显示名称、图标和样式类
-            function getArchInfo(arch) {
-                switch(arch) {
-                    case 'arm64': return { name: 'ARM64', icon: '📱', className: 'arch-arm64' };
-                    case 'armeabi': return { name: 'ARMv7', icon: '📲', className: 'arch-armeabi' };
-                    case 'x86': return { name: 'x86', icon: '💻', className: 'arch-x86' };
-                    case 'x86_64': return { name: 'x86_64', icon: '🖥️', className: 'arch-x86_64' };
-                    case 'all': return { name: '通用版', icon: '📦', className: 'arch-all' };
-                    default: return { name: '其他', icon: '📄', className: '' };
-                }
-            }
+        function formatSize(bytes) {
+            if (bytes === 0) return '0 B';
+            const k = 1024;
+            const sizes = ['B', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
 
-            // 格式化文件大小（字节 -> MB/GB）
-            function formatSize(bytes) {
-                if (bytes === 0) return '0 B';
-                const k = 1024;
-                const sizes = ['B', 'KB', 'MB', 'GB'];
-                const i = Math.floor(Math.log(bytes) / Math.log(k));
-                return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-            }
+        function formatDate(isoString) {
+            if (!isoString) return '';
+            const date = new Date(isoString);
+            return date.toLocaleString('zh-CN', { hour12: false });
+        }
 
-            // 格式化发布时间
-            function formatDate(isoString) {
-                if (!isoString) return '';
-                const date = new Date(isoString);
-                return date.toLocaleString('zh-CN', { hour12: false });
-            }
-
-            // 请求本地的 latest.json
-            fetch('/latest.json')
-                .then(response => {
+        fetch('/latest.json')
+        .then(response => {
                     if (!response.ok) {
                         throw new Error(`无法获取 latest.json (HTTP ${response.status})`);
                     }
                     return response.json();
                 })
                 .then(data => {
-                    // 更新版本信息
                     const version = data.tag_name || '未知版本';
                     versionTag.textContent = `📌 最新版本: ${version}`;
 
@@ -286,36 +298,30 @@
                         updateTimeEl.textContent = '';
                     }
 
-                    // 处理 assets
                     const assets = data.assets || [];
                     if (assets.length === 0) {
                         container.innerHTML = '<div class="no-assets">⚠️ 暂无可用下载文件</div>';
                         return;
                     }
 
-                    // 按架构分组，一个架构只保留一个文件（以防有重复，取第一个匹配的）
-                    const archMap = new Map(); // key: 架构, value: asset对象
+                    const archMap = new Map();
                     assets.forEach(asset => {
                         const arch = getArchFromFilename(asset.name);
-                        // 如果该架构还没有记录，则添加
                         if (!archMap.has(arch)) {
                             archMap.set(arch, asset);
                         }
                     });
 
-                    // 定义我们关心的架构顺序（用于排序显示）
                     const archOrder = ['arm64', 'armeabi', 'x86_64', 'x86', 'all', 'other'];
                     const sortedArchs = Array.from(archMap.keys()).sort((a, b) => {
                         return archOrder.indexOf(a) - archOrder.indexOf(b);
                     });
 
-                    // 生成卡片 HTML
                     let cardsHtml = '';
                     sortedArchs.forEach(arch => {
                         const asset = archMap.get(arch);
                         const archInfo = getArchInfo(arch);
                         const sizeFormatted = formatSize(asset.size);
-                        // 提取文件名（简短显示）
                         const displayName = asset.name.length > 30 ? asset.name.substring(0, 27) + '...' : asset.name;
 
                         cardsHtml += `
