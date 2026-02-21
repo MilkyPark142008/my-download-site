@@ -2,7 +2,7 @@ name: Update Latest Release Info
 
 on:
   schedule:
-    - cron: '0 * * * *'   # 每小时的第0分钟运行一次（例如 1:00, 2:00...）
+    - cron: '*/30 * * * *'   # 每30分钟运行一次（每小时的第0和第30分钟）
   workflow_dispatch:       # 允许手动触发，方便测试
 
 jobs:
