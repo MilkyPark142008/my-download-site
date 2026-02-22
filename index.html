@@ -57,6 +57,35 @@
             font-size: 1rem;
             color: #475569;
         }
+        /* 镜像选择器 */
+        .mirror-selector {
+            background: white;
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e9ecef;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .mirror-selector label {
+            font-weight: 500;
+            color: #334155;
+        }
+        .mirror-selector select {
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid #d1d5db;
+            background: white;
+            font-size: 0.9rem;
+            flex: 1;
+            min-width: 200px;
+        }
+        .mirror-selector select:hover {
+            border-color: #0d6efd;
+        }
         /* 可折叠模块 - 简约文件夹风格 */
         .fcl-module {
             background: white;
@@ -193,8 +222,8 @@
         .card .file-info span {
             display: block;
             margin: 2px 0;
-            word-break: break-word;      /* 允许长单词换行 */
-            white-space: normal;          /* 正常换行 */
+            word-break: break-word;
+            white-space: normal;
         }
         .card .download-btn {
             display: inline-block;
@@ -252,14 +281,30 @@
         <!-- 头部 -->
         <div class="header">
             <h1>📱 MC手机版下载站</h1>
-            <p>多架构版本 · 每小时同步更新</p>
+            <p>多架构版本 · 每半小时同步更新</p>
         </div>
 
         <!-- 公告区 -->
         <div class="announcement">
             <h3>📢 公告</h3>
             <p>根据设备架构选择对应版本。下载请勿多次点击。</p>
-            <p class="note">网页源码最新更新时间：2026-02-22</p>
+            <p class="note">网页源码最新更新时间：2026-02-22 15:53</p>
+        </div>
+
+        <!-- 镜像选择器 -->
+        <div class="mirror-selector">
+            <label for="mirrorSelect">🌐 选择下载源：</label>
+            <select id="mirrorSelect">
+                <option value="https://ghfast.top/">Ghfast镜像下载</option>
+                <option value="https://ghproxy.com/">GhProxy镜像下载</option>
+                <option value="https://ghproxy.net/">GhProxyNet镜像下载</option>
+                <option value="https://fastgit.org/">Flash镜像下载</option>
+                <option value="https://gh-proxy.com/">Gh-Proxy镜像下载</option>
+                <option value="https://gitmirror.com/">GitMirror镜像下载</option>
+                <option value="https://moeyy.com/gh-proxy/">Moeyy镜像下载</option>
+                <option value="https://gh.api.99988866.xyz/">Workers镜像下载</option>
+                <option value="">GitHub原始链接</option>
+            </select>
         </div>
 
         <!-- FCL 启动器模块 -->
@@ -319,7 +364,7 @@
         <!-- 底部 -->
         <div class="footer">
             <p>如果喜欢，可以 <a href="#">赞助</a> 或宣传</p>
-            <p>数据每小时同步自 FCL / MobileGlues 的Release</p>
+            <p>数据每半小时同步自 FCL / MobileGlues 的Release</p>
         </div>
     </div>
 
@@ -357,6 +402,25 @@
                 const date = new Date(isoString);
                 return date.toLocaleString('zh-CN', { hour12: false, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }).replace(/\//g, '-');
             }
+
+            // ----- 镜像选择功能 -----
+            const mirrorSelect = document.getElementById('mirrorSelect');
+            // 存储所有下载按钮的原始链接
+            const originalUrls = [];
+
+            // 更新所有下载按钮的链接
+            function updateAllDownloadButtons() {
+                const prefix = mirrorSelect.value; // 选中的镜像前缀
+                document.querySelectorAll('.download-btn').forEach(btn => {
+                    const original = btn.getAttribute('data-original-url');
+                    if (original) {
+                        btn.href = prefix ? prefix + original : original;
+                    }
+                });
+            }
+
+            // 监听镜像选择变化
+            mirrorSelect.addEventListener('change', updateAllDownloadButtons);
 
             // ----- FCL 启动器模块 -----
             const container = document.getElementById('downloadContainer');
@@ -420,8 +484,11 @@
                         const asset = archMap.get(arch);
                         const archInfo = getArchInfo(arch);
                         const sizeFormatted = formatSize(asset.size);
-                        // 不再截断文件名，直接使用完整名称
                         const displayName = asset.name;
+
+                        // 保存原始链接
+                        const originalUrl = asset.browser_download_url;
+                        originalUrls.push(originalUrl);
 
                         cardsHtml += `
                             <div class="card">
@@ -431,11 +498,12 @@
                                     <span>📄 ${displayName}</span>
                                     <span>💾 ${sizeFormatted}</span>
                                 </div>
-                                <a href="https://ghfast.top/${asset.browser_download_url}" class="download-btn" target="_blank" rel="noopener">⬇️ 下载</a>
+                                <a href="${mirrorSelect.value}${originalUrl}" class="download-btn" target="_blank" rel="noopener" data-original-url="${originalUrl}">⬇️ 下载</a>
                             </div>
                         `;
                     });
                     container.innerHTML = cardsHtml;
+                    // 新按钮生成后，需要重新绑定数据？不需要，因为 href 已经根据当前镜像设置好了，且 data-original-url 已保存
                 })
                 .catch(error => {
                     console.error('FCL加载失败:', error);
@@ -506,8 +574,10 @@
                         const asset = archMap.get(arch);
                         const archInfo = getArchInfo(arch);
                         const sizeFormatted = formatSize(asset.size);
-                        // 不再截断文件名
                         const displayName = asset.name;
+
+                        const originalUrl = asset.browser_download_url;
+                        originalUrls.push(originalUrl);
 
                         cardsHtml += `
                             <div class="card">
@@ -517,7 +587,7 @@
                                     <span>📄 ${displayName}</span>
                                     <span>💾 ${sizeFormatted}</span>
                                 </div>
-                                <a href="https://ghfast.top/${asset.browser_download_url}" class="download-btn" target="_blank" rel="noopener">⬇️ 下载</a>
+                                <a href="${mirrorSelect.value}${originalUrl}" class="download-btn" target="_blank" rel="noopener" data-original-url="${originalUrl}">⬇️ 下载</a>
                             </div>
                         `;
                     });
