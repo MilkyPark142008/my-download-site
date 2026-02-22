@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -57,8 +57,8 @@
             font-size: 1rem;
             color: #475569;
         }
-        /* 镜像选择器 */
-        .mirror-selector {
+        /* 镜像选择器 / 项目选择器 共用样式 */
+        .selector {
             background: white;
             border-radius: 12px;
             padding: 12px 16px;
@@ -70,11 +70,11 @@
             gap: 12px;
             flex-wrap: wrap;
         }
-        .mirror-selector label {
+        .selector label {
             font-weight: 500;
             color: #334155;
         }
-        .mirror-selector select {
+        .selector select {
             padding: 6px 12px;
             border-radius: 20px;
             border: 1px solid #d1d5db;
@@ -83,7 +83,7 @@
             flex: 1;
             min-width: 200px;
         }
-        .mirror-selector select:hover {
+        .selector select:hover {
             border-color: #0d6efd;
         }
         /* 可折叠模块 - 简约文件夹风格 */
@@ -288,15 +288,15 @@
         <div class="announcement">
             <h3>📢 公告</h3>
             <p>根据设备架构选择对应版本。下载请勿多次点击。</p>
-            <p>如果遇到错误 请等待耐心修复<p>
-            <p class="note">网页源码最新更新时间：2026-02-22 19:27 </p>
+            <p>如果遇到错误 请等待耐心修复</p>
+            <p class="note">网页源码最新更新时间：2026-02-22 19:27</p>
             <p class="note">两个挂了的镜像下载不知道为什么会出现问题 先留着</p>
             <p class="note">预计更新 zl2启动器 澪u启动器 紫水晶启动器 插件的下载链接 以及一些作者的键位（这里会放上视频链接 作者提供的下载方式）</p>
             <p class="note">如果还有其他想法视频底下留言 网页源码在Github上</p>
         </div>
 
         <!-- 镜像选择器 -->
-        <div class="mirror-selector">
+        <div class="selector">
             <label for="mirrorSelect">🌐 选择下载源：</label>
             <select id="mirrorSelect">
                 <option value="https://ghfast.top/">Ghfast镜像下载</option>
@@ -307,8 +307,17 @@
             </select>
         </div>
 
-        <!-- FCL 启动器模块 -->
-        <div class="fcl-module">
+        <!-- 项目选择器 -->
+        <div class="selector" style="margin-top: -8px;">  <!-- 与上一个选择器稍微拉近 -->
+            <label for="projectSelect">📦 选择项目：</label>
+            <select id="projectSelect">
+                <option value="fcl">FCL 启动器</option>
+                <option value="mg">MobileGlues 图形库</option>
+            </select>
+        </div>
+
+        <!-- FCL 启动器模块 (默认显示) -->
+        <div id="fclModule" class="fcl-module" style="display: block;">
             <div class="module-header" id="fclHeader">
                 <h2>
                     <span>📁 FCL 启动器</span>
@@ -334,8 +343,8 @@
             </div>
         </div>
 
-        <!-- MobileGlues 图形库模块 -->
-        <div class="fcl-module">
+        <!-- MobileGlues 图形库模块 (默认隐藏) -->
+        <div id="mgModule" class="fcl-module" style="display: none;">
             <div class="module-header" id="mgHeader">
                 <h2>
                     <span>📦 MobileGlues 图形库</span>
@@ -405,12 +414,8 @@
 
             // ----- 镜像选择功能 -----
             const mirrorSelect = document.getElementById('mirrorSelect');
-            // 存储所有下载按钮的原始链接
-            const originalUrls = [];
-
-            // 更新所有下载按钮的链接
             function updateAllDownloadButtons() {
-                const prefix = mirrorSelect.value; // 选中的镜像前缀
+                const prefix = mirrorSelect.value;
                 document.querySelectorAll('.download-btn').forEach(btn => {
                     const original = btn.getAttribute('data-original-url');
                     if (original) {
@@ -418,9 +423,22 @@
                     }
                 });
             }
-
-            // 监听镜像选择变化
             mirrorSelect.addEventListener('change', updateAllDownloadButtons);
+
+            // ----- 项目选择功能 -----
+            const projectSelect = document.getElementById('projectSelect');
+            const fclModule = document.getElementById('fclModule');
+            const mgModule = document.getElementById('mgModule');
+            projectSelect.addEventListener('change', (e) => {
+                const val = e.target.value;
+                if (val === 'fcl') {
+                    fclModule.style.display = 'block';
+                    mgModule.style.display = 'none';
+                } else {
+                    fclModule.style.display = 'none';
+                    mgModule.style.display = 'block';
+                }
+            });
 
             // ----- FCL 启动器模块 -----
             const container = document.getElementById('downloadContainer');
@@ -431,7 +449,6 @@
             const fclVersionTime = fclVersionInfo.querySelector('span:last-child');
             const fclChangelogContent = document.getElementById('fclChangelogContent');
 
-            // 折叠功能 (默认折叠)
             let isFclCollapsed = true;
             fclHeader.classList.add('collapsed');
             toggleArrow.textContent = '▶';
@@ -460,7 +477,6 @@
                     const published = data.published_at;
                     fclVersionTime.textContent = published ? `🕒 ${formatDate(published)}` : '';
 
-                    // 更新日志
                     const releaseBody = data.body || '暂无更新日志';
                     fclChangelogContent.innerHTML = releaseBody.replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
@@ -485,10 +501,7 @@
                         const archInfo = getArchInfo(arch);
                         const sizeFormatted = formatSize(asset.size);
                         const displayName = asset.name;
-
-                        // 保存原始链接
                         const originalUrl = asset.browser_download_url;
-                        originalUrls.push(originalUrl);
 
                         cardsHtml += `
                             <div class="card">
@@ -503,7 +516,6 @@
                         `;
                     });
                     container.innerHTML = cardsHtml;
-                    // 新按钮生成后，需要重新绑定数据？不需要，因为 href 已经根据当前镜像设置好了，且 data-original-url 已保存
                 })
                 .catch(error => {
                     console.error('FCL加载失败:', error);
@@ -550,7 +562,6 @@
                     const published = data.published_at;
                     mgVersionTime.textContent = published ? `🕒 ${formatDate(published)}` : '';
 
-                    // 更新日志
                     const releaseBody = data.body || '暂无更新日志';
                     mgChangelogContent.innerHTML = releaseBody.replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
@@ -575,9 +586,7 @@
                         const archInfo = getArchInfo(arch);
                         const sizeFormatted = formatSize(asset.size);
                         const displayName = asset.name;
-
                         const originalUrl = asset.browser_download_url;
-                        originalUrls.push(originalUrl);
 
                         cardsHtml += `
                             <div class="card">
