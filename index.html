@@ -241,7 +241,7 @@
         .card .download-btn:hover {
             background: #0b5ed7;
         }
-        /* 架构特定颜色 */
+        /* 架构特定颜色（仅用于 FCL） */
         .arch-arm64 { color: #2c3e50; }
         .arch-armeabi { color: #27ae60; }
         .arch-x86 { color: #2980b9; }
@@ -289,10 +289,7 @@
             <h3>📢 公告</h3>
             <p>根据设备架构选择对应版本。下载请勿多次点击。</p>
             <p>如果遇到错误 请等待耐心修复</p>
-            <p class="note">网页源码最新更新时间：2026-02-22 19:27</p>
-            <p class="note">两个挂了的镜像下载不知道为什么会出现问题 先留着</p>
-            <p class="note">预计更新 zl2启动器 澪u启动器 紫水晶启动器 插件的下载链接 以及一些作者的键位（这里会放上视频链接 作者提供的下载方式）</p>
-            <p class="note">如果还有其他想法视频底下留言 网页源码在Github上</p>
+            <p class="note">网页源码最新更新时间：2026-02-23 00:15</p>
         </div>
 
         <!-- 镜像选择器 -->
@@ -300,19 +297,19 @@
             <label for="mirrorSelect">🌐 选择下载源：</label>
             <select id="mirrorSelect">
                 <option value="https://ghfast.top/">Ghfast镜像下载</option>
-                <option value="https://gh-proxy.com/">Gh-Proxy镜像下载（主站下载地址）</option>
-                <option value="https://ghproxy.net/">GhProxyNet镜像下载（挂了）</option>
-                <option value="https://flash.aaswordsman.org/">Cloudflare加速下载（挂了）</option>
+                <option value="https://gh-proxy.com/">Gh-Proxy镜像下载</option>
+                <option value="https://ghproxy.net/">GhProxyNet镜像下载（可能失效）</option>
                 <option value="">GitHub原始链接</option>
             </select>
         </div>
 
         <!-- 项目选择器 -->
-        <div class="selector" style="margin-top: -8px;">  <!-- 与上一个选择器稍微拉近 -->
+        <div class="selector" style="margin-top: -8px;">
             <label for="projectSelect">📦 选择项目：</label>
             <select id="projectSelect">
                 <option value="fcl">FCL 启动器</option>
                 <option value="mg">MobileGlues 图形库</option>
+                <option value="jre">JRE 运行环境</option>
             </select>
         </div>
 
@@ -325,22 +322,15 @@
                 <span class="arrow" id="toggleArrow">▶</span>
                 <p>点击标题折叠</p>
             </div>
-            <!-- 模块内版本信息 -->
             <div class="module-version" id="fclVersionInfo">
                 <span class="version-tag">📌 最新: 加载中...</span>
                 <span>⏳</span>
             </div>
-            <!-- 更新日志折叠块 -->
             <details class="changelog" id="fclChangelog">
                 <summary>📋 查看更新日志</summary>
-                <div class="changelog-content" id="fclChangelogContent">
-                    加载中...
-                </div>
+                <div class="changelog-content" id="fclChangelogContent">加载中...</div>
             </details>
-            <!-- 下载卡片容器 (默认折叠) -->
-            <div id="downloadContainer" class="download-grid" style="display: none;">
-                <!-- 动态生成的卡片会插入这里 -->
-            </div>
+            <div id="downloadContainer" class="download-grid" style="display: none;"></div>
         </div>
 
         <!-- MobileGlues 图形库模块 (默认隐藏) -->
@@ -352,28 +342,41 @@
                 <span class="arrow" id="mgArrow">▶</span>
                 <p>点击标题折叠</p>
             </div>
-            <!-- 模块内版本信息 -->
             <div class="module-version" id="mgVersionInfo">
                 <span class="version-tag">📌 最新: 加载中...</span>
                 <span>⏳</span>
             </div>
-            <!-- 更新日志折叠块 -->
             <details class="changelog" id="mgChangelog">
                 <summary>📋 查看更新日志</summary>
-                <div class="changelog-content" id="mgChangelogContent">
-                    加载中...
-                </div>
+                <div class="changelog-content" id="mgChangelogContent">加载中...</div>
             </details>
-            <!-- 卡片容器 (默认折叠) -->
-            <div id="mgContainer" class="download-grid" style="display: none;">
-                <!-- 动态生成的卡片会插入这里 -->
+            <div id="mgContainer" class="download-grid" style="display: none;"></div>
+        </div>
+
+        <!-- JRE 运行环境模块 (默认隐藏) -->
+        <div id="jreModule" class="fcl-module" style="display: none;">
+            <div class="module-header" id="jreHeader">
+                <h2>
+                    <span>☕ JRE 运行环境</span>
+                </h2>
+                <span class="arrow" id="jreArrow">▶</span>
+                <p>点击标题折叠</p>
             </div>
+            <div class="module-version" id="jreVersionInfo">
+                <span class="version-tag">📌 最新: 加载中...</span>
+                <span>⏳</span>
+            </div>
+            <details class="changelog" id="jreChangelog">
+                <summary>📋 查看更新日志</summary>
+                <div class="changelog-content" id="jreChangelogContent">加载中...</div>
+            </details>
+            <div id="jreContainer" class="download-grid" style="display: none;"></div>
         </div>
 
         <!-- 底部 -->
         <div class="footer">
             <p>如果喜欢，可以 <a href="#">赞助</a> 或宣传</p>
-            <p>数据每半小时同步自 FCL / MobileGlues 的Release</p>
+            <p>数据每小时同步自 FCL / MobileGlues / JRE 的Release</p>
         </div>
     </div>
 
@@ -382,9 +385,9 @@
             // ----- 通用函数 -----
             function getArchFromFilename(filename) {
                 const lower = filename.toLowerCase();
-                if (lower.includes('arm64-v8a')) return 'arm64';
-                if (lower.includes('armeabi-v7a')) return 'armeabi';
-                if (lower.includes('x86_64')) return 'x86_64';
+                if (lower.includes('arm64-v8a') || lower.includes('arm64')) return 'arm64';
+                if (lower.includes('armeabi-v7a') || lower.includes('armv7')) return 'armeabi';
+                if (lower.includes('x86_64') || lower.includes('x64')) return 'x86_64';
                 if (lower.includes('x86') && !lower.includes('x86_64')) return 'x86';
                 if (lower.includes('all') || lower.includes('universal')) return 'all';
                 return 'other';
@@ -396,7 +399,7 @@
                     case 'x86': return { name: 'x86', icon: '💻', className: 'arch-x86' };
                     case 'x86_64': return { name: 'x86_64', icon: '🖥️', className: 'arch-x86_64' };
                     case 'all': return { name: '通用版', icon: '📦', className: 'arch-all' };
-                    default: return { name: 'MobileGlues', icon: '📄', className: '' };
+                    default: return { name: '其他', icon: '📄', className: '' };
                 }
             }
             function formatSize(bytes) {
@@ -429,18 +432,15 @@
             const projectSelect = document.getElementById('projectSelect');
             const fclModule = document.getElementById('fclModule');
             const mgModule = document.getElementById('mgModule');
+            const jreModule = document.getElementById('jreModule');
             projectSelect.addEventListener('change', (e) => {
                 const val = e.target.value;
-                if (val === 'fcl') {
-                    fclModule.style.display = 'block';
-                    mgModule.style.display = 'none';
-                } else {
-                    fclModule.style.display = 'none';
-                    mgModule.style.display = 'block';
-                }
+                fclModule.style.display = val === 'fcl' ? 'block' : 'none';
+                mgModule.style.display = val === 'mg' ? 'block' : 'none';
+                jreModule.style.display = val === 'jre' ? 'block' : 'none';
             });
 
-            // ----- FCL 启动器模块 -----
+            // ----- FCL 启动器模块 (按架构分组) -----
             const container = document.getElementById('downloadContainer');
             const fclHeader = document.getElementById('fclHeader');
             const toggleArrow = document.getElementById('toggleArrow');
@@ -486,6 +486,7 @@
                         return;
                     }
 
+                    // FCL: 按架构分组去重
                     const archMap = new Map();
                     assets.forEach(asset => {
                         const arch = getArchFromFilename(asset.name);
@@ -524,7 +525,7 @@
                     fclChangelogContent.innerHTML = '加载失败';
                 });
 
-            // ----- MobileGlues 模块 -----
+            // ----- MobileGlues 模块 (直接列出所有文件) -----
             const mgContainer = document.getElementById('mgContainer');
             const mgHeader = document.getElementById('mgHeader');
             const mgArrow = document.getElementById('mgArrow');
@@ -571,18 +572,10 @@
                         return;
                     }
 
-                    const archMap = new Map();
-                    assets.forEach(asset => {
-                        const arch = getArchFromFilename(asset.name);
-                        if (!archMap.has(arch)) archMap.set(arch, asset);
-                    });
-
-                    const archOrder = ['arm64', 'armeabi', 'x86_64', 'x86', 'all', 'other'];
-                    const sortedArchs = Array.from(archMap.keys()).sort((a, b) => archOrder.indexOf(a) - archOrder.indexOf(b));
-
+                    // 直接列出所有文件，不分组
                     let cardsHtml = '';
-                    sortedArchs.forEach(arch => {
-                        const asset = archMap.get(arch);
+                    assets.forEach(asset => {
+                        const arch = getArchFromFilename(asset.name); // 仅用于图标，不影响
                         const archInfo = getArchInfo(arch);
                         const sizeFormatted = formatSize(asset.size);
                         const displayName = asset.name;
@@ -607,6 +600,83 @@
                     mgContainer.innerHTML = `<div class="no-assets">❌ 加载失败，请稍后重试。<br>${error.message}</div>`;
                     mgVersionTag.textContent = '📌 最新: 加载失败';
                     mgChangelogContent.innerHTML = '加载失败';
+                });
+
+            // ----- JRE 模块 (直接列出所有文件) -----
+            const jreContainer = document.getElementById('jreContainer');
+            const jreHeader = document.getElementById('jreHeader');
+            const jreArrow = document.getElementById('jreArrow');
+            const jreVersionInfo = document.getElementById('jreVersionInfo');
+            const jreVersionTag = jreVersionInfo.querySelector('.version-tag');
+            const jreVersionTime = jreVersionInfo.querySelector('span:last-child');
+            const jreChangelogContent = document.getElementById('jreChangelogContent');
+
+            let isJreCollapsed = true;
+            jreHeader.classList.add('collapsed');
+            jreArrow.textContent = '▶';
+            jreHeader.addEventListener('click', () => {
+                isJreCollapsed = !isJreCollapsed;
+                if (isJreCollapsed) {
+                    jreHeader.classList.add('collapsed');
+                    jreArrow.textContent = '▶';
+                    jreContainer.style.display = 'none';
+                } else {
+                    jreHeader.classList.remove('collapsed');
+                    jreArrow.textContent = '▼';
+                    jreContainer.style.display = 'grid';
+                }
+            });
+
+            jreContainer.innerHTML = '<div class="loading">⏳ 加载 JRE 版本中...</div>';
+
+            fetch('/jre.json')
+                .then(response => {
+                    if (!response.ok) throw new Error(`无法获取 jre.json (HTTP ${response.status})`);
+                    return response.json();
+                })
+                .then(data => {
+                    const version = data.tag_name || '未知版本';
+                    jreVersionTag.textContent = `📌 最新: ${version}`;
+                    const published = data.published_at;
+                    jreVersionTime.textContent = published ? `🕒 ${formatDate(published)}` : '';
+
+                    const releaseBody = data.body || '暂无更新日志';
+                    jreChangelogContent.innerHTML = releaseBody.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+                    const assets = data.assets || [];
+                    if (assets.length === 0) {
+                        jreContainer.innerHTML = '<div class="no-assets">⚠️ 暂无可用下载文件</div>';
+                        return;
+                    }
+
+                    // 直接列出所有文件，不分组
+                    let cardsHtml = '';
+                    assets.forEach(asset => {
+                        const arch = getArchFromFilename(asset.name); // 仅用于图标
+                        const archInfo = getArchInfo(arch);
+                        const sizeFormatted = formatSize(asset.size);
+                        const displayName = asset.name;
+                        const originalUrl = asset.browser_download_url;
+
+                        cardsHtml += `
+                            <div class="card">
+                                <div class="arch-icon">${archInfo.icon}</div>
+                                <div class="arch-name ${archInfo.className}">${archInfo.name}</div>
+                                <div class="file-info">
+                                    <span>📄 ${displayName}</span>
+                                    <span>💾 ${sizeFormatted}</span>
+                                </div>
+                                <a href="${mirrorSelect.value}${originalUrl}" class="download-btn" target="_blank" rel="noopener" data-original-url="${originalUrl}">⬇️ 下载</a>
+                            </div>
+                        `;
+                    });
+                    jreContainer.innerHTML = cardsHtml;
+                })
+                .catch(error => {
+                    console.error('JRE加载失败:', error);
+                    jreContainer.innerHTML = `<div class="no-assets">❌ 加载失败，请稍后重试。<br>${error.message}</div>`;
+                    jreVersionTag.textContent = '📌 最新: 加载失败';
+                    jreChangelogContent.innerHTML = '加载失败';
                 });
         })();
     </script>
