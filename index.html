@@ -193,6 +193,8 @@
         .card .file-info span {
             display: block;
             margin: 2px 0;
+            word-break: break-word;      /* 允许长单词换行 */
+            white-space: normal;          /* 正常换行 */
         }
         .card .download-btn {
             display: inline-block;
@@ -250,14 +252,14 @@
         <!-- 头部 -->
         <div class="header">
             <h1>📱 MC手机版下载站</h1>
-            <p>多架构版本 · 每半小时同步更新</p>
+            <p>多架构版本 · 每小时同步更新</p>
         </div>
 
         <!-- 公告区 -->
         <div class="announcement">
             <h3>📢 公告</h3>
             <p>根据设备架构选择对应版本。下载请勿多次点击。</p>
-            <p class="note">网页源码最新更新时间：2026-02-21 19时23分</p>
+            <p class="note">网页源码最新更新时间：2026-02-22</p>
         </div>
 
         <!-- FCL 启动器模块 -->
@@ -317,7 +319,7 @@
         <!-- 底部 -->
         <div class="footer">
             <p>如果喜欢，可以 <a href="#">赞助</a> 或宣传</p>
-            <p>数据每半小时同步自 FCL / MobileGlues 的Release</p>
+            <p>数据每小时同步自 FCL / MobileGlues 的Release</p>
         </div>
     </div>
 
@@ -418,7 +420,8 @@
                         const asset = archMap.get(arch);
                         const archInfo = getArchInfo(arch);
                         const sizeFormatted = formatSize(asset.size);
-                        const displayName = asset.name.length > 30 ? asset.name.substring(0, 27) + '...' : asset.name;
+                        // 不再截断文件名，直接使用完整名称
+                        const displayName = asset.name;
 
                         cardsHtml += `
                             <div class="card">
@@ -503,7 +506,8 @@
                         const asset = archMap.get(arch);
                         const archInfo = getArchInfo(arch);
                         const sizeFormatted = formatSize(asset.size);
-                        const displayName = asset.name.length > 30 ? asset.name.substring(0, 27) + '...' : asset.name;
+                        // 不再截断文件名
+                        const displayName = asset.name;
 
                         cardsHtml += `
                             <div class="card">
