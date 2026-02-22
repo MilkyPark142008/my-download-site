@@ -118,6 +118,42 @@
             border-radius: 16px;
             font-weight: 500;
         }
+        /* 更新日志折叠块 */
+        .changelog {
+            margin: 16px 0;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .changelog summary {
+            padding: 10px 16px;
+            cursor: pointer;
+            color: #0d6efd;
+            font-weight: 500;
+            list-style: none;
+            position: relative;
+        }
+        .changelog summary::-webkit-details-marker {
+            display: none;
+        }
+        .changelog summary::after {
+            content: '▼';
+            font-size: 0.8rem;
+            color: #6c757d;
+            margin-left: 8px;
+            transition: transform 0.2s;
+        }
+        .changelog[open] summary::after {
+            transform: rotate(180deg);
+        }
+        .changelog-content {
+            padding: 0 16px 16px 16px;
+            font-size: 0.9rem;
+            color: #334155;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
         /* 下载卡片网格 */
         .download-grid {
             display: grid;
@@ -125,7 +161,8 @@
             gap: 12px;
             transition: all 0.2s;
         }
-        .module-header.collapsed + .download-grid {
+        .module-header.collapsed + .module-version + .changelog + .download-grid,
+        .module-header.collapsed + .module-version + .download-grid {
             display: none;
         }
         .card {
@@ -237,6 +274,13 @@
                 <span class="version-tag">📌 最新: 加载中...</span>
                 <span>⏳</span>
             </div>
+            <!-- 更新日志折叠块 -->
+            <details class="changelog" id="fclChangelog">
+                <summary>📋 查看更新日志</summary>
+                <div class="changelog-content" id="fclChangelogContent">
+                    加载中...
+                </div>
+            </details>
             <!-- 下载卡片容器 (默认折叠) -->
             <div id="downloadContainer" class="download-grid" style="display: none;">
                 <!-- 动态生成的卡片会插入这里 -->
@@ -257,6 +301,13 @@
                 <span class="version-tag">📌 最新: 加载中...</span>
                 <span>⏳</span>
             </div>
+            <!-- 更新日志折叠块 -->
+            <details class="changelog" id="mgChangelog">
+                <summary>📋 查看更新日志</summary>
+                <div class="changelog-content" id="mgChangelogContent">
+                    加载中...
+                </div>
+            </details>
             <!-- 卡片容器 (默认折叠) -->
             <div id="mgContainer" class="download-grid" style="display: none;">
                 <!-- 动态生成的卡片会插入这里 -->
@@ -312,6 +363,7 @@
             const fclVersionInfo = document.getElementById('fclVersionInfo');
             const fclVersionTag = fclVersionInfo.querySelector('.version-tag');
             const fclVersionTime = fclVersionInfo.querySelector('span:last-child');
+            const fclChangelogContent = document.getElementById('fclChangelogContent');
 
             // 折叠功能 (默认折叠)
             let isFclCollapsed = true;
@@ -342,8 +394,9 @@
                     const published = data.published_at;
                     fclVersionTime.textContent = published ? `🕒 ${formatDate(published)}` : '';
 
-                    // 获取更新日志
-                    const releaseBody = data.body || '';
+                    // 更新日志
+                    const releaseBody = data.body || '暂无更新日志';
+                    fclChangelogContent.innerHTML = releaseBody.replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
                     const assets = data.assets || [];
                     if (assets.length === 0) {
@@ -375,13 +428,6 @@
                                     <span>📄 ${displayName}</span>
                                     <span>💾 ${sizeFormatted}</span>
                                 </div>
-                                <!-- 更新日志（折叠显示） -->
-                                <details style="margin: 8px 0; font-size:0.8rem; background:#f1f5f9; padding:6px; border-radius:6px;">
-                                    <summary style="cursor:pointer; color:#0d6efd; font-weight:500;">📋 查看更新日志</summary>
-                                    <div style="margin-top:6px; max-height:150px; overflow-y:auto; white-space:pre-wrap; color:#334155;">
-                                        ${releaseBody ? releaseBody.replace(/</g, '&lt;').replace(/>/g, '&gt;') : '暂无更新日志'}
-                                    </div>
-                                </details>
                                 <a href="https://ghfast.top/${asset.browser_download_url}" class="download-btn" target="_blank" rel="noopener">⬇️ 下载</a>
                             </div>
                         `;
@@ -392,6 +438,7 @@
                     console.error('FCL加载失败:', error);
                     container.innerHTML = `<div class="no-assets">❌ 加载失败，请稍后重试。<br>${error.message}</div>`;
                     fclVersionTag.textContent = '📌 最新: 加载失败';
+                    fclChangelogContent.innerHTML = '加载失败';
                 });
 
             // ----- MobileGlues 模块 -----
@@ -401,6 +448,7 @@
             const mgVersionInfo = document.getElementById('mgVersionInfo');
             const mgVersionTag = mgVersionInfo.querySelector('.version-tag');
             const mgVersionTime = mgVersionInfo.querySelector('span:last-child');
+            const mgChangelogContent = document.getElementById('mgChangelogContent');
 
             let isMgCollapsed = true;
             mgHeader.classList.add('collapsed');
@@ -431,8 +479,9 @@
                     const published = data.published_at;
                     mgVersionTime.textContent = published ? `🕒 ${formatDate(published)}` : '';
 
-                    // 获取更新日志
-                    const releaseBody = data.body || '';
+                    // 更新日志
+                    const releaseBody = data.body || '暂无更新日志';
+                    mgChangelogContent.innerHTML = releaseBody.replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
                     const assets = data.assets || [];
                     if (assets.length === 0) {
@@ -464,13 +513,6 @@
                                     <span>📄 ${displayName}</span>
                                     <span>💾 ${sizeFormatted}</span>
                                 </div>
-                                <!-- 更新日志（折叠显示） -->
-                                <details style="margin: 8px 0; font-size:0.8rem; background:#f1f5f9; padding:6px; border-radius:6px;">
-                                    <summary style="cursor:pointer; color:#0d6efd; font-weight:500;">📋 查看更新日志</summary>
-                                    <div style="margin-top:6px; max-height:150px; overflow-y:auto; white-space:pre-wrap; color:#334155;">
-                                        ${releaseBody ? releaseBody.replace(/</g, '&lt;').replace(/>/g, '&gt;') : '暂无更新日志'}
-                                    </div>
-                                </details>
                                 <a href="https://ghfast.top/${asset.browser_download_url}" class="download-btn" target="_blank" rel="noopener">⬇️ 下载</a>
                             </div>
                         `;
@@ -481,6 +523,7 @@
                     console.error('MobileGlues加载失败:', error);
                     mgContainer.innerHTML = `<div class="no-assets">❌ 加载失败，请稍后重试。<br>${error.message}</div>`;
                     mgVersionTag.textContent = '📌 最新: 加载失败';
+                    mgChangelogContent.innerHTML = '加载失败';
                 });
         })();
     </script>
