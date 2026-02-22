@@ -19,133 +19,136 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
-        }/* 公告卡片 */
-.announcement {
-    background: #fff3cd;
-    border-left: 4px solid #ffc107;
-    padding: 12px 16px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    font-size: 0.95rem;
-}
-.announcement h3 {
-    font-size: 1.1rem;
-    margin-bottom: 6px;
-    color: #856404;
-}
-.announcement p {
-    color: #333;
-    line-height: 1.5;
-}
-.announcement .note {
-    font-size: 0.85rem;
-    color: #666;
-    margin-top: 8px;
-}
-/* 头部 */
-.header {
-    text-align: center;
-    margin-bottom: 24px;
-}
-.header h1 {
-    font-size: 2.2rem;
-    color: #0d6efd;
-    margin-bottom: 6px;
-}
-.header p {
-    font-size: 1rem;
-    color: #475569;
-}/* 可折叠模块 - 简约文件夹风格 */
-.fcl-module {
-    background: white;
-    border-radius: 16px;
-    padding: 16px 20px 20px 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    border: 1px solid #e9ecef;
-}
-/* 模块头部（可点击折叠） */
-.module-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    user-select: none;
-    padding: 4px 0;
-    border-bottom: 1px solid #e9ecef;
-    margin-bottom: 16px;
-}
-.module-header h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #0d6efd;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex: 1;
-}
-.module-header .arrow {
-    font-size: 1.2rem;
-    color: #6c757d;
-    transition: transform 0.2s;
-}
-.module-header.collapsed .arrow {
-    transform: rotate(-90deg);
-}
-.module-header p {
-    font-size: 0.9rem;
-    color: #6c757d;
-    margin-left: auto;
-}
-/* 模块内版本信息条 */
-.module-version {
-    background: #f1f5f9;
-    border-radius: 20px;
-    padding: 6px 12px;
-    margin-bottom: 16px;
-    font-size: 0.9rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #334155;
-    border: 1px solid #e2e8f0;
-}
-.module-version .version-tag {
-    background: #e2e8f0;
-    padding: 2px 10px;
-    border-radius: 16px;
-    font-weight: 500;
-}
-/* 下载卡片网格 */
-.download-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 12px;
-    transition: all 0.2s;
-}
-.module-header.collapsed + .download-grid {
-    display: none;
-}
-.card {
-    background: #f8fafc;
-    border-radius: 12px;
-    padding: 14px;
-    border: 1px solid #e2e8f0;
-    transition: all 0.1s;
-}
-.card:hover {
-    background: #ffffff;
-    border-color: #0d6efd;
-}
-.card .arch-icon {
-    font-size: 2rem;
-    margin-bottom: 6px;
-}
-.card .arch-name {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 6px;
-}.card .file-info {
+        }
+        /* 公告卡片 */
+        .announcement {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        .announcement h3 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            color: #856404;
+        }
+        .announcement p {
+            color: #333;
+            line-height: 1.5;
+        }
+        .announcement .note {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 8px;
+        }
+        /* 头部 */
+        .header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .header h1 {
+            font-size: 2.2rem;
+            color: #0d6efd;
+            margin-bottom: 6px;
+        }
+        .header p {
+            font-size: 1rem;
+            color: #475569;
+        }
+        /* 可折叠模块 - 简约文件夹风格 */
+        .fcl-module {
+            background: white;
+            border-radius: 16px;
+            padding: 16px 20px 20px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #e9ecef;
+        }
+        /* 模块头部（可点击折叠） */
+        .module-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            user-select: none;
+            padding: 4px 0;
+            border-bottom: 1px solid #e9ecef;
+            margin-bottom: 16px;
+        }
+        .module-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0d6efd;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex: 1;
+        }
+        .module-header .arrow {
+            font-size: 1.2rem;
+            color: #6c757d;
+            transition: transform 0.2s;
+        }
+        .module-header.collapsed .arrow {
+            transform: rotate(-90deg);
+        }
+        .module-header p {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-left: auto;
+        }
+        /* 模块内版本信息条 */
+        .module-version {
+            background: #f1f5f9;
+            border-radius: 20px;
+            padding: 6px 12px;
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #334155;
+            border: 1px solid #e2e8f0;
+        }
+        .module-version .version-tag {
+            background: #e2e8f0;
+            padding: 2px 10px;
+            border-radius: 16px;
+            font-weight: 500;
+        }
+        /* 下载卡片网格 */
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            transition: all 0.2s;
+        }
+        .module-header.collapsed + .download-grid {
+            display: none;
+        }
+        .card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 14px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.1s;
+        }
+        .card:hover {
+            background: #ffffff;
+            border-color: #0d6efd;
+        }
+        .card .arch-icon {
+            font-size: 2rem;
+            margin-bottom: 6px;
+        }
+        .card .arch-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .card .file-info {
             color: #475569;
             font-size: 0.85rem;
             margin: 6px 0 10px;
@@ -204,7 +207,8 @@
             font-size: 1rem;
         }
     </style>
-</head><body>
+</head>
+<body>
     <div class="container">
         <!-- 头部 -->
         <div class="header">
@@ -217,162 +221,180 @@
             <h3>📢 公告</h3>
             <p>根据设备架构选择对应版本。下载请勿多次点击。</p>
             <p class="note">网页源码最新更新时间：2026-02-21 19时23分</p>
-        </div><!-- ========= FCL 启动器模块 ========= -->
-<div class="fcl-module">
-    <div class="module-header" id="fclHeader">
-        <h2>
-            <span>📁 FCL 启动器</span>
-        </h2>
-        <span class="arrow" id="toggleArrow">▶</span>
-        <p>点击标题折叠</p>
-    </div>
-    <!-- 模块内版本信息 -->
-    <div class="module-version" id="fclVersionInfo">
-        <span class="version-tag">📌 最新: 加载中...</span>
-        <span>⏳</span>
-    </div>
-    <!-- 下载卡片容器 (默认折叠) -->
-    <div id="downloadContainer" class="download-grid" style="display: none;">
-        <!-- 动态生成的卡片会插入这里 -->
-    </div>
-</div><!-- ========= MobileGlues 图形库模块 ========= -->
-    <div class="fcl-module">
-        <div class="module-header" id="mgHeader">
-            <h2>
-                <span>📦 MobileGlues 图形库</span>
-            </h2>
-            <span class="arrow" id="mgArrow">▶</span>
-            <p>点击标题折叠</p>
         </div>
-        <!-- 模块内版本信息 -->
-        <div class="module-version" id="mgVersionInfo">
-            <span class="version-tag">📌 最新: 加载中...</span>
-            <span>⏳</span>
+
+        <!-- FCL 启动器模块 -->
+        <div class="fcl-module">
+            <div class="module-header" id="fclHeader">
+                <h2>
+                    <span>📁 FCL 启动器</span>
+                </h2>
+                <span class="arrow" id="toggleArrow">▶</span>
+                <p>点击标题折叠</p>
+            </div>
+            <!-- 模块内版本信息 -->
+            <div class="module-version" id="fclVersionInfo">
+                <span class="version-tag">📌 最新: 加载中...</span>
+                <span>⏳</span>
+            </div>
+            <!-- 下载卡片容器 (默认折叠) -->
+            <div id="downloadContainer" class="download-grid" style="display: none;">
+                <!-- 动态生成的卡片会插入这里 -->
+            </div>
         </div>
-        <!-- 卡片容器 (默认折叠) -->
-        <div id="mgContainer" class="download-grid" style="display: none;">
-            <!-- 动态生成的卡片会插入这里 -->
+
+        <!-- MobileGlues 图形库模块 -->
+        <div class="fcl-module">
+            <div class="module-header" id="mgHeader">
+                <h2>
+                    <span>📦 MobileGlues 图形库</span>
+                </h2>
+                <span class="arrow" id="mgArrow">▶</span>
+                <p>点击标题折叠</p>
+            </div>
+            <!-- 模块内版本信息 -->
+            <div class="module-version" id="mgVersionInfo">
+                <span class="version-tag">📌 最新: 加载中...</span>
+                <span>⏳</span>
+            </div>
+            <!-- 卡片容器 (默认折叠) -->
+            <div id="mgContainer" class="download-grid" style="display: none;">
+                <!-- 动态生成的卡片会插入这里 -->
+            </div>
+        </div>
+
+        <!-- 底部 -->
+        <div class="footer">
+            <p>如果喜欢，可以 <a href="#">赞助</a> 或宣传</p>
+            <p>数据每半小时同步自 FCL / MobileGlues 的Release</p>
         </div>
     </div>
 
-    <!-- 底部 -->
-    <div class="footer">
-        <p>如果喜欢，可以 <a href="#">赞助</a> 或宣传</p>
-        <p>数据每半小时同步自 FCL / MobileGlues 的Release</p>
-    </div>
-</div><script>
-    (function() {
-        // ----- 通用函数 -----
-        function getArchFromFilename(filename) {
-            const lower = filename.toLowerCase();
-            if (lower.includes('arm64-v8a')) return 'arm64';
-            if (lower.includes('armeabi-v7a')) return 'armeabi';
-            if (lower.includes('x86_64')) return 'x86_64';
-            if (lower.includes('x86') && !lower.includes('x86_64')) return 'x86';
-            if (lower.includes('all') || lower.includes('universal')) return 'all';
-            return 'other';
-        }
-        function getArchInfo(arch) {
-            switch(arch) {
-                case 'arm64': return { name: 'ARM64', icon: '📱', className: 'arch-arm64' };
-                case 'armeabi': return { name: 'ARMv7', icon: '📲', className: 'arch-armeabi' };
-                case 'x86': return { name: 'x86', icon: '💻', className: 'arch-x86' };
-                case 'x86_64': return { name: 'x86_64', icon: '🖥️', className: 'arch-x86_64' };
-                case 'all': return { name: '通用版', icon: '📦', className: 'arch-all' };
-                default: return { name: 'MobileGlues', icon: '📄', className: '' };
+    <script>
+        (function() {
+            // ----- 通用函数 -----
+            function getArchFromFilename(filename) {
+                const lower = filename.toLowerCase();
+                if (lower.includes('arm64-v8a')) return 'arm64';
+                if (lower.includes('armeabi-v7a')) return 'armeabi';
+                if (lower.includes('x86_64')) return 'x86_64';
+                if (lower.includes('x86') && !lower.includes('x86_64')) return 'x86';
+                if (lower.includes('all') || lower.includes('universal')) return 'all';
+                return 'other';
             }
-        }
-        function formatSize(bytes) {
-            if (bytes === 0) return '0 B';
-            const k = 1024;
-            const sizes = ['B', 'KB', 'MB', 'GB'];
-            const i = Math.floor(Math.log(bytes) / Math.log(k));
-            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-        }
-        function formatDate(isoString) {
-            if (!isoString) return '';
-            const date = new Date(isoString);
-            return date.toLocaleString('zh-CN', { hour12: false, year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit' }).replace(/\//g,'-');
-        }
-
-        // ----- FCL 启动器模块 -----
-        const container = document.getElementById('downloadContainer');
-        const fclHeader = document.getElementById('fclHeader');
-        const toggleArrow = document.getElementById('toggleArrow');
-        const fclVersionInfo = document.getElementById('fclVersionInfo');
-        const fclVersionTag = fclVersionInfo.querySelector('.version-tag');
-        const fclVersionTime = fclVersionInfo.querySelector('span:last-child');
-
-        // 折叠功能 (默认折叠)
-        let isFclCollapsed = true;
-        fclHeader.classList.add('collapsed');
-        toggleArrow.textContent = '▶';
-        fclHeader.addEventListener('click', () => {
-            isFclCollapsed = !isFclCollapsed;
-            if (isFclCollapsed) {
-                fclHeader.classList.add('collapsed');
-                toggleArrow.textContent = '▶';
-                container.style.display = 'none';
-            } else {
-                fclHeader.classList.remove('collapsed');
-                toggleArrow.textContent = '▼';
-                container.style.display = 'grid';
+            function getArchInfo(arch) {
+                switch(arch) {
+                    case 'arm64': return { name: 'ARM64', icon: '📱', className: 'arch-arm64' };
+                    case 'armeabi': return { name: 'ARMv7', icon: '📲', className: 'arch-armeabi' };
+                    case 'x86': return { name: 'x86', icon: '💻', className: 'arch-x86' };
+                    case 'x86_64': return { name: 'x86_64', icon: '🖥️', className: 'arch-x86_64' };
+                    case 'all': return { name: '通用版', icon: '📦', className: 'arch-all' };
+                    default: return { name: '其他', icon: '📄', className: '' };
+                }
             }
-        });
+            function formatSize(bytes) {
+                if (bytes === 0) return '0 B';
+                const k = 1024;
+                const sizes = ['B', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+            }
+            function formatDate(isoString) {
+                if (!isoString) return '';
+                const date = new Date(isoString);
+                return date.toLocaleString('zh-CN', { hour12: false, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }).replace(/\//g, '-');
+            }
 
-        container.innerHTML = '<div class="loading">⏳ 加载版本信息中...</div>';
-        fetch('/fcl.json')
-    .then(response => {
-        if (!response.ok) throw new Error(`无法获取 fcl.json (HTTP ${response.status})`);
-        return response.json();
-    })
-    .then(data => {
-        const version = data.tag_name || '未知版本';
-        fclVersionTag.textContent = `📌 最新: ${version}`;
-        const published = data.published_at;
-        fclVersionTime.textContent = published ? `🕒 ${formatDate(published)}` : '';
+            // ----- FCL 启动器模块 -----
+            const container = document.getElementById('downloadContainer');
+            const fclHeader = document.getElementById('fclHeader');
+            const toggleArrow = document.getElementById('toggleArrow');
+            const fclVersionInfo = document.getElementById('fclVersionInfo');
+            const fclVersionTag = fclVersionInfo.querySelector('.version-tag');
+            const fclVersionTime = fclVersionInfo.querySelector('span:last-child');
 
-        const assets = data.assets || [];
-        if (assets.length === 0) {
-            container.innerHTML = '<div class="no-assets">⚠️ 暂无可用下载文件</div>';
-            return;
-        }
+            // 折叠功能 (默认折叠)
+            let isFclCollapsed = true;
+            fclHeader.classList.add('collapsed');
+            toggleArrow.textContent = '▶';
+            fclHeader.addEventListener('click', () => {
+                isFclCollapsed = !isFclCollapsed;
+                if (isFclCollapsed) {
+                    fclHeader.classList.add('collapsed');
+                    toggleArrow.textContent = '▶';
+                    container.style.display = 'none';
+                } else {
+                    fclHeader.classList.remove('collapsed');
+                    toggleArrow.textContent = '▼';
+                    container.style.display = 'grid';
+                }
+            });
 
-        const archMap = new Map();
-        assets.forEach(asset => {
-            const arch = getArchFromFilename(asset.name);
-            if (!archMap.has(arch)) archMap.set(arch, asset);
-        });
+            container.innerHTML = '<div class="loading">⏳ 加载版本信息中...</div>';
+            fetch('/fcl.json')
+                .then(response => {
+                    if (!response.ok) throw new Error(`无法获取 fcl.json (HTTP ${response.status})`);
+                    return response.json();
+                })
+                .then(data => {
+                    const version = data.tag_name || '未知版本';
+                    fclVersionTag.textContent = `📌 最新: ${version}`;
+                    const published = data.published_at;
+                    fclVersionTime.textContent = published ? `🕒 ${formatDate(published)}` : '';
 
-        const archOrder = ['arm64', 'armeabi', 'x86_64', 'x86', 'all', 'other'];
-        const sortedArchs = Array.from(archMap.keys()).sort((a, b) => archOrder.indexOf(a) - archOrder.indexOf(b));
+                    // 获取更新日志
+                    const releaseBody = data.body || '';
 
-        let cardsHtml = '';
-        sortedArchs.forEach(arch => {
-            const asset = archMap.get(arch);
-            const archInfo = getArchInfo(arch);
-            const sizeFormatted = formatSize(asset.size);
-            const displayName = asset.name.length > 30 ? asset.name.substring(0, 27) + '...' : asset.name;
+                    const assets = data.assets || [];
+                    if (assets.length === 0) {
+                        container.innerHTML = '<div class="no-assets">⚠️ 暂无可用下载文件</div>';
+                        return;
+                    }
 
-            cardsHtml += `
-                <div class="card">
-                    <div class="arch-icon">${archInfo.icon}</div>
-                    <div class="arch-name ${archInfo.className}">${archInfo.name}</div>
-                    <div class="file-info">
-                        <span>📄 ${displayName}</span>
-                        <span>💾 ${sizeFormatted}</span>
-                    </div>
-                    <a href="https://ghfast.top/${asset.browser_download_url}" class="download-btn" target="_blank" rel="noopener">⬇️ 下载</a>
-                </div>
-            `;
-        });
-        container.innerHTML = cardsHtml;
-    })
-    .catch(error => {
-        console.error('FCL加载失败:', error);
-        container.innerHTML = `<div class="no-assets">❌ 加载失败，请稍后重试。<br>${error.message}</div>`;
-        fclVersionTag.textContent = '📌 最新: 加载失败';
-    });// ----- MobileGlues 模块 -----
+                    const archMap = new Map();
+                    assets.forEach(asset => {
+                        const arch = getArchFromFilename(asset.name);
+                        if (!archMap.has(arch)) archMap.set(arch, asset);
+                    });
+
+                    const archOrder = ['arm64', 'armeabi', 'x86_64', 'x86', 'all', 'other'];
+                    const sortedArchs = Array.from(archMap.keys()).sort((a, b) => archOrder.indexOf(a) - archOrder.indexOf(b));
+
+                    let cardsHtml = '';
+                    sortedArchs.forEach(arch => {
+                        const asset = archMap.get(arch);
+                        const archInfo = getArchInfo(arch);
+                        const sizeFormatted = formatSize(asset.size);
+                        const displayName = asset.name.length > 30 ? asset.name.substring(0, 27) + '...' : asset.name;
+
+                        cardsHtml += `
+                            <div class="card">
+                                <div class="arch-icon">${archInfo.icon}</div>
+                                <div class="arch-name ${archInfo.className}">${archInfo.name}</div>
+                                <div class="file-info">
+                                    <span>📄 ${displayName}</span>
+                                    <span>💾 ${sizeFormatted}</span>
+                                </div>
+                                <!-- 更新日志（折叠显示） -->
+                                <details style="margin: 8px 0; font-size:0.8rem; background:#f1f5f9; padding:6px; border-radius:6px;">
+                                    <summary style="cursor:pointer; color:#0d6efd; font-weight:500;">📋 查看更新日志</summary>
+                                    <div style="margin-top:6px; max-height:150px; overflow-y:auto; white-space:pre-wrap; color:#334155;">
+                                        ${releaseBody ? releaseBody.replace(/</g, '&lt;').replace(/>/g, '&gt;') : '暂无更新日志'}
+                                    </div>
+                                </details>
+                                <a href="https://ghfast.top/${asset.browser_download_url}" class="download-btn" target="_blank" rel="noopener">⬇️ 下载</a>
+                            </div>
+                        `;
+                    });
+                    container.innerHTML = cardsHtml;
+                })
+                .catch(error => {
+                    console.error('FCL加载失败:', error);
+                    container.innerHTML = `<div class="no-assets">❌ 加载失败，请稍后重试。<br>${error.message}</div>`;
+                    fclVersionTag.textContent = '📌 最新: 加载失败';
+                });
+
+            // ----- MobileGlues 模块 -----
             const mgContainer = document.getElementById('mgContainer');
             const mgHeader = document.getElementById('mgHeader');
             const mgArrow = document.getElementById('mgArrow');
@@ -409,6 +431,9 @@
                     const published = data.published_at;
                     mgVersionTime.textContent = published ? `🕒 ${formatDate(published)}` : '';
 
+                    // 获取更新日志
+                    const releaseBody = data.body || '';
+
                     const assets = data.assets || [];
                     if (assets.length === 0) {
                         mgContainer.innerHTML = '<div class="no-assets">⚠️ 暂无可用下载文件</div>';
@@ -439,6 +464,13 @@
                                     <span>📄 ${displayName}</span>
                                     <span>💾 ${sizeFormatted}</span>
                                 </div>
+                                <!-- 更新日志（折叠显示） -->
+                                <details style="margin: 8px 0; font-size:0.8rem; background:#f1f5f9; padding:6px; border-radius:6px;">
+                                    <summary style="cursor:pointer; color:#0d6efd; font-weight:500;">📋 查看更新日志</summary>
+                                    <div style="margin-top:6px; max-height:150px; overflow-y:auto; white-space:pre-wrap; color:#334155;">
+                                        ${releaseBody ? releaseBody.replace(/</g, '&lt;').replace(/>/g, '&gt;') : '暂无更新日志'}
+                                    </div>
+                                </details>
                                 <a href="https://ghfast.top/${asset.browser_download_url}" class="download-btn" target="_blank" rel="noopener">⬇️ 下载</a>
                             </div>
                         `;
