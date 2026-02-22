@@ -2,7 +2,7 @@ name: Update Latest Release Info
 
 on:
   schedule:
-    - cron: '30 * * * *'   # 每半小时运行一次
+    - cron: '0 * * * *'   # 每小时运行一次
   workflow_dispatch:       # 允许手动触发
 
 jobs:
