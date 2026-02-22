@@ -1,0 +1,35 @@
+name: Update Latest Release Info
+
+on:
+  schedule:
+    - cron: '0 * * * *'   # 每小时运行一次
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch FCL latest release
+        run: |
+          curl -s https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases/latest > fcl.json
+
+      - name: Fetch MobileGlues latest release
+        run: |
+          curl -s https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/latest > mobileglues.json
+
+      - name: Fetch JRE latest release
+        run: |
+          curl -s https://api.github.com/repos/MilkyPark142008/android-openjdk-build-release/releases/latest > jre.json
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add fcl.json mobileglues.json jre.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update release info"
+          git push
