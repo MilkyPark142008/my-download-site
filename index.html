@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -289,7 +289,7 @@
             <h3>📢 公告</h3>
             <p>根据设备架构选择对应版本。下载请勿多次点击。</p>
             <p>如果遇到错误 请等待耐心修复</p>
-            <p class="note">网页源码最新更新时间：2026-02-23 00:15</p>
+            <p class="note">网页源码最新更新时间：2026-02-23 00:30</p>
         </div>
 
         <!-- 镜像选择器 -->
@@ -415,6 +415,12 @@
                 return date.toLocaleString('zh-CN', { hour12: false, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }).replace(/\//g, '-');
             }
 
+            // 辅助函数：从文件名中提取版本名称（用于 JRE）
+            function getJreVersionFromFilename(filename) {
+                const match = filename.match(/jre(\d+)/i);
+                return match ? `jre${match[1]}` : 'JRE';
+            }
+
             // ----- 镜像选择功能 -----
             const mirrorSelect = document.getElementById('mirrorSelect');
             function updateAllDownloadButtons() {
@@ -525,7 +531,7 @@
                     fclChangelogContent.innerHTML = '加载失败';
                 });
 
-            // ----- MobileGlues 模块 (直接列出所有文件) -----
+            // ----- MobileGlues 模块 (直接列出所有文件，使用固定名称) -----
             const mgContainer = document.getElementById('mgContainer');
             const mgHeader = document.getElementById('mgHeader');
             const mgArrow = document.getElementById('mgArrow');
@@ -572,19 +578,17 @@
                         return;
                     }
 
-                    // 直接列出所有文件，不分组
+                    // 直接列出所有文件，使用固定名称 "MobileGlues"
                     let cardsHtml = '';
                     assets.forEach(asset => {
-                        const arch = getArchFromFilename(asset.name); // 仅用于图标，不影响
-                        const archInfo = getArchInfo(arch);
                         const sizeFormatted = formatSize(asset.size);
                         const displayName = asset.name;
                         const originalUrl = asset.browser_download_url;
 
                         cardsHtml += `
                             <div class="card">
-                                <div class="arch-icon">${archInfo.icon}</div>
-                                <div class="arch-name ${archInfo.className}">${archInfo.name}</div>
+                                <div class="arch-icon">📦</div>
+                                <div class="arch-name">MobileGlues</div>
                                 <div class="file-info">
                                     <span>📄 ${displayName}</span>
                                     <span>💾 ${sizeFormatted}</span>
@@ -602,7 +606,7 @@
                     mgChangelogContent.innerHTML = '加载失败';
                 });
 
-            // ----- JRE 模块 (直接列出所有文件) -----
+            // ----- JRE 模块 (直接列出所有文件，根据文件名显示版本名称) -----
             const jreContainer = document.getElementById('jreContainer');
             const jreHeader = document.getElementById('jreHeader');
             const jreArrow = document.getElementById('jreArrow');
@@ -649,19 +653,18 @@
                         return;
                     }
 
-                    // 直接列出所有文件，不分组
+                    // 直接列出所有文件，卡片名称根据文件名中的 jre版本 显示
                     let cardsHtml = '';
                     assets.forEach(asset => {
-                        const arch = getArchFromFilename(asset.name); // 仅用于图标
-                        const archInfo = getArchInfo(arch);
+                        const versionName = getJreVersionFromFilename(asset.name);
                         const sizeFormatted = formatSize(asset.size);
                         const displayName = asset.name;
                         const originalUrl = asset.browser_download_url;
 
                         cardsHtml += `
                             <div class="card">
-                                <div class="arch-icon">${archInfo.icon}</div>
-                                <div class="arch-name ${archInfo.className}">${archInfo.name}</div>
+                                <div class="arch-icon">☕</div>
+                                <div class="arch-name">${versionName}</div>
                                 <div class="file-info">
                                     <span>📄 ${displayName}</span>
                                     <span>💾 ${sizeFormatted}</span>
