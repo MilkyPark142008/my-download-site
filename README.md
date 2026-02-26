@@ -1,6 +1,12 @@
-# MC手机版下载站
+# 📱 MC 手机版下载站
 
-这是一个为 Minecraft 玩家提供的下载站，自动同步最新版本。网站每小时通过 GitHub Actions 自动获取官方 Release 信息，并支持多镜像下载加速。
+[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-自动更新-blue?logo=github-actions)](https://github.com/MilkyPark142008/my-download-site/actions/workflows/update.yml)
+[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-327873?logo=github)](https://fcl-dl.pages.dev/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+> 一个简洁高效的 MC 手机版启动器下载站，自动同步最新版本，支持多镜像下载加速。
+
+## ✨ 功能特点
 
 ## ✨ 功能特点
 
@@ -14,21 +20,70 @@
 
 ## 🛠️ 技术栈
 
-- **前端**：纯 HTML + CSS + JavaScript（无框架）
+- **前端**：纯 HTML5 + CSS3 + JavaScript（无框架依赖）
 - **CI/CD**：GitHub Actions（每小时自动获取 Release 数据）
-- **托管**：Cloudflare Pages 或 GitHub Pages
+- **托管**：GitHub Pages
+- **数据来源**：
+  - [FCL-Launcher](https://github.com/FCL-Team/FCL-Launcher)
+  - [MobileGlues](https://github.com/MobileGlues/MobileGlues)
+  - [JRE-for-Android-Loader](https://github.com/MCL-JRE-Maintainers/JRE-for-Android-Loader)
 
 ## 🚀 部署步骤
 
-1. **Fork 或克隆** 本仓库到你的 GitHub 账号。
+### 快速部署使用
+
+1. **访问网站**
+   - 直接访问：[https://fcl-dl.pages.dev/](https://fcl-dl.pages.dev/)
+
+### 本地部署
+
+1. **Fork 或克隆** 本仓库到你的 GitHub 账号
+   ```bash
+   git clone https://github.com/MilkyPark142008/my-download-site.git
+   ```
+
 2. **修改网站信息**（可选）：
-   - 编辑 `index.html` 中的公告内容（位于 `<div class="announcement">` 内）。
-   - 可调整镜像源列表：编辑 `<select id="mirrorSelect">` 中的 `<option>`。
-3. **配置 GitHub Actions**（无需额外操作，已配置每小时自动运行）。
-4. **部署到 Cloudflare Pages 或 GitHub Pages**：
-   - **Cloudflare Pages**：连接你的 GitHub 仓库，选择“无构建命令”，输出目录留空即可。
-   - **GitHub Pages**：在仓库 Settings > Pages 中，选择分支 `main` 和根目录，保存后即可访问。
-5. **等待 Actions 运行**：首次部署后，可以手动触发一次 Actions 工作流，生成 JSON 文件。之后每小时自动更新。
+   - 编辑 `index.html` 中的公告内容（位于 `<div class="announcement">` 内）
+   - 可调整镜像源列表：编辑 `<select id="mirrorSelect">` 中的 `<option>`
+
+3. **配置 GitHub Actions**
+   - 无需额外操作，已配置每小时自动运行
+
+4. **部署到 GitHub Pages**
+   - 在仓库 `Settings` > `Pages` 中
+   - 选择分支 `main` 和根目录 `/`
+   - 保存后等待自动部署完成
+
+5. **等待 Actions 运行**
+   - 首次部署后，手动触发一次 Actions 工作流生成 JSON 文件
+   - 之后每小时自动更新
+
+### 使用静态服务器本地预览
+
+```bash
+# Python
+python -m http.server 8000
+
+# Node.js
+npx http-server
+
+# PHP
+php -S localhost:8000
+```
+
+## 📂 项目结构
+
+```
+my-download-site/
+├── .github/
+│   └── workflows/
+│       └── update.yml          # GitHub Actions 自动更新工作流
+├── index.html                  # 网站主页面
+├── fcl.json                    # FCL 启动器版本数据（自动生成）
+├── mobileglues.json            # MobileGlues 图形库版本数据（自动生成）
+├── jre.json                    # JRE 运行环境版本数据（自动生成）
+└── README.md                   # 项目说明文档
+```
 
 ## 🔧 自定义指南
 
@@ -44,12 +99,44 @@
 3. **添加模块 HTML**：复制一份现有模块的结构，修改对应的 `id` 和标题。
 4. **添加 JavaScript 逻辑**：复制现有模块的 JavaScript 代码，修改其中的变量名和 `fetch` 地址。
 
+## 🔄 更新机制
+
+项目使用 GitHub Actions 每小时自动执行以下任务：
+
+1. 通过 GitHub API 获取 [FCL](https://github.com/FCL-Team/FCL-Launcher)、[MobileGlues](https://github.com/MobileGlues/MobileGlues)、[JRE](https://github.com/MCL-JRE-Maintainers/JRE-for-Android-Loader) 的最新 Release 数据
+2. 生成对应的 JSON 数据文件（`fcl.json`、`mobileglues.json`、`jre.json`）
+3. 自动提交并推送到仓库
+4. GitHub Pages 自动重新部署
+
+## 📋 更新日志
+
+### v1.2.8.8 (2026-02-26)
+- 优化下载速度和稳定性
+
+### v1.0.0 (2026-02-23)
+- 项目初始化
+- 添加 FCL、MobileGlues、JRE 下载支持
+- 部署到 GitHub Pages
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！
+
 ## 📄 许可证
 
-本项目采用 MIT 许可证，详情请参见 [LICENSE](LICENSE) 文件（如无许可证文件可忽略）。
+本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
 
 ## 🙏 致谢
 
-- 感谢 [FCL-Team](https://github.com/FCL-Team) 和 [MobileGL-Dev](https://github.com/MobileGL-Dev) 开发的优秀项目。
-- 感谢 [aaaapai](https://github.com/aaaapai) 提供的 JRE 构建。
-- 感谢各镜像服务商提供的免费加速服务。
+- [FCL-Team](https://github.com/FCL-Team) - FCL 启动器开发团队
+- [MobileGlues](https://github.com/MobileGlues) - MobileGlues 图形库开发团队
+- [MCL-JRE-Maintainers](https://github.com/MCL-JRE-Maintainers) - JRE for Android 维护团队
+- [aaaapai](https://github.com/aaaapai) - JRE 构建贡献者
+
+## 📮 联系方式
+
+- 如有问题或建议，欢迎在 [GitHub Issues](https://github.com/MilkyPark142008/my-download-site/issues) 中留言
+
+---
+
+如果觉得这个项目对你有帮助，请给个 ⭐ Star 支持一下！
