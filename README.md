@@ -1,3 +1,6 @@
+#整个项目由ai维护 本人并没有进行审核 如果有错误 请立即联系我并指出 我会修改/删除 谢谢
+
+
 # 📱 MC 手机版下载站
 
 [![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-自动更新-blue?logo=github-actions)](https://github.com/MilkyPark142008/my-download-site/actions/workflows/update.yml)
@@ -26,7 +29,7 @@
 - **数据来源**：
   - [FCL-Launcher](https://github.com/FCL-Team/FCL-Launcher)
   - [MobileGlues](https://github.com/MobileGlues/MobileGlues)
-  - [JRE-for-Android-Loader](https://github.com/MCL-JRE-Maintainers/JRE-for-Android-Loader)
+  - [JRE-for-Android](https://github.com/aaaapai)
 
 ## 🚀 部署步骤
 
@@ -110,9 +113,6 @@ my-download-site/
 
 ## 📋 更新日志
 
-### v1.2.8.8 (2026-02-26)
-- 优化下载速度和稳定性
-
 ### v1.0.0 (2026-02-23)
 - 项目初始化
 - 添加 FCL、MobileGlues、JRE 下载支持
@@ -130,7 +130,6 @@ my-download-site/
 
 - [FCL-Team](https://github.com/FCL-Team) - FCL 启动器开发团队
 - [MobileGlues](https://github.com/MobileGlues) - MobileGlues 图形库开发团队
-- [MCL-JRE-Maintainers](https://github.com/MCL-JRE-Maintainers) - JRE for Android 维护团队
 - [aaaapai](https://github.com/aaaapai) - JRE 构建贡献者
 
 ## 📮 联系方式
