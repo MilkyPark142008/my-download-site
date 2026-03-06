@@ -1,0 +1,241 @@
+/* 科技风格 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Orbitron', 'Courier New', monospace;
+    background: #050510;
+    color: #00ffff;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px solid #00ffff;
+    background: rgba(0,255,255,0.05);
+    position: relative;
+}
+.header h1 {
+    font-size: 2rem;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+.header p {
+    font-size: 0.9rem;
+    color: #666;
+}
+.header::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px solid #00ffff;
+    opacity: 0.5;
+}
+.announcement {
+    background: rgba(0,255,255,0.05);
+    border-left: 4px solid #00ff00;
+    padding: 16px 22px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,255,255,0.2);
+}
+.announcement h3 {
+    color: #00ff00;
+    margin-bottom: 8px;
+    text-shadow: 0 0 5px #00ff00;
+}
+.selector {
+    background: rgba(0,255,255,0.05);
+    border: 1px solid #00ffff;
+    padding: 14px 18px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.3);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+}
+.selector::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, #00ffff, #0066ff);
+}
+.selector label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+}
+.selector select {
+    padding: 10px 15px;
+    background: #0a0a20;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    flex: 1;
+}
+.fcl-module {
+    background: rgba(0,20,40,0.8);
+    border: 1px solid #00ffff;
+    padding: 22px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 20px rgba(0,255,255,0.2);
+    position: relative;
+}
+.fcl-module::before {
+    content: 'SYS.VER.' + Math.floor(Math.random() * 999);
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 0.6rem;
+    color: #666;
+}
+.module-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #00ffff;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.module-header h2 {
+    font-size: 1.3rem;
+    text-shadow: 0 0 10px #00ffff;
+    letter-spacing: 2px;
+}
+.module-header .arrow {
+    margin-left: auto;
+    color: #00ffff;
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+.module-version {
+    background: rgba(0,255,255,0.1);
+    border: 1px solid #00ff00;
+    padding: 10px 16px;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+}
+.changelog summary {
+    padding: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #00ffff;
+    list-style: none;
+}
+.changelog summary::-webkit-details-marker {
+    display: none;
+}
+.changelog-content {
+    padding: 15px;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: #666;
+    font-family: 'Courier New', monospace;
+}
+.download-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 15px;
+}
+.card {
+    background: rgba(0,30,60,0.9);
+    border: 1px solid #00ffff;
+    padding: 20px;
+    transition: all 0.3s;
+    position: relative;
+}
+.card:hover {
+    box-shadow: 0 0 20px #00ffff, 0 0 40px rgba(0,255,255,0.5);
+    background: rgba(0,50,100,0.9);
+}
+.card::before {
+    content: '[' + Math.floor(Math.random() * 99) + ']';
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    font-size: 0.6rem;
+    color: #666;
+}
+.card .arch-icon {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #00ffff;
+}
+.card .arch-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 0 0 10px #00ffff;
+    letter-spacing: 2px;
+}
+.card .file-info {
+    font-size: 0.8rem;
+    color: #00ffff;
+    margin-bottom: 15px;
+    font-family: 'Courier New', monospace;
+}
+.card .file-info span {
+    display: block;
+    margin: 4px 0;
+}
+.card .download-btn {
+    display: block;
+    padding: 10px;
+    background: transparent;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.card .download-btn:hover {
+    background: #00ffff;
+    color: #050510;
+    box-shadow: 0 0 20px #00ffff;
+}
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #666;
+    font-size: 0.8rem;
+    font-family: 'Courier New', monospace;
+}
+.loading {
+    text-align: center;
+    padding: 35px;
+    color: #00ffff;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}

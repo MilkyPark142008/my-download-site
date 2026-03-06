@@ -16,20 +16,20 @@ jobs:
 
       - name: Fetch FCL latest release
         run: |
-          curl -s https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases/latest > fcl.json
+          curl -s https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases/latest > data/fcl.json
 
       - name: Fetch MobileGlues latest release
         run: |
-          curl -s https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/latest > mobileglues.json
+          curl -s https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/latest > data/mobileglues.json
 
       - name: Fetch JRE latest release
         run: |
-          curl -s https://api.github.com/repos/MilkyPark142008/android-openjdk-build-release/releases/latest > jre.json
+          curl -s https://api.github.com/repos/MilkyPark142008/android-openjdk-build-release/releases/latest > data/jre.json
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add fcl.json mobileglues.json jre.json
+          git add data/fcl.json data/mobileglues.json data/jre.json
           git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update release info"
           git push
