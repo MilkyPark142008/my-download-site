@@ -113,4 +113,33 @@
     let isJreCollapsed = true;
     setupCollapse(jreHeader, jreArrow, jreContainer, isJreCollapsed);
     loadModuleData('/data/jre.json', jreVersionTag, jreVersionTime, jreChangelogContent, jreContainer, renderJreCards);
+
+    // 风格切换器
+    window.switchStyle = function(styleName) {
+        // 更新CSS链接
+        const styleLink = document.getElementById('currentStyle');
+        if (styleLink) {
+            styleLink.href = `code/styles/${styleName}.css`;
+        }
+        
+        // 更新按钮状态
+        document.querySelectorAll('.style-switcher button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        const activeBtn = document.getElementById(`${styleName}Btn`);
+        if (activeBtn) {
+            activeBtn.classList.add('active');
+        }
+        
+        // 保存用户偏好到localStorage
+        localStorage.setItem('preferredStyle', styleName);
+    };
+    
+    // 页面加载时恢复用户偏好
+    (function() {
+        const preferredStyle = localStorage.getItem('preferredStyle');
+        if (preferredStyle) {
+            switchStyle(preferredStyle);
+        }
+    })();
 })();

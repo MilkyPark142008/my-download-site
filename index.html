@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MC启动器</title>
-    <!-- 玻璃拟态风格 -->
-    <link rel="stylesheet" href="code/styles/glass.css">
+    <!-- 像素复古风（默认） -->
+    <link rel="stylesheet" id="currentStyle" href="code/styles/pixel.css">
 </head>
 <body>
+    <!-- 风格切换器 -->
+    <div class="style-switcher">
+        <button onclick="switchStyle('pixel')" class="active" id="pixelBtn">🎮 像素</button>
+        <button onclick="switchStyle('card')" id="cardBtn">📱 卡片</button>
+        <button onclick="switchStyle('minimal')" id="minimalBtn">⚪ 极简</button>
+    </div>
+    
     <div class="container">
         <!-- 头部 -->
         <div class="header">
