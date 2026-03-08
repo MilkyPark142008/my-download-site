@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC启动器</title>
+    <!-- 极简风格（默认） -->
+    <link rel="stylesheet" id="currentStyle" href="code/styles/minimal.css">
+</head>
+<body>
+    <!-- 菜单按钮 -->
+    <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <!-- 侧边菜单 -->
+    <div id="sideMenu" class="side-menu">
+        <div class="menu-content">
+            <div class="menu-header">
+                <h3>菜单</h3>
+                <button class="close-btn" onclick="toggleMenu()">✕</button>
+            </div>
+            <div class="menu-items">
+                <a href="https://github.com/MilkyPark142008/my-download-site" target="_blank">GitHub 源码</a>
+                <div class="menu-divider"></div>
+                <div class="style-selector">
+                    <p>选择风格：</p>
+                    <button onclick="switchStyle('minimal')" class="style-btn active" id="minimalMenuBtn">极简</button>
+                    <button onclick="switchStyle('card')" class="style-btn" id="cardMenuBtn">卡片</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1>MC启动器下载站</h1>
+            <p>每小时自动更新</p>
+        </div>
+
+        <!-- 公告区 -->
+        <div class="announcement-card">
+            <h3>公告</h3>
+            <p>根据设备架构选择对应版本。下载请勿多次点击。</p>
+            <p class="note">如果遇到错误 请等待耐心修复</p>
+        </div>
+
+        <!-- 下载切换选择器 -->
+        <div class="module-selector">
+            <label>选择项目：</label>
+            <select id="projectSelect" onchange="handleProjectChange()">
+                <option value="fcl">FCL 启动器</option>
+                <option value="mg">MobileGlues</option>
+                <option value="jre">JRE 运行环境</option>
+            </select>
+        </div>
+
+        <!-- FCL 启动器模块 (默认显示) -->
+        <div id="fclModule" class="app-module" style="display: block;">
+            <div class="app-header">
+                <img src="code/icon/fcl.png" alt="FCL" class="app-icon" onerror="this.style.display='none'">
+                <div class="app-info">
+                    <h2>FCL 启动器</h2>
+                    <span class="version-badge" id="fclVersionBadge">加载中...</span>
+                    <span class="update-time" id="fclUpdateTime"></span>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <div class="setting-item">
+                    <label>设备类型</label>
+                    <select id="archSelect">
+                        <option value="arm64">64位 ARM 架构</option>
+                        <option value="armeabi">32位 ARM 架构</option>
+                        <option value="x86_64">64位 x86 架构</option>
+                        <option value="x86">32位 x86 架构</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label>下载源</label>
+                    <select id="mirrorSelect">
+                        <option value="https://ghfast.top/">Ghfast 镜像（推荐）</option>
+                        <option value="https://gh-proxy.com/">Gh-Proxy 镜像</option>
+                        <option value="">GitHub 原始链接</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <h3>下载文件</h3>
+                <div id="downloadContainer" class="download-list"></div>
+            </div>
+
+            <details class="changelog-section" id="fclChangelog">
+                <summary>查看更新日志</summary>
+                <div class="changelog-content" id="fclChangelogContent">加载中...</div>
+            </details>
+        </div>
+
+        <!-- MobileGlues 图形库模块 (默认隐藏) -->
+        <div id="mgModule" class="app-module" style="display: none;">
+            <div class="app-header">
+                <img src="code/icon/MobileGlues.png" alt="MobileGlues" class="app-icon" onerror="this.style.display='none'">
+                <div class="app-info">
+                    <h2>MobileGlues 图形库</h2>
+                    <span class="version-badge" id="mgVersionBadge">加载中...</span>
+                    <span class="update-time" id="mgUpdateTime"></span>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <h3>下载文件</h3>
+                <div id="mgContainer" class="download-list"></div>
+            </div>
+
+            <details class="changelog-section" id="mgChangelog">
+                <summary>查看更新日志</summary>
+                <div class="changelog-content" id="mgChangelogContent">加载中...</div>
+            </details>
+        </div>
+
+        <!-- JRE 运行环境模块 (默认隐藏) -->
+        <div id="jreModule" class="app-module" style="display: none;">
+            <div class="app-header">
+                <img src="code/icon/JRE.png" alt="JRE" class="app-icon" onerror="this.style.display='none'">
+                <div class="app-info">
+                    <h2>JRE 运行环境</h2>
+                    <span class="version-badge" id="jreVersionBadge">加载中...</span>
+                    <span class="update-time" id="jreUpdateTime"></span>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <h3>下载文件</h3>
+                <div id="jreContainer" class="download-list"></div>
+            </div>
+
+            <details class="changelog-section" id="jreChangelog">
+                <summary>查看更新日志</summary>
+                <div class="changelog-content" id="jreChangelogContent">加载中...</div>
+            </details>
+        </div>
+
+    </div>
+
+    <!-- 引用分层的 JavaScript 文件 -->
+    <script src="code/utils.js"></script>
+    <script src="code/renderer.js"></script>
+    <script src="code/main.js"></script>
+</body>
+</html>
