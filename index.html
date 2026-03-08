@@ -58,6 +58,18 @@
             </select>
         </div>
 
+        <!-- 下载源设置 -->
+        <div class="settings-section">
+            <div class="setting-item">
+                <label>下载源</label>
+                <select id="mirrorSelect">
+                    <option value="https://ghfast.top/">Ghfast 镜像（推荐）</option>
+                    <option value="https://gh-proxy.com/">Gh-Proxy 镜像</option>
+                    <option value="">GitHub 原始链接</option>
+                </select>
+            </div>
+        </div>
+
         <!-- FCL 启动器模块 (默认显示) -->
         <div id="fclModule" class="app-module" style="display: block;">
             <div class="app-header">
@@ -82,20 +94,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- 下载源设置 -->
-            <div class="settings-section">
-                <div class="setting-item">
-                    <label>下载源</label>
-                    <select id="mirrorSelect">
-                        <option value="https://ghfast.top/">Ghfast 镜像（推荐）</option>
-                        <option value="https://gh-proxy.com/">Gh-Proxy 镜像</option>
-                        <option value="">GitHub 原始链接</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- 下载文件 -->
             <div class="download-section">
                 <h3>下载文件</h3>
                 <div id="downloadContainer" class="download-list"></div>
