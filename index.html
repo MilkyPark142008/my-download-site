@@ -19,20 +19,20 @@
     <div id="sideMenu" class="side-menu">
         <div class="menu-content">
             <div class="menu-header">
-                <h3>📋 菜单</h3>
+                <h3>菜单</h3>
                 <button class="close-btn" onclick="toggleMenu()">✕</button>
             </div>
             <div class="menu-items">
-                <a href="#fclModule" onclick="toggleMenu()">📁 FCL 启动器</a>
-                <a href="#mgModule" onclick="toggleMenu()">📦 MobileGlues</a>
-                <a href="#jreModule" onclick="toggleMenu()">☕ JRE 运行环境</a>
+                <a href="#fclModule" onclick="toggleMenu()"><img src="code/icon/fcl.png" alt="FCL" class="menu-icon"> FCL 启动器</a>
+                <a href="#mgModule" onclick="toggleMenu()"><img src="code/icon/MobileGlues.png" alt="MobileGlues" class="menu-icon"> MobileGlues</a>
+                <a href="#jreModule" onclick="toggleMenu()"><img src="code/icon/JRE.png" alt="JRE" class="menu-icon"> JRE 运行环境</a>
                 <div class="menu-divider"></div>
-                <a href="https://github.com/MilkyPark142008/my-download-site" target="_blank">🐙 GitHub 源码</a>
+                <a href="https://github.com/MilkyPark142008/my-download-site" target="_blank">GitHub 源码</a>
                 <div class="menu-divider"></div>
                 <div class="style-selector">
                     <p>选择风格：</p>
-                    <button onclick="switchStyle('minimal')" class="style-btn active" id="minimalMenuBtn">⚪ 极简</button>
-                    <button onclick="switchStyle('card')" class="style-btn" id="cardMenuBtn">📱 卡片</button>
+                    <button onclick="switchStyle('minimal')" class="style-btn active" id="minimalMenuBtn">极简</button>
+                    <button onclick="switchStyle('card')" class="style-btn" id="cardMenuBtn">卡片</button>
                 </div>
             </div>
         </div>
@@ -41,8 +41,8 @@
     <div class="container">
         <!-- 头部 -->
         <div class="header">
-            <h1>📱 MC手机版下载站</h1>
-            <p>多架构版本 · 每小时同步更新</p>
+            <h1>MC启动器下载站</h1>
+            <p>每小时自动更新</p>
         </div>
 
         <!-- 公告区 -->
@@ -50,7 +50,7 @@
             <h3>📢 公告</h3>
             <p>根据设备架构选择对应版本。下载请勿多次点击。</p>
             <p>如果遇到错误 请等待耐心修复</p>
-            <p class="note">网页源码最新更新时间：2026-02-23 22:48</p>
+            <p class="note">网页源码最新更新时间：2026-03-08 13:00</p>
             <p class="note">挂了的镜像下载不知道为什么会出现问题 先留着</p>
             <p class="note">预计更新 zl2启动器 澪u启动器 紫水晶启动器 插件的下载链接 以及一些作者的键位（这里会放上视频链接 作者提供的下载方式）</p>
             <p class="note">如果还有其他想法视频底下留言 网页源码在Github上</p>
@@ -69,7 +69,7 @@
 
         <!-- 项目选择器 -->
         <div class="selector" style="margin-top: -8px;">
-            <label for="projectSelect">📦 选择项目：</label>
+            <label for="projectSelect">选择项目：</label>
             <select id="projectSelect">
                 <option value="fcl">FCL 启动器</option>
                 <option value="mg">MobileGlues 图形库</option>
@@ -81,17 +81,17 @@
         <div id="fclModule" class="fcl-module" style="display: block;">
             <div class="module-header" id="fclHeader">
                 <h2>
-                    <span>📁 FCL 启动器</span>
+                    <span>FCL 启动器</span>
                 </h2>
                 <span class="arrow" id="toggleArrow">▶</span>
                 <p>点击标题展开</p>
             </div>
             <div class="module-version" id="fclVersionInfo">
-                <span class="version-tag">📌 最新: 加载中...</span>
+                <span class="version-tag">最新: 加载中...</span>
                 <span>⏳</span>
             </div>
             <details class="changelog" id="fclChangelog">
-                <summary>📋 查看更新日志</summary>
+                <summary>查看更新日志</summary>
                 <div class="changelog-content" id="fclChangelogContent">加载中...</div>
             </details>
             <div id="downloadContainer" class="download-grid" style="display: none;"></div>
@@ -101,13 +101,13 @@
         <div id="mgModule" class="fcl-module" style="display: none;">
             <div class="module-header" id="mgHeader">
                 <h2>
-                    <span>📦 MobileGlues 图形库</span>
+                    <span>MobileGlues 图形库</span>
                 </h2>
                 <span class="arrow" id="mgArrow">▶</span>
                 <p>点击标题展开</p>
             </div>
             <div class="module-version" id="mgVersionInfo">
-                <span class="version-tag">📌 最新: 加载中...</span>
+                <span class="version-tag">最新: 加载中...</span>
                 <span>⏳</span>
             </div>
             <details class="changelog" id="mgChangelog">
@@ -121,13 +121,13 @@
         <div id="jreModule" class="fcl-module" style="display: none;">
             <div class="module-header" id="jreHeader">
                 <h2>
-                    <span>☕ JRE 运行环境</span>
+                    <span>JRE 运行环境</span>
                 </h2>
                 <span class="arrow" id="jreArrow">▶</span>
                 <p>点击标题展开</p>
             </div>
             <div class="module-version" id="jreVersionInfo">
-                <span class="version-tag">📌 最新: 加载中...</span>
+                <span class="version-tag">最新: 加载中...</span>
                 <span>⏳</span>
             </div>
             <details class="changelog" id="jreChangelog">

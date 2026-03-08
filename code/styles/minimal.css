@@ -380,7 +380,8 @@ body {
 }
 
 .menu-items a {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 14px 16px;
     color: #1a1a1a;
     text-decoration: none;
@@ -389,6 +390,14 @@ body {
     font-size: 15px;
     font-weight: 500;
     transition: all 0.2s;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    object-fit: contain;
+    border-radius: 4px;
 }
 
 .menu-items a:hover {
