@@ -121,9 +121,54 @@ body {
     padding: 20px;
     margin-bottom: 16px;
     display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* 头部第一行：图标和信息 */
+.header-top {
+    display: flex;
     align-items: center;
     gap: 16px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 16px;
+}
+
+/* 版本信息卡片 */
+.header-version-card {
+    margin-top: 15px;
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-version-card .v-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.header-version-card .v-info-label {
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.header-version-card .v-info-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+@media (max-width: 480px) {
+    .header-version-card {
+        padding: 10px 12px;
+    }
+    .header-version-card .v-info-value {
+        font-size: 13px;
+    }
 }
 
 .app-icon {

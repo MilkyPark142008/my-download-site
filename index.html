@@ -61,11 +61,25 @@
         <!-- FCL 启动器模块 (默认显示) -->
         <div id="fclModule" class="app-module" style="display: block;">
             <div class="app-header">
-                <img src="code/icon/fcl.png" alt="FCL" class="app-icon" onerror="this.style.display='none'">
-                <div class="app-info">
-                    <h2>FCL 启动器</h2>
-                    <span class="version-badge" id="fclVersionBadge">加载中...</span>
-                    <span class="update-time" id="fclUpdateTime"></span>
+                <div class="header-top">
+                    <img src="code/icon/fcl.png" alt="FCL" class="app-icon" onerror="this.style.display='none'">
+                    <div class="app-info">
+                        <h2>FCL 启动器</h2>
+                        <span class="version-badge" id="fclVersionBadge">加载中...</span>
+                        <span class="update-time" id="fclUpdateTime"></span>
+                    </div>
+                </div>
+                
+                <!-- 版本信息卡片 -->
+                <div class="header-version-card">
+                    <div class="v-info-item">
+                        <span class="v-info-label">版本</span>
+                        <span class="v-info-value" id="fclVersionDisplay">加载中...</span>
+                    </div>
+                    <div class="v-info-item">
+                        <span class="v-info-label">更新</span>
+                        <span class="v-info-value" id="fclTimeDisplay">加载中...</span>
+                    </div>
                 </div>
             </div>
 
