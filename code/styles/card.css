@@ -258,57 +258,205 @@ body {
     color: #764ba2;
 }
 
-/* 风格切换器 */
-.style-switcher {
+/* 菜单按钮 */
+.menu-toggle {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1000;
+    z-index: 2000;
+    width: 44px;
+    height: 44px;
     background: rgba(255, 255, 255, 0.98);
-    border-radius: 15px;
-    padding: 18px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+    transition: all 0.3s ease;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
-.style-switcher button {
+.menu-toggle:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
+}
+
+.menu-toggle:hover span {
+    background: white;
+}
+
+.menu-toggle span {
+    width: 20px;
+    height: 2px;
+    background: #667eea;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* 侧边菜单 */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 320px;
+    max-width: 85vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    box-shadow: -8px 0 40px rgba(0, 0, 0, 0.15);
+    z-index: 1999;
+    transition: right 0.3s ease;
+}
+
+.side-menu.active {
+    right: 0;
+}
+
+.menu-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.menu-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.close-btn {
+    width: 32px;
+    height: 32px;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #667eea;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: transparent;
+}
+
+.menu-items {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.menu-items a {
+    display: block;
+    padding: 14px 16px;
+    color: #495057;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 4px 0;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.menu-items a:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: translateX(5px);
+}
+
+.menu-divider {
+    height: 1px;
+    background: #e9ecef;
+    margin: 16px 0;
+}
+
+.style-selector p {
+    color: #666;
+    font-size: 13px;
+    margin: 0 0 12px;
+    font-weight: 600;
+}
+
+.style-btn {
     display: block;
     width: 100%;
-    margin: 8px 0;
-    padding: 10px 16px;
+    padding: 14px 16px;
     background: #f8f9fa;
     border: 2px solid #e9ecef;
     border-radius: 10px;
     color: #495057;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
+    margin: 6px 0;
+    text-align: left;
 }
 
-.style-switcher button:hover {
+.style-btn:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: transparent;
+    transform: translateX(5px);
+}
+
+.style-btn.active {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border-color: transparent;
 }
 
-.style-switcher button.active {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-color: transparent;
+/* 遮罩 */
+.side-menu.active::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(102, 126, 234, 0.3);
+    z-index: -1;
 }
 
 @media (max-width: 600px) {
     .header h1 { font-size: 28px; }
-    .style-switcher {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        top: auto;
-        padding: 12px;
+    
+    .menu-toggle {
+        top: 16px;
+        right: 16px;
     }
     
-    .style-switcher button {
-        padding: 8px 12px;
-        font-size: 13px;
+    .side-menu {
+        width: 85vw;
     }
 }

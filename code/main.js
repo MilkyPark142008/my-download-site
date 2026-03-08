@@ -114,6 +114,23 @@
     setupCollapse(jreHeader, jreArrow, jreContainer, isJreCollapsed);
     loadModuleData('/data/jre.json', jreVersionTag, jreVersionTime, jreChangelogContent, jreContainer, renderJreCards);
 
+    // 菜单切换
+    window.toggleMenu = function() {
+        const menu = document.getElementById('sideMenu');
+        const toggleBtn = document.getElementById('menuToggle');
+        menu.classList.toggle('active');
+        toggleBtn.classList.toggle('active');
+    };
+    
+    // 点击遮罩关闭菜单
+    document.addEventListener('click', function(e) {
+        const menu = document.getElementById('sideMenu');
+        const toggleBtn = document.getElementById('menuToggle');
+        if (!menu.contains(e.target) && !toggleBtn.contains(e.target) && menu.classList.contains('active')) {
+            toggleMenu();
+        }
+    });
+    
     // 风格切换器
     window.switchStyle = function(styleName) {
         // 更新CSS链接
@@ -122,13 +139,13 @@
             styleLink.href = `code/styles/${styleName}.css`;
         }
         
-        // 更新按钮状态
-        document.querySelectorAll('.style-switcher button').forEach(btn => {
+        // 更新侧边菜单中的按钮状态
+        document.querySelectorAll('.style-btn').forEach(btn => {
             btn.classList.remove('active');
         });
-        const activeBtn = document.getElementById(`${styleName}Btn`);
-        if (activeBtn) {
-            activeBtn.classList.add('active');
+        const activeMenuBtn = document.getElementById(`${styleName}MenuBtn`);
+        if (activeMenuBtn) {
+            activeMenuBtn.classList.add('active');
         }
         
         // 保存用户偏好到localStorage
