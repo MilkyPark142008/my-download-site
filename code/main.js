@@ -54,7 +54,7 @@
 
     // 加载数据并显示
     async function loadModuleData(jsonPath, versionElement, timeElement, 
-                                  changelogElement, containerElement, renderFunc, versionDisplay, timeDisplay) {
+                                  changelogElement, containerElement, renderFunc) {
         containerElement.innerHTML = '<div class="loading">⏳ 加载版本信息中...</div>';
         
         try {
@@ -67,14 +67,6 @@
             versionElement.textContent = data.tag_name || '未知版本';
             const published = data.published_at;
             timeElement.textContent = published ? formatDate(published) : '';
-            
-            // 更新头部版本显示卡片
-            if (versionDisplay) {
-                versionDisplay.textContent = data.tag_name || '未知版本';
-            }
-            if (timeDisplay) {
-                timeDisplay.textContent = published ? formatDate(published) : '';
-            }
             
             // 更新更新日志
             changelogElement.innerHTML = (data.body || '暂无更新日志').replace(/</g, '<').replace(/>/g, '>');
@@ -99,9 +91,7 @@
         document.getElementById('fclUpdateTime'),
         document.getElementById('fclChangelogContent'),
         document.getElementById('downloadContainer'),
-        renderFclCards,
-        document.getElementById('fclVersionDisplay'),
-        document.getElementById('fclTimeDisplay')
+        renderFclCards
     );
 
     // ===== 加载 MobileGlues 数据 =====
