@@ -242,6 +242,17 @@ body {
     margin: 0 0 16px;
 }
 
+/* Action 运行信息 */
+.run-info {
+    font-size: 12px;
+    color: #86868b;
+    text-align: center;
+    padding: 8px 12px;
+    background: #f5f5f7;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
 .download-list {
     display: flex;
     flex-direction: column;

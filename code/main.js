@@ -94,6 +94,75 @@
         renderFclCards
     );
 
+    // ===== 加载 FCL Action 构建产物 =====
+    async function loadFclActions() {
+        const actionContainer = document.getElementById('actionContainer');
+        actionContainer.innerHTML = '<div class="loading">⏳ 加载 Action 构建产物中...</div>';
+        
+        try {
+            // 获取最新的 workflow run
+            const runsResponse = await fetch('https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs?per_page=1');
+            if (!runsResponse.ok) throw new Error('无法获取 Actions 运行列表');
+            
+            const runsData = await runsResponse.json();
+            if (!runsData.workflow_runs || runsData.workflow_runs.length === 0) {
+                actionContainer.innerHTML = '<div class="no-assets">暂无构建产物</div>';
+                return;
+            }
+            
+            const latestRun = runsData.workflow_runs[0];
+            const runId = latestRun.id;
+            
+            // 获取该 run 的 artifacts
+            const artifactsResponse = await fetch(`https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/${runId}/artifacts`);
+            if (!artifactsResponse.ok) throw new Error('无法获取构建产物');
+            
+            const artifactsData = await artifactsResponse.json();
+            
+            if (!artifactsData.artifacts || artifactsData.artifacts.length === 0) {
+                actionContainer.innerHTML = '<div class="no-assets">暂无构建产物</div>';
+                return;
+            }
+            
+            // 渲染构建产物列表
+            const artifacts = artifactsData.artifacts;
+            let html = '<div class="run-info">运行 #' + runId + ' | ' + formatDate(latestRun.created_at) + '</div>';
+            
+            artifacts.forEach(artifact => {
+                // 生成下载链接（需要用户点击后在 GitHub 下载）
+                const downloadUrl = artifact.archive_download_url;
+                // 注意：GitHub API 的 artifact.download_url 需要认证
+                // 这里我们直接跳转到 GitHub 页面下载
+                const htmlUrl = `https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/${runId}`;
+                
+                const sizeMB = (artifact.size_in_bytes / 1024 / 1024).toFixed(1);
+                
+                html += `
+                    <div class="download-card">
+                        <div class="file-info">
+                            <div class="file-name">${artifact.name}</div>
+                            <div class="file-meta">
+                                <span>📦 ${formatSize(artifact.size_in_bytes)}</span>
+                            </div>
+                        </div>
+                        <a href="${htmlUrl}" class="download-btn" target="_blank" rel="noopener noreferrer">
+                            下载
+                        </a>
+                    </div>
+                `;
+            });
+            
+            actionContainer.innerHTML = html;
+            
+        } catch (error) {
+            console.error('加载 Actions 失败:', error);
+            actionContainer.innerHTML = `<div class="no-assets">❌ 加载失败，请稍后重试。<br>${error.message}</div>`;
+        }
+    }
+    
+    // 加载 Actions 产物
+    loadFclActions();
+
     // ===== 加载 MobileGlues 数据 =====
     loadModuleData(
         '/data/mobileglues.json',
