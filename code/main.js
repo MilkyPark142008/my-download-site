@@ -163,6 +163,31 @@
     // 加载 Actions 产物
     loadFclActions();
 
+    // ===== 下载类型切换功能 =====
+    window.selectDownloadType = function(type) {
+        const releaseSection = document.getElementById('releaseSection');
+        const actionSection = document.getElementById('actionSection');
+        const buttons = document.querySelectorAll('.selector-btn');
+        
+        // 更新按钮状态
+        buttons.forEach(btn => {
+            if (btn.getAttribute('data-type') === type) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+        
+        // 切换显示区域
+        if (type === 'release') {
+            releaseSection.style.display = 'block';
+            actionSection.style.display = 'none';
+        } else {
+            releaseSection.style.display = 'none';
+            actionSection.style.display = 'block';
+        }
+    };
+
     // ===== 加载 MobileGlues 数据 =====
     loadModuleData(
         '/data/mobileglues.json',

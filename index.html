@@ -80,7 +80,18 @@
                     <h2>FCL 启动器</h2>
                         <span class="version-text">最新版本：</span><span class="version-badge" id="fclVersionBadge">加载中...</span>
                         <span class="time-text">最新更新时间：</span><span class="update-time" id="fclUpdateTime"></span>
-                    </div>
+            </div>
+
+            <!-- 下载类型选择 -->
+            <div class="download-type-selector">
+                <label>下载来源：</label>
+                <div class="selector-buttons">
+                    <button class="selector-btn active" data-type="release" onclick="selectDownloadType('release')">
+                        Release 稳定版
+                    </button>
+                    <button class="selector-btn" data-type="action" onclick="selectDownloadType('action')">
+                        Action 开发版
+                    </button>
                 </div>
             </div>
 
@@ -91,18 +102,20 @@
             </details>
 
             <!-- 下载文件 -->
-            <div class="download-section">
-                <h3>下载文件</h3>
+            <div class="download-section" id="releaseSection">
+                <h3>Release 稳定版下载</h3>
                 <div id="downloadContainer" class="download-list"></div>
             </div>
 
-            <!-- 最新 Action 构建产物 -->
-            <div class="download-section">
-                <h3>最新 Action 构建产物</h3>
+            <!-- Action 构建产物 -->
+            <div class="download-section" id="actionSection" style="display: none;">
+                <h3>Action 开发版下载</h3>
                 <p class="note">开发版本，可能存在未知问题，仅供体验使用</p>
                 <div id="actionContainer" class="download-list">
                     <div class="loading">⏳ 加载中...</div>
                 </div>
+            </div>
+        </div>
             </div>
         </div>
 
