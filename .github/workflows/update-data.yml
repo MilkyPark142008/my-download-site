@@ -11,6 +11,8 @@ on:
 jobs:
   update-data:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
@@ -48,6 +50,8 @@ jobs:
           curl -s "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/$RUN_ID/artifacts" > data/fcl-artifacts.json
           # 合并为 fcl-action.json
           echo "{ \"run\": $(cat data/fcl-actions.json | jq '.workflow_runs[0]'), \"artifacts\": $(cat data/fcl-artifacts.json | jq '.artifacts') }" > data/fcl-action.json
+          # 删除中间文件
+          rm data/fcl-actions.json data/fcl-artifacts.json
           
       - name: Update ZalithLauncher2 Actions
         run: |
@@ -56,6 +60,8 @@ jobs:
           curl -s "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/$RUN_ID/artifacts" > data/zalith-artifacts.json
           # 合并为 zalith-action.json
           echo "{ \"run\": $(cat data/zalith-actions.json | jq '.workflow_runs[0]'), \"artifacts\": $(cat data/zalith-artifacts.json | jq '.artifacts') }" > data/zalith-action.json
+          # 删除中间文件
+          rm data/zalith-actions.json data/zalith-artifacts.json
           
       - name: Commit and push
         run: |
