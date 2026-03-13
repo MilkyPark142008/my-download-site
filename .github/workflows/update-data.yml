@@ -27,41 +27,37 @@ jobs:
       - name: Create data directory
         run: mkdir -p data
         
-      - name: Update FCL Release
+      - name: Update FCL
         run: |
           curl -s https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases/latest > data/fcl-release.json
-          
-      - name: Update ZalithLauncher2 Release
-        run: |
-          curl -s https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/releases/latest > data/zalith-release.json
-          
-      - name: Update MobileGlues Release
-        run: |
-          curl -s https://api.github.com/repos/MobileGlues/MobileGlues/releases/latest > data/mobileglues-release.json
-          
-      - name: Update JRE Release
-        run: |
-          curl -s https://api.github.com/repos/MCMrARM/arm64-v8a/releases/latest > data/jre-release.json
-          
-      - name: Update FCL Actions
-        run: |
           curl -s "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs?per_page=1" > data/fcl-actions.json
           RUN_ID=$(jq -r '.workflow_runs[0].id' data/fcl-actions.json)
           curl -s "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/$RUN_ID/artifacts" > data/fcl-artifacts.json
-          # 合并为 fcl-action.json
-          echo "{ \"run\": $(cat data/fcl-actions.json | jq '.workflow_runs[0]'), \"artifacts\": $(cat data/fcl-artifacts.json | jq '.artifacts') }" > data/fcl-action.json
-          # 删除中间文件
-          rm data/fcl-actions.json data/fcl-artifacts.json
+          # 合并为 fcl.json
+          echo "{ \"release\": $(cat data/fcl-release.json), \"action\": { \"run\": $(cat data/fcl-actions.json | jq '.workflow_runs[0]'), \"artifacts\": $(cat data/fcl-artifacts.json | jq '.artifacts') } }" > data/fcl.json
+          rm data/fcl-release.json data/fcl-actions.json data/fcl-artifacts.json
           
-      - name: Update ZalithLauncher2 Actions
+      - name: Update ZalithLauncher2
         run: |
+          curl -s https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/releases/latest > data/zalith-release.json
           curl -s "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs?per_page=1" > data/zalith-actions.json
           RUN_ID=$(jq -r '.workflow_runs[0].id' data/zalith-actions.json)
           curl -s "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/$RUN_ID/artifacts" > data/zalith-artifacts.json
-          # 合并为 zalith-action.json
-          echo "{ \"run\": $(cat data/zalith-actions.json | jq '.workflow_runs[0]'), \"artifacts\": $(cat data/zalith-artifacts.json | jq '.artifacts') }" > data/zalith-action.json
-          # 删除中间文件
-          rm data/zalith-actions.json data/zalith-artifacts.json
+          # 合并为 zalith.json
+          echo "{ \"release\": $(cat data/zalith-release.json), \"action\": { \"run\": $(cat data/zalith-actions.json | jq '.workflow_runs[0]'), \"artifacts\": $(cat data/zalith-artifacts.json | jq '.artifacts') } }" > data/zalith.json
+          rm data/zalith-release.json data/zalith-actions.json data/zalith-artifacts.json
+          
+      - name: Update MobileGlues
+        run: |
+          curl -s https://api.github.com/repos/MobileGlues/MobileGlues/releases/latest > data/mobileglues-release.json
+          # MobileGlues 无 Actions，直接重命名
+          mv data/mobileglues-release.json data/mobileglues.json
+          
+      - name: Update JRE
+        run: |
+          curl -s https://api.github.com/repos/MCMrARM/arm64-v8a/releases/latest > data/jre-release.json
+          # JRE 无 Actions，直接重命名
+          mv data/jre-release.json data/jre.json
           
       - name: Commit and push
         run: |

@@ -57,14 +57,20 @@
 
     // 加载数据并显示
     async function loadModuleData(jsonPath, versionElement, timeElement, 
-                                  changelogElement, containerElement, renderFunc) {
+                                  changelogElement, containerElement, renderFunc, dataObj) {
         containerElement.innerHTML = '<div class="loading">⏳ 加载版本信息中...</div>';
         
         try {
-            const response = await fetch(jsonPath);
-            if (!response.ok) throw new Error(`无法获取 ${jsonPath} (HTTP ${response.status})`);
-            
-            const data = await response.json();
+            let data;
+            if (dataObj) {
+                // 直接使用传入的数据对象
+                data = dataObj;
+            } else {
+                // 从 URL 获取数据
+                const response = await fetch(jsonPath);
+                if (!response.ok) throw new Error(`无法获取 ${jsonPath} (HTTP ${response.status})`);
+                data = await response.json();
+            }
             
             // 更新版本信息
             versionElement.textContent = data.tag_name || '未知版本';
@@ -88,67 +94,59 @@
     }
 
     // ===== 加载 FCL 启动器数据 =====
-    loadModuleData(
-        '/data/fcl-release.json',
-        document.getElementById('fclVersionBadge'),
-        document.getElementById('fclUpdateTime'),
-        document.getElementById('fclChangelogContent'),
-        document.getElementById('downloadContainer'),
-        renderFclCards
-    );
-
-    // ===== 加载 FCL Action 构建产物（从 data 目录） =====
-    async function loadFclActions() {
-        const actionContainer = document.getElementById('actionContainer');
-        actionContainer.innerHTML = '<div class="loading">⏳ 加载 Action 构建产物中...</div>';
-        
+    (async function loadFcl() {
         try {
-            // 从 data 目录读取合并后的 actions 文件
-            const response = await fetch('/data/fcl-action.json');
-            if (!response.ok) throw new Error('无法获取 Actions 数据');
+            const response = await fetch('/data/fcl.json');
+            if (!response.ok) throw new Error('无法获取 FCL 数据');
             
             const data = await response.json();
             
-            if (!data.artifacts || data.artifacts.length === 0) {
-                actionContainer.innerHTML = '<div class="no-assets">暂无构建产物</div>';
-                return;
+            // 加载 Release
+            if (data.release) {
+                loadModuleData(
+                    null,
+                    document.getElementById('fclVersionBadge'),
+                    document.getElementById('fclUpdateTime'),
+                    document.getElementById('fclChangelogContent'),
+                    document.getElementById('downloadContainer'),
+                    renderFclCards,
+                    data.release
+                );
             }
             
-            const runId = data.run.id;
-            
-            // 渲染构建产物列表
-            const artifacts = data.artifacts;
-            let html = '<div class="run-info">运行 #' + runId + ' | ' + formatDate(data.run.created_at) + '</div>';
-            
-            artifacts.forEach(artifact => {
-                // 跳转到 GitHub Actions 页面下载
-                const htmlUrl = `https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/${runId}`;
+            // 加载 Action
+            if (data.action && data.action.run && data.action.artifacts) {
+                const actionContainer = document.getElementById('actionContainer');
+                actionContainer.innerHTML = '<div class="loading">⏳ 加载 Action 构建产物中...</div>';
                 
-                html += `
-                    <div class="download-card">
-                        <div class="file-info">
-                            <div class="file-name">${artifact.name}</div>
-                            <div class="file-meta">
-                                <span>📦 ${formatSize(artifact.size_in_bytes)}</span>
+                const runId = data.action.run.id;
+                const artifacts = data.action.artifacts;
+                let html = '<div class="run-info">运行 #' + runId + ' | ' + formatDate(data.action.run.created_at) + '</div>';
+                
+                artifacts.forEach(artifact => {
+                    const htmlUrl = `https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/${runId}`;
+                    html += `
+                        <div class="download-card">
+                            <div class="file-info">
+                                <div class="file-name">${artifact.name}</div>
+                                <div class="file-meta">
+                                    <span>📦 ${formatSize(artifact.size_in_bytes)}</span>
+                                </div>
                             </div>
+                            <a href="${htmlUrl}" class="download-btn" target="_blank" rel="noopener noreferrer">
+                                下载
+                            </a>
                         </div>
-                        <a href="${htmlUrl}" class="download-btn" target="_blank" rel="noopener noreferrer">
-                            下载
-                        </a>
-                    </div>
-                `;
-            });
-            
-            actionContainer.innerHTML = html;
-            
+                    `;
+                });
+                
+                actionContainer.innerHTML = html;
+            }
         } catch (error) {
-            console.error('加载 Actions 失败:', error);
-            actionContainer.innerHTML = `<div class="no-assets">❌ 加载失败，请稍后重试。<br>${error.message}</div>`;
+            console.error('加载 FCL 失败:', error);
+            document.getElementById('downloadContainer').innerHTML = `<div class="no-assets">❌ 加载失败<br>${error.message}</div>`;
         }
-    }
-    
-    // 加载 Actions 产物
-    loadFclActions();
+    })();
 
     // ===== 下载类型切换功能 =====
     window.selectDownloadType = function(type) {
@@ -177,7 +175,7 @@
 
     // ===== 加载 MobileGlues 数据 =====
     loadModuleData(
-        '/data/mobileglues-release.json',
+        '/data/mobileglues.json',
         document.getElementById('mgVersionBadge'),
         document.getElementById('mgUpdateTime'),
         document.getElementById('mgChangelogContent'),
@@ -187,7 +185,7 @@
 
     // ===== 加载 JRE 数据 =====
     loadModuleData(
-        '/data/jre-release.json',
+        '/data/jre.json',
         document.getElementById('jreVersionBadge'),
         document.getElementById('jreUpdateTime'),
         document.getElementById('jreChangelogContent'),
@@ -195,92 +193,70 @@
         renderJreCards
     );
 
-    // ===== 加载 ZalithLauncher2 Release数据（从 data 目录） =====
-    async function loadZalithRelease() {
-        const container = document.getElementById('zalithReleaseContainer');
-        const versionBadge = document.getElementById('zalithVersionBadge');
-        const updateTime = document.getElementById('zalithUpdateTime');
-        const changelogContent = document.getElementById('zalithChangelogContent');
-        
-        container.innerHTML = '<div class="loading">⏳ 加载版本信息中...</div>';
-        
+    // ===== 加载 ZalithLauncher2 数据 =====
+    (async function loadZalith() {
         try {
-            // 从 data 目录读取数据
-            const response = await fetch('/data/zalith-release.json');
-            if (!response.ok) throw new Error('无法获取 Release 数据');
+            const response = await fetch('/data/zalith.json');
+            if (!response.ok) throw new Error('无法获取 Zalith 数据');
             
             const data = await response.json();
             
-            // 更新版本信息
-            versionBadge.textContent = data.tag_name || '未知版本';
-            const published = data.published_at;
-            updateTime.textContent = published ? formatDate(published) : '';
-            
-            // 更新更新日志
-            changelogContent.innerHTML = (data.body || '暂无更新日志').replace(/</g, '<').replace(/>/g, '>');
-            
-            // 渲染下载列表
-            const assets = data.assets || [];
-            const mirrorPrefix = mirrorSelect ? mirrorSelect.value : '';
-            container.innerHTML = renderZalithCards(assets, mirrorPrefix);
-            
-        } catch (error) {
-            console.error('加载 ZalithLauncher2 Release 失败:', error);
-            container.innerHTML = `<div class="no-assets">❌ 加载失败，请稍后重试。<br>${error.message}</div>`;
-            versionBadge.textContent = '加载失败';
-            changelogContent.innerHTML = '加载失败';
-        }
-    }
-
-    // ===== 加载 ZalithLauncher2 Action 构建产物（从 data 目录） =====
-    async function loadZalithActions() {
-        const actionContainer = document.getElementById('zalithActionContainer');
-        actionContainer.innerHTML = '<div class="loading">⏳ 加载 Action 构建产物中...</div>';
-        
-        try {
-            // 从 data 目录读取合并后的 actions 文件
-            const response = await fetch('/data/zalith-action.json');
-            if (!response.ok) throw new Error('无法获取 Actions 数据');
-            
-            const data = await response.json();
-            
-            if (!data.artifacts || data.artifacts.length === 0) {
-                actionContainer.innerHTML = '<div class="no-assets">暂无构建产物</div>';
-                return;
+            // 加载 Release
+            if (data.release) {
+                const container = document.getElementById('zalithReleaseContainer');
+                const versionBadge = document.getElementById('zalithVersionBadge');
+                const updateTime = document.getElementById('zalithUpdateTime');
+                const changelogContent = document.getElementById('zalithChangelogContent');
+                
+                container.innerHTML = '<div class="loading">⏳ 加载版本信息中...</div>';
+                
+                // 更新版本信息
+                versionBadge.textContent = data.release.tag_name || '未知版本';
+                const published = data.release.published_at;
+                updateTime.textContent = published ? formatDate(published) : '';
+                
+                // 更新更新日志
+                changelogContent.innerHTML = (data.release.body || '暂无更新日志').replace(/</g, '<').replace(/>/g, '>');
+                
+                // 渲染下载列表
+                const assets = data.release.assets || [];
+                const mirrorPrefix = mirrorSelect ? mirrorSelect.value : '';
+                container.innerHTML = renderZalithCards(assets, mirrorPrefix);
             }
             
-            const runId = data.run.id;
-            
-            // 渲染构建产物列表
-            const artifacts = data.artifacts;
-            let html = '<div class="run-info">运行 #' + runId + ' | ' + formatDate(data.run.created_at) + '</div>';
-            
-            artifacts.forEach(artifact => {
-                // 跳转到 GitHub Actions 页面下载
-                const htmlUrl = `https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/${runId}`;
+            // 加载 Action
+            if (data.action && data.action.run && data.action.artifacts) {
+                const actionContainer = document.getElementById('zalithActionContainer');
+                actionContainer.innerHTML = '<div class="loading">⏳ 加载 Action 构建产物中...</div>';
                 
-                html += `
-                    <div class="download-card">
-                        <div class="file-info">
-                            <div class="file-name">${artifact.name}</div>
-                            <div class="file-meta">
-                                <span>📦 ${formatSize(artifact.size_in_bytes)}</span>
+                const runId = data.action.run.id;
+                const artifacts = data.action.artifacts;
+                let html = '<div class="run-info">运行 #' + runId + ' | ' + formatDate(data.action.run.created_at) + '</div>';
+                
+                artifacts.forEach(artifact => {
+                    const htmlUrl = `https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/${runId}`;
+                    html += `
+                        <div class="download-card">
+                            <div class="file-info">
+                                <div class="file-name">${artifact.name}</div>
+                                <div class="file-meta">
+                                    <span>📦 ${formatSize(artifact.size_in_bytes)}</span>
+                                </div>
                             </div>
+                            <a href="${htmlUrl}" class="download-btn" target="_blank" rel="noopener noreferrer">
+                                下载
+                            </a>
                         </div>
-                        <a href="${htmlUrl}" class="download-btn" target="_blank" rel="noopener noreferrer">
-                            下载
-                        </a>
-                    </div>
-                `;
-            });
-            
-            actionContainer.innerHTML = html;
-            
+                    `;
+                });
+                
+                actionContainer.innerHTML = html;
+            }
         } catch (error) {
-            console.error('加载 ZalithLauncher2 Actions 失败:', error);
-            actionContainer.innerHTML = `<div class="no-assets">❌ 加载失败，请稍后重试。<br>${error.message}</div>`;
+            console.error('加载 Zalith 失败:', error);
+            document.getElementById('zalithReleaseContainer').innerHTML = `<div class="no-assets">❌ 加载失败<br>${error.message}</div>`;
         }
-    }
+    })();
 
     // ===== ZalithLauncher2 下载类型切换功能 =====
     window.selectZalithDownloadType = function(type) {
@@ -306,9 +282,6 @@
             actionSection.style.display = 'block';
         }
     };
-
-    // 加载 ZalithLauncher2 数据
-    loadZalithRelease();
 
     // 菜单切换
     window.toggleMenu = function() {
