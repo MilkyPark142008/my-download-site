@@ -101,18 +101,47 @@
             
             const data = await response.json();
             
-            // 加载 Release（直接使用 data 作为 release 对象）
-            loadModuleData(
-                null,
-                document.getElementById('fclVersionBadge'),
-                document.getElementById('fclUpdateTime'),
-                document.getElementById('fclChangelogContent'),
-                document.getElementById('downloadContainer'),
-                renderFclCards,
-                data
-            );
+            // 加载 Release
+            if (data.release) {
+                loadModuleData(
+                    null,
+                    document.getElementById('fclVersionBadge'),
+                    document.getElementById('fclUpdateTime'),
+                    document.getElementById('fclChangelogContent'),
+                    document.getElementById('downloadContainer'),
+                    renderFclCards,
+                    data.release
+                );
+            }
             
-            // Action 构建产物暂时不显示（如果需要的话可以扩展）
+            // 加载 Action
+            if (data.action && data.action.run && data.action.artifacts) {
+                const actionContainer = document.getElementById('actionContainer');
+                actionContainer.innerHTML = '<div class="loading">⏳ 加载 Action 构建产物中...</div>';
+                
+                const runId = data.action.run.id;
+                const artifacts = data.action.artifacts;
+                let html = '<div class="run-info">运行 #' + runId + ' | ' + formatDate(data.action.run.created_at) + '</div>';
+                
+                artifacts.forEach(artifact => {
+                    const htmlUrl = `https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/${runId}`;
+                    html += `
+                        <div class="download-card">
+                            <div class="file-info">
+                                <div class="file-name">${artifact.name}</div>
+                                <div class="file-meta">
+                                    <span>📦 ${formatSize(artifact.size_in_bytes)}</span>
+                                </div>
+                            </div>
+                            <a href="${htmlUrl}" class="download-btn" target="_blank" rel="noopener noreferrer">
+                                下载
+                            </a>
+                        </div>
+                    `;
+                });
+                
+                actionContainer.innerHTML = html;
+            }
         } catch (error) {
             console.error('加载 FCL 失败:', error);
             document.getElementById('downloadContainer').innerHTML = `<div class="no-assets">❌ 加载失败<br>${error.message}</div>`;
@@ -123,6 +152,7 @@
     window.selectDownloadType = function(type) {
         const releaseSection = document.getElementById('releaseSection');
         const actionSection = document.getElementById('actionSection');
+        const actionContainer = document.getElementById('actionContainer');
         const buttons = document.querySelectorAll('.selector-btn');
         
         // 更新按钮状态
@@ -141,6 +171,10 @@
         } else {
             releaseSection.style.display = 'none';
             actionSection.style.display = 'block';
+            // 显示提示信息
+            if (actionContainer) {
+                actionContainer.innerHTML = '<div class="no-assets">🚧 Action 开发版暂不可用，请使用 Release 稳定版</div>';
+            }
         }
     };
 
@@ -233,6 +267,7 @@
     window.selectZalithDownloadType = function(type) {
         const releaseSection = document.getElementById('zalithReleaseSection');
         const actionSection = document.getElementById('zalithActionSection');
+        const actionContainer = document.getElementById('zalithActionContainer');
         const buttons = document.querySelectorAll('#zalithModule .selector-btn');
         
         // 更新按钮状态
@@ -251,6 +286,10 @@
         } else {
             releaseSection.style.display = 'none';
             actionSection.style.display = 'block';
+            // 显示提示信息
+            if (actionContainer) {
+                actionContainer.innerHTML = '<div class="no-assets">🚧 Action 开发版暂不可用，请使用 Release 稳定版</div>';
+            }
         }
     };
 
