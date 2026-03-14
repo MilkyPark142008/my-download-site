@@ -103,35 +103,9 @@ my-download-site/
 3. **添加模块 HTML**：复制一份现有模块的结构，修改对应的 `id` 和标题。
 4. **添加 JavaScript 逻辑**：复制现有模块的 JavaScript 代码，修改其中的变量名和 `fetch` 地址。
 
-## 🔄 更新机制
-
-项目使用 GitHub Actions 每小时自动执行以下任务：
-
-1. 通过 GitHub API 获取 [FCL](https://github.com/FCL-Team/FCL-Launcher)、[MobileGlues](https://github.com/MobileGlues/MobileGlues)、[JRE](https://github.com/MCL-JRE-Maintainers/JRE-for-Android-Loader) 的最新 Release 数据
-2. 生成对应的 JSON 数据文件（`fcl.json`、`mobileglues.json`、`jre.json`）
-3. 自动提交并推送到仓库
-4. GitHub Pages 自动重新部署
-
-## 📋 更新日志
-
-### v1.0.0 (2026-02-23)
-- 项目初始化
-- 添加 FCL、MobileGlues、JRE 下载支持
-- 部署到 GitHub Pages
-
-## 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request！
-
 ## 📄 许可证
 
 本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
-
-## 🙏 致谢
-
-- [FCL-Team](https://github.com/FCL-Team) - FCL 启动器开发团队
-- [MobileGlues](https://github.com/MobileGlues) - MobileGlues 图形库开发团队
-- [aaaapai](https://github.com/aaaapai) - JRE 构建贡献者
 
 ## 📮 联系方式
 

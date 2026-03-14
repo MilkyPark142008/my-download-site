@@ -4,121 +4,216 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MC启动器</title>
-    <!-- 像素复古风（默认） -->
-    <link rel="stylesheet" id="currentStyle" href="code/styles/pixel.css">
+    <!-- 极简风格（默认） -->
+    <link rel="stylesheet" id="currentStyle" href="code/styles/minimal.css">
 </head>
 <body>
-    <!-- 风格切换器 -->
-    <div class="style-switcher">
-        <button onclick="switchStyle('pixel')" class="active" id="pixelBtn">🎮 像素</button>
-        <button onclick="switchStyle('card')" id="cardBtn">📱 卡片</button>
-        <button onclick="switchStyle('minimal')" id="minimalBtn">⚪ 极简</button>
+    <!-- 菜单按钮 -->
+    <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <!-- 侧边菜单 -->
+    <div id="sideMenu" class="side-menu">
+        <div class="menu-content">
+            <div class="menu-header">
+                <h3>菜单</h3>
+                <button class="close-btn" onclick="toggleMenu()">✕</button>
+            </div>
+            <div class="menu-items">
+                <a href="https://github.com/MilkyPark142008/my-download-site" target="_blank">GitHub 源码</a>
+            </div>
+        </div>
     </div>
     
     <div class="container">
         <!-- 头部 -->
         <div class="header">
-            <h1>📱 MC手机版下载站</h1>
-            <p>多架构版本 · 每小时同步更新</p>
+            <h1>MC启动器下载站</h1>
+            <p>每小时自动更新</p>
         </div>
 
         <!-- 公告区 -->
-        <div class="announcement">
-            <h3>📢 公告</h3>
-            <p>根据设备架构选择对应版本。下载请勿多次点击。</p>
-            <p>如果遇到错误 请等待耐心修复</p>
-            <p class="note">网页源码最新更新时间：2026-02-23 22:48</p>
-            <p class="note">挂了的镜像下载不知道为什么会出现问题 先留着</p>
-            <p class="note">预计更新 zl2启动器 澪u启动器 紫水晶启动器 插件的下载链接 以及一些作者的键位（这里会放上视频链接 作者提供的下载方式）</p>
-            <p class="note">如果还有其他想法视频底下留言 网页源码在Github上</p>
+        <div class="announcement-card">
+            <h3>公告</h3>
+            <p>目前在添加zl2下载链接，修复网站文件架构</p>
+            <p class="note">如果遇到错误 请等待耐心修复</p>
         </div>
 
-        <!-- 镜像选择器 -->
-        <div class="selector">
-            <label for="mirrorSelect">🌐 选择下载源：</label>
-            <select id="mirrorSelect">
-                <option value="https://ghfast.top/">Ghfast镜像下载</option>
-                <option value="https://gh-proxy.com/">Gh-Proxy镜像下载</option>
-                <option value="https://ghproxy.net/">GhProxyNet镜像下载（挂了）</option>
-                <option value="">GitHub原始链接</option>
-            </select>
+        <!-- 源码提交信息 -->
+        <div class="announcement-card">
+            <h3>网站源码更新时间</h3>
+            <div id="commitInfo" class="commit-info">
+                <div class="loading">⏳ 加载中...</div>
+            </div>
         </div>
 
-        <!-- 项目选择器 -->
-        <div class="selector" style="margin-top: -8px;">
-            <label for="projectSelect">📦 选择项目：</label>
-            <select id="projectSelect">
+        <!-- 下载源设置 -->
+        <div class="settings-section">
+            <div class="setting-item">
+                <label>下载源</label>
+                <select id="mirrorSelect">
+                    <option value="https://ghfast.top/">Ghfast 镜像（推荐）</option>
+                    <option value="https://gh-proxy.com/">Gh-Proxy 镜像</option>
+                    <option value="">GitHub 原始链接</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- 下载切换选择器 -->
+        <div class="module-selector">
+            <label>选择项目：</label>
+            <select id="projectSelect" onchange="handleProjectChange()">
                 <option value="fcl">FCL 启动器</option>
-                <option value="mg">MobileGlues 图形库</option>
+                <option value="zalith">ZalithLauncher2</option>
+                <option value="mg">MobileGlues</option>
                 <option value="jre">JRE 运行环境</option>
             </select>
         </div>
 
         <!-- FCL 启动器模块 (默认显示) -->
-        <div id="fclModule" class="fcl-module" style="display: block;">
-            <div class="module-header" id="fclHeader">
-                <h2>
-                    <span>📁 FCL 启动器</span>
-                </h2>
-                <span class="arrow" id="toggleArrow">▶</span>
-                <p>点击标题展开</p>
+        <div id="fclModule" class="app-module" style="display: block;">
+            <div class="app-header">
+                <div class="header-top">
+                    <img src="code/icon/fcl.png" alt="FCL" class="app-icon" onerror="this.style.display='none'">
+                    <div class="app-info">
+                    <h2>FCL 启动器</h2>
+                        <span class="version-text">最新版本：</span><span class="version-badge" id="fclVersionBadge">加载中...</span>
+                        <span class="time-text">最新更新时间：</span><span class="update-time" id="fclUpdateTime"></span>
+                    </div>
+                </div>
             </div>
-            <div class="module-version" id="fclVersionInfo">
-                <span class="version-tag">📌 最新: 加载中...</span>
-                <span>⏳</span>
+
+            <!-- 下载类型选择 -->
+            <div class="download-type-selector">
+                <label>下载来源：</label>
+                <div class="selector-buttons">
+                    <button class="selector-btn active" data-type="release" onclick="selectDownloadType('release')">
+                        Release 稳定版
+                    </button>
+                    <button class="selector-btn" data-type="action" onclick="selectDownloadType('action')">
+                        Action 开发版
+                    </button>
+                </div>
             </div>
-            <details class="changelog" id="fclChangelog">
-                <summary>📋 查看更新日志</summary>
+
+            <!-- 更新日志 -->
+            <details class="changelog-section" id="fclChangelog">
+                <summary>查看更新日志</summary>
                 <div class="changelog-content" id="fclChangelogContent">加载中...</div>
             </details>
-            <div id="downloadContainer" class="download-grid" style="display: none;"></div>
+
+            <!-- 下载文件 -->
+            <div class="download-section" id="releaseSection">
+                <h3>Release 稳定版下载</h3>
+                <div id="downloadContainer" class="download-list"></div>
+            </div>
+
+            <!-- Action 构建产物 -->
+            <div class="download-section" id="actionSection" style="display: none;">
+                <h3>Action 开发版下载</h3>
+                <p class="note">开发版本，可能存在未知问题，仅供体验使用</p>
+                <div id="actionContainer" class="download-list">
+                    <div class="loading">⏳ 加载中...</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ZalithLauncher2 模块 (默认隐藏) -->
+        <div id="zalithModule" class="app-module" style="display: none;">
+            <div class="app-header">
+                <div class="header-top">
+                    <div class="app-icon-placeholder">Z</div>
+                    <div class="app-info">
+                        <h2>ZalithLauncher2</h2>
+                        <span class="version-text">最新版本：</span><span class="version-badge" id="zalithVersionBadge">加载中...</span>
+                        <span class="time-text">最新更新时间：</span><span class="update-time" id="zalithUpdateTime"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 下载类型选择 -->
+            <div class="download-type-selector">
+                <label>下载来源：</label>
+                <div class="selector-buttons">
+                    <button class="selector-btn active" data-type="release" onclick="selectZalithDownloadType('release')">
+                        Release 稳定版
+                    </button>
+                    <button class="selector-btn" data-type="action" onclick="selectZalithDownloadType('action')">
+                        Action 开发版
+                    </button>
+                </div>
+            </div>
+
+            <!-- 更新日志 -->
+            <details class="changelog-section" id="zalithChangelog">
+                <summary>查看更新日志</summary>
+                <div class="changelog-content" id="zalithChangelogContent">加载中...</div>
+            </details>
+
+            <!-- 下载文件 -->
+            <div class="download-section" id="zalithReleaseSection" style="display: block;">
+                <h3>Release 稳定版下载</h3>
+                <div id="zalithReleaseContainer" class="download-list"></div>
+            </div>
+
+            <!-- Action 构建产物 -->
+            <div class="download-section" id="zalithActionSection" style="display: none;">
+                <h3>Action 开发版下载</h3>
+                <p class="note">开发版本，可能存在未知问题，仅供体验使用</p>
+                <div id="zalithActionContainer" class="download-list">
+                    <div class="loading">⏳ 加载中...</div>
+                </div>
+            </div>
         </div>
 
         <!-- MobileGlues 图形库模块 (默认隐藏) -->
-        <div id="mgModule" class="fcl-module" style="display: none;">
-            <div class="module-header" id="mgHeader">
-                <h2>
-                    <span>📦 MobileGlues 图形库</span>
-                </h2>
-                <span class="arrow" id="mgArrow">▶</span>
-                <p>点击标题展开</p>
+        <div id="mgModule" class="app-module" style="display: none;">
+            <div class="app-header">
+                <img src="code/icon/MobileGlues.png" alt="MobileGlues" class="app-icon" onerror="this.style.display='none'">
+                <div class="app-info">
+                    <h2>MobileGlues 图形库</h2>
+                    <span class="version-badge" id="mgVersionBadge">加载中...</span>
+                    <span class="update-time" id="mgUpdateTime"></span>
+                </div>
             </div>
-            <div class="module-version" id="mgVersionInfo">
-                <span class="version-tag">📌 最新: 加载中...</span>
-                <span>⏳</span>
+
+            <div class="download-section">
+                <h3>下载文件</h3>
+                <div id="mgContainer" class="download-list"></div>
             </div>
-            <details class="changelog" id="mgChangelog">
-                <summary>📋 查看更新日志</summary>
+
+            <details class="changelog-section" id="mgChangelog">
+                <summary>查看更新日志</summary>
                 <div class="changelog-content" id="mgChangelogContent">加载中...</div>
             </details>
-            <div id="mgContainer" class="download-grid" style="display: none;"></div>
         </div>
 
         <!-- JRE 运行环境模块 (默认隐藏) -->
-        <div id="jreModule" class="fcl-module" style="display: none;">
-            <div class="module-header" id="jreHeader">
-                <h2>
-                    <span>☕ JRE 运行环境</span>
-                </h2>
-                <span class="arrow" id="jreArrow">▶</span>
-                <p>点击标题展开</p>
+        <div id="jreModule" class="app-module" style="display: none;">
+            <div class="app-header">
+                <img src="code/icon/JRE.png" alt="JRE" class="app-icon" onerror="this.style.display='none'">
+                <div class="app-info">
+                    <h2>JRE 运行环境</h2>
+                    <span class="version-badge" id="jreVersionBadge">加载中...</span>
+                    <span class="update-time" id="jreUpdateTime"></span>
+                </div>
             </div>
-            <div class="module-version" id="jreVersionInfo">
-                <span class="version-tag">📌 最新: 加载中...</span>
-                <span>⏳</span>
+
+            <div class="download-section">
+                <h3>下载文件</h3>
+                <div id="jreContainer" class="download-list"></div>
             </div>
-            <details class="changelog" id="jreChangelog">
-                <summary>📋 查看更新日志</summary>
+
+            <details class="changelog-section" id="jreChangelog">
+                <summary>查看更新日志</summary>
                 <div class="changelog-content" id="jreChangelogContent">加载中...</div>
             </details>
-            <div id="jreContainer" class="download-grid" style="display: none;"></div>
         </div>
 
-        <!-- 底部 -->
-        <div class="footer">
-            <p>如果喜欢，可以 <a href="#">赞助</a> 或宣传</p>
-            <p>数据每小时同步自 FCL / MobileGlues / JRE 的Release</p>
-        </div>
     </div>
 
     <!-- 引用分层的 JavaScript 文件 -->
