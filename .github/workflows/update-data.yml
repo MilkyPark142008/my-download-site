@@ -30,11 +30,16 @@ jobs:
       # === 生成仓库源码更新时间 ===
       - name: Generate commit info
         run: |
-          echo '{' > data/commit-info.json
-          echo '  "sha": "'$(git rev-parse --short HEAD)'",' >> data/commit-info.json
-          echo '  "date": "'$(git log -1 --format=%ci)'",' >> data/commit-info.json
-          echo '  "message": "$(git log -1 --pretty=format:'%s' | sed 's/"/\\\\"/g' | sed 's/\"/\\\\\"/g')"' >> data/commit-info.json
-          echo '}' >> data/commit-info.json
+          SHA=$(git rev-parse --short HEAD)
+          DATE=$(git log -1 --format=%ci)
+          MESSAGE=$(git log -1 --pretty=format:'%s' | tr -d '\n' | sed 's/\\/\\\\/g' | sed 's/"/\\"/g')
+          cat <<EOF > data/commit-info.json
+{
+  "sha": "$SHA",
+  "date": "$DATE",
+  "message": "$MESSAGE"
+}
+EOF
           cat data/commit-info.json
 
       # === 提交和推送 ===
