@@ -1,4 +1,4 @@
-name: Update Latest Release Info
+name: Update Site Data
 
 on:
   schedule:
@@ -14,6 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # === 获取最新 Release 信息 ===
       - name: Fetch FCL latest release
         run: |
           curl -s https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases/latest > data/fcl.json
@@ -26,10 +27,21 @@ jobs:
         run: |
           curl -s https://api.github.com/repos/MilkyPark142008/android-openjdk-build-release/releases/latest > data/jre.json
 
+      # === 生成仓库源码更新时间 ===
+      - name: Generate commit info
+        run: |
+          echo '{' > data/commit-info.json
+          echo '  "sha": "'$(git rev-parse --short HEAD)'",' >> data/commit-info.json
+          echo '  "date": "'$(git log -1 --format=%ci)'",' >> data/commit-info.json
+          echo '  "message": "$(git log -1 --pretty=format:'%s' | sed 's/"/\\\\"/g' | sed 's/\"/\\\\\"/g')"' >> data/commit-info.json
+          echo '}' >> data/commit-info.json
+          cat data/commit-info.json
+
+      # === 提交和推送 ===
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/fcl.json data/mobileglues.json data/jre.json
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update release info"
+          git add data/fcl.json data/mobileglues.json data/jre.json data/commit-info.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update: release info and commit data"
           git push
