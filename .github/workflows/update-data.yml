@@ -49,7 +49,7 @@ jobs:
           
       - name: Update MobileGlues
         run: |
-          curl -s https://api.github.com/repos/MobileGlues/MobileGlues/releases/latest > data/mobileglues-release.json
+          curl -s https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/latest > data/mobileglues-release.json
           # MobileGlues 无 Actions，直接重命名
           mv data/mobileglues-release.json data/mobileglues.json
           
