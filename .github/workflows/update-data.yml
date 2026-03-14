@@ -59,6 +59,22 @@ jobs:
           # JRE 无 Actions，直接重命名
           mv data/jre-release.json data/jre.json
           
+      - name: Generate commit info
+        run: |
+          # 获取最新 commit 信息
+          LATEST_COMMIT_SHA=$(git rev-parse HEAD)
+          LATEST_COMMIT_DATE=$(git log -1 --format=%cd --date=iso-strict)
+          LATEST_COMMIT_MESSAGE=$(git log -1 --format=%s)
+          
+          # 生成 JSON 文件
+          cat <<EOF > data/commit-info.json
+{
+  "sha": "${LATEST_COMMIT_SHA}",
+  "date": "${LATEST_COMMIT_DATE}",
+  "message": "${LATEST_COMMIT_MESSAGE}"
+}
+EOF
+          
       - name: Commit and push
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"

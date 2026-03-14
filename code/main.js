@@ -306,22 +306,25 @@
         if (!commitInfoDiv) return;
 
         try {
-            const apiUrl = 'https://api.github.com/repos/MilkyPark142008/my-download-site/commits?per_page=1';
-            const response = await fetch(apiUrl);
-            
+            const response = await fetch('/data/commit-info.json');
+
             if (!response.ok) throw new Error();
-            
-            const commits = await response.json();
-            if (commits && commits.length > 0) {
-                const date = formatDate(commits[0].commit.committer.date);
-                const sha = commits[0].sha.substring(0, 7);
-                const shortMsg = commits[0].commit.message.split('\n')[0].substring(0, 30);
+
+            const data = await response.json();
+            if (data && data.message === '等待首次提交...') {
+                commitInfoDiv.innerHTML = '<p>❌ 加载失败</p>';
+                return;
+            }
+            if (data && data.date) {
+                const date = formatDate(data.date);
+                const sha = data.sha ? data.sha.substring(0, 7) : '';
+                const shortMsg = data.message ? data.message.substring(0, 30) : '';
                 commitInfoDiv.innerHTML = `<p>📅 ${date}</p><p class="commit-msg">📝 ${shortMsg}...</p><p class="commit-sha">#${sha}</p>`;
             } else {
-                commitInfoDiv.innerHTML = '<p>暂无数据</p>';
+                commitInfoDiv.innerHTML = '<p>❌ 加载失败</p>';
             }
         } catch (error) {
-            commitInfoDiv.innerHTML = '<p class="error">❌ 加载失败</p>';
+            commitInfoDiv.innerHTML = '<p>❌ 加载失败</p>';
         }
     })();
     
