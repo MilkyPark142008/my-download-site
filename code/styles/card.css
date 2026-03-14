@@ -1,0 +1,314 @@
+/* 扁平卡片风 - 风格2 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 36px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    font-weight: 800;
+}
+
+.header p {
+    color: #666;
+    font-size: 16px;
+    margin: 10px 0 0;
+}
+
+.announcement {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.announcement h3 {
+    color: #764ba2;
+    font-size: 22px;
+    margin: 0 0 15px;
+    font-weight: 700;
+}
+
+.announcement p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 10px 0;
+}
+
+.announcement .note {
+    color: #ff6b6b;
+    font-size: 13px;
+    padding-left: 20px;
+    font-weight: 500;
+}
+
+.selector {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.selector label {
+    color: #666;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.selector select {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    color: #495057;
+    font-size: 15px;
+    padding: 12px 18px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 320px;
+    transition: all 0.3s;
+}
+
+.selector select:hover {
+    border-color: #667eea;
+}
+
+.selector select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.fcl-module {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.module-header {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.module-header:hover {
+    transform: translateX(5px);
+}
+
+.module-header h2 {
+    font-size: 22px;
+    color: white;
+    margin: 0;
+    flex: 1;
+    font-weight: 700;
+}
+
+.module-header .arrow {
+    font-size: 28px;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.module-header.expanded .arrow {
+    transform: rotate(90deg);
+}
+
+.module-version {
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.version-tag {
+    color: #764ba2;
+    font-size: 15px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.changelog {
+    margin: 0 25px 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.changelog summary {
+    background: linear-gradient(135deg, #4ecdc4 0%, #44b3ab 100%);
+    color: white;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.changelog-content {
+    padding: 20px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.download-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 20px 25px;
+}
+
+.download-item {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.download-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
+}
+
+.download-item h4 {
+    color: #333;
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.download-btn {
+    display: block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    color: white;
+    padding: 14px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 12px;
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.footer {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    color: #666;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.footer a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #764ba2;
+}
+
+/* 风格切换器 */
+.style-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 15px;
+    padding: 18px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.style-switcher button {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px 16px;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.style-switcher button:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: transparent;
+}
+
+.style-switcher button.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: transparent;
+}
+
+@media (max-width: 600px) {
+    .header h1 { font-size: 28px; }
+    .style-switcher {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        top: auto;
+        padding: 12px;
+    }
+    
+    .style-switcher button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
