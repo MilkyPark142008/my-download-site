@@ -14,14 +14,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Fetch FCL latest release
-        run: curl -s https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases/latest > data/fcl.json
+      - name: Update FCL with nested format
+        run: |
+          curl -s https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases/latest > tmp_release.json
+          echo "{\"release\":$(cat tmp_release.json)}" | jq '.' > data/fcl.json
+          rm tmp_release.json
 
-      - name: Fetch MobileGlues latest release
-        run: curl -s https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/latest > data/mobileglues.json
+      - name: Update MobileGlues
+        run: |
+          curl -s https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/latest > data/mobileglues.json
 
-      - name: Fetch JRE latest release
-        run: curl -s https://api.github.com/repos/MilkyPark142008/android-openjdk-build-release/releases/latest > data/jre.json
+      - name: Update JRE
+        run: |
+          curl -s https://api.github.com/repos/MilkyPark142008/android-openjdk-build-release/releases/latest > data/jre.json
 
       - name: Generate commit info
         run: |
@@ -34,6 +39,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/fcl.json data/mobileglues.json data/jre.json data/commit-info.json
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update: release info and commit data"
+          git add data/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update data [skip ci]"
           git push
