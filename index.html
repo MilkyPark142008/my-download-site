@@ -219,6 +219,47 @@
     <!-- 引用分层的 JavaScript 文件 -->
     <script src="code/utils.js"></script>
     <script src="code/renderer.js"></script>
+    
+    <!-- 内联数据（避免私有仓库的网络请求问题） -->
+    <script>
+    // FCL 数据（从 data/fcl.json 内联）
+    const FCL_DATA = {
+        "release": {
+            "tag_name": "1.2.9.1",
+            "published_at": "2026-03-13T03:27:18Z",
+            "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/releases/tag/1.2.9.1",
+            "body": "",
+            "assets": [
+                {
+                    "name": "FCL-release-1.2.9.1-all.apk",
+                    "size": 246566758,
+                    "browser_download_url": "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.2.9.1/FCL-release-1.2.9.1-all.apk"
+                },
+                {
+                    "name": "FCL-release-1.2.9.1-arm64-v8a.apk",
+                    "size": 125829345,
+                    "browser_download_url": "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.2.9.1/FCL-release-1.2.9.1-arm64-v8a.apk"
+                },
+                {
+                    "name": "FCL-release-1.2.9.1-armeabi-v7a.apk",
+                    "size": 122007606,
+                    "browser_download_url": "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.2.9.1/FCL-release-1.2.9.1-armeabi-v7a.apk"
+                },
+                {
+                    "name": "FCL-release-1.2.9.1-x86.apk",
+                    "size": 116752304,
+                    "browser_download_url": "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.2.9.1/FCL-release-1.2.9.1-x86.apk"
+                },
+                {
+                    "name": "FCL-release-1.2.9.1-x86_64.apk",
+                    "size": 130990547,
+                    "browser_download_url": "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.2.9.1/FCL-release-1.2.9.1-x86_64.apk"
+                }
+            ]
+        }
+    };
+    </script>
+    
     <script src="code/main.js"></script>
 </body>
 </html>

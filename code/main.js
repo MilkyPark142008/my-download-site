@@ -96,10 +96,8 @@
     // ===== 加载 FCL 启动器数据 =====
     (async function loadFcl() {
         try {
-            const response = await fetch('/data/fcl.json');
-            if (!response.ok) throw new Error('无法获取 FCL 数据');
-            
-            const data = await response.json();
+            // 使用内联数据（避免私有仓库的网络请求问题）
+            const data = FCL_DATA;
             
             // 加载 Release
             if (data.release) {
