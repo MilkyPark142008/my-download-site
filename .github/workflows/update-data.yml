@@ -2,7 +2,7 @@ name: Update Data
 
 on:
   schedule:
-    - cron: '0 * * * *'   # 每小时运行一次
+    - cron: '0 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -14,33 +14,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # === 获取最新 Release 信息 ===
       - name: Fetch FCL latest release
-        run: |
-          curl -s https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases/latest > data/fcl.json
+        run: curl -s https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases/latest > data/fcl.json
 
       - name: Fetch MobileGlues latest release
-        run: |
-          curl -s https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/latest > data/mobileglues.json
+        run: curl -s https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/latest > data/mobileglues.json
 
       - name: Fetch JRE latest release
-        run: |
-          curl -s https://api.github.com/repos/MilkyPark142008/android-openjdk-build-release/releases/latest > data/jre.json
+        run: curl -s https://api.github.com/repos/MilkyPark142008/android-openjdk-build-release/releases/latest > data/jre.json
 
-      # === 生成仓库源码更新时间 ===
       - name: Generate commit info
         run: |
           SHA=$(git rev-parse --short HEAD)
           DATE=$(git log -1 --format=%ci)
           MESSAGE=$(git log -1 --pretty=format:'%s' | tr -d '\n' | sed 's/\\/\\\\/g' | sed 's/"/\\"/g')
-          echo "{
-  \"sha\": \"$SHA\",
-  \"date\": \"$DATE\",
-  \"message\": \"$MESSAGE\"
-}" > data/commit-info.json
-          cat data/commit-info.json
+          echo "{\"sha\":\"$SHA\",\"date\":\"$DATE\",\"message\":\"$MESSAGE\"}" | jq '.' > data/commit-info.json
 
-      # === 提交和推送 ===
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
