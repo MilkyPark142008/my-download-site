@@ -61,10 +61,14 @@ jobs:
           
       - name: Generate commit info
         run: |
-          # 获取最新 commit 信息
-          LATEST_COMMIT_SHA=$(git rev-parse HEAD)
-          LATEST_COMMIT_DATE=$(git log -1 --format=%cd --date=iso-strict)
-          LATEST_COMMIT_MESSAGE=$(git log -1 --format=%s | sed 's/"/\\"/g')
+          # 获取最新的非 workflow 提交（跳过 [skip ci] 提交）
+          LATEST_COMMIT_SHA=$(git log --grep='\[skip ci\]' --invert-grep -1 --format=%H)
+          if [ -z "$LATEST_COMMIT_SHA" ]; then
+            # 如果没有找到，使用 HEAD
+            LATEST_COMMIT_SHA=$(git rev-parse HEAD)
+          fi
+          LATEST_COMMIT_DATE=$(git log -1 --format=%cd --date=iso-strict $LATEST_COMMIT_SHA)
+          LATEST_COMMIT_MESSAGE=$(git log -1 --format=%s $LATEST_COMMIT_SHA | sed 's/"/\\"/g')
           
           # 生成 JSON 文件
           echo "{ \"sha\": \"${LATEST_COMMIT_SHA}\", \"date\": \"${LATEST_COMMIT_DATE}\", \"message\": \"${LATEST_COMMIT_MESSAGE}\" }" > data/commit-info.json
