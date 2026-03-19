@@ -66,8 +66,9 @@
                 // 直接使用传入的数据对象
                 data = dataObj;
             } else {
-                // 从 URL 获取数据
-                const response = await fetch(jsonPath);
+                // 从 URL 获取数据（添加时间戳防止缓存）
+                const cacheBuster = `?t=${Date.now()}`;
+                const response = await fetch(jsonPath + cacheBuster);
                 if (!response.ok) throw new Error(`无法获取 ${jsonPath} (HTTP ${response.status})`);
                 data = await response.json();
             }
@@ -96,7 +97,7 @@
     // ===== 加载 FCL 启动器数据 =====
     (async function loadFcl() {
         try {
-            const response = await fetch('/data/fcl.json');
+            const response = await fetch('/data/fcl.json?t=' + Date.now());
             if (!response.ok) throw new Error('无法获取 FCL 数据');
             
             const data = await response.json();
@@ -218,7 +219,7 @@
     // ===== 加载 ZalithLauncher2 数据 =====
     (async function loadZalith() {
         try {
-            const response = await fetch('/data/zalith.json');
+            const response = await fetch('/data/zalith.json?t=' + Date.now());
             if (!response.ok) throw new Error('无法获取 Zalith 数据');
             
             const data = await response.json();
@@ -340,7 +341,7 @@
         if (!commitInfoDiv) return;
 
         try {
-            const response = await fetch('/data/commit-info.json');
+            const response = await fetch('/data/commit-info.json?t=' + Date.now());
 
             if (!response.ok) throw new Error();
 
