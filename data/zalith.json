@@ -67,7 +67,7 @@
       "state": "uploaded",
       "size": 182634011,
       "digest": "sha256:b8eed5ab4c9316636e84a8dfbc32fed8c4031c68e6de48072214ca10c6161268",
-      "download_count": 5083,
+      "download_count": 5242,
       "created_at": "2026-03-27T06:55:08Z",
       "updated_at": "2026-03-27T06:55:17Z",
       "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.2.3/ZalithLauncher-2.2.3-arm64-v8a.apk"
@@ -103,7 +103,7 @@
       "state": "uploaded",
       "size": 175792534,
       "digest": "sha256:0df7b28148ac0fab2e79b4de669d93ee578c0f208649a2c8998f5fccb96e610c",
-      "download_count": 167,
+      "download_count": 169,
       "created_at": "2026-03-27T06:55:08Z",
       "updated_at": "2026-03-27T06:55:17Z",
       "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.2.3/ZalithLauncher-2.2.3-armeabi-v7a.apk"
@@ -139,7 +139,7 @@
       "state": "uploaded",
       "size": 167012983,
       "digest": "sha256:f7b70cd6fd258287847e7c4dedc8d318777afe1598cac46890ecc144389f4853",
-      "download_count": 69,
+      "download_count": 72,
       "created_at": "2026-03-27T06:55:08Z",
       "updated_at": "2026-03-27T06:55:17Z",
       "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.2.3/ZalithLauncher-2.2.3-x86.apk"
@@ -175,7 +175,7 @@
       "state": "uploaded",
       "size": 186426710,
       "digest": "sha256:8683a5c1521df8cfec9277c1566b3a3a84f2bd1e6fe974fa329ec7aff5a6c896",
-      "download_count": 52,
+      "download_count": 53,
       "created_at": "2026-03-27T06:55:08Z",
       "updated_at": "2026-03-27T06:55:17Z",
       "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.2.3/ZalithLauncher-2.2.3-x86_64.apk"
@@ -211,7 +211,7 @@
       "state": "uploaded",
       "size": 319613043,
       "digest": "sha256:33d9ba9544c1b8745c6c0a613fe17b9ba22719ef0e658a2640049e1980e6bf98",
-      "download_count": 930,
+      "download_count": 955,
       "created_at": "2026-03-27T06:55:08Z",
       "updated_at": "2026-03-27T06:55:22Z",
       "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.2.3/ZalithLauncher-2.2.3.apk"
@@ -222,10 +222,10 @@
   "body": "## Updates:\r\n- Synced translations from the [Weblate project](https://hosted.weblate.org/projects/zalithlauncher2/)\r\n- Control layout: added support for copying control layouts to a new file\r\n\r\n## Changes:\r\n- Joystick: the movable range is now determined by the background shape\r\n\r\n## Fixes:\r\n- NeoForge: fixed failure to properly detect and download versions 26.1+\r\n- Update loader: fixed incorrect logic when waiting for the loader list\r\n- Resolution: now calculated using only the Surface size\r\n- LWJGL: fixed missing legacy stb API causing some mods to fail to run properly. by [ShirosakiMio](https://github.com/ShirosakiMio)",
   "reactions": {
     "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/releases/302223375/reactions",
-    "total_count": 4,
+    "total_count": 3,
     "+1": 0,
     "-1": 0,
-    "laugh": 2,
+    "laugh": 1,
     "hooray": 0,
     "confused": 0,
     "heart": 1,
