@@ -3,19 +3,603 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MC启动器</title>
-    <!-- 极简风格（默认） -->
-    <link rel="stylesheet" id="currentStyle" href="code/styles/minimal.css">
+    <title>MC启动器下载站</title>
+    <style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    background: #f5f5f7;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 16px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 8px;
+    letter-spacing: -0.5px;
+}
+
+.header p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+.announcement-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.module-selector {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.module-selector label {
+    color: #1a1a1a;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.module-selector select {
+    background: #f5f5f7;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    color: #1a1a1a;
+    font-size: 14px;
+    padding: 10px 14px;
+    cursor: pointer;
+    min-width: 200px;
+    transition: all 0.2s;
+    appearance: none;
+    text-align: right;
+}
+
+.module-selector select:hover {
+    background: #ebebeb;
+}
+
+.announcement-card h3 {
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+.announcement-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 4px 0;
+}
+
+.announcement-card .note {
+    color: #86868b;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.app-module {
+    display: none;
+}
+
+.app-header {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.app-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 16px 0;
+}
+
+.version-text {
+    color: #1a1a1a;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.version-badge {
+    background: #f5f5f7;
+    color: #1a1a1a;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.time-text {
+    color: #86868b;
+    font-size: 13px;
+}
+
+.update-time {
+    color: #86868b;
+    font-size: 13px;
+}
+
+.download-type-selector {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.download-type-selector label {
+    color: #1a1a1a;
+    font-size: 15px;
+    font-weight: 500;
+    min-width: 80px;
+}
+
+.selector-buttons {
+    display: flex;
+    gap: 8px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.selector-btn {
+    flex: 1;
+    padding: 10px 16px;
+    background: #f5f5f7;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    color: #86868b;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.selector-btn:hover {
+    background: #ebebeb;
+    color: #1a1a1a;
+}
+
+.selector-btn.active {
+    background: #1a1a1a;
+    color: white;
+    border-color: #1a1a1a;
+}
+
+.settings-section {
+    background: #ffffff;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #f5f5f7;
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-item label {
+    color: #1a1a1a;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.setting-item select {
+    background: #f5f5f7;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    color: #1a1a1a;
+    font-size: 14px;
+    padding: 10px 14px;
+    cursor: pointer;
+    min-width: 200px;
+    transition: all 0.2s;
+    appearance: none;
+    text-align: right;
+}
+
+.setting-item select:hover {
+    background: #ebebeb;
+}
+
+.download-section {
+    background: #ffffff;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.download-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 16px;
+}
+
+.run-info {
+    font-size: 12px;
+    color: #86868b;
+    text-align: center;
+    padding: 8px 12px;
+    background: #f5f5f7;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.download-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.download-item {
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: all 0.2s;
+}
+
+.download-item:hover {
+    border-color: #1a1a1a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.download-item .item-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.download-item .item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #666;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.download-btn {
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.download-btn:hover {
+    background: #333;
+    transform: translateY(-1px);
+}
+
+.changelog-section {
+    background: #ffffff;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.changelog-section summary {
+    padding: 16px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1a1a;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.changelog-section summary::-webkit-details-marker {
+    display: none;
+}
+
+.changelog-section summary::after {
+    content: '▼';
+    font-size: 12px;
+    transition: transform 0.3s;
+}
+
+.changelog-section[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.changelog-content {
+    padding: 16px 20px;
+    border-top: 1px solid #f5f5f7;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.8;
+    word-break: break-word;
+    white-space: pre-wrap;
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 2000;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.menu-toggle:hover {
+    background: #f5f5f7;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.menu-toggle span {
+    width: 20px;
+    height: 2px;
+    background: #1a1a1a;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 320px;
+    max-width: 85vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 1999;
+    transition: right 0.3s ease;
+}
+
+.side-menu.active {
+    right: 0;
+}
+
+.menu-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.menu-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.close-btn {
+    width: 32px;
+    height: 32px;
+    background: #f5f5f7;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #86868b;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    background: #e5e5e7;
+    color: #1a1a1a;
+}
+
+.menu-items {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.menu-items a {
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 4px 0;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.menu-items a:hover {
+    background: #f5f5f7;
+}
+
+.side-menu.active::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 16px 12px;
+    }
+    
+    .header h1 { 
+        font-size: 24px; 
+    }
+    
+    .menu-toggle {
+        top: 12px;
+        right: 12px;
+    }
+    
+    .side-menu {
+        width: 85vw;
+    }
+    
+    .download-type-selector {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .selector-buttons {
+        width: 100%;
+    }
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #86868b;
+}
+
+.no-assets {
+    text-align: center;
+    padding: 20px;
+    color: #86868b;
+}
+
+.commit-info {
+    font-size: 13px;
+    color: #555;
+}
+
+.commit-msg {
+    margin: 4px 0;
+    color: #666;
+}
+
+.commit-sha {
+    font-family: monospace;
+    color: #86868b;
+    font-size: 12px;
+}
+
+.version-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.version-col {
+    flex: 1;
+    min-width: 150px;
+}
+
+.version-label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.mt-2 {
+    margin-top: 8px;
+}
+    </style>
 </head>
 <body>
-    <!-- 菜单按钮 -->
     <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
     </button>
     
-    <!-- 侧边菜单 -->
     <div id="sideMenu" class="side-menu">
         <div class="menu-content">
             <div class="menu-header">
@@ -29,28 +613,24 @@
     </div>
     
     <div class="container">
-        <!-- 头部 -->
         <div class="header">
             <h1>MC启动器下载站</h1>
             <p>每小时自动更新</p>
         </div>
 
-        <!-- 公告区 -->
         <div class="announcement-card">
             <h3>公告</h3>
             <p>目前在添加zl2下载链接，修复网站文件架构</p>
             <p class="note">如果遇到错误 请等待耐心修复</p>
         </div>
 
-        <!-- 源码提交信息 -->
         <div class="announcement-card">
             <h3>网站源码更新时间</h3>
             <div id="commitInfo" class="commit-info">
-                <div class="loading">⏳ 加载中...</div>
+                <div class="loading">加载中...</div>
             </div>
         </div>
 
-        <!-- 下载源设置 -->
         <div class="settings-section">
             <div class="setting-item">
                 <label>下载源</label>
@@ -62,143 +642,112 @@
             </div>
         </div>
 
-        <!-- 下载切换选择器 -->
         <div class="module-selector">
             <label>选择项目：</label>
-            <select id="projectSelect" onchange="handleProjectChange()">
+            <select id="projectSelect">
                 <option value="fcl">FCL 启动器</option>
                 <option value="zalith">ZalithLauncher2</option>
                 <option value="mg">MobileGlues</option>
-                <option value="jre">JRE 运行环境</option>
             </select>
         </div>
 
-        <!-- FCL 启动器模块 (默认显示) -->
+        <!-- FCL 模块 -->
         <div id="fclModule" class="app-module" style="display: block;">
             <div class="app-header">
                 <h2>FCL 启动器</h2>
-                <!-- 左右布局：Release 和 Action 版本信息 -->
-                <div style="display: table; width: 100%; margin-top: 10px; table-layout: fixed;">
-                    <tbody style="display: table-row-group;">
-                        <tr style="display: table-row;">
-                            <!-- 左边：Release 版本信息 -->
-                            <td style="display: table-cell; width: 50%; vertical-align: top; padding-right: 10px;">
-                                <div><span class="version-text">Release：</span><span class="version-badge" id="fclVersionBadge">加载中...</span></div>
-                                <div style="margin-top: 5px;"><span class="time-text">更新：</span><span class="update-time" id="fclUpdateTime"></span></div>
-                            </td>
-                            <!-- 右边：Action 版本信息 -->
-                            <td style="display: table-cell; width: 50%; vertical-align: top; padding-left: 10px;">
-                                <div><span class="version-text">Action：</span><span class="version-badge" id="fclActionVersionBadge">加载中...</span></div>
-                                <div style="margin-top: 5px;"><span class="time-text">更新：</span><span class="update-time" id="fclActionUpdateTime"></span></div>
-                            </td>
-                        </tr>
-                    </tbody>
+                <div class="version-row">
+                    <div class="version-col">
+                        <div class="version-label">Release 稳定版</div>
+                        <span class="version-badge" id="fclVersionBadge">加载中...</span>
+                        <div class="mt-2"><span class="time-text">更新：</span><span class="update-time" id="fclUpdateTime"></span></div>
+                    </div>
+                    <div class="version-col">
+                        <div class="version-label">Action 开发版</div>
+                        <span class="version-badge" id="fclActionVersionBadge">加载中...</span>
+                        <div class="mt-2"><span class="time-text">更新：</span><span class="update-time" id="fclActionUpdateTime"></span></div>
+                    </div>
                 </div>
             </div>
 
-            <!-- 下载类型选择 -->
             <div class="download-type-selector">
                 <label>下载来源：</label>
                 <div class="selector-buttons">
-                    <button class="selector-btn active" data-type="release" onclick="selectDownloadType('release')">
-                        Release 稳定版
-                    </button>
-                    <button class="selector-btn" data-type="action" onclick="selectDownloadType('action')">
-                        Action 开发版
-                    </button>
+                    <button class="selector-btn" data-type="release">Release 稳定版</button>
+                    <button class="selector-btn" data-type="action">Action 开发版</button>
                 </div>
             </div>
 
-            <!-- 更新日志 -->
-            <details class="changelog-section" id="fclChangelog">
+            <details class="changelog-section">
                 <summary>查看更新日志</summary>
                 <div class="changelog-content" id="fclChangelogContent">加载中...</div>
             </details>
 
-            <!-- 下载文件 -->
-            <div class="download-section" id="releaseSection">
+            <div class="download-section" id="fclReleaseSection">
                 <h3>Release 稳定版下载</h3>
-                <div id="downloadContainer" class="download-list"></div>
+                <div id="fclReleaseContainer" class="download-list"></div>
             </div>
 
-            <!-- Action 构建产物 -->
-            <div class="download-section" id="actionSection" style="display: none;">
+            <div class="download-section" id="fclActionSection" style="display: none;">
                 <h3>Action 开发版下载</h3>
                 <p class="note">开发版本，可能存在未知问题，仅供体验使用</p>
-                <div id="actionContainer" class="download-list">
-                    <div class="loading">⏳ 加载中...</div>
+                <div id="fclActionContainer" class="download-list">
+                    <div class="loading">加载中...</div>
                 </div>
             </div>
-
         </div>
 
-        <!-- ZalithLauncher2 模块 (默认隐藏) -->
+        <!-- Zalith 模块 -->
         <div id="zalithModule" class="app-module" style="display: none;">
             <div class="app-header">
                 <h2>ZalithLauncher2</h2>
-                <!-- 左右布局：Release 和 Action 版本信息 -->
-                <div style="display: table; width: 100%; margin-top: 10px; table-layout: fixed;">
-                    <tbody style="display: table-row-group;">
-                        <tr style="display: table-row;">
-                            <!-- 左边：Release 版本信息 -->
-                            <td style="display: table-cell; width: 50%; vertical-align: top; padding-right: 10px;">
-                                <div><span class="version-text">Release：</span><span class="version-badge" id="zalithVersionBadge">加载中...</span></div>
-                                <div style="margin-top: 5px;"><span class="time-text">更新：</span><span class="update-time" id="zalithUpdateTime"></span></div>
-                            </td>
-                            <!-- 右边：Action 版本信息 -->
-                            <td style="display: table-cell; width: 50%; vertical-align: top; padding-left: 10px;">
-                                <div><span class="version-text">Action：</span><span class="version-badge" id="zalithActionVersionBadge">加载中...</span></div>
-                                <div style="margin-top: 5px;"><span class="time-text">更新：</span><span class="update-time" id="zalithActionUpdateTime"></span></div>
-                            </td>
-                        </tr>
-                    </tbody>
+                <div class="version-row">
+                    <div class="version-col">
+                        <div class="version-label">Release 稳定版</div>
+                        <span class="version-badge" id="zalithVersionBadge">加载中...</span>
+                        <div class="mt-2"><span class="time-text">更新：</span><span class="update-time" id="zalithUpdateTime"></span></div>
+                    </div>
+                    <div class="version-col">
+                        <div class="version-label">Action 开发版</div>
+                        <span class="version-badge" id="zalithActionVersionBadge">加载中...</span>
+                        <div class="mt-2"><span class="time-text">更新：</span><span class="update-time" id="zalithActionUpdateTime"></span></div>
+                    </div>
                 </div>
             </div>
 
-            <!-- 下载类型选择 -->
             <div class="download-type-selector">
                 <label>下载来源：</label>
                 <div class="selector-buttons">
-                    <button class="selector-btn active" data-type="release" onclick="selectZalithDownloadType('release')">
-                        Release 稳定版
-                    </button>
-                    <button class="selector-btn" data-type="action" onclick="selectZalithDownloadType('action')">
-                        Action 开发版
-                    </button>
+                    <button class="selector-btn" data-type="release">Release 稳定版</button>
+                    <button class="selector-btn" data-type="action">Action 开发版</button>
                 </div>
             </div>
 
-            <!-- 更新日志 -->
-            <details class="changelog-section" id="zalithChangelog">
+            <details class="changelog-section">
                 <summary>查看更新日志</summary>
                 <div class="changelog-content" id="zalithChangelogContent">加载中...</div>
             </details>
 
-            <!-- 下载文件 -->
-            <div class="download-section" id="zalithReleaseSection" style="display: block;">
+            <div class="download-section" id="zalithReleaseSection">
                 <h3>Release 稳定版下载</h3>
                 <div id="zalithReleaseContainer" class="download-list"></div>
             </div>
 
-            <!-- Action 构建产物 -->
             <div class="download-section" id="zalithActionSection" style="display: none;">
                 <h3>Action 开发版下载</h3>
                 <p class="note">开发版本，可能存在未知问题，仅供体验使用</p>
                 <div id="zalithActionContainer" class="download-list">
-                    <div class="loading">⏳ 加载中...</div>
+                    <div class="loading">加载中...</div>
                 </div>
             </div>
         </div>
 
-        <!-- MobileGlues 图形库模块 (默认隐藏) -->
+        <!-- MobileGlues 模块 -->
         <div id="mgModule" class="app-module" style="display: none;">
             <div class="app-header">
-                <img src="code/icon/MobileGlues.png" alt="MobileGlues" class="app-icon" onerror="this.style.display='none'">
-                <div class="app-info">
-                    <h2>MobileGlues 图形库</h2>
-                    <span class="version-badge" id="mgVersionBadge">加载中...</span>
-                    <span class="update-time" id="mgUpdateTime"></span>
-                </div>
+                <h2>MobileGlues 图形库</h2>
+                <div class="version-label" style="margin-bottom: 8px;">Release 版本</div>
+                <span class="version-badge" id="mgVersionBadge">加载中...</span>
+                <div class="mt-2"><span class="time-text">更新：</span><span class="update-time" id="mgUpdateTime"></span></div>
             </div>
 
             <div class="download-section">
@@ -206,39 +755,305 @@
                 <div id="mgContainer" class="download-list"></div>
             </div>
 
-            <details class="changelog-section" id="mgChangelog">
+            <details class="changelog-section">
                 <summary>查看更新日志</summary>
                 <div class="changelog-content" id="mgChangelogContent">加载中...</div>
             </details>
         </div>
-
-        <!-- JRE 运行环境模块 (默认隐藏) -->
-        <div id="jreModule" class="app-module" style="display: none;">
-            <div class="app-header">
-                <img src="code/icon/JRE.png" alt="JRE" class="app-icon" onerror="this.style.display='none'">
-                <div class="app-info">
-                    <h2>JRE 运行环境</h2>
-                    <span class="version-badge" id="jreVersionBadge">加载中...</span>
-                    <span class="update-time" id="jreUpdateTime"></span>
-                </div>
-            </div>
-
-            <div class="download-section">
-                <h3>下载文件</h3>
-                <div id="jreContainer" class="download-list"></div>
-            </div>
-
-            <details class="changelog-section" id="jreChangelog">
-                <summary>查看更新日志</summary>
-                <div class="changelog-content" id="jreChangelogContent">加载中...</div>
-            </details>
-        </div>
-
     </div>
 
-    <!-- 引用分层的 JavaScript 文件 -->
-    <script src="code/utils.js"></script>
-    <script src="code/renderer.js"></script>
-    <script src="code/main.js"></script>
-</body>
-</html>
+    <script>
+// ==================== 工具函数 ====================
+function getArchFromFilename(filename) {
+    const lower = filename.toLowerCase();
+    if (lower.includes('arm64-v8a') || lower.includes('arm64')) return 'arm64';
+    if (lower.includes('armeabi-v7a') || lower.includes('armv7')) return 'armeabi';
+    if (lower.includes('x86_64') || lower.includes('x64')) return 'x86_64';
+    if (lower.includes('x86') && !lower.includes('x86_64')) return 'x86';
+    if (lower.includes('all') || lower.includes('universal')) return 'all';
+    return 'other';
+}
+
+function getArchName(arch) {
+    switch(arch) {
+        case 'arm64': return 'ARM64';
+        case 'armeabi': return 'ARMv7';
+        case 'x86': return 'x86';
+        case 'x86_64': return 'x86_64';
+        case 'all': return '通用版';
+        default: return '其他';
+    }
+}
+
+function formatSize(bytes) {
+    if (!bytes || bytes === 0) return '0 B';
+    const k = 1024;
+    const sizes = ['B', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+}
+
+function formatDate(isoString) {
+    if (!isoString) return '';
+    const date = new Date(isoString);
+    return date.toLocaleString('zh-CN', { hour12: false });
+}
+
+// ==================== 渲染函数 ====================
+function renderReleaseCards(assets, mirrorPrefix, getArchKey = true) {
+    if (!assets || assets.length === 0) {
+        return '<div class="no-assets">暂无可用下载文件</div>';
+    }
+    
+    if (getArchKey) {
+        const archMap = new Map();
+        assets.forEach(asset => {
+            const arch = getArchFromFilename(asset.name);
+            if (!archMap.has(arch)) archMap.set(arch, asset);
+        });
+        const archOrder = ['arm64', 'armeabi', 'x86_64', 'x86', 'all', 'other'];
+        const sortedArchs = Array.from(archMap.keys()).sort((a, b) => archOrder.indexOf(a) - archOrder.indexOf(b));
+        
+        let cardsHtml = '';
+        sortedArchs.forEach(arch => {
+            const asset = archMap.get(arch);
+            const archName = getArchName(arch);
+            const sizeFormatted = formatSize(asset.size);
+            const originalUrl = asset.browser_download_url;
+            cardsHtml += `
+                <div class="download-item">
+                    <div class="item-title">${archName}</div>
+                    <div class="item-details">
+                        <span>${asset.name}</span>
+                        <span>${sizeFormatted}</span>
+                    </div>
+                    <a href="${mirrorPrefix}${originalUrl}" class="download-btn" target="_blank" rel="noopener noreferrer" data-original-url="${originalUrl}">下载</a>
+                </div>
+            `;
+        });
+        return cardsHtml;
+    } else {
+        let cardsHtml = '';
+        assets.forEach(asset => {
+            const sizeFormatted = formatSize(asset.size);
+            const originalUrl = asset.browser_download_url;
+            cardsHtml += `
+                <div class="download-item">
+                    <div class="item-title">${asset.name}</div>
+                    <div class="item-details">
+                        <span>${sizeFormatted}</span>
+                    </div>
+                    <a href="${mirrorPrefix}${originalUrl}" class="download-btn" target="_blank" rel="noopener noreferrer" data-original-url="${originalUrl}">下载</a>
+                </div>
+            `;
+        });
+        return cardsHtml;
+    }
+}
+
+// ==================== 全局变量 ====================
+let currentFclData = null;
+let currentZalithData = null;
+
+// ==================== 镜像源更新 ====================
+function updateAllDownloadButtons() {
+    const prefix = document.getElementById('mirrorSelect').value;
+    document.querySelectorAll('.download-btn[data-original-url]').forEach(btn => {
+        const original = btn.getAttribute('data-original-url');
+        if (original) {
+            btn.href = prefix ? prefix + original : original;
+        }
+    });
+}
+
+// ==================== FCL 模块 ====================
+async function loadFclData() {
+    try {
+        const response = await fetch('/fcl.json?t=' + Date.now());
+        if (!response.ok) throw new Error('无法获取 FCL 数据');
+        const data = await response.json();
+        currentFclData = data;
+        
+        if (data.release) {
+            document.getElementById('fclVersionBadge').textContent = data.release.tag_name || '未知版本';
+            document.getElementById('fclUpdateTime').textContent = data.release.published_at ? formatDate(data.release.published_at) : '';
+            document.getElementById('fclChangelogContent').innerHTML = (data.release.body || '暂无更新日志').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            
+            const assets = data.release.assets || [];
+            const mirrorPrefix = document.getElementById('mirrorSelect').value;
+            document.getElementById('fclReleaseContainer').innerHTML = renderReleaseCards(assets, mirrorPrefix, true);
+        }
+        
+        if (data.action && data.action.run && data.action.run.id) {
+            const runId = data.action.run.id;
+            const artifacts = data.action.artifacts || [];
+            
+            document.getElementById('fclActionVersionBadge').textContent = '运行 #' + runId;
+            if (data.action.run.created_at) {
+                document.getElementById('fclActionUpdateTime').textContent = formatDate(data.action.run.created_at);
+            }
+            
+            let html = '<div class="run-info">运行 #' + runId + ' | ' + formatDate(data.action.run.created_at) + '</div>';
+            
+            if (artifacts.length === 0) {
+                html += '<div class="no-assets">暂无构建产物</div>';
+            } else {
+                artifacts.forEach(artifact => {
+                    html += `
+                        <div class="download-item">
+                            <div class="item-title">${escapeHtml(artifact.name)}</div>
+                            <div class="item-details">
+                                <span>📦 ${formatSize(artifact.size_in_bytes)}</span>
+                            </div>
+                            <a href="https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/${runId}" class="download-btn" target="_blank" rel="noopener noreferrer">
+                                查看运行记录
+                            </a>
+                        </div>
+                    `;
+                });
+            }
+            document.getElementById('fclActionContainer').innerHTML = html;
+        } else {
+            document.getElementById('fclActionVersionBadge').textContent = '暂无';
+            document.getElementById('fclActionContainer').innerHTML = '<div class="no-assets">暂无 Action 构建记录</div>';
+        }
+        
+        // 恢复用户选择的下载类型
+        const savedType = localStorage.getItem('fcl_download_type');
+        if (savedType === 'action') {
+            setFclDownloadType('action');
+        } else {
+            setFclDownloadType('release');
+        }
+    } catch (error) {
+        console.error('加载 FCL 失败:', error);
+        document.getElementById('fclReleaseContainer').innerHTML = '<div class="no-assets">加载失败，请稍后重试</div>';
+        document.getElementById('fclVersionBadge').textContent = '加载失败';
+    }
+}
+
+function setFclDownloadType(type) {
+    const releaseSection = document.getElementById('fclReleaseSection');
+    const actionSection = document.getElementById('fclActionSection');
+    const buttons = document.querySelectorAll('#fclModule .selector-btn');
+    
+    buttons.forEach(btn => {
+        if (btn.getAttribute('data-type') === type) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+    
+    if (type === 'release') {
+        releaseSection.style.display = 'block';
+        actionSection.style.display = 'none';
+    } else {
+        releaseSection.style.display = 'none';
+        actionSection.style.display = 'block';
+    }
+    
+    localStorage.setItem('fcl_download_type', type);
+}
+
+// ==================== Zalith 模块 ====================
+async function loadZalithData() {
+    try {
+        const response = await fetch('/zalith.json?t=' + Date.now());
+        if (!response.ok) throw new Error('无法获取 Zalith 数据');
+        const data = await response.json();
+        currentZalithData = data;
+        
+        if (data.release) {
+            document.getElementById('zalithVersionBadge').textContent = data.release.tag_name || '未知版本';
+            document.getElementById('zalithUpdateTime').textContent = data.release.published_at ? formatDate(data.release.published_at) : '';
+            document.getElementById('zalithChangelogContent').innerHTML = (data.release.body || '暂无更新日志').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            
+            const assets = data.release.assets || [];
+            const mirrorPrefix = document.getElementById('mirrorSelect').value;
+            document.getElementById('zalithReleaseContainer').innerHTML = renderReleaseCards(assets, mirrorPrefix, true);
+        }
+        
+        if (data.action && data.action.run && data.action.run.id) {
+            const runId = data.action.run.id;
+            const artifacts = data.action.artifacts || [];
+            
+            document.getElementById('zalithActionVersionBadge').textContent = '运行 #' + runId;
+            if (data.action.run.created_at) {
+                document.getElementById('zalithActionUpdateTime').textContent = formatDate(data.action.run.created_at);
+            }
+            
+            let html = '<div class="run-info">运行 #' + runId + ' | ' + formatDate(data.action.run.created_at) + '</div>';
+            
+            if (artifacts.length === 0) {
+                html += '<div class="no-assets">暂无构建产物</div>';
+            } else {
+                artifacts.forEach(artifact => {
+                    html += `
+                        <div class="download-item">
+                            <div class="item-title">${escapeHtml(artifact.name)}</div>
+                            <div class="item-details">
+                                <span>📦 ${formatSize(artifact.size_in_bytes)}</span>
+                            </div>
+                            <a href="https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/${runId}" class="download-btn" target="_blank" rel="noopener noreferrer">
+                                查看运行记录
+                            </a>
+                        </div>
+                    `;
+                });
+            }
+            document.getElementById('zalithActionContainer').innerHTML = html;
+        } else {
+            document.getElementById('zalithActionVersionBadge').textContent = '暂无';
+            document.getElementById('zalithActionContainer').innerHTML = '<div class="no-assets">暂无 Action 构建记录</div>';
+        }
+        
+        // 恢复用户选择的下载类型
+        const savedType = localStorage.getItem('zalith_download_type');
+        if (savedType === 'action') {
+            setZalithDownloadType('action');
+        } else {
+            setZalithDownloadType('release');
+        }
+    } catch (error) {
+        console.error('加载 Zalith 失败:', error);
+        document.getElementById('zalithReleaseContainer').innerHTML = '<div class="no-assets">加载失败，请稍后重试</div>';
+        document.getElementById('zalithVersionBadge').textContent = '加载失败';
+    }
+}
+
+function setZalithDownloadType(type) {
+    const releaseSection = document.getElementById('zalithReleaseSection');
+    const actionSection = document.getElementById('zalithActionSection');
+    const buttons = document.querySelectorAll('#zalithModule .selector-btn');
+    
+    buttons.forEach(btn => {
+        if (btn.getAttribute('data-type') === type) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+    
+    if (type === 'release') {
+        releaseSection.style.display = 'block';
+        actionSection.style.display = 'none';
+    } else {
+        releaseSection.style.display = 'none';
+        actionSection.style.display = 'block';
+    }
+    
+    localStorage.setItem('zalith_download_type', type);
+}
+
+// ==================== MobileGlues 模块 ====================
+async function loadMobileGluesData() {
+    const container = document.getElementById('mgContainer');
+    const versionBadge = document.getElementById('mgVersionBadge');
+    const updateTime = document.getElementById('mgUpdateTime');
+    const changelogContent = document.getElementById('mgChangelogContent');
+    
+    container.innerHTML = '<div class="loading">加载中...</div>';
+    
+    try {
+        const response = await fetch('/mobileglues.json?t=' + Date
