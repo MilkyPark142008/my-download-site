@@ -4,7 +4,7 @@ on:
   schedule:
     # 每小时运行一次
     - cron: '0 * * * *'
-  workflow_dispatch:  # 支持手动触发
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -21,10 +21,6 @@ jobs:
 
       - name: 安装 jq
         run: sudo apt-get update && sudo apt-get install -y jq
-
-      - name: 生成 commit-info.json
-        run: |
-          git log -1 --format='{"sha":"%H","date":"%cI","message":"%s"}' > commit-info.json
 
       - name: 获取 FCL Release
         run: |
@@ -95,6 +91,18 @@ jobs:
           rm -f fcl-release.json fcl-action.json
           rm -f zalith-release.json zalith-action.json
           rm -f mobileglues-release.json
+
+      - name: 生成真实的源码提交信息（跳过 workflow 自动提交）
+        run: |
+          # 获取排除 workflow 自动提交后的最新提交
+          REAL_COMMIT=$(git log --grep="chore: 自动更新下载数据" --invert-grep --format='{"sha":"%H","date":"%cI","message":"%s"}' -1)
+          
+          if [ -z "$REAL_COMMIT" ]; then
+            # 如果没有找到（比如第一次运行），就用最新提交
+            REAL_COMMIT=$(git log --format='{"sha":"%H","date":"%cI","message":"%s"}' -1)
+          fi
+          
+          echo "$REAL_COMMIT" > commit-info.json
 
       - name: 提交并推送更改
         run: |
