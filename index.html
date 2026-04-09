@@ -128,12 +128,6 @@ body {
     margin: 0 0 16px 0;
 }
 
-.version-text {
-    color: #1a1a1a;
-    font-size: 12px;
-    font-weight: 500;
-}
-
 .version-badge {
     background: #f5f5f7;
     color: #1a1a1a;
@@ -575,6 +569,7 @@ body {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .version-col {
@@ -620,8 +615,8 @@ body {
 
         <div class="announcement-card">
             <h3>公告</h3>
-            <p>目前在添加zl2下载链接，修复网站文件架构</p>
-            <p class="note">如果遇到错误 请等待耐心修复</p>
+            <p>欢迎使用下载站，请选择需要的版本下载</p>
+            <p class="note">如果遇到错误，请稍后重试或刷新页面</p>
         </div>
 
         <div class="announcement-card">
@@ -764,6 +759,16 @@ body {
 
     <script>
 // ==================== 工具函数 ====================
+function escapeHtml(text) {
+    if (!text) return '';
+    return text.replace(/[&<>]/g, function(m) {
+        if (m === '&') return '&amp;';
+        if (m === '<') return '&lt;';
+        if (m === '>') return '&gt;';
+        return m;
+    });
+}
+
 function getArchFromFilename(filename) {
     const lower = filename.toLowerCase();
     if (lower.includes('arm64-v8a') || lower.includes('arm64')) return 'arm64';
@@ -800,12 +805,12 @@ function formatDate(isoString) {
 }
 
 // ==================== 渲染函数 ====================
-function renderReleaseCards(assets, mirrorPrefix, getArchKey = true) {
+function renderReleaseCards(assets, mirrorPrefix, groupByArch = true) {
     if (!assets || assets.length === 0) {
         return '<div class="no-assets">暂无可用下载文件</div>';
     }
     
-    if (getArchKey) {
+    if (groupByArch) {
         const archMap = new Map();
         assets.forEach(asset => {
             const arch = getArchFromFilename(asset.name);
@@ -822,9 +827,9 @@ function renderReleaseCards(assets, mirrorPrefix, getArchKey = true) {
             const originalUrl = asset.browser_download_url;
             cardsHtml += `
                 <div class="download-item">
-                    <div class="item-title">${archName}</div>
+                    <div class="item-title">${escapeHtml(archName)}</div>
                     <div class="item-details">
-                        <span>${asset.name}</span>
+                        <span>${escapeHtml(asset.name)}</span>
                         <span>${sizeFormatted}</span>
                     </div>
                     <a href="${mirrorPrefix}${originalUrl}" class="download-btn" target="_blank" rel="noopener noreferrer" data-original-url="${originalUrl}">下载</a>
@@ -839,7 +844,7 @@ function renderReleaseCards(assets, mirrorPrefix, getArchKey = true) {
             const originalUrl = asset.browser_download_url;
             cardsHtml += `
                 <div class="download-item">
-                    <div class="item-title">${asset.name}</div>
+                    <div class="item-title">${escapeHtml(asset.name)}</div>
                     <div class="item-details">
                         <span>${sizeFormatted}</span>
                     </div>
@@ -850,10 +855,6 @@ function renderReleaseCards(assets, mirrorPrefix, getArchKey = true) {
         return cardsHtml;
     }
 }
-
-// ==================== 全局变量 ====================
-let currentFclData = null;
-let currentZalithData = null;
 
 // ==================== 镜像源更新 ====================
 function updateAllDownloadButtons() {
@@ -870,9 +871,8 @@ function updateAllDownloadButtons() {
 async function loadFclData() {
     try {
         const response = await fetch('/fcl.json?t=' + Date.now());
-        if (!response.ok) throw new Error('无法获取 FCL 数据');
+        if (!response.ok) throw new Error('HTTP ' + response.status);
         const data = await response.json();
-        currentFclData = data;
         
         if (data.release) {
             document.getElementById('fclVersionBadge').textContent = data.release.tag_name || '未知版本';
@@ -918,7 +918,6 @@ async function loadFclData() {
             document.getElementById('fclActionContainer').innerHTML = '<div class="no-assets">暂无 Action 构建记录</div>';
         }
         
-        // 恢复用户选择的下载类型
         const savedType = localStorage.getItem('fcl_download_type');
         if (savedType === 'action') {
             setFclDownloadType('action');
@@ -960,9 +959,8 @@ function setFclDownloadType(type) {
 async function loadZalithData() {
     try {
         const response = await fetch('/zalith.json?t=' + Date.now());
-        if (!response.ok) throw new Error('无法获取 Zalith 数据');
+        if (!response.ok) throw new Error('HTTP ' + response.status);
         const data = await response.json();
-        currentZalithData = data;
         
         if (data.release) {
             document.getElementById('zalithVersionBadge').textContent = data.release.tag_name || '未知版本';
@@ -1008,7 +1006,6 @@ async function loadZalithData() {
             document.getElementById('zalithActionContainer').innerHTML = '<div class="no-assets">暂无 Action 构建记录</div>';
         }
         
-        // 恢复用户选择的下载类型
         const savedType = localStorage.getItem('zalith_download_type');
         if (savedType === 'action') {
             setZalithDownloadType('action');
@@ -1056,4 +1053,127 @@ async function loadMobileGluesData() {
     container.innerHTML = '<div class="loading">加载中...</div>';
     
     try {
-        const response = await fetch('/mobileglues.json?t=' + Date
+        const response = await fetch('/mobileglues.json?t=' + Date.now());
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const data = await response.json();
+        
+        if (data.release) {
+            versionBadge.textContent = data.release.tag_name || '未知版本';
+            updateTime.textContent = data.release.published_at ? formatDate(data.release.published_at) : '';
+            changelogContent.innerHTML = (data.release.body || '暂无更新日志').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            
+            const assets = data.release.assets || [];
+            const mirrorPrefix = document.getElementById('mirrorSelect').value;
+            container.innerHTML = renderReleaseCards(assets, mirrorPrefix, false);
+        } else {
+            container.innerHTML = '<div class="no-assets">暂无下载文件</div>';
+            versionBadge.textContent = '暂无';
+        }
+    } catch (error) {
+        console.error('加载 MobileGlues 失败:', error);
+        container.innerHTML = '<div class="no-assets">加载失败，请稍后重试</div>';
+        versionBadge.textContent = '加载失败';
+    }
+}
+
+// ==================== 模块切换 ====================
+function switchModule(moduleName) {
+    const fclModule = document.getElementById('fclModule');
+    const zalithModule = document.getElementById('zalithModule');
+    const mgModule = document.getElementById('mgModule');
+    const projectSelect = document.getElementById('projectSelect');
+    
+    fclModule.style.display = 'none';
+    zalithModule.style.display = 'none';
+    mgModule.style.display = 'none';
+    
+    if (moduleName === 'fcl') {
+        fclModule.style.display = 'block';
+        if (projectSelect) projectSelect.value = 'fcl';
+    } else if (moduleName === 'zalith') {
+        zalithModule.style.display = 'block';
+        if (projectSelect) projectSelect.value = 'zalith';
+    } else if (moduleName === 'mg') {
+        mgModule.style.display = 'block';
+        if (projectSelect) projectSelect.value = 'mg';
+    }
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ==================== 菜单功能 ====================
+function toggleMenu() {
+    const menu = document.getElementById('sideMenu');
+    const toggleBtn = document.getElementById('menuToggle');
+    menu.classList.toggle('active');
+    toggleBtn.classList.toggle('active');
+}
+
+// ==================== 提交信息加载 ====================
+async function loadCommitInfo() {
+    const commitInfoDiv = document.getElementById('commitInfo');
+    try {
+        const response = await fetch('/commit-info.json?t=' + Date.now());
+        if (!response.ok) throw new Error();
+        const data = await response.json();
+        if (data && data.date) {
+            const date = formatDate(data.date);
+            const sha = data.sha ? data.sha.substring(0, 7) : '';
+            const shortMsg = data.message ? data.message.substring(0, 30) : '';
+            commitInfoDiv.innerHTML = `<p>📅 ${date}</p><p class="commit-msg">📝 ${escapeHtml(shortMsg)}...</p><p class="commit-sha">#${sha}</p>`;
+        } else {
+            commitInfoDiv.innerHTML = '<p>暂无数据</p>';
+        }
+    } catch (error) {
+        commitInfoDiv.innerHTML = '<p>加载失败</p>';
+    }
+}
+
+// ==================== 页面初始化 ====================
+document.addEventListener('DOMContentLoaded', function() {
+    const mirrorSelect = document.getElementById('mirrorSelect');
+    const projectSelect = document.getElementById('projectSelect');
+    
+    if (mirrorSelect) {
+        mirrorSelect.addEventListener('change', updateAllDownloadButtons);
+    }
+    
+    if (projectSelect) {
+        projectSelect.addEventListener('change', function() {
+            switchModule(this.value);
+        });
+    }
+    
+    document.addEventListener('click', function(e) {
+        const menu = document.getElementById('sideMenu');
+        const toggleBtn = document.getElementById('menuToggle');
+        if (menu && toggleBtn && !menu.contains(e.target) && !toggleBtn.contains(e.target) && menu.classList.contains('active')) {
+            toggleMenu();
+        }
+    });
+    
+    document.querySelectorAll('#fclModule .selector-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            setFclDownloadType(this.getAttribute('data-type'));
+        });
+    });
+    
+    document.querySelectorAll('#zalithModule .selector-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            setZalithDownloadType(this.getAttribute('data-type'));
+        });
+    });
+    
+    loadCommitInfo();
+    loadFclData();
+    loadZalithData();
+    loadMobileGluesData();
+});
+
+window.toggleMenu = toggleMenu;
+window.switchModule = switchModule;
+window.setFclDownloadType = setFclDownloadType;
+window.setZalithDownloadType = setZalithDownloadType;
+    </script>
+</body>
+</html>
