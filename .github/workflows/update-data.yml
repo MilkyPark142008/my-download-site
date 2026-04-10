@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'index.html'
+      - 'README.md'
+      - '.github/workflows/update-data.yml'
   schedule:
     - cron: '0 * * * *'
   workflow_dispatch:
@@ -35,21 +37,6 @@ jobs:
         run: |
           curl -s "https://raw.githubusercontent.com/FCL-Team/FoldCraftLauncher/main/version_map.json" > fcl-version-map.json
 
-      - name: 提取中文更新日志
-        id: fcl_custom
-        run: |
-          if [ ! -s fcl-version-map.json ]; then
-            echo "has_custom=false" >> $GITHUB_OUTPUT
-            exit 0
-          fi
-          TEXT=$(jq -r '.[] | select(.lang=="zh_CN") | .text' fcl-version-map.json | head -1)
-          if [ -n "$TEXT" ] && [ "$TEXT" != "null" ]; then
-            printf "%s" "$TEXT" > fcl-custom.txt
-            echo "has_custom=true" >> $GITHUB_OUTPUT
-          else
-            echo "has_custom=false" >> $GITHUB_OUTPUT
-          fi
-
       - name: 获取 FCL Action
         run: |
           RUN_JSON=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
@@ -64,15 +51,10 @@ jobs:
             echo "{\"run\": null, \"artifacts\": {\"artifacts\": []}}" > fcl-action.json
           fi
 
-      - name: 合并 FCL JSON（使用自定义文本替换 body）
+      - name: 合并 FCL JSON（添加 version_map 字段）
         run: |
-          if [ "${{ steps.fcl_custom.outputs.has_custom }}" = "true" ]; then
-            CUSTOM=$(cat fcl-custom.txt)
-            # 完全替换 body 为自定义文本
-            jq --arg custom "$CUSTOM" '.body = $custom' fcl-release.json > fcl-release-temp.json
-            mv fcl-release-temp.json fcl-release.json
-          fi
-          jq -s '{release: .[0], action: {run: (.[1].run), artifacts: (.[1].artifacts.artifacts // [])}}' \
+          VERSION_MAP=$(cat fcl-version-map.json)
+          jq --argjson vm "$VERSION_MAP" '{release: .[0], action: {run: (.[1].run), artifacts: (.[1].artifacts.artifacts // [])}, version_map: $vm}' \
             fcl-release.json fcl-action.json > fcl.json
 
       # ==================== Zalith ====================
@@ -141,10 +123,11 @@ jobs:
       # ==================== 清理临时文件 ====================
       - name: 清理临时文件
         run: |
-          rm -f fcl-release.json fcl-action.json fcl-version-map.json fcl-custom.txt
+          rm -f fcl-release.json fcl-action.json
           rm -f zalith-release.json zalith-action.json
           rm -f amethyst-release.json amethyst-action.json
           rm -f mobileglues-release.json
+          # 保留 fcl-version-map.json
 
       # ==================== 生成真实源码提交信息 ====================
       - name: 生成真实的源码提交信息
@@ -160,6 +143,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add fcl.json zalith.json amethyst.json mobileglues.json commit-info.json
+          git add fcl.json zalith.json amethyst.json mobileglues.json fcl-version-map.json commit-info.json
           git diff --staged --quiet || git commit -m "chore: 自动更新下载数据 $(date '+%Y-%m-%d %H:%M:%S')"
           git push
