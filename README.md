@@ -1,116 +1,136 @@
-整个项目由ai维护 本人并没有进行审核 如果有错误 请立即联系我并指出 我会修改/删除 谢谢
-从2026/02/26日开始 本仓库由ai编写后直接推送
+
+#本仓库由DeepSeek全程编写 本人没有参与编写
 
 
-# 📱 MC 手机版下载站
+# MC启动器下载站
 
-[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-自动更新-blue?logo=github-actions)](https://github.com/MilkyPark142008/my-download-site/actions/workflows/update.yml)
-[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-327873?logo=github)](https://fcl-dl.pages.dev/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![GitHub Actions](https://github.com/MilkyPark142008/my-download-site/actions/workflows/update-data.yml/badge.svg)](https://github.com/MilkyPark142008/my-download-site/actions/workflows/update-data.yml)
+[![Cloudflare Pages](https://img.shields.io/badge/Deploy-Cloudflare%20Pages-blue)](https://pages.cloudflare.com/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-> 一个简洁高效的 MC 手机版启动器下载站，自动同步最新版本，支持多镜像下载加速。
+> 一个自动同步 GitHub Release 和 Actions 构建产物的 Minecraft 启动器下载站  
+> 访问地址：[https://fcl-dl.pages.dev/](https://fcl-dl.pages.dev/)
 
-## ✨ 功能特点
+## ✨ 特性
 
-## ✨ 功能特点
+- **多项目支持** – FCL 启动器、ZalithLauncher2、Angel Aura Amethyst、MobileGlues 图形库
+- **双版本渠道** – Release 稳定版 + Action 开发版，满足不同需求
+- **全自动更新** – GitHub Actions 每小时自动拉取最新 Release 和 Actions 产物
+- **文件名直显** – 下载卡片直接显示原始文件名，架构信息一目了然
+- **镜像加速** – 内置 Ghfast、Gh-Proxy 镜像源，一键切换
+- **Markdown 渲染** – Release 更新日志使用 GitHub 风格 Markdown 显示
+- **Action 日志** – 开发版展示触发构建的 commit 信息
+- **响应式设计** – 完美适配手机、平板、桌面
 
-- **自动同步**：每小时自动获取 FCL、MobileGlues、JRE 的最新 Release。
-- **多镜像选择**：内置多个 GitHub 加速镜像，用户可自由切换下载源。
-- **项目切换**：通过下拉菜单在 FCL、MobileGlues、JRE 之间切换。
-- **模块折叠**：每个项目模块可点击标题折叠/展开，节省页面空间。
-- **更新日志**：每个项目内置折叠式更新日志，方便查看版本更新内容。
-- **响应式设计**：适配手机、平板和电脑屏幕。
-- **文件完整显示**：所有文件名完整显示，自动换行，无截断。
+## 📦 支持的项目
 
-## 🛠️ 技术栈
+| 项目 | Release | Action | 架构识别 |
+|------|---------|--------|----------|
+| [FCL 启动器](https://github.com/FCL-Team/FoldCraftLauncher) | ✅ | ✅ | 文件名识别 |
+| [ZalithLauncher2](https://github.com/ZalithLauncher/ZalithLauncher2) | ✅ | ✅ | 文件名识别 |
+| [Angel Aura Amethyst](https://github.com/AngelAuraMC/Amethyst-Android) | ✅ | ✅ | 文件名识别 |
+| [MobileGlues 图形库](https://github.com/MobileGL-Dev/MobileGlues-release) | ✅ | ❌ | 文件名识别 |
 
-- **前端**：纯 HTML5 + CSS3 + JavaScript（无框架依赖）
-- **CI/CD**：GitHub Actions（每小时自动获取 Release 数据）
-- **托管**：GitHub Pages
-- **数据来源**：
-  - [FCL-Launcher](https://github.com/FCL-Team/FCL-Launcher)
-  - [MobileGlues](https://github.com/MobileGlues/MobileGlues)
-  - [JRE-for-Android](https://github.com/aaaapai)
+> 注：架构信息直接从文件名提取（arm64、armv7、x86、x86_64、all 等），无需额外配置。
 
-## 🚀 部署步骤
+## 🚀 部署
 
-### 快速部署使用
+### 前置要求
 
-1. **访问网站**
-   - 直接访问：[https://fcl-dl.pages.dev/](https://fcl-dl.pages.dev/)
+- GitHub 账号
+- Cloudflare Pages 账号（或其他静态托管服务）
 
-### 本地部署
+### 一键部署
 
-1. **Fork 或克隆** 本仓库到你的 GitHub 账号
-   ```bash
-   git clone https://github.com/MilkyPark142008/my-download-site.git
-   ```
+1. **Fork 本仓库** 到你的 GitHub 账号
 
-2. **修改网站信息**（可选）：
-   - 编辑 `index.html` 中的公告内容（位于 `<div class="announcement">` 内）
-   - 可调整镜像源列表：编辑 `<select id="mirrorSelect">` 中的 `<option>`
+2. **配置 GitHub Actions 权限**  
+   进入仓库 `Settings` → `Actions` → `General` → 勾选 `Read and write permissions`
 
-3. **配置 GitHub Actions**
-   - 无需额外操作，已配置每小时自动运行
+3. **部署到 Cloudflare Pages**  
+   - 登录 [Cloudflare Pages](https://pages.cloudflare.com/)
+   - 点击 `连接到 Git` → 选择你 fork 的仓库
+   - 构建命令留空，输出目录填 `/`
+   - 点击 `保存并部署`
 
-4. **部署到 GitHub Pages**
-   - 在仓库 `Settings` > `Pages` 中
-   - 选择分支 `main` 和根目录 `/`
-   - 保存后等待自动部署完成
+4. **（可选）绑定自定义域名**  
+   在 Pages 项目设置中添加你的域名（例如 `fcl.page.dev`）
 
-5. **等待 Actions 运行**
-   - 首次部署后，手动触发一次 Actions 工作流生成 JSON 文件
-   - 之后每小时自动更新
+部署完成后，每小时自动更新的网站就上线了。
 
-### 使用静态服务器本地预览
-
-```bash
-# Python
-python -m http.server 8000
-
-# Node.js
-npx http-server
-
-# PHP
-php -S localhost:8000
-```
-
-## 📂 项目结构
-
-```
-my-download-site/
-├── .github/
-│   └── workflows/
-│       └── update.yml          # GitHub Actions 自动更新工作流
-├── index.html                  # 网站主页面
-├── fcl.json                    # FCL 启动器版本数据（自动生成）
-├── mobileglues.json            # MobileGlues 图形库版本数据（自动生成）
-├── jre.json                    # JRE 运行环境版本数据（自动生成）
-└── README.md                   # 项目说明文档
-```
-
-## 🔧 自定义指南
-
-### 修改公告内容
-在 `index.html` 中找到 `<div class="announcement">` 部分，修改其中的 `<p>` 和 `<p class="note">` 文本。
-
-### 修改镜像源
-找到 `<select id="mirrorSelect">`，增删或修改 `<option>` 标签。`value` 属性填写镜像前缀（如 `https://ghfast.top/`），标签文本可自定义。
+## ⚙️ 配置
 
 ### 添加新项目
-1. **修改 GitHub Actions 工作流**：在 `.github/workflows/update-release.yml` 中添加获取新项目 Release 的步骤，生成对应的 JSON 文件。
-2. **在 HTML 中添加项目选项**：在 `<select id="projectSelect">` 中添加新的 `<option>`。
-3. **添加模块 HTML**：复制一份现有模块的结构，修改对应的 `id` 和标题。
-4. **添加 JavaScript 逻辑**：复制现有模块的 JavaScript 代码，修改其中的变量名和 `fetch` 地址。
 
-## 📄 许可证
+编辑 `.github/workflows/update-data.yml`，参照现有步骤添加新项目的 Release 和 Action 拉取。然后在 `index.html` 中增加对应的模块（HTML + JavaScript）。
 
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
+### 修改镜像源
 
-## 📮 联系方式
+编辑 `index.html`，找到 `<select id="mirrorSelect">`，增删或修改 `<option>`。
 
-- 如有问题或建议，欢迎在 [GitHub Issues](https://github.com/MilkyPark142008/my-download-site/issues) 中留言
+### 调整更新频率
 
----
+修改 workflow 中的 `cron` 表达式，例如改为每 6 小时：
+```yaml
+- cron: '0 */6 * * *'
+```
 
-如果觉得这个项目对你有帮助，请给个 ⭐ Star 支持一下！
+📁 文件结构
+
+```
+.
+├── .github/workflows/update-data.yml   # 自动化脚本（每小时运行 + push 触发）
+├── index.html                          # 前端页面（样式、逻辑、模块）
+├── fcl.json                            # 自动生成，FCL 数据
+├── zalith.json                         # 自动生成，Zalith 数据
+├── amethyst.json                       # 自动生成，Amethyst 数据
+├── mobileglues.json                    # 自动生成，MobileGlues 数据
+└── commit-info.json                    # 自动生成，本仓库真实提交信息
+```
+
+📄 数据格式示例
+
+fcl.json 结构：
+
+```json
+{
+  "release": {
+    "tag_name": "v1.4.3",
+    "published_at": "2025-01-15T10:30:00Z",
+    "body": "## 更新内容\n- 修复崩溃问题",
+    "assets": [
+      {
+        "name": "FoldCraftLauncher-arm64-v8a.apk",
+        "size": 52428800,
+        "browser_download_url": "https://github.com/.../apk"
+      }
+    ]
+  },
+  "action": {
+    "run": {
+      "id": 123456789,
+      "created_at": "2025-01-16T08:00:00Z",
+      "head_commit": {
+        "message": "feat: 添加新功能"
+      }
+    },
+    "artifacts": [
+      {
+        "name": "FCL-debug.apk",
+        "size_in_bytes": 52000000
+      }
+    ]
+  }
+}
+```
+
+🧪 本地开发
+
+1. 克隆仓库
+2. 启动本地 HTTP 服务器（例如 python -m http.server 8000）
+3. 在根目录放置模拟的 JSON 文件用于测试
+4. 访问 http://localhost:8000
+
+📜 许可证
+
+MIT
