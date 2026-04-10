@@ -685,7 +685,6 @@ body {
     color: #333;
 }
     </style>
-    <!-- Markdown 解析库 -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
@@ -778,8 +777,9 @@ body {
                 </div>
             </div>
 
+            <!-- Release 更新日志 -->
             <details class="changelog-section">
-                <summary>查看更新日志</summary>
+                <summary>查看 Release 更新日志</summary>
                 <div class="changelog-content" id="fclChangelogContent">加载中...</div>
             </details>
 
@@ -788,9 +788,14 @@ body {
                 <div id="fclReleaseContainer" class="download-list"></div>
             </div>
 
+            <!-- Action 区域（含独立更新日志） -->
             <div class="download-section" id="fclActionSection" style="display: none;">
                 <h3>Action 开发版下载</h3>
                 <p class="note">开发版本，可能存在未知问题，仅供体验使用</p>
+                <details class="changelog-section">
+                    <summary>查看 Action 更新日志</summary>
+                    <div class="changelog-content" id="fclActionChangelogContent">加载中...</div>
+                </details>
                 <div id="fclActionContainer" class="download-list">
                     <div class="loading">加载中...</div>
                 </div>
@@ -824,7 +829,7 @@ body {
             </div>
 
             <details class="changelog-section">
-                <summary>查看更新日志</summary>
+                <summary>查看 Release 更新日志</summary>
                 <div class="changelog-content" id="zalithChangelogContent">加载中...</div>
             </details>
 
@@ -836,6 +841,10 @@ body {
             <div class="download-section" id="zalithActionSection" style="display: none;">
                 <h3>Action 开发版下载</h3>
                 <p class="note">开发版本，可能存在未知问题，仅供体验使用</p>
+                <details class="changelog-section">
+                    <summary>查看 Action 更新日志</summary>
+                    <div class="changelog-content" id="zalithActionChangelogContent">加载中...</div>
+                </details>
                 <div id="zalithActionContainer" class="download-list">
                     <div class="loading">加载中...</div>
                 </div>
@@ -869,7 +878,7 @@ body {
             </div>
 
             <details class="changelog-section">
-                <summary>查看更新日志</summary>
+                <summary>查看 Release 更新日志</summary>
                 <div class="changelog-content" id="amethystChangelogContent">加载中...</div>
             </details>
 
@@ -881,13 +890,17 @@ body {
             <div class="download-section" id="amethystActionSection" style="display: none;">
                 <h3>Action 开发版下载</h3>
                 <p class="note">开发版本，可能存在未知问题，仅供体验使用</p>
+                <details class="changelog-section">
+                    <summary>查看 Action 更新日志</summary>
+                    <div class="changelog-content" id="amethystActionChangelogContent">加载中...</div>
+                </details>
                 <div id="amethystActionContainer" class="download-list">
                     <div class="loading">加载中...</div>
                 </div>
             </div>
         </div>
 
-        <!-- MobileGlues 模块 -->
+        <!-- MobileGlues 模块（无 Action） -->
         <div id="mgModule" class="app-module" style="display: none;">
             <div class="app-header">
                 <h2>MobileGlues 图形库</h2>
@@ -975,7 +988,7 @@ async function renderChangelog(element, markdownText) {
     }
 }
 
-// ==================== 渲染函数（每个文件一个卡片，标题为文件名）====================
+// 渲染下载卡片（每个文件一个卡片，标题为文件名）
 function renderDownloadCards(assets, mirrorPrefix) {
     if (!assets || assets.length === 0) {
         return '<div class="no-assets">暂无可用下载文件</div>';
@@ -1042,33 +1055,37 @@ async function loadFclData() {
         const data = await response.json();
         
         if (data && data.release) {
-            const versionBadge = document.getElementById('fclVersionBadge');
-            const updateTime = document.getElementById('fclUpdateTime');
-            const changelogContent = document.getElementById('fclChangelogContent');
-            
-            if (versionBadge) versionBadge.textContent = data.release.tag_name || '未知版本';
-            if (updateTime) updateTime.textContent = data.release.published_at ? formatDate(data.release.published_at) : '';
-            await renderChangelog(changelogContent, data.release.body);
+            document.getElementById('fclVersionBadge').textContent = data.release.tag_name || '未知版本';
+            document.getElementById('fclUpdateTime').textContent = data.release.published_at ? formatDate(data.release.published_at) : '';
+            await renderChangelog(document.getElementById('fclChangelogContent'), data.release.body);
             
             const assets = data.release.assets || [];
             const mirrorPrefix = document.getElementById('mirrorSelect').value;
-            const container = document.getElementById('fclReleaseContainer');
-            if (container) container.innerHTML = renderDownloadCards(assets, mirrorPrefix);
+            document.getElementById('fclReleaseContainer').innerHTML = renderDownloadCards(assets, mirrorPrefix);
         }
         
         if (data && data.action && data.action.run && data.action.run.id) {
             const runId = data.action.run.id;
             const artifacts = data.action.artifacts || [];
+            const headCommit = data.action.run.head_commit;
+            const commitMsg = headCommit ? headCommit.message : null;
             
-            const actionVersionBadge = document.getElementById('fclActionVersionBadge');
-            const actionUpdateTime = document.getElementById('fclActionUpdateTime');
-            const actionContainer = document.getElementById('fclActionContainer');
+            document.getElementById('fclActionVersionBadge').textContent = '运行 #' + runId;
+            if (data.action.run.created_at) {
+                document.getElementById('fclActionUpdateTime').textContent = formatDate(data.action.run.created_at);
+            }
             
-            if (actionVersionBadge) actionVersionBadge.textContent = '运行 #' + runId;
-            if (actionUpdateTime && data.action.run.created_at) actionUpdateTime.textContent = formatDate(data.action.run.created_at);
+            // 渲染 Action 更新日志
+            const actionChangelogDiv = document.getElementById('fclActionChangelogContent');
+            if (actionChangelogDiv) {
+                if (commitMsg) {
+                    await renderChangelog(actionChangelogDiv, commitMsg);
+                } else {
+                    actionChangelogDiv.innerHTML = '<p>暂无 commit 信息</p>';
+                }
+            }
             
             let html = '<div class="run-info">运行 #' + runId + ' | ' + formatDate(data.action.run.created_at) + '</div>';
-            
             if (artifacts.length === 0) {
                 html += '<div class="no-assets">暂无构建产物</div>';
             } else {
@@ -1086,28 +1103,21 @@ async function loadFclData() {
                     `;
                 });
             }
-            if (actionContainer) actionContainer.innerHTML = html;
+            document.getElementById('fclActionContainer').innerHTML = html;
         } else {
-            const actionVersionBadge = document.getElementById('fclActionVersionBadge');
-            const actionContainer = document.getElementById('fclActionContainer');
-            if (actionVersionBadge) actionVersionBadge.textContent = '暂无';
-            if (actionContainer) actionContainer.innerHTML = '<div class="no-assets">暂无 Action 构建记录</div>';
+            document.getElementById('fclActionVersionBadge').textContent = '暂无';
+            document.getElementById('fclActionContainer').innerHTML = '<div class="no-assets">暂无 Action 构建记录</div>';
+            const actionChangelogDiv = document.getElementById('fclActionChangelogContent');
+            if (actionChangelogDiv) actionChangelogDiv.innerHTML = '<p>暂无 Action 运行记录</p>';
         }
         
         const savedType = localStorage.getItem('fcl_download_type');
-        if (savedType === 'action') {
-            setFclDownloadType('action');
-        } else {
-            setFclDownloadType('release');
-        }
-        
+        setFclDownloadType(savedType === 'action' ? 'action' : 'release');
         fclDataLoaded = true;
     } catch (error) {
         console.error('加载 FCL 失败:', error);
-        const releaseContainer = document.getElementById('fclReleaseContainer');
-        const versionBadge = document.getElementById('fclVersionBadge');
-        if (releaseContainer) releaseContainer.innerHTML = '<div class="no-assets">加载失败，请稍后重试</div>';
-        if (versionBadge) versionBadge.textContent = '加载失败';
+        document.getElementById('fclReleaseContainer').innerHTML = '<div class="no-assets">加载失败，请稍后重试</div>';
+        document.getElementById('fclVersionBadge').textContent = '加载失败';
     }
 }
 
@@ -1125,15 +1135,9 @@ function setFclDownloadType(type) {
     });
     
     if (releaseSection && actionSection) {
-        if (type === 'release') {
-            releaseSection.style.display = 'block';
-            actionSection.style.display = 'none';
-        } else {
-            releaseSection.style.display = 'none';
-            actionSection.style.display = 'block';
-        }
+        releaseSection.style.display = type === 'release' ? 'block' : 'none';
+        actionSection.style.display = type === 'action' ? 'block' : 'none';
     }
-    
     localStorage.setItem('fcl_download_type', type);
 }
 
@@ -1147,33 +1151,36 @@ async function loadZalithData() {
         const data = await response.json();
         
         if (data && data.release) {
-            const versionBadge = document.getElementById('zalithVersionBadge');
-            const updateTime = document.getElementById('zalithUpdateTime');
-            const changelogContent = document.getElementById('zalithChangelogContent');
-            
-            if (versionBadge) versionBadge.textContent = data.release.tag_name || '未知版本';
-            if (updateTime) updateTime.textContent = data.release.published_at ? formatDate(data.release.published_at) : '';
-            await renderChangelog(changelogContent, data.release.body);
+            document.getElementById('zalithVersionBadge').textContent = data.release.tag_name || '未知版本';
+            document.getElementById('zalithUpdateTime').textContent = data.release.published_at ? formatDate(data.release.published_at) : '';
+            await renderChangelog(document.getElementById('zalithChangelogContent'), data.release.body);
             
             const assets = data.release.assets || [];
             const mirrorPrefix = document.getElementById('mirrorSelect').value;
-            const container = document.getElementById('zalithReleaseContainer');
-            if (container) container.innerHTML = renderDownloadCards(assets, mirrorPrefix);
+            document.getElementById('zalithReleaseContainer').innerHTML = renderDownloadCards(assets, mirrorPrefix);
         }
         
         if (data && data.action && data.action.run && data.action.run.id) {
             const runId = data.action.run.id;
             const artifacts = data.action.artifacts || [];
+            const headCommit = data.action.run.head_commit;
+            const commitMsg = headCommit ? headCommit.message : null;
             
-            const actionVersionBadge = document.getElementById('zalithActionVersionBadge');
-            const actionUpdateTime = document.getElementById('zalithActionUpdateTime');
-            const actionContainer = document.getElementById('zalithActionContainer');
+            document.getElementById('zalithActionVersionBadge').textContent = '运行 #' + runId;
+            if (data.action.run.created_at) {
+                document.getElementById('zalithActionUpdateTime').textContent = formatDate(data.action.run.created_at);
+            }
             
-            if (actionVersionBadge) actionVersionBadge.textContent = '运行 #' + runId;
-            if (actionUpdateTime && data.action.run.created_at) actionUpdateTime.textContent = formatDate(data.action.run.created_at);
+            const actionChangelogDiv = document.getElementById('zalithActionChangelogContent');
+            if (actionChangelogDiv) {
+                if (commitMsg) {
+                    await renderChangelog(actionChangelogDiv, commitMsg);
+                } else {
+                    actionChangelogDiv.innerHTML = '<p>暂无 commit 信息</p>';
+                }
+            }
             
             let html = '<div class="run-info">运行 #' + runId + ' | ' + formatDate(data.action.run.created_at) + '</div>';
-            
             if (artifacts.length === 0) {
                 html += '<div class="no-assets">暂无构建产物</div>';
             } else {
@@ -1191,28 +1198,21 @@ async function loadZalithData() {
                     `;
                 });
             }
-            if (actionContainer) actionContainer.innerHTML = html;
+            document.getElementById('zalithActionContainer').innerHTML = html;
         } else {
-            const actionVersionBadge = document.getElementById('zalithActionVersionBadge');
-            const actionContainer = document.getElementById('zalithActionContainer');
-            if (actionVersionBadge) actionVersionBadge.textContent = '暂无';
-            if (actionContainer) actionContainer.innerHTML = '<div class="no-assets">暂无 Action 构建记录</div>';
+            document.getElementById('zalithActionVersionBadge').textContent = '暂无';
+            document.getElementById('zalithActionContainer').innerHTML = '<div class="no-assets">暂无 Action 构建记录</div>';
+            const actionChangelogDiv = document.getElementById('zalithActionChangelogContent');
+            if (actionChangelogDiv) actionChangelogDiv.innerHTML = '<p>暂无 Action 运行记录</p>';
         }
         
         const savedType = localStorage.getItem('zalith_download_type');
-        if (savedType === 'action') {
-            setZalithDownloadType('action');
-        } else {
-            setZalithDownloadType('release');
-        }
-        
+        setZalithDownloadType(savedType === 'action' ? 'action' : 'release');
         zalithDataLoaded = true;
     } catch (error) {
         console.error('加载 Zalith 失败:', error);
-        const releaseContainer = document.getElementById('zalithReleaseContainer');
-        const versionBadge = document.getElementById('zalithVersionBadge');
-        if (releaseContainer) releaseContainer.innerHTML = '<div class="no-assets">加载失败，请稍后重试</div>';
-        if (versionBadge) versionBadge.textContent = '加载失败';
+        document.getElementById('zalithReleaseContainer').innerHTML = '<div class="no-assets">加载失败，请稍后重试</div>';
+        document.getElementById('zalithVersionBadge').textContent = '加载失败';
     }
 }
 
@@ -1230,15 +1230,9 @@ function setZalithDownloadType(type) {
     });
     
     if (releaseSection && actionSection) {
-        if (type === 'release') {
-            releaseSection.style.display = 'block';
-            actionSection.style.display = 'none';
-        } else {
-            releaseSection.style.display = 'none';
-            actionSection.style.display = 'block';
-        }
+        releaseSection.style.display = type === 'release' ? 'block' : 'none';
+        actionSection.style.display = type === 'action' ? 'block' : 'none';
     }
-    
     localStorage.setItem('zalith_download_type', type);
 }
 
@@ -1252,33 +1246,36 @@ async function loadAmethystData() {
         const data = await response.json();
         
         if (data && data.release) {
-            const versionBadge = document.getElementById('amethystVersionBadge');
-            const updateTime = document.getElementById('amethystUpdateTime');
-            const changelogContent = document.getElementById('amethystChangelogContent');
-            
-            if (versionBadge) versionBadge.textContent = data.release.tag_name || '未知版本';
-            if (updateTime) updateTime.textContent = data.release.published_at ? formatDate(data.release.published_at) : '';
-            await renderChangelog(changelogContent, data.release.body);
+            document.getElementById('amethystVersionBadge').textContent = data.release.tag_name || '未知版本';
+            document.getElementById('amethystUpdateTime').textContent = data.release.published_at ? formatDate(data.release.published_at) : '';
+            await renderChangelog(document.getElementById('amethystChangelogContent'), data.release.body);
             
             const assets = data.release.assets || [];
             const mirrorPrefix = document.getElementById('mirrorSelect').value;
-            const container = document.getElementById('amethystReleaseContainer');
-            if (container) container.innerHTML = renderDownloadCards(assets, mirrorPrefix);
+            document.getElementById('amethystReleaseContainer').innerHTML = renderDownloadCards(assets, mirrorPrefix);
         }
         
         if (data && data.action && data.action.run && data.action.run.id) {
             const runId = data.action.run.id;
             const artifacts = data.action.artifacts || [];
+            const headCommit = data.action.run.head_commit;
+            const commitMsg = headCommit ? headCommit.message : null;
             
-            const actionVersionBadge = document.getElementById('amethystActionVersionBadge');
-            const actionUpdateTime = document.getElementById('amethystActionUpdateTime');
-            const actionContainer = document.getElementById('amethystActionContainer');
+            document.getElementById('amethystActionVersionBadge').textContent = '运行 #' + runId;
+            if (data.action.run.created_at) {
+                document.getElementById('amethystActionUpdateTime').textContent = formatDate(data.action.run.created_at);
+            }
             
-            if (actionVersionBadge) actionVersionBadge.textContent = '运行 #' + runId;
-            if (actionUpdateTime && data.action.run.created_at) actionUpdateTime.textContent = formatDate(data.action.run.created_at);
+            const actionChangelogDiv = document.getElementById('amethystActionChangelogContent');
+            if (actionChangelogDiv) {
+                if (commitMsg) {
+                    await renderChangelog(actionChangelogDiv, commitMsg);
+                } else {
+                    actionChangelogDiv.innerHTML = '<p>暂无 commit 信息</p>';
+                }
+            }
             
             let html = '<div class="run-info">运行 #' + runId + ' | ' + formatDate(data.action.run.created_at) + '</div>';
-            
             if (artifacts.length === 0) {
                 html += '<div class="no-assets">暂无构建产物</div>';
             } else {
@@ -1296,28 +1293,21 @@ async function loadAmethystData() {
                     `;
                 });
             }
-            if (actionContainer) actionContainer.innerHTML = html;
+            document.getElementById('amethystActionContainer').innerHTML = html;
         } else {
-            const actionVersionBadge = document.getElementById('amethystActionVersionBadge');
-            const actionContainer = document.getElementById('amethystActionContainer');
-            if (actionVersionBadge) actionVersionBadge.textContent = '暂无';
-            if (actionContainer) actionContainer.innerHTML = '<div class="no-assets">暂无 Action 构建记录</div>';
+            document.getElementById('amethystActionVersionBadge').textContent = '暂无';
+            document.getElementById('amethystActionContainer').innerHTML = '<div class="no-assets">暂无 Action 构建记录</div>';
+            const actionChangelogDiv = document.getElementById('amethystActionChangelogContent');
+            if (actionChangelogDiv) actionChangelogDiv.innerHTML = '<p>暂无 Action 运行记录</p>';
         }
         
         const savedType = localStorage.getItem('amethyst_download_type');
-        if (savedType === 'action') {
-            setAmethystDownloadType('action');
-        } else {
-            setAmethystDownloadType('release');
-        }
-        
+        setAmethystDownloadType(savedType === 'action' ? 'action' : 'release');
         amethystDataLoaded = true;
     } catch (error) {
         console.error('加载 Amethyst 失败:', error);
-        const releaseContainer = document.getElementById('amethystReleaseContainer');
-        const versionBadge = document.getElementById('amethystVersionBadge');
-        if (releaseContainer) releaseContainer.innerHTML = '<div class="no-assets">加载失败，请稍后重试</div>';
-        if (versionBadge) versionBadge.textContent = '加载失败';
+        document.getElementById('amethystReleaseContainer').innerHTML = '<div class="no-assets">加载失败，请稍后重试</div>';
+        document.getElementById('amethystVersionBadge').textContent = '加载失败';
     }
 }
 
@@ -1335,15 +1325,9 @@ function setAmethystDownloadType(type) {
     });
     
     if (releaseSection && actionSection) {
-        if (type === 'release') {
-            releaseSection.style.display = 'block';
-            actionSection.style.display = 'none';
-        } else {
-            releaseSection.style.display = 'none';
-            actionSection.style.display = 'block';
-        }
+        releaseSection.style.display = type === 'release' ? 'block' : 'none';
+        actionSection.style.display = type === 'action' ? 'block' : 'none';
     }
-    
     localStorage.setItem('amethyst_download_type', type);
 }
 
@@ -1375,7 +1359,6 @@ async function loadMobileGluesData() {
             if (container) container.innerHTML = '<div class="no-assets">暂无下载文件</div>';
             if (versionBadge) versionBadge.textContent = '暂无';
         }
-        
         mgDataLoaded = true;
     } catch (error) {
         console.error('加载 MobileGlues 失败:', error);
@@ -1515,28 +1498,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // 绑定各模块的切换按钮事件
-    const fclButtons = document.querySelectorAll('#fclModule .selector-btn');
-    fclButtons.forEach(btn => {
+    document.querySelectorAll('#fclModule .selector-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             setFclDownloadType(this.getAttribute('data-type'));
         });
     });
-    
-    const zalithButtons = document.querySelectorAll('#zalithModule .selector-btn');
-    zalithButtons.forEach(btn => {
+    document.querySelectorAll('#zalithModule .selector-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             setZalithDownloadType(this.getAttribute('data-type'));
         });
     });
-    
-    const amethystButtons = document.querySelectorAll('#amethystModule .selector-btn');
-    amethystButtons.forEach(btn => {
+    document.querySelectorAll('#amethystModule .selector-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             setAmethystDownloadType(this.getAttribute('data-type'));
         });
     });
     
-    // 加载所有数据
     loadCommitInfo();
     loadFclData();
     loadZalithData();
