@@ -655,7 +655,6 @@ body {
             <p>每小时自动更新</p>
         </div>
 
-        <!-- 状态栏 -->
         <div id="statusBar" class="status-bar" style="display: none;">
             <div id="statusDot" class="status-dot"></div>
             <div id="statusText" class="status-text">检查更新中...</div>
@@ -690,6 +689,7 @@ body {
             <select id="projectSelect">
                 <option value="fcl">FCL 启动器</option>
                 <option value="zalith">ZalithLauncher2</option>
+                <option value="amethyst">Angel Aura Amethyst</option>
                 <option value="mg">MobileGlues</option>
             </select>
         </div>
@@ -779,6 +779,51 @@ body {
                 <h3>Action 开发版下载</h3>
                 <p class="note">开发版本，可能存在未知问题，仅供体验使用</p>
                 <div id="zalithActionContainer" class="download-list">
+                    <div class="loading">加载中...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Amethyst 模块 -->
+        <div id="amethystModule" class="app-module" style="display: none;">
+            <div class="app-header">
+                <h2>Angel Aura Amethyst</h2>
+                <div class="version-row">
+                    <div class="version-col">
+                        <div class="version-label">Release 稳定版</div>
+                        <span class="version-badge" id="amethystVersionBadge">加载中...</span>
+                        <div class="mt-2"><span class="time-text">更新：</span><span class="update-time" id="amethystUpdateTime"></span></div>
+                    </div>
+                    <div class="version-col">
+                        <div class="version-label">Action 开发版</div>
+                        <span class="version-badge" id="amethystActionVersionBadge">加载中...</span>
+                        <div class="mt-2"><span class="time-text">更新：</span><span class="update-time" id="amethystActionUpdateTime"></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="download-type-selector">
+                <label>下载来源：</label>
+                <div class="selector-buttons">
+                    <button class="selector-btn" data-type="release">Release 稳定版</button>
+                    <button class="selector-btn" data-type="action">Action 开发版</button>
+                </div>
+            </div>
+
+            <details class="changelog-section">
+                <summary>查看更新日志</summary>
+                <div class="changelog-content" id="amethystChangelogContent">加载中...</div>
+            </details>
+
+            <div class="download-section" id="amethystReleaseSection">
+                <h3>Release 稳定版下载</h3>
+                <div id="amethystReleaseContainer" class="download-list"></div>
+            </div>
+
+            <div class="download-section" id="amethystActionSection" style="display: none;">
+                <h3>Action 开发版下载</h3>
+                <p class="note">开发版本，可能存在未知问题，仅供体验使用</p>
+                <div id="amethystActionContainer" class="download-list">
                     <div class="loading">加载中...</div>
                 </div>
             </div>
@@ -1178,6 +1223,111 @@ function setZalithDownloadType(type) {
     localStorage.setItem('zalith_download_type', type);
 }
 
+// ==================== Amethyst 模块 ====================
+let amethystDataLoaded = false;
+
+async function loadAmethystData() {
+    try {
+        const response = await fetch('/amethyst.json?t=' + Date.now());
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const data = await response.json();
+        
+        if (data && data.release) {
+            const versionBadge = document.getElementById('amethystVersionBadge');
+            const updateTime = document.getElementById('amethystUpdateTime');
+            const changelogContent = document.getElementById('amethystChangelogContent');
+            
+            if (versionBadge) versionBadge.textContent = data.release.tag_name || '未知版本';
+            if (updateTime) updateTime.textContent = data.release.published_at ? formatDate(data.release.published_at) : '';
+            if (changelogContent) changelogContent.innerHTML = (data.release.body || '暂无更新日志').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            
+            const assets = data.release.assets || [];
+            const mirrorPrefix = document.getElementById('mirrorSelect').value;
+            const container = document.getElementById('amethystReleaseContainer');
+            if (container) container.innerHTML = renderReleaseCards(assets, mirrorPrefix, true);
+        }
+        
+        if (data && data.action && data.action.run && data.action.run.id) {
+            const runId = data.action.run.id;
+            const artifacts = data.action.artifacts || [];
+            
+            const actionVersionBadge = document.getElementById('amethystActionVersionBadge');
+            const actionUpdateTime = document.getElementById('amethystActionUpdateTime');
+            const actionContainer = document.getElementById('amethystActionContainer');
+            
+            if (actionVersionBadge) actionVersionBadge.textContent = '运行 #' + runId;
+            if (actionUpdateTime && data.action.run.created_at) actionUpdateTime.textContent = formatDate(data.action.run.created_at);
+            
+            let html = '<div class="run-info">运行 #' + runId + ' | ' + formatDate(data.action.run.created_at) + '</div>';
+            
+            if (artifacts.length === 0) {
+                html += '<div class="no-assets">暂无构建产物</div>';
+            } else {
+                artifacts.forEach(artifact => {
+                    html += `
+                        <div class="download-item">
+                            <div class="item-title">${escapeHtml(artifact.name)}</div>
+                            <div class="item-details">
+                                <span>📦 ${formatSize(artifact.size_in_bytes)}</span>
+                            </div>
+                            <a href="https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/${runId}" class="download-btn" target="_blank" rel="noopener noreferrer">
+                                查看运行记录
+                            </a>
+                        </div>
+                    `;
+                });
+            }
+            if (actionContainer) actionContainer.innerHTML = html;
+        } else {
+            const actionVersionBadge = document.getElementById('amethystActionVersionBadge');
+            const actionContainer = document.getElementById('amethystActionContainer');
+            if (actionVersionBadge) actionVersionBadge.textContent = '暂无';
+            if (actionContainer) actionContainer.innerHTML = '<div class="no-assets">暂无 Action 构建记录</div>';
+        }
+        
+        const savedType = localStorage.getItem('amethyst_download_type');
+        if (savedType === 'action') {
+            setAmethystDownloadType('action');
+        } else {
+            setAmethystDownloadType('release');
+        }
+        
+        amethystDataLoaded = true;
+    } catch (error) {
+        console.error('加载 Amethyst 失败:', error);
+        const releaseContainer = document.getElementById('amethystReleaseContainer');
+        const versionBadge = document.getElementById('amethystVersionBadge');
+        if (releaseContainer) releaseContainer.innerHTML = '<div class="no-assets">加载失败，请稍后重试</div>';
+        if (versionBadge) versionBadge.textContent = '加载失败';
+    }
+}
+
+function setAmethystDownloadType(type) {
+    const releaseSection = document.getElementById('amethystReleaseSection');
+    const actionSection = document.getElementById('amethystActionSection');
+    const buttons = document.querySelectorAll('#amethystModule .selector-btn');
+    
+    buttons.forEach(btn => {
+        if (btn.getAttribute('data-type') === type) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+    
+    if (releaseSection && actionSection) {
+        if (type === 'release') {
+            releaseSection.style.display = 'block';
+            actionSection.style.display = 'none';
+        } else {
+            releaseSection.style.display = 'none';
+            actionSection.style.display = 'block';
+        }
+    }
+    
+    localStorage.setItem('amethyst_download_type', type);
+}
+
 // ==================== MobileGlues 模块 ====================
 let mgDataLoaded = false;
 
@@ -1215,12 +1365,11 @@ async function loadMobileGluesData() {
     }
 }
 
-// ==================== 源码提交信息加载（优化版）====================
+// ==================== 源码提交信息加载 ====================
 async function loadCommitInfo() {
     const commitInfoDiv = document.getElementById('commitInfo');
     if (!commitInfoDiv) return;
     
-    // 先显示缓存数据（如果有）
     const cached = localStorage.getItem('cached_commit_info');
     let hasCached = false;
     if (cached) {
@@ -1243,13 +1392,10 @@ async function loadCommitInfo() {
         const data = await response.json();
         
         if (data && data.date) {
-            // 缓存数据
             localStorage.setItem('cached_commit_info', JSON.stringify(data));
             localStorage.setItem('last_commit_check', Date.now());
-            
             renderCommitInfo(data, commitInfoDiv);
             
-            // 检查数据是否过期（超过2小时）
             const commitTime = new Date(data.date).getTime();
             const twoHoursAgo = Date.now() - 2 * 60 * 60 * 1000;
             if (commitTime < twoHoursAgo) {
@@ -1288,11 +1434,13 @@ function renderCommitInfo(data, container) {
 function switchModule(moduleName) {
     const fclModule = document.getElementById('fclModule');
     const zalithModule = document.getElementById('zalithModule');
+    const amethystModule = document.getElementById('amethystModule');
     const mgModule = document.getElementById('mgModule');
     const projectSelect = document.getElementById('projectSelect');
     
     if (fclModule) fclModule.style.display = 'none';
     if (zalithModule) zalithModule.style.display = 'none';
+    if (amethystModule) amethystModule.style.display = 'none';
     if (mgModule) mgModule.style.display = 'none';
     
     if (moduleName === 'fcl' && fclModule) {
@@ -1303,6 +1451,10 @@ function switchModule(moduleName) {
         zalithModule.style.display = 'block';
         if (projectSelect) projectSelect.value = 'zalith';
         if (!zalithDataLoaded) loadZalithData();
+    } else if (moduleName === 'amethyst' && amethystModule) {
+        amethystModule.style.display = 'block';
+        if (projectSelect) projectSelect.value = 'amethyst';
+        if (!amethystDataLoaded) loadAmethystData();
     } else if (moduleName === 'mg' && mgModule) {
         mgModule.style.display = 'block';
         if (projectSelect) projectSelect.value = 'mg';
@@ -1335,7 +1487,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // 点击遮罩关闭菜单
     document.addEventListener('click', function(e) {
         const menu = document.getElementById('sideMenu');
         const toggleBtn = document.getElementById('menuToggle');
@@ -1344,7 +1495,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // 绑定切换按钮事件
+    // 绑定各模块的切换按钮事件
     const fclButtons = document.querySelectorAll('#fclModule .selector-btn');
     fclButtons.forEach(btn => {
         btn.addEventListener('click', function() {
@@ -1359,10 +1510,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    const amethystButtons = document.querySelectorAll('#amethystModule .selector-btn');
+    amethystButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            setAmethystDownloadType(this.getAttribute('data-type'));
+        });
+    });
+    
     // 加载所有数据
     loadCommitInfo();
     loadFclData();
     loadZalithData();
+    loadAmethystData();
     loadMobileGluesData();
 });
 
@@ -1371,6 +1530,7 @@ window.toggleMenu = toggleMenu;
 window.switchModule = switchModule;
 window.setFclDownloadType = setFclDownloadType;
 window.setZalithDownloadType = setZalithDownloadType;
+window.setAmethystDownloadType = setAmethystDownloadType;
     </script>
 </body>
 </html>
