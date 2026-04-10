@@ -364,10 +364,65 @@ body {
     padding: 16px 20px;
     border-top: 1px solid #f5f5f7;
     font-size: 14px;
-    color: #555;
-    line-height: 1.8;
+    line-height: 1.6;
     word-break: break-word;
-    white-space: pre-wrap;
+}
+
+/* GitHub 风格 Markdown 样式 */
+.changelog-content h1,
+.changelog-content h2,
+.changelog-content h3 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+.changelog-content h1 { font-size: 1.5em; }
+.changelog-content h2 { font-size: 1.3em; }
+.changelog-content h3 { font-size: 1.1em; }
+.changelog-content ul,
+.changelog-content ol {
+    padding-left: 2em;
+    margin: 0.5em 0;
+}
+.changelog-content li {
+    margin: 0.2em 0;
+}
+.changelog-content code {
+    background: #f5f5f7;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+.changelog-content pre {
+    background: #f5f5f7;
+    padding: 1em;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+.changelog-content pre code {
+    background: transparent;
+    padding: 0;
+}
+.changelog-content a {
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+.changelog-content blockquote {
+    border-left: 4px solid #ddd;
+    margin: 0.5em 0;
+    padding-left: 1em;
+    color: #666;
+}
+.changelog-content table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.changelog-content th,
+.changelog-content td {
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    text-align: left;
 }
 
 .menu-toggle {
@@ -629,6 +684,8 @@ body {
     color: #333;
 }
     </style>
+    <!-- Markdown 解析库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
@@ -923,6 +980,24 @@ function getTimeAgo(dateString) {
     }
 }
 
+// 通用渲染更新日志
+async function renderChangelog(element, markdownText) {
+    if (!element) return;
+    const text = markdownText || '暂无更新日志';
+    if (typeof marked !== 'undefined') {
+        try {
+            // 使用 marked 解析 Markdown
+            element.innerHTML = await marked.parse(text);
+        } catch(e) {
+            console.error('Markdown 解析失败:', e);
+            element.innerHTML = escapeHtml(text).replace(/\n/g, '<br>');
+        }
+    } else {
+        // 降级处理
+        element.innerHTML = escapeHtml(text).replace(/\n/g, '<br>');
+    }
+}
+
 // ==================== 渲染函数 ====================
 function renderReleaseCards(assets, mirrorPrefix, groupByArch = true) {
     if (!assets || assets.length === 0) {
@@ -1029,7 +1104,7 @@ async function loadFclData() {
             
             if (versionBadge) versionBadge.textContent = data.release.tag_name || '未知版本';
             if (updateTime) updateTime.textContent = data.release.published_at ? formatDate(data.release.published_at) : '';
-            if (changelogContent) changelogContent.innerHTML = (data.release.body || '暂无更新日志').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            await renderChangelog(changelogContent, data.release.body);
             
             const assets = data.release.assets || [];
             const mirrorPrefix = document.getElementById('mirrorSelect').value;
@@ -1134,7 +1209,7 @@ async function loadZalithData() {
             
             if (versionBadge) versionBadge.textContent = data.release.tag_name || '未知版本';
             if (updateTime) updateTime.textContent = data.release.published_at ? formatDate(data.release.published_at) : '';
-            if (changelogContent) changelogContent.innerHTML = (data.release.body || '暂无更新日志').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            await renderChangelog(changelogContent, data.release.body);
             
             const assets = data.release.assets || [];
             const mirrorPrefix = document.getElementById('mirrorSelect').value;
@@ -1239,7 +1314,7 @@ async function loadAmethystData() {
             
             if (versionBadge) versionBadge.textContent = data.release.tag_name || '未知版本';
             if (updateTime) updateTime.textContent = data.release.published_at ? formatDate(data.release.published_at) : '';
-            if (changelogContent) changelogContent.innerHTML = (data.release.body || '暂无更新日志').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            await renderChangelog(changelogContent, data.release.body);
             
             const assets = data.release.assets || [];
             const mirrorPrefix = document.getElementById('mirrorSelect').value;
@@ -1347,7 +1422,7 @@ async function loadMobileGluesData() {
         if (data && data.release) {
             if (versionBadge) versionBadge.textContent = data.release.tag_name || '未知版本';
             if (updateTime) updateTime.textContent = data.release.published_at ? formatDate(data.release.published_at) : '';
-            if (changelogContent) changelogContent.innerHTML = (data.release.body || '暂无更新日志').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            await renderChangelog(changelogContent, data.release.body);
             
             const assets = data.release.assets || [];
             const mirrorPrefix = document.getElementById('mirrorSelect').value;
