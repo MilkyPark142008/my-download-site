@@ -295,6 +295,7 @@ body {
     font-weight: 600;
     color: #1a1a1a;
     margin: 0;
+    word-break: break-all;
 }
 
 .download-item .item-details {
@@ -919,28 +920,6 @@ function escapeHtml(text) {
     });
 }
 
-function getArchFromFilename(filename) {
-    if (!filename) return 'other';
-    const lower = filename.toLowerCase();
-    if (lower.includes('arm64-v8a') || lower.includes('arm64')) return 'arm64';
-    if (lower.includes('armeabi-v7a') || lower.includes('armv7')) return 'armeabi';
-    if (lower.includes('x86_64') || lower.includes('x64')) return 'x86_64';
-    if (lower.includes('x86') && !lower.includes('x86_64')) return 'x86';
-    if (lower.includes('all') || lower.includes('universal')) return 'all';
-    return 'other';
-}
-
-function getArchName(arch) {
-    switch(arch) {
-        case 'arm64': return 'ARM64';
-        case 'armeabi': return 'ARMv7';
-        case 'x86': return 'x86';
-        case 'x86_64': return 'x86_64';
-        case 'all': return '通用版';
-        default: return '其他';
-    }
-}
-
 function formatSize(bytes) {
     if (!bytes || bytes === 0) return '0 B';
     const k = 1024;
@@ -986,73 +965,38 @@ async function renderChangelog(element, markdownText) {
     const text = markdownText || '暂无更新日志';
     if (typeof marked !== 'undefined') {
         try {
-            // 使用 marked 解析 Markdown
             element.innerHTML = await marked.parse(text);
         } catch(e) {
             console.error('Markdown 解析失败:', e);
             element.innerHTML = escapeHtml(text).replace(/\n/g, '<br>');
         }
     } else {
-        // 降级处理
         element.innerHTML = escapeHtml(text).replace(/\n/g, '<br>');
     }
 }
 
-// ==================== 渲染函数 ====================
-function renderReleaseCards(assets, mirrorPrefix, groupByArch = true) {
+// ==================== 渲染函数（每个文件一个卡片，标题为文件名）====================
+function renderDownloadCards(assets, mirrorPrefix) {
     if (!assets || assets.length === 0) {
         return '<div class="no-assets">暂无可用下载文件</div>';
     }
     
-    if (groupByArch) {
-        const archMap = new Map();
-        assets.forEach(asset => {
-            if (asset && asset.name) {
-                const arch = getArchFromFilename(asset.name);
-                if (!archMap.has(arch)) archMap.set(arch, asset);
-            }
-        });
-        const archOrder = ['arm64', 'armeabi', 'x86_64', 'x86', 'all', 'other'];
-        const sortedArchs = Array.from(archMap.keys()).sort((a, b) => archOrder.indexOf(a) - archOrder.indexOf(b));
-        
-        let cardsHtml = '';
-        sortedArchs.forEach(arch => {
-            const asset = archMap.get(arch);
-            if (!asset) return;
-            const archName = getArchName(arch);
-            const sizeFormatted = formatSize(asset.size);
-            const originalUrl = asset.browser_download_url;
-            if (!originalUrl) return;
-            cardsHtml += `
-                <div class="download-item">
-                    <div class="item-title">${escapeHtml(archName)}</div>
-                    <div class="item-details">
-                        <span>${escapeHtml(asset.name)}</span>
-                        <span>${sizeFormatted}</span>
-                    </div>
-                    <a href="${mirrorPrefix}${originalUrl}" class="download-btn" target="_blank" rel="noopener noreferrer" data-original-url="${originalUrl}">下载</a>
+    let cardsHtml = '';
+    assets.forEach(asset => {
+        if (!asset || !asset.browser_download_url) return;
+        const sizeFormatted = formatSize(asset.size);
+        const originalUrl = asset.browser_download_url;
+        cardsHtml += `
+            <div class="download-item">
+                <div class="item-title">${escapeHtml(asset.name)}</div>
+                <div class="item-details">
+                    <span>${sizeFormatted}</span>
                 </div>
-            `;
-        });
-        return cardsHtml || '<div class="no-assets">暂无可用下载文件</div>';
-    } else {
-        let cardsHtml = '';
-        assets.forEach(asset => {
-            if (!asset || !asset.browser_download_url) return;
-            const sizeFormatted = formatSize(asset.size);
-            const originalUrl = asset.browser_download_url;
-            cardsHtml += `
-                <div class="download-item">
-                    <div class="item-title">${escapeHtml(asset.name)}</div>
-                    <div class="item-details">
-                        <span>${sizeFormatted}</span>
-                    </div>
-                    <a href="${mirrorPrefix}${originalUrl}" class="download-btn" target="_blank" rel="noopener noreferrer" data-original-url="${originalUrl}">下载</a>
-                </div>
-            `;
-        });
-        return cardsHtml || '<div class="no-assets">暂无可用下载文件</div>';
-    }
+                <a href="${mirrorPrefix}${originalUrl}" class="download-btn" target="_blank" rel="noopener noreferrer" data-original-url="${originalUrl}">下载</a>
+            </div>
+        `;
+    });
+    return cardsHtml || '<div class="no-assets">暂无可用下载文件</div>';
 }
 
 // ==================== 镜像源更新 ====================
@@ -1109,7 +1053,7 @@ async function loadFclData() {
             const assets = data.release.assets || [];
             const mirrorPrefix = document.getElementById('mirrorSelect').value;
             const container = document.getElementById('fclReleaseContainer');
-            if (container) container.innerHTML = renderReleaseCards(assets, mirrorPrefix, true);
+            if (container) container.innerHTML = renderDownloadCards(assets, mirrorPrefix);
         }
         
         if (data && data.action && data.action.run && data.action.run.id) {
@@ -1214,7 +1158,7 @@ async function loadZalithData() {
             const assets = data.release.assets || [];
             const mirrorPrefix = document.getElementById('mirrorSelect').value;
             const container = document.getElementById('zalithReleaseContainer');
-            if (container) container.innerHTML = renderReleaseCards(assets, mirrorPrefix, true);
+            if (container) container.innerHTML = renderDownloadCards(assets, mirrorPrefix);
         }
         
         if (data && data.action && data.action.run && data.action.run.id) {
@@ -1319,7 +1263,7 @@ async function loadAmethystData() {
             const assets = data.release.assets || [];
             const mirrorPrefix = document.getElementById('mirrorSelect').value;
             const container = document.getElementById('amethystReleaseContainer');
-            if (container) container.innerHTML = renderReleaseCards(assets, mirrorPrefix, true);
+            if (container) container.innerHTML = renderDownloadCards(assets, mirrorPrefix);
         }
         
         if (data && data.action && data.action.run && data.action.run.id) {
@@ -1426,7 +1370,7 @@ async function loadMobileGluesData() {
             
             const assets = data.release.assets || [];
             const mirrorPrefix = document.getElementById('mirrorSelect').value;
-            if (container) container.innerHTML = renderReleaseCards(assets, mirrorPrefix, false);
+            if (container) container.innerHTML = renderDownloadCards(assets, mirrorPrefix);
         } else {
             if (container) container.innerHTML = '<div class="no-assets">暂无下载文件</div>';
             if (versionBadge) versionBadge.textContent = '暂无';
