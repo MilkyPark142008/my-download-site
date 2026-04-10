@@ -24,12 +24,27 @@ jobs:
       - name: 安装 jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
-      # FCL
+      # ==================== FCL ====================
       - name: 获取 FCL Release
         run: |
           curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases/latest" \
             > fcl-release.json
+
+      - name: 获取 FCL version_map.json
+        run: |
+          curl -s "https://raw.githubusercontent.com/FCL-Team/FoldCraftLauncher/main/version_map.json" > fcl-version-map.json
+
+      - name: 提取中文更新日志
+        id: fcl_custom
+        run: |
+          TEXT=$(jq -r '.[] | select(.lang=="zh_CN") | .text' fcl-version-map.json | head -1)
+          if [ -n "$TEXT" ] && [ "$TEXT" != "null" ]; then
+            echo "$TEXT" > fcl-custom.txt
+            echo "has_custom=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_custom=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: 获取 FCL Action
         run: |
@@ -45,7 +60,17 @@ jobs:
             echo "{\"run\": null, \"artifacts\": {\"artifacts\": []}}" > fcl-action.json
           fi
 
-      # Zalith
+      - name: 合并 FCL JSON
+        run: |
+          if [ "${{ steps.fcl_custom.outputs.has_custom }}" = "true" ]; then
+            CUSTOM=$(cat fcl-custom.txt)
+            jq --arg custom "$CUSTOM" '.body = (.body // "") + "\n\n---\n\n" + $custom' fcl-release.json > fcl-release-temp.json
+            mv fcl-release-temp.json fcl-release.json
+          fi
+          jq -s '{release: .[0], action: {run: (.[1].run), artifacts: (.[1].artifacts.artifacts // [])}}' \
+            fcl-release.json fcl-action.json > fcl.json
+
+      # ==================== Zalith ====================
       - name: 获取 Zalith Release
         run: |
           curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
@@ -66,7 +91,12 @@ jobs:
             echo "{\"run\": null, \"artifacts\": {\"artifacts\": []}}" > zalith-action.json
           fi
 
-      # Amethyst
+      - name: 合并 Zalith JSON
+        run: |
+          jq -s '{release: .[0], action: {run: (.[1].run), artifacts: (.[1].artifacts.artifacts // [])}}' \
+            zalith-release.json zalith-action.json > zalith.json
+
+      # ==================== Amethyst ====================
       - name: 获取 Amethyst Release
         run: |
           curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
@@ -87,42 +117,31 @@ jobs:
             echo "{\"run\": null, \"artifacts\": {\"artifacts\": []}}" > amethyst-action.json
           fi
 
-      # MobileGlues (仅 Release)
+      - name: 合并 Amethyst JSON
+        run: |
+          jq -s '{release: .[0], action: {run: (.[1].run), artifacts: (.[1].artifacts.artifacts // [])}}' \
+            amethyst-release.json amethyst-action.json > amethyst.json
+
+      # ==================== MobileGlues ====================
       - name: 获取 MobileGlues Release
         run: |
           curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/latest" \
             > mobileglues-release.json
 
-      # 合并 JSON
-      - name: 合并 FCL JSON
-        run: |
-          jq -s '{release: .[0], action: {run: (.[1].run), artifacts: (.[1].artifacts.artifacts // [])}}' \
-            fcl-release.json fcl-action.json > fcl.json
-
-      - name: 合并 Zalith JSON
-        run: |
-          jq -s '{release: .[0], action: {run: (.[1].run), artifacts: (.[1].artifacts.artifacts // [])}}' \
-            zalith-release.json zalith-action.json > zalith.json
-
-      - name: 合并 Amethyst JSON
-        run: |
-          jq -s '{release: .[0], action: {run: (.[1].run), artifacts: (.[1].artifacts.artifacts // [])}}' \
-            amethyst-release.json amethyst-action.json > amethyst.json
-
       - name: 处理 MobileGlues JSON
         run: |
           jq '{release: .}' mobileglues-release.json > mobileglues.json
 
-      # 清理临时文件
+      # ==================== 清理临时文件 ====================
       - name: 清理临时文件
         run: |
-          rm -f fcl-release.json fcl-action.json
+          rm -f fcl-release.json fcl-action.json fcl-version-map.json fcl-custom.txt
           rm -f zalith-release.json zalith-action.json
           rm -f amethyst-release.json amethyst-action.json
           rm -f mobileglues-release.json
 
-      # 生成真实源码提交信息（跳过 workflow 自动提交）
+      # ==================== 生成真实源码提交信息 ====================
       - name: 生成真实的源码提交信息
         run: |
           REAL_COMMIT=$(git log --grep="chore: 自动更新下载数据" --invert-grep --format='{"sha":"%H","date":"%cI","message":"%s"}' -1)
@@ -131,7 +150,7 @@ jobs:
           fi
           echo "$REAL_COMMIT" > commit-info.json
 
-      # 提交并推送
+      # ==================== 提交并推送 ====================
       - name: 提交并推送更改
         run: |
           git config user.name "github-actions[bot]"
