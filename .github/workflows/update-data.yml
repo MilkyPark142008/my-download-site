@@ -33,7 +33,7 @@ jobs:
             "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases/latest" \
             > fcl-release.json
 
-      - name: 获取 FCL version_map.json
+      - name: 获取 FCL version_map.json 并保留到仓库
         run: |
           curl -s "https://raw.githubusercontent.com/FCL-Team/FoldCraftLauncher/main/version_map.json" > fcl-version-map.json
 
@@ -51,10 +51,9 @@ jobs:
             echo "{\"run\": null, \"artifacts\": {\"artifacts\": []}}" > fcl-action.json
           fi
 
-      - name: 合并 FCL JSON（添加 version_map 字段）
+      - name: 合并 FCL JSON
         run: |
-          VERSION_MAP=$(cat fcl-version-map.json)
-          jq --argjson vm "$VERSION_MAP" '{release: .[0], action: {run: (.[1].run), artifacts: (.[1].artifacts.artifacts // [])}, version_map: $vm}' \
+          jq -s '{release: .[0], action: {run: (.[1].run), artifacts: (.[1].artifacts.artifacts // [])}}' \
             fcl-release.json fcl-action.json > fcl.json
 
       # ==================== Zalith ====================
@@ -127,7 +126,7 @@ jobs:
           rm -f zalith-release.json zalith-action.json
           rm -f amethyst-release.json amethyst-action.json
           rm -f mobileglues-release.json
-          # 保留 fcl-version-map.json
+          # 注意：fcl-version-map.json 不删除，会保留在仓库中
 
       # ==================== 生成真实源码提交信息 ====================
       - name: 生成真实的源码提交信息
