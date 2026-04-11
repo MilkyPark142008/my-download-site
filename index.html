@@ -891,10 +891,14 @@ body {
                         const versionMapRes = await fetch('/fcl-version-map.json?t=' + Date.now());
                         if (versionMapRes.ok) {
                             const versionMap = await versionMapRes.json();
-                            if (Array.isArray(versionMap)) {
-                                const zhItem = versionMap.find(item => item.lang === 'zh_CN');
-                                if (zhItem && zhItem.text) {
-                                    changelogText = zhItem.text;
+                            // version_map.json 的结构：数组，每个元素有 description 字段
+                            if (Array.isArray(versionMap) && versionMap.length > 0) {
+                                const latest = versionMap[0];
+                                if (latest && latest.description && Array.isArray(latest.description)) {
+                                    const zhItem = latest.description.find(item => item.lang === 'zh_CN');
+                                    if (zhItem && zhItem.text) {
+                                        changelogText = zhItem.text;
+                                    }
                                 }
                             }
                         }
