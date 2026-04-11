@@ -585,6 +585,12 @@ body {
 }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        // 配置 marked 使单个换行符转换为 <br>
+        if (typeof marked !== 'undefined') {
+            marked.setOptions({ breaks: true });
+        }
+    </script>
 </head>
 <body>
     <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
@@ -874,6 +880,8 @@ body {
 
         // ==================== FCL 模块 ====================
         let fclReleaseData = null, fclActionData = null, fclDataLoaded = false;
+        let fclReleaseChangelogText = ''; // 保存 Release 日志文本，用于切换时恢复
+
         async function loadFclData() {
             try {
                 const res = await fetch('/fcl.json?t=' + Date.now());
@@ -891,7 +899,6 @@ body {
                         const versionMapRes = await fetch('/fcl-version-map.json?t=' + Date.now());
                         if (versionMapRes.ok) {
                             const versionMap = await versionMapRes.json();
-                            // version_map.json 的结构：数组，每个元素有 description 字段
                             if (Array.isArray(versionMap) && versionMap.length > 0) {
                                 const latest = versionMap[0];
                                 if (latest && latest.description && Array.isArray(latest.description)) {
@@ -905,6 +912,8 @@ body {
                     } catch(e) {
                         console.warn('获取 fcl-version-map.json 失败，使用 release.body', e);
                     }
+                    // 保存 Release 日志文本
+                    fclReleaseChangelogText = changelogText;
                     await renderChangelog(document.getElementById('fclChangelogContent'), changelogText);
                     
                     const assets = fclReleaseData.assets || [];
@@ -935,6 +944,7 @@ body {
                 document.getElementById('fclVersionBadge').textContent = '加载失败';
             }
         }
+
         async function setFclDownloadType(type) {
             const releaseSec = document.getElementById('fclReleaseSection');
             const actionSec = document.getElementById('fclActionSection');
@@ -947,6 +957,12 @@ body {
                 releaseSec.style.display = 'block';
                 actionSec.style.display = 'none';
                 document.getElementById('fclChangelogSummary').textContent = '查看 Release 更新日志';
+                // 重新渲染保存的 Release 日志
+                if (fclReleaseChangelogText) {
+                    await renderChangelog(document.getElementById('fclChangelogContent'), fclReleaseChangelogText);
+                } else {
+                    document.getElementById('fclChangelogContent').innerHTML = '<p>暂无更新日志</p>';
+                }
             } else {
                 releaseSec.style.display = 'none';
                 actionSec.style.display = 'block';
@@ -1014,6 +1030,9 @@ body {
                 releaseSec.style.display = 'block';
                 actionSec.style.display = 'none';
                 document.getElementById('zalithChangelogSummary').textContent = '查看 Release 更新日志';
+                if (zalithReleaseData) {
+                    await renderChangelog(document.getElementById('zalithChangelogContent'), zalithReleaseData.body);
+                }
             } else {
                 releaseSec.style.display = 'none';
                 actionSec.style.display = 'block';
@@ -1081,6 +1100,9 @@ body {
                 releaseSec.style.display = 'block';
                 actionSec.style.display = 'none';
                 document.getElementById('amethystChangelogSummary').textContent = '查看 Release 更新日志';
+                if (amethystReleaseData) {
+                    await renderChangelog(document.getElementById('amethystChangelogContent'), amethystReleaseData.body);
+                }
             } else {
                 releaseSec.style.display = 'none';
                 actionSec.style.display = 'block';
