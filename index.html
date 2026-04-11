@@ -363,15 +363,6 @@ body {
     padding-left: 1em;
     color: #666;
 }
-.changelog-content table {
-    border-collapse: collapse;
-    width: 100%;
-}
-.changelog-content th, .changelog-content td {
-    border: 1px solid #ddd;
-    padding: 6px 12px;
-    text-align: left;
-}
 .menu-toggle {
     position: fixed;
     top: 16px;
@@ -893,10 +884,28 @@ body {
                 if (fclReleaseData) {
                     document.getElementById('fclVersionBadge').textContent = fclReleaseData.tag_name || '未知版本';
                     document.getElementById('fclUpdateTime').textContent = fclReleaseData.published_at ? formatDate(fclReleaseData.published_at) : '';
+                    
+                    // 优先从本地 fcl-version-map.json 获取中文更新日志
+                    let changelogText = fclReleaseData.body || '';
+                    try {
+                        const versionMapRes = await fetch('/fcl-version-map.json?t=' + Date.now());
+                        if (versionMapRes.ok) {
+                            const versionMap = await versionMapRes.json();
+                            if (Array.isArray(versionMap)) {
+                                const zhItem = versionMap.find(item => item.lang === 'zh_CN');
+                                if (zhItem && zhItem.text) {
+                                    changelogText = zhItem.text;
+                                }
+                            }
+                        }
+                    } catch(e) {
+                        console.warn('获取 fcl-version-map.json 失败，使用 release.body', e);
+                    }
+                    await renderChangelog(document.getElementById('fclChangelogContent'), changelogText);
+                    
                     const assets = fclReleaseData.assets || [];
                     const mirrorPrefix = document.getElementById('mirrorSelect').value;
                     document.getElementById('fclReleaseContainer').innerHTML = renderDownloadCards(assets, mirrorPrefix);
-                    await renderChangelog(document.getElementById('fclChangelogContent'), fclReleaseData.body);
                 }
                 if (fclActionData && fclActionData.run && fclActionData.run.id) {
                     const run = fclActionData.run;
@@ -934,8 +943,6 @@ body {
                 releaseSec.style.display = 'block';
                 actionSec.style.display = 'none';
                 document.getElementById('fclChangelogSummary').textContent = '查看 Release 更新日志';
-                if (fclReleaseData) await renderChangelog(document.getElementById('fclChangelogContent'), fclReleaseData.body);
-                else document.getElementById('fclChangelogContent').innerHTML = '暂无 Release 信息';
             } else {
                 releaseSec.style.display = 'none';
                 actionSec.style.display = 'block';
@@ -962,10 +969,10 @@ body {
                 if (zalithReleaseData) {
                     document.getElementById('zalithVersionBadge').textContent = zalithReleaseData.tag_name || '未知版本';
                     document.getElementById('zalithUpdateTime').textContent = zalithReleaseData.published_at ? formatDate(zalithReleaseData.published_at) : '';
+                    await renderChangelog(document.getElementById('zalithChangelogContent'), zalithReleaseData.body);
                     const assets = zalithReleaseData.assets || [];
                     const mirrorPrefix = document.getElementById('mirrorSelect').value;
                     document.getElementById('zalithReleaseContainer').innerHTML = renderDownloadCards(assets, mirrorPrefix);
-                    await renderChangelog(document.getElementById('zalithChangelogContent'), zalithReleaseData.body);
                 }
                 if (zalithActionData && zalithActionData.run && zalithActionData.run.id) {
                     const run = zalithActionData.run;
@@ -1003,8 +1010,6 @@ body {
                 releaseSec.style.display = 'block';
                 actionSec.style.display = 'none';
                 document.getElementById('zalithChangelogSummary').textContent = '查看 Release 更新日志';
-                if (zalithReleaseData) await renderChangelog(document.getElementById('zalithChangelogContent'), zalithReleaseData.body);
-                else document.getElementById('zalithChangelogContent').innerHTML = '暂无 Release 信息';
             } else {
                 releaseSec.style.display = 'none';
                 actionSec.style.display = 'block';
@@ -1031,10 +1036,10 @@ body {
                 if (amethystReleaseData) {
                     document.getElementById('amethystVersionBadge').textContent = amethystReleaseData.tag_name || '未知版本';
                     document.getElementById('amethystUpdateTime').textContent = amethystReleaseData.published_at ? formatDate(amethystReleaseData.published_at) : '';
+                    await renderChangelog(document.getElementById('amethystChangelogContent'), amethystReleaseData.body);
                     const assets = amethystReleaseData.assets || [];
                     const mirrorPrefix = document.getElementById('mirrorSelect').value;
                     document.getElementById('amethystReleaseContainer').innerHTML = renderDownloadCards(assets, mirrorPrefix);
-                    await renderChangelog(document.getElementById('amethystChangelogContent'), amethystReleaseData.body);
                 }
                 if (amethystActionData && amethystActionData.run && amethystActionData.run.id) {
                     const run = amethystActionData.run;
@@ -1072,8 +1077,6 @@ body {
                 releaseSec.style.display = 'block';
                 actionSec.style.display = 'none';
                 document.getElementById('amethystChangelogSummary').textContent = '查看 Release 更新日志';
-                if (amethystReleaseData) await renderChangelog(document.getElementById('amethystChangelogContent'), amethystReleaseData.body);
-                else document.getElementById('amethystChangelogContent').innerHTML = '暂无 Release 信息';
             } else {
                 releaseSec.style.display = 'none';
                 actionSec.style.display = 'block';
@@ -1211,7 +1214,6 @@ body {
                 const toggle = document.getElementById('menuToggle');
                 if (menu && toggle && !menu.contains(e.target) && !toggle.contains(e.target) && menu.classList.contains('active')) toggleMenu();
             });
-            // 绑定各模块切换按钮事件
             document.querySelectorAll('#fclModule .selector-btn').forEach(btn => btn.addEventListener('click', () => setFclDownloadType(btn.getAttribute('data-type'))));
             document.querySelectorAll('#zalithModule .selector-btn').forEach(btn => btn.addEventListener('click', () => setZalithDownloadType(btn.getAttribute('data-type'))));
             document.querySelectorAll('#amethystModule .selector-btn').forEach(btn => btn.addEventListener('click', () => setAmethystDownloadType(btn.getAttribute('data-type'))));
