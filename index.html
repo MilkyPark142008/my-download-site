@@ -586,7 +586,6 @@ body {
     </style>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-        // 配置 marked 使单个换行符转换为 <br>
         if (typeof marked !== 'undefined') {
             marked.setOptions({ breaks: true });
         }
@@ -880,39 +879,53 @@ body {
 
         // ==================== FCL 模块 ====================
         let fclReleaseData = null, fclActionData = null, fclDataLoaded = false;
-        let fclReleaseChangelogText = ''; // 保存 Release 日志文本，用于切换时恢复
+        let fclReleaseChangelogText = '';
+        let fclChangelogHistory = null; // 存储历史日志
+
+        async function loadFclChangelogHistory() {
+            try {
+                const res = await fetch('/FCL/fcl-changelog-history.json?t=' + Date.now());
+                if (res.ok) {
+                    fclChangelogHistory = await res.json();
+                }
+            } catch(e) {
+                console.warn('加载 FCL 历史日志失败', e);
+            }
+        }
+
+        function getChangelogFromHistory(versionName) {
+            if (!fclChangelogHistory || !Array.isArray(fclChangelogHistory)) return null;
+            const found = fclChangelogHistory.find(item => item.versionName === versionName);
+            return found ? found.text : null;
+        }
 
         async function loadFclData() {
+            await loadFclChangelogHistory();
             try {
-                const res = await fetch('/fcl.json?t=' + Date.now());
+                const res = await fetch('/FCL/fcl-all-releases.json?t=' + Date.now());
                 if (!res.ok) throw new Error('HTTP ' + res.status);
                 const data = await res.json();
-                fclReleaseData = data.release || null;
-                fclActionData = data.action || null;
+                // 取第一个（最新）作为当前显示的 release
+                if (data && data.length > 0) {
+                    fclReleaseData = data[0];
+                }
+                // Action 数据单独获取
+                const actionRes = await fetch('/FCL/fcl-action.json?t=' + Date.now());
+                if (actionRes.ok) {
+                    fclActionData = await actionRes.json();
+                }
                 if (fclReleaseData) {
                     document.getElementById('fclVersionBadge').textContent = fclReleaseData.tag_name || '未知版本';
                     document.getElementById('fclUpdateTime').textContent = fclReleaseData.published_at ? formatDate(fclReleaseData.published_at) : '';
                     
-                    // 优先从本地 fcl-version-map.json 获取中文更新日志
-                    let changelogText = fclReleaseData.body || '';
-                    try {
-                        const versionMapRes = await fetch('/fcl-version-map.json?t=' + Date.now());
-                        if (versionMapRes.ok) {
-                            const versionMap = await versionMapRes.json();
-                            if (Array.isArray(versionMap) && versionMap.length > 0) {
-                                const latest = versionMap[0];
-                                if (latest && latest.description && Array.isArray(latest.description)) {
-                                    const zhItem = latest.description.find(item => item.lang === 'zh_CN');
-                                    if (zhItem && zhItem.text) {
-                                        changelogText = zhItem.text;
-                                    }
-                                }
-                            }
-                        }
-                    } catch(e) {
-                        console.warn('获取 fcl-version-map.json 失败，使用 release.body', e);
+                    // 从历史日志中获取当前版本的更新日志
+                    let changelogText = '';
+                    const historyText = getChangelogFromHistory(fclReleaseData.tag_name);
+                    if (historyText) {
+                        changelogText = historyText;
+                    } else {
+                        changelogText = fclReleaseData.body || '暂无更新日志';
                     }
-                    // 保存 Release 日志文本
                     fclReleaseChangelogText = changelogText;
                     await renderChangelog(document.getElementById('fclChangelogContent'), changelogText);
                     
@@ -957,11 +970,8 @@ body {
                 releaseSec.style.display = 'block';
                 actionSec.style.display = 'none';
                 document.getElementById('fclChangelogSummary').textContent = '查看 Release 更新日志';
-                // 重新渲染保存的 Release 日志
                 if (fclReleaseChangelogText) {
                     await renderChangelog(document.getElementById('fclChangelogContent'), fclReleaseChangelogText);
-                } else {
-                    document.getElementById('fclChangelogContent').innerHTML = '<p>暂无更新日志</p>';
                 }
             } else {
                 releaseSec.style.display = 'none';
