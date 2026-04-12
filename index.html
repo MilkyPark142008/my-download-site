@@ -696,7 +696,7 @@ body {
                 </div>
             </div>
 
-            <!-- 版本选择下拉框 - 放在下载来源上面 -->
+            <!-- 版本选择下拉框 -->
             <div class="version-selector" id="fclVersionSelector" style="display: none;">
                 <label>选择版本：</label>
                 <select id="fclVersionSelect"></select>
@@ -920,17 +920,20 @@ body {
         }
 
         // ==================== FCL 模块 ====================
-        let fclAllReleases = [];      // 所有版本数据
-        let fclChangelogHistory = []; // 历史日志
+        let fclAllReleases = [];
         let fclActionData = null;
+        let fclChangelogHistory = [];
         let fclDataLoaded = false;
-        let currentFclVersion = null; // 当前选中的版本号
+        let currentFclVersion = null;
 
         async function loadFclChangelogHistory() {
             try {
                 const res = await fetch('/FCL/fcl-changelog-history.json?t=' + Date.now());
                 if (res.ok) {
                     fclChangelogHistory = await res.json();
+                    console.log('历史日志加载成功，版本数:', fclChangelogHistory.length);
+                } else {
+                    console.warn('历史日志加载失败:', res.status);
                 }
             } catch(e) {
                 console.warn('加载 FCL 历史日志失败', e);
@@ -949,14 +952,17 @@ body {
                 const res = await fetch('/FCL/fcl-all-releases.json?t=' + Date.now());
                 if (!res.ok) throw new Error('HTTP ' + res.status);
                 fclAllReleases = await res.json();
+                console.log('Releases 加载成功，版本数:', fclAllReleases.length);
                 
                 const actionRes = await fetch('/FCL/fcl-action.json?t=' + Date.now());
                 if (actionRes.ok) {
                     fclActionData = await actionRes.json();
+                    console.log('Action 数据加载成功');
+                } else {
+                    console.error('Action 数据加载失败:', actionRes.status);
                 }
                 
                 if (fclAllReleases && fclAllReleases.length > 0) {
-                    // 填充版本选择下拉框
                     const versionSelect = document.getElementById('fclVersionSelect');
                     const versionSelectorDiv = document.getElementById('fclVersionSelector');
                     if (versionSelect && fclAllReleases.length > 1) {
@@ -971,7 +977,6 @@ body {
                         versionSelect.addEventListener('change', function() {
                             switchFclVersion(this.value);
                         });
-                        // 默认选中最新版本
                         versionSelect.value = fclAllReleases[0].tag_name;
                         currentFclVersion = fclAllReleases[0].tag_name;
                         displayFclVersion(currentFclVersion);
@@ -982,27 +987,41 @@ body {
                     }
                 }
                 
+                // 渲染 Action 部分
                 if (fclActionData && fclActionData.run && fclActionData.run.id) {
                     const run = fclActionData.run;
                     document.getElementById('fclActionVersionBadge').textContent = '运行 #' + run.id;
                     if (run.created_at) document.getElementById('fclActionUpdateTime').textContent = formatDate(run.created_at);
-                    const artifacts = fclActionData.artifacts || [];
+                    
+                    let artifacts = [];
+                    if (fclActionData.artifacts) {
+                        if (Array.isArray(fclActionData.artifacts)) {
+                            artifacts = fclActionData.artifacts;
+                        } else if (fclActionData.artifacts.artifacts) {
+                            artifacts = fclActionData.artifacts.artifacts;
+                        }
+                    }
+                    
                     let html = '<div class="run-info">运行 #' + run.id + ' | ' + formatDate(run.created_at) + '</div>';
-                    if (artifacts.length === 0) html += '<div class="no-assets">暂无构建产物</div>';
-                    else artifacts.forEach(a => {
-                        html += `<div class="download-item"><div class="item-title">${escapeHtml(a.name)}</div><div class="item-details"><span>📦 ${formatSize(a.size_in_bytes)}</span></div><a href="https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/${run.id}" class="download-btn" target="_blank">查看运行记录</a></div>`;
-                    });
+                    if (artifacts.length === 0) {
+                        html += '<div class="no-assets">暂无构建产物</div>';
+                    } else {
+                        artifacts.forEach(a => {
+                            html += `<div class="download-item"><div class="item-title">${escapeHtml(a.name)}</div><div class="item-details"><span>📦 ${formatSize(a.size_in_bytes)}</span></div><a href="https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/${run.id}" class="download-btn" target="_blank">查看运行记录</a></div>`;
+                        });
+                    }
                     document.getElementById('fclActionContainer').innerHTML = html;
                 } else {
                     document.getElementById('fclActionVersionBadge').textContent = '暂无';
                     document.getElementById('fclActionContainer').innerHTML = '<div class="no-assets">暂无 Action 构建记录</div>';
+                    console.warn('fclActionData 无效:', fclActionData);
                 }
                 
                 const saved = localStorage.getItem('fcl_download_type');
                 setFclDownloadType(saved === 'action' ? 'action' : 'release');
                 fclDataLoaded = true;
             } catch(e) {
-                console.error(e);
+                console.error('加载 FCL 失败:', e);
                 document.getElementById('fclReleaseContainer').innerHTML = '<div class="no-assets">加载失败</div>';
                 document.getElementById('fclVersionBadge').textContent = '加载失败';
             }
@@ -1015,7 +1034,6 @@ body {
             document.getElementById('fclVersionBadge').textContent = release.tag_name || '未知版本';
             document.getElementById('fclUpdateTime').textContent = release.published_at ? formatDate(release.published_at) : '';
             
-            // 从历史日志获取更新日志
             let changelogText = '';
             const historyText = getChangelogFromHistory(release.tag_name);
             if (historyText) {
@@ -1032,11 +1050,6 @@ body {
 
         function switchFclVersion(versionName) {
             displayFclVersion(versionName);
-            // 如果当前在 Release 模式，直接更新；如果在 Action 模式，切换后保持在 Action 模式
-            const activeBtn = document.querySelector('#fclModule .selector-btn.active');
-            if (activeBtn && activeBtn.getAttribute('data-type') === 'release') {
-                // 已经在 Release 模式，内容已更新
-            }
         }
 
         async function setFclDownloadType(type) {
@@ -1051,7 +1064,6 @@ body {
                 releaseSec.style.display = 'block';
                 actionSec.style.display = 'none';
                 document.getElementById('fclChangelogSummary').textContent = '查看 Release 更新日志';
-                // 重新显示当前选中的版本
                 if (currentFclVersion) {
                     displayFclVersion(currentFclVersion);
                 }
@@ -1062,8 +1074,10 @@ body {
                 if (fclActionData && fclActionData.run && fclActionData.run.head_commit) {
                     const commitMsg = fclActionData.run.head_commit.message || '无 commit 信息';
                     await renderChangelog(document.getElementById('fclChangelogContent'), commitMsg);
+                } else if (fclActionData && fclActionData.run) {
+                    document.getElementById('fclChangelogContent').innerHTML = '<p>暂无 commit 信息</p>';
                 } else {
-                    document.getElementById('fclChangelogContent').innerHTML = '<p>暂无 Action commit 信息</p>';
+                    document.getElementById('fclChangelogContent').innerHTML = '<p>暂无 Action 信息</p>';
                 }
             }
             localStorage.setItem('fcl_download_type', type);
