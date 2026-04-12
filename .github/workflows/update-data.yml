@@ -27,13 +27,16 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y jq
 
       # ==================== FCL ====================
+      - name: 创建 FCL 文件夹
+        run: mkdir -p FCL
+
       - name: 获取 FCL 所有 Releases
         run: |
           curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases?per_page=100" \
-            > fcl-releases.json
+            > FCL/fcl-releases.json
 
-      - name: 提取 FCL 所有版本信息
+      - name: 提取 FCL 所有版本信息（精简版）
         run: |
           jq '[.[] | {
             tag_name: .tag_name,
@@ -43,7 +46,7 @@ jobs:
               size: .size,
               browser_download_url: .browser_download_url
             }]
-          }]' fcl-releases.json > FCL/fcl-all-releases.json
+          }]' FCL/fcl-releases.json > FCL/fcl-all-releases.json
 
       - name: 获取 FCL 最新 version_map.json
         run: |
@@ -51,9 +54,6 @@ jobs:
 
       - name: 更新 FCL 历史更新日志（自动追加新版本）
         run: |
-          # 确保目录存在
-          mkdir -p FCL
-          
           # 如果历史文件不存在，创建空数组
           if [ ! -f FCL/fcl-changelog-history.json ]; then
             echo '[]' > FCL/fcl-changelog-history.json
@@ -66,7 +66,7 @@ jobs:
           
           if [ -n "$LATEST_VERSION" ] && [ -n "$LATEST_TEXT" ]; then
             # 检查历史文件中是否已存在该版本
-            EXISTS=$(jq --arg ver "$LATEST_VERSION" '.[] | select(.versionName == $ver) | .versionName' FCL/fcl-changelog-history.json)
+            EXISTS=$(jq -r --arg ver "$LATEST_VERSION" '.[] | select(.versionName == $ver) | .versionName' FCL/fcl-changelog-history.json)
             
             if [ -z "$EXISTS" ]; then
               echo "发现新版本: $LATEST_VERSION，正在追加到历史文件..."
@@ -168,7 +168,7 @@ jobs:
       # ==================== 清理临时文件 ====================
       - name: 清理临时文件
         run: |
-          rm -f fcl-releases.json
+          rm -f FCL/fcl-releases.json
           rm -f zalith-release.json zalith-action.json
           rm -f amethyst-release.json amethyst-action.json
           rm -f mobileglues-release.json
