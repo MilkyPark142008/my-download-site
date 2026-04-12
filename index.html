@@ -583,6 +583,38 @@ body {
 .refresh-link:hover {
     color: #333;
 }
+/* 版本选择下拉框样式 */
+.version-selector {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.version-selector label {
+    color: #1a1a1a;
+    font-size: 14px;
+    font-weight: 500;
+}
+.version-selector select {
+    background: #f5f5f7;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    color: #1a1a1a;
+    font-size: 14px;
+    padding: 8px 12px;
+    cursor: pointer;
+    min-width: 180px;
+    transition: all 0.2s;
+}
+.version-selector select:hover {
+    background: #ebebeb;
+}
     </style>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
@@ -663,6 +695,13 @@ body {
                     </div>
                 </div>
             </div>
+
+            <!-- 版本选择下拉框 - 放在下载来源上面 -->
+            <div class="version-selector" id="fclVersionSelector" style="display: none;">
+                <label>选择版本：</label>
+                <select id="fclVersionSelect"></select>
+            </div>
+
             <div class="download-type-selector">
                 <label>下载来源：</label>
                 <div class="selector-buttons">
@@ -670,14 +709,17 @@ body {
                     <button class="selector-btn" data-type="action">Action 开发版</button>
                 </div>
             </div>
+
             <details class="changelog-section" id="fclChangelogSection">
                 <summary id="fclChangelogSummary">查看 Release 更新日志</summary>
                 <div class="changelog-content" id="fclChangelogContent">加载中...</div>
             </details>
+
             <div class="download-section" id="fclReleaseSection">
                 <h3>Release 稳定版下载</h3>
                 <div id="fclReleaseContainer" class="download-list"></div>
             </div>
+
             <div class="download-section" id="fclActionSection" style="display: none;">
                 <h3>Action 开发版下载</h3>
                 <p class="note">开发版本，可能存在未知问题，仅供体验使用</p>
@@ -878,9 +920,11 @@ body {
         }
 
         // ==================== FCL 模块 ====================
-        let fclReleaseData = null, fclActionData = null, fclDataLoaded = false;
-        let fclReleaseChangelogText = '';
-        let fclChangelogHistory = null; // 存储历史日志
+        let fclAllReleases = [];      // 所有版本数据
+        let fclChangelogHistory = []; // 历史日志
+        let fclActionData = null;
+        let fclDataLoaded = false;
+        let currentFclVersion = null; // 当前选中的版本号
 
         async function loadFclChangelogHistory() {
             try {
@@ -904,35 +948,40 @@ body {
             try {
                 const res = await fetch('/FCL/fcl-all-releases.json?t=' + Date.now());
                 if (!res.ok) throw new Error('HTTP ' + res.status);
-                const data = await res.json();
-                // 取第一个（最新）作为当前显示的 release
-                if (data && data.length > 0) {
-                    fclReleaseData = data[0];
-                }
-                // Action 数据单独获取
+                fclAllReleases = await res.json();
+                
                 const actionRes = await fetch('/FCL/fcl-action.json?t=' + Date.now());
                 if (actionRes.ok) {
                     fclActionData = await actionRes.json();
                 }
-                if (fclReleaseData) {
-                    document.getElementById('fclVersionBadge').textContent = fclReleaseData.tag_name || '未知版本';
-                    document.getElementById('fclUpdateTime').textContent = fclReleaseData.published_at ? formatDate(fclReleaseData.published_at) : '';
-                    
-                    // 从历史日志中获取当前版本的更新日志
-                    let changelogText = '';
-                    const historyText = getChangelogFromHistory(fclReleaseData.tag_name);
-                    if (historyText) {
-                        changelogText = historyText;
+                
+                if (fclAllReleases && fclAllReleases.length > 0) {
+                    // 填充版本选择下拉框
+                    const versionSelect = document.getElementById('fclVersionSelect');
+                    const versionSelectorDiv = document.getElementById('fclVersionSelector');
+                    if (versionSelect && fclAllReleases.length > 1) {
+                        versionSelectorDiv.style.display = 'flex';
+                        versionSelect.innerHTML = '';
+                        fclAllReleases.forEach(release => {
+                            const option = document.createElement('option');
+                            option.value = release.tag_name;
+                            option.textContent = `${release.tag_name} (${formatDate(release.published_at)})`;
+                            versionSelect.appendChild(option);
+                        });
+                        versionSelect.addEventListener('change', function() {
+                            switchFclVersion(this.value);
+                        });
+                        // 默认选中最新版本
+                        versionSelect.value = fclAllReleases[0].tag_name;
+                        currentFclVersion = fclAllReleases[0].tag_name;
+                        displayFclVersion(currentFclVersion);
                     } else {
-                        changelogText = fclReleaseData.body || '暂无更新日志';
+                        versionSelectorDiv.style.display = 'none';
+                        currentFclVersion = fclAllReleases[0].tag_name;
+                        displayFclVersion(currentFclVersion);
                     }
-                    fclReleaseChangelogText = changelogText;
-                    await renderChangelog(document.getElementById('fclChangelogContent'), changelogText);
-                    
-                    const assets = fclReleaseData.assets || [];
-                    const mirrorPrefix = document.getElementById('mirrorSelect').value;
-                    document.getElementById('fclReleaseContainer').innerHTML = renderDownloadCards(assets, mirrorPrefix);
                 }
+                
                 if (fclActionData && fclActionData.run && fclActionData.run.id) {
                     const run = fclActionData.run;
                     document.getElementById('fclActionVersionBadge').textContent = '运行 #' + run.id;
@@ -948,6 +997,7 @@ body {
                     document.getElementById('fclActionVersionBadge').textContent = '暂无';
                     document.getElementById('fclActionContainer').innerHTML = '<div class="no-assets">暂无 Action 构建记录</div>';
                 }
+                
                 const saved = localStorage.getItem('fcl_download_type');
                 setFclDownloadType(saved === 'action' ? 'action' : 'release');
                 fclDataLoaded = true;
@@ -955,6 +1005,37 @@ body {
                 console.error(e);
                 document.getElementById('fclReleaseContainer').innerHTML = '<div class="no-assets">加载失败</div>';
                 document.getElementById('fclVersionBadge').textContent = '加载失败';
+            }
+        }
+
+        function displayFclVersion(versionName) {
+            const release = fclAllReleases.find(r => r.tag_name === versionName);
+            if (!release) return;
+            currentFclVersion = versionName;
+            document.getElementById('fclVersionBadge').textContent = release.tag_name || '未知版本';
+            document.getElementById('fclUpdateTime').textContent = release.published_at ? formatDate(release.published_at) : '';
+            
+            // 从历史日志获取更新日志
+            let changelogText = '';
+            const historyText = getChangelogFromHistory(release.tag_name);
+            if (historyText) {
+                changelogText = historyText;
+            } else {
+                changelogText = release.body || '暂无更新日志';
+            }
+            renderChangelog(document.getElementById('fclChangelogContent'), changelogText);
+            
+            const assets = release.assets || [];
+            const mirrorPrefix = document.getElementById('mirrorSelect').value;
+            document.getElementById('fclReleaseContainer').innerHTML = renderDownloadCards(assets, mirrorPrefix);
+        }
+
+        function switchFclVersion(versionName) {
+            displayFclVersion(versionName);
+            // 如果当前在 Release 模式，直接更新；如果在 Action 模式，切换后保持在 Action 模式
+            const activeBtn = document.querySelector('#fclModule .selector-btn.active');
+            if (activeBtn && activeBtn.getAttribute('data-type') === 'release') {
+                // 已经在 Release 模式，内容已更新
             }
         }
 
@@ -970,8 +1051,9 @@ body {
                 releaseSec.style.display = 'block';
                 actionSec.style.display = 'none';
                 document.getElementById('fclChangelogSummary').textContent = '查看 Release 更新日志';
-                if (fclReleaseChangelogText) {
-                    await renderChangelog(document.getElementById('fclChangelogContent'), fclReleaseChangelogText);
+                // 重新显示当前选中的版本
+                if (currentFclVersion) {
+                    displayFclVersion(currentFclVersion);
                 }
             } else {
                 releaseSec.style.display = 'none';
