@@ -27,17 +27,32 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y jq
 
       # ==================== FCL ====================
-      - name: 获取 FCL Release
+      - name: 创建 FCL 文件夹
+        run: mkdir -p FCL
+
+      - name: 获取 FCL 所有 Releases（包含历史版本）
         run: |
           curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-            "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases/latest" \
-            > fcl-release.json
+            "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases?per_page=100" \
+            > FCL/fcl-releases.json
 
-      - name: 获取 FCL version_map.json 并保留到仓库
+      - name: 获取 FCL 当前版本的 version_map.json
         run: |
-          curl -s "https://raw.githubusercontent.com/FCL-Team/FoldCraftLauncher/main/version_map.json" > fcl-version-map.json
+          curl -s "https://raw.githubusercontent.com/FCL-Team/FoldCraftLauncher/main/version_map.json" > FCL/fcl-version-map.json
 
-      - name: 获取 FCL Action
+      - name: 提取 FCL 所有版本信息（精简版）
+        run: |
+          jq '[.[] | {
+            tag_name: .tag_name,
+            published_at: .published_at,
+            assets: [.assets[] | {
+              name: .name,
+              size: .size,
+              browser_download_url: .browser_download_url
+            }]
+          }]' FCL/fcl-releases.json > FCL/fcl-all-releases.json
+
+      - name: 获取 FCL Action（最新开发版）
         run: |
           RUN_JSON=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs?status=success&per_page=1")
@@ -46,15 +61,10 @@ jobs:
             ARTIFACTS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
               "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/$RUN_ID/artifacts")
             RUN_OBJ=$(echo "$RUN_JSON" | jq '.workflow_runs[0]')
-            echo "{\"run\": $RUN_OBJ, \"artifacts\": $ARTIFACTS}" > fcl-action.json
+            echo "{\"run\": $RUN_OBJ, \"artifacts\": $ARTIFACTS}" > FCL/fcl-action.json
           else
-            echo "{\"run\": null, \"artifacts\": {\"artifacts\": []}}" > fcl-action.json
+            echo "{\"run\": null, \"artifacts\": {\"artifacts\": []}}" > FCL/fcl-action.json
           fi
-
-      - name: 合并 FCL JSON
-        run: |
-          jq -s '{release: .[0], action: {run: (.[1].run), artifacts: (.[1].artifacts.artifacts // [])}}' \
-            fcl-release.json fcl-action.json > fcl.json
 
       # ==================== Zalith ====================
       - name: 获取 Zalith Release
@@ -126,7 +136,7 @@ jobs:
           rm -f zalith-release.json zalith-action.json
           rm -f amethyst-release.json amethyst-action.json
           rm -f mobileglues-release.json
-          # 注意：fcl-version-map.json 不删除，会保留在仓库中
+          # 注意：FCL 文件夹内的文件不删除
 
       # ==================== 生成真实源码提交信息 ====================
       - name: 生成真实的源码提交信息
@@ -142,6 +152,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add fcl.json zalith.json amethyst.json mobileglues.json fcl-version-map.json commit-info.json
+          git add FCL/ zalith.json amethyst.json mobileglues.json commit-info.json
           git diff --staged --quiet || git commit -m "chore: 自动更新下载数据 $(date '+%Y-%m-%d %H:%M:%S')"
           git push
