@@ -27,20 +27,13 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y jq
 
       # ==================== FCL ====================
-      - name: 创建 FCL 文件夹
-        run: mkdir -p FCL
-
-      - name: 获取 FCL 所有 Releases（包含历史版本）
+      - name: 获取 FCL 所有 Releases
         run: |
           curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases?per_page=100" \
-            > FCL/fcl-releases.json
+            > fcl-releases.json
 
-      - name: 获取 FCL 当前版本的 version_map.json
-        run: |
-          curl -s "https://raw.githubusercontent.com/FCL-Team/FoldCraftLauncher/main/version_map.json" > FCL/fcl-version-map.json
-
-      - name: 提取 FCL 所有版本信息（精简版）
+      - name: 提取 FCL 所有版本信息
         run: |
           jq '[.[] | {
             tag_name: .tag_name,
@@ -50,9 +43,52 @@ jobs:
               size: .size,
               browser_download_url: .browser_download_url
             }]
-          }]' FCL/fcl-releases.json > FCL/fcl-all-releases.json
+          }]' fcl-releases.json > FCL/fcl-all-releases.json
 
-      - name: 获取 FCL Action（最新开发版）
+      - name: 获取 FCL 最新 version_map.json
+        run: |
+          curl -s "https://raw.githubusercontent.com/FCL-Team/FoldCraftLauncher/main/version_map.json" > FCL/fcl-version-map-latest.json
+
+      - name: 更新 FCL 历史更新日志（自动追加新版本）
+        run: |
+          # 确保目录存在
+          mkdir -p FCL
+          
+          # 如果历史文件不存在，创建空数组
+          if [ ! -f FCL/fcl-changelog-history.json ]; then
+            echo '[]' > FCL/fcl-changelog-history.json
+          fi
+          
+          # 从最新 version_map 提取中文日志
+          LATEST_VERSION=$(jq -r '.[0].versionName // empty' FCL/fcl-version-map-latest.json)
+          LATEST_DATE=$(jq -r '.[0].date // empty' FCL/fcl-version-map-latest.json)
+          LATEST_TEXT=$(jq -r '.[0].description[] | select(.lang=="zh_CN") | .text' FCL/fcl-version-map-latest.json 2>/dev/null)
+          
+          if [ -n "$LATEST_VERSION" ] && [ -n "$LATEST_TEXT" ]; then
+            # 检查历史文件中是否已存在该版本
+            EXISTS=$(jq --arg ver "$LATEST_VERSION" '.[] | select(.versionName == $ver) | .versionName' FCL/fcl-changelog-history.json)
+            
+            if [ -z "$EXISTS" ]; then
+              echo "发现新版本: $LATEST_VERSION，正在追加到历史文件..."
+              # 创建新条目
+              NEW_ENTRY=$(jq -n --arg ver "$LATEST_VERSION" --arg date "$LATEST_DATE" --arg text "$LATEST_TEXT" \
+                '{versionName: $ver, date: $date, text: $text}')
+              # 追加到历史文件
+              jq --argjson new "$NEW_ENTRY" '. += [$new]' FCL/fcl-changelog-history.json > FCL/fcl-changelog-history.tmp.json
+              mv FCL/fcl-changelog-history.tmp.json FCL/fcl-changelog-history.json
+              echo "已添加新版本"
+            else
+              echo "版本 $LATEST_VERSION 已存在于历史文件中，跳过"
+            fi
+          else
+            echo "无法提取最新版本信息，跳过更新"
+          fi
+          
+          # 按版本号排序（从新到旧）
+          jq 'sort_by(.versionName | split(".") | map(tonumber)) | reverse' FCL/fcl-changelog-history.json > FCL/fcl-changelog-history.sorted.json
+          mv FCL/fcl-changelog-history.sorted.json FCL/fcl-changelog-history.json
+
+      - name: 获取 FCL Action
         run: |
           RUN_JSON=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs?status=success&per_page=1")
@@ -132,11 +168,10 @@ jobs:
       # ==================== 清理临时文件 ====================
       - name: 清理临时文件
         run: |
-          rm -f fcl-release.json fcl-action.json
+          rm -f fcl-releases.json
           rm -f zalith-release.json zalith-action.json
           rm -f amethyst-release.json amethyst-action.json
           rm -f mobileglues-release.json
-          # 注意：FCL 文件夹内的文件不删除
 
       # ==================== 生成真实源码提交信息 ====================
       - name: 生成真实的源码提交信息
