@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 189747442,
         "digest": "sha256:d85ae84aeed62b055e1d15f0976214c0345b7e579d5ec0ea0fe15e96db4a1da4",
-        "download_count": 4536,
+        "download_count": 5419,
         "created_at": "2026-04-13T16:59:35Z",
         "updated_at": "2026-04-13T16:59:47Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.3.2/ZalithLauncher-2.3.2-arm64-v8a.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 183403901,
         "digest": "sha256:d6f1bd503a447b3843f429d5a3db844c67fb9666af1e44512aa98a69de3cceef",
-        "download_count": 104,
+        "download_count": 135,
         "created_at": "2026-04-13T16:59:35Z",
         "updated_at": "2026-04-13T16:59:47Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.3.2/ZalithLauncher-2.3.2-armeabi-v7a.apk"
@@ -140,7 +140,7 @@
         "state": "uploaded",
         "size": 174837082,
         "digest": "sha256:64b7fcdb256d052821985be917d16f725335a886c65ed8cc2e38793caac6bae8",
-        "download_count": 45,
+        "download_count": 53,
         "created_at": "2026-04-13T16:59:35Z",
         "updated_at": "2026-04-13T16:59:46Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.3.2/ZalithLauncher-2.3.2-x86.apk"
@@ -176,7 +176,7 @@
         "state": "uploaded",
         "size": 193884759,
         "digest": "sha256:3afdc2e1a62498bdd0b2652bdc9e54fae17ff5ffd86b3b5923112c258250d3d8",
-        "download_count": 43,
+        "download_count": 47,
         "created_at": "2026-04-13T16:59:35Z",
         "updated_at": "2026-04-13T16:59:48Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.3.2/ZalithLauncher-2.3.2-x86_64.apk"
@@ -212,7 +212,7 @@
         "state": "uploaded",
         "size": 326188447,
         "digest": "sha256:5503f3df2de2005129bba1a85517177c7dffaaa841c0ae4519ff86808b9b7caa",
-        "download_count": 842,
+        "download_count": 998,
         "created_at": "2026-04-13T16:59:35Z",
         "updated_at": "2026-04-13T16:59:51Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.3.2/ZalithLauncher-2.3.2.apk"
@@ -220,7 +220,19 @@
     ],
     "tarball_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/tarball/2.3.2",
     "zipball_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/zipball/2.3.2",
-    "body": "## Notes:\r\n- Since version 26.2+, Mojang has introduced the Vulkan rendering engine. If your device does **not** support **Vulkan 1.2**, you **may** be unable to launch the latest version of Minecraft.\r\n\r\n## Hotfix:\r\n- Logic error caused the game to force offline login\r\n\r\n\r\n## Updates:\r\n- Synced translations from [Weblate project](https://hosted.weblate.org/projects/zalithlauncher2/)\r\n- Added Thai language option to the language list by [youfeng11](https://github.com/youfeng11)\r\n- Added support for rendering with SurfaceView\r\n\r\n## Changes:\r\n- Accounts: Refresh Microsoft account only when the token expires\r\n\r\n## Fixes:\r\n- Input method:\r\n  - Crashes related to focus issues\r\n  - Enter key not responding properly in the input method"
+    "body": "## Notes:\r\n- Since version 26.2+, Mojang has introduced the Vulkan rendering engine. If your device does **not** support **Vulkan 1.2**, you **may** be unable to launch the latest version of Minecraft.\r\n\r\n## Hotfix:\r\n- Logic error caused the game to force offline login\r\n\r\n\r\n## Updates:\r\n- Synced translations from [Weblate project](https://hosted.weblate.org/projects/zalithlauncher2/)\r\n- Added Thai language option to the language list by [youfeng11](https://github.com/youfeng11)\r\n- Added support for rendering with SurfaceView\r\n\r\n## Changes:\r\n- Accounts: Refresh Microsoft account only when the token expires\r\n\r\n## Fixes:\r\n- Input method:\r\n  - Crashes related to focus issues\r\n  - Enter key not responding properly in the input method",
+    "reactions": {
+      "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/releases/308455995/reactions",
+      "total_count": 2,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 2
+    }
   },
   "action": {
     "run": {
