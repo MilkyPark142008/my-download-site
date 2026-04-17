@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 166698383,
         "digest": "sha256:e8d8533a42ac166cc3fdc8d0adbbcdbc5b644c5452c3c3549d40a4b3eb6149fa",
-        "download_count": 168,
+        "download_count": 170,
         "created_at": "2026-04-17T07:03:00Z",
         "updated_at": "2026-04-17T07:06:10Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.2/Amethyst-Debug.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 154910736,
         "digest": "sha256:489968261a9e4641f163c7d1628c33dbd2ce04487e33f66dbb1dd764c3922b20",
-        "download_count": 314,
+        "download_count": 330,
         "created_at": "2026-04-17T07:03:04Z",
         "updated_at": "2026-04-17T07:06:10Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.2/Amethyst.apk"
@@ -116,30 +116,30 @@
   },
   "action": {
     "run": {
-      "id": 24552249381,
+      "id": 24578395945,
       "name": "Android CI",
-      "node_id": "WFR_kwLOOrUn6c8AAAAFt22YJQ",
-      "head_branch": "v3_openjdk",
-      "head_sha": "0d3a52feb04d8600b2958d3ee61742acc9c86d3a",
+      "node_id": "WFR_kwLOOrUn6c8AAAAFuPyPKQ",
+      "head_branch": "feat/mixed-lwjgl",
+      "head_sha": "de6be7b3bad7395e9773ca27df21757018340179",
       "path": ".github/workflows/android.yml",
-      "display_title": "bump(krypton_wrapper): 0.4.4 to 0.4.5 (#241)",
-      "run_number": 728,
+      "display_title": "update: LWJGL modules",
+      "run_number": 732,
       "event": "push",
       "status": "completed",
       "conclusion": "success",
       "workflow_id": 162757109,
-      "check_suite_id": 65026148519,
-      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAPI9xIpw",
-      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24552249381",
-      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24552249381",
+      "check_suite_id": 65107759035,
+      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAPKLmPuw",
+      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24578395945",
+      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24578395945",
       "pull_requests": [
         {
-          "url": "https://api.github.com/repos/CopperLauncher/CopperLauncher/pulls/46",
-          "id": 3544403592,
-          "number": 46,
+          "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/pulls/242",
+          "id": 3546628960,
+          "number": 242,
           "head": {
-            "ref": "v3_openjdk",
-            "sha": "0d3a52feb04d8600b2958d3ee61742acc9c86d3a",
+            "ref": "feat/mixed-lwjgl",
+            "sha": "de6be7b3bad7395e9773ca27df21757018340179",
             "repo": {
               "id": 984950761,
               "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
@@ -148,17 +148,17 @@
           },
           "base": {
             "ref": "v3_openjdk",
-            "sha": "8eb26d37d1df38019c4e00d3c022d3ab02111028",
+            "sha": "0d3a52feb04d8600b2958d3ee61742acc9c86d3a",
             "repo": {
-              "id": 1157827415,
-              "url": "https://api.github.com/repos/CopperLauncher/CopperLauncher",
-              "name": "CopperLauncher"
+              "id": 984950761,
+              "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
+              "name": "Amethyst-Android"
             }
           }
         }
       ],
-      "created_at": "2026-04-17T06:57:36Z",
-      "updated_at": "2026-04-17T07:00:45Z",
+      "created_at": "2026-04-17T17:35:00Z",
+      "updated_at": "2026-04-17T17:37:58Z",
       "actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -182,7 +182,7 @@
       },
       "run_attempt": 1,
       "referenced_workflows": [],
-      "run_started_at": "2026-04-17T06:57:36Z",
+      "run_started_at": "2026-04-17T17:35:00Z",
       "triggering_actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -204,26 +204,26 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24552249381/jobs",
-      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24552249381/logs",
-      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/65026148519",
-      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24552249381/artifacts",
-      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24552249381/cancel",
-      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24552249381/rerun",
+      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24578395945/jobs",
+      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24578395945/logs",
+      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/65107759035",
+      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24578395945/artifacts",
+      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24578395945/cancel",
+      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24578395945/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/workflows/162757109",
       "head_commit": {
-        "id": "0d3a52feb04d8600b2958d3ee61742acc9c86d3a",
-        "tree_id": "479195e03835fd5b81931b30a47110648a6d2584",
-        "message": "bump(krypton_wrapper): 0.4.4 to 0.4.5 (#241)",
-        "timestamp": "2026-04-17T06:57:33Z",
+        "id": "de6be7b3bad7395e9773ca27df21757018340179",
+        "tree_id": "849b6142a4a270bdbb483b7ba3af5156d810da2a",
+        "message": "update: LWJGL modules\n\nUses https://github.com/AngelAuraMC/lwjgl3/actions/runs/24576036363 and\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24575981434 for 3.4.1\nand 3.3.3 respectively\n\nLiterally changes nothing for 3.4.1, adds some fixes for 3.3.3\n\n* https://github.com/AngelAuraMC/lwjgl3/pull/2\n* 3.3.3 is now multi-release. This means its more in sync with official\nmojang lwjgl.",
+        "timestamp": "2026-04-17T17:33:52Z",
         "author": {
           "name": "tomikun",
           "email": "60690056+alexytomi@users.noreply.github.com"
         },
         "committer": {
-          "name": "GitHub",
-          "email": "noreply@github.com"
+          "name": "tomikun",
+          "email": "60690056+alexytomi@users.noreply.github.com"
         }
       },
       "repository": {
@@ -365,43 +365,43 @@
     },
     "artifacts": [
       {
-        "id": 6490388922,
-        "node_id": "MDg6QXJ0aWZhY3Q2NDkwMzg4OTIy",
+        "id": 6501534387,
+        "node_id": "MDg6QXJ0aWZhY3Q2NTAxNTM0Mzg3",
         "name": "app-release",
-        "size_in_bytes": 152912794,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/6490388922",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/6490388922/zip",
+        "size_in_bytes": 152813507,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/6501534387",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/6501534387/zip",
         "expired": false,
-        "digest": "sha256:1a973daac0c25f04a8280802dcdb5c48f33ae552b0b69c80ddde84bda90f498a",
-        "created_at": "2026-04-17T07:00:29Z",
-        "updated_at": "2026-04-17T07:00:29Z",
-        "expires_at": "2026-07-16T06:57:36Z",
+        "digest": "sha256:cf70fb504747b064299e4413523d99fcc4df16a0990fe4576268a26475e898e7",
+        "created_at": "2026-04-17T17:37:55Z",
+        "updated_at": "2026-04-17T17:37:55Z",
+        "expires_at": "2026-07-16T17:35:00Z",
         "workflow_run": {
-          "id": 24552249381,
+          "id": 24578395945,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
-          "head_branch": "v3_openjdk",
-          "head_sha": "0d3a52feb04d8600b2958d3ee61742acc9c86d3a"
+          "head_branch": "feat/mixed-lwjgl",
+          "head_sha": "de6be7b3bad7395e9773ca27df21757018340179"
         }
       },
       {
-        "id": 6490387702,
-        "node_id": "MDg6QXJ0aWZhY3Q2NDkwMzg3NzAy",
+        "id": 6501532847,
+        "node_id": "MDg6QXJ0aWZhY3Q2NTAxNTMyODQ3",
         "name": "app-debug (recommended)",
-        "size_in_bytes": 164479482,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/6490387702",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/6490387702/zip",
+        "size_in_bytes": 164389404,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/6501532847",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/6501532847/zip",
         "expired": false,
-        "digest": "sha256:bf0c249e3c08d067e0bd7d6abc13bca137e5ad868baf667e1ca1ab909a4323a3",
-        "created_at": "2026-04-17T07:00:23Z",
-        "updated_at": "2026-04-17T07:00:23Z",
-        "expires_at": "2026-07-16T06:57:36Z",
+        "digest": "sha256:f8f4366acc927c0c3806e22c4d4e1819bb4dd4b5fe36fa4daa5fe4887178612e",
+        "created_at": "2026-04-17T17:37:50Z",
+        "updated_at": "2026-04-17T17:37:50Z",
+        "expires_at": "2026-07-16T17:35:00Z",
         "workflow_run": {
-          "id": 24552249381,
+          "id": 24578395945,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
-          "head_branch": "v3_openjdk",
-          "head_sha": "0d3a52feb04d8600b2958d3ee61742acc9c86d3a"
+          "head_branch": "feat/mixed-lwjgl",
+          "head_sha": "de6be7b3bad7395e9773ca27df21757018340179"
         }
       }
     ]
