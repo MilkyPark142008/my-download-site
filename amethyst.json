@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 166610638,
         "digest": "sha256:fc39a586000a35d74bab332065de54146594479012242d85f821be1b6cec065a",
-        "download_count": 507,
+        "download_count": 513,
         "created_at": "2026-04-17T18:27:18Z",
         "updated_at": "2026-04-17T18:27:56Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.3/Amethyst-Debug.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 154816368,
         "digest": "sha256:361b74abebd2d14d0ddc11462741a74bc3f3a5114838c429741c43f67eb7c719",
-        "download_count": 1063,
+        "download_count": 1080,
         "created_at": "2026-04-17T18:27:20Z",
         "updated_at": "2026-04-17T18:27:56Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.3/Amethyst.apk"
@@ -116,49 +116,25 @@
   },
   "action": {
     "run": {
-      "id": 24580305831,
+      "id": 24684544317,
       "name": "Android CI",
-      "node_id": "WFR_kwLOOrUn6c8AAAAFuRmzpw",
-      "head_branch": "v3_openjdk",
-      "head_sha": "4d57d4960a661825b6e2d3997bc628c50664b472",
+      "node_id": "WFR_kwLOOrUn6c8AAAAFv1BBPQ",
+      "head_branch": "feat/misc",
+      "head_sha": "9f481fc6d6505d5dbb36fa66890d4fae51a0b563",
       "path": ".github/workflows/android.yml",
-      "display_title": "bump: version from 1.1.2 to 1.1.3",
-      "run_number": 737,
+      "display_title": "bump: version from 1.1.3 to 1.1.4",
+      "run_number": 739,
       "event": "push",
       "status": "completed",
       "conclusion": "success",
       "workflow_id": 162757109,
-      "check_suite_id": 65113921931,
-      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAPKReZiw",
-      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24580305831",
-      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24580305831",
-      "pull_requests": [
-        {
-          "url": "https://api.github.com/repos/CopperLauncher/CopperLauncher/pulls/46",
-          "id": 3544403592,
-          "number": 46,
-          "head": {
-            "ref": "v3_openjdk",
-            "sha": "4d57d4960a661825b6e2d3997bc628c50664b472",
-            "repo": {
-              "id": 984950761,
-              "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
-              "name": "Amethyst-Android"
-            }
-          },
-          "base": {
-            "ref": "v3_openjdk",
-            "sha": "8eb26d37d1df38019c4e00d3c022d3ab02111028",
-            "repo": {
-              "id": 1157827415,
-              "url": "https://api.github.com/repos/CopperLauncher/CopperLauncher",
-              "name": "CopperLauncher"
-            }
-          }
-        }
-      ],
-      "created_at": "2026-04-17T18:21:39Z",
-      "updated_at": "2026-04-17T18:24:47Z",
+      "check_suite_id": 65415077707,
+      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAPOwrfSw",
+      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24684544317",
+      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24684544317",
+      "pull_requests": [],
+      "created_at": "2026-04-20T18:53:52Z",
+      "updated_at": "2026-04-20T18:56:36Z",
       "actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -182,7 +158,7 @@
       },
       "run_attempt": 1,
       "referenced_workflows": [],
-      "run_started_at": "2026-04-17T18:21:39Z",
+      "run_started_at": "2026-04-20T18:53:52Z",
       "triggering_actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -204,19 +180,19 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24580305831/jobs",
-      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24580305831/logs",
-      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/65113921931",
-      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24580305831/artifacts",
-      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24580305831/cancel",
-      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24580305831/rerun",
+      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24684544317/jobs",
+      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24684544317/logs",
+      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/65415077707",
+      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24684544317/artifacts",
+      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24684544317/cancel",
+      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24684544317/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/workflows/162757109",
       "head_commit": {
-        "id": "4d57d4960a661825b6e2d3997bc628c50664b472",
-        "tree_id": "068f64dbc156cdd0a605908bd57b8a06cee7342d",
-        "message": "bump: version from 1.1.2 to 1.1.3",
-        "timestamp": "2026-04-17T18:21:36Z",
+        "id": "9f481fc6d6505d5dbb36fa66890d4fae51a0b563",
+        "tree_id": "98d2026d559b7a1cdbfbfcffd237febd6c029ef5",
+        "message": "bump: version from 1.1.3 to 1.1.4",
+        "timestamp": "2026-04-20T18:53:42Z",
         "author": {
           "name": "tomikun",
           "email": "60690056+alexytomi@users.noreply.github.com"
@@ -365,43 +341,43 @@
     },
     "artifacts": [
       {
-        "id": 6502332626,
-        "node_id": "MDg6QXJ0aWZhY3Q2NTAyMzMyNjI2",
+        "id": 6539481177,
+        "node_id": "MDg6QXJ0aWZhY3Q2NTM5NDgxMTc3",
         "name": "app-release",
-        "size_in_bytes": 152819207,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/6502332626",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/6502332626/zip",
+        "size_in_bytes": 152819163,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/6539481177",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/6539481177/zip",
         "expired": false,
-        "digest": "sha256:ec58ddc4037689e80106907f0b6988e524522fe65d0cc2722ce28de17acf5b0d",
-        "created_at": "2026-04-17T18:24:33Z",
-        "updated_at": "2026-04-17T18:24:33Z",
-        "expires_at": "2026-07-16T18:21:39Z",
+        "digest": "sha256:23961e5d9e8689eb27618d78a00dd4a8227fe017b4dd44d5fa7ce490a514f155",
+        "created_at": "2026-04-20T18:56:32Z",
+        "updated_at": "2026-04-20T18:56:32Z",
+        "expires_at": "2026-07-19T18:53:52Z",
         "workflow_run": {
-          "id": 24580305831,
+          "id": 24684544317,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
-          "head_branch": "v3_openjdk",
-          "head_sha": "4d57d4960a661825b6e2d3997bc628c50664b472"
+          "head_branch": "feat/misc",
+          "head_sha": "9f481fc6d6505d5dbb36fa66890d4fae51a0b563"
         }
       },
       {
-        "id": 6502330329,
-        "node_id": "MDg6QXJ0aWZhY3Q2NTAyMzMwMzI5",
+        "id": 6539479476,
+        "node_id": "MDg6QXJ0aWZhY3Q2NTM5NDc5NDc2",
         "name": "app-debug (recommended)",
-        "size_in_bytes": 164391870,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/6502330329",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/6502330329/zip",
+        "size_in_bytes": 164391988,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/6539479476",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/6539479476/zip",
         "expired": false,
-        "digest": "sha256:6f741efd6cfeeef9b3d221b5c127fef44c7f3734f55ce1d61f6fd2cdfd8a6253",
-        "created_at": "2026-04-17T18:24:25Z",
-        "updated_at": "2026-04-17T18:24:25Z",
-        "expires_at": "2026-07-16T18:21:39Z",
+        "digest": "sha256:2052149e94733d354532c016c62959b33d3f34e27495df5a877122db6363f895",
+        "created_at": "2026-04-20T18:56:27Z",
+        "updated_at": "2026-04-20T18:56:27Z",
+        "expires_at": "2026-07-19T18:53:52Z",
         "workflow_run": {
-          "id": 24580305831,
+          "id": 24684544317,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
-          "head_branch": "v3_openjdk",
-          "head_sha": "4d57d4960a661825b6e2d3997bc628c50664b472"
+          "head_branch": "feat/misc",
+          "head_sha": "9f481fc6d6505d5dbb36fa66890d4fae51a0b563"
         }
       }
     ]
