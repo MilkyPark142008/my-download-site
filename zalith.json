@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 189802230,
         "digest": "sha256:cbf2521fa6a8061cfa177b6344add410ec99b35d499d61fcdd5d7763165fa230",
-        "download_count": 6709,
+        "download_count": 7569,
         "created_at": "2026-04-20T11:52:46Z",
         "updated_at": "2026-04-20T11:52:54Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.0/ZalithLauncher-2.4.0-arm64-v8a.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 183458677,
         "digest": "sha256:6c920e4c43909443524d1989f58f5b545821a8122c1eb72b49b24a2c912b4e7e",
-        "download_count": 265,
+        "download_count": 299,
         "created_at": "2026-04-20T11:52:46Z",
         "updated_at": "2026-04-20T11:52:56Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.0/ZalithLauncher-2.4.0-armeabi-v7a.apk"
@@ -140,7 +140,7 @@
         "state": "uploaded",
         "size": 174894282,
         "digest": "sha256:36f19b38f155f8b6406ae91f71fa00b5163e2cb60fe2a98be139a188c520db6b",
-        "download_count": 92,
+        "download_count": 96,
         "created_at": "2026-04-20T11:52:46Z",
         "updated_at": "2026-04-20T11:52:55Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.0/ZalithLauncher-2.4.0-x86.apk"
@@ -176,7 +176,7 @@
         "state": "uploaded",
         "size": 193940531,
         "digest": "sha256:22b18a7659fb492fea31cec59036b86f540dbd9f33e2031dafc8a557760c8bae",
-        "download_count": 81,
+        "download_count": 92,
         "created_at": "2026-04-20T11:52:46Z",
         "updated_at": "2026-04-20T11:52:56Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.0/ZalithLauncher-2.4.0-x86_64.apk"
@@ -212,7 +212,7 @@
         "state": "uploaded",
         "size": 326142903,
         "digest": "sha256:58cf369b4825aca94522c4b366f9e9bcaf2f32d39fa7443f519d231ee5a24b6a",
-        "download_count": 1497,
+        "download_count": 1684,
         "created_at": "2026-04-20T11:52:46Z",
         "updated_at": "2026-04-20T11:53:01Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.0/ZalithLauncher-2.4.0.apk"
@@ -223,7 +223,7 @@
     "body": "## Notes:\r\n- Since version 26.2+, Mojang has introduced the Vulkan rendering engine. If your device does **not** support **Vulkan 1.2**, please do **not** use the **Vulkan backend** to launch the latest version of Minecraft.\r\n\r\n\r\n## Hotfix:\r\n- Launch: Apply key conflict fix only for versions below 1.13\r\n\r\n\r\n## Updates:\r\n- Synced translations from [Weblate project](https://hosted.weblate.org/projects/zalithlauncher2/)\r\n- Control layout editor:\r\n  - Added support for resizing controls by dragging the selection box cursor\r\n  - Show basic action bar at the bottom of a control when selected\r\n- Game menu: Added support for dragging and saving the floating window position\r\n- Downloads: Added support for searching by entering custom game version\r\n- Renderer: Updated Krypton Wrapper to 0.4.5 by [youfeng11](https://github.com/youfeng11)\r\n- Added support for loading [Sable Rapier native library plugin](https://github.com/ZalithLauncher/NativeLibPlugin/releases/tag/sable_rapier-0.1.0_NDK_BUILD)\r\n- Settings: Added download channels for renderer plugins, Turnip plugins, and native library plugins\r\n- Accounts: Added support for parsing and using \"Unified Pass\" authentication method\r\n- Disable using other accounts when not logged into a Microsoft account\r\n\r\n\r\n## Changes:\r\n- Downloads:\r\n  - Removed height change animation for download items\r\n  - Now only list popular major Minecraft versions by default\r\n- Control layout editor:\r\n  - Draw selection box near the selected control\r\n  - Now requires double-click to open the edit page\r\n  - Control alignment guide lines now sync with launcher theme color\r\n  - Only images can be used as editor background\r\n- Controls: Removed no-operation handling that could cause abnormal states\r\n- Properly handle WebView lifecycle to avoid memory leaks by [youfeng11](https://github.com/youfeng11)\r\n- Simplified IO stream handling in archive utilities by [youfeng11](https://github.com/youfeng11)\r\n- Adjusted asset extraction function and require re-extraction\r\n- Specify input type for password fields to invoke secure keyboard input\r\n- Graphics API: Added default setting \"Set to OpenGL only on first launch\"\r\n\r\n\r\n## Fixes:\r\n- Launch: Disabled key bindings that were incorrectly triggered on older versions\r\n- Fixed some errors by [youfeng11](https://github.com/youfeng11)\r\n- Gyro controls: Added HIGH_SAMPLING_RATE_SENSORS permission by [youfeng11](https://github.com/youfeng11)\r\n- Use ProcessPhoenix to restart when the game exits\r\n- Fixed inconsistent double-click reset speed for skin preview on different screen refresh rates by [youfeng11](https://github.com/youfeng11)\r\n- Incorrect X coordinate of joystick control in RTL layouts\r\n- Controller support:\r\n  - Fixed repeated triggering of left/right trigger events\r\n  - Fixed some key values not being saved correctly when saving mappings",
     "reactions": {
       "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/releases/311145804/reactions",
-      "total_count": 10,
+      "total_count": 11,
       "+1": 0,
       "-1": 0,
       "laugh": 0,
@@ -231,7 +231,7 @@
       "confused": 0,
       "heart": 2,
       "rocket": 4,
-      "eyes": 4
+      "eyes": 5
     }
   },
   "action": {
