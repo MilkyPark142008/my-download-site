@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 189802486,
         "digest": "sha256:97fa2cd9975a3dc0ed6342f542dc67008db0607300c76d54c99b13f07e16f28d",
-        "download_count": 17748,
+        "download_count": 18281,
         "created_at": "2026-04-21T04:28:22Z",
         "updated_at": "2026-04-21T04:28:33Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.0-hotfix/ZalithLauncher-2.4.0-arm64-v8a.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 183458937,
         "digest": "sha256:ff3ddf1d4402476a097dcd9ce4c3a978fc3b87220bf35fb5477d85cca7017db0",
-        "download_count": 1001,
+        "download_count": 1024,
         "created_at": "2026-04-21T04:28:22Z",
         "updated_at": "2026-04-21T04:28:34Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.0-hotfix/ZalithLauncher-2.4.0-armeabi-v7a.apk"
@@ -140,7 +140,7 @@
         "state": "uploaded",
         "size": 174894538,
         "digest": "sha256:a51d3c340481ac37bfe34808d0a6dfc2b75f82c84fe060af2d584b7690c09ffb",
-        "download_count": 415,
+        "download_count": 425,
         "created_at": "2026-04-21T04:28:22Z",
         "updated_at": "2026-04-21T04:28:32Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.0-hotfix/ZalithLauncher-2.4.0-x86.apk"
@@ -176,7 +176,7 @@
         "state": "uploaded",
         "size": 193940779,
         "digest": "sha256:19ab39e946e6af9a31066fae9798aad1ef6a6ebae88edb9d53f30bec46b77ac9",
-        "download_count": 350,
+        "download_count": 362,
         "created_at": "2026-04-21T04:28:22Z",
         "updated_at": "2026-04-21T04:28:33Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.0-hotfix/ZalithLauncher-2.4.0-x86_64.apk"
@@ -212,7 +212,7 @@
         "state": "uploaded",
         "size": 326143163,
         "digest": "sha256:3ee257a5f259da33dee840f9c742739033d4977e90745f5e471dc4c86a299b5f",
-        "download_count": 3823,
+        "download_count": 3932,
         "created_at": "2026-04-21T04:28:22Z",
         "updated_at": "2026-04-21T04:28:38Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.0-hotfix/ZalithLauncher-2.4.0.apk"
@@ -236,49 +236,25 @@
   },
   "action": {
     "run": {
-      "id": 24871455262,
+      "id": 24896087945,
       "name": "Build CI",
-      "node_id": "WFR_kwLOON0GPs8AAAAFynRKHg",
-      "head_branch": "fix/install_jvm_service#1",
-      "head_sha": "0ab91e42fdb90be76a5926707ed98da19b7baa15",
+      "node_id": "WFR_kwLOON0GPs8AAAAFy-wniQ",
+      "head_branch": "feat/language_jna#1",
+      "head_sha": "ada681b7e3951df9a9078a39fdf2b3e54c1dd4ce",
       "path": ".github/workflows/push_ci.yml",
-      "display_title": "fix(JvmService): 适配 Android 14 的前台服务类型限制",
-      "run_number": 243,
+      "display_title": "feat(语言): 为JNA添加解压任务描述",
+      "run_number": 246,
       "event": "push",
       "status": "completed",
       "conclusion": "success",
       "workflow_id": 253303842,
-      "check_suite_id": 65989665587,
-      "check_suite_node_id": "CS_kwDOON0GPs8AAAAPXUpjMw",
-      "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/24871455262",
-      "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/24871455262",
-      "pull_requests": [
-        {
-          "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/pulls/1096",
-          "id": 3576933501,
-          "number": 1096,
-          "head": {
-            "ref": "fix/install_jvm_service#1",
-            "sha": "0ab91e42fdb90be76a5926707ed98da19b7baa15",
-            "repo": {
-              "id": 954009150,
-              "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2",
-              "name": "ZalithLauncher2"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "ff548f1f4ed52aa883417581e6710d6d71310d6c",
-            "repo": {
-              "id": 954009150,
-              "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2",
-              "name": "ZalithLauncher2"
-            }
-          }
-        }
-      ],
-      "created_at": "2026-04-24T03:59:02Z",
-      "updated_at": "2026-04-24T04:03:28Z",
+      "check_suite_id": 66065499066,
+      "check_suite_node_id": "CS_kwDOON0GPs8AAAAPYc-Dug",
+      "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/24896087945",
+      "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/24896087945",
+      "pull_requests": [],
+      "created_at": "2026-04-24T14:56:18Z",
+      "updated_at": "2026-04-24T15:02:20Z",
       "actor": {
         "login": "MovTery",
         "id": 123115192,
@@ -303,12 +279,12 @@
       "run_attempt": 1,
       "referenced_workflows": [
         {
-          "path": "ZalithLauncher/ZalithLauncher2/.github/workflows/build.yml@0ab91e42fdb90be76a5926707ed98da19b7baa15",
-          "sha": "0ab91e42fdb90be76a5926707ed98da19b7baa15",
-          "ref": "refs/heads/fix/install_jvm_service#1"
+          "path": "ZalithLauncher/ZalithLauncher2/.github/workflows/build.yml@ada681b7e3951df9a9078a39fdf2b3e54c1dd4ce",
+          "sha": "ada681b7e3951df9a9078a39fdf2b3e54c1dd4ce",
+          "ref": "refs/heads/feat/language_jna#1"
         }
       ],
-      "run_started_at": "2026-04-24T03:59:02Z",
+      "run_started_at": "2026-04-24T14:56:18Z",
       "triggering_actor": {
         "login": "MovTery",
         "id": 123115192,
@@ -330,19 +306,19 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/24871455262/jobs",
-      "logs_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/24871455262/logs",
-      "check_suite_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/check-suites/65989665587",
-      "artifacts_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/24871455262/artifacts",
-      "cancel_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/24871455262/cancel",
-      "rerun_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/24871455262/rerun",
+      "jobs_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/24896087945/jobs",
+      "logs_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/24896087945/logs",
+      "check_suite_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/check-suites/66065499066",
+      "artifacts_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/24896087945/artifacts",
+      "cancel_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/24896087945/cancel",
+      "rerun_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/24896087945/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/workflows/253303842",
       "head_commit": {
-        "id": "0ab91e42fdb90be76a5926707ed98da19b7baa15",
-        "tree_id": "20d6c20faa20956df068dc2a67265a42613f8dbf",
-        "message": "fix(JvmService): 适配 Android 14 的前台服务类型限制",
-        "timestamp": "2026-04-24T03:58:51Z",
+        "id": "ada681b7e3951df9a9078a39fdf2b3e54c1dd4ce",
+        "tree_id": "84c1ed73569a63d02799134f018404f70432e3c0",
+        "message": "feat(语言): 为JNA添加解压任务描述",
+        "timestamp": "2026-04-24T14:56:09Z",
         "author": {
           "name": "movte",
           "email": "movtery228@qq.com"
@@ -491,103 +467,103 @@
     },
     "artifacts": [
       {
-        "id": 6616960002,
-        "node_id": "MDg6QXJ0aWZhY3Q2NjE2OTYwMDAy",
-        "name": "debug apk (all)",
-        "size_in_bytes": 345938247,
-        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6616960002",
-        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6616960002/zip",
-        "expired": false,
-        "digest": "sha256:03bb6dccda6f29f93430dff2dc984ee4fdba699627a8b73fe1ebf57478980def",
-        "created_at": "2026-04-24T04:03:26Z",
-        "updated_at": "2026-04-24T04:03:26Z",
-        "expires_at": "2026-05-01T03:59:02Z",
-        "workflow_run": {
-          "id": 24871455262,
-          "repository_id": 954009150,
-          "head_repository_id": 954009150,
-          "head_branch": "fix/install_jvm_service#1",
-          "head_sha": "0ab91e42fdb90be76a5926707ed98da19b7baa15"
-        }
-      },
-      {
-        "id": 6616957849,
-        "node_id": "MDg6QXJ0aWZhY3Q2NjE2OTU3ODQ5",
+        "id": 6627347984,
+        "node_id": "MDg6QXJ0aWZhY3Q2NjI3MzQ3OTg0",
         "name": "debug apk (arm)",
-        "size_in_bytes": 194600465,
-        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6616957849",
-        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6616957849/zip",
+        "size_in_bytes": 194600108,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6627347984",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6627347984/zip",
         "expired": false,
-        "digest": "sha256:3e8ad772480a79a3417f3a8c822e65fc72799c2025065ff4fcb239d8046452ea",
-        "created_at": "2026-04-24T04:03:11Z",
-        "updated_at": "2026-04-24T04:03:11Z",
-        "expires_at": "2026-05-01T03:59:02Z",
+        "digest": "sha256:66e9cb93c4fc251452d4c8e4393d00bec30f3695f850f60911c3b24307e63fac",
+        "created_at": "2026-04-24T15:02:17Z",
+        "updated_at": "2026-04-24T15:02:17Z",
+        "expires_at": "2026-05-01T14:56:18Z",
         "workflow_run": {
-          "id": 24871455262,
+          "id": 24896087945,
           "repository_id": 954009150,
           "head_repository_id": 954009150,
-          "head_branch": "fix/install_jvm_service#1",
-          "head_sha": "0ab91e42fdb90be76a5926707ed98da19b7baa15"
+          "head_branch": "feat/language_jna#1",
+          "head_sha": "ada681b7e3951df9a9078a39fdf2b3e54c1dd4ce"
         }
       },
       {
-        "id": 6616957553,
-        "node_id": "MDg6QXJ0aWZhY3Q2NjE2OTU3NTUz",
-        "name": "debug apk (x86)",
-        "size_in_bytes": 185654075,
-        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6616957553",
-        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6616957553/zip",
-        "expired": false,
-        "digest": "sha256:a852a94079783dcedc80f050e5e9f6ee6efd513da6b7a072b212d645a8c0f63f",
-        "created_at": "2026-04-24T04:03:10Z",
-        "updated_at": "2026-04-24T04:03:10Z",
-        "expires_at": "2026-05-01T03:59:02Z",
-        "workflow_run": {
-          "id": 24871455262,
-          "repository_id": 954009150,
-          "head_repository_id": 954009150,
-          "head_branch": "fix/install_jvm_service#1",
-          "head_sha": "0ab91e42fdb90be76a5926707ed98da19b7baa15"
-        }
-      },
-      {
-        "id": 6616957287,
-        "node_id": "MDg6QXJ0aWZhY3Q2NjE2OTU3Mjg3",
+        "id": 6627310231,
+        "node_id": "MDg6QXJ0aWZhY3Q2NjI3MzEwMjMx",
         "name": "debug apk (arm64)",
-        "size_in_bytes": 201765433,
-        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6616957287",
-        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6616957287/zip",
+        "size_in_bytes": 201765482,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6627310231",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6627310231/zip",
         "expired": false,
-        "digest": "sha256:1e8afb55a30d3f18a7661b427f120e9b0ef673479f5b78030f71cd5225e5277b",
-        "created_at": "2026-04-24T04:03:08Z",
-        "updated_at": "2026-04-24T04:03:08Z",
-        "expires_at": "2026-05-01T03:59:02Z",
+        "digest": "sha256:ee059deb49dc36cf692950ef3b70e1bd48dbd311e70c6db49ae4d921421205e5",
+        "created_at": "2026-04-24T15:00:25Z",
+        "updated_at": "2026-04-24T15:00:25Z",
+        "expires_at": "2026-05-01T14:56:18Z",
         "workflow_run": {
-          "id": 24871455262,
+          "id": 24896087945,
           "repository_id": 954009150,
           "head_repository_id": 954009150,
-          "head_branch": "fix/install_jvm_service#1",
-          "head_sha": "0ab91e42fdb90be76a5926707ed98da19b7baa15"
+          "head_branch": "feat/language_jna#1",
+          "head_sha": "ada681b7e3951df9a9078a39fdf2b3e54c1dd4ce"
         }
       },
       {
-        "id": 6616955820,
-        "node_id": "MDg6QXJ0aWZhY3Q2NjE2OTU1ODIw",
-        "name": "debug apk (x86_64)",
-        "size_in_bytes": 206194486,
-        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6616955820",
-        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6616955820/zip",
+        "id": 6627309220,
+        "node_id": "MDg6QXJ0aWZhY3Q2NjI3MzA5MjIw",
+        "name": "debug apk (x86)",
+        "size_in_bytes": 185653861,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6627309220",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6627309220/zip",
         "expired": false,
-        "digest": "sha256:4b2f45dc30e4f76817150da93bfb94c501770229362fe55391139e4f8879146c",
-        "created_at": "2026-04-24T04:02:58Z",
-        "updated_at": "2026-04-24T04:02:58Z",
-        "expires_at": "2026-05-01T03:59:02Z",
+        "digest": "sha256:1adea899661b60016c659c14ff3ab37ba399519b31ed73a48c5ef779c433ecdf",
+        "created_at": "2026-04-24T15:00:21Z",
+        "updated_at": "2026-04-24T15:00:21Z",
+        "expires_at": "2026-05-01T14:56:18Z",
         "workflow_run": {
-          "id": 24871455262,
+          "id": 24896087945,
           "repository_id": 954009150,
           "head_repository_id": 954009150,
-          "head_branch": "fix/install_jvm_service#1",
-          "head_sha": "0ab91e42fdb90be76a5926707ed98da19b7baa15"
+          "head_branch": "feat/language_jna#1",
+          "head_sha": "ada681b7e3951df9a9078a39fdf2b3e54c1dd4ce"
+        }
+      },
+      {
+        "id": 6627306681,
+        "node_id": "MDg6QXJ0aWZhY3Q2NjI3MzA2Njgx",
+        "name": "debug apk (all)",
+        "size_in_bytes": 345938273,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6627306681",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6627306681/zip",
+        "expired": false,
+        "digest": "sha256:29c1cff5ab2930ee5d825ee17b256cf5c5b2a338ac663be527d3a03cb8e5593c",
+        "created_at": "2026-04-24T15:00:14Z",
+        "updated_at": "2026-04-24T15:00:14Z",
+        "expires_at": "2026-05-01T14:56:18Z",
+        "workflow_run": {
+          "id": 24896087945,
+          "repository_id": 954009150,
+          "head_repository_id": 954009150,
+          "head_branch": "feat/language_jna#1",
+          "head_sha": "ada681b7e3951df9a9078a39fdf2b3e54c1dd4ce"
+        }
+      },
+      {
+        "id": 6627305519,
+        "node_id": "MDg6QXJ0aWZhY3Q2NjI3MzA1NTE5",
+        "name": "debug apk (x86_64)",
+        "size_in_bytes": 206194645,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6627305519",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/6627305519/zip",
+        "expired": false,
+        "digest": "sha256:953bc0631e2ddf5cba1af6fbf87e3477d3e5423658754889b9daf5451fc285dd",
+        "created_at": "2026-04-24T15:00:10Z",
+        "updated_at": "2026-04-24T15:00:10Z",
+        "expires_at": "2026-05-01T14:56:18Z",
+        "workflow_run": {
+          "id": 24896087945,
+          "repository_id": 954009150,
+          "head_repository_id": 954009150,
+          "head_branch": "feat/language_jna#1",
+          "head_sha": "ada681b7e3951df9a9078a39fdf2b3e54c1dd4ce"
         }
       }
     ]
