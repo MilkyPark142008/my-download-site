@@ -1,20 +1,20 @@
 [
   {
     "type": "release",
-    "versionCode": 1301,
-    "versionName": "1.3.0.1",
-    "date": "2026.04.19",
+    "versionCode": 1302,
+    "versionName": "1.3.0.2",
+    "date": "2026.04.24",
     "description": [
       {
         "lang": "en",
-        "text": "(Translated from Chinese by AI)\n1. Fix the issue where FPS cannot be displayed correctly when using Vulkan on 26.2+.  \n2. Fix the issue where NeoForge cannot be installed from the official source for MC 26.1.1.  \n3. Fix the issue where the absence of a version file in the runtime library causes all version checks to fail.  \n4. Fix the issue where menu key icon loading failure may cause the launcher to crash.  \n5. Fix the issue where uppercase W and @ cannot be typed in 1.8.9.  \n6. Fix the issue where Tab completion cannot be used in 1.8.9.  \n7. Fix the issue where clipboard-related operations may crash due to thread issues.  \n8. Fix the issue where the \"World\" download page category cannot be translated.  \n9. Add a feature to directly use the name returned by the API when translation cannot be obtained."
+        "text": "(Translated from Chinese by AI)\n1. Support loading Sable Rapier native library plugin  \n2. Fix the issue where incorrect key configuration in options.txt causes it to be reset  \n3. Update KW renderer  \n4. Fix the issue where 26.2 snapshot4+ fails to start  \n5. Remove resolution scaling configuration from game settings"
       },
       {
         "lang": "zh_CN",
-        "text": "（若启动器内下载缓慢请使用网盘下载,64位的请下载arm64，不知道该下哪个的请下载all）\n1.修复26.2+使用Vulkan时FPS无法正确显示的问题\n2.修复无法为 MC 26.1.1 从官方源安装 NeoForge 的问题\n3.修复运行库不存在version文件导致检测版本全部失败的问题\n4.修复菜单键图标加载失败可能导致启动器闪退的问题\n5.修复1.8.9无法输入大写w和@的问题\n6.修复1.8.9无法使用Tab补全的问题\n7.修复剪贴板相关操作可能因线程崩溃的问题\n8.修复“世界”下载页面分类无法翻译的问题\n9.增加无法获取翻译时尝试直接使用API返回的name功能"
+        "text": "（若启动器内下载缓慢请使用网盘下载,64位的请下载arm64，不知道该下哪个的请下载all）\n1.支持加载 Sable Rapier 原生库插件\n2.修复options.txt按键配置错误导致被重置的问题\n3.更新KW渲染器\n4.修复26.2 snapshot4+ 无法启动的问题\n5.移除游戏设置中的分辨率缩放配置"
       }
     ],
-    "netdiskUrl": "https://pan.quark.cn/s/107a2f502979",
-    "url": "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.3.0.1/FCL-release-1.3.0.1-all.apk"
+    "netdiskUrl": "https://pan.quark.cn/s/a7501c2098d3",
+    "url": "https://github.com/FCL-Team/FoldCraftLauncher/releases/download/1.3.0.2/FCL-release-1.3.0.2-all.apk"
   }
 ]
