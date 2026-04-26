@@ -583,7 +583,6 @@ body {
 .refresh-link:hover {
     color: #333;
 }
-/* 版本选择下拉框样式 */
 .version-selector {
     background: #ffffff;
     border-radius: 12px;
@@ -643,7 +642,7 @@ body {
     <div class="container">
         <div class="header">
             <h1>MC启动器下载站</h1>
-            <p>每小时自动更新</p>
+            <p>每两小时自动更新</p>
         </div>
         <div id="statusBar" class="status-bar" style="display: none;">
             <div id="statusDot" class="status-dot"></div>
@@ -696,7 +695,6 @@ body {
                 </div>
             </div>
 
-            <!-- 版本选择下拉框 -->
             <div class="version-selector" id="fclVersionSelector" style="display: none;">
                 <label>选择版本：</label>
                 <select id="fclVersionSelect"></select>
@@ -987,7 +985,6 @@ body {
                     }
                 }
                 
-                // 渲染 Action 部分
                 if (fclActionData && fclActionData.run && fclActionData.run.id) {
                     const run = fclActionData.run;
                     document.getElementById('fclActionVersionBadge').textContent = '运行 #' + run.id;
@@ -1014,7 +1011,6 @@ body {
                 } else {
                     document.getElementById('fclActionVersionBadge').textContent = '暂无';
                     document.getElementById('fclActionContainer').innerHTML = '<div class="no-assets">暂无 Action 构建记录</div>';
-                    console.warn('fclActionData 无效:', fclActionData);
                 }
                 
                 const saved = localStorage.getItem('fcl_download_type');
@@ -1189,7 +1185,6 @@ body {
                 if (amethystReleaseData) {
                     document.getElementById('amethystVersionBadge').textContent = amethystReleaseData.tag_name || '未知版本';
                     document.getElementById('amethystUpdateTime').textContent = amethystReleaseData.published_at ? formatDate(amethystReleaseData.published_at) : '';
-                    // 优先使用历史日志
                     let changelogText = '';
                     const historyText = getAmethystChangelogFromHistory(amethystReleaseData.tag_name);
                     if (historyText) {
