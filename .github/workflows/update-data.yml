@@ -1,0 +1,221 @@
+name: 自动更新下载数据
+
+on:
+  push:
+    paths:
+      - 'index.html'
+      - 'README.md'
+      - '.github/workflows/update-data.yml'
+  schedule:
+    - cron: '0 */2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 安装 jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      # ==================== FCL ====================
+      - name: 创建 FCL 文件夹
+        run: mkdir -p FCL
+
+      - name: 获取 FCL 所有 Releases
+        run: |
+          curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/releases?per_page=100" \
+            > FCL/fcl-releases.json
+
+      - name: 提取 FCL 所有版本信息（精简版）
+        run: |
+          jq '[.[] | {
+            tag_name: .tag_name,
+            published_at: .published_at,
+            assets: [.assets[] | {
+              name: .name,
+              size: .size,
+              browser_download_url: .browser_download_url
+            }]
+          }]' FCL/fcl-releases.json > FCL/fcl-all-releases.json
+
+      - name: 获取 FCL 最新 version_map.json
+        run: |
+          curl -s "https://raw.githubusercontent.com/FCL-Team/FoldCraftLauncher/main/version_map.json" > FCL/fcl-version-map-latest.json
+
+      - name: 更新 FCL 历史更新日志（自动追加新版本）
+        run: |
+          if [ ! -f FCL/fcl-changelog-history.json ]; then
+            echo '[]' > FCL/fcl-changelog-history.json
+          fi
+          
+          LATEST_VERSION=$(jq -r '.[0].versionName // empty' FCL/fcl-version-map-latest.json)
+          LATEST_DATE=$(jq -r '.[0].date // empty' FCL/fcl-version-map-latest.json)
+          LATEST_TEXT=$(jq -r '.[0].description[] | select(.lang=="zh_CN") | .text' FCL/fcl-version-map-latest.json 2>/dev/null)
+          
+          if [ -n "$LATEST_VERSION" ] && [ -n "$LATEST_TEXT" ]; then
+            EXISTS=$(jq -r --arg ver "$LATEST_VERSION" '.[] | select(.versionName == $ver) | .versionName' FCL/fcl-changelog-history.json)
+            
+            if [ -z "$EXISTS" ]; then
+              echo "发现新版本: $LATEST_VERSION，正在追加到历史文件..."
+              NEW_ENTRY=$(jq -n --arg ver "$LATEST_VERSION" --arg date "$LATEST_DATE" --arg text "$LATEST_TEXT" \
+                '{versionName: $ver, date: $date, text: $text}')
+              jq --argjson new "$NEW_ENTRY" '. += [$new]' FCL/fcl-changelog-history.json > FCL/fcl-changelog-history.tmp.json
+              mv FCL/fcl-changelog-history.tmp.json FCL/fcl-changelog-history.json
+              echo "已添加新版本"
+            else
+              echo "版本 $LATEST_VERSION 已存在于历史文件中，跳过"
+            fi
+          else
+            echo "无法提取最新版本信息，跳过更新"
+          fi
+          
+          jq 'sort_by(.versionName | split(".") | map(tonumber)) | reverse' FCL/fcl-changelog-history.json > FCL/fcl-changelog-history.sorted.json
+          mv FCL/fcl-changelog-history.sorted.json FCL/fcl-changelog-history.json
+
+      - name: 获取 FCL Action
+        run: |
+          RUN_JSON=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs?status=success&per_page=1")
+          RUN_ID=$(echo "$RUN_JSON" | jq -r '.workflow_runs[0].id // empty')
+          if [ -n "$RUN_ID" ] && [ "$RUN_ID" != "null" ]; then
+            ARTIFACTS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/$RUN_ID/artifacts")
+            RUN_OBJ=$(echo "$RUN_JSON" | jq '.workflow_runs[0]')
+            echo "{\"run\": $RUN_OBJ, \"artifacts\": $ARTIFACTS}" > FCL/fcl-action.json
+          else
+            echo "{\"run\": null, \"artifacts\": {\"artifacts\": []}}" > FCL/fcl-action.json
+          fi
+
+      # ==================== Zalith ====================
+      - name: 获取 Zalith Release
+        run: |
+          curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/releases/latest" \
+            > zalith-release.json
+
+      - name: 获取 Zalith Action
+        run: |
+          RUN_JSON=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs?status=success&per_page=1")
+          RUN_ID=$(echo "$RUN_JSON" | jq -r '.workflow_runs[0].id // empty')
+          if [ -n "$RUN_ID" ] && [ "$RUN_ID" != "null" ]; then
+            ARTIFACTS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/$RUN_ID/artifacts")
+            RUN_OBJ=$(echo "$RUN_JSON" | jq '.workflow_runs[0]')
+            echo "{\"run\": $RUN_OBJ, \"artifacts\": $ARTIFACTS}" > zalith-action.json
+          else
+            echo "{\"run\": null, \"artifacts\": {\"artifacts\": []}}" > zalith-action.json
+          fi
+
+      - name: 合并 Zalith JSON
+        run: |
+          jq -s '{release: .[0], action: {run: (.[1].run), artifacts: (.[1].artifacts.artifacts // [])}}' \
+            zalith-release.json zalith-action.json > zalith.json
+
+      # ==================== Amethyst ====================
+      - name: 创建 Amethyst 文件夹
+        run: mkdir -p Amethyst
+
+      - name: 获取 Amethyst Release
+        run: |
+          curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/releases/latest" \
+            > amethyst-release.json
+
+      - name: 获取 Amethyst Action
+        run: |
+          RUN_JSON=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs?status=success&per_page=1")
+          RUN_ID=$(echo "$RUN_JSON" | jq -r '.workflow_runs[0].id // empty')
+          if [ -n "$RUN_ID" ] && [ "$RUN_ID" != "null" ]; then
+            ARTIFACTS=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/$RUN_ID/artifacts")
+            RUN_OBJ=$(echo "$RUN_JSON" | jq '.workflow_runs[0]')
+            echo "{\"run\": $RUN_OBJ, \"artifacts\": $ARTIFACTS}" > amethyst-action.json
+          else
+            echo "{\"run\": null, \"artifacts\": {\"artifacts\": []}}" > amethyst-action.json
+          fi
+
+      - name: 合并 Amethyst JSON
+        run: |
+          jq -s '{release: .[0], action: {run: (.[1].run), artifacts: (.[1].artifacts.artifacts // [])}}' \
+            amethyst-release.json amethyst-action.json > amethyst.json
+
+      - name: 更新 Amethyst 历史更新日志
+        run: |
+          if [ ! -f Amethyst/amethyst-changelog-history.json ]; then
+            echo '[]' > Amethyst/amethyst-changelog-history.json
+          fi
+          
+          LATEST_VERSION=$(jq -r '.release.tag_name // empty' amethyst.json)
+          LATEST_DATE=$(jq -r '.release.published_at // empty' amethyst.json)
+          LATEST_TEXT=$(jq -r '.release.body // empty' amethyst.json)
+          
+          if [ -n "$LATEST_VERSION" ] && [ -n "$LATEST_TEXT" ]; then
+            EXISTS=$(jq -r --arg ver "$LATEST_VERSION" '.[] | select(.versionName == $ver) | .versionName' Amethyst/amethyst-changelog-history.json 2>/dev/null)
+            
+            if [ -z "$EXISTS" ]; then
+              echo "发现新版本: $LATEST_VERSION，正在追加到历史文件..."
+              CLEAN_TEXT=$(echo "$LATEST_TEXT" | tr '\r\n' ' ' | sed 's/"/\\"/g' | sed 's/\r//g')
+              FORMATTED_DATE=$(echo "$LATEST_DATE" | cut -d'T' -f1)
+              NEW_ENTRY=$(jq -n --arg ver "$LATEST_VERSION" --arg date "$FORMATTED_DATE" --arg text "$CLEAN_TEXT" \
+                '{versionName: $ver, date: $date, text: $text}')
+              jq --argjson new "$NEW_ENTRY" '. += [$new]' Amethyst/amethyst-changelog-history.json > Amethyst/amethyst-changelog-history.tmp.json
+              mv Amethyst/amethyst-changelog-history.tmp.json Amethyst/amethyst-changelog-history.json
+              echo "已添加新版本"
+            else
+              echo "版本 $LATEST_VERSION 已存在于历史文件中，跳过"
+            fi
+          else
+            echo "无法提取最新版本信息，跳过更新"
+          fi
+          
+          jq 'sort_by(.date) | reverse' Amethyst/amethyst-changelog-history.json > Amethyst/amethyst-changelog-history.sorted.json
+          mv Amethyst/amethyst-changelog-history.sorted.json Amethyst/amethyst-changelog-history.json
+
+      # ==================== MobileGlues ====================
+      - name: 获取 MobileGlues Release
+        run: |
+          curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/latest" \
+            > mobileglues-release.json
+
+      - name: 处理 MobileGlues JSON
+        run: |
+          jq '{release: .}' mobileglues-release.json > mobileglues.json
+
+      # ==================== 清理临时文件 ====================
+      - name: 清理临时文件
+        run: |
+          rm -f FCL/fcl-releases.json
+          rm -f zalith-release.json zalith-action.json
+          rm -f amethyst-release.json amethyst-action.json
+          rm -f mobileglues-release.json
+
+      # ==================== 生成真实源码提交信息 ====================
+      - name: 生成真实的源码提交信息
+        run: |
+          REAL_COMMIT=$(git log --grep="chore: 自动更新下载数据" --invert-grep --format='{"sha":"%H","date":"%cI","message":"%s"}' -1)
+          if [ -z "$REAL_COMMIT" ]; then
+            REAL_COMMIT=$(git log --format='{"sha":"%H","date":"%cI","message":"%s"}' -1)
+          fi
+          echo "$REAL_COMMIT" > commit-info.json
+
+      # ==================== 提交并推送 ====================
+      - name: 提交并推送更改
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add FCL/ Amethyst/ zalith.json amethyst.json mobileglues.json commit-info.json
+          git diff --staged --quiet || git commit -m "chore: 自动更新下载数据 $(date '+%Y-%m-%d %H:%M:%S')"
+          git push
