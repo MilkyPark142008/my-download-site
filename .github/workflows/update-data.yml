@@ -132,6 +132,13 @@ jobs:
             "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/releases/latest" \
             > amethyst-release.json
 
+      - name: 获取 Amethyst 所有 Releases
+        run: |
+          curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/releases?per_page=100" | \
+            jq '[.[] | {tag_name: .tag_name, published_at: .published_at, assets: [.assets[] | {name: .name, size: .size, browser_download_url: .browser_download_url}]}]' \
+            > Amethyst/amethyst-all-releases.json
+
       - name: 获取 Amethyst Action
         run: |
           RUN_JSON=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
@@ -162,11 +169,11 @@ jobs:
           LATEST_TEXT=$(jq -r '.release.body // empty' amethyst.json)
           
           if [ -n "$LATEST_VERSION" ] && [ -n "$LATEST_TEXT" ]; then
-            EXISTS=$(jq -r --arg ver "$LATEST_VERSION" '.[] | select(.versionName == $ver) | .versionName' Amethyst/amethyst-changelog-history.json 2>/dev/null)
+            EXISTS=$(jq -r --arg ver "$LATEST_VERSION" '.[] | select(.versionName == $ver) | .versionName' Amethyst/amethyst-changelog-history.json)
             
             if [ -z "$EXISTS" ]; then
               echo "发现新版本: $LATEST_VERSION，正在追加到历史文件..."
-              CLEAN_TEXT=$(echo "$LATEST_TEXT" | tr '\r\n' ' ' | sed 's/"/\\"/g' | sed 's/\r//g')
+              CLEAN_TEXT=$(echo "$LATEST_TEXT" | tr '\n' ' ' | sed 's/"/\\"/g')
               FORMATTED_DATE=$(echo "$LATEST_DATE" | cut -d'T' -f1)
               NEW_ENTRY=$(jq -n --arg ver "$LATEST_VERSION" --arg date "$FORMATTED_DATE" --arg text "$CLEAN_TEXT" \
                 '{versionName: $ver, date: $date, text: $text}')
@@ -202,13 +209,10 @@ jobs:
           rm -f amethyst-release.json amethyst-action.json
           rm -f mobileglues-release.json
 
-      # ==================== 生成真实源码提交信息 ====================
-      - name: 生成真实的源码提交信息
+      # ==================== 生成源码提交信息（不跳过自动提交）====================
+      - name: 生成源码提交信息
         run: |
-          REAL_COMMIT=$(git log --grep="chore: 自动更新下载数据" --invert-grep --format='{"sha":"%H","date":"%cI","message":"%s"}' -1)
-          if [ -z "$REAL_COMMIT" ]; then
-            REAL_COMMIT=$(git log --format='{"sha":"%H","date":"%cI","message":"%s"}' -1)
-          fi
+          REAL_COMMIT=$(git log --format='{"sha":"%H","date":"%cI","message":"%s"}' -1)
           echo "$REAL_COMMIT" > commit-info.json
 
       # ==================== 提交并推送 ====================
