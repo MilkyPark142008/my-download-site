@@ -219,13 +219,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvet
             await loadAmethystChangelogHistory();
             try{
                 let e=await fetch('Amethyst/amethyst-all-releases.json?t='+Date.now());
-                if(e.ok){
-                    amethystAllReleases=await e.json();
-                    let e=document.getElementById('amethystVersionSelect'),t=document.getElementById('amethystVersionSelector');
-                    e&&amethystAllReleases.length>1?(t.style.display='flex',e.innerHTML='',amethystAllReleases.forEach(t=>{let a=document.createElement('option');a.value=t.tag_name,a.textContent=t.tag_name+' ('+formatDate(t.published_at)+')',e.appendChild(a)}),e.addEventListener('change',function(){displayAmethystVersion(this.value)}),e.value=amethystAllReleases[0].tag_name,currentAmethystVersion=amethystAllReleases[0].tag_name,displayAmethystVersion(currentAmethystVersion)):(t.style.display='none',currentAmethystVersion=amethystAllReleases[0].tag_name,displayAmethystVersion(currentAmethystVersion))
-                }else{
-                    throw new Error('无法加载版本列表');
-                }
+                if(!e.ok)throw new Error('HTTP '+e.status);
+                amethystAllReleases=await e.json();
+                let e=document.getElementById('amethystVersionSelect'),t=document.getElementById('amethystVersionSelector');
+                e&&amethystAllReleases.length>1?(t.style.display='flex',e.innerHTML='',amethystAllReleases.forEach(t=>{let a=document.createElement('option');a.value=t.tag_name,a.textContent=t.tag_name+' ('+formatDate(t.published_at)+')',e.appendChild(a)}),e.addEventListener('change',function(){displayAmethystVersion(this.value)}),e.value=amethystAllReleases[0].tag_name,currentAmethystVersion=amethystAllReleases[0].tag_name,displayAmethystVersion(currentAmethystVersion)):(t.style.display='none',currentAmethystVersion=amethystAllReleases[0].tag_name,displayAmethystVersion(currentAmethystVersion))
             }catch(e){
                 console.error('Amethyst版本列表加载失败:',e);
                 document.getElementById('amethystVersionBadge').textContent='加载失败';
