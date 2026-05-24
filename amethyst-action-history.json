@@ -1,1 +1,402 @@
-[]
+[
+  {
+    "id": 25936254761,
+    "sha": "cd8ed668b84fe97587a6fccddfa18730b2146ee9",
+    "short_sha": "cd8ed66",
+    "message": "[FIXME] Half-finished lwjgl3ify support\n\nOnly missing popup that installs lwjgl3ify properly if detected in mods",
+    "created_at": "2026-05-15T19:06:22Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25936254761"
+  },
+  {
+    "id": 25868506834,
+    "sha": "ffe492921195542340a1785aa301b5e811ccdfea",
+    "short_sha": "ffe4929",
+    "message": "fix: Handle high polling rate sources\n\nAndroid's onTouch and onGenericMotion are only called every screen\nrefresh. This means it is tied to your hz. So what android does for high\nrefresh rate devices is it stores them in\nMotionEvent.getHistoricalAxisValue() and makes you process them all at\nonce on the next screen refresh.\n\nSee\nhttps://developer.android.com/reference/android/view/MotionEvent#batching\n\nWe used to just completely ignore this so high DPI mice didn't work\nproperly.\n\nHopefully high DPI everything now works properly.",
+    "created_at": "2026-05-14T15:21:11Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25868506834"
+  },
+  {
+    "id": 25868472492,
+    "sha": "9070983d2e0e554254a2123da2546dd20c85d689",
+    "short_sha": "9070983",
+    "message": "fix: Handle high polling rate sources\n\nAndroid's onTouch and onGenericMotion are only called every screen\nrefresh. This means it is tied to your hz. So what android does for high\nrefresh rate devices is it stores them in\nMotionEvent.getHistoricalAxisValue() and makes you process them all at\nonce on the next screen refresh.\n\nSee\nhttps://developer.android.com/reference/android/view/MotionEvent#batching\n\nWe used to just completely ignore this so high DPI mice didn't work\nproperly.\n\nHopefully high DPI everything now works properly.",
+    "created_at": "2026-05-14T15:20:23Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25868472492"
+  },
+  {
+    "id": 25868470818,
+    "sha": "9070983d2e0e554254a2123da2546dd20c85d689",
+    "short_sha": "9070983",
+    "message": "fix: Handle high polling rate sources\n\nAndroid's onTouch and onGenericMotion are only called every screen\nrefresh. This means it is tied to your hz. So what android does for high\nrefresh rate devices is it stores them in\nMotionEvent.getHistoricalAxisValue() and makes you process them all at\nonce on the next screen refresh.\n\nSee\nhttps://developer.android.com/reference/android/view/MotionEvent#batching\n\nWe used to just completely ignore this so high DPI mice didn't work\nproperly.\n\nHopefully high DPI everything now works properly.",
+    "created_at": "2026-05-14T15:20:23Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25868470818"
+  },
+  {
+    "id": 25825438849,
+    "sha": "d080c6a78a6654c1ab9ef3f46c38515d8713638d",
+    "short_sha": "d080c6a",
+    "message": "fix: Handle high polling rate sources\n\nAndroid's onTouch and onGenericMotion are only called every screen\nrefresh. This means it is tied to your hz. So what android does for high\nrefresh rate devices is it stores them in\nMotionEvent.getHistoricalAxisValue() and makes you process them all at\nonce on the next screen refresh.\n\nSee\nhttps://developer.android.com/reference/android/view/MotionEvent#batching\n\nWe used to just completely ignore this so high DPI mice didn't work\nproperly.\n\nHopefully high DPI everything now works properly.",
+    "created_at": "2026-05-13T20:40:11Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25825438849"
+  },
+  {
+    "id": 25825167974,
+    "sha": "d080c6a78a6654c1ab9ef3f46c38515d8713638d",
+    "short_sha": "d080c6a",
+    "message": "fix: Handle high polling rate sources\n\nAndroid's onTouch and onGenericMotion are only called every screen\nrefresh. This means it is tied to your hz. So what android does for high\nrefresh rate devices is it stores them in\nMotionEvent.getHistoricalAxisValue() and makes you process them all at\nonce on the next screen refresh.\n\nSee\nhttps://developer.android.com/reference/android/view/MotionEvent#batching\n\nWe used to just completely ignore this so high DPI mice didn't work\nproperly.\n\nHopefully high DPI everything now works properly.",
+    "created_at": "2026-05-13T20:40:11Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25825167974"
+  },
+  {
+    "id": 25616050080,
+    "sha": "65ca76015c7e8cd150914cbc2f75eb512f70ba28",
+    "short_sha": "65ca760",
+    "message": "Merge pull request #256 from AngelAuraMC/feat/misc\n\nfix: Error parsing JVM args when JSON missing arguments field",
+    "created_at": "2026-05-10T00:57:48Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25616050080"
+  },
+  {
+    "id": 25520589828,
+    "sha": "1883dde9773e9f878731abae3cf5c12ac7b00e67",
+    "short_sha": "1883dde",
+    "message": "fix: Error parsing JVM args when JSON missing arguments field",
+    "created_at": "2026-05-07T13:30:44Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25520589828"
+  },
+  {
+    "id": 25498947841,
+    "sha": "1883dde9773e9f878731abae3cf5c12ac7b00e67",
+    "short_sha": "1883dde",
+    "message": "fix: Error parsing JVM args when JSON missing arguments field",
+    "created_at": "2026-05-07T13:30:44Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25498947841"
+  },
+  {
+    "id": 25488483997,
+    "sha": "3f6656b0cc88e9c7f37284d4afa94bbd523539ef",
+    "short_sha": "3f6656b",
+    "message": "Merge pull request #254 from AngelAuraMC/feat/misc\n\nmisc bug fixes",
+    "created_at": "2026-05-07T09:47:20Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25488483997"
+  },
+  {
+    "id": 25431707220,
+    "sha": "f8b7821d708ac54feadbde8fa09cb6c6b19a87f3",
+    "short_sha": "f8b7821",
+    "message": "bump: version from 1.1.4 to 1.1.5",
+    "created_at": "2026-05-06T11:09:17Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25431707220"
+  },
+  {
+    "id": 25431250901,
+    "sha": "cfbebc54387a27ecf227f19faa973f82b8c58ca1",
+    "short_sha": "cfbebc5",
+    "message": "bump: version from 1.1.4 to 1.1.5",
+    "created_at": "2026-05-06T10:58:07Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25431250901"
+  },
+  {
+    "id": 25394563460,
+    "sha": "76478ffeaf232221b1f23870dbe2a64953bba399",
+    "short_sha": "76478ff",
+    "message": "bump: version from 1.1.4 to 1.1.5",
+    "created_at": "2026-05-05T18:25:15Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25394563460"
+  },
+  {
+    "id": 25383705181,
+    "sha": "6bff8cee09237554967d609d59412f5b12cb7eee",
+    "short_sha": "6bff8ce",
+    "message": "bump: version from 1.1.4 to 1.1.5",
+    "created_at": "2026-05-05T14:50:20Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25383705181"
+  },
+  {
+    "id": 25339280756,
+    "sha": "e72c505948ef338d68e0916098abb7d7c7302383",
+    "short_sha": "e72c505",
+    "message": "bump: version from 1.1.4 to 1.1.5",
+    "created_at": "2026-05-04T19:36:18Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25339280756"
+  },
+  {
+    "id": 25333641546,
+    "sha": "e2e8292ba122aca468fc77e70f38f83e3ae56555",
+    "short_sha": "e2e8292",
+    "message": "bump: version from 1.1.4 to 1.1.5",
+    "created_at": "2026-04-28T13:32:28Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25333641546"
+  },
+  {
+    "id": 25055894707,
+    "sha": "e2e8292ba122aca468fc77e70f38f83e3ae56555",
+    "short_sha": "e2e8292",
+    "message": "bump: version from 1.1.4 to 1.1.5",
+    "created_at": "2026-04-28T13:32:28Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25055894707"
+  },
+  {
+    "id": 25055869853,
+    "sha": "fcc66daa582c7ed7389a816c460e2326d82a5ed1",
+    "short_sha": "fcc66da",
+    "message": "fix(build): Correct location of local curseforge_key.txt file\n\nRelative path bad, use absolute. It causes issues in gradle vers that\nhave workingDir in caches.",
+    "created_at": "2026-04-28T13:31:59Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25055869853"
+  },
+  {
+    "id": 25055218845,
+    "sha": "b113d9086479b59cc6465c15ccbf1c0968a18e46",
+    "short_sha": "b113d90",
+    "message": "fix(build): Correct location of local curseforge_key.txt file\n\nRelative path bad, use absolute. It causes issues in gradle vers that\nhave workingDir in caches.",
+    "created_at": "2026-04-28T13:19:09Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25055218845"
+  },
+  {
+    "id": 25003564226,
+    "sha": "1a9a5fa76413ecc60734458989f3b4723a653433",
+    "short_sha": "1a9a5fa",
+    "message": "[revertme] arm64 only builds. fix for MobileGL",
+    "created_at": "2026-04-27T15:18:19Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25003564226"
+  },
+  {
+    "id": 25003344690,
+    "sha": "3de7f1b07335fcdbd2a1f2cfc07399f5ffb78b34",
+    "short_sha": "3de7f1b",
+    "message": "[revertme] arm64 only builds. fix for MobileGL",
+    "created_at": "2026-04-27T15:14:03Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25003344690"
+  },
+  {
+    "id": 24992672438,
+    "sha": "11831418a32954f6664a0ef4317a76ca2c51c28c",
+    "short_sha": "1183141",
+    "message": "fix(build): Correct location of local curseforge_key.txt file\n\nRelative path bad, use absolute. It causes issues in gradle vers that\nhave workingDir in caches.",
+    "created_at": "2026-04-27T10:56:34Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24992672438"
+  },
+  {
+    "id": 24990549497,
+    "sha": "ee2285ed2168cae2701a23f3262b5b68044e62db",
+    "short_sha": "ee2285e",
+    "message": "bump: version from 1.1.4 to 1.1.5",
+    "created_at": "2026-04-27T10:45:19Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24990549497"
+  },
+  {
+    "id": 24989745900,
+    "sha": "2fe19967dac0b8616f8bd2c1d478c7358b7e2029",
+    "short_sha": "2fe1996",
+    "message": "bump: version from 1.1.4 to 1.1.5",
+    "created_at": "2026-04-27T10:26:34Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24989745900"
+  },
+  {
+    "id": 24957623277,
+    "sha": "09b0f20d045d07aa47f05e95ff704a8bd30778ad",
+    "short_sha": "09b0f20",
+    "message": "bump(MobileGlues): 1.1.5-dev, BGRA Swizzling\n\nFixes rendering for LWJGL3ify\nUses\nhttps://github.com/AngelAuraMC/amethyst-prebuilt-libraries/actions/runs/24894710100",
+    "created_at": "2026-04-26T13:12:49Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24957623277"
+  },
+  {
+    "id": 24955174699,
+    "sha": "8045422171057a8c3d59e718556a181593a00c08",
+    "short_sha": "8045422",
+    "message": "fix(SDL): Define preferred OpenGL driver\n\nTODO: Detect Angelica versions supporting GLES directly and unset so SDL\ndefaults to it.",
+    "created_at": "2026-04-26T11:09:52Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24955174699"
+  },
+  {
+    "id": 24955053398,
+    "sha": "87481ece59e20d794bee5fa85837ff0f0d096c09",
+    "short_sha": "87481ec",
+    "message": "bump(MobileGlues): 1.1.5-dev, BGRA Swizzling\n\nFixes rendering\nUses\nhttps://github.com/AngelAuraMC/amethyst-prebuilt-libraries/actions/runs/24894710100",
+    "created_at": "2026-04-26T11:03:24Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24955053398"
+  },
+  {
+    "id": 24926961142,
+    "sha": "92f105a05e4de5f1e30db1419fa69bfc1de61c44",
+    "short_sha": "92f105a",
+    "message": "bump: version from 1.1.4 to 1.1.5",
+    "created_at": "2026-04-25T08:39:59Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24926961142"
+  },
+  {
+    "id": 24926943074,
+    "sha": "dd94a7f2e8e19f22fde523389fe5a9c170fbe3bd",
+    "short_sha": "dd94a7f",
+    "message": "fix(lwjgl): Load pojavexec earlier\n\nFixes 26.2-snapshot-4 crash\n\nWe put System.loadLibrary(\"pojavexec\") in Library.java and Sys.java and\nseperate out GLFW pojavexec init to GLFW static block initializer.\n\nUses\n(3.4.1)\nhttps://github.com/AngelAuraMC/lwjgl3/commit/b84bec48c80f41249ecd0c07cf40f27b71506bd1\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24783965974\n(3.3.3)\nhttps://github.com/AngelAuraMC/lwjgl3/commit/b0ee05e8947598ecc269476401cb1f4e615c4ccc\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24783304994",
+    "created_at": "2026-04-25T08:38:46Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24926943074"
+  },
+  {
+    "id": 24886618263,
+    "sha": "e676b1ac608372edc5b066565c6cb1269965c73d",
+    "short_sha": "e676b1a",
+    "message": "fix(SDL): Define preferred OpenGL driver\n\nTODO: Detect Angelica versions supporting GLES directly and unset so SDL\ndefaults to it.",
+    "created_at": "2026-04-24T11:14:06Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24886618263"
+  },
+  {
+    "id": 24841593805,
+    "sha": "1e314a60cfa473aafad23fdd51a7be1f64dc37de",
+    "short_sha": "1e314a6",
+    "message": "rework(SDLActivity): Move initialization to SDLActivity, mSingleton now generic Activity\n\nThis is for LWJGL3ify. They swapped over GLFW with SDL. That includes\nwindow setup. We have to implement that.",
+    "created_at": "2026-04-23T14:43:27Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24841593805"
+  },
+  {
+    "id": 24841471760,
+    "sha": "091978a8d28d11a06ed24350df7596a9dde23098",
+    "short_sha": "091978a",
+    "message": "rework(SDLActivity): Move initialization to SDLActivity, mSingleton now generic Activity\n\nThis is for LWJGL3ify. They swapped over GLFW with SDL. That includes\nwindow setup. We have to implement that.",
+    "created_at": "2026-04-23T14:36:03Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24841471760"
+  },
+  {
+    "id": 24833934432,
+    "sha": "a3caac05c8b5f88c69843bcfae5e20842047566e",
+    "short_sha": "a3caac0",
+    "message": "rework(SDLActivity): Manual surface init, mSingleton now generic Activity\n\nThis is for LWJGL3ify. They swapped over GLFW with SDL. That includes\nwindow setup. We have to implement that.",
+    "created_at": "2026-04-23T11:58:45Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24833934432"
+  },
+  {
+    "id": 24824000218,
+    "sha": "6c661ff8cf337050979709a76baa09eb4de5c984",
+    "short_sha": "6c661ff",
+    "message": "mitigation(lwjgl/3.3.3): Workaround lwjgl-core being overridden, not loading pojavexec\n\nLWJGL3ify overrides Sys, rendering our load call there useless.",
+    "created_at": "2026-04-23T08:00:36Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24824000218"
+  },
+  {
+    "id": 24800897576,
+    "sha": "d180ead570e0feaa45f1e1f3d79a26626ba4e1b8",
+    "short_sha": "d180ead",
+    "message": "mitigation(lwjgl/3.3.3): Workaround lwjgl-core being overridden, not loading pojavexec",
+    "created_at": "2026-04-22T20:26:26Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24800897576"
+  },
+  {
+    "id": 24796758244,
+    "sha": "b28ce5f3226f6b4af66790323461414e1881844f",
+    "short_sha": "b28ce5f",
+    "message": "bump(SDL): 3.2.22 to 3.4.4\n\nUses\nhttps://github.com/AngelAuraMC/amethyst-prebuilt-libraries/actions/runs/24794713156/\nhttps://github.com/AngelAuraMC/amethyst-prebuilt-libraries/commit/4765f4a95bec7f9daaa7d2a3f4430a6708b17da2\n\nLWJGL3.4.1 SDL binding needs them\n\nHad to modify SDLSurface to be public so we could use it.",
+    "created_at": "2026-04-22T18:52:48Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24796758244"
+  },
+  {
+    "id": 24785192903,
+    "sha": "8e166a94d4c86705f5f6f25b3edb0a090f7f0c5d",
+    "short_sha": "8e166a9",
+    "message": "fix(lwjgl): Load pojavexec earlier\n\nFixes 26.2-snapshot-4 crash\n\nWe put System.loadLibrary(\"pojavexec\") in Library.java and Sys.java and\nseperate out GLFW pojavexec init to GLFW static block initializer.\n\nUses\n(3.4.1)\nhttps://github.com/AngelAuraMC/lwjgl3/commit/b84bec48c80f41249ecd0c07cf40f27b71506bd1\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24783965974\n(3.3.3)\nhttps://github.com/AngelAuraMC/lwjgl3/commit/b0ee05e8947598ecc269476401cb1f4e615c4ccc\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24783304994",
+    "created_at": "2026-04-22T14:50:54Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24785192903"
+  },
+  {
+    "id": 24785086196,
+    "sha": "ec5f0e223afe9b0f8359f866e227803826d97a9d",
+    "short_sha": "ec5f0e2",
+    "message": "fix(lwjgl): Load pojavexec earlier\n\nFixes 26.2-snapshot-4 crash\n\nWe put System.loadLibrary(\"pojavexec\") in Library.java and Sys.java and\nseperate out GLFW pojavexec init to GLFW static block initializer.\n\nUses\n(3.4.1)\nhttps://github.com/AngelAuraMC/lwjgl3/commit/b84bec48c80f41249ecd0c07cf40f27b71506bd1\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24783965974\n(3.3.3)\nhttps://github.com/AngelAuraMC/lwjgl3/commit/b0ee05e8947598ecc269476401cb1f4e615c4ccc\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24783304994",
+    "created_at": "2026-04-22T14:48:50Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24785086196"
+  },
+  {
+    "id": 24782201669,
+    "sha": "a853b0c0cca8af664816f54f7157151dad846777",
+    "short_sha": "a853b0c",
+    "message": "[WIP] Fix 26.2-snapshot-4 crash\n\nTODO: Move loading pojavexec into the source lwjgl libs so we don't have\nto go back to merging (ew)",
+    "created_at": "2026-04-22T13:52:35Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24782201669"
+  },
+  {
+    "id": 24782170895,
+    "sha": "f59f1be1df9f80ab1b4ddddd829d9c8588b60887",
+    "short_sha": "f59f1be",
+    "message": "[WIP] Fix 26.2-snapshot-4 crash\n\nTODO: Move loading pojavexec into the source lwjgl libs so we don't have\nto go back to merging (ew)",
+    "created_at": "2026-04-22T13:52:08Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24782170895"
+  },
+  {
+    "id": 24782110924,
+    "sha": "3e6e191fc8701724594bb1781297430ff9b945f4",
+    "short_sha": "3e6e191",
+    "message": "[WIP] Fix 26.2-snapshot-4 crash\n\nTODO: Move loading pojavexec into the source lwjgl libs so we don't have\nto go back to merging (ew)",
+    "created_at": "2026-04-22T10:12:42Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24782110924"
+  },
+  {
+    "id": 24737508082,
+    "sha": "76916429e32396d624979df80a9a6f10795cd87d",
+    "short_sha": "7691642",
+    "message": "[WIP] Fix 26.2-snapshot-4 crash\n\nTODO: Move loading pojavexec into the source lwjgl libs so we don't have\nto go back to merging (ew)",
+    "created_at": "2026-04-21T17:44:54Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24737508082"
+  },
+  {
+    "id": 24737508166,
+    "sha": "76916429e32396d624979df80a9a6f10795cd87d",
+    "short_sha": "7691642",
+    "message": "[WIP] Fix 26.2-snapshot-4 crash\n\nTODO: Move loading pojavexec into the source lwjgl libs so we don't have\nto go back to merging (ew)",
+    "created_at": "2026-04-21T17:44:54Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24737508166"
+  },
+  {
+    "id": 24736442686,
+    "sha": "a0e17b6046fcafaa10ad127b19bba146290184f9",
+    "short_sha": "a0e17b6",
+    "message": "fix(MinecraftDownloader): Account for artifact classifiers\n\ncom.github.GTNewHorizons:lwjgl3ify:3.0.15:forgePatches should now\ninstall com.github.GTNewHorizons:lwjgl3ify:3.0.15:forgePatches instead\nof com.github.GTNewHorizons:lwjgl3ify:3.0.15",
+    "created_at": "2026-04-21T17:21:05Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24736442686"
+  },
+  {
+    "id": 24736019720,
+    "sha": "ee5971eef071349b63534092b460ed9579e1f9da",
+    "short_sha": "ee5971e",
+    "message": "[WIP] Fix 26.2-snapshot-4 crash\n\nTODO: Move loading pojavexec into the source lwjgl libs so we don't have\nto go back to merging (ew)",
+    "created_at": "2026-04-21T17:11:25Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24736019720"
+  },
+  {
+    "id": 24727960191,
+    "sha": "bdee4e18d35fd562de3059e588001821eecb3c82",
+    "short_sha": "bdee4e1",
+    "message": "Merge pull request #248 from AngelAuraMC/feat/misc\n\n- OpenGL fallback for 26.2-snapshot-x (versions with the new Vulkan backend) should now work properly\n- Fixed mods using Veil 3.1.0 or lower crashing on arm/arm64 architectures",
+    "created_at": "2026-04-21T14:26:07Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24727960191"
+  },
+  {
+    "id": 24727705706,
+    "sha": "1cb34a03ecc5ee48597bedef4874f22b28053e64",
+    "short_sha": "1cb34a0",
+    "message": "bump: version from 1.1.3 to 1.1.4",
+    "created_at": "2026-04-21T14:14:38Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24727705706"
+  },
+  {
+    "id": 24727393192,
+    "sha": "1cb34a03ecc5ee48597bedef4874f22b28053e64",
+    "short_sha": "1cb34a0",
+    "message": "bump: version from 1.1.3 to 1.1.4",
+    "created_at": "2026-04-21T14:14:38Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24727393192"
+  },
+  {
+    "id": 24684544317,
+    "sha": "9f481fc6d6505d5dbb36fa66890d4fae51a0b563",
+    "short_sha": "9f481fc",
+    "message": "bump: version from 1.1.3 to 1.1.4",
+    "created_at": "2026-04-20T18:53:42Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24684544317"
+  },
+  {
+    "id": 24684527727,
+    "sha": "b86fe17c82f03b0334ead0758f3dff6ebe0be786",
+    "short_sha": "b86fe17",
+    "message": "fix(EGL): Handle window recreations with different APIs\n\nShould fix Mojang Vulkan falling back to opengl",
+    "created_at": "2026-04-20T18:52:07Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24684527727"
+  }
+]
