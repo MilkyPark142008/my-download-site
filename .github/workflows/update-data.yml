@@ -230,11 +230,38 @@ jobs:
           rm -f amethyst-release.json amethyst-action.json
           rm -f mobileglues-release.json
 
-      # ==================== 生成源码提交信息（不跳过自动提交）====================
+      # ==================== 生成源码提交信息（跳过自动同步提交）====================
       - name: 生成源码提交信息
         run: |
-          REAL_COMMIT=$(git log --format='{"sha":"%H","date":"%cI","message":"%s"}' -1)
-          echo "$REAL_COMMIT" > commit-info.json
+          python3 - <<'PY_COMMIT_INFO'
+          import json
+          import subprocess
+
+          raw = subprocess.check_output([
+              "git", "log", "--format=%H%x09%cI%x09%s"
+          ], text=True)
+
+          info = None
+          skip_prefixes = (
+              "维护：自动更新下载数据",
+              "chore: 自动更新下载数据",
+          )
+
+          for line in raw.splitlines():
+              sha, date, message = line.split("\t", 2)
+              if message.startswith(skip_prefixes):
+                  continue
+              info = {"sha": sha, "date": date, "message": message}
+              break
+
+          if info is None:
+              sha, date, message = raw.splitlines()[0].split("\t", 2)
+              info = {"sha": sha, "date": date, "message": message}
+
+          with open("commit-info.json", "w", encoding="utf-8") as f:
+              json.dump(info, f, ensure_ascii=False)
+              f.write("\n")
+          PY_COMMIT_INFO
 
       # ==================== 提交并推送 ====================
       - name: 提交并推送更改
