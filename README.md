@@ -52,7 +52,6 @@
 | `amethyst-action-history.json` | Angel Aura Amethyst 开发版历史构建记录 |
 | `mobileglues.json` | MobileGlues Release 数据 |
 | `commit-info.json` | 本仓库最近提交信息 |
-| `push-log.txt` | 自动更新流程记录 |
 
 ## 目录结构
 
@@ -73,7 +72,6 @@
 ├── amethyst-action-history.json         # Amethyst 开发版历史构建记录
 ├── mobileglues.json                     # MobileGlues 下载数据
 ├── commit-info.json                     # 仓库提交信息
-├── push-log.txt                         # 自动更新日志
 ├── LICENSE                              # 开源许可证
 └── README.md                            # 项目说明文档
 ```
