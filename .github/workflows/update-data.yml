@@ -96,6 +96,13 @@ jobs:
             echo "{\"run\": null, \"artifacts\": {\"artifacts\": []}}" > FCL/fcl-action.json
           fi
 
+      - name: 获取 FCL Action 历史记录
+        run: |
+          curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs?status=success&per_page=50" | \
+            jq '[(.workflow_runs // [])[] | {id: .id, sha: .head_sha, short_sha: ((.head_sha // "")[0:7]), message: (.head_commit.message // .display_title // "无 commit 信息"), created_at: (.head_commit.timestamp // .created_at), html_url: .html_url}]' \
+            > FCL/fcl-action-history.json
+
       # ==================== Zalith ====================
       - name: 获取 Zalith Release
         run: |
@@ -116,6 +123,13 @@ jobs:
           else
             echo "{\"run\": null, \"artifacts\": {\"artifacts\": []}}" > zalith-action.json
           fi
+
+      - name: 获取 Zalith Action 历史记录
+        run: |
+          curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs?status=success&per_page=50" | \
+            jq '[(.workflow_runs // [])[] | {id: .id, sha: .head_sha, short_sha: ((.head_sha // "")[0:7]), message: (.head_commit.message // .display_title // "无 commit 信息"), created_at: (.head_commit.timestamp // .created_at), html_url: .html_url}]' \
+            > zalith-action-history.json
 
       - name: 合并 Zalith JSON
         run: |
@@ -152,6 +166,13 @@ jobs:
           else
             echo "{\"run\": null, \"artifacts\": {\"artifacts\": []}}" > amethyst-action.json
           fi
+
+      - name: 获取 Amethyst Action 历史记录
+        run: |
+          curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs?status=success&per_page=50" | \
+            jq '[(.workflow_runs // [])[] | {id: .id, sha: .head_sha, short_sha: ((.head_sha // "")[0:7]), message: (.head_commit.message // .display_title // "无 commit 信息"), created_at: (.head_commit.timestamp // .created_at), html_url: .html_url}]' \
+            > amethyst-action-history.json
 
       - name: 合并 Amethyst JSON
         run: |
@@ -220,6 +241,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add FCL/ Amethyst/ zalith.json amethyst.json mobileglues.json commit-info.json
+          git add FCL/ Amethyst/ zalith.json amethyst.json zalith-action-history.json amethyst-action-history.json mobileglues.json commit-info.json
           git diff --staged --quiet || git commit -m "chore: 自动更新下载数据 $(date '+%Y-%m-%d %H:%M:%S')"
           git push
