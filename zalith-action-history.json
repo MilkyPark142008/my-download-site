@@ -1,5 +1,45 @@
 [
   {
+    "id": 26401723553,
+    "sha": "ad31cb38a8343c7ec71cfc1c93bdf583b0f1bfe7",
+    "short_sha": "ad31cb3",
+    "message": "Merge pull request #1305 from ZalithLauncher/fix/main_version_list\n\nfix: 主菜单内版本列表组件相关的问题",
+    "created_at": "2026-05-25T12:58:36Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/26401723553"
+  },
+  {
+    "id": 26401659616,
+    "sha": "e6b0a0c8e6231c09536eaaf4d521c20ae6c94663",
+    "short_sha": "e6b0a0c",
+    "message": "fix: 主菜单内，未安装版本时，长按版本列表组件仍会打开列表菜单",
+    "created_at": "2026-05-25T12:56:55Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/26401659616"
+  },
+  {
+    "id": 26401622099,
+    "sha": "0dcc29966b6e469fbf9b23c10251505251715c0a",
+    "short_sha": "0dcc299",
+    "message": "fix: 主菜单内，版本列表组件宽度不正确",
+    "created_at": "2026-05-25T12:55:59Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/26401622099"
+  },
+  {
+    "id": 26401410419,
+    "sha": "1f22c11e1cea3cc7a7398803de661f7405bf9a6f",
+    "short_sha": "1f22c11",
+    "message": "Merge pull request #1304 from ZalithLauncher/fix/tv_file_permission\n\nfix: Android 11+ 系统不支持“管理设备所有文件”权限时，申请权限导致崩溃",
+    "created_at": "2026-05-25T12:50:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/26401410419"
+  },
+  {
+    "id": 26401021352,
+    "sha": "4f76d9a88e6fa5539a4d54a0207d316e8d1af54a",
+    "short_sha": "4f76d9a",
+    "message": "refactor: Android 11+ 不支持 “管理所有文件” 权限时，不可以使用相应功能",
+    "created_at": "2026-05-25T12:41:01Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/26401021352"
+  },
+  {
     "id": 26381202308,
     "sha": "cba45ca2fe46344d5a77b4b17e905b3d0d98262e",
     "short_sha": "cba45ca",
@@ -358,45 +398,5 @@
     "message": "Merge pull request #1252 from ZalithLauncher/fix/control_pointer_conflict#1\n\nfix(控制布局): 可滑动控件多指触控问题",
     "created_at": "2026-05-13T10:21:22Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/25793083924"
-  },
-  {
-    "id": 25793042113,
-    "sha": "b27b7585c8941e1a66036adade2b20781c445d8a",
-    "short_sha": "b27b758",
-    "message": "fix(控制布局): 可滑动控件多指触控问题",
-    "created_at": "2026-05-13T10:20:24Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/25793042113"
-  },
-  {
-    "id": 25791827732,
-    "sha": "40fb742e2b1b665f5477beaa8c68d9c2193de3db",
-    "short_sha": "40fb742",
-    "message": "Merge pull request #1247 from ZalithLauncher/feat/homepage_events\n\nfeat(主页): 支持一些新事件、随即文本块",
-    "created_at": "2026-05-13T09:55:04Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/25791827732"
-  },
-  {
-    "id": 25791734198,
-    "sha": "3ad1f6667ec76ca731f960baa1dd48f64edb5cb3",
-    "short_sha": "3ad1f66",
-    "message": "fix(主页): 提升主页事件安全性",
-    "created_at": "2026-05-13T09:53:01Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/25791734198"
-  },
-  {
-    "id": 25709045202,
-    "sha": "c19f252d241a4c57afb45c0014d780f4332e7a75",
-    "short_sha": "c19f252",
-    "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1220 of 1220 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
-    "created_at": "2026-05-12T02:11:32Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/25709045202"
-  },
-  {
-    "id": 25657771568,
-    "sha": "0c39c45aad3cd95276155a005dc57c6c7629721d",
-    "short_sha": "0c39c45",
-    "message": "feat(主页): 新语法 - 随机文本块",
-    "created_at": "2026-05-11T07:59:12Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/25657771568"
   }
 ]
