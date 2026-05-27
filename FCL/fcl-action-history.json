@@ -1,5 +1,21 @@
 [
   {
+    "id": 26497662329,
+    "sha": "23b6d5568b989e2be0e262cce1f78fab48080311",
+    "short_sha": "23b6d55",
+    "message": "feat: 自定义环境变量",
+    "created_at": "2026-05-27T07:37:09Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26497662329"
+  },
+  {
+    "id": 26495485193,
+    "sha": "b482e0f303e8d64d726a937dea54a37d22051b7a",
+    "short_sha": "b482e0f",
+    "message": "refactor: migrate `VersionSettingPage` from Java to Kotlin\n\n- Convert `VersionSettingPage` to Kotlin and implement View Binding using `PageVersionSettingBinding`\n- Rename and update view IDs in `page_version_setting.xml` to follow a more consistent naming convention (e.g., `edit_icon` to `button_edit_icon`, `edit_memory` to `bar_memory`)\n- Refactor data binding logic to use Kotlin property access and standard library functions\n- Update event listeners and dialog implementations to use Kotlin DSL and lambda expressions\n- Optimize memory allocation display logic with simplified string binding code",
+    "created_at": "2026-05-27T06:45:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26495485193"
+  },
+  {
     "id": 26487584841,
     "sha": "50bdd6b5aed86dcd086661dab53e041a848d6351",
     "short_sha": "50bdd6b",
@@ -382,21 +398,5 @@
     "message": "fix: 迁移域名",
     "created_at": "2026-04-28T09:00:00Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/25043777944"
-  },
-  {
-    "id": 24987548842,
-    "sha": "d49a90974b4844a06056cae62376af8000f94847",
-    "short_sha": "d49a909",
-    "message": "feat: 优化模组管理页面布局&优化模组管理搜索功能",
-    "created_at": "2026-04-27T09:35:39Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/24987548842"
-  },
-  {
-    "id": 24983743089,
-    "sha": "b89e30d49cdf243373cb036c10e52ee894778cf5",
-    "short_sha": "b89e30d",
-    "message": "Update page_version_list.xml",
-    "created_at": "2026-04-27T08:07:49Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/24983743089"
   }
 ]
