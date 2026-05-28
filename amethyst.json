@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 166619605,
         "digest": "sha256:5ca6d4af2067ac21960c864dfa893bb7d8d377e25a3e3aa33afe563106f44481",
-        "download_count": 0,
+        "download_count": 101,
         "created_at": "2026-05-28T13:42:29Z",
         "updated_at": "2026-05-28T13:43:07Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.5/Amethyst-Debug.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 154823997,
         "digest": "sha256:51c42dc2ea672885fdbca8e86c32a0510d3ac5c5ee95e659dca39b5cb0a8a4ef",
-        "download_count": 0,
+        "download_count": 175,
         "created_at": "2026-05-28T13:42:34Z",
         "updated_at": "2026-05-28T13:43:07Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.5/Amethyst.apk"
@@ -134,6 +134,29 @@
       "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/26577200011",
       "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/26577200011",
       "pull_requests": [
+        {
+          "url": "https://api.github.com/repos/CopperLauncher/Copper-Android/pulls/73",
+          "id": 3763051730,
+          "number": 73,
+          "head": {
+            "ref": "v3_openjdk",
+            "sha": "1f8bf59b0a8b3ef0fd5cf035749ea4f9ec81ee86",
+            "repo": {
+              "id": 984950761,
+              "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
+              "name": "Amethyst-Android"
+            }
+          },
+          "base": {
+            "ref": "v3_openjdk",
+            "sha": "1080c84e6fa49dcd2d5472914fbb2f58b9b07ff1",
+            "repo": {
+              "id": 1157827415,
+              "url": "https://api.github.com/repos/CopperLauncher/Copper-Android",
+              "name": "Copper-Android"
+            }
+          }
+        },
         {
           "url": "https://api.github.com/repos/Mahdin4sure/PojavLauncher/pulls/1",
           "id": 3748561593,
