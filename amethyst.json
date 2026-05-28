@@ -1,10 +1,10 @@
 {
   "release": {
-    "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/releases/311770505",
-    "assets_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/releases/311770505/assets",
-    "upload_url": "https://uploads.github.com/repos/AngelAuraMC/Amethyst-Android/releases/311770505/assets{?name,label}",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/tag/1.1.4",
-    "id": 311770505,
+    "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/releases/317340520",
+    "assets_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/releases/317340520/assets",
+    "upload_url": "https://uploads.github.com/repos/AngelAuraMC/Amethyst-Android/releases/317340520/assets{?name,label}",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/tag/1.1.5",
+    "id": 317340520,
     "author": {
       "login": "alexytomi",
       "id": 60690056,
@@ -26,21 +26,21 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "node_id": "RE_kwDOOrUn6c4SlT2J",
-    "tag_name": "1.1.4",
+    "node_id": "RE_kwDOOrUn6c4S6jto",
+    "tag_name": "1.1.5",
     "target_commitish": "v3_openjdk",
-    "name": "1.1.4",
+    "name": "1.1.5",
     "draft": false,
     "immutable": false,
     "prerelease": false,
-    "created_at": "2026-04-21T14:26:07Z",
-    "updated_at": "2026-04-21T14:31:52Z",
-    "published_at": "2026-04-21T14:31:52Z",
+    "created_at": "2026-05-28T13:19:47Z",
+    "updated_at": "2026-05-28T13:46:12Z",
+    "published_at": "2026-05-28T13:43:46Z",
     "assets": [
       {
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/releases/assets/401648379",
-        "id": 401648379,
-        "node_id": "RA_kwDOOrUn6c4X8Kr7",
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/releases/assets/432124604",
+        "id": 432124604,
+        "node_id": "RA_kwDOOrUn6c4ZwbK8",
         "name": "Amethyst-Debug.apk",
         "label": null,
         "uploader": {
@@ -66,17 +66,17 @@
         },
         "content_type": "application/vnd.android.package-archive",
         "state": "uploaded",
-        "size": 166614316,
-        "digest": "sha256:eef6d5416c2c9557606acfcaaf4c859ff96d876248b5957f67aa7fd2b0894db6",
-        "download_count": 7091,
-        "created_at": "2026-04-21T14:30:44Z",
-        "updated_at": "2026-04-21T14:31:52Z",
-        "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.4/Amethyst-Debug.apk"
+        "size": 166619605,
+        "digest": "sha256:5ca6d4af2067ac21960c864dfa893bb7d8d377e25a3e3aa33afe563106f44481",
+        "download_count": 0,
+        "created_at": "2026-05-28T13:42:29Z",
+        "updated_at": "2026-05-28T13:43:07Z",
+        "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.5/Amethyst-Debug.apk"
       },
       {
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/releases/assets/401648410",
-        "id": 401648410,
-        "node_id": "RA_kwDOOrUn6c4X8Ksa",
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/releases/assets/432124679",
+        "id": 432124679,
+        "node_id": "RA_kwDOOrUn6c4ZwbMH",
         "name": "Amethyst.apk",
         "label": null,
         "uploader": {
@@ -102,51 +102,87 @@
         },
         "content_type": "application/vnd.android.package-archive",
         "state": "uploaded",
-        "size": 154819983,
-        "digest": "sha256:ae3e63ef9929c08a8f714cce0794148df2447331df9d84f81a98f02b0d952057",
-        "download_count": 14672,
-        "created_at": "2026-04-21T14:30:47Z",
-        "updated_at": "2026-04-21T14:31:52Z",
-        "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.4/Amethyst.apk"
+        "size": 154823997,
+        "digest": "sha256:51c42dc2ea672885fdbca8e86c32a0510d3ac5c5ee95e659dca39b5cb0a8a4ef",
+        "download_count": 0,
+        "created_at": "2026-05-28T13:42:34Z",
+        "updated_at": "2026-05-28T13:43:07Z",
+        "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.5/Amethyst.apk"
       }
     ],
-    "tarball_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/tarball/1.1.4",
-    "zipball_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/zipball/1.1.4",
-    "body": "### [Download Info](https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24727960191)\r\n`Amethyst-Debug.apk` - This will carry over your worlds if you are already using Amethyst.\r\n`Amethyst.apk` - This is the \"release\" apk. If you don't have Amethyst yet, use this.\r\n\r\nIf you install both, you have two separate apps, one `Amethyst (Debug)` and the other just `Amethyst`.\r\n\r\n___\r\n## Bugfixes\r\n* [OpenGL fallback for 26.2-snapshot-x (versions with the new Vulkan backend) should now work properly](https://github.com/AngelAuraMC/Amethyst-Android/pull/248/changes/b86fe17c82f03b0334ead0758f3dff6ebe0be786)\r\n* [Fixed mods using Veil 3.1.0 or lower crashing on arm/arm64 architectures](https://github.com/AngelAuraMC/Amethyst-Android/pull/248/changes/8bf571735c54df85b40e9ce9cd16ba89a3eadb91)",
-    "reactions": {
-      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/releases/311770505/reactions",
-      "total_count": 19,
-      "+1": 5,
-      "-1": 0,
-      "laugh": 4,
-      "hooray": 5,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 5
-    }
+    "tarball_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/tarball/1.1.5",
+    "zipball_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/zipball/1.1.5",
+    "body": "### [Download Info](https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/26577200011)\r\n`Amethyst-Debug.apk` - This will carry over your worlds if you are already using Amethyst.\r\n`Amethyst.apk` - This is the \"release\" apk. If you don't have Amethyst yet, use this.\r\n\r\nIf you install both, you have two separate apps, one `Amethyst (Debug)` and the other just `Amethyst`.\r\n\r\n___\r\n## Bugfixes\r\n* Fixed artifact classifiers being ignored/deleted by @unilock\r\n* Fixed Krypton Wrapper crashing on older versions due to invalid `LIBGL_ES` variable set (`1` is dropped)\r\n* Fixed crash on launch on 26.2-snapshot-4 and above due to `pojavexec` not loading in time for GLFW module init\r\n* Partially fixed floating window triggering a crash on 26.2-snapshots (26.1.x and below not affected)\r\n  - If ASR is disabled, you will crash if you trigger floating window after Minecraft starts with the Vulkan backend. Starting with floating window will cause no crashes.\r\n  - If ASR is enabled, you will crash if the game ever goes off screen on the Vulkan backend (tabbing out, toggle floating window, minimize floating window, etc,)\r\n  - OpenGL backend is completely free of crashes related to windowing (hopefully)\r\n* Fixed navigation and status bar appearing when toggling floating window mode off\r\n* Updated to https://github.com/MobileGL-Dev/MobileGlues/commit/961777c2f7868a58ba179db22299aa10329e267d to fix grey screen when using Angelica in 1.7.10\r\n* Now reads JVM args from version.json instead of ignoring them if no `inheritedFrom` field is found\r\n    - This was a hacky fix for Forge 1.17.1-37.0.12 and below crashing on any launcher that wasn't the official one. Forge 1.17.1-37.0.13 has the fix. This may have been also masking some other crashes so we need more testing. FCL and ZL adapted this as their fix though.\r\n    - The hacky fix stopped LWJGL3ify from reading the JVM args from the JSON properly.\r\n* Angelica is now properly accounted for in autorenderer selection.\r\n* High poll rate/hz input devices now work properly (they were glitchy before)\r\n* Fixed Forge on very old MCJE (older than 1.6.x) and below crashing because one of the packages in `methods_injector_agent` starts with `mod_`",
+    "mentions_count": 1
   },
   "action": {
     "run": {
-      "id": 25936254761,
+      "id": 26577200011,
       "name": "Android CI",
-      "node_id": "WFR_kwLOOrUn6c8AAAAGCevXKQ",
-      "head_branch": "feat/lwjgl3ify-sdl-support",
-      "head_sha": "cd8ed668b84fe97587a6fccddfa18730b2146ee9",
+      "node_id": "WFR_kwLOOrUn6c8AAAAGMB_jiw",
+      "head_branch": "v3_openjdk",
+      "head_sha": "1f8bf59b0a8b3ef0fd5cf035749ea4f9ec81ee86",
       "path": ".github/workflows/android.yml",
-      "display_title": "[FIXME] Half-finished lwjgl3ify support",
-      "run_number": 796,
+      "display_title": "mitigation: very old forge will crash trying to load package name sta…",
+      "run_number": 801,
       "event": "push",
       "status": "completed",
       "conclusion": "success",
       "workflow_id": 162757109,
-      "check_suite_id": 69225665683,
-      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAQHivUkw",
-      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/25936254761",
-      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25936254761",
-      "pull_requests": [],
-      "created_at": "2026-05-15T19:06:38Z",
-      "updated_at": "2026-05-15T19:19:27Z",
+      "check_suite_id": 71196291135,
+      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAQk6EwPw",
+      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/26577200011",
+      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/26577200011",
+      "pull_requests": [
+        {
+          "url": "https://api.github.com/repos/Mahdin4sure/PojavLauncher/pulls/1",
+          "id": 3748561593,
+          "number": 1,
+          "head": {
+            "ref": "v3_openjdk",
+            "sha": "1f8bf59b0a8b3ef0fd5cf035749ea4f9ec81ee86",
+            "repo": {
+              "id": 984950761,
+              "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
+              "name": "Amethyst-Android"
+            }
+          },
+          "base": {
+            "ref": "v3_openjdk",
+            "sha": "75d909d33b04b980a079a1979569697e3dae0a8c",
+            "repo": {
+              "id": 1200194718,
+              "url": "https://api.github.com/repos/Mahdin4sure/PojavLauncher",
+              "name": "PojavLauncher"
+            }
+          }
+        },
+        {
+          "url": "https://api.github.com/repos/Lapis-ORG/Lapis-Android/pulls/1",
+          "id": 3675883119,
+          "number": 1,
+          "head": {
+            "ref": "v3_openjdk",
+            "sha": "1f8bf59b0a8b3ef0fd5cf035749ea4f9ec81ee86",
+            "repo": {
+              "id": 984950761,
+              "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
+              "name": "Amethyst-Android"
+            }
+          },
+          "base": {
+            "ref": "v3_openjdk",
+            "sha": "e8c3b42b826ee374f56721137f13a68e9358786a",
+            "repo": {
+              "id": 1230029877,
+              "url": "https://api.github.com/repos/Lapis-ORG/Lapis-Android",
+              "name": "Lapis-Android"
+            }
+          }
+        }
+      ],
+      "created_at": "2026-05-28T13:19:52Z",
+      "updated_at": "2026-05-28T13:24:08Z",
       "actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -170,7 +206,7 @@
       },
       "run_attempt": 1,
       "referenced_workflows": [],
-      "run_started_at": "2026-05-15T19:06:38Z",
+      "run_started_at": "2026-05-28T13:19:52Z",
       "triggering_actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -192,19 +228,19 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/25936254761/jobs",
-      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/25936254761/logs",
-      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/69225665683",
-      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/25936254761/artifacts",
-      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/25936254761/cancel",
-      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/25936254761/rerun",
+      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/26577200011/jobs",
+      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/26577200011/logs",
+      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/71196291135",
+      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/26577200011/artifacts",
+      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/26577200011/cancel",
+      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/26577200011/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/workflows/162757109",
       "head_commit": {
-        "id": "cd8ed668b84fe97587a6fccddfa18730b2146ee9",
-        "tree_id": "c39a0630efaed3c0d9a1ad5e40a338edded7b2f6",
-        "message": "[FIXME] Half-finished lwjgl3ify support\n\nOnly missing popup that installs lwjgl3ify properly if detected in mods",
-        "timestamp": "2026-05-15T19:06:22Z",
+        "id": "1f8bf59b0a8b3ef0fd5cf035749ea4f9ec81ee86",
+        "tree_id": "505b18d3fef763f99ffc49e81b9ac7d8d2590183",
+        "message": "mitigation: very old forge will crash trying to load package name starting with \"mod_\"\n\nBecause of crummy regex\nhttps://github.com/MinecraftForge/FML/blob/57be417b7c29bb23e152f400752f68f33115915d/common/cpw/mods/fml/common/Loader.java#L66\nOld forge will incorrectly load \"mod_blahblah/yourclass.class\" while\nexpecting a \"yourclass.class\" because package name started with \"mod_\".\n\nFixes https://github.com/AngelAuraMC/Amethyst-Android/issues/265",
+        "timestamp": "2026-05-28T13:19:47Z",
         "author": {
           "name": "tomikun",
           "email": "60690056+alexytomi@users.noreply.github.com"
@@ -353,23 +389,43 @@
     },
     "artifacts": [
       {
-        "id": 7024748014,
-        "node_id": "MDg6QXJ0aWZhY3Q3MDI0NzQ4MDE0",
-        "name": "app-debug (recommended)",
-        "size_in_bytes": 118640821,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/7024748014",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/7024748014/zip",
+        "id": 7266978423,
+        "node_id": "MDg6QXJ0aWZhY3Q3MjY2OTc4NDIz",
+        "name": "app-release",
+        "size_in_bytes": 152824410,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/7266978423",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/7266978423/zip",
         "expired": false,
-        "digest": "sha256:0860d22a584c6bc0b7cd8c8333854f1c8c0d0d1aabe2565793c36ceb153c066d",
-        "created_at": "2026-05-15T19:19:11Z",
-        "updated_at": "2026-05-15T19:19:11Z",
-        "expires_at": "2026-08-13T19:06:38Z",
+        "digest": "sha256:d1485978a88bae4f2a0be3549c9bb8cfd3444e7945e1709d06951851d7e8f719",
+        "created_at": "2026-05-28T13:23:50Z",
+        "updated_at": "2026-05-28T13:23:50Z",
+        "expires_at": "2026-08-26T13:19:53Z",
         "workflow_run": {
-          "id": 25936254761,
+          "id": 26577200011,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
-          "head_branch": "feat/lwjgl3ify-sdl-support",
-          "head_sha": "cd8ed668b84fe97587a6fccddfa18730b2146ee9"
+          "head_branch": "v3_openjdk",
+          "head_sha": "1f8bf59b0a8b3ef0fd5cf035749ea4f9ec81ee86"
+        }
+      },
+      {
+        "id": 7266976414,
+        "node_id": "MDg6QXJ0aWZhY3Q3MjY2OTc2NDE0",
+        "name": "app-debug (recommended)",
+        "size_in_bytes": 164398065,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/7266976414",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/7266976414/zip",
+        "expired": false,
+        "digest": "sha256:8f53234193ca9aa52350be1def1f72af043dc3b8fa53aa71258877bf4638c72c",
+        "created_at": "2026-05-28T13:23:44Z",
+        "updated_at": "2026-05-28T13:23:44Z",
+        "expires_at": "2026-08-26T13:19:53Z",
+        "workflow_run": {
+          "id": 26577200011,
+          "repository_id": 984950761,
+          "head_repository_id": 984950761,
+          "head_branch": "v3_openjdk",
+          "head_sha": "1f8bf59b0a8b3ef0fd5cf035749ea4f9ec81ee86"
         }
       }
     ]

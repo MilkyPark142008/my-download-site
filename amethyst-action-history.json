@@ -1,5 +1,37 @@
 [
   {
+    "id": 26577200011,
+    "sha": "1f8bf59b0a8b3ef0fd5cf035749ea4f9ec81ee86",
+    "short_sha": "1f8bf59",
+    "message": "mitigation: very old forge will crash trying to load package name starting with \"mod_\"\n\nBecause of crummy regex\nhttps://github.com/MinecraftForge/FML/blob/57be417b7c29bb23e152f400752f68f33115915d/common/cpw/mods/fml/common/Loader.java#L66\nOld forge will incorrectly load \"mod_blahblah/yourclass.class\" while\nexpecting a \"yourclass.class\" because package name started with \"mod_\".\n\nFixes https://github.com/AngelAuraMC/Amethyst-Android/issues/265",
+    "created_at": "2026-05-28T13:19:47Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/26577200011"
+  },
+  {
+    "id": 26576959685,
+    "sha": "8afa5ec3dae9a851bbc44379f03643534b8c3ebb",
+    "short_sha": "8afa5ec",
+    "message": "mitigation: very old forge will crash trying to load package name starting with \"mod_\"\n\nBecause of crummy regex\nhttps://github.com/MinecraftForge/FML/blob/57be417b7c29bb23e152f400752f68f33115915d/common/cpw/mods/fml/common/Loader.java#L66\nOld forge will incorrectly load \"mod_blahblah/yourclass.class\" while\nexpecting a \"yourclass.class\" because package name started with \"mod_\".\n\nFixes https://github.com/AngelAuraMC/Amethyst-Android/issues/265",
+    "created_at": "2026-05-28T13:14:19Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/26576959685"
+  },
+  {
+    "id": 26576932740,
+    "sha": "8afa5ec3dae9a851bbc44379f03643534b8c3ebb",
+    "short_sha": "8afa5ec",
+    "message": "mitigation: very old forge will crash trying to load package name starting with \"mod_\"\n\nBecause of crummy regex\nhttps://github.com/MinecraftForge/FML/blob/57be417b7c29bb23e152f400752f68f33115915d/common/cpw/mods/fml/common/Loader.java#L66\nOld forge will incorrectly load \"mod_blahblah/yourclass.class\" while\nexpecting a \"yourclass.class\" because package name started with \"mod_\".\n\nFixes https://github.com/AngelAuraMC/Amethyst-Android/issues/265",
+    "created_at": "2026-05-28T13:14:19Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/26576932740"
+  },
+  {
+    "id": 26576875822,
+    "sha": "b45e5dd9dfa5dc7c1dc45368e6c36485a5b1e2df",
+    "short_sha": "b45e5dd",
+    "message": "mitigation: very old forge will crash trying to load package name starting with \"mod_\"\n\nBecause of crummy regex\nhttps://github.com/MinecraftForge/FML/blob/57be417b7c29bb23e152f400752f68f33115915d/common/cpw/mods/fml/common/Loader.java#L66\nOld forge will incorrectly load \"mod_blahblah/yourclass.class\" while\nexpecting a \"yourclass.class\" because package name started with \"mod_\".\n\nFixes https://github.com/AngelAuraMC/Amethyst-Android/issues/265",
+    "created_at": "2026-05-28T13:13:11Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/26576875822"
+  },
+  {
     "id": 25936254761,
     "sha": "cd8ed668b84fe97587a6fccddfa18730b2146ee9",
     "short_sha": "cd8ed66",
@@ -366,37 +398,5 @@
     "message": "Merge pull request #248 from AngelAuraMC/feat/misc\n\n- OpenGL fallback for 26.2-snapshot-x (versions with the new Vulkan backend) should now work properly\n- Fixed mods using Veil 3.1.0 or lower crashing on arm/arm64 architectures",
     "created_at": "2026-04-21T14:26:07Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24727960191"
-  },
-  {
-    "id": 24727705706,
-    "sha": "1cb34a03ecc5ee48597bedef4874f22b28053e64",
-    "short_sha": "1cb34a0",
-    "message": "bump: version from 1.1.3 to 1.1.4",
-    "created_at": "2026-04-21T14:14:38Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24727705706"
-  },
-  {
-    "id": 24727393192,
-    "sha": "1cb34a03ecc5ee48597bedef4874f22b28053e64",
-    "short_sha": "1cb34a0",
-    "message": "bump: version from 1.1.3 to 1.1.4",
-    "created_at": "2026-04-21T14:14:38Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24727393192"
-  },
-  {
-    "id": 24684544317,
-    "sha": "9f481fc6d6505d5dbb36fa66890d4fae51a0b563",
-    "short_sha": "9f481fc",
-    "message": "bump: version from 1.1.3 to 1.1.4",
-    "created_at": "2026-04-20T18:53:42Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24684544317"
-  },
-  {
-    "id": 24684527727,
-    "sha": "b86fe17c82f03b0334ead0758f3dff6ebe0be786",
-    "short_sha": "b86fe17",
-    "message": "fix(EGL): Handle window recreations with different APIs\n\nShould fix Mojang Vulkan falling back to opengl",
-    "created_at": "2026-04-20T18:52:07Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24684527727"
   }
 ]
