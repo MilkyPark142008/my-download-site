@@ -1,5 +1,21 @@
 [
   {
+    "id": 26679494953,
+    "sha": "e06cb95c5631ca80047b4eb13247ee52eac345ed",
+    "short_sha": "e06cb95",
+    "message": "fix(core): 移除安装任务中不必要的 UI 线程切换\n\n- 在 `NeoForgeOldInstallTask` 中移除启动 `ProcessService` 时的 `runOnUiThread` 调用\n- 在 `OptiFineInstallTask` 中移除启动 `ProcessService` 时的 `runOnUiThread` 调用\n- 在 `ForgeNewInstallTask` 中移除启动 `ProcessService` 时的 `runOnUiThread` 调用\n- 优化安装流程，直接在当前线程执行服务启动和重试逻辑",
+    "created_at": "2026-05-30T08:41:29Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26679494953"
+  },
+  {
+    "id": 26677522854,
+    "sha": "3b3bfbe8b8dee892a33abe430fe06d68e951a035",
+    "short_sha": "3b3bfbe",
+    "message": "refactor(ui): 优化 OfflineAccountSkinDialog 窗口尺寸计算逻辑\n\n- 使用 `AndroidUtils` 替换原有的 `WindowManager` 获取屏幕宽高的方式\n- 简化 `Window` 布局参数设置逻辑，改用 `getWindow().setLayout()`\n- 优化横竖屏状态下的对话框宽高适配逻辑",
+    "created_at": "2026-05-30T07:00:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26677522854"
+  },
+  {
     "id": 26616731633,
     "sha": "56349e521306018f44f30aeea2503d8ad7cd23dd",
     "short_sha": "56349e5",
@@ -382,21 +398,5 @@
     "message": "fix: 修复部分设备游戏内缩放重启后可能无效的问题 #1568",
     "created_at": "2026-05-01T23:47:11Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/25238064314"
-  },
-  {
-    "id": 25158851365,
-    "sha": "f40842305323b48040dcf0e136cf783c491abfc6",
-    "short_sha": "f408423",
-    "message": "Merge pull request #1570 from leemwood/main\n\nfix: 更新控制器仓库的中国镜像地址",
-    "created_at": "2026-04-30T09:48:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/25158851365"
-  },
-  {
-    "id": 25156044073,
-    "sha": "6f467a26c88f5fa02f9674789cad0293c2c8a4ac",
-    "short_sha": "6f467a2",
-    "message": "fix: 更新控制器仓库的中国镜像地址",
-    "created_at": "2026-04-30T08:42:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/25156044073"
   }
 ]
