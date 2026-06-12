@@ -1,0 +1,24 @@
+# 本地备份
+.backup/
+
+# 日志文件
+*.log
+push-log.txt
+
+# 环境变量和本地密钥
+.env
+.env.*
+*.pem
+*.key
+
+# 系统与编辑器文件
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 依赖与构建缓存
+node_modules/
+dist/
+build/
+.cache/
