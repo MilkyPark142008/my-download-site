@@ -10,6 +10,10 @@ on:
     - cron: '0 * * * *'
   workflow_dispatch:
 
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
 permissions:
   contents: write
   actions: read
@@ -268,7 +272,20 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add FCL/ Amethyst/ zalith.json amethyst.json zalith-action-history.json amethyst-action-history.json mobileglues.json commit-info.json
+          FILES="FCL Amethyst zalith.json amethyst.json zalith-action-history.json amethyst-action-history.json mobileglues.json commit-info.json"
+          git add $FILES
           git diff --staged --quiet || git commit -m "维护：自动更新下载数据 $(date '+%Y-%m-%d %H:%M:%S')"
-          git pull --rebase origin main
-          git push || { git pull --rebase origin main && git push; }
+
+          if ! git push; then
+            echo "普通推送失败，保存生成结果并同步远程后重试..."
+            BACKUP_DIR="$(mktemp -d)"
+            cp -a $FILES "$BACKUP_DIR"/
+
+            git fetch origin main
+            git reset --hard origin/main
+
+            cp -a "$BACKUP_DIR"/. .
+            git add $FILES
+            git diff --staged --quiet || git commit -m "维护：自动更新下载数据 $(date '+%Y-%m-%d %H:%M:%S')"
+            git push
+          fi
