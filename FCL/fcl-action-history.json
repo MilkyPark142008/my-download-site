@@ -1,5 +1,29 @@
 [
   {
+    "id": 27524943678,
+    "sha": "08009d1c33dd344b754af3a08cc8698672dbacfd",
+    "short_sha": "08009d1",
+    "message": "fix: 修复强制设置分辨率取消后仍然开启的问题 #1635",
+    "created_at": "2026-06-15T04:56:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27524943678"
+  },
+  {
+    "id": 27524441796,
+    "sha": "f31baf8916bfc3fed4d4b3e1543d25b079eec3f4",
+    "short_sha": "f31baf8",
+    "message": "Update FCLBridge.java",
+    "created_at": "2026-06-15T04:40:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27524441796"
+  },
+  {
+    "id": 27524401852,
+    "sha": "f2ab2c405abbd1135ca093afff5ac4238490f098",
+    "short_sha": "f2ab2c4",
+    "message": "fix: 修复日志重定向错误导致无法获取部分错误日志",
+    "created_at": "2026-06-15T04:38:59Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27524401852"
+  },
+  {
     "id": 27484538782,
     "sha": "73a34b4550a11ee7801aa25d1f89d26d8548b7c6",
     "short_sha": "73a34b4",
@@ -374,29 +398,5 @@
     "message": "feat: 允许设置鼠标显示位置的偏移 #1577",
     "created_at": "2026-05-23T02:40:38Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26321351502"
-  },
-  {
-    "id": 26320143874,
-    "sha": "77c2088036d45ab1a4a5e42a53f5becbfdf5c8f9",
-    "short_sha": "77c2088",
-    "message": "fix: 修复部分模组加载器安装问题",
-    "created_at": "2026-05-23T01:43:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26320143874"
-  },
-  {
-    "id": 26268566413,
-    "sha": "d188bfaa61d1e3fddc54941961484f77430caffe",
-    "short_sha": "d188bfa",
-    "message": "feat(mod): 更新 CurseForge 分类与重构 Category 类\n\n- 在 `strings.xml` 中添加多个 CurseForge 分类翻译，包括恐怖、专家、暮色森林、农夫乐事等\n- 将 `RemoteModRepository.Category` 从普通类重构为 Java `record`\n- 更新相关模块（CurseForge, Modrinth, DownloadPage）以适配 `Category` 字段访问方式的变化（从 `getSelf()` / `getId()` 改为 `self()` / `id()`）\n- 优化了 `DownloadPage` 中获取本地化分类名称的逻辑助实现方式",
-    "created_at": "2026-05-22T04:32:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26268566413"
-  },
-  {
-    "id": 26267650628,
-    "sha": "18f18fe71e059d7599ef5e54a1d5791d495107d0",
-    "short_sha": "18f18fe",
-    "message": "feat: Kopper Zink",
-    "created_at": "2026-05-22T03:58:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26267650628"
   }
 ]
