@@ -1,5 +1,21 @@
 [
   {
+    "id": 27861109462,
+    "sha": "12e889d80e3605e093cf62cd5f395eba9dc23648",
+    "short_sha": "12e889d",
+    "message": "update",
+    "created_at": "2026-06-19T15:34:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27861109462"
+  },
+  {
+    "id": 27858455077,
+    "sha": "a9619dcde4104f46019573dc637a416ba7d4d23c",
+    "short_sha": "a9619dc",
+    "message": "update",
+    "created_at": "2026-06-20T02:51:34Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27858455077"
+  },
+  {
     "id": 27837424532,
     "sha": "fd3d3ed95aa9d69337cb94b92584c25edd454860",
     "short_sha": "fd3d3ed",
@@ -382,21 +398,5 @@
     "message": "feat: 支持复制账户uuid",
     "created_at": "2026-05-28T04:32:36Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26554825358"
-  },
-  {
-    "id": 26554608271,
-    "sha": "e20cc52f1b219c5317a8ec147177166f23c37c15",
-    "short_sha": "e20cc52",
-    "message": "refactor(ui): convert `AccountListAdapter` to Kotlin and migrate to `RecyclerView`\n\n- Rewrite `AccountListAdapter` in Kotlin and migrate from `ListView` to `RecyclerView.Adapter` using ViewBinding\n- Replace `ListView` with `RecyclerView` in `ui_account.xml` and update `AccountUI.java` logic accordingly\n- Refactor `item_account.xml` layout to use constraints for action buttons and add a new \"copy UUID\" button\n- Improve UI responsiveness by using `View.INVISIBLE` instead of `View.GONE` for progress indicators to maintain layout stability\n- Update `AccountUI` to properly initialize `LinearLayoutManager` and refresh the adapter's data set using a list of `AccountListItem` objects",
-    "created_at": "2026-05-28T04:25:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26554608271"
-  },
-  {
-    "id": 26497662329,
-    "sha": "23b6d5568b989e2be0e262cce1f78fab48080311",
-    "short_sha": "23b6d55",
-    "message": "feat: 自定义环境变量",
-    "created_at": "2026-05-27T07:37:09Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26497662329"
   }
 ]
