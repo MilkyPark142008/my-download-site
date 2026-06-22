@@ -1,5 +1,21 @@
 [
   {
+    "id": 27934359431,
+    "sha": "1136d422f7a726467c2c6a553c18e981dc98f810",
+    "short_sha": "1136d42",
+    "message": "fix(JVMCrashActivity): 增加Fabric模组冲突错误弹窗提示\n\n在崩溃页面中检测并展示Fabric加载器的模组不兼容错误信息，帮助用户快速定位冲突模组问题",
+    "created_at": "2026-06-22T06:37:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27934359431"
+  },
+  {
+    "id": 27932850109,
+    "sha": "95ae776990fd6b7437564726c1e7e14c5d68489a",
+    "short_sha": "95ae776",
+    "message": "refactor(world-list-page): 重构世界列表页面代码逻辑\n\n1. 替换CompletableFuture为协程实现异步逻辑\n2. 移除不必要的可空类型简化变量声明\n3. 添加修复存档文件夹权限的按钮功能\n4. 优化列表更新和状态判断逻辑\n5. 增加对私有目录存档的权限修复按钮显示判断",
+    "created_at": "2026-06-22T06:02:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27932850109"
+  },
+  {
     "id": 27929478297,
     "sha": "7c04e3ce537adbfa480277c8343234cb0a7cb1c3",
     "short_sha": "7c04e3c",
@@ -382,21 +398,5 @@
     "message": "feat: 搜索页显示模组下载量 #1602 #1555",
     "created_at": "2026-05-31T02:55:12Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26701551732"
-  },
-  {
-    "id": 26679494953,
-    "sha": "e06cb95c5631ca80047b4eb13247ee52eac345ed",
-    "short_sha": "e06cb95",
-    "message": "fix(core): 移除安装任务中不必要的 UI 线程切换\n\n- 在 `NeoForgeOldInstallTask` 中移除启动 `ProcessService` 时的 `runOnUiThread` 调用\n- 在 `OptiFineInstallTask` 中移除启动 `ProcessService` 时的 `runOnUiThread` 调用\n- 在 `ForgeNewInstallTask` 中移除启动 `ProcessService` 时的 `runOnUiThread` 调用\n- 优化安装流程，直接在当前线程执行服务启动和重试逻辑",
-    "created_at": "2026-05-30T08:41:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26679494953"
-  },
-  {
-    "id": 26677522854,
-    "sha": "3b3bfbe8b8dee892a33abe430fe06d68e951a035",
-    "short_sha": "3b3bfbe",
-    "message": "refactor(ui): 优化 OfflineAccountSkinDialog 窗口尺寸计算逻辑\n\n- 使用 `AndroidUtils` 替换原有的 `WindowManager` 获取屏幕宽高的方式\n- 简化 `Window` 布局参数设置逻辑，改用 `getWindow().setLayout()`\n- 优化横竖屏状态下的对话框宽高适配逻辑",
-    "created_at": "2026-05-30T07:00:33Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26677522854"
   }
 ]
