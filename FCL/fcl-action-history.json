@@ -1,5 +1,21 @@
 [
   {
+    "id": 27929478297,
+    "sha": "7c04e3ce537adbfa480277c8343234cb0a7cb1c3",
+    "short_sha": "7c04e3c",
+    "message": "refactor(ui): 将世界列表页从ListView迁移到RecyclerView\n\n替换了旧的ListView实现为RecyclerView，优化列表滚动性能和视图复用，同时使用ViewBinding简化适配器代码，重构了页面布局结构",
+    "created_at": "2026-06-22T04:24:29Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27929478297"
+  },
+  {
+    "id": 27928298238,
+    "sha": "658cfaca7a4a7c3c31816748031a14e37cee52ad",
+    "short_sha": "658cfac",
+    "message": "feat: 添加jar执行器警告弹窗",
+    "created_at": "2026-06-22T03:49:28Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27928298238"
+  },
+  {
     "id": 27904138129,
     "sha": "6ac70af98b09356fc481e62b0db379087be428ca",
     "short_sha": "6ac70af",
@@ -382,21 +398,5 @@
     "message": "refactor(ui): 优化 OfflineAccountSkinDialog 窗口尺寸计算逻辑\n\n- 使用 `AndroidUtils` 替换原有的 `WindowManager` 获取屏幕宽高的方式\n- 简化 `Window` 布局参数设置逻辑，改用 `getWindow().setLayout()`\n- 优化横竖屏状态下的对话框宽高适配逻辑",
     "created_at": "2026-05-30T07:00:33Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26677522854"
-  },
-  {
-    "id": 26616731625,
-    "sha": "56349e521306018f44f30aeea2503d8ad7cd23dd",
-    "short_sha": "56349e5",
-    "message": "1.3.0.9",
-    "created_at": "2026-05-29T03:47:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26616731625"
-  },
-  {
-    "id": 26616731633,
-    "sha": "56349e521306018f44f30aeea2503d8ad7cd23dd",
-    "short_sha": "56349e5",
-    "message": "1.3.0.9",
-    "created_at": "2026-05-29T03:47:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26616731633"
   }
 ]
