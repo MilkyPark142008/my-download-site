@@ -1,5 +1,13 @@
 [
   {
+    "id": 27999808440,
+    "sha": "ed3bb0d179be2ea8335ca02af53c4e93f0766267",
+    "short_sha": "ed3bb0d",
+    "message": "fix: Allow AWT to use any java version\n\n* remove check against Java 17+ for the \"Execute a .jar\" option in the launcher because Java 17+ works now\n\n* remove localizations for incompatible Java runtimes for the \"Execute .jar\" feature",
+    "created_at": "2026-06-23T03:19:51Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/27999808440"
+  },
+  {
     "id": 27357060689,
     "sha": "ef39ea77d5dfe7a8bea7581ca58c446580550ec0",
     "short_sha": "ef39ea7",
@@ -390,13 +398,5 @@
     "message": "bump(SDL): 3.2.22 to 3.4.4\n\nUses\nhttps://github.com/AngelAuraMC/amethyst-prebuilt-libraries/actions/runs/24794713156/\nhttps://github.com/AngelAuraMC/amethyst-prebuilt-libraries/commit/4765f4a95bec7f9daaa7d2a3f4430a6708b17da2\n\nLWJGL3.4.1 SDL binding needs them\n\nHad to modify SDLSurface to be public so we could use it.",
     "created_at": "2026-04-22T18:52:48Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24796758244"
-  },
-  {
-    "id": 24785192903,
-    "sha": "8e166a94d4c86705f5f6f25b3edb0a090f7f0c5d",
-    "short_sha": "8e166a9",
-    "message": "fix(lwjgl): Load pojavexec earlier\n\nFixes 26.2-snapshot-4 crash\n\nWe put System.loadLibrary(\"pojavexec\") in Library.java and Sys.java and\nseperate out GLFW pojavexec init to GLFW static block initializer.\n\nUses\n(3.4.1)\nhttps://github.com/AngelAuraMC/lwjgl3/commit/b84bec48c80f41249ecd0c07cf40f27b71506bd1\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24783965974\n(3.3.3)\nhttps://github.com/AngelAuraMC/lwjgl3/commit/b0ee05e8947598ecc269476401cb1f4e615c4ccc\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24783304994",
-    "created_at": "2026-04-22T14:50:54Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24785192903"
   }
 ]
