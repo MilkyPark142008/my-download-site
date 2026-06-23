@@ -1,5 +1,13 @@
 [
   {
+    "id": 28031868260,
+    "sha": "98228ba320ad7de3b6474e90f963034d7ade57a8",
+    "short_sha": "98228ba",
+    "message": "refactor(skin): 重命名SkinCanvas为SkinViewer优化皮肤显示\n\n1.  将布局中的SkinCanvas替换为新的SkinViewer自定义视图\n2.  删除冗余的SkinCanvas类，新增完整的SkinViewer实现\n3.  简化皮肤视图的初始化和生命周期管理逻辑\n4.  清理无用的布局参数代码和冗余导入",
+    "created_at": "2026-06-23T14:00:41Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28031868260"
+  },
+  {
     "id": 28007926985,
     "sha": "e293fca5afd5cf1be6654e4daab04d0afd80d68d",
     "short_sha": "e293fca",
@@ -390,13 +398,5 @@
     "message": "fix: 修复时间格式不正确导致无法安装部分版本Forge的问题\n\n- 在 `InstantTypeAdapter` 的日期格式化器中添加对 `+H:MM` 偏移量格式的支持，提升时间戳解析的兼容性。",
     "created_at": "2026-06-01T13:06:34Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26756783878"
-  },
-  {
-    "id": 26756150843,
-    "sha": "675f0a9e13ad3cdffbe8fe815a7503b2c227fcb4",
-    "short_sha": "675f0a9",
-    "message": "feat: 长按直接设置离线皮肤",
-    "created_at": "2026-05-31T04:33:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26756150843"
   }
 ]
