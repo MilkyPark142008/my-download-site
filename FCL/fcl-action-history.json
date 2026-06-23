@@ -1,5 +1,13 @@
 [
   {
+    "id": 28007926985,
+    "sha": "e293fca5afd5cf1be6654e4daab04d0afd80d68d",
+    "short_sha": "e293fca",
+    "message": "refactor: 重构皮肤渲染基础类与肢体类，添加详细注释与规范参数命名\n\n重构了MainCube、LimbCube、CapeCube等基础渲染类，统一参数命名风格并添加详细中文注释，拆分顶点与法向量数组结构，优化代码可读性与维护性。同时为所有肢体、头部、身体等皮肤组件类补充类注释、参数说明与纹理坐标注释，统一代码格式与注释规范。",
+    "created_at": "2026-06-23T06:50:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28007926985"
+  },
+  {
     "id": 28003320067,
     "sha": "2d0a042877db842cc217635753d76c527f86b61e",
     "short_sha": "2d0a042",
@@ -390,13 +398,5 @@
     "message": "feat: 长按直接设置离线皮肤",
     "created_at": "2026-05-31T04:33:03Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26756150843"
-  },
-  {
-    "id": 26703234687,
-    "sha": "4c01b51f52b80da55c38eba30015e48bf1a2ec34",
-    "short_sha": "4c01b51",
-    "message": "feat: 长按直接设置离线皮肤",
-    "created_at": "2026-05-31T04:29:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26703234687"
   }
 ]
