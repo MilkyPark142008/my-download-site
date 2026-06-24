@@ -1,5 +1,13 @@
 [
   {
+    "id": 28084870130,
+    "sha": "fc203f1ff0b457b2a0d044f4d301cd88d8325296",
+    "short_sha": "fc203f1",
+    "message": "feat: 重构优化截图阅览增加长按全屏阅览功能 #1651\n\n新增通用ViewHolder类，以及全屏图片弹窗的基础类和布局文件\n\nrefactor: 重构图片预览和截图适配器，整理字符串资源\n\n1.  将close字符串资源移至FCLLibrary统一管理\n2.  实现通用的FullImageDialog弹窗\n3.  重构RemoteModScreenshotAdapter复用标准ViewHolder\n4.  移除冗余的重试按钮布局和相关逻辑\n5.  优化图片加载逻辑和弹窗调用方式",
+    "created_at": "2026-06-24T08:14:19Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28084870130"
+  },
+  {
     "id": 28031868260,
     "sha": "98228ba320ad7de3b6474e90f963034d7ade57a8",
     "short_sha": "98228ba",
@@ -390,13 +398,5 @@
     "message": "1.3.1.0",
     "created_at": "2026-06-03T03:38:48Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26862209198"
-  },
-  {
-    "id": 26756783878,
-    "sha": "06d7a547e091b1569d2607c5643932095714ab5a",
-    "short_sha": "06d7a54",
-    "message": "fix: 修复时间格式不正确导致无法安装部分版本Forge的问题\n\n- 在 `InstantTypeAdapter` 的日期格式化器中添加对 `+H:MM` 偏移量格式的支持，提升时间戳解析的兼容性。",
-    "created_at": "2026-06-01T13:06:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26756783878"
   }
 ]
