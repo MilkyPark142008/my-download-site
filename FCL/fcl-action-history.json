@@ -1,5 +1,13 @@
 [
   {
+    "id": 28099455826,
+    "sha": "11e62a3014fc958c73bf1231359cc32901c4593a",
+    "short_sha": "11e62a3",
+    "message": "refactor: 统一复用ViewHolder类，移除冗余内部ViewHolder定义\n\n将多个RecyclerView.Adapter的内部ViewHolder类替换为导入的com.mio.ui.adapter.ViewHolder，删除重复的ViewHolder定义代码，精简适配器代码结构",
+    "created_at": "2026-06-24T10:25:28Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28099455826"
+  },
+  {
     "id": 28084870130,
     "sha": "fc203f1ff0b457b2a0d044f4d301cd88d8325296",
     "short_sha": "fc203f1",
@@ -390,13 +398,5 @@
     "message": "1.3.1.0",
     "created_at": "2026-06-03T03:38:48Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26862209238"
-  },
-  {
-    "id": 26862209198,
-    "sha": "422d18359b2eeb74702e9d038f7e8ea070fab023",
-    "short_sha": "422d183",
-    "message": "1.3.1.0",
-    "created_at": "2026-06-03T03:38:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26862209198"
   }
 ]
