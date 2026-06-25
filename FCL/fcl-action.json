@@ -1,47 +1,23 @@
 {"run": {
-  "id": 28099455826,
+  "id": 28156911850,
   "name": "Build",
-  "node_id": "WFR_kwLOIQeFGs8AAAAGiturUg",
+  "node_id": "WFR_kwLOIQeFGs8AAAAGjkhg6g",
   "head_branch": "main",
-  "head_sha": "11e62a3014fc958c73bf1231359cc32901c4593a",
+  "head_sha": "411e87000bb314fcd4a79d0a5b1df1cbead1d0b3",
   "path": ".github/workflows/build.yml",
-  "display_title": "refactor: 统一复用ViewHolder类，移除冗余内部ViewHolder定义",
-  "run_number": 558,
+  "display_title": "refactor: 替换旧文件选择器为统一的FileBrowserLauncher实现",
+  "run_number": 559,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 200966783,
-  "check_suite_id": 75795718766,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAARpcbibg",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/28099455826",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28099455826",
-  "pull_requests": [
-    {
-      "url": "https://api.github.com/repos/root-S7/FoldCraftLauncher/pulls/123",
-      "id": 3927864891,
-      "number": 123,
-      "head": {
-        "ref": "main",
-        "sha": "11e62a3014fc958c73bf1231359cc32901c4593a",
-        "repo": {
-          "id": 554140954,
-          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "c4d24029498ccf252b2912e107d0ea4cdf07165e",
-        "repo": {
-          "id": 672154970,
-          "url": "https://api.github.com/repos/root-S7/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      }
-    }
-  ],
-  "created_at": "2026-06-24T12:45:52Z",
-  "updated_at": "2026-06-24T12:50:54Z",
+  "check_suite_id": 75974678072,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAARsHGWOA",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/28156911850",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28156911850",
+  "pull_requests": [],
+  "created_at": "2026-06-25T08:22:51Z",
+  "updated_at": "2026-06-25T08:27:43Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -65,7 +41,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-06-24T12:45:52Z",
+  "run_started_at": "2026-06-25T08:22:51Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -87,19 +63,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/28099455826/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/28099455826/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/75795718766",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/28099455826/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/28099455826/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/28099455826/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/28156911850/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/28156911850/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/75974678072",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/28156911850/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/28156911850/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/28156911850/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/200966783",
   "head_commit": {
-    "id": "11e62a3014fc958c73bf1231359cc32901c4593a",
-    "tree_id": "6c72751bbd4405d7707c85df328b9b84b4c78323",
-    "message": "refactor: 统一复用ViewHolder类，移除冗余内部ViewHolder定义\n\n将多个RecyclerView.Adapter的内部ViewHolder类替换为导入的com.mio.ui.adapter.ViewHolder，删除重复的ViewHolder定义代码，精简适配器代码结构",
-    "timestamp": "2026-06-24T10:25:28Z",
+    "id": "411e87000bb314fcd4a79d0a5b1df1cbead1d0b3",
+    "tree_id": "c000c701f40d2e6f3f289dfe717ece48de61d82f",
+    "message": "refactor: 替换旧文件选择器为统一的FileBrowserLauncher实现\n\n本次提交重构了项目内多处文件选择相关的代码，将传统的FileBrowser手动构建调用替换为统一的FileBrowserLauncher实现：\n1.  统一使用MainActivity的fileLauncher来处理文件选择逻辑\n2.  移除了大量冗余的FileBrowser构建代码，简化了调用流程\n3.  调整了部分类的类型定义，将Activity替换为更具体的FCLActivity\n4.  优化了文件选择后的回调逻辑，统一了异常处理和参数传递\n5.  新增并完善了FileBrowserLauncher的重载方法，支持更多快捷调用场景\n6.  修复了部分代码格式问题，提升了代码可读性\n\nupdate\n\nrefactor(browser): 将FileBrowserLauncher从Java转为Kotlin\n\n完成了Java版本文件浏览器启动器到Kotlin的重构，新增了单次选择的便捷启动方法，优化了代码写法和空安全处理",
+    "timestamp": "2026-06-25T08:22:30Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
@@ -249,103 +225,103 @@
   "total_count": 5,
   "artifacts": [
     {
-      "id": 7849982198,
-      "node_id": "MDg6QXJ0aWZhY3Q3ODQ5OTgyMTk4",
-      "name": "app-all",
-      "size_in_bytes": 292002249,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7849982198",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7849982198/zip",
-      "expired": false,
-      "digest": "sha256:5c92c6dadedfafddc371b16f93aaa32c83436a0d4fa66c93471da30f0792b7ac",
-      "created_at": "2026-06-24T12:50:46Z",
-      "updated_at": "2026-06-24T12:50:46Z",
-      "expires_at": "2026-07-01T12:45:52Z",
-      "workflow_run": {
-        "id": 28099455826,
-        "repository_id": 554140954,
-        "head_repository_id": 554140954,
-        "head_branch": "main",
-        "head_sha": "11e62a3014fc958c73bf1231359cc32901c4593a"
-      }
-    },
-    {
-      "id": 7849980519,
-      "node_id": "MDg6QXJ0aWZhY3Q3ODQ5OTgwNTE5",
-      "name": "app-x86_64",
-      "size_in_bytes": 158065354,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7849980519",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7849980519/zip",
-      "expired": false,
-      "digest": "sha256:7a4cfe9201fa0a64127a05570d1f5b38797de9d74286ca0e22507d33ba267146",
-      "created_at": "2026-06-24T12:50:43Z",
-      "updated_at": "2026-06-24T12:50:43Z",
-      "expires_at": "2026-07-01T12:45:52Z",
-      "workflow_run": {
-        "id": 28099455826,
-        "repository_id": 554140954,
-        "head_repository_id": 554140954,
-        "head_branch": "main",
-        "head_sha": "11e62a3014fc958c73bf1231359cc32901c4593a"
-      }
-    },
-    {
-      "id": 7849974403,
-      "node_id": "MDg6QXJ0aWZhY3Q3ODQ5OTc0NDAz",
-      "name": "app-arm64",
-      "size_in_bytes": 152992035,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7849974403",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7849974403/zip",
-      "expired": false,
-      "digest": "sha256:db18d3951a1dbc87940466f39e4e3c434a85d399418f6c38415d79bf7dbdc6a8",
-      "created_at": "2026-06-24T12:50:28Z",
-      "updated_at": "2026-06-24T12:50:28Z",
-      "expires_at": "2026-07-01T12:45:52Z",
-      "workflow_run": {
-        "id": 28099455826,
-        "repository_id": 554140954,
-        "head_repository_id": 554140954,
-        "head_branch": "main",
-        "head_sha": "11e62a3014fc958c73bf1231359cc32901c4593a"
-      }
-    },
-    {
-      "id": 7849967787,
-      "node_id": "MDg6QXJ0aWZhY3Q3ODQ5OTY3Nzg3",
-      "name": "app-arm",
-      "size_in_bytes": 146164236,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7849967787",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7849967787/zip",
-      "expired": false,
-      "digest": "sha256:2a814d732fc9b3e5439cb70ec1dacb21edae25d0c7890d8953d8b8ae4f8afb48",
-      "created_at": "2026-06-24T12:50:13Z",
-      "updated_at": "2026-06-24T12:50:13Z",
-      "expires_at": "2026-07-01T12:45:52Z",
-      "workflow_run": {
-        "id": 28099455826,
-        "repository_id": 554140954,
-        "head_repository_id": 554140954,
-        "head_branch": "main",
-        "head_sha": "11e62a3014fc958c73bf1231359cc32901c4593a"
-      }
-    },
-    {
-      "id": 7849967159,
-      "node_id": "MDg6QXJ0aWZhY3Q3ODQ5OTY3MTU5",
+      "id": 7872731568,
+      "node_id": "MDg6QXJ0aWZhY3Q3ODcyNzMxNTY4",
       "name": "app-x86",
-      "size_in_bytes": 138710523,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7849967159",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7849967159/zip",
+      "size_in_bytes": 138710390,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7872731568",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7872731568/zip",
       "expired": false,
-      "digest": "sha256:51106f93a0f57b7e8f44a0142049ab8ca443abcb409b239c1f9ca76bc96f1d23",
-      "created_at": "2026-06-24T12:50:11Z",
-      "updated_at": "2026-06-24T12:50:11Z",
-      "expires_at": "2026-07-01T12:45:52Z",
+      "digest": "sha256:fa7c6aa493a72ee8c5f859507624de8f1be1dae9267c516ce83751cb2d4b2edc",
+      "created_at": "2026-06-25T08:27:36Z",
+      "updated_at": "2026-06-25T08:27:36Z",
+      "expires_at": "2026-07-02T08:22:51Z",
       "workflow_run": {
-        "id": 28099455826,
+        "id": 28156911850,
         "repository_id": 554140954,
         "head_repository_id": 554140954,
         "head_branch": "main",
-        "head_sha": "11e62a3014fc958c73bf1231359cc32901c4593a"
+        "head_sha": "411e87000bb314fcd4a79d0a5b1df1cbead1d0b3"
+      }
+    },
+    {
+      "id": 7872728907,
+      "node_id": "MDg6QXJ0aWZhY3Q3ODcyNzI4OTA3",
+      "name": "app-arm64",
+      "size_in_bytes": 152992753,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7872728907",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7872728907/zip",
+      "expired": false,
+      "digest": "sha256:c4a450d9b79a1a097fcf98772f3a3c434fb372997f7aa57eb28925958250221c",
+      "created_at": "2026-06-25T08:27:28Z",
+      "updated_at": "2026-06-25T08:27:28Z",
+      "expires_at": "2026-07-02T08:22:51Z",
+      "workflow_run": {
+        "id": 28156911850,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "main",
+        "head_sha": "411e87000bb314fcd4a79d0a5b1df1cbead1d0b3"
+      }
+    },
+    {
+      "id": 7872727559,
+      "node_id": "MDg6QXJ0aWZhY3Q3ODcyNzI3NTU5",
+      "name": "app-x86_64",
+      "size_in_bytes": 158064991,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7872727559",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7872727559/zip",
+      "expired": false,
+      "digest": "sha256:2d021cc0cf7318f7c294549728402979e548f403325e1f8ad5a74cf24639554a",
+      "created_at": "2026-06-25T08:27:25Z",
+      "updated_at": "2026-06-25T08:27:25Z",
+      "expires_at": "2026-07-02T08:22:51Z",
+      "workflow_run": {
+        "id": 28156911850,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "main",
+        "head_sha": "411e87000bb314fcd4a79d0a5b1df1cbead1d0b3"
+      }
+    },
+    {
+      "id": 7872723436,
+      "node_id": "MDg6QXJ0aWZhY3Q3ODcyNzIzNDM2",
+      "name": "app-all",
+      "size_in_bytes": 292002325,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7872723436",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7872723436/zip",
+      "expired": false,
+      "digest": "sha256:eb07659924d47b7a529573a6fce02e2a592156be43e0609bceaaee1e8195d4cb",
+      "created_at": "2026-06-25T08:27:14Z",
+      "updated_at": "2026-06-25T08:27:14Z",
+      "expires_at": "2026-07-02T08:22:51Z",
+      "workflow_run": {
+        "id": 28156911850,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "main",
+        "head_sha": "411e87000bb314fcd4a79d0a5b1df1cbead1d0b3"
+      }
+    },
+    {
+      "id": 7872722638,
+      "node_id": "MDg6QXJ0aWZhY3Q3ODcyNzIyNjM4",
+      "name": "app-arm",
+      "size_in_bytes": 146164375,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7872722638",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/7872722638/zip",
+      "expired": false,
+      "digest": "sha256:d641baa8c54cf49524bef93f634834b66ff476258ae5088d8705bd0b70584c8e",
+      "created_at": "2026-06-25T08:27:11Z",
+      "updated_at": "2026-06-25T08:27:11Z",
+      "expires_at": "2026-07-02T08:22:51Z",
+      "workflow_run": {
+        "id": 28156911850,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "main",
+        "head_sha": "411e87000bb314fcd4a79d0a5b1df1cbead1d0b3"
       }
     }
   ]

@@ -1,5 +1,13 @@
 [
   {
+    "id": 28156911850,
+    "sha": "411e87000bb314fcd4a79d0a5b1df1cbead1d0b3",
+    "short_sha": "411e870",
+    "message": "refactor: 替换旧文件选择器为统一的FileBrowserLauncher实现\n\n本次提交重构了项目内多处文件选择相关的代码，将传统的FileBrowser手动构建调用替换为统一的FileBrowserLauncher实现：\n1.  统一使用MainActivity的fileLauncher来处理文件选择逻辑\n2.  移除了大量冗余的FileBrowser构建代码，简化了调用流程\n3.  调整了部分类的类型定义，将Activity替换为更具体的FCLActivity\n4.  优化了文件选择后的回调逻辑，统一了异常处理和参数传递\n5.  新增并完善了FileBrowserLauncher的重载方法，支持更多快捷调用场景\n6.  修复了部分代码格式问题，提升了代码可读性\n\nupdate\n\nrefactor(browser): 将FileBrowserLauncher从Java转为Kotlin\n\n完成了Java版本文件浏览器启动器到Kotlin的重构，新增了单次选择的便捷启动方法，优化了代码写法和空安全处理",
+    "created_at": "2026-06-25T08:22:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28156911850"
+  },
+  {
     "id": 28099455826,
     "sha": "11e62a3014fc958c73bf1231359cc32901c4593a",
     "short_sha": "11e62a3",
@@ -390,13 +398,5 @@
     "message": "fix: 修复日志过滤可能因为空消息崩溃的问题",
     "created_at": "2026-06-03T05:59:02Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26866664391"
-  },
-  {
-    "id": 26862209238,
-    "sha": "422d18359b2eeb74702e9d038f7e8ea070fab023",
-    "short_sha": "422d183",
-    "message": "1.3.1.0",
-    "created_at": "2026-06-03T03:38:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26862209238"
   }
 ]
