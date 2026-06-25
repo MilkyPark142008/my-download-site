@@ -1,5 +1,13 @@
 [
   {
+    "id": 28179303917,
+    "sha": "3541d60251038c52ecd75cf04af10d19eb0e8ae0",
+    "short_sha": "3541d60",
+    "message": "fix",
+    "created_at": "2026-06-25T14:56:57Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/28179303917"
+  },
+  {
     "id": 27999808440,
     "sha": "ed3bb0d179be2ea8335ca02af53c4e93f0766267",
     "short_sha": "ed3bb0d",
@@ -390,13 +398,5 @@
     "message": "mitigation(lwjgl/3.3.3): Workaround lwjgl-core being overridden, not loading pojavexec",
     "created_at": "2026-04-22T20:26:26Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24800897576"
-  },
-  {
-    "id": 24796758244,
-    "sha": "b28ce5f3226f6b4af66790323461414e1881844f",
-    "short_sha": "b28ce5f",
-    "message": "bump(SDL): 3.2.22 to 3.4.4\n\nUses\nhttps://github.com/AngelAuraMC/amethyst-prebuilt-libraries/actions/runs/24794713156/\nhttps://github.com/AngelAuraMC/amethyst-prebuilt-libraries/commit/4765f4a95bec7f9daaa7d2a3f4430a6708b17da2\n\nLWJGL3.4.1 SDL binding needs them\n\nHad to modify SDLSurface to be public so we could use it.",
-    "created_at": "2026-04-22T18:52:48Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24796758244"
   }
 ]
