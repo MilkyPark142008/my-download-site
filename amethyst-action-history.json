@@ -1,5 +1,21 @@
 [
   {
+    "id": 28196991275,
+    "sha": "1885d02400851bc06c75145a5ef3d59603563328",
+    "short_sha": "1885d02",
+    "message": "fix: Fallback to lwjgl3.3.3 natives on JavaGUILauncherActivity",
+    "created_at": "2026-06-25T19:51:27Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/28196991275"
+  },
+  {
+    "id": 28196421196,
+    "sha": "21a473a569d3c5e12fc794c4c95f75c65bf0f7e8",
+    "short_sha": "21a473a",
+    "message": "fix: Fallback to lwjgl3.3.3 natives on JavaGUILauncherActivity",
+    "created_at": "2026-06-25T19:50:33Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/28196421196"
+  },
+  {
     "id": 28179303917,
     "sha": "3541d60251038c52ecd75cf04af10d19eb0e8ae0",
     "short_sha": "3541d60",
@@ -382,21 +398,5 @@
     "message": "rework(SDLActivity): Manual surface init, mSingleton now generic Activity\n\nThis is for LWJGL3ify. They swapped over GLFW with SDL. That includes\nwindow setup. We have to implement that.",
     "created_at": "2026-04-23T11:58:45Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24833934432"
-  },
-  {
-    "id": 24824000218,
-    "sha": "6c661ff8cf337050979709a76baa09eb4de5c984",
-    "short_sha": "6c661ff",
-    "message": "mitigation(lwjgl/3.3.3): Workaround lwjgl-core being overridden, not loading pojavexec\n\nLWJGL3ify overrides Sys, rendering our load call there useless.",
-    "created_at": "2026-04-23T08:00:36Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24824000218"
-  },
-  {
-    "id": 24800897576,
-    "sha": "d180ead570e0feaa45f1e1f3d79a26626ba4e1b8",
-    "short_sha": "d180ead",
-    "message": "mitigation(lwjgl/3.3.3): Workaround lwjgl-core being overridden, not loading pojavexec",
-    "created_at": "2026-04-22T20:26:26Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24800897576"
   }
 ]
