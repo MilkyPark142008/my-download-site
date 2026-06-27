@@ -1,5 +1,21 @@
 [
   {
+    "id": 28275592102,
+    "sha": "eab636ef5ee94254e2b7a904fedb74bf583c62bc",
+    "short_sha": "eab636e",
+    "message": "fix(MobileGlues): Minimap mods using incorrect colors\n\nUses\nhttps://github.com/AngelAuraMC/amethyst-prebuilt-libraries/actions/runs/28275384091",
+    "created_at": "2026-06-27T02:15:19Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/28275592102"
+  },
+  {
+    "id": 28275245805,
+    "sha": "88286a5363b1c1dd12c740ec716114aa525192f3",
+    "short_sha": "88286a5",
+    "message": "Merge pull request #279 from TouchController/v3_openjdk\n\nAdds configurable panning animation when keyboard opens",
+    "created_at": "2026-06-27T02:01:21Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/28275245805"
+  },
+  {
     "id": 28196991275,
     "sha": "1885d02400851bc06c75145a5ef3d59603563328",
     "short_sha": "1885d02",
@@ -382,21 +398,5 @@
     "message": "rework(SDLActivity): Move initialization to SDLActivity, mSingleton now generic Activity\n\nThis is for LWJGL3ify. They swapped over GLFW with SDL. That includes\nwindow setup. We have to implement that.",
     "created_at": "2026-04-23T14:43:27Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24841593805"
-  },
-  {
-    "id": 24841471760,
-    "sha": "091978a8d28d11a06ed24350df7596a9dde23098",
-    "short_sha": "091978a",
-    "message": "rework(SDLActivity): Move initialization to SDLActivity, mSingleton now generic Activity\n\nThis is for LWJGL3ify. They swapped over GLFW with SDL. That includes\nwindow setup. We have to implement that.",
-    "created_at": "2026-04-23T14:36:03Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24841471760"
-  },
-  {
-    "id": 24833934432,
-    "sha": "a3caac05c8b5f88c69843bcfae5e20842047566e",
-    "short_sha": "a3caac0",
-    "message": "rework(SDLActivity): Manual surface init, mSingleton now generic Activity\n\nThis is for LWJGL3ify. They swapped over GLFW with SDL. That includes\nwindow setup. We have to implement that.",
-    "created_at": "2026-04-23T11:58:45Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24833934432"
   }
 ]
