@@ -1,5 +1,13 @@
 [
   {
+    "id": 28315006053,
+    "sha": "29918439011573f49037a85fe1673dc0cc5e0858",
+    "short_sha": "2991843",
+    "message": "fix(browser): 修复空后缀列表导致的异常\n\n1. 在setSuffix方法中添加空值校验，避免传入null时直接赋值\n2. 将getSuffix().size() > 0替换为isEmpty()，更符合现代Java编码习惯",
+    "created_at": "2026-06-28T07:22:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28315006053"
+  },
+  {
     "id": 28311553001,
     "sha": "8e1318f5519364042dcc5c31e0776c042c27ae45",
     "short_sha": "8e1318f",
@@ -390,13 +398,5 @@
     "message": "x64",
     "created_at": "2026-06-06T10:32:06Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27059920267"
-  },
-  {
-    "id": 27007638152,
-    "sha": "f8b5742773313d1486ad9dc08ed2733ee1cf8302",
-    "short_sha": "f8b5742",
-    "message": "fix(game): 修复26.2-pre-4无法启动",
-    "created_at": "2026-06-05T09:42:32Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27007638152"
   }
 ]
