@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 166619605,
         "digest": "sha256:5ca6d4af2067ac21960c864dfa893bb7d8d377e25a3e3aa33afe563106f44481",
-        "download_count": 6799,
+        "download_count": 6827,
         "created_at": "2026-05-28T13:42:29Z",
         "updated_at": "2026-05-28T13:43:07Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.5/Amethyst-Debug.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 154823997,
         "digest": "sha256:51c42dc2ea672885fdbca8e86c32a0510d3ac5c5ee95e659dca39b5cb0a8a4ef",
-        "download_count": 14379,
+        "download_count": 14442,
         "created_at": "2026-05-28T13:42:34Z",
         "updated_at": "2026-05-28T13:43:07Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.5/Amethyst.apk"
@@ -115,11 +115,11 @@
     "body": "### [Download Info](https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/26577200011)\r\n`Amethyst-Debug.apk` - This will carry over your worlds if you are already using Amethyst.\r\n`Amethyst.apk` - This is the \"release\" apk. If you don't have Amethyst yet, use this.\r\n\r\nIf you install both, you have two separate apps, one `Amethyst (Debug)` and the other just `Amethyst`.\r\n\r\n___\r\n## Bugfixes\r\n* Fixed artifact classifiers being ignored/deleted by @unilock\r\n* Fixed Krypton Wrapper crashing on older versions due to invalid `LIBGL_ES` variable set (`1` is dropped)\r\n* Fixed crash on launch on 26.2-snapshot-4 and above due to `pojavexec` not loading in time for GLFW module init\r\n* Partially fixed floating window triggering a crash on 26.2-snapshots (26.1.x and below not affected)\r\n  - If ASR is disabled, you will crash if you trigger floating window after Minecraft starts with the Vulkan backend. Starting with floating window will cause no crashes.\r\n  - If ASR is enabled, you will crash if the game ever goes off screen on the Vulkan backend (tabbing out, toggle floating window, minimize floating window, etc,)\r\n  - OpenGL backend is completely free of crashes related to windowing (hopefully)\r\n* Fixed navigation and status bar appearing when toggling floating window mode off\r\n* Updated to https://github.com/MobileGL-Dev/MobileGlues/commit/961777c2f7868a58ba179db22299aa10329e267d to fix grey screen when using Angelica in 1.7.10\r\n* Now reads JVM args from version.json instead of ignoring them if no `inheritedFrom` field is found\r\n    - This was a hacky fix for Forge 1.17.1-37.0.12 and below crashing on any launcher that wasn't the official one. Forge 1.17.1-37.0.13 has the fix. This may have been also masking some other crashes so we need more testing. FCL and ZL adapted this as their fix though.\r\n    - The hacky fix stopped LWJGL3ify from reading the JVM args from the JSON properly.\r\n* Angelica is now properly accounted for in autorenderer selection.\r\n* High poll rate/hz input devices now work properly (they were glitchy before)\r\n* Fixed Forge on very old MCJE (older than 1.6.x) and below crashing because one of the packages in `methods_injector_agent` starts with `mod_`",
     "reactions": {
       "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/releases/317340520/reactions",
-      "total_count": 14,
+      "total_count": 15,
       "+1": 0,
       "-1": 0,
       "laugh": 0,
-      "hooray": 14,
+      "hooray": 15,
       "confused": 0,
       "heart": 0,
       "rocket": 0,
