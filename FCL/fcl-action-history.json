@@ -1,5 +1,13 @@
 [
   {
+    "id": 28370529148,
+    "sha": "a0630d13dc5c4f6142c058808889a15d961d650e",
+    "short_sha": "a0630d1",
+    "message": "feat(JVMCrashActivity): 崩溃日志分享/上传时自动添加hs_err_pidxxx.log内容\n\n1. 新增读取指定路径日志的重载方法\n2. 添加致命错误日志路径提取逻辑\n3. 合并主日志与致命错误日志进行上传和导出\n4. 移除旧的退出状态总结逻辑",
+    "created_at": "2026-06-29T12:01:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28370529148"
+  },
+  {
     "id": 28318724190,
     "sha": "c4f65f9595f515e6a317500fe348a34e9567605c",
     "short_sha": "c4f65f9",
@@ -390,13 +398,5 @@
     "message": "fix(FCLAlertDialog): 修复url识别，主动开启url功能",
     "created_at": "2026-06-06T13:32:15Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27063670688"
-  },
-  {
-    "id": 27060416683,
-    "sha": "d82d65e0ff7228b5e2f542b9d6ec50363c97d85e",
-    "short_sha": "d82d65e",
-    "message": "feat: 优化微软登录未购买提示",
-    "created_at": "2026-06-06T10:57:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27060416683"
   }
 ]
