@@ -1,5 +1,53 @@
 [
   {
+    "id": 28564732420,
+    "sha": "47d91474b3017ad6f523fb0a4852ec8124dc8f07",
+    "short_sha": "47d9147",
+    "message": "Merge pull request #1506 from ZalithLauncher/chore/update_local_version\n\nchore: 更新热门模组支持版本： 26.2",
+    "created_at": "2026-07-02T04:09:47Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28564732420"
+  },
+  {
+    "id": 28564723333,
+    "sha": "9c250dc4a4576f17180735440f00f74c24a9d3fe",
+    "short_sha": "9c250dc",
+    "message": "chore: 更新热门模组支持版本： 26.2",
+    "created_at": "2026-07-02T04:09:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28564723333"
+  },
+  {
+    "id": 28564521885,
+    "sha": "61629bb022424ef91ad1f7d29454ab5b32ea2af4",
+    "short_sha": "61629bb",
+    "message": "Merge pull request #1505 from ZalithLauncher/fix/remote_download\n\nfix：修复下载相关问题",
+    "created_at": "2026-07-02T04:04:17Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28564521885"
+  },
+  {
+    "id": 28564240016,
+    "sha": "d2875d85c34e97598975f0cc60bbcf3e2309bf12",
+    "short_sha": "d2875d8",
+    "message": "fix(整合包): 安装整合包时，跳过已 404 的项目 #1498",
+    "created_at": "2026-07-02T03:56:24Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28564240016"
+  },
+  {
+    "id": 28564223638,
+    "sha": "ebaaee09d9cd1bc06e1946c8840aa33cbb1dca88",
+    "short_sha": "ebaaee0",
+    "message": "fix(Modrinth): 不需要在启动器侧自行判断项目是否可用",
+    "created_at": "2026-07-02T03:55:54Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28564223638"
+  },
+  {
+    "id": 28560820466,
+    "sha": "30869dd57a4e203ae0a9560ecb83d1ac1eac687a",
+    "short_sha": "30869dd",
+    "message": "Merge pull request #1496 from ZalithLauncher/feat/custom_easytier_server\n\nfeat(陶瓦联机): 支持使用自定义的 EasyTier 服务器节点",
+    "created_at": "2026-07-02T02:20:05Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28560820466"
+  },
+  {
     "id": 28419023428,
     "sha": "7018329d4233ff48e5c1c8e179857ef3fc37bb8f",
     "short_sha": "7018329",
@@ -350,53 +398,5 @@
     "message": "fix: 过滤掉不公开可见的远端项目",
     "created_at": "2026-06-16T09:19:44Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27607498885"
-  },
-  {
-    "id": 27602911868,
-    "sha": "4ee7bef71774b7b45c77b00d3f14bbd089cab523",
-    "short_sha": "4ee7bef",
-    "message": "Merge pull request #1420 from ZalithLauncher/fix/control_layout\n\nfix: 过滤有效事件时意外打乱了原有顺序",
-    "created_at": "2026-06-16T07:56:46Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27602911868"
-  },
-  {
-    "id": 27602803374,
-    "sha": "6797b0bbcd84a4b92fa6d971f5e8cdda9b119658",
-    "short_sha": "6797b0b",
-    "message": "fix: 过滤有效事件时意外打乱了原有顺序",
-    "created_at": "2026-06-16T07:54:32Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27602803374"
-  },
-  {
-    "id": 27601976060,
-    "sha": "5db42d44f2ae60c0e2ad8b6505a36aa04ea6ef3a",
-    "short_sha": "5db42d4",
-    "message": "chore: 更新模组时，排除不可获取远端项目的模组",
-    "created_at": "2026-06-16T07:37:51Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27601976060"
-  },
-  {
-    "id": 27601435219,
-    "sha": "cc39747d94fd6cc3cf1ef0b567311e68b4658585",
-    "short_sha": "cc39747",
-    "message": "chore: 本地模组无法获取图标时，使用加载器图标代替",
-    "created_at": "2026-06-16T07:27:21Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27601435219"
-  },
-  {
-    "id": 27600364354,
-    "sha": "1c1973d452f937a901d0b5c937950c9d39d06911",
-    "short_sha": "1c1973d",
-    "message": "feat: 单独检查 OptiFine 模组，不再远端获取其项目 #1409",
-    "created_at": "2026-06-16T07:05:00Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27600364354"
-  },
-  {
-    "id": 27427364232,
-    "sha": "1484176bef1d950ff61b693f5cefcef5b30c69cc",
-    "short_sha": "1484176",
-    "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (84 of 84 strings)\n\nTranslation: ZalithLauncher2/Terracota\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/terracota/pt_BR/",
-    "created_at": "2026-06-12T16:01:21Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27427364232"
   }
 ]
