@@ -1,5 +1,21 @@
 [
   {
+    "id": 28963544650,
+    "sha": "356d6aa136a25df0fb9c98afa42aded74f457101",
+    "short_sha": "356d6aa",
+    "message": "feat: LWJGL3ify support\n\nNow should run lwjgl3ify ootb (assuming non-debug builds, the\nforgePatches url is broken there, not our bug)",
+    "created_at": "2026-07-08T17:44:37Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/28963544650"
+  },
+  {
+    "id": 28963283549,
+    "sha": "7ad62040d791526cdbc52800535d3947a64970dc",
+    "short_sha": "7ad6204",
+    "message": "feat: LWJGL3ify support\n\nNow should run lwjgl3ify ootb (assuming non-debug builds, the\nforgePatches url is broken there, not our bug)",
+    "created_at": "2026-07-08T17:40:23Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/28963283549"
+  },
+  {
     "id": 28937859066,
     "sha": "1ffce114344995aee188e8d4ba4ebd060c252819",
     "short_sha": "1ffce11",
@@ -382,21 +398,5 @@
     "message": "bump: version from 1.1.4 to 1.1.5",
     "created_at": "2026-04-27T10:26:34Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24989745900"
-  },
-  {
-    "id": 24957623277,
-    "sha": "09b0f20d045d07aa47f05e95ff704a8bd30778ad",
-    "short_sha": "09b0f20",
-    "message": "bump(MobileGlues): 1.1.5-dev, BGRA Swizzling\n\nFixes rendering for LWJGL3ify\nUses\nhttps://github.com/AngelAuraMC/amethyst-prebuilt-libraries/actions/runs/24894710100",
-    "created_at": "2026-04-26T13:12:49Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24957623277"
-  },
-  {
-    "id": 24955174699,
-    "sha": "8045422171057a8c3d59e718556a181593a00c08",
-    "short_sha": "8045422",
-    "message": "fix(SDL): Define preferred OpenGL driver\n\nTODO: Detect Angelica versions supporting GLES directly and unset so SDL\ndefaults to it.",
-    "created_at": "2026-04-26T11:09:52Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24955174699"
   }
 ]
