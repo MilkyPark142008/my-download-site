@@ -1,5 +1,13 @@
 [
   {
+    "id": 29001964648,
+    "sha": "1ffa6f54bc527290cd6ca545392d4ab698ae94fc",
+    "short_sha": "1ffa6f5",
+    "message": "rework(SDLActivity): Move initialization to SDLActivity, mSingleton now generic Activity\n\nThis is for LWJGL3ify. They swapped over GLFW with SDL. That includes\nwindow setup. We have to implement that.",
+    "created_at": "2026-07-08T07:16:03Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29001964648"
+  },
+  {
     "id": 29001942722,
     "sha": "59551d0ae91ea3f24f473f9c3260cb86ff985dca",
     "short_sha": "59551d0",
@@ -390,13 +398,5 @@
     "message": "[revertme] arm64 only builds. fix for MobileGL",
     "created_at": "2026-04-27T15:18:19Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25003564226"
-  },
-  {
-    "id": 25003344690,
-    "sha": "3de7f1b07335fcdbd2a1f2cfc07399f5ffb78b34",
-    "short_sha": "3de7f1b",
-    "message": "[revertme] arm64 only builds. fix for MobileGL",
-    "created_at": "2026-04-27T15:14:03Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25003344690"
   }
 ]
