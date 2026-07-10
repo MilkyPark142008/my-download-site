@@ -1,5 +1,13 @@
 [
   {
+    "id": 29061129093,
+    "sha": "a6cef5747edc3b0b6f5b1b08588c885168489c16",
+    "short_sha": "a6cef57",
+    "message": "fix(gl_bridge): restore old Zink vsync behavior for Kopper path (#1667)\n\n* Adds swap interval handling for OpenGL context\n\n* fix(gl): evitar a troca de buffer quando o renderer é opengles3_desktopgl_zink_kopper sem V-Sync",
+    "created_at": "2026-07-10T00:54:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29061129093"
+  },
+  {
     "id": 28912102587,
     "sha": "50fcdde83669e3fd4b1115d28f3886147e109cc0",
     "short_sha": "50fcdde",
@@ -390,13 +398,5 @@
     "message": "Revert \"更新部分HMCL代码&使用 Kala Compress 替代 commons-compress\"\n\nThis reverts commit 266190993f28f83727bcca4ce640fbcbc838c66d.",
     "created_at": "2026-06-13T03:11:01Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27454837536"
-  },
-  {
-    "id": 27321069473,
-    "sha": "266190993f28f83727bcca4ce640fbcbc838c66d",
-    "short_sha": "2661909",
-    "message": "更新部分HMCL代码&使用 Kala Compress 替代 commons-compress",
-    "created_at": "2026-06-11T03:06:25Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27321069473"
   }
 ]
