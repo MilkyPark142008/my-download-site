@@ -1,5 +1,13 @@
 [
   {
+    "id": 29475242013,
+    "sha": "14bb93d6ab52050eb6cc341737ad48176c07a103",
+    "short_sha": "14bb93d",
+    "message": "fix: Controlify incompatible jna version\n\nThis might break some mods? needs testing.",
+    "created_at": "2026-07-16T05:42:20Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29475242013"
+  },
+  {
     "id": 29469571122,
     "sha": "8d8fd61449520659cc086713f3a7c54280cbc5b2",
     "short_sha": "8d8fd61",
@@ -390,13 +398,5 @@
     "message": "bump: version from 1.1.4 to 1.1.5",
     "created_at": "2026-04-28T13:32:28Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25055894707"
-  },
-  {
-    "id": 25055869853,
-    "sha": "fcc66daa582c7ed7389a816c460e2326d82a5ed1",
-    "short_sha": "fcc66da",
-    "message": "fix(build): Correct location of local curseforge_key.txt file\n\nRelative path bad, use absolute. It causes issues in gradle vers that\nhave workingDir in caches.",
-    "created_at": "2026-04-28T13:31:59Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25055869853"
   }
 ]
