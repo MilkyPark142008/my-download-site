@@ -1,5 +1,13 @@
 [
   {
+    "id": 29469571122,
+    "sha": "8d8fd61449520659cc086713f3a7c54280cbc5b2",
+    "short_sha": "8d8fd61",
+    "message": "fix(SDL): Don't invoke native method unless SDL is loaded",
+    "created_at": "2026-07-15T15:18:15Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29469571122"
+  },
+  {
     "id": 29248823819,
     "sha": "78b212d1a4ffb9d64c169887935fa64c2a2c8998",
     "short_sha": "78b212d",
@@ -390,13 +398,5 @@
     "message": "fix(build): Correct location of local curseforge_key.txt file\n\nRelative path bad, use absolute. It causes issues in gradle vers that\nhave workingDir in caches.",
     "created_at": "2026-04-28T13:31:59Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25055869853"
-  },
-  {
-    "id": 25055218845,
-    "sha": "b113d9086479b59cc6465c15ccbf1c0968a18e46",
-    "short_sha": "b113d90",
-    "message": "fix(build): Correct location of local curseforge_key.txt file\n\nRelative path bad, use absolute. It causes issues in gradle vers that\nhave workingDir in caches.",
-    "created_at": "2026-04-28T13:19:09Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25055218845"
   }
 ]

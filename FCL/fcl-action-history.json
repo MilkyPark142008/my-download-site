@@ -1,5 +1,13 @@
 [
   {
+    "id": 29470363358,
+    "sha": "3c18f7bf15ceb6b1df59319acf7e027a60c1b24d",
+    "short_sha": "3c18f7b",
+    "message": "fix(GameMenu): 修复切换控制组后按钮样式未正确同步的问题\n\n将原来使用FXUtils绑定选择的方式改为自定义条目选中监听，在切换控制组时遍历按钮列表重新匹配并更新对应的按钮样式",
+    "created_at": "2026-07-16T04:01:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29470363358"
+  },
+  {
     "id": 29422219224,
     "sha": "c5280a1c21c1dfb9f9a3ea635ee1c5bb3670b03a",
     "short_sha": "c5280a1",
@@ -390,13 +398,5 @@
     "message": "update",
     "created_at": "2026-06-19T16:19:35Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27837424532"
-  },
-  {
-    "id": 27836392219,
-    "sha": "9864c89097bbe3d5da99bf1ed317b96c950234ba",
-    "short_sha": "9864c89",
-    "message": "update",
-    "created_at": "2026-06-19T15:57:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27836392219"
   }
 ]
