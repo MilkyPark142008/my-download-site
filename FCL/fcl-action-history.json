@@ -1,5 +1,13 @@
 [
   {
+    "id": 29638300797,
+    "sha": "c6725894569243b7688c98c1855cd1d980dba4f5",
+    "short_sha": "c672589",
+    "message": "fix(ModChecker): 修复imgui库缺失检测逻辑&修复新版本Axiom无法加载imgui\n\n添加NativeLibPlugin的imgui库插件检测，当架构为空且未安装对应插件时才抛出异常",
+    "created_at": "2026-07-18T08:56:04Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29638300797"
+  },
+  {
     "id": 29629388665,
     "sha": "09a21c9ebc93b39d5225a80d0f8fc6b11744b31a",
     "short_sha": "09a21c9",
@@ -390,13 +398,5 @@
     "message": "refactor(world-list-page): 重构世界列表页面代码逻辑\n\n1. 替换CompletableFuture为协程实现异步逻辑\n2. 移除不必要的可空类型简化变量声明\n3. 添加修复存档文件夹权限的按钮功能\n4. 优化列表更新和状态判断逻辑\n5. 增加对私有目录存档的权限修复按钮显示判断",
     "created_at": "2026-06-22T06:02:35Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27932850109"
-  },
-  {
-    "id": 27929478297,
-    "sha": "7c04e3ce537adbfa480277c8343234cb0a7cb1c3",
-    "short_sha": "7c04e3c",
-    "message": "refactor(ui): 将世界列表页从ListView迁移到RecyclerView\n\n替换了旧的ListView实现为RecyclerView，优化列表滚动性能和视图复用，同时使用ViewBinding简化适配器代码，重构了页面布局结构",
-    "created_at": "2026-06-22T04:24:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27929478297"
   }
 ]
