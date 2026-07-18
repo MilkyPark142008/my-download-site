@@ -1,5 +1,13 @@
 [
   {
+    "id": 29649075114,
+    "sha": "ab5f7caf747f10440bb7694515f39135b445a263",
+    "short_sha": "ab5f7ca",
+    "message": "fix(HotbarView): #37",
+    "created_at": "2026-07-18T14:58:43Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29649075114"
+  },
+  {
     "id": 29647940813,
     "sha": "73dc1fa2d3d1b636966a0190b57b6c8a08b59608",
     "short_sha": "73dc1fa",
@@ -390,13 +398,5 @@
     "message": "fix: Handle high polling rate sources\n\nAndroid's onTouch and onGenericMotion are only called every screen\nrefresh. This means it is tied to your hz. So what android does for high\nrefresh rate devices is it stores them in\nMotionEvent.getHistoricalAxisValue() and makes you process them all at\nonce on the next screen refresh.\n\nSee\nhttps://developer.android.com/reference/android/view/MotionEvent#batching\n\nWe used to just completely ignore this so high DPI mice didn't work\nproperly.\n\nHopefully high DPI everything now works properly.",
     "created_at": "2026-05-14T15:21:11Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25868506834"
-  },
-  {
-    "id": 25868472492,
-    "sha": "9070983d2e0e554254a2123da2546dd20c85d689",
-    "short_sha": "9070983",
-    "message": "fix: Handle high polling rate sources\n\nAndroid's onTouch and onGenericMotion are only called every screen\nrefresh. This means it is tied to your hz. So what android does for high\nrefresh rate devices is it stores them in\nMotionEvent.getHistoricalAxisValue() and makes you process them all at\nonce on the next screen refresh.\n\nSee\nhttps://developer.android.com/reference/android/view/MotionEvent#batching\n\nWe used to just completely ignore this so high DPI mice didn't work\nproperly.\n\nHopefully high DPI everything now works properly.",
-    "created_at": "2026-05-14T15:20:23Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25868472492"
   }
 ]
