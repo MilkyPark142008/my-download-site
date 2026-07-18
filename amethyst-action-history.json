@@ -1,5 +1,21 @@
 [
   {
+    "id": 29647940813,
+    "sha": "73dc1fa2d3d1b636966a0190b57b6c8a08b59608",
+    "short_sha": "73dc1fa",
+    "message": "mitigation(SDL): M4 and M5 are flipped on android, adapt",
+    "created_at": "2026-07-18T14:23:15Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29647940813"
+  },
+  {
+    "id": 29646454545,
+    "sha": "756ff218ea4f454e65b9c120927b3ad67ec49223",
+    "short_sha": "756ff21",
+    "message": "change(SDL): Use SDL3 includes instead of janking it",
+    "created_at": "2026-07-18T13:35:58Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29646454545"
+  },
+  {
     "id": 29645634400,
     "sha": "5148b03857e4feb747522f9c6ae2673ca8d225b5",
     "short_sha": "5148b03",
@@ -382,21 +398,5 @@
     "message": "fix: Handle high polling rate sources\n\nAndroid's onTouch and onGenericMotion are only called every screen\nrefresh. This means it is tied to your hz. So what android does for high\nrefresh rate devices is it stores them in\nMotionEvent.getHistoricalAxisValue() and makes you process them all at\nonce on the next screen refresh.\n\nSee\nhttps://developer.android.com/reference/android/view/MotionEvent#batching\n\nWe used to just completely ignore this so high DPI mice didn't work\nproperly.\n\nHopefully high DPI everything now works properly.",
     "created_at": "2026-05-14T15:20:23Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25868472492"
-  },
-  {
-    "id": 25868470818,
-    "sha": "9070983d2e0e554254a2123da2546dd20c85d689",
-    "short_sha": "9070983",
-    "message": "fix: Handle high polling rate sources\n\nAndroid's onTouch and onGenericMotion are only called every screen\nrefresh. This means it is tied to your hz. So what android does for high\nrefresh rate devices is it stores them in\nMotionEvent.getHistoricalAxisValue() and makes you process them all at\nonce on the next screen refresh.\n\nSee\nhttps://developer.android.com/reference/android/view/MotionEvent#batching\n\nWe used to just completely ignore this so high DPI mice didn't work\nproperly.\n\nHopefully high DPI everything now works properly.",
-    "created_at": "2026-05-14T15:20:23Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25868470818"
-  },
-  {
-    "id": 25825438849,
-    "sha": "d080c6a78a6654c1ab9ef3f46c38515d8713638d",
-    "short_sha": "d080c6a",
-    "message": "fix: Handle high polling rate sources\n\nAndroid's onTouch and onGenericMotion are only called every screen\nrefresh. This means it is tied to your hz. So what android does for high\nrefresh rate devices is it stores them in\nMotionEvent.getHistoricalAxisValue() and makes you process them all at\nonce on the next screen refresh.\n\nSee\nhttps://developer.android.com/reference/android/view/MotionEvent#batching\n\nWe used to just completely ignore this so high DPI mice didn't work\nproperly.\n\nHopefully high DPI everything now works properly.",
-    "created_at": "2026-05-13T20:40:11Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25825438849"
   }
 ]
