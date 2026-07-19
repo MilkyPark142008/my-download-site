@@ -1,5 +1,13 @@
 [
   {
+    "id": 29667029211,
+    "sha": "aebb0d3f2a7cb7ba6ea85cff5959fb5cac2933f2",
+    "short_sha": "aebb0d3",
+    "message": "Merge remote-tracking branch 'official/main'\n\n# Conflicts:\n#\tFCL/build.gradle.kts",
+    "created_at": "2026-07-19T00:27:49Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29667029211"
+  },
+  {
     "id": 29638300797,
     "sha": "c6725894569243b7688c98c1855cd1d980dba4f5",
     "short_sha": "c672589",
@@ -390,13 +398,5 @@
     "message": "fix(JVMCrashActivity): 增加Fabric模组冲突错误弹窗提示\n\n在崩溃页面中检测并展示Fabric加载器的模组不兼容错误信息，帮助用户快速定位冲突模组问题",
     "created_at": "2026-06-22T06:37:21Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27934359431"
-  },
-  {
-    "id": 27932850109,
-    "sha": "95ae776990fd6b7437564726c1e7e14c5d68489a",
-    "short_sha": "95ae776",
-    "message": "refactor(world-list-page): 重构世界列表页面代码逻辑\n\n1. 替换CompletableFuture为协程实现异步逻辑\n2. 移除不必要的可空类型简化变量声明\n3. 添加修复存档文件夹权限的按钮功能\n4. 优化列表更新和状态判断逻辑\n5. 增加对私有目录存档的权限修复按钮显示判断",
-    "created_at": "2026-06-22T06:02:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27932850109"
   }
 ]
