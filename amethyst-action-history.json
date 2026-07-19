@@ -1,5 +1,37 @@
 [
   {
+    "id": 29698356355,
+    "sha": "77f4875a928f373aff3b89fc026f3782e96fbf4f",
+    "short_sha": "77f4875",
+    "message": "fix(HotbarView): #37",
+    "created_at": "2026-07-19T18:13:17Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29698356355"
+  },
+  {
+    "id": 29697912423,
+    "sha": "d8a195640a7e0929f2ee532d7784de2b980c6c48",
+    "short_sha": "d8a1956",
+    "message": "last minute fixes (#311)\n\n* fix: #310\n\n* fix(MicrosoftBackgroundLogin): Add proper detection for ownership\n\nIt only detected profile before, now it checks for real ownership of the\ngame and gives out the proper error",
+    "created_at": "2026-07-19T17:59:53Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29697912423"
+  },
+  {
+    "id": 29697876337,
+    "sha": "1255fb57fcb8472adf3a980b2161768146fc07ec",
+    "short_sha": "1255fb5",
+    "message": "qol: Append either debug or release to the version string (#301)",
+    "created_at": "2026-07-19T17:58:43Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29697876337"
+  },
+  {
+    "id": 29697862627,
+    "sha": "28ca16c9ceb58331213938614e0031efd70789b6",
+    "short_sha": "28ca16c",
+    "message": "fix(MicrosoftBackgroundLogin): Add proper detection for ownership\n\nIt only detected profile before, nwo it checks for real ownership of the\ngame and gives out the proper error",
+    "created_at": "2026-07-19T17:58:09Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29697862627"
+  },
+  {
     "id": 29694659452,
     "sha": "c11eae582fe134e2cf7aafb1680ec85f5281b8d9",
     "short_sha": "c11eae5",
@@ -366,37 +398,5 @@
     "message": "fix(glfw): Add more missing methods and fields",
     "created_at": "2026-06-09T00:59:49Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/27176966530"
-  },
-  {
-    "id": 27176750525,
-    "sha": "47789da0064f45b1c600cda78e447fad2d002fd6",
-    "short_sha": "47789da",
-    "message": "fix(glfw): Add more missing methods and fields",
-    "created_at": "2026-06-09T00:46:01Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/27176750525"
-  },
-  {
-    "id": 27176496936,
-    "sha": "47789da0064f45b1c600cda78e447fad2d002fd6",
-    "short_sha": "47789da",
-    "message": "fix(glfw): Add more missing methods and fields",
-    "created_at": "2026-06-09T00:46:01Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/27176496936"
-  },
-  {
-    "id": 26577200011,
-    "sha": "1f8bf59b0a8b3ef0fd5cf035749ea4f9ec81ee86",
-    "short_sha": "1f8bf59",
-    "message": "mitigation: very old forge will crash trying to load package name starting with \"mod_\"\n\nBecause of crummy regex\nhttps://github.com/MinecraftForge/FML/blob/57be417b7c29bb23e152f400752f68f33115915d/common/cpw/mods/fml/common/Loader.java#L66\nOld forge will incorrectly load \"mod_blahblah/yourclass.class\" while\nexpecting a \"yourclass.class\" because package name started with \"mod_\".\n\nFixes https://github.com/AngelAuraMC/Amethyst-Android/issues/265",
-    "created_at": "2026-05-28T13:19:47Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/26577200011"
-  },
-  {
-    "id": 26576959685,
-    "sha": "8afa5ec3dae9a851bbc44379f03643534b8c3ebb",
-    "short_sha": "8afa5ec",
-    "message": "mitigation: very old forge will crash trying to load package name starting with \"mod_\"\n\nBecause of crummy regex\nhttps://github.com/MinecraftForge/FML/blob/57be417b7c29bb23e152f400752f68f33115915d/common/cpw/mods/fml/common/Loader.java#L66\nOld forge will incorrectly load \"mod_blahblah/yourclass.class\" while\nexpecting a \"yourclass.class\" because package name started with \"mod_\".\n\nFixes https://github.com/AngelAuraMC/Amethyst-Android/issues/265",
-    "created_at": "2026-05-28T13:14:19Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/26576959685"
   }
 ]
