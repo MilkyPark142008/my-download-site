@@ -1,5 +1,37 @@
 [
   {
+    "id": 29694659452,
+    "sha": "c11eae582fe134e2cf7aafb1680ec85f5281b8d9",
+    "short_sha": "c11eae5",
+    "message": "fix(MicrosoftBackgroundLogin): Add proper detection for ownership\n\nIt only detected profile before, now it checks for real ownership of the\ngame and gives out the proper error",
+    "created_at": "2026-07-19T16:20:14Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29694659452"
+  },
+  {
+    "id": 29694644375,
+    "sha": "073c35c258436f99a260cdc329693cbe81f794ed",
+    "short_sha": "073c35c",
+    "message": "fix(MicrosoftBackgroundLogin): Add proper detection for ownership\n\nIt only detected profile before, now it checks for real ownership of the\ngame and gives out the proper error",
+    "created_at": "2026-07-19T16:19:50Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29694644375"
+  },
+  {
+    "id": 29694141780,
+    "sha": "5a86015ba0e904ca3a62282f772b686785615259",
+    "short_sha": "5a86015",
+    "message": "fix: #310",
+    "created_at": "2026-07-19T16:03:14Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29694141780"
+  },
+  {
+    "id": 29694087688,
+    "sha": "5a86015ba0e904ca3a62282f772b686785615259",
+    "short_sha": "5a86015",
+    "message": "fix: #310",
+    "created_at": "2026-07-19T16:03:14Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29694087688"
+  },
+  {
     "id": 29649075114,
     "sha": "ab5f7caf747f10440bb7694515f39135b445a263",
     "short_sha": "ab5f7ca",
@@ -366,37 +398,5 @@
     "message": "mitigation: very old forge will crash trying to load package name starting with \"mod_\"\n\nBecause of crummy regex\nhttps://github.com/MinecraftForge/FML/blob/57be417b7c29bb23e152f400752f68f33115915d/common/cpw/mods/fml/common/Loader.java#L66\nOld forge will incorrectly load \"mod_blahblah/yourclass.class\" while\nexpecting a \"yourclass.class\" because package name started with \"mod_\".\n\nFixes https://github.com/AngelAuraMC/Amethyst-Android/issues/265",
     "created_at": "2026-05-28T13:14:19Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/26576959685"
-  },
-  {
-    "id": 26576932740,
-    "sha": "8afa5ec3dae9a851bbc44379f03643534b8c3ebb",
-    "short_sha": "8afa5ec",
-    "message": "mitigation: very old forge will crash trying to load package name starting with \"mod_\"\n\nBecause of crummy regex\nhttps://github.com/MinecraftForge/FML/blob/57be417b7c29bb23e152f400752f68f33115915d/common/cpw/mods/fml/common/Loader.java#L66\nOld forge will incorrectly load \"mod_blahblah/yourclass.class\" while\nexpecting a \"yourclass.class\" because package name started with \"mod_\".\n\nFixes https://github.com/AngelAuraMC/Amethyst-Android/issues/265",
-    "created_at": "2026-05-28T13:14:19Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/26576932740"
-  },
-  {
-    "id": 26576875822,
-    "sha": "b45e5dd9dfa5dc7c1dc45368e6c36485a5b1e2df",
-    "short_sha": "b45e5dd",
-    "message": "mitigation: very old forge will crash trying to load package name starting with \"mod_\"\n\nBecause of crummy regex\nhttps://github.com/MinecraftForge/FML/blob/57be417b7c29bb23e152f400752f68f33115915d/common/cpw/mods/fml/common/Loader.java#L66\nOld forge will incorrectly load \"mod_blahblah/yourclass.class\" while\nexpecting a \"yourclass.class\" because package name started with \"mod_\".\n\nFixes https://github.com/AngelAuraMC/Amethyst-Android/issues/265",
-    "created_at": "2026-05-28T13:13:11Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/26576875822"
-  },
-  {
-    "id": 25936254761,
-    "sha": "cd8ed668b84fe97587a6fccddfa18730b2146ee9",
-    "short_sha": "cd8ed66",
-    "message": "[FIXME] Half-finished lwjgl3ify support\n\nOnly missing popup that installs lwjgl3ify properly if detected in mods",
-    "created_at": "2026-05-15T19:06:22Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25936254761"
-  },
-  {
-    "id": 25868506834,
-    "sha": "ffe492921195542340a1785aa301b5e811ccdfea",
-    "short_sha": "ffe4929",
-    "message": "fix: Handle high polling rate sources\n\nAndroid's onTouch and onGenericMotion are only called every screen\nrefresh. This means it is tied to your hz. So what android does for high\nrefresh rate devices is it stores them in\nMotionEvent.getHistoricalAxisValue() and makes you process them all at\nonce on the next screen refresh.\n\nSee\nhttps://developer.android.com/reference/android/view/MotionEvent#batching\n\nWe used to just completely ignore this so high DPI mice didn't work\nproperly.\n\nHopefully high DPI everything now works properly.",
-    "created_at": "2026-05-14T15:21:11Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25868506834"
   }
 ]
