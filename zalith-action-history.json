@@ -1,5 +1,53 @@
 [
   {
+    "id": 29687706910,
+    "sha": "84d4762baa653e4efa85ae009a9a6fb31860cce8",
+    "short_sha": "84d4762",
+    "message": "Merge pull request #1578 from ZalithLauncher/fix/lwjgl\n\nfix: 指定 openal 库加载 & 缺失 Platform$Architecture.is64Bit()",
+    "created_at": "2026-07-19T12:49:25Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29687706910"
+  },
+  {
+    "id": 29687622041,
+    "sha": "003146ae0ab7a1b48fda4b673a9f4cff082e517c",
+    "short_sha": "003146a",
+    "message": "fix: 指定 openal 库加载 & 缺失 Platform$Architecture.is64Bit()",
+    "created_at": "2026-07-19T12:46:31Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29687622041"
+  },
+  {
+    "id": 29686256377,
+    "sha": "71ac0aa90a43725c15a496b48151f1f68faf7b71",
+    "short_sha": "71ac0aa",
+    "message": "Merge pull request #1576 from ZalithLauncher/main\n\nmerge main",
+    "created_at": "2026-07-19T12:02:37Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29686256377"
+  },
+  {
+    "id": 29686237351,
+    "sha": "b499eea46a3d705463b3117a2bdae1895cc80d46",
+    "short_sha": "b499eea",
+    "message": "Merge pull request #1575 from ZalithLauncher/main\n\nmerge main",
+    "created_at": "2026-07-19T12:02:03Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29686237351"
+  },
+  {
+    "id": 29686221851,
+    "sha": "6c2c689cb9195c5a2482b19f0f6f7a2bce15d1db",
+    "short_sha": "6c2c689",
+    "message": "Merge pull request #1574 from ZalithLauncher/refactor/renderer_config\n\nrefactor: 将渲染器插件的配置迁移到Dialog中",
+    "created_at": "2026-07-19T12:01:36Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29686221851"
+  },
+  {
+    "id": 29686192680,
+    "sha": "99621c6620e9d95003b50edf541853b2c39b2178",
+    "short_sha": "99621c6",
+    "message": "refactor: 将渲染器插件的配置迁移到Dialog中",
+    "created_at": "2026-07-19T12:00:05Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29686192680"
+  },
+  {
     "id": 29683304960,
     "sha": "4dc27fa93a453b361c44df0b69cc541f8b8e0c20",
     "short_sha": "4dc27fa",
@@ -350,53 +398,5 @@
     "message": "Merge pull request #1526 from ZalithLauncher/fix/layout_color_adapter\n\nfix: 新旧 Compose 色彩空间 ID 不再匹配导致的崩溃",
     "created_at": "2026-07-07T01:27:33Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28834992489"
-  },
-  {
-    "id": 28771411539,
-    "sha": "64537274c518f48adf3417fbba8a7b4f828fa611",
-    "short_sha": "6453727",
-    "message": "fix: 新旧 Compose 色彩空间 ID 不再匹配导致的崩溃",
-    "created_at": "2026-07-06T06:07:06Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28771411539"
-  },
-  {
-    "id": 28768558781,
-    "sha": "30cc5e3155502e7836643ad63e29508d2f96d3b6",
-    "short_sha": "30cc5e3",
-    "message": "Merge pull request #1522 from ZalithLauncher/refactor/version_list_state\n\nrefactor: 重构版本列表状态获取机制",
-    "created_at": "2026-07-06T04:49:58Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28768558781"
-  },
-  {
-    "id": 28732743503,
-    "sha": "29a2b5597442fce8120e8c6b8bb5b304d451414f",
-    "short_sha": "29a2b55",
-    "message": "[Do not use!] Translated using Weblate (Turkish)\n\nCurrently translated at 100.0% (86 of 86 strings)\n\nTranslation: ZalithLauncher2/Terracota\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/terracota/tr/",
-    "created_at": "2026-07-05T07:01:28Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28732743503"
-  },
-  {
-    "id": 28731318604,
-    "sha": "93a27b8431b464ada6f98ff939789b1c7eaf1463",
-    "short_sha": "93a27b8",
-    "message": "refactor: 重构版本列表状态获取机制",
-    "created_at": "2026-07-05T05:57:52Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28731318604"
-  },
-  {
-    "id": 28699904615,
-    "sha": "73c3294d0daed8746e1d506173fc10dae774d361",
-    "short_sha": "73c3294",
-    "message": "[Do not use!] Translated using Weblate (Portuguese)\n\nCurrently translated at 99.3% (1244 of 1252 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt/",
-    "created_at": "2026-07-04T08:01:30Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28699904615"
-  },
-  {
-    "id": 28697719983,
-    "sha": "9eaaeeec2a28225d1d81d9354e1dd8c6b4b81ecd",
-    "short_sha": "9eaaeee",
-    "message": "[Do not use!] Merge branch 'origin/weblate_terracotta' into Weblate.",
-    "created_at": "2026-07-04T06:28:24Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28697719983"
   }
 ]
