@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 168364570,
         "digest": "sha256:a3845070df3c77b57e6c810ffcad4516fd702e9aff91b1ebb6667d2d0918bc22",
-        "download_count": 299,
+        "download_count": 308,
         "created_at": "2026-07-19T18:05:14Z",
         "updated_at": "2026-07-19T18:06:04Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.6/Amethyst-Debug.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 156516190,
         "digest": "sha256:ac8d3aa0b1955c003a3f26f359b13bc6abf6c19ce29e82d4a0d542fbd4b4edc0",
-        "download_count": 720,
+        "download_count": 762,
         "created_at": "2026-07-19T18:05:25Z",
         "updated_at": "2026-07-19T18:06:04Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.6/Amethyst.apk"
@@ -115,13 +115,13 @@
     "body": "### [Download Info](https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29697912423)\r\n`Amethyst-Debug.apk` - This will carry over your worlds if you were already using Amethyst (Debug).\r\n`Amethyst.apk` - This is the \"release\" apk. If you don't have Amethyst yet, use this.\r\n\r\nIf you install both, you have two separate apps, one `Amethyst (Debug)` and the other just `Amethyst`.\r\n\r\n___\r\n\r\n## New Features\r\n* New default controls by @rkxspace in https://github.com/AngelAuraMC/Amethyst-Android/pull/299\r\n* Show device memory and memory allocation to Minecraft in the log by @Jokypond in https://github.com/AngelAuraMC/Amethyst-Android/pull/276\r\n* Versions using SDL (lwjgl3ify and 26.3-snapshot4+) and Touchcontroller will have automatic keyboard popup https://github.com/AngelAuraMC/Amethyst-Android/pull/69 https://github.com/AngelAuraMC/Amethyst-Android/pull/279\r\n* Added `-release`/`-debug` to logs by @Jokypond in https://github.com/AngelAuraMC/Amethyst-Android/pull/301\r\n* Forward and backward mouse buttons added\r\n\r\n## Bugfixes\r\n* Remove check against Java 17+ for the \"Execute a .jar\" option in the launcher by @rock3tsprocket in https://github.com/AngelAuraMC/Amethyst-Android/pull/288\r\n* Delete security manager by @Jokypond in https://github.com/AngelAuraMC/Amethyst-Android/pull/304\r\n* Fix drop item button incorrectly not bound to q by @rkxspace in https://github.com/AngelAuraMC/Amethyst-Android/pull/307\r\n* fix: handle NumberFormatException in mg cache setting by @Yarpopcat08 in https://github.com/AngelAuraMC/Amethyst-Android/pull/305\r\n* 26.2+ should now work\r\n* Used incorrect natives for LWJGL 3.4.1 (not aware of this breaking anything)\r\n* Crash upon modpack import of packs using no-installer forge versions\r\n* Incorrect lwjglx jar handling borking some versions of forgemodloader\r\n* Minimap mods having a yellow tint in MobileGlues\r\n* Some forge installer versions not working\r\n* Some forge versions not working\r\n* Crash if you deleted your default control map\r\n* Controlify crashing on newer versions\r\n* Sometimes being logged into Demo.Player if auth server has connection issues\r\n\r\n## Removed\r\n* SDL switch. It is now automatic!\r\n\r\n## Known issues\r\n- 26.2+ will only work using Kopper Zink on non-Adreno devices\r\n- Forward and back buttons on physical mice still won't work\r\n- If using SDL input, mouse forward and backward side buttons will be reversed",
     "reactions": {
       "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/releases/356106522/reactions",
-      "total_count": 3,
+      "total_count": 5,
       "+1": 0,
       "-1": 0,
       "laugh": 0,
       "hooray": 0,
       "confused": 0,
-      "heart": 3,
+      "heart": 5,
       "rocket": 0,
       "eyes": 0
     },
