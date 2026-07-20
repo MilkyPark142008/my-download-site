@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 168364570,
         "digest": "sha256:a3845070df3c77b57e6c810ffcad4516fd702e9aff91b1ebb6667d2d0918bc22",
-        "download_count": 91,
+        "download_count": 131,
         "created_at": "2026-07-19T18:05:14Z",
         "updated_at": "2026-07-19T18:06:04Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.6/Amethyst-Debug.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 156516190,
         "digest": "sha256:ac8d3aa0b1955c003a3f26f359b13bc6abf6c19ce29e82d4a0d542fbd4b4edc0",
-        "download_count": 213,
+        "download_count": 349,
         "created_at": "2026-07-19T18:05:25Z",
         "updated_at": "2026-07-19T18:06:04Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.6/Amethyst.apk"
@@ -115,13 +115,13 @@
     "body": "### [Download Info](https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29697912423)\r\n`Amethyst-Debug.apk` - This will carry over your worlds if you were already using Amethyst (Debug).\r\n`Amethyst.apk` - This is the \"release\" apk. If you don't have Amethyst yet, use this.\r\n\r\nIf you install both, you have two separate apps, one `Amethyst (Debug)` and the other just `Amethyst`.\r\n\r\n___\r\n\r\n## New Features\r\n* New default controls by @rkxspace in https://github.com/AngelAuraMC/Amethyst-Android/pull/299\r\n* Show device memory and memory allocation to Minecraft in the log by @Jokypond in https://github.com/AngelAuraMC/Amethyst-Android/pull/276\r\n* Versions using SDL (lwjgl3ify and 26.3-snapshot4+) and Touchcontroller will have automatic keyboard popup https://github.com/AngelAuraMC/Amethyst-Android/pull/69 https://github.com/AngelAuraMC/Amethyst-Android/pull/279\r\n* Added `-release`/`-debug` to logs by @Jokypond in https://github.com/AngelAuraMC/Amethyst-Android/pull/301\r\n* Forward and backward mouse buttons added\r\n\r\n## Bugfixes\r\n* Remove check against Java 17+ for the \"Execute a .jar\" option in the launcher by @rock3tsprocket in https://github.com/AngelAuraMC/Amethyst-Android/pull/288\r\n* Delete security manager by @Jokypond in https://github.com/AngelAuraMC/Amethyst-Android/pull/304\r\n* Fix drop item button incorrectly not bound to q by @rkxspace in https://github.com/AngelAuraMC/Amethyst-Android/pull/307\r\n* fix: handle NumberFormatException in mg cache setting by @Yarpopcat08 in https://github.com/AngelAuraMC/Amethyst-Android/pull/305\r\n* 26.2+ should now work\r\n* Used incorrect natives for LWJGL 3.4.1 (not aware of this breaking anything)\r\n* Crash upon modpack import of packs using no-installer forge versions\r\n* Incorrect lwjglx jar handling borking some versions of forgemodloader\r\n* Minimap mods having a yellow tint in MobileGlues\r\n* Some forge installer versions not working\r\n* Some forge versions not working\r\n* Crash if you deleted your default control map\r\n* Controlify crashing on newer versions\r\n* Sometimes being logged into Demo.Player if auth server has connection issues\r\n\r\n## Removed\r\n* SDL switch. It is now automatic!\r\n\r\n## Known issues\r\n- 26.2+ will only work using Kopper Zink on non-Adreno devices\r\n- Forward and back buttons on physical mice still won't work\r\n- If using SDL input, mouse forward and backward side buttons will be reversed",
     "reactions": {
       "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/releases/356106522/reactions",
-      "total_count": 1,
+      "total_count": 2,
       "+1": 0,
       "-1": 0,
       "laugh": 0,
       "hooray": 0,
       "confused": 0,
-      "heart": 1,
+      "heart": 2,
       "rocket": 0,
       "eyes": 0
     },
@@ -129,22 +129,22 @@
   },
   "action": {
     "run": {
-      "id": 29698356355,
+      "id": 29713719514,
       "name": "Android CI",
-      "node_id": "WFR_kwLOOrUn6c8AAAAG6ij0gw",
+      "node_id": "WFR_kwLOOrUn6c8AAAAG6xNg2g",
       "head_branch": "feat/lwjgl3ify-sdl-support",
-      "head_sha": "77f4875a928f373aff3b89fc026f3782e96fbf4f",
+      "head_sha": "c52bdb1b7d6a0c687cda2f136c9bfb6f5339bc8a",
       "path": ".github/workflows/android.yml",
-      "display_title": "fix(HotbarView): #37",
-      "run_number": 879,
-      "event": "push",
+      "display_title": "Android CI",
+      "run_number": 881,
+      "event": "workflow_dispatch",
       "status": "completed",
       "conclusion": "success",
       "workflow_id": 162757109,
-      "check_suite_id": 80418698245,
-      "check_suite_node_id": "CS_kwDOOrUn6c8AAAASuVP0BQ",
-      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29698356355",
-      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29698356355",
+      "check_suite_id": 80457286675,
+      "check_suite_node_id": "CS_kwDOOrUn6c8AAAASu6DEEw",
+      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29713719514",
+      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29713719514",
       "pull_requests": [
         {
           "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/pulls/312",
@@ -152,7 +152,7 @@
           "number": 312,
           "head": {
             "ref": "feat/lwjgl3ify-sdl-support",
-            "sha": "77f4875a928f373aff3b89fc026f3782e96fbf4f",
+            "sha": "c52bdb1b7d6a0c687cda2f136c9bfb6f5339bc8a",
             "repo": {
               "id": 984950761,
               "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
@@ -170,8 +170,8 @@
           }
         }
       ],
-      "created_at": "2026-07-19T18:14:05Z",
-      "updated_at": "2026-07-19T18:18:24Z",
+      "created_at": "2026-07-20T03:01:30Z",
+      "updated_at": "2026-07-20T03:05:04Z",
       "actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -195,7 +195,7 @@
       },
       "run_attempt": 1,
       "referenced_workflows": [],
-      "run_started_at": "2026-07-19T18:14:05Z",
+      "run_started_at": "2026-07-20T03:01:30Z",
       "triggering_actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -217,19 +217,19 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29698356355/jobs",
-      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29698356355/logs",
-      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/80418698245",
-      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29698356355/artifacts",
-      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29698356355/cancel",
-      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29698356355/rerun",
+      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29713719514/jobs",
+      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29713719514/logs",
+      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/80457286675",
+      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29713719514/artifacts",
+      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29713719514/cancel",
+      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29713719514/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/workflows/162757109",
       "head_commit": {
-        "id": "77f4875a928f373aff3b89fc026f3782e96fbf4f",
-        "tree_id": "f10f009adc1a8abaf624a9dee29024800b2d44a2",
-        "message": "fix(HotbarView): #37",
-        "timestamp": "2026-07-19T18:13:17Z",
+        "id": "c52bdb1b7d6a0c687cda2f136c9bfb6f5339bc8a",
+        "tree_id": "f6549b0b0a66a745c004f4be300e6c0c5defff85",
+        "message": "fix: Move debug/release identifier away from end of string\n\nSome OEM ROMs are blocking the update because of this for some reason",
+        "timestamp": "2026-07-20T02:52:21Z",
         "author": {
           "name": "tomikun",
           "email": "60690056+alexytomi@users.noreply.github.com"
@@ -378,43 +378,43 @@
     },
     "artifacts": [
       {
-        "id": 8445717224,
-        "node_id": "MDg6QXJ0aWZhY3Q4NDQ1NzE3MjI0",
+        "id": 8449729439,
+        "node_id": "MDg6QXJ0aWZhY3Q4NDQ5NzI5NDM5",
         "name": "app-release",
-        "size_in_bytes": 154530574,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/8445717224",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/8445717224/zip",
+        "size_in_bytes": 154530234,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/8449729439",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/8449729439/zip",
         "expired": false,
-        "digest": "sha256:1e188cd237759cf9c8ae2594271c0a6d208ff6e783ad8cf795d6e2c9d0d563d9",
-        "created_at": "2026-07-19T18:18:20Z",
-        "updated_at": "2026-07-19T18:18:20Z",
-        "expires_at": "2026-10-17T18:14:05Z",
+        "digest": "sha256:0fe12d47bb485c2b6514de5e97b7d471eb2938f2be3be90a6138166e56880f88",
+        "created_at": "2026-07-20T03:05:00Z",
+        "updated_at": "2026-07-20T03:05:00Z",
+        "expires_at": "2026-10-18T03:01:32Z",
         "workflow_run": {
-          "id": 29698356355,
+          "id": 29713719514,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
           "head_branch": "feat/lwjgl3ify-sdl-support",
-          "head_sha": "77f4875a928f373aff3b89fc026f3782e96fbf4f"
+          "head_sha": "c52bdb1b7d6a0c687cda2f136c9bfb6f5339bc8a"
         }
       },
       {
-        "id": 8445716497,
-        "node_id": "MDg6QXJ0aWZhY3Q4NDQ1NzE2NDk3",
+        "id": 8449727786,
+        "node_id": "MDg6QXJ0aWZhY3Q4NDQ5NzI3Nzg2",
         "name": "app-debug (recommended)",
-        "size_in_bytes": 166163347,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/8445716497",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/8445716497/zip",
+        "size_in_bytes": 166164058,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/8449727786",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/8449727786/zip",
         "expired": false,
-        "digest": "sha256:f00d1d07d3000b766ca3a73dbf830ba4dbdab95bcd803882158e62ae3e0937e6",
-        "created_at": "2026-07-19T18:18:15Z",
-        "updated_at": "2026-07-19T18:18:15Z",
-        "expires_at": "2026-10-17T18:14:05Z",
+        "digest": "sha256:d11eb61c1c4d7db20b7cd70a4612ce0e3c44e62de797aa4c15a53d61d1ae9b8e",
+        "created_at": "2026-07-20T03:04:54Z",
+        "updated_at": "2026-07-20T03:04:54Z",
+        "expires_at": "2026-10-18T03:01:32Z",
         "workflow_run": {
-          "id": 29698356355,
+          "id": 29713719514,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
           "head_branch": "feat/lwjgl3ify-sdl-support",
-          "head_sha": "77f4875a928f373aff3b89fc026f3782e96fbf4f"
+          "head_sha": "c52bdb1b7d6a0c687cda2f136c9bfb6f5339bc8a"
         }
       }
     ]
