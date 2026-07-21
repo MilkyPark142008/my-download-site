@@ -1,5 +1,29 @@
 [
   {
+    "id": 29851669333,
+    "sha": "36bc1adaae7deaefb3fe61d615d8ada0332bc012",
+    "short_sha": "36bc1ad",
+    "message": "Merge pull request #1590 from ZalithLauncher/fix/addons_fetch\n\nfix: 填写页码时，若总页数为 0 则导致崩溃",
+    "created_at": "2026-07-21T17:08:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29851669333"
+  },
+  {
+    "id": 29851441656,
+    "sha": "2428c910abfc19d6e9d70b3e8a28587855b86caa",
+    "short_sha": "2428c91",
+    "message": "fix: 搜索源全部失败时，应抛出第一个源的异常",
+    "created_at": "2026-07-21T17:05:01Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29851441656"
+  },
+  {
+    "id": 29850933191,
+    "sha": "19341ec7428cda3e35041d21534b500cded0a633",
+    "short_sha": "19341ec",
+    "message": "fix: 填写页码时，若总页数为 0 则导致崩溃",
+    "created_at": "2026-07-21T16:58:00Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29850933191"
+  },
+  {
     "id": 29786533677,
     "sha": "49436ccf2829171bff8ff1d9ceec07591fbd84f6",
     "short_sha": "49436cc",
@@ -374,29 +398,5 @@
     "message": "Merge pull request #1539 from ZalithLauncher/fix/launcher_ua\n\nfix: 下载文件时，始终标注启动器UA",
     "created_at": "2026-07-08T04:33:28Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28917726972"
-  },
-  {
-    "id": 28917710483,
-    "sha": "bb20962339b63fd3f4f5d55daadd3bc9a7de83bd",
-    "short_sha": "bb20962",
-    "message": "fix: 下载文件时，始终标注启动器UA",
-    "created_at": "2026-07-08T04:32:56Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28917710483"
-  },
-  {
-    "id": 28917157228,
-    "sha": "c285bf7e0e766a14ac8375cbb847afef8ce92186",
-    "short_sha": "c285bf7",
-    "message": "Merge pull request #1533 from ZalithLauncher/chore/log_output\n\nfix: 执行 Jar 文件日志输入右侧栏被遮挡",
-    "created_at": "2026-07-08T04:18:10Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28917157228"
-  },
-  {
-    "id": 28917153726,
-    "sha": "993bbab1c070d488d20ed1bd3016e711c34b541e",
-    "short_sha": "993bbab",
-    "message": "Merge pull request #1538 from ZalithLauncher/fix/game_launch\n\nfix: 混淆导致 Parcel 反序列化时崩溃",
-    "created_at": "2026-07-08T04:18:04Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28917153726"
   }
 ]
