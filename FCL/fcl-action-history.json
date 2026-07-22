@@ -1,5 +1,13 @@
 [
   {
+    "id": 29929093470,
+    "sha": "7e8b631f8fc98615afb0ff63d262e8a4d4955afa",
+    "short_sha": "7e8b631",
+    "message": "refactor(version list): 优化版本列表适配器性能\n\n1. 移除版本列表适配器的泛型硬编码，简化ArrayList创建代码\n2. 将适配器的固定列表改为可动态更新的可变列表，新增updateVersionList方法\n3. 替换协程获取模组数量的实现为同步IO操作，使用NIO简化代码\n4. 重构版本列表页面的搜索与分类过滤逻辑，复用现有适配器实例",
+    "created_at": "2026-07-22T14:32:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29929093470"
+  },
+  {
     "id": 29918681563,
     "sha": "8976594a3c3039316b9fd41db2432749aa94297c",
     "short_sha": "8976594",
@@ -390,13 +398,5 @@
     "message": "feat: 重构优化截图阅览增加长按全屏阅览功能 #1651\n\n新增通用ViewHolder类，以及全屏图片弹窗的基础类和布局文件\n\nrefactor: 重构图片预览和截图适配器，整理字符串资源\n\n1.  将close字符串资源移至FCLLibrary统一管理\n2.  实现通用的FullImageDialog弹窗\n3.  重构RemoteModScreenshotAdapter复用标准ViewHolder\n4.  移除冗余的重试按钮布局和相关逻辑\n5.  优化图片加载逻辑和弹窗调用方式",
     "created_at": "2026-06-24T08:14:19Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28084870130"
-  },
-  {
-    "id": 28031868260,
-    "sha": "98228ba320ad7de3b6474e90f963034d7ade57a8",
-    "short_sha": "98228ba",
-    "message": "refactor(skin): 重命名SkinCanvas为SkinViewer优化皮肤显示\n\n1.  将布局中的SkinCanvas替换为新的SkinViewer自定义视图\n2.  删除冗余的SkinCanvas类，新增完整的SkinViewer实现\n3.  简化皮肤视图的初始化和生命周期管理逻辑\n4.  清理无用的布局参数代码和冗余导入",
-    "created_at": "2026-06-23T14:00:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28031868260"
   }
 ]
