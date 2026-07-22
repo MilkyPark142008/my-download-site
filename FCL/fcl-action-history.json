@@ -1,5 +1,37 @@
 [
   {
+    "id": 29918681563,
+    "sha": "8976594a3c3039316b9fd41db2432749aa94297c",
+    "short_sha": "8976594",
+    "message": "Add ZL2 layout conversion and sharing functionality (#1650)\n\n* feat(controller): add ZL2 布局转换分享功能\n\n 1. 新增 arm64 架构的布局转换原生库 libcc.so\n 2. 添加多语言的分享转换相关字符串资源\n 3. 新增 SHARE 目录用于存放转换后的文件\n 4. 实现 LayoutConverter 工具类完成 FCL 到 ZL2 布局的转换\n 5. 修改分享逻辑，添加分享方式选择弹窗，支持直接分享和转换后分享\n 6. 增加设备架构兼容性检查和转换过程的进度提示与错误处理\n\n* docs: 在 README 依赖列表中声明 control-converter 依赖\n\n* refactor(controller): 改用 JNI 调用替代命令执行方式\n\n按维护者 ShirasakiMio 要求，命令执行方式不适合 Android，改用 JNI 直接调用原生库。\n\n- LayoutConverter: System.loadLibrary + native 方法替代 ProcessBuilder\n- libcc.so: 从可执行二进制改为 c-shared 共享库 (4MB)\n- 移除进程超时、stderr 读取等命令执行相关代码\n- 添加 Throwable 捕获防止 JNI 异常崩溃\n\n* Update ControllerManagePage.java\n\n---------\n\nCo-authored-by: ShirosakiMio <852468399@qq.com>",
+    "created_at": "2026-07-22T12:12:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29918681563"
+  },
+  {
+    "id": 29918653405,
+    "sha": "65294df9ef5696db5f30dd5c0054210a849eba4c",
+    "short_sha": "65294df",
+    "message": "Update ControllerManagePage.java",
+    "created_at": "2026-07-22T12:11:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29918653405"
+  },
+  {
+    "id": 29917300664,
+    "sha": "efe0e028b34755a8eda2f6bbf6848d25f13b5ccb",
+    "short_sha": "efe0e02",
+    "message": "refactor: 重构模组加载相关逻辑，替换ZIP文件系统操作并更新依赖\n\n1.  替换旧的ZipFileSystem为ZipFileTree实现，优化ZIP文件处理\n2.  移除不必要的Optional和commons-lang3依赖，改用JDK内置方法\n3.  将Pair类改为record实现，简化代码\n4.  更新toml4j为tomlj，新增chardet依赖用于字符集检测\n5.  重构多种模组元数据解析逻辑，统一使用ZipFileTree读取ZIP内容\n6.  新增LocalAddonFile和LocalAddonManager类，完善附加文件管理\n7.  修复多处File和Path参数不匹配的问题\n8.  优化ZipCoder的字符错误处理策略，改为替换而非报错",
+    "created_at": "2026-07-22T11:51:05Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29917300664"
+  },
+  {
+    "id": 29914058324,
+    "sha": "db8560201caff3bcc3c76dc58877e4e7318eac55",
+    "short_sha": "db85602",
+    "message": "Update ZipCoder.java",
+    "created_at": "2026-06-07T10:39:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29914058324"
+  },
+  {
     "id": 29832767080,
     "sha": "266a59abbf350d596de7eb8be46a97589e188388",
     "short_sha": "266a59a",
@@ -366,37 +398,5 @@
     "message": "refactor(skin): 重命名SkinCanvas为SkinViewer优化皮肤显示\n\n1.  将布局中的SkinCanvas替换为新的SkinViewer自定义视图\n2.  删除冗余的SkinCanvas类，新增完整的SkinViewer实现\n3.  简化皮肤视图的初始化和生命周期管理逻辑\n4.  清理无用的布局参数代码和冗余导入",
     "created_at": "2026-06-23T14:00:41Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28031868260"
-  },
-  {
-    "id": 28007926985,
-    "sha": "e293fca5afd5cf1be6654e4daab04d0afd80d68d",
-    "short_sha": "e293fca",
-    "message": "refactor: 重构皮肤渲染基础类与肢体类，添加详细注释与规范参数命名\n\n重构了MainCube、LimbCube、CapeCube等基础渲染类，统一参数命名风格并添加详细中文注释，拆分顶点与法向量数组结构，优化代码可读性与维护性。同时为所有肢体、头部、身体等皮肤组件类补充类注释、参数说明与纹理坐标注释，统一代码格式与注释规范。",
-    "created_at": "2026-06-23T06:50:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28007926985"
-  },
-  {
-    "id": 28003320067,
-    "sha": "2d0a042877db842cc217635753d76c527f86b61e",
-    "short_sha": "2d0a042",
-    "message": "refactor(activity): 替换TextureView获取屏幕尺寸的方式\n\n移除了布局中的TextureView，改用根布局直接获取宽高来更新屏幕尺寸，简化了屏幕尺寸刷新的逻辑",
-    "created_at": "2026-06-23T04:51:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28003320067"
-  },
-  {
-    "id": 27998026384,
-    "sha": "1ee1d1375b6b0862976e248ad63b3b5437a17078",
-    "short_sha": "1ee1d13",
-    "message": "1.3.1.4",
-    "created_at": "2026-06-23T02:28:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27998026384"
-  },
-  {
-    "id": 27998026521,
-    "sha": "1ee1d1375b6b0862976e248ad63b3b5437a17078",
-    "short_sha": "1ee1d13",
-    "message": "1.3.1.4",
-    "created_at": "2026-06-23T02:28:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27998026521"
   }
 ]
