@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 168364570,
         "digest": "sha256:a3845070df3c77b57e6c810ffcad4516fd702e9aff91b1ebb6667d2d0918bc22",
-        "download_count": 728,
+        "download_count": 747,
         "created_at": "2026-07-19T18:05:14Z",
         "updated_at": "2026-07-19T18:06:04Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.6/Amethyst-Debug.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 156516190,
         "digest": "sha256:ac8d3aa0b1955c003a3f26f359b13bc6abf6c19ce29e82d4a0d542fbd4b4edc0",
-        "download_count": 1827,
+        "download_count": 1872,
         "created_at": "2026-07-19T18:05:25Z",
         "updated_at": "2026-07-19T18:06:04Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.6/Amethyst.apk"
@@ -129,22 +129,22 @@
   },
   "action": {
     "run": {
-      "id": 29931803304,
+      "id": 29949280294,
       "name": "Android CI",
-      "node_id": "WFR_kwLOOrUn6c8AAAAG-BMSqA",
+      "node_id": "WFR_kwLOOrUn6c8AAAAG-R3AJg",
       "head_branch": "feat/lwjgl3ify-sdl-support",
-      "head_sha": "02ea563a914ef392f1cda00cc68ea15f9f71cc72",
+      "head_sha": "d03bd95cffc62b93c70654037effa8098de06822",
       "path": ".github/workflows/android.yml",
-      "display_title": "qol: Better loading bars for local modpack import",
-      "run_number": 883,
+      "display_title": "fix: Washed out colors on SDL",
+      "run_number": 884,
       "event": "push",
       "status": "completed",
       "conclusion": "success",
       "workflow_id": 162757109,
-      "check_suite_id": 81081832499,
-      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAS4NqUMw",
-      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29931803304",
-      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29931803304",
+      "check_suite_id": 81134677426,
+      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAS5ADtsg",
+      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29949280294",
+      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29949280294",
       "pull_requests": [
         {
           "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/pulls/312",
@@ -152,7 +152,7 @@
           "number": 312,
           "head": {
             "ref": "feat/lwjgl3ify-sdl-support",
-            "sha": "02ea563a914ef392f1cda00cc68ea15f9f71cc72",
+            "sha": "d03bd95cffc62b93c70654037effa8098de06822",
             "repo": {
               "id": 984950761,
               "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
@@ -170,8 +170,8 @@
           }
         }
       ],
-      "created_at": "2026-07-22T15:06:36Z",
-      "updated_at": "2026-07-22T15:09:49Z",
+      "created_at": "2026-07-22T19:02:24Z",
+      "updated_at": "2026-07-22T19:05:51Z",
       "actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -195,7 +195,7 @@
       },
       "run_attempt": 1,
       "referenced_workflows": [],
-      "run_started_at": "2026-07-22T15:06:36Z",
+      "run_started_at": "2026-07-22T19:02:24Z",
       "triggering_actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -217,19 +217,19 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29931803304/jobs",
-      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29931803304/logs",
-      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/81081832499",
-      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29931803304/artifacts",
-      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29931803304/cancel",
-      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29931803304/rerun",
+      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29949280294/jobs",
+      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29949280294/logs",
+      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/81134677426",
+      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29949280294/artifacts",
+      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29949280294/cancel",
+      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/29949280294/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/workflows/162757109",
       "head_commit": {
-        "id": "02ea563a914ef392f1cda00cc68ea15f9f71cc72",
-        "tree_id": "4ec2112a6ca2fc8b206a1407a8de6e0a506821a5",
-        "message": "qol: Better loading bars for local modpack import",
-        "timestamp": "2026-07-22T15:06:22Z",
+        "id": "d03bd95cffc62b93c70654037effa8098de06822",
+        "tree_id": "d4dd407c4d9a603233d60e95536b3dc0349670d0",
+        "message": "fix: Washed out colors on SDL\n\nFIXME: Try undoing this when MobileGLues/MobileGL accurately\ntranslates/emulates EGL",
+        "timestamp": "2026-07-22T18:59:42Z",
         "author": {
           "name": "tomikun",
           "email": "60690056+alexytomi@users.noreply.github.com"
@@ -378,43 +378,43 @@
     },
     "artifacts": [
       {
-        "id": 8534456318,
-        "node_id": "MDg6QXJ0aWZhY3Q4NTM0NDU2MzE4",
+        "id": 8541533250,
+        "node_id": "MDg6QXJ0aWZhY3Q4NTQxNTMzMjUw",
         "name": "app-release",
-        "size_in_bytes": 154530695,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/8534456318",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/8534456318/zip",
+        "size_in_bytes": 154530557,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/8541533250",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/8541533250/zip",
         "expired": false,
-        "digest": "sha256:a8ef736dfe33fb52005c192dd04206f984692d39a65716c9e327f09e1e3fc908",
-        "created_at": "2026-07-22T15:09:46Z",
-        "updated_at": "2026-07-22T15:09:46Z",
-        "expires_at": "2026-10-20T15:06:36Z",
+        "digest": "sha256:22e942744db6d4e72dc8136cff7e1a03b47f9a0a8a17c1004eb3184d5355f341",
+        "created_at": "2026-07-22T19:05:48Z",
+        "updated_at": "2026-07-22T19:05:48Z",
+        "expires_at": "2026-10-20T19:02:24Z",
         "workflow_run": {
-          "id": 29931803304,
+          "id": 29949280294,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
           "head_branch": "feat/lwjgl3ify-sdl-support",
-          "head_sha": "02ea563a914ef392f1cda00cc68ea15f9f71cc72"
+          "head_sha": "d03bd95cffc62b93c70654037effa8098de06822"
         }
       },
       {
-        "id": 8534453456,
-        "node_id": "MDg6QXJ0aWZhY3Q4NTM0NDUzNDU2",
+        "id": 8541530732,
+        "node_id": "MDg6QXJ0aWZhY3Q4NTQxNTMwNzMy",
         "name": "app-debug (recommended)",
-        "size_in_bytes": 166164561,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/8534453456",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/8534453456/zip",
+        "size_in_bytes": 166165097,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/8541530732",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/8541530732/zip",
         "expired": false,
-        "digest": "sha256:30170b65b4570dc9b6c33485877bcdc99eac9b68be555299ba2cfcec4cf02a56",
-        "created_at": "2026-07-22T15:09:41Z",
-        "updated_at": "2026-07-22T15:09:41Z",
-        "expires_at": "2026-10-20T15:06:36Z",
+        "digest": "sha256:8a3737bee3a8c34d428f550775c52fe5b2d9c79afa8ee07f98e86a3d8c136e45",
+        "created_at": "2026-07-22T19:05:42Z",
+        "updated_at": "2026-07-22T19:05:42Z",
+        "expires_at": "2026-10-20T19:02:24Z",
         "workflow_run": {
-          "id": 29931803304,
+          "id": 29949280294,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
           "head_branch": "feat/lwjgl3ify-sdl-support",
-          "head_sha": "02ea563a914ef392f1cda00cc68ea15f9f71cc72"
+          "head_sha": "d03bd95cffc62b93c70654037effa8098de06822"
         }
       }
     ]
