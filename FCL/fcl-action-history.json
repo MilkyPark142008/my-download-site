@@ -1,5 +1,21 @@
 [
   {
+    "id": 29979080267,
+    "sha": "2bc67bf193b3a158d524c5a6c2b343ab822d3852",
+    "short_sha": "2bc67bf",
+    "message": "1.3.2.0",
+    "created_at": "2026-07-23T04:14:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29979080267"
+  },
+  {
+    "id": 29979080249,
+    "sha": "2bc67bf193b3a158d524c5a6c2b343ab822d3852",
+    "short_sha": "2bc67bf",
+    "message": "1.3.2.0",
+    "created_at": "2026-07-23T04:14:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29979080249"
+  },
+  {
     "id": 29929093470,
     "sha": "7e8b631f8fc98615afb0ff63d262e8a4d4955afa",
     "short_sha": "7e8b631",
@@ -382,21 +398,5 @@
     "message": "refactor: 替换旧文件选择器为统一的FileBrowserLauncher实现\n\n本次提交重构了项目内多处文件选择相关的代码，将传统的FileBrowser手动构建调用替换为统一的FileBrowserLauncher实现：\n1.  统一使用MainActivity的fileLauncher来处理文件选择逻辑\n2.  移除了大量冗余的FileBrowser构建代码，简化了调用流程\n3.  调整了部分类的类型定义，将Activity替换为更具体的FCLActivity\n4.  优化了文件选择后的回调逻辑，统一了异常处理和参数传递\n5.  新增并完善了FileBrowserLauncher的重载方法，支持更多快捷调用场景\n6.  修复了部分代码格式问题，提升了代码可读性\n\nupdate\n\nrefactor(browser): 将FileBrowserLauncher从Java转为Kotlin\n\n完成了Java版本文件浏览器启动器到Kotlin的重构，新增了单次选择的便捷启动方法，优化了代码写法和空安全处理",
     "created_at": "2026-06-25T08:22:30Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28156911850"
-  },
-  {
-    "id": 28099455826,
-    "sha": "11e62a3014fc958c73bf1231359cc32901c4593a",
-    "short_sha": "11e62a3",
-    "message": "refactor: 统一复用ViewHolder类，移除冗余内部ViewHolder定义\n\n将多个RecyclerView.Adapter的内部ViewHolder类替换为导入的com.mio.ui.adapter.ViewHolder，删除重复的ViewHolder定义代码，精简适配器代码结构",
-    "created_at": "2026-06-24T10:25:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28099455826"
-  },
-  {
-    "id": 28084870130,
-    "sha": "fc203f1ff0b457b2a0d044f4d301cd88d8325296",
-    "short_sha": "fc203f1",
-    "message": "feat: 重构优化截图阅览增加长按全屏阅览功能 #1651\n\n新增通用ViewHolder类，以及全屏图片弹窗的基础类和布局文件\n\nrefactor: 重构图片预览和截图适配器，整理字符串资源\n\n1.  将close字符串资源移至FCLLibrary统一管理\n2.  实现通用的FullImageDialog弹窗\n3.  重构RemoteModScreenshotAdapter复用标准ViewHolder\n4.  移除冗余的重试按钮布局和相关逻辑\n5.  优化图片加载逻辑和弹窗调用方式",
-    "created_at": "2026-06-24T08:14:19Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28084870130"
   }
 ]
