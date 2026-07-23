@@ -1,5 +1,13 @@
 [
   {
+    "id": 30019163706,
+    "sha": "6723ae6e33f5dd4d7365adccdea2c9e6a368290e",
+    "short_sha": "6723ae6",
+    "message": "OpenAL-Soft: 默认OpenSL ES",
+    "created_at": "2026-07-23T15:06:37Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30019163706"
+  },
+  {
     "id": 30002554069,
     "sha": "8f435a8d024790f5c0148be2bad24e254fa1ff76",
     "short_sha": "8f435a8",
@@ -390,13 +398,5 @@
     "message": "fix(GameMenu): 修复部分设备获取总内存为0时的计算异常\n\n当totalMemory为0时避免除以零错误，此时将使用率设为-1",
     "created_at": "2026-06-26T11:01:33Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28233920328"
-  },
-  {
-    "id": 28225827987,
-    "sha": "66452ce19fd1084889f2d47bc2650254fac8cbd0",
-    "short_sha": "66452ce",
-    "message": "build: 更新游戏版本列表，添加26w14a和26.2系列版本\n\n补充完整的游戏版本号，新增26w14a以及26.2从快照到正式版的全版本号",
-    "created_at": "2026-06-26T08:11:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28225827987"
   }
 ]
