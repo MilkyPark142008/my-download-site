@@ -1,5 +1,13 @@
 [
   {
+    "id": 30075029499,
+    "sha": "27b5eeb7909b3720c24676a7cb2d423394c829a4",
+    "short_sha": "27b5eeb",
+    "message": "Fix incomplete type error for snd_mixer_selem_id_t",
+    "created_at": "2026-07-24T07:18:27Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30075029499"
+  },
+  {
     "id": 30019163706,
     "sha": "6723ae6e33f5dd4d7365adccdea2c9e6a368290e",
     "short_sha": "6723ae6",
@@ -390,13 +398,5 @@
     "message": "1.3.1.5",
     "created_at": "2026-06-28T04:39:28Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28311552976"
-  },
-  {
-    "id": 28233920328,
-    "sha": "de0967c5ea19d21852f3136a3f46cff81aa251d4",
-    "short_sha": "de0967c",
-    "message": "fix(GameMenu): 修复部分设备获取总内存为0时的计算异常\n\n当totalMemory为0时避免除以零错误，此时将使用率设为-1",
-    "created_at": "2026-06-26T11:01:33Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28233920328"
   }
 ]
