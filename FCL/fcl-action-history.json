@@ -1,5 +1,29 @@
 [
   {
+    "id": 30085832693,
+    "sha": "5e42d94d3f78c1b958baf1bcbd376c07c7886723",
+    "short_sha": "5e42d94",
+    "message": "Preload custom libjsound.so for javax.sound support",
+    "created_at": "2026-07-24T10:20:32Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30085832693"
+  },
+  {
+    "id": 30085704802,
+    "sha": "92dd9230680e5738fde278dbdefc059f300a8e35",
+    "short_sha": "92dd923",
+    "message": "Add jsound library target (custom libjsound.so)",
+    "created_at": "2026-07-24T10:18:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30085704802"
+  },
+  {
+    "id": 30085675529,
+    "sha": "615af021252c5556451f37809741737d402b2ba3",
+    "short_sha": "615af02",
+    "message": "Add custom libjsound.so with OpenSL ES PCM playback",
+    "created_at": "2026-07-24T10:17:51Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30085675529"
+  },
+  {
     "id": 30082858305,
     "sha": "b89a42d518e2998e9bf5783e3358ddaa4a9c0356",
     "short_sha": "b89a42d",
@@ -374,29 +398,5 @@
     "message": "fix: 修复导出整合包无法选择文件夹的问题",
     "created_at": "2026-06-28T10:03:42Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28318724190"
-  },
-  {
-    "id": 28318584454,
-    "sha": "7277cb1bd607982458185cd9f0dece3e6295bb55",
-    "short_sha": "7277cb1",
-    "message": "fix: 修复下载无法选择另存为",
-    "created_at": "2026-06-28T09:57:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28318584454"
-  },
-  {
-    "id": 28315006053,
-    "sha": "29918439011573f49037a85fe1673dc0cc5e0858",
-    "short_sha": "2991843",
-    "message": "fix(browser): 修复空后缀列表导致的异常\n\n1. 在setSuffix方法中添加空值校验，避免传入null时直接赋值\n2. 将getSuffix().size() > 0替换为isEmpty()，更符合现代Java编码习惯",
-    "created_at": "2026-06-28T07:22:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28315006053"
-  },
-  {
-    "id": 28311553001,
-    "sha": "8e1318f5519364042dcc5c31e0776c042c27ae45",
-    "short_sha": "8e1318f",
-    "message": "1.3.1.5",
-    "created_at": "2026-06-28T04:39:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28311553001"
   }
 ]
