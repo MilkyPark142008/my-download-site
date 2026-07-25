@@ -1,5 +1,37 @@
 [
   {
+    "id": 30153138057,
+    "sha": "7dbdd62e3d44c45ecac3594fcf1e1eca7cb8de7e",
+    "short_sha": "7dbdd62",
+    "message": "fix: split JNI method registration by class (PortMixerProvider, DirectAudioDeviceProvider, DirectAudioDevice)",
+    "created_at": "2026-07-25T09:38:59Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30153138057"
+  },
+  {
+    "id": 30150852703,
+    "sha": "a4d78bd06741d1eb8bd11e876db948074afdb37e",
+    "short_sha": "a4d78bd",
+    "message": "fix(launch): verify plugins before other tasks",
+    "created_at": "2026-07-25T08:17:19Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30150852703"
+  },
+  {
+    "id": 30150686090,
+    "sha": "988a5954273605c6f3d21243f59d3e0bd179ba56",
+    "short_sha": "988a595",
+    "message": "feat(launch): show plugin verification stage",
+    "created_at": "2026-07-25T08:11:49Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30150686090"
+  },
+  {
+    "id": 30150172314,
+    "sha": "d2276fa7ebb76adbbf124498b79af020d750aa45",
+    "short_sha": "d2276fa",
+    "message": "refactor(plugins): use unified FCL trust dialog",
+    "created_at": "2026-07-25T07:54:02Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30150172314"
+  },
+  {
     "id": 30148661368,
     "sha": "1e41c120d1fe830b7fae21860e162aa37affae24",
     "short_sha": "1e41c12",
@@ -366,37 +398,5 @@
     "message": "使用经过修改且更新的angle (#1619)\n\n* Add files via upload\n\n* arm32\n\n* x64\n\n* Add files via upload\n\n* Add files via upload\n\n* x64",
     "created_at": "2026-07-07T11:52:37Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28864044131"
-  },
-  {
-    "id": 28841760342,
-    "sha": "6fbfc3cdaaf5e122311e135372ba4c10d871e28d",
-    "short_sha": "6fbfc3c",
-    "message": "feat(runtime): 添加架构不兼容运行时文件提示逻辑\n\n1. 新增缺失对应架构运行时文件的多语言提示字符串\n2. 使用Java 14+的switch表达式简化设备架构获取逻辑\n3. 新增运行时架构兼容性检查，在安装前验证是否存在对应架构的运行时文件，不兼容时弹出提示",
-    "created_at": "2026-07-07T04:33:20Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28841760342"
-  },
-  {
-    "id": 28840303593,
-    "sha": "edc32680a1f331e350a38dce29145402a4e3f739",
-    "short_sha": "edc3268",
-    "message": "refactor(util/dialog): 重构选择对话框相关代码\n\n1. 重构DialogUtil和ItemSelectionDialog，将回调参数改为返回位置和文本\n2. 新增small参数控制对话框高度\n3. 替换页面中冗余的AlertDialog代码为统一的showItemSelectionDialog调用",
-    "created_at": "2026-07-07T03:54:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28840303593"
-  },
-  {
-    "id": 28761134776,
-    "sha": "f8e03d02a05ac1e595a1b7ffa7e702a3a5bef658",
-    "short_sha": "f8e03d0",
-    "message": "fix(MainUI): 避免空指针异常，添加skinViewer非空检查\n\n在MainUI的生命周期方法中增加对skinViewer的空值判断，防止未初始化时调用方法导致崩溃",
-    "created_at": "2026-07-06T00:57:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28761134776"
-  },
-  {
-    "id": 28638005239,
-    "sha": "92b7275166e6730239bdce4b6fd140261b2e2562",
-    "short_sha": "92b7275",
-    "message": "1.3.1.6",
-    "created_at": "2026-07-03T04:15:22Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28638005239"
   }
 ]
