@@ -1,5 +1,53 @@
 [
   {
+    "id": 30202829737,
+    "sha": "33121e3510ce0a5b67847b94e20ca118e3f5a82d",
+    "short_sha": "33121e3",
+    "message": "fix(bridge): 修复文件路径跳转处理逻辑\n\n优化了file协议链接的解析逻辑，先进行URI解码再标准化路径，正确判断目录并传递绝对路径给浏览回调",
+    "created_at": "2026-07-26T12:49:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30202829737"
+  },
+  {
+    "id": 30202460211,
+    "sha": "76e60a86edab7904466408d3dde950bf4a7a0aa6",
+    "short_sha": "76e60a8",
+    "message": "refactor(trust-ui): render the trust dialog as labelled rows, not one text blob\n\nEvery fact was concatenated into a single scrolling FCLTextView with the labels\nbaked into the format strings (\"Plugin: %1$s\\nVersion: %2$s\\nType: %3$s\"). Nine\nor more facts arrived as one wall of prose with no hierarchy, nothing to scan\nby, and a fingerprint wrapped mid-run at 16 characters.\n\nFacts are now structured data. PluginTrustGate hands the dialog sections of\nlabel/value pairs and the dialog inflates a view per row, so a heading is\nsomething the launcher draws and a value is something a plugin supplies - never\nthe same view. Each row is bounded, so no supplied string can grow the dialog or\npush a later row out of sight, which is what the sanitiser and the section\nreordering were compensating for before. The registered-publisher section is\nemitted only when the signed list actually names a publisher, so its presence is\nitself a claim a plugin cannot fabricate.\n\nThe fingerprint gets the full width in a fixed-pitch face, grouped in fours and\nwrapped every 32 characters, so two of them can be compared by eye.\n\nSections use a themed heading and a hairline rule rather than filled cards:\nbg_container_white is a hardcoded white and would invert badly in dark mode,\nwhile FCLView's use_theme_color follows the active theme.\n\nDrops five composite format strings from both locales in favour of thirteen\nlabel and heading strings.",
+    "created_at": "2026-07-26T12:01:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30202460211"
+  },
+  {
+    "id": 30202285422,
+    "sha": "5083d34d5d3ccf1e6fbb8c49f94e06b8b3b7b0ef",
+    "short_sha": "5083d34",
+    "message": "refactor(trust-ui): render the trust dialog as labelled rows, not one text blob\n\nEvery fact was concatenated into a single scrolling FCLTextView with the labels\nbaked into the format strings (\"Plugin: %1$s\\nVersion: %2$s\\nType: %3$s\"). Nine\nor more facts arrived as one wall of prose with no hierarchy, nothing to scan\nby, and a fingerprint wrapped mid-run at 16 characters.\n\nFacts are now structured data. PluginTrustGate hands the dialog sections of\nlabel/value pairs and the dialog inflates a view per row, so a heading is\nsomething the launcher draws and a value is something a plugin supplies - never\nthe same view. Each row is bounded, so no supplied string can grow the dialog or\npush a later row out of sight, which is what the sanitiser and the section\nreordering were compensating for before. The registered-publisher section is\nemitted only when the signed list actually names a publisher, so its presence is\nitself a claim a plugin cannot fabricate.\n\nThe fingerprint gets the full width in a fixed-pitch face, grouped in fours and\nwrapped every 32 characters, so two of them can be compared by eye.\n\nSections use a themed heading and a hairline rule rather than filled cards:\nbg_container_white is a hardcoded white and would invert badly in dark mode,\nwhile FCLView's use_theme_color follows the active theme.\n\nDrops five composite format strings from both locales in favour of thirteen\nlabel and heading strings.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+    "created_at": "2026-07-26T12:01:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30202285422"
+  },
+  {
+    "id": 30201792452,
+    "sha": "ef9f8d447a755e62db84cfe32e3c1054d74a6afb",
+    "short_sha": "ef9f8d4",
+    "message": "refactor(trust-ui): render the trust dialog as labelled rows, not one text blob\n\nEvery fact was concatenated into a single scrolling FCLTextView with the labels\nbaked into the format strings (\"Plugin: %1$s\\nVersion: %2$s\\nType: %3$s\"). Nine\nor more facts arrived as one wall of prose with no hierarchy, nothing to scan\nby, and a fingerprint wrapped mid-run at 16 characters.\n\nFacts are now structured data. PluginTrustGate hands the dialog sections of\nlabel/value pairs and the dialog inflates a view per row, so a heading is\nsomething the launcher draws and a value is something a plugin supplies - never\nthe same view. Each row is bounded, so no supplied string can grow the dialog or\npush a later row out of sight, which is what the sanitiser and the section\nreordering were compensating for before. The registered-publisher section is\nemitted only when the signed list actually names a publisher, so its presence is\nitself a claim a plugin cannot fabricate.\n\nThe fingerprint gets the full width in a fixed-pitch face, grouped in fours and\nwrapped every 32 characters, so two of them can be compared by eye.\n\nSections use a themed heading and a hairline rule rather than filled cards:\nbg_container_white is a hardcoded white and would invert badly in dark mode,\nwhile FCLView's use_theme_color follows the active theme.\n\nDrops five composite format strings from both locales in favour of thirteen\nlabel and heading strings.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+    "created_at": "2026-07-26T12:01:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30201792452"
+  },
+  {
+    "id": 30200843493,
+    "sha": "b21ac63644167026d4b8843f153916dc4414092a",
+    "short_sha": "b21ac63",
+    "message": "chore: point VerifiedPluginLoad at the merged mirror-race fixes\n\nWithout this the superproject still builds against the pre-fix library, so a\nfresh clone would carry the launcher-side hardening but none of the trust-list\nupdate fixes.\n\nNote for pushing: this gitlink only resolves once the VerifiedPluginLoad commits\nare on that repository's remote, so push the submodule first.\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+    "created_at": "2026-07-26T11:48:07Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30200843493"
+  },
+  {
+    "id": 30200406782,
+    "sha": "6638cc0ec30b0932fc932354bba20ce9cf2a5463",
+    "short_sha": "6638cc0",
+    "message": "fix: make PortMixerProvider registration optional in JDK 25",
+    "created_at": "2026-07-26T11:35:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30200406782"
+  },
+  {
     "id": 30195889228,
     "sha": "25064bdecb314b2d377a930f6a27688417fe9142",
     "short_sha": "25064bd",
@@ -350,53 +398,5 @@
     "message": "更新OpenAL-Soft以修复1.21.1机械动力: 汽鸣铁道的崩溃问题",
     "created_at": "2026-07-11T23:52:50Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29172813971"
-  },
-  {
-    "id": 29151745665,
-    "sha": "023afc6aaaf57645c66d15a84d561c39cf36d9fd",
-    "short_sha": "023afc6",
-    "message": "x86_64",
-    "created_at": "2026-07-11T11:46:25Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29151745665"
-  },
-  {
-    "id": 29143118054,
-    "sha": "04d90504c5c92a4052afc236b5b93b697523821c",
-    "short_sha": "04d9050",
-    "message": "Add files via upload",
-    "created_at": "2026-07-11T06:35:21Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29143118054"
-  },
-  {
-    "id": 29136445547,
-    "sha": "83f211688ead2953670ad08fda0d0c9dd7ccbc48",
-    "short_sha": "83f2116",
-    "message": "fix(FCLauncher): 修复pluginLibPath为字符串\"null\"时的错误拼接\n\n避免将字面意义的\"null\"字符串当作有效库路径添加到启动参数中",
-    "created_at": "2026-07-11T02:29:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29136445547"
-  },
-  {
-    "id": 29136069173,
-    "sha": "a52382b3bc9d058d8771ea3b7c43f94bcfbd13e1",
-    "short_sha": "a52382b",
-    "message": "chore: 替换内部日志宏为普通日志宏\n\n将代码中使用的FCL_INTERNAL_LOG替换为FCL_LOG，统一日志输出使用的宏",
-    "created_at": "2026-07-11T02:16:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29136069173"
-  },
-  {
-    "id": 29101415778,
-    "sha": "d777b1961864a18f999a77fed1a3b5d88753a1c2",
-    "short_sha": "d777b19",
-    "message": "style(WorldListAdapter): update ViewHolder creation with correct inflater params\n\n修改了列表适配器的视图绑定初始化代码，传入正确的父布局和attachToRoot参数，符合官方推荐的视图绑定使用方式",
-    "created_at": "2026-07-10T14:51:19Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29101415778"
-  },
-  {
-    "id": 29101381810,
-    "sha": "014aba7da24cd9250496ae712ef9526a1fd9c3e9",
-    "short_sha": "014aba7",
-    "message": "fix(download ui): 修复截图适配器的布局加载和根视图问题\n\n1. 修正ViewBinding.inflate调用，添加父视图参数并 attachToParent 设为false\n2. 将自定义FCLLinearLayout根布局替换为系统LinearLayout",
-    "created_at": "2026-07-10T14:50:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29101381810"
   }
 ]
