@@ -1,5 +1,21 @@
 [
   {
+    "id": 30214223186,
+    "sha": "d5c7b10d3b3e110d5e8d6ec58348b071eccdb980",
+    "short_sha": "d5c7b10",
+    "message": "fix: LWJGL3ify version autofix not applying for first time launch",
+    "created_at": "2026-07-26T18:11:20Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30214223186"
+  },
+  {
+    "id": 30212909916,
+    "sha": "029ecf466053fc9b9797b4872b9fd8da3f62fdcf",
+    "short_sha": "029ecf4",
+    "message": "fix: Disable SDL3 JNI_OnLoad from running outside dalvikvm\n\nShould fix controlify swapping from jna to jni",
+    "created_at": "2026-07-26T17:35:44Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30212909916"
+  },
+  {
     "id": 29949280294,
     "sha": "d03bd95cffc62b93c70654037effa8098de06822",
     "short_sha": "d03bd95",
@@ -382,21 +398,5 @@
     "message": "rework: SDL detection\n\nNow uses SDL_Init call to detect if SDL is being used.",
     "created_at": "2026-06-11T15:12:39Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/27357060689"
-  },
-  {
-    "id": 27356283159,
-    "sha": "7849182e4dd122e8e6197ecfff9137019988eb04",
-    "short_sha": "7849182",
-    "message": "rework: SDL detection\n\nNow uses SDL_Init call to detect if SDL is being used.",
-    "created_at": "2026-06-11T14:52:29Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/27356283159"
-  },
-  {
-    "id": 27256657350,
-    "sha": "efd645abe790b047a6b06ca3cd50a54490024c8f",
-    "short_sha": "efd645a",
-    "message": "Show device memory and memory allocation to Minecraft in the log (#276)\n\nSigned-off-by: Jokypond <200445406+Jokypond@users.noreply.github.com>",
-    "created_at": "2026-06-10T06:02:45Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/27256657350"
   }
 ]
