@@ -1,5 +1,29 @@
 [
   {
+    "id": 30234461581,
+    "sha": "a1763b229c4538253277885178b7ebebd75384db",
+    "short_sha": "a1763b2",
+    "message": "fix(ControlButton): 修复按键控制光标时光标状态发生变化后无法自动居中的问题\n\n重构了ControlButton的触摸事件处理代码，将重复的初始位置计算逻辑提取为setInitialPosition方法，同时在光标模式变化时重新设置初始位置，减少代码重复并提升可维护性",
+    "created_at": "2026-07-27T03:17:59Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30234461581"
+  },
+  {
+    "id": 30229678535,
+    "sha": "81502dc8c5dafd6af66a920ddd0f476ad2365487",
+    "short_sha": "81502dc",
+    "message": "fix: rewrite jsound.c with correct JDK 25 JNI signatures (Java_* naming convention)",
+    "created_at": "2026-07-27T01:22:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30229678535"
+  },
+  {
+    "id": 30226523872,
+    "sha": "e50fe70a3523f991551d014f3c7266afc98f0246",
+    "short_sha": "e50fe70",
+    "message": "fix: make all native method registrations optional (JDK 25 compatibility)",
+    "created_at": "2026-07-27T00:02:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30226523872"
+  },
+  {
     "id": 30206832468,
     "sha": "d9ece1c2c40894d2610e5f9b40dadf05e678b0c5",
     "short_sha": "d9ece1c",
@@ -374,29 +398,5 @@
     "message": "1.3.1.8",
     "created_at": "2026-07-13T02:25:20Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29219489242"
-  },
-  {
-    "id": 29219489273,
-    "sha": "d0dacc7f40afa55c84e1c0183d9f67d5480498a1",
-    "short_sha": "d0dacc7",
-    "message": "1.3.1.8",
-    "created_at": "2026-07-13T02:25:20Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29219489273"
-  },
-  {
-    "id": 29178848682,
-    "sha": "27200c288e6996044778a687a7bd78c70a9fa679",
-    "short_sha": "27200c2",
-    "message": "fix(build): use HTTPS for verified plugin submodule",
-    "created_at": "2026-07-12T03:50:26Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29178848682"
-  },
-  {
-    "id": 29172830773,
-    "sha": "e47ee8ab8cb06bc07f796b46f17ae66ee395f398",
-    "short_sha": "e47ee8a",
-    "message": "修复angle的Depth Clear问题 (#1674)\n\n* Add files via upload\n\n* arm32\n\n* x64\n\n* Add files via upload\n\n* Add files via upload\n\n* x64\n\n* arm64\n\n* arm32\n\n* x86\n\n* x86_64",
-    "created_at": "2026-07-11T23:53:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29172830773"
   }
 ]
