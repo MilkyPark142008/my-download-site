@@ -1,5 +1,13 @@
 [
   {
+    "id": 30333147997,
+    "sha": "93524c5331cedcd8b42fcd44d2cf4f48d8dcd4e4",
+    "short_sha": "93524c5",
+    "message": "Update MenuSetting.kt",
+    "created_at": "2026-07-28T05:56:09Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30333147997"
+  },
+  {
     "id": 30327930018,
     "sha": "c5dbeba7b88288e4908755e63a37f838fc0a92b5",
     "short_sha": "c5dbeba",
@@ -390,13 +398,5 @@
     "message": "build(lwjgl): 修复LWJGL依赖引入问题并更新jar包\n\n调整了LWJGL-Pojav模块的依赖配置，从使用runtimeConfig改为直接使用runtimeClasspath，同时更新了本地的lwjgl.jar包和版本号",
     "created_at": "2026-07-16T08:46:34Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29484751387"
-  },
-  {
-    "id": 29482695250,
-    "sha": "a90cf3f0a0c435bc29c98c7d8afa556d426561c6",
-    "short_sha": "a90cf3f",
-    "message": "build: 更新LWJGL依赖并调整依赖配置\n\n1. 更新两处LWJGL jar包到新版本\n2. 将runtimeConfig替换为implementation适配依赖配置\n3. 更新LWJGL版本号文件",
-    "created_at": "2026-07-16T08:13:22Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29482695250"
   }
 ]

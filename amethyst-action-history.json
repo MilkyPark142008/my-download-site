@@ -1,5 +1,45 @@
 [
   {
+    "id": 30337199459,
+    "sha": "3c50643863189d32f9fe65cbc65e0e6e9cada375",
+    "short_sha": "3c50643",
+    "message": "feat: MobileGL",
+    "created_at": "2026-07-28T07:06:27Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30337199459"
+  },
+  {
+    "id": 30337152040,
+    "sha": "16451de9d3285ec8d99d4a45e625971ab86c42ed",
+    "short_sha": "16451de",
+    "message": "Merge pull request #318 from AngelAuraMC/fix/sdl-issues\n\nsdl bugfixes",
+    "created_at": "2026-07-28T07:06:14Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30337152040"
+  },
+  {
+    "id": 30336938262,
+    "sha": "417500e184a9ebe78305187b71ac10f5b40e8543",
+    "short_sha": "417500e",
+    "message": "mitigation: MobileGlues incorrectly parses EGL color space",
+    "created_at": "2026-07-28T06:58:55Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30336938262"
+  },
+  {
+    "id": 30336691985,
+    "sha": "417500e184a9ebe78305187b71ac10f5b40e8543",
+    "short_sha": "417500e",
+    "message": "mitigation: MobileGlues incorrectly parses EGL color space",
+    "created_at": "2026-07-28T06:58:55Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30336691985"
+  },
+  {
+    "id": 30336224885,
+    "sha": "f9cc1fac91a6fee09cd50e0ce9265371f105c921",
+    "short_sha": "f9cc1fa",
+    "message": "fix: Properly dlsym SDL functions\n\nSeems like android doesn't like global anything",
+    "created_at": "2026-07-28T06:50:08Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30336224885"
+  },
+  {
     "id": 30276473082,
     "sha": "1cac3e7393abc5af66a99f1477afae550a466874",
     "short_sha": "1cac3e7",
@@ -358,45 +398,5 @@
     "message": "fix(MobileGlues): Minimap mods using incorrect colors",
     "created_at": "2026-06-29T18:16:04Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/28393297960"
-  },
-  {
-    "id": 28391837704,
-    "sha": "4acecad9748613d07d547b284cf126bf3eea20f0",
-    "short_sha": "4acecad",
-    "message": "fix: crash if user deleted their control",
-    "created_at": "2026-06-29T11:19:25Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/28391837704"
-  },
-  {
-    "id": 28368245341,
-    "sha": "4acecad9748613d07d547b284cf126bf3eea20f0",
-    "short_sha": "4acecad",
-    "message": "fix: crash if user deleted their control",
-    "created_at": "2026-06-29T11:19:25Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/28368245341"
-  },
-  {
-    "id": 28275592102,
-    "sha": "eab636ef5ee94254e2b7a904fedb74bf583c62bc",
-    "short_sha": "eab636e",
-    "message": "fix(MobileGlues): Minimap mods using incorrect colors\n\nUses\nhttps://github.com/AngelAuraMC/amethyst-prebuilt-libraries/actions/runs/28275384091",
-    "created_at": "2026-06-27T02:15:19Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/28275592102"
-  },
-  {
-    "id": 28275245805,
-    "sha": "88286a5363b1c1dd12c740ec716114aa525192f3",
-    "short_sha": "88286a5",
-    "message": "Merge pull request #279 from TouchController/v3_openjdk\n\nAdds configurable panning animation when keyboard opens",
-    "created_at": "2026-06-27T02:01:21Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/28275245805"
-  },
-  {
-    "id": 28196991275,
-    "sha": "1885d02400851bc06c75145a5ef3d59603563328",
-    "short_sha": "1885d02",
-    "message": "fix: Fallback to lwjgl3.3.3 natives on JavaGUILauncherActivity",
-    "created_at": "2026-06-25T19:51:27Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/28196991275"
   }
 ]
