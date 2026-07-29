@@ -1,5 +1,13 @@
 [
   {
+    "id": 30425042581,
+    "sha": "a820671733fc7b774e3586b44cdf66e8e6c53101",
+    "short_sha": "a820671",
+    "message": "feat: 新增 RAR 格式解压支持并优化手动整合包安装流程\n\n1.  集成 junrar 库并在 `CompressingUtils` 中实现 `extractRar` 逻辑，支持处理 RAR 目录及路径分隔符转换\n2.  在 `ManuallyCreatedModpackInstallTask` 中增加对 `.rar` 文件的安装支持\n3.  在整合包选择界面（`ModpackSelectionPage`）的筛选后缀中新增 `.7z` 与 `.rar`\n4.  调整 `ModpackHelper` 逻辑，将 `.7z` 与 `.rar` 统一视为手动整合包类型，并优化扩展名匹配的可靠性（忽略大小写）\n5.  优化 `LocalModpackPage` 的编码检测逻辑，对于非标准压缩格式默认使用 `UTF-8` 编码以提升性能\n6.  在 `libs.versions.toml` 中新增 `junrar` 相关依赖配置",
+    "created_at": "2026-07-29T05:23:50Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30425042581"
+  },
+  {
     "id": 30414292857,
     "sha": "93177ac5ad959dea948a47f40c26f683e99ce81f",
     "short_sha": "93177ac",
@@ -390,13 +398,5 @@
     "message": "Merge remote-tracking branch 'official/main'\n\n# Conflicts:\n#\tFCL/build.gradle.kts",
     "created_at": "2026-07-19T00:27:49Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29667029211"
-  },
-  {
-    "id": 29638300797,
-    "sha": "c6725894569243b7688c98c1855cd1d980dba4f5",
-    "short_sha": "c672589",
-    "message": "fix(ModChecker): 修复imgui库缺失检测逻辑&修复新版本Axiom无法加载imgui\n\n添加NativeLibPlugin的imgui库插件检测，当架构为空且未安装对应插件时才抛出异常",
-    "created_at": "2026-07-18T08:56:04Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29638300797"
   }
 ]
