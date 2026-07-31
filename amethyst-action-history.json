@@ -1,5 +1,53 @@
 [
   {
+    "id": 30619998958,
+    "sha": "7af078fe3955aa7b494f417fdec4b21ab5dc81d7",
+    "short_sha": "7af078f",
+    "message": "Merge pull request #326 from AngelAuraMC/fix/sdl-issues\n\nreadd force SDL switch and more logging",
+    "created_at": "2026-07-31T09:27:27Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30619998958"
+  },
+  {
+    "id": 30619606915,
+    "sha": "f09033b4eba94bf946b1954f334eefc603c6238a",
+    "short_sha": "f09033b",
+    "message": "feat: Readd the force SDL switch\n\nSome devices seem to not work with the dlopen hooks, in that case, user\nshould be able to override and force SDL to always be enabled.",
+    "created_at": "2026-07-31T08:42:59Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30619606915"
+  },
+  {
+    "id": 30617295711,
+    "sha": "f09033b4eba94bf946b1954f334eefc603c6238a",
+    "short_sha": "f09033b",
+    "message": "feat: Readd the force SDL switch\n\nSome devices seem to not work with the dlopen hooks, in that case, user\nshould be able to override and force SDL to always be enabled.",
+    "created_at": "2026-07-31T08:42:59Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30617295711"
+  },
+  {
+    "id": 30615610972,
+    "sha": "b8b9b78c1ae12edbc7d8391242bfd949d16b0139",
+    "short_sha": "b8b9b78",
+    "message": "feat: Readd the force SDL switch\n\nSome devices seem to not work with the dlopen hooks, in that case, user\nshould be able to override and force SDL to always be enabled.",
+    "created_at": "2026-07-31T08:14:20Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30615610972"
+  },
+  {
+    "id": 30615559402,
+    "sha": "001cc70623c34e3ec744f25af966c057234da2a1",
+    "short_sha": "001cc70",
+    "message": "feat: Readd the force SDL switch\n\nSome devices seem to not work with the dlopen hooks, in that case, user\nshould be able to override and force SDL to always be enabled.",
+    "created_at": "2026-07-31T08:13:28Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30615559402"
+  },
+  {
+    "id": 30614006707,
+    "sha": "79787ad407bb77030e5c7fb0cf60440541183242",
+    "short_sha": "79787ad",
+    "message": "feat: Readd the force SDL switch\n\nSome devices seem to not work with the dlopen hooks, in that case, user\nshould be able to override and force SDL to always be enabled.",
+    "created_at": "2026-07-31T07:46:46Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30614006707"
+  },
+  {
     "id": 30600221738,
     "sha": "56194e3d317a407c452dfc243722877bf552cf83",
     "short_sha": "56194e3",
@@ -350,53 +398,5 @@
     "message": "fix(SDL): Properly set window/resolution properties",
     "created_at": "2026-07-16T13:31:26Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29506358209"
-  },
-  {
-    "id": 29488003370,
-    "sha": "dbe27ef839517550a7c5ced590e4a189864b3fee",
-    "short_sha": "dbe27ef",
-    "message": "fix: Remove janky SDL switch\n\nWe no longer need it, The SDL_Init hook works well enough.",
-    "created_at": "2026-07-16T09:39:48Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29488003370"
-  },
-  {
-    "id": 29487141940,
-    "sha": "11c999b11ac99e3ac6ad25df664c1f85ca806e2d",
-    "short_sha": "11c999b",
-    "message": "Merge pull request #304 from Jokypond/delete-security-manager\n\nDelete security manager",
-    "created_at": "2026-07-16T09:26:23Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29487141940"
-  },
-  {
-    "id": 29485875474,
-    "sha": "5ab2fbb962d41a53d802c4938b8657cf932fbd01",
-    "short_sha": "5ab2fbb",
-    "message": "fix: Remove janky SDL switch\n\nWe no longer need it, The SDL_Init hook works well enough.",
-    "created_at": "2026-07-16T09:05:40Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29485875474"
-  },
-  {
-    "id": 29475242013,
-    "sha": "14bb93d6ab52050eb6cc341737ad48176c07a103",
-    "short_sha": "14bb93d",
-    "message": "fix: Controlify incompatible jna version\n\nThis might break some mods? needs testing.",
-    "created_at": "2026-07-16T05:42:20Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29475242013"
-  },
-  {
-    "id": 29469571122,
-    "sha": "8d8fd61449520659cc086713f3a7c54280cbc5b2",
-    "short_sha": "8d8fd61",
-    "message": "fix(SDL): Don't invoke native method unless SDL is loaded",
-    "created_at": "2026-07-15T15:18:15Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29469571122"
-  },
-  {
-    "id": 29248823819,
-    "sha": "78b212d1a4ffb9d64c169887935fa64c2a2c8998",
-    "short_sha": "78b212d",
-    "message": "Merge pull request #299 from rkxspace/v3_openjdk\n\ndefault.json to new",
-    "created_at": "2026-07-13T12:09:54Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29248823819"
   }
 ]
