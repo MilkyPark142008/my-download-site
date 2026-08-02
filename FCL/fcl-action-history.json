@@ -1,5 +1,13 @@
 [
   {
+    "id": 30749000633,
+    "sha": "77b12d6f10c2226d0736781399dce8f088e2ce1f",
+    "short_sha": "77b12d6",
+    "message": "fix: 修复26.2+退出游戏卡住的问题",
+    "created_at": "2026-08-02T13:00:05Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30749000633"
+  },
+  {
     "id": 30732381665,
     "sha": "0d4491eee7bab83e7104acf58f8ec29e0a0d3ba3",
     "short_sha": "0d4491e",
@@ -390,13 +398,5 @@
     "message": "Update ControllerManagePage.java",
     "created_at": "2026-07-22T12:11:44Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29918653405"
-  },
-  {
-    "id": 29917300664,
-    "sha": "efe0e028b34755a8eda2f6bbf6848d25f13b5ccb",
-    "short_sha": "efe0e02",
-    "message": "refactor: 重构模组加载相关逻辑，替换ZIP文件系统操作并更新依赖\n\n1.  替换旧的ZipFileSystem为ZipFileTree实现，优化ZIP文件处理\n2.  移除不必要的Optional和commons-lang3依赖，改用JDK内置方法\n3.  将Pair类改为record实现，简化代码\n4.  更新toml4j为tomlj，新增chardet依赖用于字符集检测\n5.  重构多种模组元数据解析逻辑，统一使用ZipFileTree读取ZIP内容\n6.  新增LocalAddonFile和LocalAddonManager类，完善附加文件管理\n7.  修复多处File和Path参数不匹配的问题\n8.  优化ZipCoder的字符错误处理策略，改为替换而非报错",
-    "created_at": "2026-07-22T11:51:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29917300664"
   }
 ]
