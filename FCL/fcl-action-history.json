@@ -1,5 +1,53 @@
 [
   {
+    "id": 30812656053,
+    "sha": "722b3d6edf65c597bd75092013679ee6d0f498c8",
+    "short_sha": "722b3d6",
+    "message": "cleanup: 移除多国语言资源中冗余的皮肤设置相关字符串\n\n从多个语言包（de, fa, pt-rBR, ru, uk, vi, zh-rHK）中移除以下已弃用的字符串定义：\n1. `account_skin_type_csl_api_location_hint`\n2. `account_skin_type_csl_api_hint`\n3. `account_skin_type_local_file`\n4. `account_skin_type_csl_api` (主要涉及越南语版本)",
+    "created_at": "2026-08-03T12:12:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30812656053"
+  },
+  {
+    "id": 30812652038,
+    "sha": "722b3d6edf65c597bd75092013679ee6d0f498c8",
+    "short_sha": "722b3d6",
+    "message": "cleanup: 移除多国语言资源中冗余的皮肤设置相关字符串\n\n从多个语言包（de, fa, pt-rBR, ru, uk, vi, zh-rHK）中移除以下已弃用的字符串定义：\n1. `account_skin_type_csl_api_location_hint`\n2. `account_skin_type_csl_api_hint`\n3. `account_skin_type_local_file`\n4. `account_skin_type_csl_api` (主要涉及越南语版本)",
+    "created_at": "2026-08-03T12:12:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30812652038"
+  },
+  {
+    "id": 30811791787,
+    "sha": "4b5cee4781a53e1109bd46ee8e03f97ddee96f67",
+    "short_sha": "4b5cee4",
+    "message": "ui: 优化离线账户皮肤对话框布局对齐\n\n1. 为 ScrollView 添加 `android:fillViewport=\"true\"` 以允许子布局填充视口高度\n2. 将内部 LinearLayoutCompat 高度改为 `match_parent` 并新增 `gravity=\"center_vertical\"`，实现内容在滚动区域内垂直居中显示",
+    "created_at": "2026-08-03T12:00:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30811791787"
+  },
+  {
+    "id": 30811459057,
+    "sha": "496c1614a381ade22466eb253ce6f17695e5ee4e",
+    "short_sha": "496c161",
+    "message": "Update MainActivity.kt",
+    "created_at": "2026-08-03T11:55:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30811459057"
+  },
+  {
+    "id": 30807238641,
+    "sha": "310146447cf89aec3f038ae66fe51d92f1abc9c1",
+    "short_sha": "3101464",
+    "message": "refactor(account): 优化 MicrosoftAccountSkinDialog 代码实现与引用\n\n1.  引入 `NormalizedSkin`、`InvalidSkinException`、`FCLTextView` 和 `URL` 等类，移除代码中冗余的全限定类名。\n2.  移除冗余的 `getSelectedModel()` 私有方法，简化皮肤上传逻辑。\n3.  优化皮肤模型检测代码，提升代码整洁度与可读性。",
+    "created_at": "2026-08-03T10:51:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30807238641"
+  },
+  {
+    "id": 30807234224,
+    "sha": "310146447cf89aec3f038ae66fe51d92f1abc9c1",
+    "short_sha": "3101464",
+    "message": "refactor(account): 优化 MicrosoftAccountSkinDialog 代码实现与引用\n\n1.  引入 `NormalizedSkin`、`InvalidSkinException`、`FCLTextView` 和 `URL` 等类，移除代码中冗余的全限定类名。\n2.  移除冗余的 `getSelectedModel()` 私有方法，简化皮肤上传逻辑。\n3.  优化皮肤模型检测代码，提升代码整洁度与可读性。",
+    "created_at": "2026-08-03T10:51:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30807234224"
+  },
+  {
     "id": 30793631349,
     "sha": "075f48d9ff474289cacc54b05af8dcfbeb02ff03",
     "short_sha": "075f48d",
@@ -350,53 +398,5 @@
     "message": "Preload custom libjsound.so for javax.sound support",
     "created_at": "2026-07-24T10:20:32Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30085832693"
-  },
-  {
-    "id": 30085704802,
-    "sha": "92dd9230680e5738fde278dbdefc059f300a8e35",
-    "short_sha": "92dd923",
-    "message": "Add jsound library target (custom libjsound.so)",
-    "created_at": "2026-07-24T10:18:22Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30085704802"
-  },
-  {
-    "id": 30085675529,
-    "sha": "615af021252c5556451f37809741737d402b2ba3",
-    "short_sha": "615af02",
-    "message": "Add custom libjsound.so with OpenSL ES PCM playback",
-    "created_at": "2026-07-24T10:17:51Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30085675529"
-  },
-  {
-    "id": 30082858305,
-    "sha": "b89a42d518e2998e9bf5783e3358ddaa4a9c0356",
-    "short_sha": "b89a42d",
-    "message": "Fix: remove non-NDK SL_DATAFORMAT_PCM_SUB_BITS constants",
-    "created_at": "2026-07-24T09:30:54Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30082858305"
-  },
-  {
-    "id": 30075029499,
-    "sha": "27b5eeb7909b3720c24676a7cb2d423394c829a4",
-    "short_sha": "27b5eeb",
-    "message": "Fix incomplete type error for snd_mixer_selem_id_t",
-    "created_at": "2026-07-24T07:18:27Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30075029499"
-  },
-  {
-    "id": 30019163706,
-    "sha": "6723ae6e33f5dd4d7365adccdea2c9e6a368290e",
-    "short_sha": "6723ae6",
-    "message": "OpenAL-Soft: 默认OpenSL ES",
-    "created_at": "2026-07-23T15:06:37Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30019163706"
-  },
-  {
-    "id": 30002554069,
-    "sha": "8f435a8d024790f5c0148be2bad24e254fa1ff76",
-    "short_sha": "8f435a8",
-    "message": "Update CompressingUtils.java",
-    "created_at": "2026-07-23T11:16:30Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30002554069"
   }
 ]

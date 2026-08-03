@@ -1,20 +1,20 @@
 {"run": {
-  "id": 30793631349,
+  "id": 30812656053,
   "name": "Build",
-  "node_id": "WFR_kwLOIQeFGs8AAAAHK3GGdQ",
+  "node_id": "WFR_kwLOIQeFGs8AAAAHLJPRtQ",
   "head_branch": "feat/microsoft_skin_cape",
-  "head_sha": "075f48d9ff474289cacc54b05af8dcfbeb02ff03",
+  "head_sha": "722b3d6edf65c597bd75092013679ee6d0f498c8",
   "path": ".github/workflows/build.yml",
   "display_title": "feat(account): 实现微软账号皮肤与披风管理功能",
-  "run_number": 669,
+  "run_number": 679,
   "event": "pull_request",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 200966783,
-  "check_suite_id": 83493524622,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAATcJoUjg",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/30793631349",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30793631349",
+  "check_suite_id": 83545961438,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAATc7oz3g",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/30812656053",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30812656053",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/pulls/1716",
@@ -22,7 +22,7 @@
       "number": 1716,
       "head": {
         "ref": "feat/microsoft_skin_cape",
-        "sha": "075f48d9ff474289cacc54b05af8dcfbeb02ff03",
+        "sha": "722b3d6edf65c597bd75092013679ee6d0f498c8",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -40,8 +40,8 @@
       }
     }
   ],
-  "created_at": "2026-08-03T07:25:59Z",
-  "updated_at": "2026-08-03T07:37:22Z",
+  "created_at": "2026-08-03T12:12:52Z",
+  "updated_at": "2026-08-03T12:17:38Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -65,7 +65,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-08-03T07:25:59Z",
+  "run_started_at": "2026-08-03T12:12:52Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -87,19 +87,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/30793631349/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/30793631349/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/83493524622",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/30793631349/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/30793631349/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/30793631349/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/30812656053/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/30812656053/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/83545961438",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/30812656053/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/30812656053/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/30812656053/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/200966783",
   "head_commit": {
-    "id": "075f48d9ff474289cacc54b05af8dcfbeb02ff03",
-    "tree_id": "fda210d38473ecb9b5f73290863c288a3243ebf6",
-    "message": "feat(account): 实现微软账号皮肤与披风管理功能\n\n1.  新增 `MicrosoftAccountSkinDialog` 及其对应布局，支持在应用内直接预览和管理账号皮肤与披风\n2.  在 `MicrosoftAccount` 类中新增 `uploadSkin`、`resetSkin`、`showCape` 及 `hideCape` 等核心业务方法\n3.  新增 `MinecraftSkinService` 工具类，封装了与 Minecraft 官方 API 交互的 HTTP 请求逻辑（支持上传、删除、更新）\n4.  优化皮肤预览功能，支持自动检测皮肤模型（Classic/Slim）并允许手动切换\n5.  在 `MicrosoftService` 中完善披风元数据的解析逻辑，并启用披风贴图加载\n6.  重构 `AccountListAdapter`，移除对 `OfflineAccount` 皮肤属性访问时的冗余类型转换\n7.  补全皮肤/披风管理相关的多语言字符串资源（中/英）并优化部分资源文件格式",
-    "timestamp": "2026-08-03T07:25:11Z",
+    "id": "722b3d6edf65c597bd75092013679ee6d0f498c8",
+    "tree_id": "3882f5038949929dfc9d5ed0a1e1ddfb4101e5b6",
+    "message": "cleanup: 移除多国语言资源中冗余的皮肤设置相关字符串\n\n从多个语言包（de, fa, pt-rBR, ru, uk, vi, zh-rHK）中移除以下已弃用的字符串定义：\n1. `account_skin_type_csl_api_location_hint`\n2. `account_skin_type_csl_api_hint`\n3. `account_skin_type_local_file`\n4. `account_skin_type_csl_api` (主要涉及越南语版本)",
+    "timestamp": "2026-08-03T12:12:38Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
@@ -249,103 +249,103 @@
   "total_count": 5,
   "artifacts": [
     {
-      "id": 8848232301,
-      "node_id": "MDg6QXJ0aWZhY3Q4ODQ4MjMyMzAx",
-      "name": "app-all",
-      "size_in_bytes": 307842347,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8848232301",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8848232301/zip",
-      "expired": false,
-      "digest": "sha256:0603d2ba64414e29d4a2f7e3344e1be9649e35c6ca978e147f00d439f25ae6d9",
-      "created_at": "2026-08-03T07:37:18Z",
-      "updated_at": "2026-08-03T07:37:18Z",
-      "expires_at": "2026-08-10T07:25:59Z",
-      "workflow_run": {
-        "id": 30793631349,
-        "repository_id": 554140954,
-        "head_repository_id": 554140954,
-        "head_branch": "feat/microsoft_skin_cape",
-        "head_sha": "075f48d9ff474289cacc54b05af8dcfbeb02ff03"
-      }
-    },
-    {
-      "id": 8848199730,
-      "node_id": "MDg6QXJ0aWZhY3Q4ODQ4MTk5NzMw",
-      "name": "app-arm64",
-      "size_in_bytes": 160195099,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8848199730",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8848199730/zip",
-      "expired": false,
-      "digest": "sha256:1dcd911c62f45f16665ca10e3d5ad252ad6037100eeca80fd4f6fdcd0211c3c1",
-      "created_at": "2026-08-03T07:35:52Z",
-      "updated_at": "2026-08-03T07:35:52Z",
-      "expires_at": "2026-08-10T07:25:59Z",
-      "workflow_run": {
-        "id": 30793631349,
-        "repository_id": 554140954,
-        "head_repository_id": 554140954,
-        "head_branch": "feat/microsoft_skin_cape",
-        "head_sha": "075f48d9ff474289cacc54b05af8dcfbeb02ff03"
-      }
-    },
-    {
-      "id": 8848180073,
-      "node_id": "MDg6QXJ0aWZhY3Q4ODQ4MTgwMDcz",
-      "name": "app-arm",
-      "size_in_bytes": 151667169,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8848180073",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8848180073/zip",
-      "expired": false,
-      "digest": "sha256:fc052c108bf27aad7ce082b405fa47d9fed76d4babe0911525515013d270ece0",
-      "created_at": "2026-08-03T07:34:59Z",
-      "updated_at": "2026-08-03T07:34:59Z",
-      "expires_at": "2026-08-10T07:25:59Z",
-      "workflow_run": {
-        "id": 30793631349,
-        "repository_id": 554140954,
-        "head_repository_id": 554140954,
-        "head_branch": "feat/microsoft_skin_cape",
-        "head_sha": "075f48d9ff474289cacc54b05af8dcfbeb02ff03"
-      }
-    },
-    {
-      "id": 8848084716,
-      "node_id": "MDg6QXJ0aWZhY3Q4ODQ4MDg0NzE2",
+      "id": 8855511760,
+      "node_id": "MDg6QXJ0aWZhY3Q4ODU1NTExNzYw",
       "name": "app-x86_64",
-      "size_in_bytes": 164539469,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8848084716",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8848084716/zip",
+      "size_in_bytes": 164531505,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8855511760",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8855511760/zip",
       "expired": false,
-      "digest": "sha256:f6cb09d5bb994f408181b481effa23316e4b8552587e651884d1446018a98b77",
-      "created_at": "2026-08-03T07:30:42Z",
-      "updated_at": "2026-08-03T07:30:42Z",
-      "expires_at": "2026-08-10T07:25:59Z",
+      "digest": "sha256:d4fdadf303c9299dda3dfef2b207bd694ca2f7738fa94f6771434a43fc8d0618",
+      "created_at": "2026-08-03T12:17:32Z",
+      "updated_at": "2026-08-03T12:17:32Z",
+      "expires_at": "2026-08-10T12:12:52Z",
       "workflow_run": {
-        "id": 30793631349,
+        "id": 30812656053,
         "repository_id": 554140954,
         "head_repository_id": 554140954,
         "head_branch": "feat/microsoft_skin_cape",
-        "head_sha": "075f48d9ff474289cacc54b05af8dcfbeb02ff03"
+        "head_sha": "722b3d6edf65c597bd75092013679ee6d0f498c8"
       }
     },
     {
-      "id": 8848073590,
-      "node_id": "MDg6QXJ0aWZhY3Q4ODQ4MDczNTkw",
-      "name": "app-x86",
-      "size_in_bytes": 144376735,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8848073590",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8848073590/zip",
+      "id": 8855503877,
+      "node_id": "MDg6QXJ0aWZhY3Q4ODU1NTAzODc3",
+      "name": "app-arm64",
+      "size_in_bytes": 160187027,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8855503877",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8855503877/zip",
       "expired": false,
-      "digest": "sha256:41615fe450cc1e6b3692f34d36f0735c2886ac2579f527112620c0d1cd4fdb4f",
-      "created_at": "2026-08-03T07:30:11Z",
-      "updated_at": "2026-08-03T07:30:11Z",
-      "expires_at": "2026-08-10T07:25:59Z",
+      "digest": "sha256:1cc4f8802e6d6922788ade3b77b2feceac46b948595f3528c618c2f53dd294db",
+      "created_at": "2026-08-03T12:17:15Z",
+      "updated_at": "2026-08-03T12:17:15Z",
+      "expires_at": "2026-08-10T12:12:52Z",
       "workflow_run": {
-        "id": 30793631349,
+        "id": 30812656053,
         "repository_id": 554140954,
         "head_repository_id": 554140954,
         "head_branch": "feat/microsoft_skin_cape",
-        "head_sha": "075f48d9ff474289cacc54b05af8dcfbeb02ff03"
+        "head_sha": "722b3d6edf65c597bd75092013679ee6d0f498c8"
+      }
+    },
+    {
+      "id": 8855501045,
+      "node_id": "MDg6QXJ0aWZhY3Q4ODU1NTAxMDQ1",
+      "name": "app-arm",
+      "size_in_bytes": 151658835,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8855501045",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8855501045/zip",
+      "expired": false,
+      "digest": "sha256:647a0dc1572437ccdacc7b9b95599b92ef21d5e5e032d13de5066fb46e0b530f",
+      "created_at": "2026-08-03T12:17:08Z",
+      "updated_at": "2026-08-03T12:17:08Z",
+      "expires_at": "2026-08-10T12:12:52Z",
+      "workflow_run": {
+        "id": 30812656053,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "feat/microsoft_skin_cape",
+        "head_sha": "722b3d6edf65c597bd75092013679ee6d0f498c8"
+      }
+    },
+    {
+      "id": 8855498903,
+      "node_id": "MDg6QXJ0aWZhY3Q4ODU1NDk4OTAz",
+      "name": "app-all",
+      "size_in_bytes": 307831438,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8855498903",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8855498903/zip",
+      "expired": false,
+      "digest": "sha256:3e343f62255948384e24af44da0a32b4909f59c077d66a5e5d5b6e8f2fdd7f3a",
+      "created_at": "2026-08-03T12:17:03Z",
+      "updated_at": "2026-08-03T12:17:03Z",
+      "expires_at": "2026-08-10T12:12:52Z",
+      "workflow_run": {
+        "id": 30812656053,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "feat/microsoft_skin_cape",
+        "head_sha": "722b3d6edf65c597bd75092013679ee6d0f498c8"
+      }
+    },
+    {
+      "id": 8855496793,
+      "node_id": "MDg6QXJ0aWZhY3Q4ODU1NDk2Nzkz",
+      "name": "app-x86",
+      "size_in_bytes": 144367747,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8855496793",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/8855496793/zip",
+      "expired": false,
+      "digest": "sha256:98e133cff99ee409f18ee700d57fde2b7456acc6de509f5d690b2c8efd05d5d9",
+      "created_at": "2026-08-03T12:16:59Z",
+      "updated_at": "2026-08-03T12:16:59Z",
+      "expires_at": "2026-08-10T12:12:52Z",
+      "workflow_run": {
+        "id": 30812656053,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "feat/microsoft_skin_cape",
+        "head_sha": "722b3d6edf65c597bd75092013679ee6d0f498c8"
       }
     }
   ]
