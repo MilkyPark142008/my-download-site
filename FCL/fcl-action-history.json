@@ -1,5 +1,13 @@
 [
   {
+    "id": 30771442739,
+    "sha": "95500801c8db0477027081ae61d35ee37dedfff5",
+    "short_sha": "9550080",
+    "message": "chore: 移除内部方案文档，不随 PR 提交",
+    "created_at": "2026-08-02T23:01:00Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30771442739"
+  },
+  {
     "id": 30749000633,
     "sha": "77b12d6f10c2226d0736781399dce8f088e2ce1f",
     "short_sha": "77b12d6",
@@ -390,13 +398,5 @@
     "message": "Add ZL2 layout conversion and sharing functionality (#1650)\n\n* feat(controller): add ZL2 布局转换分享功能\n\n 1. 新增 arm64 架构的布局转换原生库 libcc.so\n 2. 添加多语言的分享转换相关字符串资源\n 3. 新增 SHARE 目录用于存放转换后的文件\n 4. 实现 LayoutConverter 工具类完成 FCL 到 ZL2 布局的转换\n 5. 修改分享逻辑，添加分享方式选择弹窗，支持直接分享和转换后分享\n 6. 增加设备架构兼容性检查和转换过程的进度提示与错误处理\n\n* docs: 在 README 依赖列表中声明 control-converter 依赖\n\n* refactor(controller): 改用 JNI 调用替代命令执行方式\n\n按维护者 ShirasakiMio 要求，命令执行方式不适合 Android，改用 JNI 直接调用原生库。\n\n- LayoutConverter: System.loadLibrary + native 方法替代 ProcessBuilder\n- libcc.so: 从可执行二进制改为 c-shared 共享库 (4MB)\n- 移除进程超时、stderr 读取等命令执行相关代码\n- 添加 Throwable 捕获防止 JNI 异常崩溃\n\n* Update ControllerManagePage.java\n\n---------\n\nCo-authored-by: ShirosakiMio <852468399@qq.com>",
     "created_at": "2026-07-22T12:12:16Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29918681563"
-  },
-  {
-    "id": 29918653405,
-    "sha": "65294df9ef5696db5f30dd5c0054210a849eba4c",
-    "short_sha": "65294df",
-    "message": "Update ControllerManagePage.java",
-    "created_at": "2026-07-22T12:11:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29918653405"
   }
 ]
