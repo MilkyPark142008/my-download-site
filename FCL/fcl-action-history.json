@@ -1,5 +1,29 @@
 [
   {
+    "id": 30886670011,
+    "sha": "a83767f8e84d60950679d533ae21565c99fa8002",
+    "short_sha": "a83767f",
+    "message": "refactor: 迁移自动清理缓存逻辑至启动页并优化代码实现\n\n1. 将自动清理缓存的逻辑从 `LauncherSettingPage` 迁移至 `SplashActivity`，确保应用启动时自动触发检查\n2. 移除 `LauncherSettingPage` 中冗余的缓存时间管理方法及 `ONE_DAY` 常量\n3. 在 `SplashActivity` 中使用 Kotlin KTX 简化 SharedPreferences 的数据更新操作\n4. 统一优化了 `SplashActivity` 内部分方法的代码格式与换行逻辑，提升可读性",
+    "created_at": "2026-08-04T07:08:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30886670011"
+  },
+  {
+    "id": 30885322686,
+    "sha": "4f490dbd230cde8bf1724b48211a6d4e66946257",
+    "short_sha": "4f490db",
+    "message": "feat: 允许添加-Dmiolibpatcher.alc10=true参数修复低版本没有声音的问题",
+    "created_at": "2026-08-04T06:48:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30885322686"
+  },
+  {
+    "id": 30883249526,
+    "sha": "04474f67e5bfdf0d90052c166f15f385e0448fcb",
+    "short_sha": "04474f6",
+    "message": "fix: 修复26.2+退出游戏卡住的问题",
+    "created_at": "2026-08-04T06:13:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30883249526"
+  },
+  {
     "id": 30873894828,
     "sha": "8f6a07b6099d5a085b870e99cc4e061e4547efb7",
     "short_sha": "8f6a07b",
@@ -374,29 +398,5 @@
     "message": "chore: update VerifiedPluginLoad docs",
     "created_at": "2026-07-26T03:05:02Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30185596240"
-  },
-  {
-    "id": 30161071906,
-    "sha": "a2304a495fbc49758f6e4c237a6cee5b38d8a370",
-    "short_sha": "a2304a4",
-    "message": "fix(colorPicker): 修复颜色选择器滑块在部分情况下无法滑动到问题 #1702\n\n1.  修复并优化ColorPickerView的onDraw方法签名，添加NonNull注解\n2.  将整数除法替换为浮点除法避免精度丢失\n3.  使用TextUtils.isEmpty替代字符串非空判断\n4.  将传统switch语句替换为Java 14+箭头语法简化代码\n5.  移除冗余空行与临时变量，简化矩形边界设置逻辑\n6.  调整FCLColorPickerDialog中setColor方法的调用分支顺序",
-    "created_at": "2026-07-25T14:08:39Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30161071906"
-  },
-  {
-    "id": 30153917636,
-    "sha": "01b3d2dbcc7fb38338dd2a8794d4e44cfdf81b4d",
-    "short_sha": "01b3d2d",
-    "message": "feat(settings): manage plugin trust",
-    "created_at": "2026-07-25T10:07:02Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30153917636"
-  },
-  {
-    "id": 30153138057,
-    "sha": "7dbdd62e3d44c45ecac3594fcf1e1eca7cb8de7e",
-    "short_sha": "7dbdd62",
-    "message": "fix: split JNI method registration by class (PortMixerProvider, DirectAudioDeviceProvider, DirectAudioDevice)",
-    "created_at": "2026-07-25T09:38:59Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30153138057"
   }
 ]
