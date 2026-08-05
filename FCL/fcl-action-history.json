@@ -1,5 +1,13 @@
 [
   {
+    "id": 30983676294,
+    "sha": "b0a060a3d281002301927ffc8466806f674aded9",
+    "short_sha": "b0a060a",
+    "message": "refactor: 优化 CI 构建流程，合并重复的构建 job 并复用工作流\n\n- 合并 build.yml 中 release/debug 两个重复 job 为单一 matrix job，构建类型在步骤级按仓库与事件判断\n- 移除与 setup-java 缓存重复的手动 gradle cache 步骤\n- push 触发改用 branches 过滤，打 tag 时不再空跑构建 job\n- release.yml 改为复用 build.yml（workflow_call），仅保留下载产物与发布步骤\n- 传入 secrets 以保证 release 构建签名所需密码可用",
+    "created_at": "2026-08-05T07:05:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30983676294"
+  },
+  {
     "id": 30886670011,
     "sha": "a83767f8e84d60950679d533ae21565c99fa8002",
     "short_sha": "a83767f",
@@ -390,13 +398,5 @@
     "message": "refactor: use renamed VPL package",
     "created_at": "2026-07-26T04:07:10Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30187274027"
-  },
-  {
-    "id": 30185596240,
-    "sha": "c454c376a22781bb0d52f69295e0722fa348eba8",
-    "short_sha": "c454c37",
-    "message": "chore: update VerifiedPluginLoad docs",
-    "created_at": "2026-07-26T03:05:02Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30185596240"
   }
 ]
