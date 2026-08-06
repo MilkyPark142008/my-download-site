@@ -1,5 +1,13 @@
 [
   {
+    "id": 31107261668,
+    "sha": "095c0363e359dd4dd550d9feecae161b8bd9698f",
+    "short_sha": "095c036",
+    "message": "fix: 修复游戏设置内部分文本UI超长导致无法点击设置的问题 #1720",
+    "created_at": "2026-08-06T13:43:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31107261668"
+  },
+  {
     "id": 31059444928,
     "sha": "af2c4d2ce32751079d0c5cfe31a99afb06dcb284",
     "short_sha": "af2c4d2",
@@ -390,13 +398,5 @@
     "message": "fix: clear pending exception after PortMixerProvider RegisterNatives failure",
     "created_at": "2026-07-26T14:47:35Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30206832468"
-  },
-  {
-    "id": 30202829737,
-    "sha": "33121e3510ce0a5b67847b94e20ca118e3f5a82d",
-    "short_sha": "33121e3",
-    "message": "fix(bridge): 修复文件路径跳转处理逻辑\n\n优化了file协议链接的解析逻辑，先进行URI解码再标准化路径，正确判断目录并传递绝对路径给浏览回调",
-    "created_at": "2026-07-26T12:49:36Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30202829737"
   }
 ]
