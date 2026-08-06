@@ -1,5 +1,13 @@
 [
   {
+    "id": 31059444928,
+    "sha": "af2c4d2ce32751079d0c5cfe31a99afb06dcb284",
+    "short_sha": "af2c4d2",
+    "message": "fix: 修复多语言字符串资源中的占位符错误并补全漏译键",
+    "created_at": "2026-08-06T00:21:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31059444928"
+  },
+  {
     "id": 31021906502,
     "sha": "1847aa953e869e3f780818bccc3e5170cc75c135",
     "short_sha": "1847aa9",
@@ -390,13 +398,5 @@
     "message": "fix(bridge): 修复文件路径跳转处理逻辑\n\n优化了file协议链接的解析逻辑，先进行URI解码再标准化路径，正确判断目录并传递绝对路径给浏览回调",
     "created_at": "2026-07-26T12:49:36Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30202829737"
-  },
-  {
-    "id": 30202460211,
-    "sha": "76e60a86edab7904466408d3dde950bf4a7a0aa6",
-    "short_sha": "76e60a8",
-    "message": "refactor(trust-ui): render the trust dialog as labelled rows, not one text blob\n\nEvery fact was concatenated into a single scrolling FCLTextView with the labels\nbaked into the format strings (\"Plugin: %1$s\\nVersion: %2$s\\nType: %3$s\"). Nine\nor more facts arrived as one wall of prose with no hierarchy, nothing to scan\nby, and a fingerprint wrapped mid-run at 16 characters.\n\nFacts are now structured data. PluginTrustGate hands the dialog sections of\nlabel/value pairs and the dialog inflates a view per row, so a heading is\nsomething the launcher draws and a value is something a plugin supplies - never\nthe same view. Each row is bounded, so no supplied string can grow the dialog or\npush a later row out of sight, which is what the sanitiser and the section\nreordering were compensating for before. The registered-publisher section is\nemitted only when the signed list actually names a publisher, so its presence is\nitself a claim a plugin cannot fabricate.\n\nThe fingerprint gets the full width in a fixed-pitch face, grouped in fours and\nwrapped every 32 characters, so two of them can be compared by eye.\n\nSections use a themed heading and a hairline rule rather than filled cards:\nbg_container_white is a hardcoded white and would invert badly in dark mode,\nwhile FCLView's use_theme_color follows the active theme.\n\nDrops five composite format strings from both locales in favour of thirteen\nlabel and heading strings.",
-    "created_at": "2026-07-26T12:01:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30202460211"
   }
 ]
