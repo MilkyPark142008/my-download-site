@@ -1,5 +1,53 @@
 [
   {
+    "id": 31141040982,
+    "sha": "a997818d09e4ed14673223be11472d74afeb4263",
+    "short_sha": "a997818",
+    "message": "1.3.2.4",
+    "created_at": "2026-08-07T02:21:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31141040982"
+  },
+  {
+    "id": 31141041021,
+    "sha": "a997818d09e4ed14673223be11472d74afeb4263",
+    "short_sha": "a997818",
+    "message": "1.3.2.4",
+    "created_at": "2026-08-07T02:21:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31141041021"
+  },
+  {
+    "id": 31140070134,
+    "sha": "1dfa53b31c86213192fc490add5f3c3b2f482765",
+    "short_sha": "1dfa53b",
+    "message": "Update input_bridge_v3.c",
+    "created_at": "2026-08-07T02:04:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31140070134"
+  },
+  {
+    "id": 31139507228,
+    "sha": "0734509d622deed3dcebab427b8509fabfe618a9",
+    "short_sha": "0734509",
+    "message": "Update input_bridge_v3.c",
+    "created_at": "2026-08-07T01:53:45Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31139507228"
+  },
+  {
+    "id": 31136094845,
+    "sha": "6abae037d49c8fdd244485f71dcceeca8760a244",
+    "short_sha": "6abae03",
+    "message": "1.3.2.3",
+    "created_at": "2026-08-07T00:51:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31136094845"
+  },
+  {
+    "id": 31136094937,
+    "sha": "6abae037d49c8fdd244485f71dcceeca8760a244",
+    "short_sha": "6abae03",
+    "message": "1.3.2.3",
+    "created_at": "2026-08-07T00:51:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31136094937"
+  },
+  {
     "id": 31107261668,
     "sha": "095c0363e359dd4dd550d9feecae161b8bd9698f",
     "short_sha": "095c036",
@@ -350,53 +398,5 @@
     "message": "1.3.2.1",
     "created_at": "2026-07-28T04:08:59Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30327930018"
-  },
-  {
-    "id": 30327930027,
-    "sha": "c5dbeba7b88288e4908755e63a37f838fc0a92b5",
-    "short_sha": "c5dbeba",
-    "message": "1.3.2.1",
-    "created_at": "2026-07-28T04:08:59Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30327930027"
-  },
-  {
-    "id": 30262352815,
-    "sha": "6fa78d6d0c70a2e4987438139b1f51ce17e62e73",
-    "short_sha": "6fa78d6",
-    "message": "refactor: 重构模组加载与压缩文件处理逻辑，迁移至Java 17+新特性\n\n1.  将Pair类改为record简化实现，移除冗余代码\n2.  替换commons-lang3为原生方法，升级toml4j至tomlj并新增chardet依赖\n3.  使用ZipFileTree替代旧的ZipFileSystem处理压缩文件，优化编码检测\n4.  重构多种模组元数据解析逻辑，统一使用ZipFileTree读取压缩包内文件\n5.  新增LocalAddonFile与LocalAddonManager管理附加文件\n6.  优化IO工具类，新增字符编码自动检测与流处理优化\n7.  修复压缩文件路径调用错误，统一使用NIO Path替代File\n8.  调整日志版权年份与代码格式化规范",
-    "created_at": "2026-07-27T11:32:51Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30262352815"
-  },
-  {
-    "id": 30234461581,
-    "sha": "a1763b229c4538253277885178b7ebebd75384db",
-    "short_sha": "a1763b2",
-    "message": "fix(ControlButton): 修复按键控制光标时光标状态发生变化后无法自动居中的问题\n\n重构了ControlButton的触摸事件处理代码，将重复的初始位置计算逻辑提取为setInitialPosition方法，同时在光标模式变化时重新设置初始位置，减少代码重复并提升可维护性",
-    "created_at": "2026-07-27T03:17:59Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30234461581"
-  },
-  {
-    "id": 30229678535,
-    "sha": "81502dc8c5dafd6af66a920ddd0f476ad2365487",
-    "short_sha": "81502dc",
-    "message": "fix: rewrite jsound.c with correct JDK 25 JNI signatures (Java_* naming convention)",
-    "created_at": "2026-07-27T01:22:57Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30229678535"
-  },
-  {
-    "id": 30226523872,
-    "sha": "e50fe70a3523f991551d014f3c7266afc98f0246",
-    "short_sha": "e50fe70",
-    "message": "fix: make all native method registrations optional (JDK 25 compatibility)",
-    "created_at": "2026-07-27T00:02:33Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30226523872"
-  },
-  {
-    "id": 30206832468,
-    "sha": "d9ece1c2c40894d2610e5f9b40dadf05e678b0c5",
-    "short_sha": "d9ece1c",
-    "message": "fix: clear pending exception after PortMixerProvider RegisterNatives failure",
-    "created_at": "2026-07-26T14:47:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30206832468"
   }
 ]
