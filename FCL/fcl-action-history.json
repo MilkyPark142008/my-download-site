@@ -1,5 +1,13 @@
 [
   {
+    "id": 31262031390,
+    "sha": "51c773764aaed950ad61df2642d158342b0b4229",
+    "short_sha": "51c7737",
+    "message": "fix: 同步 JNI 与新版 LWJGL 接口\n\n- gl_bridge.c: nativeInitGl4esInternals 方法名由 RendererInit 迁移为 PojavRendererInit\n- input_bridge_v3.c: internalWindowSizeChanged 签名由 (JII)V 改为 (J)V",
+    "created_at": "2026-08-08T14:27:28Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31262031390"
+  },
+  {
     "id": 31258081373,
     "sha": "9abbc77cfa4f142d1ce013d9b196573c13c847f8",
     "short_sha": "9abbc77",
@@ -390,13 +398,5 @@
     "message": "ci: bump actions version to latest",
     "created_at": "2026-07-31T23:06:50Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30672529720"
-  },
-  {
-    "id": 30425042581,
-    "sha": "a820671733fc7b774e3586b44cdf66e8e6c53101",
-    "short_sha": "a820671",
-    "message": "feat: 新增 RAR 格式解压支持并优化手动整合包安装流程\n\n1.  集成 junrar 库并在 `CompressingUtils` 中实现 `extractRar` 逻辑，支持处理 RAR 目录及路径分隔符转换\n2.  在 `ManuallyCreatedModpackInstallTask` 中增加对 `.rar` 文件的安装支持\n3.  在整合包选择界面（`ModpackSelectionPage`）的筛选后缀中新增 `.7z` 与 `.rar`\n4.  调整 `ModpackHelper` 逻辑，将 `.7z` 与 `.rar` 统一视为手动整合包类型，并优化扩展名匹配的可靠性（忽略大小写）\n5.  优化 `LocalModpackPage` 的编码检测逻辑，对于非标准压缩格式默认使用 `UTF-8` 编码以提升性能\n6.  在 `libs.versions.toml` 中新增 `junrar` 相关依赖配置",
-    "created_at": "2026-07-29T05:23:50Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30425042581"
   }
 ]
