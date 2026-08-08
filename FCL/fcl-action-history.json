@@ -1,5 +1,13 @@
 [
   {
+    "id": 31258081373,
+    "sha": "9abbc77cfa4f142d1ce013d9b196573c13c847f8",
+    "short_sha": "9abbc77",
+    "message": "fix: 同步GLCapabilities与Amethyst实现\n\n- GLCapabilities 构造函数调用 PojavRendererInit.onCreateCapabilities 初始化渲染器回调\n- check_GL11~check_GL33 移除提前返回，改用非短路(&)并入 ext 检查，缺失版本时触发 reportMissing 警告\n- flag7~flag11 的 GL_ARB_imaging 检查改为非短路(&)判断\n- 更新 lwjgl-3.3.3-merged-modules.jar 构建产物",
+    "created_at": "2026-08-08T12:45:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31258081373"
+  },
+  {
     "id": 31244626749,
     "sha": "680a670e320b044127dbc67926e0be4ac1fbd178",
     "short_sha": "680a670",
@@ -390,13 +398,5 @@
     "message": "feat: 新增 RAR 格式解压支持并优化手动整合包安装流程\n\n1.  集成 junrar 库并在 `CompressingUtils` 中实现 `extractRar` 逻辑，支持处理 RAR 目录及路径分隔符转换\n2.  在 `ManuallyCreatedModpackInstallTask` 中增加对 `.rar` 文件的安装支持\n3.  在整合包选择界面（`ModpackSelectionPage`）的筛选后缀中新增 `.7z` 与 `.rar`\n4.  调整 `ModpackHelper` 逻辑，将 `.7z` 与 `.rar` 统一视为手动整合包类型，并优化扩展名匹配的可靠性（忽略大小写）\n5.  优化 `LocalModpackPage` 的编码检测逻辑，对于非标准压缩格式默认使用 `UTF-8` 编码以提升性能\n6.  在 `libs.versions.toml` 中新增 `junrar` 相关依赖配置",
     "created_at": "2026-07-29T05:23:50Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30425042581"
-  },
-  {
-    "id": 30414292857,
-    "sha": "93177ac5ad959dea948a47f40c26f683e99ce81f",
-    "short_sha": "93177ac",
-    "message": "refactor(compressingUtils): 优化压缩文件解压的构建方式\n\n1. 调整导入的包结构，细化导入类型\n2. 修复javadoc注释的对齐格式问题\n3. 使用builder模式创建ZipFile和SevenZFile实例",
-    "created_at": "2026-07-29T01:30:59Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30414292857"
   }
 ]
