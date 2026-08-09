@@ -1,10 +1,10 @@
 {
   "release": {
-    "url": "https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/352469026",
-    "assets_url": "https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/352469026/assets",
-    "upload_url": "https://uploads.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/352469026/assets{?name,label}",
-    "html_url": "https://github.com/MobileGL-Dev/MobileGlues-release/releases/tag/V1.3.5",
-    "id": 352469026,
+    "url": "https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/367506394",
+    "assets_url": "https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/367506394/assets",
+    "upload_url": "https://uploads.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/367506394/assets{?name,label}",
+    "html_url": "https://github.com/MobileGL-Dev/MobileGlues-release/releases/tag/V2.0.0",
+    "id": 367506394,
     "author": {
       "login": "BZLZHH",
       "id": 69153940,
@@ -26,22 +26,22 @@
       "user_view_type": "public",
       "site_admin": false
     },
-    "node_id": "RE_kwDON21Ii84VAkAi",
-    "tag_name": "V1.3.5",
+    "node_id": "RE_kwDON21Ii84V57Pa",
+    "tag_name": "V2.0.0",
     "target_commitish": "dev",
-    "name": "MobileGlues V1.3.5 Release",
+    "name": "MobileGlues V2.0.0 Release",
     "draft": false,
     "immutable": false,
     "prerelease": false,
-    "created_at": "2026-07-11T08:20:42Z",
-    "updated_at": "2026-07-11T08:49:09Z",
-    "published_at": "2026-07-11T08:37:24Z",
+    "created_at": "2026-08-09T14:53:03Z",
+    "updated_at": "2026-08-09T15:13:23Z",
+    "published_at": "2026-08-09T15:04:48Z",
     "assets": [
       {
-        "url": "https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/assets/473358113",
-        "id": 473358113,
-        "node_id": "RA_kwDON21Ii84cNt8h",
-        "name": "MobileGlues_1.3.5.apk",
+        "url": "https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/assets/507608282",
+        "id": 507608282,
+        "node_id": "RA_kwDON21Ii84eQXza",
+        "name": "MobileGlues_2.0.0.apk",
         "label": null,
         "uploader": {
           "login": "BZLZHH",
@@ -66,29 +66,28 @@
         },
         "content_type": "application/vnd.android.package-archive",
         "state": "uploaded",
-        "size": 11212126,
-        "digest": "sha256:228d44d812be7793a9cff42de4251ae8bab338a15e851572c08c9265818c41ba",
-        "download_count": 115258,
-        "created_at": "2026-07-11T08:35:51Z",
-        "updated_at": "2026-07-11T08:35:56Z",
-        "browser_download_url": "https://github.com/MobileGL-Dev/MobileGlues-release/releases/download/V1.3.5/MobileGlues_1.3.5.apk"
+        "size": 11416886,
+        "digest": "sha256:a7e1eb29731fdece7ab3af7fb00692b856f1808a7544436e7b3eb6c08355581a",
+        "download_count": 127,
+        "created_at": "2026-08-09T14:54:18Z",
+        "updated_at": "2026-08-09T14:54:31Z",
+        "browser_download_url": "https://github.com/MobileGL-Dev/MobileGlues-release/releases/download/V2.0.0/MobileGlues_2.0.0.apk"
       }
     ],
-    "tarball_url": "https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/tarball/V1.3.5",
-    "zipball_url": "https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/zipball/V1.3.5",
-    "body": "**Hello everyone! We're excited to bring you MobileGlues v1.3.5**\r\n\r\n---\r\n\r\n## Highlights\r\n\r\n### MobileGlues\r\n\r\n* **Fixed:** Incorrect Sodium rendering due to improper `VULKAN` definition in GLSL\r\n* **Fixed:** Incorrect behavior in texture subsystem\r\n\r\n> [!NOTE]\r\n> *Ignore shader/program error* is required to be enabled to run Minecraft 26.3-snapshot-3 and later versions.\r\n\r\n### MobileGlues Plugin\r\n\r\n* **Changed:** Replaced SAF (Storage Access Framework) with All Files Access (`MANAGE_EXTERNAL_STORAGE`) for storage management, greatly simplifying the file access workflow\r\n* **Improved:** UI design\r\n* **Added:** Privacy notice\r\n(Thanks @youfeng11)\r\n---\r\n\r\nFile: **MobileGlues_1.3.5.apk**\r\nmd5: `35a739c8256bbce97ba4a1fd58062b6d`\r\nsha256: `228d44d812be7793a9cff42de4251ae8bab338a15e851572c08c9265818c41ba`\r\n",
+    "tarball_url": "https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/tarball/V2.0.0",
+    "zipball_url": "https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/zipball/V2.0.0",
+    "body": "**Hello everyone! We're excited to bring you MobileGlues v2.0.0**\r\n\r\n---\r\n\r\n## Highlights\r\n\r\n### MobileGlues\r\n\r\n* **Improved:** Minor performance optimizations (potentially significant in certain scenarios)\r\n* **Improved:** Memory usage optimization, especially during extended running sessions\r\n* **Fixed:** Rendering issues with Xaero's World Map mod\r\n* **Fixed:** Various obscure bugs\r\n\r\n### MobileGlues Plugin\r\n\r\n* **Refactored:** Completely redesigned UI, now divided into three elegant tabs (Home, Settings, Info)\r\n* **Added:** Option to switch between Material and Miuix themes\r\n* **Added:** Landscape and portrait orientation support\r\n* **Added:** Display list of project contributors\r\n* **Added:** List of third-party open-source libraries used\r\n* **Added:** Privacy policy\r\n* **Refactored:** MultiDraw option logic – now highly customizable per simulation method; built-in benchmark to automatically select the fastest MultiDraw simulation method\r\n* **Added:** Support to borrow ANGLE library from launchers (Fold Craft Launcher or Zalith Launcher 2)\r\n\r\n---\r\n\r\nFile: **MobileGlues_2.0.0.apk**\r\nmd5: `251921c5d92ee225c266fd38ad732ace`\r\nsha256: `a7e1eb29731fdece7ab3af7fb00692b856f1808a7544436e7b3eb6c08355581a`",
     "reactions": {
-      "url": "https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/352469026/reactions",
-      "total_count": 56,
-      "+1": 25,
+      "url": "https://api.github.com/repos/MobileGL-Dev/MobileGlues-release/releases/367506394/reactions",
+      "total_count": 11,
+      "+1": 6,
       "-1": 0,
-      "laugh": 0,
-      "hooray": 9,
+      "laugh": 1,
+      "hooray": 1,
       "confused": 0,
-      "heart": 11,
-      "rocket": 11,
-      "eyes": 0
-    },
-    "mentions_count": 1
+      "heart": 1,
+      "rocket": 1,
+      "eyes": 1
+    }
   }
 }
