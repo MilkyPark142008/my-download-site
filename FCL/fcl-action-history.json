@@ -1,5 +1,29 @@
 [
   {
+    "id": 31359530671,
+    "sha": "4bee1cbc9e48ff3ebc1a6a1685081b010034937c",
+    "short_sha": "4bee1cb",
+    "message": "refactor: jre_launcher 日志改用 FCL_LOG",
+    "created_at": "2026-08-10T05:42:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31359530671"
+  },
+  {
+    "id": 31359528197,
+    "sha": "4bee1cbc9e48ff3ebc1a6a1685081b010034937c",
+    "short_sha": "4bee1cb",
+    "message": "refactor: jre_launcher 日志改用 FCL_LOG",
+    "created_at": "2026-08-10T05:42:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31359528197"
+  },
+  {
+    "id": 31359332178,
+    "sha": "292325e2d5824fb693601fc5c9ae8c8cff171e8e",
+    "short_sha": "292325e",
+    "message": "Update build.gradle.kts",
+    "created_at": "2026-08-10T05:39:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31359332178"
+  },
+  {
     "id": 31351818715,
     "sha": "0bd3d9e898b75cdbc41f17712d79e447e53758dd",
     "short_sha": "0bd3d9e",
@@ -374,29 +398,5 @@
     "message": "feat(account): 实现微软账号皮肤与披风管理功能\n\n1.  新增 `MicrosoftAccountSkinDialog` 及其对应布局，支持在应用内直接预览和管理账号皮肤与披风\n2.  在 `MicrosoftAccount` 类中新增 `uploadSkin`、`resetSkin`、`showCape` 及 `hideCape` 等核心业务方法\n3.  新增 `MinecraftSkinService` 工具类，封装了与 Minecraft 官方 API 交互的 HTTP 请求逻辑（支持上传、删除、更新）\n4.  优化皮肤预览功能，支持自动检测皮肤模型（Classic/Slim）并允许手动切换\n5.  在 `MicrosoftService` 中完善披风元数据的解析逻辑，并启用披风贴图加载\n6.  重构 `AccountListAdapter`，移除对 `OfflineAccount` 皮肤属性访问时的冗余类型转换\n7.  补全皮肤/披风管理相关的多语言字符串资源（中/英）并优化部分资源文件格式",
     "created_at": "2026-08-03T07:25:11Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30793616839"
-  },
-  {
-    "id": 30786183885,
-    "sha": "d7546cd1d8f1fc8a2e77442f85529f91e51034ee",
-    "short_sha": "d7546cd",
-    "message": "refactor: 迁移 AccountListItem 至 Kotlin 并增强文件选择逻辑的空安全性\n\n1.  将 `AccountListItem` 从 Java 迁移至 Kotlin，使用协程（Coroutines）重构皮肤上传与文件选择逻辑，移除冗余的 `CountDownLatch`\n2.  优化 `FileBrowser` 及其回调接口，引入 `@Nullable` 支持并统一处理取消选择时的 null 返回值\n3.  在全量 UI 组件（如 `ModListPage`、`WorldListPage`、`LauncherSettingPage` 等）的文件选择回调中增加空校验，修复潜在的空指针崩溃风险\n4.  重构 `AccountListAdapter`，利用 `lifecycleScope` 处理异步任务，并简化属性绑定（Property Binding）代码\n5.  更新 `FileBrowserActivity`，使用 Java 17 增强 switch 表达式优化逻辑分支\n6.  统一处理 `OfflineAccount` 的皮肤与披风设置逻辑，增加对 Android Doc URI 的路径转换校验",
-    "created_at": "2026-08-03T05:02:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30786183885"
-  },
-  {
-    "id": 30780457381,
-    "sha": "928d9994235909e538bae943868e40c4def4f0b0",
-    "short_sha": "928d999",
-    "message": "Update FCLBridge.java",
-    "created_at": "2026-08-03T02:55:04Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30780457381"
-  },
-  {
-    "id": 30771442739,
-    "sha": "95500801c8db0477027081ae61d35ee37dedfff5",
-    "short_sha": "9550080",
-    "message": "chore: 移除内部方案文档，不随 PR 提交",
-    "created_at": "2026-08-02T23:01:00Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30771442739"
   }
 ]
