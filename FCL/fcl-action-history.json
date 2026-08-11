@@ -1,5 +1,29 @@
 [
   {
+    "id": 31465768182,
+    "sha": "3bfea27978a6b904fd17ee4233e66eb2d287368e",
+    "short_sha": "3bfea27",
+    "message": "fix: 修复构建",
+    "created_at": "2026-08-11T06:37:09Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31465768182"
+  },
+  {
+    "id": 31462976817,
+    "sha": "9b97c204b71c674780a3ea153db07b1abb002379",
+    "short_sha": "9b97c20",
+    "message": "refactor: mod 元数据读取从 ZipFileTree 迁移到 zipfs\n\nModManager 及各 modinfo reader 改用 FileSystem（zipfs）读取 mod 元数据，\n替换 ZipFileTree（commons-compress）实现。CompressingUtils 新增\nopenZipTree(Path, Charset) 重载供后续使用。",
+    "created_at": "2026-08-11T05:49:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31462976817"
+  },
+  {
+    "id": 31462451638,
+    "sha": "3f897af717de23e518c258a53f72fa657193d57d",
+    "short_sha": "3f897af",
+    "message": "fix: 修复混合编码 zip 解压时条目名解码错误导致 NoSuchFileException\n\nzipfs 的 ZipCoder 是全局单一编码，忽略 CEN 中条目的 EFS（UTF-8）flag：\n带 flag 的条目名被按配置编码（如 GBK）解码成乱码，非法字节序列被\nREPLACE，重编码后的字节与中央目录原始字节不一致，inodes 按字节查找\n失败，解压时抛 NoSuchFileException 中断。\n\n修复：读取 CEN 条目名时若条目带 EFS flag 且配置编码非 UTF-8，先按\nUTF-8 解码再按配置编码重编码，统一 inodes 的 key 表示。\ninitCEN 与 Entry.cen 两处同时处理，避免写回时出现重复条目。\n\n附带新增 androidTest 测试基建（testBuildType=fordebug），设备实测验证：\n244MB 真实整合包完整解压、中文文件名正确。",
+    "created_at": "2026-08-11T05:40:42Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31462451638"
+  },
+  {
     "id": 31456961961,
     "sha": "fde6dbf945d43808cad64f2c11e8fcf52e0dbc79",
     "short_sha": "fde6dbf",
@@ -374,29 +398,5 @@
     "message": "cleanup: 移除多国语言资源中冗余的皮肤设置相关字符串\n\n从多个语言包（de, fa, pt-rBR, ru, uk, vi, zh-rHK）中移除以下已弃用的字符串定义：\n1. `account_skin_type_csl_api_location_hint`\n2. `account_skin_type_csl_api_hint`\n3. `account_skin_type_local_file`\n4. `account_skin_type_csl_api` (主要涉及越南语版本)",
     "created_at": "2026-08-03T12:12:38Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30812652038"
-  },
-  {
-    "id": 30811791787,
-    "sha": "4b5cee4781a53e1109bd46ee8e03f97ddee96f67",
-    "short_sha": "4b5cee4",
-    "message": "ui: 优化离线账户皮肤对话框布局对齐\n\n1. 为 ScrollView 添加 `android:fillViewport=\"true\"` 以允许子布局填充视口高度\n2. 将内部 LinearLayoutCompat 高度改为 `match_parent` 并新增 `gravity=\"center_vertical\"`，实现内容在滚动区域内垂直居中显示",
-    "created_at": "2026-08-03T12:00:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30811791787"
-  },
-  {
-    "id": 30811459057,
-    "sha": "496c1614a381ade22466eb253ce6f17695e5ee4e",
-    "short_sha": "496c161",
-    "message": "Update MainActivity.kt",
-    "created_at": "2026-08-03T11:55:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30811459057"
-  },
-  {
-    "id": 30807238641,
-    "sha": "310146447cf89aec3f038ae66fe51d92f1abc9c1",
-    "short_sha": "3101464",
-    "message": "refactor(account): 优化 MicrosoftAccountSkinDialog 代码实现与引用\n\n1.  引入 `NormalizedSkin`、`InvalidSkinException`、`FCLTextView` 和 `URL` 等类，移除代码中冗余的全限定类名。\n2.  移除冗余的 `getSelectedModel()` 私有方法，简化皮肤上传逻辑。\n3.  优化皮肤模型检测代码，提升代码整洁度与可读性。",
-    "created_at": "2026-08-03T10:51:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30807238641"
   }
 ]
