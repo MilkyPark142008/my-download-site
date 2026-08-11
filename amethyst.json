@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 168391097,
         "digest": "sha256:8c6b438ea2a3319adaf673d639adfb779dfb15d694d940814cd1c6b099d323a2",
-        "download_count": 3232,
+        "download_count": 3258,
         "created_at": "2026-07-31T02:59:21Z",
         "updated_at": "2026-07-31T03:03:42Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.7/Amethyst-Debug.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 156535672,
         "digest": "sha256:6b5579e93f50a62f4d96279683bb447325e5a4de9015deae787eee56c248211f",
-        "download_count": 8595,
+        "download_count": 8686,
         "created_at": "2026-07-31T02:59:28Z",
         "updated_at": "2026-07-31T03:03:42Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.7/Amethyst.apk"
@@ -128,49 +128,25 @@
   },
   "action": {
     "run": {
-      "id": 31415130280,
+      "id": 31539476613,
       "name": "Android CI",
-      "node_id": "WFR_kwLOOrUn6c8AAAAHUHzYqA",
-      "head_branch": "feat/MioLibPatcher",
-      "head_sha": "7881c7362e89fc2165bc428bbd735388aefb1cf8",
+      "node_id": "WFR_kwLOOrUn6c8AAAAHV-Y4hQ",
+      "head_branch": "fix/forge-installer-i18n",
+      "head_sha": "186af896ad93a5fd82f2e70f90b0a575d399dafb",
       "path": ".github/workflows/android.yml",
-      "display_title": "change: Replace methods_injector_agent with MioLibPatcher",
-      "run_number": 931,
-      "event": "pull_request",
+      "display_title": "[TESTME] fix(forge_installer): Fail to find OK button on install if l…",
+      "run_number": 933,
+      "event": "push",
       "status": "completed",
       "conclusion": "success",
       "workflow_id": 162757109,
-      "check_suite_id": 85210486690,
-      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAT1vDXog",
-      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31415130280",
-      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31415130280",
-      "pull_requests": [
-        {
-          "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/pulls/345",
-          "id": 4246955029,
-          "number": 345,
-          "head": {
-            "ref": "feat/MioLibPatcher",
-            "sha": "7881c7362e89fc2165bc428bbd735388aefb1cf8",
-            "repo": {
-              "id": 984950761,
-              "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
-              "name": "Amethyst-Android"
-            }
-          },
-          "base": {
-            "ref": "v3_openjdk",
-            "sha": "4cf805a93124269b47f8a4ba27fcce36b79ab5ef",
-            "repo": {
-              "id": 984950761,
-              "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
-              "name": "Amethyst-Android"
-            }
-          }
-        }
-      ],
-      "created_at": "2026-08-10T17:39:40Z",
-      "updated_at": "2026-08-10T17:44:52Z",
+      "check_suite_id": 85556539139,
+      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAT65EvAw",
+      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31539476613",
+      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31539476613",
+      "pull_requests": [],
+      "created_at": "2026-08-11T21:46:57Z",
+      "updated_at": "2026-08-11T21:51:03Z",
       "actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -194,7 +170,7 @@
       },
       "run_attempt": 1,
       "referenced_workflows": [],
-      "run_started_at": "2026-08-10T17:39:40Z",
+      "run_started_at": "2026-08-11T21:46:57Z",
       "triggering_actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -216,19 +192,19 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31415130280/jobs",
-      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31415130280/logs",
-      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/85210486690",
-      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31415130280/artifacts",
-      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31415130280/cancel",
-      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31415130280/rerun",
+      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31539476613/jobs",
+      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31539476613/logs",
+      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/85556539139",
+      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31539476613/artifacts",
+      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31539476613/cancel",
+      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31539476613/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/workflows/162757109",
       "head_commit": {
-        "id": "7881c7362e89fc2165bc428bbd735388aefb1cf8",
-        "tree_id": "04dd7ce137cb5283cbbd80b5813867076f5bb2ff",
-        "message": "change: Replace methods_injector_agent with MioLibPatcher",
-        "timestamp": "2026-08-10T16:57:14Z",
+        "id": "186af896ad93a5fd82f2e70f90b0a575d399dafb",
+        "tree_id": "eb14b04968b6d68b8024c9308c7287359e7d403b",
+        "message": "[TESTME] fix(forge_installer): Fail to find OK button on install if localized",
+        "timestamp": "2026-08-11T21:46:14Z",
         "author": {
           "name": "tomikun",
           "email": "60690056+alexytomi@users.noreply.github.com"
@@ -377,43 +353,43 @@
     },
     "artifacts": [
       {
-        "id": 9073255863,
-        "node_id": "MDg6QXJ0aWZhY3Q5MDczMjU1ODYz",
+        "id": 9120201511,
+        "node_id": "MDg6QXJ0aWZhY3Q5MTIwMjAxNTEx",
         "name": "app-release",
-        "size_in_bytes": 155403119,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9073255863",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9073255863/zip",
+        "size_in_bytes": 154647114,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9120201511",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9120201511/zip",
         "expired": false,
-        "digest": "sha256:1058bd698e8dbbaae1919cd2bcf4267b2eee23c1c9bf7042ece5c3f5a3d9b26a",
-        "created_at": "2026-08-10T17:44:48Z",
-        "updated_at": "2026-08-10T17:44:48Z",
-        "expires_at": "2026-11-08T17:39:40Z",
+        "digest": "sha256:cfbb9df3eb5e186215ff570559a3f35d58ab3f025f35dbf71be224ba6d1ffb1f",
+        "created_at": "2026-08-11T21:51:00Z",
+        "updated_at": "2026-08-11T21:51:00Z",
+        "expires_at": "2026-11-09T21:46:57Z",
         "workflow_run": {
-          "id": 31415130280,
+          "id": 31539476613,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
-          "head_branch": "feat/MioLibPatcher",
-          "head_sha": "7881c7362e89fc2165bc428bbd735388aefb1cf8"
+          "head_branch": "fix/forge-installer-i18n",
+          "head_sha": "186af896ad93a5fd82f2e70f90b0a575d399dafb"
         }
       },
       {
-        "id": 9073252446,
-        "node_id": "MDg6QXJ0aWZhY3Q5MDczMjUyNDQ2",
+        "id": 9120198623,
+        "node_id": "MDg6QXJ0aWZhY3Q5MTIwMTk4NjIz",
         "name": "app-debug (recommended)",
-        "size_in_bytes": 167123327,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9073252446",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9073252446/zip",
+        "size_in_bytes": 166365311,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9120198623",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9120198623/zip",
         "expired": false,
-        "digest": "sha256:3d815ffce962d716563425ce905c5b5b806e1399f6ece9105de6e767e14d392a",
-        "created_at": "2026-08-10T17:44:41Z",
-        "updated_at": "2026-08-10T17:44:41Z",
-        "expires_at": "2026-11-08T17:39:40Z",
+        "digest": "sha256:2ac643346460af9d74561056c75dfb349b1234a95d54a3e441e920f93525e9ea",
+        "created_at": "2026-08-11T21:50:54Z",
+        "updated_at": "2026-08-11T21:50:54Z",
+        "expires_at": "2026-11-09T21:46:57Z",
         "workflow_run": {
-          "id": 31415130280,
+          "id": 31539476613,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
-          "head_branch": "feat/MioLibPatcher",
-          "head_sha": "7881c7362e89fc2165bc428bbd735388aefb1cf8"
+          "head_branch": "fix/forge-installer-i18n",
+          "head_sha": "186af896ad93a5fd82f2e70f90b0a575d399dafb"
         }
       }
     ]
