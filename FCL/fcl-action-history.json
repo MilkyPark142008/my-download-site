@@ -1,5 +1,13 @@
 [
   {
+    "id": 31456961961,
+    "sha": "fde6dbf945d43808cad64f2c11e8fcf52e0dbc79",
+    "short_sha": "fde6dbf",
+    "message": "optimize: 模组列表远程信息加载优化（缓存复用 + 可见 item 优先）",
+    "created_at": "2026-08-11T03:57:00Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31456961961"
+  },
+  {
     "id": 31450318994,
     "sha": "f8713e2415f481e917cc608d41e384cf2eeed9b0",
     "short_sha": "f8713e2",
@@ -390,13 +398,5 @@
     "message": "refactor(account): 优化 MicrosoftAccountSkinDialog 代码实现与引用\n\n1.  引入 `NormalizedSkin`、`InvalidSkinException`、`FCLTextView` 和 `URL` 等类，移除代码中冗余的全限定类名。\n2.  移除冗余的 `getSelectedModel()` 私有方法，简化皮肤上传逻辑。\n3.  优化皮肤模型检测代码，提升代码整洁度与可读性。",
     "created_at": "2026-08-03T10:51:44Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30807238641"
-  },
-  {
-    "id": 30807234224,
-    "sha": "310146447cf89aec3f038ae66fe51d92f1abc9c1",
-    "short_sha": "3101464",
-    "message": "refactor(account): 优化 MicrosoftAccountSkinDialog 代码实现与引用\n\n1.  引入 `NormalizedSkin`、`InvalidSkinException`、`FCLTextView` 和 `URL` 等类，移除代码中冗余的全限定类名。\n2.  移除冗余的 `getSelectedModel()` 私有方法，简化皮肤上传逻辑。\n3.  优化皮肤模型检测代码，提升代码整洁度与可读性。",
-    "created_at": "2026-08-03T10:51:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30807234224"
   }
 ]
