@@ -1,5 +1,13 @@
 [
   {
+    "id": 31582542339,
+    "sha": "39f7989a44e5c0816d1c265a88673b006991d5a7",
+    "short_sha": "39f7989",
+    "message": "chore: 忽略 ZCode 会话文件",
+    "created_at": "2026-08-12T09:18:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31582542339"
+  },
+  {
     "id": 31564755544,
     "sha": "d62a366e05e0f49b213a78a6b893f3a4e0903f5e",
     "short_sha": "d62a366",
@@ -390,13 +398,5 @@
     "message": "fix(review): 维护者 review 意见整改（PR #1714）\n\n- 账户页移除 3D 皮肤预览，布局还原旧版（预览保留在皮肤弹窗）\n- 下载详情页删除截图阅览（旧版本不存在）\n- 版本列表搜索框移至右侧，布局对齐旧版\n- 圆角全局收敛：卡片 5dp/弹窗 8dp（FCLCard），对齐旧版 bg_container_white/dialog_background\n- 滑动条缩小至 20dp 并常显数值（FCLSliderPreference/FCLSlider）\n- 修复 remember/LocalContext 反模式 13 处（含 RemoteModSearchScreen 切 Tab 持旧 holder 的真实 bug）\n- ViewModel 统一 AndroidViewModel 范式；编译警告与未使用 import/死代码/死资源清零",
     "created_at": "2026-08-03T15:06:20Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30825922465"
-  },
-  {
-    "id": 30819586264,
-    "sha": "d11dc9506d5de84a5f057805974ffb8b3cb45a0d",
-    "short_sha": "d11dc95",
-    "message": "OpenAL-Soft: 默认OpenSL作为后端 (#1699)\n\n* Add files via upload\n\n* OpenAL-Soft: 默认OpenSL ES",
-    "created_at": "2026-08-03T13:47:21Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30819586264"
   }
 ]
