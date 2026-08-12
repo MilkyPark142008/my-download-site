@@ -1,5 +1,13 @@
 [
   {
+    "id": 31594914765,
+    "sha": "13781c29c41cbf8f2b051e78634bbecc5d8251f2",
+    "short_sha": "13781c2",
+    "message": "refactor: 账号皮肤上传改为协程实现，不再使用 Task",
+    "created_at": "2026-08-12T12:06:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31594914765"
+  },
+  {
     "id": 31582542339,
     "sha": "39f7989a44e5c0816d1c265a88673b006991d5a7",
     "short_sha": "39f7989",
@@ -390,13 +398,5 @@
     "message": "feat(review): 下载域还原批1 结构还原 + 整合包向导 Compose 化\n\n- FCLDropdownField 替换 5 处设置项式 spinner，还原紧凑下拉行\n- 搜索结果项两行结构、详情页去卡片化、版本文件项 date 归位\n- 整合包向导四页（选择/本地/远程/文件树）Compose 化，ModpackInstaller 零改动\n- docs: download-restore-plan.md",
     "created_at": "2026-08-03T16:38:43Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30833113981"
-  },
-  {
-    "id": 30825922465,
-    "sha": "3768c6857b6e711eb31f7da0711a77533075432b",
-    "short_sha": "3768c68",
-    "message": "fix(review): 维护者 review 意见整改（PR #1714）\n\n- 账户页移除 3D 皮肤预览，布局还原旧版（预览保留在皮肤弹窗）\n- 下载详情页删除截图阅览（旧版本不存在）\n- 版本列表搜索框移至右侧，布局对齐旧版\n- 圆角全局收敛：卡片 5dp/弹窗 8dp（FCLCard），对齐旧版 bg_container_white/dialog_background\n- 滑动条缩小至 20dp 并常显数值（FCLSliderPreference/FCLSlider）\n- 修复 remember/LocalContext 反模式 13 处（含 RemoteModSearchScreen 切 Tab 持旧 holder 的真实 bug）\n- ViewModel 统一 AndroidViewModel 范式；编译警告与未使用 import/死代码/死资源清零",
-    "created_at": "2026-08-03T15:06:20Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30825922465"
   }
 ]
