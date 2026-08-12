@@ -1,5 +1,21 @@
 [
   {
+    "id": 31564755544,
+    "sha": "d62a366e05e0f49b213a78a6b893f3a4e0903f5e",
+    "short_sha": "d62a366",
+    "message": "fix: 修复 LWJGL freetype 库从打包 natives 目录加载",
+    "created_at": "2026-08-12T04:53:09Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31564755544"
+  },
+  {
+    "id": 31564258792,
+    "sha": "871a916a5db6eebe1938496ac5f826e0dc875b41",
+    "short_sha": "871a916",
+    "message": "optimize: 模组列表增量加载优化（边扫描边分批显示，筛选不再重新扫描）",
+    "created_at": "2026-08-12T04:44:27Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31564258792"
+  },
+  {
     "id": 31556004497,
     "sha": "13aae445a343eaa7f1b34ffff495e55cdb4d6e8e",
     "short_sha": "13aae44",
@@ -382,21 +398,5 @@
     "message": "OpenAL-Soft: 默认OpenSL作为后端 (#1699)\n\n* Add files via upload\n\n* OpenAL-Soft: 默认OpenSL ES",
     "created_at": "2026-08-03T13:47:21Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30819586264"
-  },
-  {
-    "id": 30819048542,
-    "sha": "75f4146c61dd71f5a5b80881850bdb2817f8a5fe",
-    "short_sha": "75f4146",
-    "message": "merge: 合并 upstream/main 1.3.2.2（AccountListItem Kotlin 化 + 文件选择 null 安全）\n\n冲突处置：\n- 9 个被 Miuix/Compose 替代的旧页面/弹窗保持删除（JavaManageDialog、OpenFolderDialog、\n  AccountListAdapter、OfflineAccountSkinDialog、ControllerUploadDialog、\n  RemoteModVersionPage、VersionSettingPage、LauncherSettingPage、AddProfileDialog）；\n  上游的文件选择 null 校验逐一移植到对应 Miuix 实现与 AccountScreen/VersionSettingHost/\n  LauncherSettingHost/RemoteModActions。\n- AccountListItem：采用上游 .kt 形态，状态层保持本分支 StateFlow 契约\n  （revisionFlow/avatarFlow/textureFlow 订阅、refreshSkinBinding 跨 UI 联动），\n  uploadSkin 按上游方向改为 fileLauncher 回调 + null 安全，移除 CountDownLatch 阻塞。\n- DatapackListPage/ModpackInfoPage/WorldListItem：保留 Flow 化结构，并入上游 null 校验。\n- FCLBridge.java / MioLaunchWrapper.jar 取上游版本。",
-    "created_at": "2026-08-03T13:32:39Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30819048542"
-  },
-  {
-    "id": 30813604121,
-    "sha": "8496f7a75a0168efaf751926fc5586fee88a20f0",
-    "short_sha": "8496f7a",
-    "message": "Update MioLaunchWrapper.jar",
-    "created_at": "2026-08-03T12:26:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30813604121"
   }
 ]
