@@ -1,5 +1,13 @@
 [
   {
+    "id": 31698348193,
+    "sha": "165a68994722f2ebdeb747562c59ac15ae4d0b66",
+    "short_sha": "165a689",
+    "message": "fix: 修复部分渲染错误 #1747",
+    "created_at": "2026-08-13T12:04:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31698348193"
+  },
+  {
     "id": 31594914765,
     "sha": "13781c29c41cbf8f2b051e78634bbecc5d8251f2",
     "short_sha": "13781c2",
@@ -390,13 +398,5 @@
     "message": "feat(review): 下载域还原批2 交互还原\n\n- FCLCollapsingBar 折叠顶栏（scroll|enterAlways|snap 等价物），搜索页分页栏/游戏版本页过滤栏接入\n- IME 搜索键 + 中英文 hint + 名称 label 还原；下载确认页四按钮一行/依赖区单容器\n- 游戏版本页顶栏单行；save 按钮移入卡片",
     "created_at": "2026-08-03T16:57:33Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30834560290"
-  },
-  {
-    "id": 30833113981,
-    "sha": "79f2332afa80f7990c97cc0a02482dc4da4c4826",
-    "short_sha": "79f2332",
-    "message": "feat(review): 下载域还原批1 结构还原 + 整合包向导 Compose 化\n\n- FCLDropdownField 替换 5 处设置项式 spinner，还原紧凑下拉行\n- 搜索结果项两行结构、详情页去卡片化、版本文件项 date 归位\n- 整合包向导四页（选择/本地/远程/文件树）Compose 化，ModpackInstaller 零改动\n- docs: download-restore-plan.md",
-    "created_at": "2026-08-03T16:38:43Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30833113981"
   }
 ]
