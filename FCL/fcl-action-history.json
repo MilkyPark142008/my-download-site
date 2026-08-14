@@ -1,5 +1,29 @@
 [
   {
+    "id": 31798362719,
+    "sha": "08ece419b779e9f944662d83c4a82d503e511139",
+    "short_sha": "08ece41",
+    "message": "fix: 隐藏下载页左侧搜索栏滚动条，消除卡顿期间滚动条残留显示",
+    "created_at": "2026-08-14T11:46:52Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31798362719"
+  },
+  {
+    "id": 31797627375,
+    "sha": "08ece419b779e9f944662d83c4a82d503e511139",
+    "short_sha": "08ece41",
+    "message": "fix: 隐藏下载页左侧搜索栏滚动条，消除卡顿期间滚动条残留显示",
+    "created_at": "2026-08-14T11:46:52Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31797627375"
+  },
+  {
+    "id": 31797376933,
+    "sha": "1791b9b2c310ec3a8e9f2aa90c268d62582ed8c8",
+    "short_sha": "1791b9b",
+    "message": "refactor: 下载页 5 个下载模式共享单个布局实例，tab 切换经 ViewModel 恢复状态\n\n- DownloadUI 改为 FCLCommonUI：游戏安装页独立视图 + 共享 DownloadPage 实例，\n  tab 切换仅更新数据源与恢复状态，不再为每个 tab 创建页面\n- DownloadPage 新增 switchType：按模式切换 repository/下载回调/特有控件\n  （Mod 加载器筛选、Modpack 导入按钮、翻译按钮、下载源），\n  DownloadSearchViewModel 按模式 id 保存搜索条件与结果，切回不重新搜索\n- 修复：搜索状态按模式隔离（避免串用其他模式数据）、过期网络回调竞态、\n  取消任务误显示 retry、首次切换重复搜索\n- 删除 ModDownloadPage/ModpackDownloadPage/ResourcePackDownloadPage/\n  ShaderPackDownloadPage 四个子类，适配 RemoteModListAdapter、\n  RemoteModInfoPage、LocalModListAdapter、ModListPage 调用点",
+    "created_at": "2026-08-14T11:43:18Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31797376933"
+  },
+  {
     "id": 31792011462,
     "sha": "efd26ec665a7ab6459047bf75a84279702b761c6",
     "short_sha": "efd26ec",
@@ -374,29 +398,5 @@
     "message": "fix: 修复皮肤管理相关的问题并移除 AuthInfo 的 AutoCloseable 实现\n\n- 微软账户皮肤/披风 API 调用前先经 logIn() 校验并刷新 token，避免登录超 24 小时后 401 失败\n- 离线皮肤对话框未选择文件时保存 DEFAULT 类型，避免误触发 authlib-injector 导致离线环境无法启动游戏\n- 披风列表过滤校验失败的 null 元素，防止构建列表时 NPE\n- 皮肤重置增加确认弹窗，并修正重置文案与中文翻译（仅涉及皮肤，不含披风）\n- Skin.Type.fromStorage 恢复对未知类型回退 DEFAULT 的旧行为，避免存量数据被静默替换为 Steve\n- 移除 Skin.java 中无引用的 FetchBytesTask 与 SkinJson 死代码\n- 移除 AuthInfo 的 AutoCloseable 实现及子类的 close() 覆写（代码中无任何调用点）\n- gradlew 设为可执行",
     "created_at": "2026-08-05T11:29:47Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31001775023"
-  },
-  {
-    "id": 31001773153,
-    "sha": "89ee3c1fbd398b65a9f5d280d6c4d3745ca6b0ab",
-    "short_sha": "89ee3c1",
-    "message": "fix: 修复皮肤管理相关的问题并移除 AuthInfo 的 AutoCloseable 实现\n\n- 微软账户皮肤/披风 API 调用前先经 logIn() 校验并刷新 token，避免登录超 24 小时后 401 失败\n- 离线皮肤对话框未选择文件时保存 DEFAULT 类型，避免误触发 authlib-injector 导致离线环境无法启动游戏\n- 披风列表过滤校验失败的 null 元素，防止构建列表时 NPE\n- 皮肤重置增加确认弹窗，并修正重置文案与中文翻译（仅涉及皮肤，不含披风）\n- Skin.Type.fromStorage 恢复对未知类型回退 DEFAULT 的旧行为，避免存量数据被静默替换为 Steve\n- 移除 Skin.java 中无引用的 FetchBytesTask 与 SkinJson 死代码\n- 移除 AuthInfo 的 AutoCloseable 实现及子类的 close() 覆写（代码中无任何调用点）\n- gradlew 设为可执行",
-    "created_at": "2026-08-05T11:29:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31001773153"
-  },
-  {
-    "id": 31001335704,
-    "sha": "f67f48b4b701b7316e96ea99d39568af45b21dc8",
-    "short_sha": "f67f48b",
-    "message": "fix: 修复皮肤管理相关的问题并移除 AuthInfo 的 AutoCloseable 实现\n\n- 微软账户皮肤/披风 API 调用前先经 logIn() 校验并刷新 token，避免登录超 24 小时后 401 失败\n- 离线皮肤对话框未选择文件时保存 DEFAULT 类型，避免误触发 authlib-injector 导致离线环境无法启动游戏\n- 披风列表过滤校验失败的 null 元素，防止构建列表时 NPE\n- 皮肤重置增加确认弹窗，并修正重置文案与中文翻译（仅涉及皮肤，不含披风）\n- Skin.Type.fromStorage 恢复对未知类型回退 DEFAULT 的旧行为，避免存量数据被静默替换为 Steve\n- 移除 Skin.java 中无引用的 FetchBytesTask 与 SkinJson 死代码\n- 移除 AuthInfo 的 AutoCloseable 实现及子类的 close() 覆写（代码中无任何调用点）\n- gradlew 设为可执行",
-    "created_at": "2026-08-05T11:23:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31001335704"
-  },
-  {
-    "id": 31001332677,
-    "sha": "f67f48b4b701b7316e96ea99d39568af45b21dc8",
-    "short_sha": "f67f48b",
-    "message": "fix: 修复皮肤管理相关的问题并移除 AuthInfo 的 AutoCloseable 实现\n\n- 微软账户皮肤/披风 API 调用前先经 logIn() 校验并刷新 token，避免登录超 24 小时后 401 失败\n- 离线皮肤对话框未选择文件时保存 DEFAULT 类型，避免误触发 authlib-injector 导致离线环境无法启动游戏\n- 披风列表过滤校验失败的 null 元素，防止构建列表时 NPE\n- 皮肤重置增加确认弹窗，并修正重置文案与中文翻译（仅涉及皮肤，不含披风）\n- Skin.Type.fromStorage 恢复对未知类型回退 DEFAULT 的旧行为，避免存量数据被静默替换为 Steve\n- 移除 Skin.java 中无引用的 FetchBytesTask 与 SkinJson 死代码\n- 移除 AuthInfo 的 AutoCloseable 实现及子类的 close() 覆写（代码中无任何调用点）\n- gradlew 设为可执行",
-    "created_at": "2026-08-05T11:23:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31001332677"
   }
 ]
