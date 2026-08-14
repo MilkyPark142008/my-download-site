@@ -1,5 +1,45 @@
 [
   {
+    "id": 31763691979,
+    "sha": "14e4962b404798be35837e91d4ea335436c71c9c",
+    "short_sha": "14e4962",
+    "message": "1.3.2.6",
+    "created_at": "2026-08-14T02:25:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31763691979"
+  },
+  {
+    "id": 31763691988,
+    "sha": "14e4962b404798be35837e91d4ea335436c71c9c",
+    "short_sha": "14e4962",
+    "message": "1.3.2.6",
+    "created_at": "2026-08-14T02:25:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31763691988"
+  },
+  {
+    "id": 31763281738,
+    "sha": "9ac96c5ee21a242b669214715da20d8d3db0692e",
+    "short_sha": "9ac96c5",
+    "message": "fix: 修复部分设备F3页面CPU显示为Unknown的问题",
+    "created_at": "2026-08-14T02:17:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31763281738"
+  },
+  {
+    "id": 31763247760,
+    "sha": "25736f5ba851d6678d5ade23f08c771ffad50a98",
+    "short_sha": "25736f5",
+    "message": "feat: 损坏的模组文件弹窗支持确认删除",
+    "created_at": "2026-08-14T02:16:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31763247760"
+  },
+  {
+    "id": 31762881988,
+    "sha": "da53f6e1973c17e3f67fbd15d83c1065d28f0b80",
+    "short_sha": "da53f6e",
+    "message": "fix: 损坏的模组文件跳过并提示，避免整个模组列表加载失败",
+    "created_at": "2026-08-14T02:09:04Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31762881988"
+  },
+  {
     "id": 31698348193,
     "sha": "165a68994722f2ebdeb747562c59ac15ae4d0b66",
     "short_sha": "165a689",
@@ -358,45 +398,5 @@
     "message": "refactor: 迁移自动清理缓存逻辑至启动页并优化代码实现\n\n1. 将自动清理缓存的逻辑从 `LauncherSettingPage` 迁移至 `SplashActivity`，确保应用启动时自动触发检查\n2. 移除 `LauncherSettingPage` 中冗余的缓存时间管理方法及 `ONE_DAY` 常量\n3. 在 `SplashActivity` 中使用 Kotlin KTX 简化 SharedPreferences 的数据更新操作\n4. 统一优化了 `SplashActivity` 内部分方法的代码格式与换行逻辑，提升可读性",
     "created_at": "2026-08-04T07:08:17Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30886670011"
-  },
-  {
-    "id": 30885322686,
-    "sha": "4f490dbd230cde8bf1724b48211a6d4e66946257",
-    "short_sha": "4f490db",
-    "message": "feat: 允许添加-Dmiolibpatcher.alc10=true参数修复低版本没有声音的问题",
-    "created_at": "2026-08-04T06:48:30Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30885322686"
-  },
-  {
-    "id": 30883249526,
-    "sha": "04474f67e5bfdf0d90052c166f15f385e0448fcb",
-    "short_sha": "04474f6",
-    "message": "fix: 修复26.2+退出游戏卡住的问题",
-    "created_at": "2026-08-04T06:13:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30883249526"
-  },
-  {
-    "id": 30873894828,
-    "sha": "8f6a07b6099d5a085b870e99cc4e061e4547efb7",
-    "short_sha": "8f6a07b",
-    "message": "Update MioLaunchWrapper.jar",
-    "created_at": "2026-08-04T03:08:32Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30873894828"
-  },
-  {
-    "id": 30836763922,
-    "sha": "5206b2c23f4d16cb722c8df02254493f042a006a",
-    "short_sha": "5206b2c",
-    "message": "feat(review): 下载域还原批3 视觉对齐\n\n- 间距全面回 10dp 网格（逐页对齐旧版 XML 实测值，含方案两处笔误更正）\n- 按压反馈统一 Sink；整合包 Tab 按钮顺序还原；website 图标换 jump_24\n- date/state 字号 11→12sp；Spacer width/height 笔误修复\n- 方案附录 A 核销表全部打勾，下载域还原完成",
-    "created_at": "2026-08-03T17:26:25Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30836763922"
-  },
-  {
-    "id": 30834560290,
-    "sha": "d4063895adfd1ad8410d4308a3739fd6c66ac4a6",
-    "short_sha": "d406389",
-    "message": "feat(review): 下载域还原批2 交互还原\n\n- FCLCollapsingBar 折叠顶栏（scroll|enterAlways|snap 等价物），搜索页分页栏/游戏版本页过滤栏接入\n- IME 搜索键 + 中英文 hint + 名称 label 还原；下载确认页四按钮一行/依赖区单容器\n- 游戏版本页顶栏单行；save 按钮移入卡片",
-    "created_at": "2026-08-03T16:57:33Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30834560290"
   }
 ]
