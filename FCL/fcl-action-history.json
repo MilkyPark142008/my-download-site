@@ -1,5 +1,21 @@
 [
   {
+    "id": 31813671379,
+    "sha": "bb0870968d9da13ab088d8d34157995ce3aa1af7",
+    "short_sha": "bb08709",
+    "message": "refactor: 启动器设置页改为 RecyclerView 行级复用",
+    "created_at": "2026-08-14T15:15:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31813671379"
+  },
+  {
+    "id": 31813663866,
+    "sha": "bb0870968d9da13ab088d8d34157995ce3aa1af7",
+    "short_sha": "bb08709",
+    "message": "refactor: 启动器设置页改为 RecyclerView 行级复用",
+    "created_at": "2026-08-14T15:15:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31813663866"
+  },
+  {
     "id": 31803708408,
     "sha": "cc30b7e840c94f7c2211fc5a5bc81a64732de5f0",
     "short_sha": "cc30b7e",
@@ -382,21 +398,5 @@
     "message": "fix: 修复游戏设置内部分文本UI超长导致无法点击设置的问题 #1720",
     "created_at": "2026-08-06T13:43:12Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31107261668"
-  },
-  {
-    "id": 31059444928,
-    "sha": "af2c4d2ce32751079d0c5cfe31a99afb06dcb284",
-    "short_sha": "af2c4d2",
-    "message": "fix: 修复多语言字符串资源中的占位符错误并补全漏译键",
-    "created_at": "2026-08-06T00:21:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31059444928"
-  },
-  {
-    "id": 31021906502,
-    "sha": "1847aa953e869e3f780818bccc3e5170cc75c135",
-    "short_sha": "1847aa9",
-    "message": "refactor: 重构多架构 JRE 资产裁剪，改为按架构过滤生成资产源\n\n- 将 JRE 资产从 src/main/assets 迁移到 src/main/jreAssets（APK 内路径不变）\n- 新增 filterJreAssets Sync 任务，按 -Darch 只保留 version、universal 和 bin-<arch>.tar.xz\n- 通过 addGeneratedSourceDirectory/addStaticSourceDirectory 注册资产源，\n  arch 变化自动触发重跑，修复切换架构时产物残留旧架构 JRE 包的问题",
-    "created_at": "2026-08-05T15:45:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31021906502"
   }
 ]
