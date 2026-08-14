@@ -1,5 +1,13 @@
 [
   {
+    "id": 31784307380,
+    "sha": "f4502355ff4e5be61fffc2a75b70bb2ab061c3ea",
+    "short_sha": "f450235",
+    "message": "fix: 损坏的压缩文件抛 ZipError 包装为 IOException，避免整合包安装时崩溃",
+    "created_at": "2026-08-14T08:31:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31784307380"
+  },
+  {
     "id": 31763691979,
     "sha": "14e4962b404798be35837e91d4ea335436c71c9c",
     "short_sha": "14e4962",
@@ -390,13 +398,5 @@
     "message": "refactor: 优化 CI 构建流程，合并重复的构建 job 并复用工作流\n\n- 合并 build.yml 中 release/debug 两个重复 job 为单一 matrix job，构建类型在步骤级按仓库与事件判断\n- 移除与 setup-java 缓存重复的手动 gradle cache 步骤\n- push 触发改用 branches 过滤，打 tag 时不再空跑构建 job\n- release.yml 改为复用 build.yml（workflow_call），仅保留下载产物与发布步骤\n- 传入 secrets 以保证 release 构建签名所需密码可用",
     "created_at": "2026-08-05T07:05:06Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30983676294"
-  },
-  {
-    "id": 30886670011,
-    "sha": "a83767f8e84d60950679d533ae21565c99fa8002",
-    "short_sha": "a83767f",
-    "message": "refactor: 迁移自动清理缓存逻辑至启动页并优化代码实现\n\n1. 将自动清理缓存的逻辑从 `LauncherSettingPage` 迁移至 `SplashActivity`，确保应用启动时自动触发检查\n2. 移除 `LauncherSettingPage` 中冗余的缓存时间管理方法及 `ONE_DAY` 常量\n3. 在 `SplashActivity` 中使用 Kotlin KTX 简化 SharedPreferences 的数据更新操作\n4. 统一优化了 `SplashActivity` 内部分方法的代码格式与换行逻辑，提升可读性",
-    "created_at": "2026-08-04T07:08:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30886670011"
   }
 ]
