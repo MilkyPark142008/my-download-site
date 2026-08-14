@@ -1,5 +1,13 @@
 [
   {
+    "id": 31792011462,
+    "sha": "efd26ec665a7ab6459047bf75a84279702b761c6",
+    "short_sha": "efd26ec",
+    "message": "refactor: 移除 UIManager.init 回调参数，初始化逻辑直接内联",
+    "created_at": "2026-08-14T10:20:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31792011462"
+  },
+  {
     "id": 31784307380,
     "sha": "f4502355ff4e5be61fffc2a75b70bb2ab061c3ea",
     "short_sha": "f450235",
@@ -390,13 +398,5 @@
     "message": "fix: 修复皮肤管理相关的问题并移除 AuthInfo 的 AutoCloseable 实现\n\n- 微软账户皮肤/披风 API 调用前先经 logIn() 校验并刷新 token，避免登录超 24 小时后 401 失败\n- 离线皮肤对话框未选择文件时保存 DEFAULT 类型，避免误触发 authlib-injector 导致离线环境无法启动游戏\n- 披风列表过滤校验失败的 null 元素，防止构建列表时 NPE\n- 皮肤重置增加确认弹窗，并修正重置文案与中文翻译（仅涉及皮肤，不含披风）\n- Skin.Type.fromStorage 恢复对未知类型回退 DEFAULT 的旧行为，避免存量数据被静默替换为 Steve\n- 移除 Skin.java 中无引用的 FetchBytesTask 与 SkinJson 死代码\n- 移除 AuthInfo 的 AutoCloseable 实现及子类的 close() 覆写（代码中无任何调用点）\n- gradlew 设为可执行",
     "created_at": "2026-08-05T11:23:55Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31001332677"
-  },
-  {
-    "id": 30983676294,
-    "sha": "b0a060a3d281002301927ffc8466806f674aded9",
-    "short_sha": "b0a060a",
-    "message": "refactor: 优化 CI 构建流程，合并重复的构建 job 并复用工作流\n\n- 合并 build.yml 中 release/debug 两个重复 job 为单一 matrix job，构建类型在步骤级按仓库与事件判断\n- 移除与 setup-java 缓存重复的手动 gradle cache 步骤\n- push 触发改用 branches 过滤，打 tag 时不再空跑构建 job\n- release.yml 改为复用 build.yml（workflow_call），仅保留下载产物与发布步骤\n- 传入 secrets 以保证 release 构建签名所需密码可用",
-    "created_at": "2026-08-05T07:05:06Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30983676294"
   }
 ]
