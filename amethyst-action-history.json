@@ -1,5 +1,29 @@
 [
   {
+    "id": 31878188658,
+    "sha": "65c94e0dbb4587c5f17fb9eb4de6ba0a856492c6",
+    "short_sha": "65c94e0",
+    "message": "mitigation: Workaround new SDL autodetection crash on Turnip\n\nHooking dlopen crashes linker_ns_load for some reason. No clue why.",
+    "created_at": "2026-08-15T09:54:24Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31878188658"
+  },
+  {
+    "id": 31878092125,
+    "sha": "6116e0c09c19282d73989ea7f1bcb37e5d3e728b",
+    "short_sha": "6116e0c",
+    "message": "mitigation: Workaround new SDL autodetection crash on Turnip\n\nHooking dlopen crashes linker_ns_load for some reason. No clue why.",
+    "created_at": "2026-08-15T09:52:01Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31878092125"
+  },
+  {
+    "id": 31877965697,
+    "sha": "8c19a6edf38a99aa4bf80b27426eb17450e7d5a0",
+    "short_sha": "8c19a6e",
+    "message": "mitigation: Workaround new SDL autodetection crash on Turnip\n\nHooking dlopen crashes linker_ns_load for some reason. No clue why.",
+    "created_at": "2026-08-15T09:49:12Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31877965697"
+  },
+  {
     "id": 31876793168,
     "sha": "7a1788afb6c2df6bc650130bf575ae176cd8b4b5",
     "short_sha": "7a1788a",
@@ -374,29 +398,5 @@
     "message": "feat: MobileGL",
     "created_at": "2026-07-28T07:06:27Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30337199459"
-  },
-  {
-    "id": 30337152040,
-    "sha": "16451de9d3285ec8d99d4a45e625971ab86c42ed",
-    "short_sha": "16451de",
-    "message": "Merge pull request #318 from AngelAuraMC/fix/sdl-issues\n\nsdl bugfixes",
-    "created_at": "2026-07-28T07:06:14Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30337152040"
-  },
-  {
-    "id": 30336938262,
-    "sha": "417500e184a9ebe78305187b71ac10f5b40e8543",
-    "short_sha": "417500e",
-    "message": "mitigation: MobileGlues incorrectly parses EGL color space",
-    "created_at": "2026-07-28T06:58:55Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30336938262"
-  },
-  {
-    "id": 30336691985,
-    "sha": "417500e184a9ebe78305187b71ac10f5b40e8543",
-    "short_sha": "417500e",
-    "message": "mitigation: MobileGlues incorrectly parses EGL color space",
-    "created_at": "2026-07-28T06:58:55Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30336691985"
   }
 ]
