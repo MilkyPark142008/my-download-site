@@ -1,5 +1,13 @@
 [
   {
+    "id": 31876793168,
+    "sha": "7a1788afb6c2df6bc650130bf575ae176cd8b4b5",
+    "short_sha": "7a1788a",
+    "message": "mitigation: Workaround new SDL autodetection crash on Turnip\n\nHooking dlopen crashes linker_ns_load for some reason. No clue why.",
+    "created_at": "2026-08-15T09:21:28Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31876793168"
+  },
+  {
     "id": 31873882034,
     "sha": "4314885bf8b639ad8b75ff3068bbb47e03c66132",
     "short_sha": "4314885",
@@ -390,13 +398,5 @@
     "message": "mitigation: MobileGlues incorrectly parses EGL color space",
     "created_at": "2026-07-28T06:58:55Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30336691985"
-  },
-  {
-    "id": 30336224885,
-    "sha": "f9cc1fac91a6fee09cd50e0ce9265371f105c921",
-    "short_sha": "f9cc1fa",
-    "message": "fix: Properly dlsym SDL functions\n\nSeems like android doesn't like global anything",
-    "created_at": "2026-07-28T06:50:08Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30336224885"
   }
 ]
