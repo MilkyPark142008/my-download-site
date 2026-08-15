@@ -1,5 +1,21 @@
 [
   {
+    "id": 31894582392,
+    "sha": "ed42cf16335ec67e2f84a800e18a11ba6dd3e7aa",
+    "short_sha": "ed42cf1",
+    "message": "optimize: 版本列表加载提速，解析与资源缓存、切 profile 保留缓存",
+    "created_at": "2026-08-15T16:05:07Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31894582392"
+  },
+  {
+    "id": 31894579649,
+    "sha": "ed42cf16335ec67e2f84a800e18a11ba6dd3e7aa",
+    "short_sha": "ed42cf1",
+    "message": "optimize: 版本列表加载提速，解析与资源缓存、切 profile 保留缓存",
+    "created_at": "2026-08-15T16:05:07Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31894579649"
+  },
+  {
     "id": 31892061716,
     "sha": "9319db11fdd0bdecfd668db92c60d42730b07bcc",
     "short_sha": "9319db1",
@@ -382,21 +398,5 @@
     "message": "fix: 同步GLCapabilities与Amethyst实现\n\n- GLCapabilities 构造函数调用 PojavRendererInit.onCreateCapabilities 初始化渲染器回调\n- check_GL11~check_GL33 移除提前返回，改用非短路(&)并入 ext 检查，缺失版本时触发 reportMissing 警告\n- flag7~flag11 的 GL_ARB_imaging 检查改为非短路(&)判断\n- 更新 lwjgl-3.3.3-merged-modules.jar 构建产物",
     "created_at": "2026-08-08T12:45:33Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31258081373"
-  },
-  {
-    "id": 31244626749,
-    "sha": "680a670e320b044127dbc67926e0be4ac1fbd178",
-    "short_sha": "680a670",
-    "message": "fix: 修复IDE内LWJGL模块的类意外报错的问题",
-    "created_at": "2026-08-08T06:45:02Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31244626749"
-  },
-  {
-    "id": 31242816147,
-    "sha": "f758a33afd75b2fc6574c4e8644bd6d5b063b025",
-    "short_sha": "f758a33",
-    "message": "fix: 修复lwjgl构建",
-    "created_at": "2026-08-08T05:56:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31242816147"
   }
 ]
