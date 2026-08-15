@@ -1,5 +1,53 @@
 [
   {
+    "id": 31865594138,
+    "sha": "614603ae150489ef1eb7a2c244b6fcd90c25f865",
+    "short_sha": "614603a",
+    "message": "downgrade(bytehook): 1.1.2 to 1.0.10\n\nIt appears the hooks don't work properly on newer version",
+    "created_at": "2026-08-15T04:54:13Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31865594138"
+  },
+  {
+    "id": 31865554709,
+    "sha": "648dfc1f651be62970a92462d447f424e975e7a1",
+    "short_sha": "648dfc1",
+    "message": "fix: Autoselect SFPEW/MobileGlues for everything instead of gl4es",
+    "created_at": "2026-08-15T04:51:14Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31865554709"
+  },
+  {
+    "id": 31865545625,
+    "sha": "40160b158511e9271bb6e70736a54dc70756e89b",
+    "short_sha": "40160b1",
+    "message": "downgrade(bytehook): 1.1.2 to 1.0.10\n\nIt appears the hooks don't work properly on newer version",
+    "created_at": "2026-08-14T15:03:45Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31865545625"
+  },
+  {
+    "id": 31865506271,
+    "sha": "648dfc1f651be62970a92462d447f424e975e7a1",
+    "short_sha": "648dfc1",
+    "message": "fix: Autoselect SFPEW/MobileGlues for everything instead of gl4es",
+    "created_at": "2026-08-15T04:51:14Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31865506271"
+  },
+  {
+    "id": 31864707135,
+    "sha": "a232a35ade6176a3508ca85d3bb17287b11487ac",
+    "short_sha": "a232a35",
+    "message": "fix: Autoselect SFPEW/MobileGlues for everything instead of gl4es",
+    "created_at": "2026-08-15T04:33:00Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31864707135"
+  },
+  {
+    "id": 31864690848,
+    "sha": "5ab1dadc9f91771e7d3214d536582033bfb212f8",
+    "short_sha": "5ab1dad",
+    "message": "fix: Autoselect SFPEW/MobileGlues for everything instead of gl4es",
+    "created_at": "2026-08-15T04:31:26Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31864690848"
+  },
+  {
     "id": 31863116543,
     "sha": "6a0a699016dd2b5b616c83a6941562bde9ec2248",
     "short_sha": "6a0a699",
@@ -350,53 +398,5 @@
     "message": "fix: LWJGL3ify version autofix not applying for first time launch",
     "created_at": "2026-07-26T18:11:20Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30214223186"
-  },
-  {
-    "id": 30212909916,
-    "sha": "029ecf466053fc9b9797b4872b9fd8da3f62fdcf",
-    "short_sha": "029ecf4",
-    "message": "fix: Disable SDL3 JNI_OnLoad from running outside dalvikvm\n\nShould fix controlify swapping from jna to jni",
-    "created_at": "2026-07-26T17:35:44Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30212909916"
-  },
-  {
-    "id": 29949280294,
-    "sha": "d03bd95cffc62b93c70654037effa8098de06822",
-    "short_sha": "d03bd95",
-    "message": "fix: Washed out colors on SDL\n\nFIXME: Try undoing this when MobileGLues/MobileGL accurately\ntranslates/emulates EGL",
-    "created_at": "2026-07-22T18:59:42Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29949280294"
-  },
-  {
-    "id": 29931803304,
-    "sha": "02ea563a914ef392f1cda00cc68ea15f9f71cc72",
-    "short_sha": "02ea563",
-    "message": "qol: Better loading bars for local modpack import",
-    "created_at": "2026-07-22T15:06:22Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29931803304"
-  },
-  {
-    "id": 29713719514,
-    "sha": "c52bdb1b7d6a0c687cda2f136c9bfb6f5339bc8a",
-    "short_sha": "c52bdb1",
-    "message": "fix: Move debug/release identifier away from end of string\n\nSome OEM ROMs are blocking the update because of this for some reason",
-    "created_at": "2026-07-20T02:52:21Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29713719514"
-  },
-  {
-    "id": 29713424865,
-    "sha": "c52bdb1b7d6a0c687cda2f136c9bfb6f5339bc8a",
-    "short_sha": "c52bdb1",
-    "message": "fix: Move debug/release identifier away from end of string\n\nSome OEM ROMs are blocking the update because of this for some reason",
-    "created_at": "2026-07-20T02:52:21Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29713424865"
-  },
-  {
-    "id": 29698356355,
-    "sha": "77f4875a928f373aff3b89fc026f3782e96fbf4f",
-    "short_sha": "77f4875",
-    "message": "fix(HotbarView): #37",
-    "created_at": "2026-07-19T18:13:17Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/29698356355"
   }
 ]
