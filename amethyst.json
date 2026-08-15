@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 168391097,
         "digest": "sha256:8c6b438ea2a3319adaf673d639adfb779dfb15d694d940814cd1c6b099d323a2",
-        "download_count": 4157,
+        "download_count": 4169,
         "created_at": "2026-07-31T02:59:21Z",
         "updated_at": "2026-07-31T03:03:42Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.7/Amethyst-Debug.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 156535672,
         "digest": "sha256:6b5579e93f50a62f4d96279683bb447325e5a4de9015deae787eee56c248211f",
-        "download_count": 11538,
+        "download_count": 11571,
         "created_at": "2026-07-31T02:59:28Z",
         "updated_at": "2026-07-31T03:03:42Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.7/Amethyst.apk"
@@ -128,30 +128,30 @@
   },
   "action": {
     "run": {
-      "id": 31865594138,
+      "id": 31873882034,
       "name": "Android CI",
-      "node_id": "WFR_kwLOOrUn6c8AAAAHa1ZhGg",
-      "head_branch": "v3_openjdk",
-      "head_sha": "614603ae150489ef1eb7a2c244b6fcd90c25f865",
+      "node_id": "WFR_kwLOOrUn6c8AAAAHa9TXsg",
+      "head_branch": "fix/sdl-issues",
+      "head_sha": "4314885bf8b639ad8b75ff3068bbb47e03c66132",
       "path": ".github/workflows/android.yml",
       "display_title": "downgrade(bytehook): 1.1.2 to 1.0.10",
-      "run_number": 943,
-      "event": "push",
+      "run_number": 948,
+      "event": "pull_request",
       "status": "completed",
       "conclusion": "success",
       "workflow_id": 162757109,
-      "check_suite_id": 86444925813,
-      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAUIITjdQ",
-      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31865594138",
-      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31865594138",
+      "check_suite_id": 86463554104,
+      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAUIaEiOA",
+      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31873882034",
+      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31873882034",
       "pull_requests": [
         {
-          "url": "https://api.github.com/repos/Lapis-ORG/Lapis-Android/pulls/2",
-          "id": 3992538538,
-          "number": 2,
+          "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/pulls/352",
+          "id": 4285450657,
+          "number": 352,
           "head": {
-            "ref": "v3_openjdk",
-            "sha": "614603ae150489ef1eb7a2c244b6fcd90c25f865",
+            "ref": "fix/sdl-issues",
+            "sha": "4314885bf8b639ad8b75ff3068bbb47e03c66132",
             "repo": {
               "id": 984950761,
               "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
@@ -160,17 +160,17 @@
           },
           "base": {
             "ref": "v3_openjdk",
-            "sha": "d1df879a316be61b5c2ef7c867d898b0fb83abba",
+            "sha": "614603ae150489ef1eb7a2c244b6fcd90c25f865",
             "repo": {
-              "id": 1230029877,
-              "url": "https://api.github.com/repos/Lapis-ORG/Lapis-Android",
-              "name": "Lapis-Android"
+              "id": 984950761,
+              "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
+              "name": "Amethyst-Android"
             }
           }
         }
       ],
-      "created_at": "2026-08-15T04:54:16Z",
-      "updated_at": "2026-08-15T04:59:22Z",
+      "created_at": "2026-08-15T08:11:50Z",
+      "updated_at": "2026-08-15T08:14:04Z",
       "actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -194,7 +194,7 @@
       },
       "run_attempt": 1,
       "referenced_workflows": [],
-      "run_started_at": "2026-08-15T04:54:16Z",
+      "run_started_at": "2026-08-15T08:11:50Z",
       "triggering_actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -216,19 +216,19 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31865594138/jobs",
-      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31865594138/logs",
-      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/86444925813",
-      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31865594138/artifacts",
-      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31865594138/cancel",
-      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31865594138/rerun",
+      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31873882034/jobs",
+      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31873882034/logs",
+      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/86463554104",
+      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31873882034/artifacts",
+      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31873882034/cancel",
+      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31873882034/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/workflows/162757109",
       "head_commit": {
-        "id": "614603ae150489ef1eb7a2c244b6fcd90c25f865",
-        "tree_id": "37bd459f7a020455fad2cd22a154f5245efed8a2",
-        "message": "downgrade(bytehook): 1.1.2 to 1.0.10\n\nIt appears the hooks don't work properly on newer version",
-        "timestamp": "2026-08-15T04:54:13Z",
+        "id": "4314885bf8b639ad8b75ff3068bbb47e03c66132",
+        "tree_id": "69a3d053f7ba360f3b0cb2cc2001809fe02cd8f1",
+        "message": "mitigation: Workaround new SDL autodetection crash on Turnip\n\nNo clue why this happens, still investigating.",
+        "timestamp": "2026-08-15T08:10:50Z",
         "author": {
           "name": "tomikun",
           "email": "60690056+alexytomi@users.noreply.github.com"
@@ -377,43 +377,43 @@
     },
     "artifacts": [
       {
-        "id": 9241951974,
-        "node_id": "MDg6QXJ0aWZhY3Q5MjQxOTUxOTc0",
+        "id": 9244208916,
+        "node_id": "MDg6QXJ0aWZhY3Q5MjQ0MjA4OTE2",
         "name": "app-release",
-        "size_in_bytes": 154530769,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9241951974",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9241951974/zip",
+        "size_in_bytes": 154530818,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9244208916",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9244208916/zip",
         "expired": false,
-        "digest": "sha256:3b9dc2d6858914eacfd6f14eee456085d051e88214fdccfbd296ee75a169a298",
-        "created_at": "2026-08-15T04:58:59Z",
-        "updated_at": "2026-08-15T04:58:59Z",
-        "expires_at": "2026-11-13T04:54:16Z",
+        "digest": "sha256:0e129ce0c496de332afdea5aa51a465fb4cced9585b2980cf670e74253d8071e",
+        "created_at": "2026-08-15T08:14:00Z",
+        "updated_at": "2026-08-15T08:14:00Z",
+        "expires_at": "2026-11-13T08:11:50Z",
         "workflow_run": {
-          "id": 31865594138,
+          "id": 31873882034,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
-          "head_branch": "v3_openjdk",
-          "head_sha": "614603ae150489ef1eb7a2c244b6fcd90c25f865"
+          "head_branch": "fix/sdl-issues",
+          "head_sha": "4314885bf8b639ad8b75ff3068bbb47e03c66132"
         }
       },
       {
-        "id": 9241950591,
-        "node_id": "MDg6QXJ0aWZhY3Q5MjQxOTUwNTkx",
+        "id": 9244207926,
+        "node_id": "MDg6QXJ0aWZhY3Q5MjQ0MjA3OTI2",
         "name": "app-debug (recommended)",
-        "size_in_bytes": 166233144,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9241950591",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9241950591/zip",
+        "size_in_bytes": 166233811,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9244207926",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9244207926/zip",
         "expired": false,
-        "digest": "sha256:1b6359484d63be2e9d9da69967156ee73560a461ad7eb7a4ba10b16d94350dc1",
-        "created_at": "2026-08-15T04:58:52Z",
-        "updated_at": "2026-08-15T04:58:52Z",
-        "expires_at": "2026-11-13T04:54:16Z",
+        "digest": "sha256:cd3c707f69c98326d2e66b304b94cc2480ee7b14815bf398c165e7f5b5c6d19a",
+        "created_at": "2026-08-15T08:13:54Z",
+        "updated_at": "2026-08-15T08:13:54Z",
+        "expires_at": "2026-11-13T08:11:50Z",
         "workflow_run": {
-          "id": 31865594138,
+          "id": 31873882034,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
-          "head_branch": "v3_openjdk",
-          "head_sha": "614603ae150489ef1eb7a2c244b6fcd90c25f865"
+          "head_branch": "fix/sdl-issues",
+          "head_sha": "4314885bf8b639ad8b75ff3068bbb47e03c66132"
         }
       }
     ]
