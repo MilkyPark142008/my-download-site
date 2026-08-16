@@ -1,5 +1,13 @@
 [
   {
+    "id": 31927506982,
+    "sha": "e0daa42b4039dfbc5d3bfb9ae767803b2c78a2f8",
+    "short_sha": "e0daa42",
+    "message": "remove(renderer): Krypton Wrapper\n\nSince we have SFPEW now, we can drop gl4es, yayy\n\nReplaces all the old fallback logic to gl4es to instead\nSFPEW/MobileGlues",
+    "created_at": "2026-08-16T04:48:26Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31927506982"
+  },
+  {
     "id": 31926805288,
     "sha": "96f7f2abc56fcd478febdb59783efb70f2d233ed",
     "short_sha": "96f7f2a",
@@ -390,13 +398,5 @@
     "message": "bump: 1.1.6 to 1.1.7",
     "created_at": "2026-07-31T02:37:36Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30599471904"
-  },
-  {
-    "id": 30538108847,
-    "sha": "13cec07fa39ec52a183f99e66df547d4c488146f",
-    "short_sha": "13cec07",
-    "message": "feat: Set env vars for JavaVM pointers\n\nFor use primarily by mods who want to control android runtime for some\nreason.",
-    "created_at": "2026-07-30T11:03:37Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30538108847"
   }
 ]
