@@ -1,5 +1,21 @@
 [
   {
+    "id": 31949877808,
+    "sha": "4ff888bbd648b6f448edfd98438bc268338a0db9",
+    "short_sha": "4ff888b",
+    "message": "fix: Profile 字段变化统一触发配置保存，页面 detach 时注销挂单例的监听\n\n- Profile 的 onGlobalChanged/onSelectedVersionChanged 合并为统一\n  onChanged，gameDir/name 变化也触发配置保存（补全普通字段\n  迁移后的保存触发遗漏）\n- VersionSettingPage/VersionListPage 在 detach 时移除挂在\n  Profile 单例上的监听，避免页面销毁后仍被回调持有\n  （attach 时 StateFlow collect 立即发射当前值会重新注册）",
+    "created_at": "2026-08-16T13:25:07Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31949877808"
+  },
+  {
+    "id": 31949875098,
+    "sha": "4ff888bbd648b6f448edfd98438bc268338a0db9",
+    "short_sha": "4ff888b",
+    "message": "fix: Profile 字段变化统一触发配置保存，页面 detach 时注销挂单例的监听\n\n- Profile 的 onGlobalChanged/onSelectedVersionChanged 合并为统一\n  onChanged，gameDir/name 变化也触发配置保存（补全普通字段\n  迁移后的保存触发遗漏）\n- VersionSettingPage/VersionListPage 在 detach 时移除挂在\n  Profile 单例上的监听，避免页面销毁后仍被回调持有\n  （attach 时 StateFlow collect 立即发射当前值会重新注册）",
+    "created_at": "2026-08-16T13:25:07Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31949875098"
+  },
+  {
     "id": 31946514265,
     "sha": "45794ae7da32c50697383da170678f40520ca8dd",
     "short_sha": "45794ae",
@@ -382,21 +398,5 @@
     "message": "optimize: 模组列表远程信息加载优化（缓存复用 + 可见 item 优先）",
     "created_at": "2026-08-11T03:57:00Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31456961961"
-  },
-  {
-    "id": 31450318994,
-    "sha": "f8713e2415f481e917cc608d41e384cf2eeed9b0",
-    "short_sha": "f8713e2",
-    "message": "Merge pull request #1735 from FCL-Team/feat/new_mixed_lwjgl\n\nfeat: 切换到 LWJGL 3.3.3/3.4.1 双版本并同步 Amethyst JNI 重构",
-    "created_at": "2026-08-11T01:46:09Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31450318994"
-  },
-  {
-    "id": 31450222034,
-    "sha": "c1ef1b023a153326c508b3551d06c404e48abfa2",
-    "short_sha": "c1ef1b0",
-    "message": "update: 更新 MioLibPatcher.jar",
-    "created_at": "2026-08-11T01:44:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31450222034"
   }
 ]
