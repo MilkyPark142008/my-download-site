@@ -1,5 +1,37 @@
 [
   {
+    "id": 31946514265,
+    "sha": "45794ae7da32c50697383da170678f40520ca8dd",
+    "short_sha": "45794ae",
+    "message": "Merge pull request #1753 from DHJComical/fix/glfw-driver-version-only-if-higher\n\nfix: 仅当驱动版本更高时才覆盖 GLFW 上下文版本",
+    "created_at": "2026-08-16T12:14:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31946514265"
+  },
+  {
+    "id": 31946142591,
+    "sha": "fb40070e7c7c4653b712d8508d948fec3c66ca47",
+    "short_sha": "fb40070",
+    "message": "fix: 修复主界面版本图标放大显示不完全（共享 Drawable 实例 bounds 互相污染）\n\n版本图标 DRAWABLE_CACHE 缓存共享同一 Drawable 实例，版本列表\nitem 设置 background 时修改共享实例的 bounds，主界面 icon 再设置\n同一实例时因 setBackgroundDrawable 同实例短路不修正 bounds，\n按列表 item 尺寸绘制在 30dp 控件上导致放大裁剪。改为缓存\nConstantState 每次 newDrawable 返回独立实例。",
+    "created_at": "2026-08-16T11:17:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31946142591"
+  },
+  {
+    "id": 31946139454,
+    "sha": "fb40070e7c7c4653b712d8508d948fec3c66ca47",
+    "short_sha": "fb40070",
+    "message": "fix: 修复主界面版本图标放大显示不完全（共享 Drawable 实例 bounds 互相污染）\n\n版本图标 DRAWABLE_CACHE 缓存共享同一 Drawable 实例，版本列表\nitem 设置 background 时修改共享实例的 bounds，主界面 icon 再设置\n同一实例时因 setBackgroundDrawable 同实例短路不修正 bounds，\n按列表 item 尺寸绘制在 30dp 控件上导致放大裁剪。改为缓存\nConstantState 每次 newDrawable 返回独立实例。",
+    "created_at": "2026-08-16T11:17:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31946139454"
+  },
+  {
+    "id": 31945725749,
+    "sha": "01560216ff8112d92e70817456ea9ba661232c9a",
+    "short_sha": "0156021",
+    "message": "fix: 删除账户弹窗内容文字异常 (#1752)",
+    "created_at": "2026-08-16T11:57:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31945725749"
+  },
+  {
     "id": 31935992935,
     "sha": "4a3f49210a3f4e2f7d13745c5bd4a68ffd4f09e2",
     "short_sha": "4a3f492",
@@ -366,37 +398,5 @@
     "message": "update: 更新 MioLibPatcher.jar",
     "created_at": "2026-08-11T01:44:15Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31450222034"
-  },
-  {
-    "id": 31359530671,
-    "sha": "4bee1cbc9e48ff3ebc1a6a1685081b010034937c",
-    "short_sha": "4bee1cb",
-    "message": "refactor: jre_launcher 日志改用 FCL_LOG",
-    "created_at": "2026-08-10T05:42:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31359530671"
-  },
-  {
-    "id": 31359528197,
-    "sha": "4bee1cbc9e48ff3ebc1a6a1685081b010034937c",
-    "short_sha": "4bee1cb",
-    "message": "refactor: jre_launcher 日志改用 FCL_LOG",
-    "created_at": "2026-08-10T05:42:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31359528197"
-  },
-  {
-    "id": 31359332178,
-    "sha": "292325e2d5824fb693601fc5c9ae8c8cff171e8e",
-    "short_sha": "292325e",
-    "message": "Update build.gradle.kts",
-    "created_at": "2026-08-10T05:39:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31359332178"
-  },
-  {
-    "id": 31351818715,
-    "sha": "0bd3d9e898b75cdbc41f17712d79e447e53758dd",
-    "short_sha": "0bd3d9e",
-    "message": "refactor: jre_launcher 日志改用 FCL_LOG",
-    "created_at": "2026-08-09T12:41:27Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31351818715"
   }
 ]
