@@ -1,5 +1,21 @@
 [
   {
+    "id": 31958951901,
+    "sha": "0bf456d6e7d36a75017bd34b6ea5983a7c2cc514",
+    "short_sha": "0bf456d",
+    "message": "fix: 修复快速滑动/切换页面时控件首帧闪白（registerEvent 改为同步执行）",
+    "created_at": "2026-08-16T16:33:07Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31958951901"
+  },
+  {
+    "id": 31958947858,
+    "sha": "0bf456d6e7d36a75017bd34b6ea5983a7c2cc514",
+    "short_sha": "0bf456d",
+    "message": "fix: 修复快速滑动/切换页面时控件首帧闪白（registerEvent 改为同步执行）",
+    "created_at": "2026-08-16T16:33:07Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31958947858"
+  },
+  {
     "id": 31955921504,
     "sha": "9621451e27a30c086887256f82520ed116394647",
     "short_sha": "9621451",
@@ -382,21 +398,5 @@
     "message": "1.3.2.5",
     "created_at": "2026-08-12T02:09:52Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31556004626"
-  },
-  {
-    "id": 31465768182,
-    "sha": "3bfea27978a6b904fd17ee4233e66eb2d287368e",
-    "short_sha": "3bfea27",
-    "message": "fix: 修复构建",
-    "created_at": "2026-08-11T06:37:09Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31465768182"
-  },
-  {
-    "id": 31462976817,
-    "sha": "9b97c204b71c674780a3ea153db07b1abb002379",
-    "short_sha": "9b97c20",
-    "message": "refactor: mod 元数据读取从 ZipFileTree 迁移到 zipfs\n\nModManager 及各 modinfo reader 改用 FileSystem（zipfs）读取 mod 元数据，\n替换 ZipFileTree（commons-compress）实现。CompressingUtils 新增\nopenZipTree(Path, Charset) 重载供后续使用。",
-    "created_at": "2026-08-11T05:49:54Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31462976817"
   }
 ]
