@@ -1,5 +1,21 @@
 [
   {
+    "id": 31935992935,
+    "sha": "4a3f49210a3f4e2f7d13745c5bd4a68ffd4f09e2",
+    "short_sha": "4a3f492",
+    "message": "fix: 修复下载页重建后首次切换模式列表空白（复用缓存 adapter 时补设 LayoutManager）\n\nDownloadUI 被 ViewPager2 回收重建后，新页面的 RecyclerView 无\nLayoutManager，restoreResult 复用缓存的 adapter 时跳过设置导致\n列表不渲染。真机复现：连续瞬时跳转页面触发 DownloadUI 重建后\n切整合包 100% 复现空列表。",
+    "created_at": "2026-08-16T08:15:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31935992935"
+  },
+  {
+    "id": 31935990405,
+    "sha": "4a3f49210a3f4e2f7d13745c5bd4a68ffd4f09e2",
+    "short_sha": "4a3f492",
+    "message": "fix: 修复下载页重建后首次切换模式列表空白（复用缓存 adapter 时补设 LayoutManager）\n\nDownloadUI 被 ViewPager2 回收重建后，新页面的 RecyclerView 无\nLayoutManager，restoreResult 复用缓存的 adapter 时跳过设置导致\n列表不渲染。真机复现：连续瞬时跳转页面触发 DownloadUI 重建后\n切整合包 100% 复现空列表。",
+    "created_at": "2026-08-16T08:15:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31935990405"
+  },
+  {
     "id": 31924446246,
     "sha": "0f8c0d0fa2c44cba62b964c5aacee75bc5789957",
     "short_sha": "0f8c0d0",
@@ -382,21 +398,5 @@
     "message": "refactor: jre_launcher 日志改用 FCL_LOG",
     "created_at": "2026-08-09T12:41:27Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31351818715"
-  },
-  {
-    "id": 31313982509,
-    "sha": "0bd3d9e898b75cdbc41f17712d79e447e53758dd",
-    "short_sha": "0bd3d9e",
-    "message": "refactor: jre_launcher 日志改用 FCL_LOG",
-    "created_at": "2026-08-09T12:41:27Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31313982509"
-  },
-  {
-    "id": 31297410959,
-    "sha": "fa1bc14c997a3d430b8bb46093b65aae6a5d5141",
-    "short_sha": "fa1bc14",
-    "message": "更新Java25",
-    "created_at": "2026-08-08T06:25:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31297410959"
   }
 ]
