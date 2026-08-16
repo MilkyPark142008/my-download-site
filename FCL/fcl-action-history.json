@@ -1,5 +1,21 @@
 [
   {
+    "id": 31924446246,
+    "sha": "0f8c0d0fa2c44cba62b964c5aacee75bc5789957",
+    "short_sha": "0f8c0d0",
+    "message": "test: 新增本分支重构内容的 androidTest 仪器测试\n\n覆盖 VersionSetting/Profile 普通字段与回调重构、Profiles StateFlow\n补充、FCLGameRepository 解析与 modpack 配置缓存、ModTranslations\npreload，以及 UIManager 页序与右菜单双指手势（MotionEvent 注入）；\n真机 48 用例全部通过。",
+    "created_at": "2026-08-16T03:29:52Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31924446246"
+  },
+  {
+    "id": 31924443747,
+    "sha": "0f8c0d0fa2c44cba62b964c5aacee75bc5789957",
+    "short_sha": "0f8c0d0",
+    "message": "test: 新增本分支重构内容的 androidTest 仪器测试\n\n覆盖 VersionSetting/Profile 普通字段与回调重构、Profiles StateFlow\n补充、FCLGameRepository 解析与 modpack 配置缓存、ModTranslations\npreload，以及 UIManager 页序与右菜单双指手势（MotionEvent 注入）；\n真机 48 用例全部通过。",
+    "created_at": "2026-08-16T03:29:52Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31924443747"
+  },
+  {
     "id": 31921534226,
     "sha": "dbff218502af375d741b86cd09514694d896f72e",
     "short_sha": "dbff218",
@@ -382,21 +398,5 @@
     "message": "更新Java25",
     "created_at": "2026-08-08T06:25:40Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31297410959"
-  },
-  {
-    "id": 31288172210,
-    "sha": "899b6459e8940aeb1cd0da0c8009a6fd669b87c2",
-    "short_sha": "899b645",
-    "message": "feat: 跟进上游修复（缓存重构/#1728 参数可清空/#1720 长文本核查）\n\n- a83767f8 缓存自动清理迁移至启动页：合并已自然带入（SplashActivity 启动协程内\n  3 天周期 cleanDirectoryQuietly + clear_cache 时间戳），设置页手动清理按钮保留\n- #1728：VersionSettingHost.fullEditText 传 canBeEmpty=true，JVM/游戏参数允许清空\n- #1720：核查 Compose 版设置行（BasicComponent summary 省略 + 整行可点 + 行尾编辑按钮），\n  不存在旧版超长顶出按钮问题，无需改动\n\n门禁：:FCL:assembleDebug 通过",
-    "created_at": "2026-08-09T01:23:19Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31288172210"
-  },
-  {
-    "id": 31283034461,
-    "sha": "f98d1f36b66606ab6aea531568ea1269c9ae6842",
-    "short_sha": "f98d1f3",
-    "message": "feat: 跟随上游移除仿基岩触控（BE Gesture）功能（877ad93d 语义）\n\n- 游戏侧还原为上游版本：menu_right.xml（去 switch_be_gesture）、\n  FCLauncher FCLBridge.java（去 HIT_RESULT_TYPE 常量）、\n  FCLBridgeCallback.java（去 onHitResultTypeChange）\n- GameMenu.java：移除 hitResultType/getHitResultType/onHitResultTypeChange/\n  switch_be_gesture 绑定；JarExecutorMenu 移除对应桩\n- MenuSetting/VersionSetting：移除 disableBEGestureFlow/beGestureFlow 属性、\n  监听注册、克隆与序列化/反序列化条目\n- VersionSettingViewModel/Screen：移除 beGesture 状态与设置行\n- 9 个 locale 移除 menu_settings_disable_be_gesture 与 settings_fcl_controller_injector\n- 上游 lwjgl.jar/map.json/FCLInjector*/LaunchOptions/DefaultLauncher/ProcessService/\n  TouchPad/JNI 的同步删除已由合并自然带入\n\n门禁：:FCL:assembleDebug 通过",
-    "created_at": "2026-08-08T23:01:10Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31283034461"
   }
 ]

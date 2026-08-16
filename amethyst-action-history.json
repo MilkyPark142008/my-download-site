@@ -1,5 +1,13 @@
 [
   {
+    "id": 31926805288,
+    "sha": "96f7f2abc56fcd478febdb59783efb70f2d233ed",
+    "short_sha": "96f7f2a",
+    "message": "remove(renderer): Krypton Wrapper\n\nSince we have SFPEW now, we can drop gl4es, yayy\n\nReplaces all the old fallback logic to gl4es to instead\nSFPEW/MobileGlues",
+    "created_at": "2026-08-16T04:30:12Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31926805288"
+  },
+  {
     "id": 31900664886,
     "sha": "2ff03f00d1352f9bfb79a1763a8e15957d740709",
     "short_sha": "2ff03f0",
@@ -390,13 +398,5 @@
     "message": "feat: Set env vars for JavaVM pointers\n\nFor use primarily by mods who want to control android runtime for some\nreason.",
     "created_at": "2026-07-30T11:03:37Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30538108847"
-  },
-  {
-    "id": 30512067630,
-    "sha": "6edde3cf2fedd16f66b8e5c9561abe22d2412282",
-    "short_sha": "6edde3c",
-    "message": "REVERTME: MobileGL as a submodule",
-    "created_at": "2026-07-30T03:46:04Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30512067630"
   }
 ]
