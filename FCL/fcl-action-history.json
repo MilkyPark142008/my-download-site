@@ -1,5 +1,21 @@
 [
   {
+    "id": 31955921504,
+    "sha": "9621451e27a30c086887256f82520ed116394647",
+    "short_sha": "9621451",
+    "message": "refactor: 移除无调用方的 ThemeEngine.getWallpaperColor 死代码",
+    "created_at": "2026-08-16T15:31:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31955921504"
+  },
+  {
+    "id": 31955918064,
+    "sha": "9621451e27a30c086887256f82520ed116394647",
+    "short_sha": "9621451",
+    "message": "refactor: 移除无调用方的 ThemeEngine.getWallpaperColor 死代码",
+    "created_at": "2026-08-16T15:31:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31955918064"
+  },
+  {
     "id": 31949877808,
     "sha": "4ff888bbd648b6f448edfd98438bc268338a0db9",
     "short_sha": "4ff888b",
@@ -382,21 +398,5 @@
     "message": "refactor: mod 元数据读取从 ZipFileTree 迁移到 zipfs\n\nModManager 及各 modinfo reader 改用 FileSystem（zipfs）读取 mod 元数据，\n替换 ZipFileTree（commons-compress）实现。CompressingUtils 新增\nopenZipTree(Path, Charset) 重载供后续使用。",
     "created_at": "2026-08-11T05:49:54Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31462976817"
-  },
-  {
-    "id": 31462451638,
-    "sha": "3f897af717de23e518c258a53f72fa657193d57d",
-    "short_sha": "3f897af",
-    "message": "fix: 修复混合编码 zip 解压时条目名解码错误导致 NoSuchFileException\n\nzipfs 的 ZipCoder 是全局单一编码，忽略 CEN 中条目的 EFS（UTF-8）flag：\n带 flag 的条目名被按配置编码（如 GBK）解码成乱码，非法字节序列被\nREPLACE，重编码后的字节与中央目录原始字节不一致，inodes 按字节查找\n失败，解压时抛 NoSuchFileException 中断。\n\n修复：读取 CEN 条目名时若条目带 EFS flag 且配置编码非 UTF-8，先按\nUTF-8 解码再按配置编码重编码，统一 inodes 的 key 表示。\ninitCEN 与 Entry.cen 两处同时处理，避免写回时出现重复条目。\n\n附带新增 androidTest 测试基建（testBuildType=fordebug），设备实测验证：\n244MB 真实整合包完整解压、中文文件名正确。",
-    "created_at": "2026-08-11T05:40:42Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31462451638"
-  },
-  {
-    "id": 31456961961,
-    "sha": "fde6dbf945d43808cad64f2c11e8fcf52e0dbc79",
-    "short_sha": "fde6dbf",
-    "message": "optimize: 模组列表远程信息加载优化（缓存复用 + 可见 item 优先）",
-    "created_at": "2026-08-11T03:57:00Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31456961961"
   }
 ]
