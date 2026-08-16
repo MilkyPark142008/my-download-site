@@ -1,5 +1,21 @@
 [
   {
+    "id": 31921534226,
+    "sha": "dbff218502af375d741b86cd09514694d896f72e",
+    "short_sha": "dbff218",
+    "message": "feat: 右菜单双指滑动切换，仅限 right_menu 区域内触发\n\n将右菜单显示/隐藏由单指 fling 改为双指水平滑动触发，\n两指起始位置需都落在 right_menu 区域内（隐藏时按记录宽度推算），\n左滑显示、右滑隐藏，不消费事件；移除冗余的皮肤区域排除逻辑。",
+    "created_at": "2026-08-15T16:16:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31921534226"
+  },
+  {
+    "id": 31921531860,
+    "sha": "dbff218502af375d741b86cd09514694d896f72e",
+    "short_sha": "dbff218",
+    "message": "feat: 右菜单双指滑动切换，仅限 right_menu 区域内触发\n\n将右菜单显示/隐藏由单指 fling 改为双指水平滑动触发，\n两指起始位置需都落在 right_menu 区域内（隐藏时按记录宽度推算），\n左滑显示、右滑隐藏，不消费事件；移除冗余的皮肤区域排除逻辑。",
+    "created_at": "2026-08-15T16:16:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31921531860"
+  },
+  {
     "id": 31894582392,
     "sha": "ed42cf16335ec67e2f84a800e18a11ba6dd3e7aa",
     "short_sha": "ed42cf1",
@@ -382,21 +398,5 @@
     "message": "feat: 跟随上游移除仿基岩触控（BE Gesture）功能（877ad93d 语义）\n\n- 游戏侧还原为上游版本：menu_right.xml（去 switch_be_gesture）、\n  FCLauncher FCLBridge.java（去 HIT_RESULT_TYPE 常量）、\n  FCLBridgeCallback.java（去 onHitResultTypeChange）\n- GameMenu.java：移除 hitResultType/getHitResultType/onHitResultTypeChange/\n  switch_be_gesture 绑定；JarExecutorMenu 移除对应桩\n- MenuSetting/VersionSetting：移除 disableBEGestureFlow/beGestureFlow 属性、\n  监听注册、克隆与序列化/反序列化条目\n- VersionSettingViewModel/Screen：移除 beGesture 状态与设置行\n- 9 个 locale 移除 menu_settings_disable_be_gesture 与 settings_fcl_controller_injector\n- 上游 lwjgl.jar/map.json/FCLInjector*/LaunchOptions/DefaultLauncher/ProcessService/\n  TouchPad/JNI 的同步删除已由合并自然带入\n\n门禁：:FCL:assembleDebug 通过",
     "created_at": "2026-08-08T23:01:10Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31283034461"
-  },
-  {
-    "id": 31262031390,
-    "sha": "51c773764aaed950ad61df2642d158342b0b4229",
-    "short_sha": "51c7737",
-    "message": "fix: 同步 JNI 与新版 LWJGL 接口\n\n- gl_bridge.c: nativeInitGl4esInternals 方法名由 RendererInit 迁移为 PojavRendererInit\n- input_bridge_v3.c: internalWindowSizeChanged 签名由 (JII)V 改为 (J)V",
-    "created_at": "2026-08-08T14:27:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31262031390"
-  },
-  {
-    "id": 31258081373,
-    "sha": "9abbc77cfa4f142d1ce013d9b196573c13c847f8",
-    "short_sha": "9abbc77",
-    "message": "fix: 同步GLCapabilities与Amethyst实现\n\n- GLCapabilities 构造函数调用 PojavRendererInit.onCreateCapabilities 初始化渲染器回调\n- check_GL11~check_GL33 移除提前返回，改用非短路(&)并入 ext 检查，缺失版本时触发 reportMissing 警告\n- flag7~flag11 的 GL_ARB_imaging 检查改为非短路(&)判断\n- 更新 lwjgl-3.3.3-merged-modules.jar 构建产物",
-    "created_at": "2026-08-08T12:45:33Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31258081373"
   }
 ]
