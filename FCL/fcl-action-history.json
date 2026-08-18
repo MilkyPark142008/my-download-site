@@ -1,5 +1,53 @@
 [
   {
+    "id": 32091513122,
+    "sha": "8fa37c7415e9bce01abf853ffb1379909c134b95",
+    "short_sha": "8fa37c7",
+    "message": "fix: 修复主界面销毁后主题刷新回调加载崩溃",
+    "created_at": "2026-08-18T02:16:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32091513122"
+  },
+  {
+    "id": 32091509825,
+    "sha": "8fa37c7415e9bce01abf853ffb1379909c134b95",
+    "short_sha": "8fa37c7",
+    "message": "fix: 修复主界面销毁后主题刷新回调加载崩溃",
+    "created_at": "2026-08-18T02:16:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32091509825"
+  },
+  {
+    "id": 32089938494,
+    "sha": "2f18198acec392a74c1f2e2cf491d42b9d0ecf64",
+    "short_sha": "2f18198",
+    "message": "fix: ThemeEngine 主题回调改弱引用，修复页面回收后视图泄漏",
+    "created_at": "2026-08-18T01:31:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32089938494"
+  },
+  {
+    "id": 32089934126,
+    "sha": "2f18198acec392a74c1f2e2cf491d42b9d0ecf64",
+    "short_sha": "2f18198",
+    "message": "fix: ThemeEngine 主题回调改弱引用，修复页面回收后视图泄漏",
+    "created_at": "2026-08-18T01:31:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32089934126"
+  },
+  {
+    "id": 32088210629,
+    "sha": "de3dbcd9578116c919b2310f731e95bd356148d8",
+    "short_sha": "de3dbcd",
+    "message": "fix: 修复 VersionInstallInfoPage 选择安装器版本后条目未刷新",
+    "created_at": "2026-08-18T01:19:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32088210629"
+  },
+  {
+    "id": 32088206030,
+    "sha": "de3dbcd9578116c919b2310f731e95bd356148d8",
+    "short_sha": "de3dbcd",
+    "message": "fix: 修复 VersionInstallInfoPage 选择安装器版本后条目未刷新",
+    "created_at": "2026-08-18T01:19:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32088206030"
+  },
+  {
     "id": 32038668969,
     "sha": "70f256b4a5f90f8e33669e3e5094cdce3bc65f72",
     "short_sha": "70f256b",
@@ -350,53 +398,5 @@
     "message": "fix: 隐藏下载页左侧搜索栏滚动条，消除卡顿期间滚动条残留显示",
     "created_at": "2026-08-14T11:46:52Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31797627375"
-  },
-  {
-    "id": 31797376933,
-    "sha": "1791b9b2c310ec3a8e9f2aa90c268d62582ed8c8",
-    "short_sha": "1791b9b",
-    "message": "refactor: 下载页 5 个下载模式共享单个布局实例，tab 切换经 ViewModel 恢复状态\n\n- DownloadUI 改为 FCLCommonUI：游戏安装页独立视图 + 共享 DownloadPage 实例，\n  tab 切换仅更新数据源与恢复状态，不再为每个 tab 创建页面\n- DownloadPage 新增 switchType：按模式切换 repository/下载回调/特有控件\n  （Mod 加载器筛选、Modpack 导入按钮、翻译按钮、下载源），\n  DownloadSearchViewModel 按模式 id 保存搜索条件与结果，切回不重新搜索\n- 修复：搜索状态按模式隔离（避免串用其他模式数据）、过期网络回调竞态、\n  取消任务误显示 retry、首次切换重复搜索\n- 删除 ModDownloadPage/ModpackDownloadPage/ResourcePackDownloadPage/\n  ShaderPackDownloadPage 四个子类，适配 RemoteModListAdapter、\n  RemoteModInfoPage、LocalModListAdapter、ModListPage 调用点",
-    "created_at": "2026-08-14T11:43:18Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31797376933"
-  },
-  {
-    "id": 31792011462,
-    "sha": "efd26ec665a7ab6459047bf75a84279702b761c6",
-    "short_sha": "efd26ec",
-    "message": "refactor: 移除 UIManager.init 回调参数，初始化逻辑直接内联",
-    "created_at": "2026-08-14T10:20:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31792011462"
-  },
-  {
-    "id": 31784307380,
-    "sha": "f4502355ff4e5be61fffc2a75b70bb2ab061c3ea",
-    "short_sha": "f450235",
-    "message": "fix: 损坏的压缩文件抛 ZipError 包装为 IOException，避免整合包安装时崩溃",
-    "created_at": "2026-08-14T08:31:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31784307380"
-  },
-  {
-    "id": 31763691979,
-    "sha": "14e4962b404798be35837e91d4ea335436c71c9c",
-    "short_sha": "14e4962",
-    "message": "1.3.2.6",
-    "created_at": "2026-08-14T02:25:30Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31763691979"
-  },
-  {
-    "id": 31763691988,
-    "sha": "14e4962b404798be35837e91d4ea335436c71c9c",
-    "short_sha": "14e4962",
-    "message": "1.3.2.6",
-    "created_at": "2026-08-14T02:25:30Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31763691988"
-  },
-  {
-    "id": 31763281738,
-    "sha": "9ac96c5ee21a242b669214715da20d8d3db0692e",
-    "short_sha": "9ac96c5",
-    "message": "fix: 修复部分设备F3页面CPU显示为Unknown的问题",
-    "created_at": "2026-08-14T02:17:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31763281738"
   }
 ]
