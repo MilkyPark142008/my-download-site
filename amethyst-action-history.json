@@ -1,5 +1,13 @@
 [
   {
+    "id": 32155235854,
+    "sha": "c1ae6b829f4ce862b95e6127594ec278811a8973",
+    "short_sha": "c1ae6b8",
+    "message": "remove(renderer): Remove SFPEW/System GLES Driver\n\nThe use of SFPEW on System GLES on androids is not well supported.\nUse with MobileGlues always.\n\nMaintain the already made logic just in case it can be used",
+    "created_at": "2026-08-18T15:33:55Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/32155235854"
+  },
+  {
     "id": 31927506982,
     "sha": "e0daa42b4039dfbc5d3bfb9ae767803b2c78a2f8",
     "short_sha": "e0daa42",
@@ -390,13 +398,5 @@
     "message": "bump: 1.1.6 to 1.1.7",
     "created_at": "2026-07-31T02:37:36Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30599701213"
-  },
-  {
-    "id": 30599471904,
-    "sha": "6b30acb1bc9ef15585c68cb538f6d543d58d5fa6",
-    "short_sha": "6b30acb",
-    "message": "bump: 1.1.6 to 1.1.7",
-    "created_at": "2026-07-31T02:37:36Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30599471904"
   }
 ]
