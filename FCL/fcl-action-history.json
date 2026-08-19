@@ -1,402 +1,402 @@
 [
   {
-    "id": 32091513122,
-    "sha": "8fa37c7415e9bce01abf853ffb1379909c134b95",
-    "short_sha": "8fa37c7",
-    "message": "fix: 修复主界面销毁后主题刷新回调加载崩溃",
-    "created_at": "2026-08-18T02:16:56Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32091513122"
+    "id": 30425042581,
+    "sha": "a820671733fc7b774e3586b44cdf66e8e6c53101",
+    "short_sha": "a820671",
+    "message": "feat: 新增 RAR 格式解压支持并优化手动整合包安装流程\n\n1.  集成 junrar 库并在 `CompressingUtils` 中实现 `extractRar` 逻辑，支持处理 RAR 目录及路径分隔符转换\n2.  在 `ManuallyCreatedModpackInstallTask` 中增加对 `.rar` 文件的安装支持\n3.  在整合包选择界面（`ModpackSelectionPage`）的筛选后缀中新增 `.7z` 与 `.rar`\n4.  调整 `ModpackHelper` 逻辑，将 `.7z` 与 `.rar` 统一视为手动整合包类型，并优化扩展名匹配的可靠性（忽略大小写）\n5.  优化 `LocalModpackPage` 的编码检测逻辑，对于非标准压缩格式默认使用 `UTF-8` 编码以提升性能\n6.  在 `libs.versions.toml` 中新增 `junrar` 相关依赖配置",
+    "created_at": "2026-07-29T05:23:50Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30425042581"
   },
   {
-    "id": 32091509825,
-    "sha": "8fa37c7415e9bce01abf853ffb1379909c134b95",
-    "short_sha": "8fa37c7",
-    "message": "fix: 修复主界面销毁后主题刷新回调加载崩溃",
-    "created_at": "2026-08-18T02:16:56Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32091509825"
+    "id": 30414292857,
+    "sha": "93177ac5ad959dea948a47f40c26f683e99ce81f",
+    "short_sha": "93177ac",
+    "message": "refactor(compressingUtils): 优化压缩文件解压的构建方式\n\n1. 调整导入的包结构，细化导入类型\n2. 修复javadoc注释的对齐格式问题\n3. 使用builder模式创建ZipFile和SevenZFile实例",
+    "created_at": "2026-07-29T01:30:59Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30414292857"
   },
   {
-    "id": 32089938494,
-    "sha": "2f18198acec392a74c1f2e2cf491d42b9d0ecf64",
-    "short_sha": "2f18198",
-    "message": "fix: ThemeEngine 主题回调改弱引用，修复页面回收后视图泄漏",
-    "created_at": "2026-08-18T01:31:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32089938494"
+    "id": 30370397641,
+    "sha": "c696db448faf25624dc8e478cc8f0667a4792395",
+    "short_sha": "c696db4",
+    "message": "Merge branch 'FCL-Team:main' into main",
+    "created_at": "2026-07-28T14:47:07Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30370397641"
   },
   {
-    "id": 32089934126,
-    "sha": "2f18198acec392a74c1f2e2cf491d42b9d0ecf64",
-    "short_sha": "2f18198",
-    "message": "fix: ThemeEngine 主题回调改弱引用，修复页面回收后视图泄漏",
-    "created_at": "2026-08-18T01:31:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32089934126"
+    "id": 30364470655,
+    "sha": "ddfb63ea59332f4e070e63bed9bc1db11588da2b",
+    "short_sha": "ddfb63e",
+    "message": "Merge pull request #1707 from dryfish09/feat/vi\n\nfeat: add vietnamese translation",
+    "created_at": "2026-07-28T13:38:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30364470655"
   },
   {
-    "id": 32088210629,
-    "sha": "de3dbcd9578116c919b2310f731e95bd356148d8",
-    "short_sha": "de3dbcd",
-    "message": "fix: 修复 VersionInstallInfoPage 选择安装器版本后条目未刷新",
-    "created_at": "2026-08-18T01:19:22Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32088210629"
+    "id": 30363773373,
+    "sha": "77742179342f69bd16402bad2a9ff232c6230e47",
+    "short_sha": "7774217",
+    "message": "fix(strings): 移除微软无许可证提示里的多余帮助文案\n\n统一优化中英文的无Minecraft购买记录错误提示文案，删除中文版本里多余的帮助按钮提示，调整英文版本里的链接格式位置，让提示内容更简洁准确。",
+    "created_at": "2026-07-28T13:30:04Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30363773373"
   },
   {
-    "id": 32088206030,
-    "sha": "de3dbcd9578116c919b2310f731e95bd356148d8",
-    "short_sha": "de3dbcd",
-    "message": "fix: 修复 VersionInstallInfoPage 选择安装器版本后条目未刷新",
-    "created_at": "2026-08-18T01:19:22Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32088206030"
+    "id": 30351484448,
+    "sha": "5d1ebeae450bb9df11a7c81c5cba4b9d3867bf75",
+    "short_sha": "5d1ebea",
+    "message": "feat: add vietnamese translation",
+    "created_at": "2026-07-28T10:20:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30351484448"
   },
   {
-    "id": 32038668969,
-    "sha": "70f256b4a5f90f8e33669e3e5094cdce3bc65f72",
-    "short_sha": "70f256b",
-    "message": "fix: 使用部分模组后启动游戏时画面无法显示",
-    "created_at": "2026-08-17T14:19:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32038668969"
+    "id": 30333147997,
+    "sha": "93524c5331cedcd8b42fcd44d2cf4f48d8dcd4e4",
+    "short_sha": "93524c5",
+    "message": "Update MenuSetting.kt",
+    "created_at": "2026-07-28T05:56:09Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30333147997"
   },
   {
-    "id": 32027002637,
-    "sha": "e1822cea564030fdce95863bbbd267a5daa0dd1e",
-    "short_sha": "e1822ce",
-    "message": "optimize: 完善下载页翻译按钮的布局与主题 tint",
-    "created_at": "2026-08-17T11:51:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32027002637"
+    "id": 30327930018,
+    "sha": "c5dbeba7b88288e4908755e63a37f838fc0a92b5",
+    "short_sha": "c5dbeba",
+    "message": "1.3.2.1",
+    "created_at": "2026-07-28T04:08:59Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30327930018"
   },
   {
-    "id": 32025346105,
-    "sha": "c6a0fb2d1dfb84f3640de061f9f8e617366c3d9b",
-    "short_sha": "c6a0fb2",
-    "message": "fix: 修复控制器列表项 inflate 时提前 attachToRoot 的问题",
-    "created_at": "2026-08-17T11:30:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32025346105"
+    "id": 30327930027,
+    "sha": "c5dbeba7b88288e4908755e63a37f838fc0a92b5",
+    "short_sha": "c5dbeba",
+    "message": "1.3.2.1",
+    "created_at": "2026-07-28T04:08:59Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30327930027"
   },
   {
-    "id": 32025341691,
-    "sha": "c6a0fb2d1dfb84f3640de061f9f8e617366c3d9b",
-    "short_sha": "c6a0fb2",
-    "message": "fix: 修复控制器列表项 inflate 时提前 attachToRoot 的问题",
-    "created_at": "2026-08-17T11:30:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32025341691"
+    "id": 30262352815,
+    "sha": "6fa78d6d0c70a2e4987438139b1f51ce17e62e73",
+    "short_sha": "6fa78d6",
+    "message": "refactor: 重构模组加载与压缩文件处理逻辑，迁移至Java 17+新特性\n\n1.  将Pair类改为record简化实现，移除冗余代码\n2.  替换commons-lang3为原生方法，升级toml4j至tomlj并新增chardet依赖\n3.  使用ZipFileTree替代旧的ZipFileSystem处理压缩文件，优化编码检测\n4.  重构多种模组元数据解析逻辑，统一使用ZipFileTree读取压缩包内文件\n5.  新增LocalAddonFile与LocalAddonManager管理附加文件\n6.  优化IO工具类，新增字符编码自动检测与流处理优化\n7.  修复压缩文件路径调用错误，统一使用NIO Path替代File\n8.  调整日志版权年份与代码格式化规范",
+    "created_at": "2026-07-27T11:32:51Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30262352815"
   },
   {
-    "id": 32012434114,
-    "sha": "fa5766e320d2a7ddf4b69daf0844dc2be69ab3ef",
-    "short_sha": "fa5766e",
-    "message": "refactor: UI refactor and optimize View Binding in ControllerDownloadPage",
-    "created_at": "2026-08-17T08:51:43Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32012434114"
+    "id": 30202829737,
+    "sha": "33121e3510ce0a5b67847b94e20ca118e3f5a82d",
+    "short_sha": "33121e3",
+    "message": "fix(bridge): 修复文件路径跳转处理逻辑\n\n优化了file协议链接的解析逻辑，先进行URI解码再标准化路径，正确判断目录并传递绝对路径给浏览回调",
+    "created_at": "2026-07-26T12:49:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30202829737"
   },
   {
-    "id": 32012426851,
-    "sha": "fa5766e320d2a7ddf4b69daf0844dc2be69ab3ef",
-    "short_sha": "fa5766e",
-    "message": "refactor: UI refactor and optimize View Binding in ControllerDownloadPage",
-    "created_at": "2026-08-17T08:51:43Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32012426851"
+    "id": 30200406782,
+    "sha": "6638cc0ec30b0932fc932354bba20ce9cf2a5463",
+    "short_sha": "6638cc0",
+    "message": "fix: make PortMixerProvider registration optional in JDK 25",
+    "created_at": "2026-07-26T11:35:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30200406782"
   },
   {
-    "id": 32003785440,
-    "sha": "5236c6ee6617a9197e4cd6370ba046c6bb91a4f7",
-    "short_sha": "5236c6e",
-    "message": "refactor: Profile.global 重命名为 globalVersionSetting 并精简构造器",
-    "created_at": "2026-08-17T06:57:14Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32003785440"
+    "id": 30019163706,
+    "sha": "6723ae6e33f5dd4d7365adccdea2c9e6a368290e",
+    "short_sha": "6723ae6",
+    "message": "OpenAL-Soft: 默认OpenSL ES",
+    "created_at": "2026-07-23T15:06:37Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30019163706"
   },
   {
-    "id": 32003781181,
-    "sha": "5236c6ee6617a9197e4cd6370ba046c6bb91a4f7",
-    "short_sha": "5236c6e",
-    "message": "refactor: Profile.global 重命名为 globalVersionSetting 并精简构造器",
-    "created_at": "2026-08-17T06:57:14Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32003781181"
+    "id": 29832767080,
+    "sha": "266a59abbf350d596de7eb8be46a97589e188388",
+    "short_sha": "266a59a",
+    "message": "fix(menu_right): 调整鼠标灵敏度滑块的最小值为1\n\n将两处灵敏度滑块的最小取值从100改为1，扩大可调节范围",
+    "created_at": "2026-07-21T13:03:40Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29832767080"
   },
   {
-    "id": 32003429379,
-    "sha": "f0d01e6e2724519764d4f1fc263bc097a59a6a6d",
-    "short_sha": "f0d01e6",
-    "message": "impl: 优化下载页面翻译按钮",
-    "created_at": "2026-08-17T06:51:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32003429379"
+    "id": 29831906805,
+    "sha": "1ea4084b5dba219e7f5b76a2c0fe14809e66440f",
+    "short_sha": "1ea4084",
+    "message": "fix: 修复切换控制组后方向键样式未正确同步的问题",
+    "created_at": "2026-07-21T12:51:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/29831906805"
   },
   {
-    "id": 31958951901,
-    "sha": "0bf456d6e7d36a75017bd34b6ea5983a7c2cc514",
-    "short_sha": "0bf456d",
-    "message": "fix: 修复快速滑动/切换页面时控件首帧闪白（registerEvent 改为同步执行）",
-    "created_at": "2026-08-16T16:33:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31958951901"
+    "id": 28084870130,
+    "sha": "fc203f1ff0b457b2a0d044f4d301cd88d8325296",
+    "short_sha": "fc203f1",
+    "message": "feat: 重构优化截图阅览增加长按全屏阅览功能 #1651\n\n新增通用ViewHolder类，以及全屏图片弹窗的基础类和布局文件\n\nrefactor: 重构图片预览和截图适配器，整理字符串资源\n\n1.  将close字符串资源移至FCLLibrary统一管理\n2.  实现通用的FullImageDialog弹窗\n3.  重构RemoteModScreenshotAdapter复用标准ViewHolder\n4.  移除冗余的重试按钮布局和相关逻辑\n5.  优化图片加载逻辑和弹窗调用方式",
+    "created_at": "2026-06-24T08:14:19Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/28084870130"
   },
   {
-    "id": 31958947858,
-    "sha": "0bf456d6e7d36a75017bd34b6ea5983a7c2cc514",
-    "short_sha": "0bf456d",
-    "message": "fix: 修复快速滑动/切换页面时控件首帧闪白（registerEvent 改为同步执行）",
-    "created_at": "2026-08-16T16:33:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31958947858"
+    "id": 27858455077,
+    "sha": "a9619dcde4104f46019573dc637a416ba7d4d23c",
+    "short_sha": "a9619dc",
+    "message": "update",
+    "created_at": "2026-06-20T02:51:34Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27858455077"
   },
   {
-    "id": 31955921504,
-    "sha": "9621451e27a30c086887256f82520ed116394647",
-    "short_sha": "9621451",
-    "message": "refactor: 移除无调用方的 ThemeEngine.getWallpaperColor 死代码",
-    "created_at": "2026-08-16T15:31:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31955921504"
+    "id": 27837424532,
+    "sha": "fd3d3ed95aa9d69337cb94b92584c25edd454860",
+    "short_sha": "fd3d3ed",
+    "message": "update",
+    "created_at": "2026-06-19T16:19:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27837424532"
   },
   {
-    "id": 31955918064,
-    "sha": "9621451e27a30c086887256f82520ed116394647",
-    "short_sha": "9621451",
-    "message": "refactor: 移除无调用方的 ThemeEngine.getWallpaperColor 死代码",
-    "created_at": "2026-08-16T15:31:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31955918064"
+    "id": 27836392219,
+    "sha": "9864c89097bbe3d5da99bf1ed317b96c950234ba",
+    "short_sha": "9864c89",
+    "message": "update",
+    "created_at": "2026-06-19T15:57:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27836392219"
   },
   {
-    "id": 31949877808,
-    "sha": "4ff888bbd648b6f448edfd98438bc268338a0db9",
-    "short_sha": "4ff888b",
-    "message": "fix: Profile 字段变化统一触发配置保存，页面 detach 时注销挂单例的监听\n\n- Profile 的 onGlobalChanged/onSelectedVersionChanged 合并为统一\n  onChanged，gameDir/name 变化也触发配置保存（补全普通字段\n  迁移后的保存触发遗漏）\n- VersionSettingPage/VersionListPage 在 detach 时移除挂在\n  Profile 单例上的监听，避免页面销毁后仍被回调持有\n  （attach 时 StateFlow collect 立即发射当前值会重新注册）",
-    "created_at": "2026-08-16T13:25:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31949877808"
+    "id": 27835555419,
+    "sha": "12e889d80e3605e093cf62cd5f395eba9dc23648",
+    "short_sha": "12e889d",
+    "message": "update",
+    "created_at": "2026-06-19T15:34:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27835555419"
   },
   {
-    "id": 31949875098,
-    "sha": "4ff888bbd648b6f448edfd98438bc268338a0db9",
-    "short_sha": "4ff888b",
-    "message": "fix: Profile 字段变化统一触发配置保存，页面 detach 时注销挂单例的监听\n\n- Profile 的 onGlobalChanged/onSelectedVersionChanged 合并为统一\n  onChanged，gameDir/name 变化也触发配置保存（补全普通字段\n  迁移后的保存触发遗漏）\n- VersionSettingPage/VersionListPage 在 detach 时移除挂在\n  Profile 单例上的监听，避免页面销毁后仍被回调持有\n  （attach 时 StateFlow collect 立即发射当前值会重新注册）",
-    "created_at": "2026-08-16T13:25:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31949875098"
+    "id": 27737675439,
+    "sha": "b1cb5aa9dc9741dc2968c565b7aef4d5ae234ebd",
+    "short_sha": "b1cb5aa",
+    "message": "1.3.1.3",
+    "created_at": "2026-06-18T04:56:05Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27737675439"
   },
   {
-    "id": 31946514265,
-    "sha": "45794ae7da32c50697383da170678f40520ca8dd",
-    "short_sha": "45794ae",
-    "message": "Merge pull request #1753 from DHJComical/fix/glfw-driver-version-only-if-higher\n\nfix: 仅当驱动版本更高时才覆盖 GLFW 上下文版本",
-    "created_at": "2026-08-16T12:14:16Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31946514265"
+    "id": 27737675524,
+    "sha": "b1cb5aa9dc9741dc2968c565b7aef4d5ae234ebd",
+    "short_sha": "b1cb5aa",
+    "message": "1.3.1.3",
+    "created_at": "2026-06-18T04:56:05Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27737675524"
   },
   {
-    "id": 31946142591,
-    "sha": "fb40070e7c7c4653b712d8508d948fec3c66ca47",
-    "short_sha": "fb40070",
-    "message": "fix: 修复主界面版本图标放大显示不完全（共享 Drawable 实例 bounds 互相污染）\n\n版本图标 DRAWABLE_CACHE 缓存共享同一 Drawable 实例，版本列表\nitem 设置 background 时修改共享实例的 bounds，主界面 icon 再设置\n同一实例时因 setBackgroundDrawable 同实例短路不修正 bounds，\n按列表 item 尺寸绘制在 30dp 控件上导致放大裁剪。改为缓存\nConstantState 每次 newDrawable 返回独立实例。",
-    "created_at": "2026-08-16T11:17:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31946142591"
+    "id": 27679942583,
+    "sha": "280258076825643f022900c4b195cff86f6d9051",
+    "short_sha": "2802580",
+    "message": "feat: 反转陀螺仪方向 #1639",
+    "created_at": "2026-06-17T09:40:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27679942583"
   },
   {
-    "id": 31946139454,
-    "sha": "fb40070e7c7c4653b712d8508d948fec3c66ca47",
-    "short_sha": "fb40070",
-    "message": "fix: 修复主界面版本图标放大显示不完全（共享 Drawable 实例 bounds 互相污染）\n\n版本图标 DRAWABLE_CACHE 缓存共享同一 Drawable 实例，版本列表\nitem 设置 background 时修改共享实例的 bounds，主界面 icon 再设置\n同一实例时因 setBackgroundDrawable 同实例短路不修正 bounds，\n按列表 item 尺寸绘制在 30dp 控件上导致放大裁剪。改为缓存\nConstantState 每次 newDrawable 返回独立实例。",
-    "created_at": "2026-08-16T11:17:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31946139454"
+    "id": 27611812668,
+    "sha": "50be1fc9e179ffb83c85d4d891733d2cdd036335",
+    "short_sha": "50be1fc",
+    "message": "update",
+    "created_at": "2026-06-06T02:16:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27611812668"
   },
   {
-    "id": 31945725749,
-    "sha": "01560216ff8112d92e70817456ea9ba661232c9a",
-    "short_sha": "0156021",
-    "message": "fix: 删除账户弹窗内容文字异常 (#1752)",
-    "created_at": "2026-08-16T11:57:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31945725749"
+    "id": 27524943678,
+    "sha": "08009d1c33dd344b754af3a08cc8698672dbacfd",
+    "short_sha": "08009d1",
+    "message": "fix: 修复强制设置分辨率取消后仍然开启的问题 #1635",
+    "created_at": "2026-06-15T04:56:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27524943678"
   },
   {
-    "id": 31935992935,
-    "sha": "4a3f49210a3f4e2f7d13745c5bd4a68ffd4f09e2",
-    "short_sha": "4a3f492",
-    "message": "fix: 修复下载页重建后首次切换模式列表空白（复用缓存 adapter 时补设 LayoutManager）\n\nDownloadUI 被 ViewPager2 回收重建后，新页面的 RecyclerView 无\nLayoutManager，restoreResult 复用缓存的 adapter 时跳过设置导致\n列表不渲染。真机复现：连续瞬时跳转页面触发 DownloadUI 重建后\n切整合包 100% 复现空列表。",
-    "created_at": "2026-08-16T08:15:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31935992935"
+    "id": 27524441796,
+    "sha": "f31baf8916bfc3fed4d4b3e1543d25b079eec3f4",
+    "short_sha": "f31baf8",
+    "message": "Update FCLBridge.java",
+    "created_at": "2026-06-15T04:40:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27524441796"
   },
   {
-    "id": 31935990405,
-    "sha": "4a3f49210a3f4e2f7d13745c5bd4a68ffd4f09e2",
-    "short_sha": "4a3f492",
-    "message": "fix: 修复下载页重建后首次切换模式列表空白（复用缓存 adapter 时补设 LayoutManager）\n\nDownloadUI 被 ViewPager2 回收重建后，新页面的 RecyclerView 无\nLayoutManager，restoreResult 复用缓存的 adapter 时跳过设置导致\n列表不渲染。真机复现：连续瞬时跳转页面触发 DownloadUI 重建后\n切整合包 100% 复现空列表。",
-    "created_at": "2026-08-16T08:15:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31935990405"
+    "id": 27524401852,
+    "sha": "f2ab2c405abbd1135ca093afff5ac4238490f098",
+    "short_sha": "f2ab2c4",
+    "message": "fix: 修复日志重定向错误导致无法获取部分错误日志",
+    "created_at": "2026-06-15T04:38:59Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27524401852"
   },
   {
-    "id": 31924446246,
-    "sha": "0f8c0d0fa2c44cba62b964c5aacee75bc5789957",
-    "short_sha": "0f8c0d0",
-    "message": "test: 新增本分支重构内容的 androidTest 仪器测试\n\n覆盖 VersionSetting/Profile 普通字段与回调重构、Profiles StateFlow\n补充、FCLGameRepository 解析与 modpack 配置缓存、ModTranslations\npreload，以及 UIManager 页序与右菜单双指手势（MotionEvent 注入）；\n真机 48 用例全部通过。",
-    "created_at": "2026-08-16T03:29:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31924446246"
+    "id": 27484538782,
+    "sha": "73a34b4550a11ee7801aa25d1f89d26d8548b7c6",
+    "short_sha": "73a34b4",
+    "message": "fix: 修复游戏内剪贴板读取内容为null的问题 #1630",
+    "created_at": "2026-06-14T01:18:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27484538782"
   },
   {
-    "id": 31924443747,
-    "sha": "0f8c0d0fa2c44cba62b964c5aacee75bc5789957",
-    "short_sha": "0f8c0d0",
-    "message": "test: 新增本分支重构内容的 androidTest 仪器测试\n\n覆盖 VersionSetting/Profile 普通字段与回调重构、Profiles StateFlow\n补充、FCLGameRepository 解析与 modpack 配置缓存、ModTranslations\npreload，以及 UIManager 页序与右菜单双指手势（MotionEvent 注入）；\n真机 48 用例全部通过。",
-    "created_at": "2026-08-16T03:29:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31924443747"
+    "id": 27455524645,
+    "sha": "cf1d7b3edebe966dc621b8450324225d5adaec37",
+    "short_sha": "cf1d7b3",
+    "message": "1.3.1.2",
+    "created_at": "2026-06-13T03:34:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27455524645"
   },
   {
-    "id": 31921534226,
-    "sha": "dbff218502af375d741b86cd09514694d896f72e",
-    "short_sha": "dbff218",
-    "message": "feat: 右菜单双指滑动切换，仅限 right_menu 区域内触发\n\n将右菜单显示/隐藏由单指 fling 改为双指水平滑动触发，\n两指起始位置需都落在 right_menu 区域内（隐藏时按记录宽度推算），\n左滑显示、右滑隐藏，不消费事件；移除冗余的皮肤区域排除逻辑。",
-    "created_at": "2026-08-15T16:16:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31921534226"
+    "id": 27455366300,
+    "sha": "cf1d7b3edebe966dc621b8450324225d5adaec37",
+    "short_sha": "cf1d7b3",
+    "message": "1.3.1.2",
+    "created_at": "2026-06-13T03:34:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27455366300"
   },
   {
-    "id": 31921531860,
-    "sha": "dbff218502af375d741b86cd09514694d896f72e",
-    "short_sha": "dbff218",
-    "message": "feat: 右菜单双指滑动切换，仅限 right_menu 区域内触发\n\n将右菜单显示/隐藏由单指 fling 改为双指水平滑动触发，\n两指起始位置需都落在 right_menu 区域内（隐藏时按记录宽度推算），\n左滑显示、右滑隐藏，不消费事件；移除冗余的皮肤区域排除逻辑。",
-    "created_at": "2026-08-15T16:16:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31921531860"
+    "id": 27455189179,
+    "sha": "1b86ad037ed197ff86f974eb1702950d1d31861f",
+    "short_sha": "1b86ad0",
+    "message": "fix: 尝试修复编辑离线皮肤时重复多次刷新",
+    "created_at": "2026-06-13T03:26:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27455189179"
   },
   {
-    "id": 31894582392,
-    "sha": "ed42cf16335ec67e2f84a800e18a11ba6dd3e7aa",
-    "short_sha": "ed42cf1",
-    "message": "optimize: 版本列表加载提速，解析与资源缓存、切 profile 保留缓存",
-    "created_at": "2026-08-15T16:05:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31894582392"
+    "id": 27454837536,
+    "sha": "a850f627addecce4ccf0dc0e2f20b323420b57a3",
+    "short_sha": "a850f62",
+    "message": "Revert \"更新部分HMCL代码&使用 Kala Compress 替代 commons-compress\"\n\nThis reverts commit 266190993f28f83727bcca4ce640fbcbc838c66d.",
+    "created_at": "2026-06-13T03:11:01Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27454837536"
   },
   {
-    "id": 31894579649,
-    "sha": "ed42cf16335ec67e2f84a800e18a11ba6dd3e7aa",
-    "short_sha": "ed42cf1",
-    "message": "optimize: 版本列表加载提速，解析与资源缓存、切 profile 保留缓存",
-    "created_at": "2026-08-15T16:05:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31894579649"
+    "id": 27182973292,
+    "sha": "3d0584da2a2dcca7714c0bb8856adc3ff281054f",
+    "short_sha": "3d0584d",
+    "message": "perf: 优化玩家头像渲染性能，同时使dp值与实际View对齐",
+    "created_at": "2026-06-09T03:57:43Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27182973292"
   },
   {
-    "id": 31892061716,
-    "sha": "9319db11fdd0bdecfd668db92c60d42730b07bcc",
-    "short_sha": "9319db1",
-    "message": "fix: 监听回调内增删监听导致并发修改崩溃，遍历前复制列表",
-    "created_at": "2026-08-15T15:10:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31892061716"
+    "id": 27117109857,
+    "sha": "cc71acd91cd6bc086487c3cd4b63d9ea47d6e748",
+    "short_sha": "cc71acd",
+    "message": "1.3.1.1",
+    "created_at": "2026-06-08T05:03:39Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27117109857"
   },
   {
-    "id": 31892058890,
-    "sha": "9319db11fdd0bdecfd668db92c60d42730b07bcc",
-    "short_sha": "9319db1",
-    "message": "fix: 监听回调内增删监听导致并发修改崩溃，遍历前复制列表",
-    "created_at": "2026-08-15T15:10:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31892058890"
+    "id": 27117109886,
+    "sha": "cc71acd91cd6bc086487c3cd4b63d9ea47d6e748",
+    "short_sha": "cc71acd",
+    "message": "1.3.1.1",
+    "created_at": "2026-06-08T05:03:39Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27117109886"
   },
   {
-    "id": 31877532959,
-    "sha": "bd7c2a9120a203ede29411cb545e595184012ca5",
-    "short_sha": "bd7c2a9",
-    "message": "refactor: 控制布局管理页重构为 Kotlin 并改用 viewBinding，列表选择通过回调刷新右侧信息",
-    "created_at": "2026-08-15T09:36:56Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31877532959"
+    "id": 27090277894,
+    "sha": "efc6b570b12becbb624b5d133bf1f04d15e99dfd",
+    "short_sha": "efc6b57",
+    "message": "修复无法用中文搜索游戏内容的问题\n\nhttps://github.com/HMCL-dev/HMCL/commit/d295e606a942480c918428489aaeda985c8fac0e",
+    "created_at": "2026-06-07T10:45:11Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27090277894"
   },
   {
-    "id": 31877530400,
-    "sha": "bd7c2a9120a203ede29411cb545e595184012ca5",
-    "short_sha": "bd7c2a9",
-    "message": "refactor: 控制布局管理页重构为 Kotlin 并改用 viewBinding，列表选择通过回调刷新右侧信息",
-    "created_at": "2026-08-15T09:36:56Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31877530400"
+    "id": 27090139767,
+    "sha": "73b5d31b4eb616bceb92494eb94ddef52332c3ad",
+    "short_sha": "73b5d31",
+    "message": "更新部分HMCL代码&使用 Kala Compress 替代 commons-compress",
+    "created_at": "2026-06-07T10:38:51Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27090139767"
   },
   {
-    "id": 31876658648,
-    "sha": "c5ec446b16e62f72ec7506ee13552ead34ecb6a6",
-    "short_sha": "c5ec446",
-    "message": "feat: 下载页 tab 切换添加过渡动画，模式页间内容更新亦淡入",
-    "created_at": "2026-08-15T09:17:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31876658648"
+    "id": 27086852177,
+    "sha": "ed62a89b9c145f03a638e2a18878fcd4d8110068",
+    "short_sha": "ed62a89",
+    "message": "fix: 修复翻译查询对话框在部分设备上可能导致启动器闪退的问题",
+    "created_at": "2026-06-07T08:03:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27086852177"
   },
   {
-    "id": 31876657502,
-    "sha": "c5ec446b16e62f72ec7506ee13552ead34ecb6a6",
-    "short_sha": "c5ec446",
-    "message": "feat: 下载页 tab 切换添加过渡动画，模式页间内容更新亦淡入",
-    "created_at": "2026-08-15T09:17:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31876657502"
+    "id": 27063670688,
+    "sha": "a271127684610b990d0ce26ba728d4b46935c7b9",
+    "short_sha": "a271127",
+    "message": "fix(FCLAlertDialog): 修复url识别，主动开启url功能",
+    "created_at": "2026-06-06T13:32:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27063670688"
   },
   {
-    "id": 31872221825,
-    "sha": "11021ed2008654113eca849f6be60714e2ac9a3e",
-    "short_sha": "11021ed",
-    "message": "fix: 修正 rebase 后残留的 fcllibrary.R 引用",
-    "created_at": "2026-08-15T07:30:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31872221825"
+    "id": 27060416683,
+    "sha": "d82d65e0ff7228b5e2f542b9d6ec50363c97d85e",
+    "short_sha": "d82d65e",
+    "message": "feat: 优化微软登录未购买提示",
+    "created_at": "2026-06-06T10:57:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27060416683"
   },
   {
-    "id": 31872220561,
-    "sha": "11021ed2008654113eca849f6be60714e2ac9a3e",
-    "short_sha": "11021ed",
-    "message": "fix: 修正 rebase 后残留的 fcllibrary.R 引用",
-    "created_at": "2026-08-15T07:30:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31872220561"
+    "id": 27060193674,
+    "sha": "5cc632e5d86c838926e27eb9e2e7ee601949325d",
+    "short_sha": "5cc632e",
+    "message": "chore: 更新AGP至8.13.2",
+    "created_at": "2026-06-06T10:45:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27060193674"
   },
   {
-    "id": 31866698868,
-    "sha": "16b9e01cb4d286d1f1e74582869c6a9e7a3cfc31",
-    "short_sha": "16b9e01",
-    "message": "refactor: FCLLibrary 模块整体并入 FCL 模块",
-    "created_at": "2026-08-15T05:15:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31866698868"
+    "id": 27059920267,
+    "sha": "9fc6ce66d1b91441ff5a1dbff7fb0494240f8fd0",
+    "short_sha": "9fc6ce6",
+    "message": "x64",
+    "created_at": "2026-06-06T10:32:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27059920267"
   },
   {
-    "id": 31865506902,
-    "sha": "b9cafd9994566b463d6c88504b4e7c2b3f0a0d28",
-    "short_sha": "b9cafd9",
-    "message": "fix: 修正设置页部分中文翻译并同步英文文案",
-    "created_at": "2026-08-15T03:04:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31865506902"
+    "id": 27007638152,
+    "sha": "f8b5742773313d1486ad9dc08ed2733ee1cf8302",
+    "short_sha": "f8b5742",
+    "message": "fix(game): 修复26.2-pre-4无法启动",
+    "created_at": "2026-06-05T09:42:32Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/27007638152"
   },
   {
-    "id": 31865504010,
-    "sha": "b9cafd9994566b463d6c88504b4e7c2b3f0a0d28",
-    "short_sha": "b9cafd9",
-    "message": "fix: 修正设置页部分中文翻译并同步英文文案",
-    "created_at": "2026-08-15T03:04:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31865504010"
+    "id": 26992358781,
+    "sha": "4231407523eaeced4f26ca399ac81c73bd00de70",
+    "short_sha": "4231407",
+    "message": "feat(account): 编辑离线账户UUID #1612",
+    "created_at": "2026-06-05T02:50:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26992358781"
   },
   {
-    "id": 31813671379,
-    "sha": "bb0870968d9da13ab088d8d34157995ce3aa1af7",
-    "short_sha": "bb08709",
-    "message": "refactor: 启动器设置页改为 RecyclerView 行级复用",
-    "created_at": "2026-08-14T15:15:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31813671379"
+    "id": 26867519905,
+    "sha": "c8a2d9f69dcb41c1d170a6c456d8c2b3afabf58f",
+    "short_sha": "c8a2d9f",
+    "message": "Update InstantTypeAdapter.java",
+    "created_at": "2026-06-03T06:19:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26867519905"
   },
   {
-    "id": 31813663866,
-    "sha": "bb0870968d9da13ab088d8d34157995ce3aa1af7",
-    "short_sha": "bb08709",
-    "message": "refactor: 启动器设置页改为 RecyclerView 行级复用",
-    "created_at": "2026-08-14T15:15:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31813663866"
+    "id": 26867406655,
+    "sha": "c8a2d9f69dcb41c1d170a6c456d8c2b3afabf58f",
+    "short_sha": "c8a2d9f",
+    "message": "Update InstantTypeAdapter.java",
+    "created_at": "2026-06-03T06:19:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26867406655"
   },
   {
-    "id": 31803708408,
-    "sha": "cc30b7e840c94f7c2211fc5a5bc81a64732de5f0",
-    "short_sha": "cc30b7e",
-    "message": "fix: 下载列表每页条数调整为 30；移除滚动时暂停/恢复图片加载的监听",
-    "created_at": "2026-08-14T13:12:32Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31803708408"
+    "id": 26866664391,
+    "sha": "3676c4367e16d6a5d72a86555fecd4848111591c",
+    "short_sha": "3676c43",
+    "message": "fix: 修复日志过滤可能因为空消息崩溃的问题",
+    "created_at": "2026-06-03T05:59:02Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26866664391"
   },
   {
-    "id": 31803705317,
-    "sha": "cc30b7e840c94f7c2211fc5a5bc81a64732de5f0",
-    "short_sha": "cc30b7e",
-    "message": "fix: 下载列表每页条数调整为 30；移除滚动时暂停/恢复图片加载的监听",
-    "created_at": "2026-08-14T13:12:32Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31803705317"
+    "id": 26862209238,
+    "sha": "422d18359b2eeb74702e9d038f7e8ea070fab023",
+    "short_sha": "422d183",
+    "message": "1.3.1.0",
+    "created_at": "2026-06-03T03:38:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26862209238"
   },
   {
-    "id": 31798362719,
-    "sha": "08ece419b779e9f944662d83c4a82d503e511139",
-    "short_sha": "08ece41",
-    "message": "fix: 隐藏下载页左侧搜索栏滚动条，消除卡顿期间滚动条残留显示",
-    "created_at": "2026-08-14T11:46:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31798362719"
+    "id": 26862209198,
+    "sha": "422d18359b2eeb74702e9d038f7e8ea070fab023",
+    "short_sha": "422d183",
+    "message": "1.3.1.0",
+    "created_at": "2026-06-03T03:38:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26862209198"
   },
   {
-    "id": 31797627375,
-    "sha": "08ece419b779e9f944662d83c4a82d503e511139",
-    "short_sha": "08ece41",
-    "message": "fix: 隐藏下载页左侧搜索栏滚动条，消除卡顿期间滚动条残留显示",
-    "created_at": "2026-08-14T11:46:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31797627375"
+    "id": 26756783878,
+    "sha": "06d7a547e091b1569d2607c5643932095714ab5a",
+    "short_sha": "06d7a54",
+    "message": "fix: 修复时间格式不正确导致无法安装部分版本Forge的问题\n\n- 在 `InstantTypeAdapter` 的日期格式化器中添加对 `+H:MM` 偏移量格式的支持，提升时间戳解析的兼容性。",
+    "created_at": "2026-06-01T13:06:34Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/26756783878"
   }
 ]
