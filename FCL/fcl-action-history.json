@@ -1,5 +1,29 @@
 [
   {
+    "id": 32217312794,
+    "sha": "2e995eb5b0e43319bf3b31ed5cafb42dbb7ab2a1",
+    "short_sha": "2e995eb",
+    "message": "fix: 修复主界面销毁后主题刷新回调加载崩溃",
+    "created_at": "2026-08-19T04:50:04Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32217312794"
+  },
+  {
+    "id": 32217310527,
+    "sha": "2e995eb5b0e43319bf3b31ed5cafb42dbb7ab2a1",
+    "short_sha": "2e995eb",
+    "message": "fix: 修复主界面销毁后主题刷新回调加载崩溃",
+    "created_at": "2026-08-19T04:50:04Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32217310527"
+  },
+  {
+    "id": 32217145217,
+    "sha": "b6274abb3f6744402695c21d64a5a9edcdccf81b",
+    "short_sha": "b6274ab",
+    "message": "fix: 移除 LWJGL 3.3.3 运行时携带的 jsr305.jar，解决与 java.annotation 模块的包冲突",
+    "created_at": "2026-08-19T04:48:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32217145217"
+  },
+  {
     "id": 32209189071,
     "sha": "f426cb92ce713d030e7be98dec3b960e49b066bc",
     "short_sha": "f426cb9",
@@ -374,29 +398,5 @@
     "message": "fix: 修正设置页部分中文翻译并同步英文文案",
     "created_at": "2026-08-15T03:04:12Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31865504010"
-  },
-  {
-    "id": 31813671379,
-    "sha": "bb0870968d9da13ab088d8d34157995ce3aa1af7",
-    "short_sha": "bb08709",
-    "message": "refactor: 启动器设置页改为 RecyclerView 行级复用",
-    "created_at": "2026-08-14T15:15:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31813671379"
-  },
-  {
-    "id": 31813663866,
-    "sha": "bb0870968d9da13ab088d8d34157995ce3aa1af7",
-    "short_sha": "bb08709",
-    "message": "refactor: 启动器设置页改为 RecyclerView 行级复用",
-    "created_at": "2026-08-14T15:15:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31813663866"
-  },
-  {
-    "id": 31803708408,
-    "sha": "cc30b7e840c94f7c2211fc5a5bc81a64732de5f0",
-    "short_sha": "cc30b7e",
-    "message": "fix: 下载列表每页条数调整为 30；移除滚动时暂停/恢复图片加载的监听",
-    "created_at": "2026-08-14T13:12:32Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31803708408"
   }
 ]
