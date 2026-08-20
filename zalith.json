@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 9979088,
         "digest": "sha256:1b5c8d126e7c6998cbfa961d131e28a6d365dc6952251e4f529c93a4a5f65b4d",
-        "download_count": 2378,
+        "download_count": 2384,
         "created_at": "2026-08-09T20:46:42Z",
         "updated_at": "2026-08-09T20:46:43Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.11/mapping.all.zip"
@@ -140,7 +140,7 @@
         "state": "uploaded",
         "size": 9979088,
         "digest": "sha256:1b5c8d126e7c6998cbfa961d131e28a6d365dc6952251e4f529c93a4a5f65b4d",
-        "download_count": 714,
+        "download_count": 715,
         "created_at": "2026-08-09T20:46:42Z",
         "updated_at": "2026-08-09T20:46:43Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.11/mapping.arm64.zip"
@@ -212,7 +212,7 @@
         "state": "uploaded",
         "size": 9979088,
         "digest": "sha256:1b5c8d126e7c6998cbfa961d131e28a6d365dc6952251e4f529c93a4a5f65b4d",
-        "download_count": 435,
+        "download_count": 437,
         "created_at": "2026-08-09T20:46:42Z",
         "updated_at": "2026-08-09T20:46:43Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.11/mapping.x86_64.zip"
@@ -248,7 +248,7 @@
         "state": "uploaded",
         "size": 162976549,
         "digest": "sha256:b19adc0acdfeafad950637cc4ae9091ec296f3917d1d5d15be7635c9f6ff8b84",
-        "download_count": 69721,
+        "download_count": 69961,
         "created_at": "2026-08-09T20:46:42Z",
         "updated_at": "2026-08-09T20:46:51Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.11/ZalithLauncher-2.4.11-arm64-v8a.apk"
@@ -284,7 +284,7 @@
         "state": "uploaded",
         "size": 155385306,
         "digest": "sha256:73c6057c0d07d99c17828248679d0fb3a972233b1d5e995b825d8a363c6471d4",
-        "download_count": 2304,
+        "download_count": 2310,
         "created_at": "2026-08-09T20:46:42Z",
         "updated_at": "2026-08-09T20:46:50Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.11/ZalithLauncher-2.4.11-armeabi-v7a.apk"
@@ -320,7 +320,7 @@
         "state": "uploaded",
         "size": 142798052,
         "digest": "sha256:bde664691a6a0fa946b71b8e87817136a5bffd294d755df019fb669f97f93e16",
-        "download_count": 1272,
+        "download_count": 1276,
         "created_at": "2026-08-09T20:46:42Z",
         "updated_at": "2026-08-09T20:46:49Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.11/ZalithLauncher-2.4.11-x86.apk"
@@ -356,7 +356,7 @@
         "state": "uploaded",
         "size": 168318761,
         "digest": "sha256:4561c5ad4045db87dc688f7d2d3122099d8f3e7c11b682cf01b4c2ce63bac46c",
-        "download_count": 1437,
+        "download_count": 1441,
         "created_at": "2026-08-09T20:46:42Z",
         "updated_at": "2026-08-09T20:46:51Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.11/ZalithLauncher-2.4.11-x86_64.apk"
@@ -392,7 +392,7 @@
         "state": "uploaded",
         "size": 321814207,
         "digest": "sha256:18c58cfec6a557db9e79558122615187908200bc13fc109b77b32da243b6b361",
-        "download_count": 18617,
+        "download_count": 18687,
         "created_at": "2026-08-09T20:46:42Z",
         "updated_at": "2026-08-09T20:46:56Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.4.11/ZalithLauncher-2.4.11.apk"
@@ -417,49 +417,25 @@
   },
   "action": {
     "run": {
-      "id": 32224775394,
+      "id": 32362313942,
       "name": "Build CI",
-      "node_id": "WFR_kwLOON0GPs8AAAAHgL8M4g",
-      "head_branch": "main",
-      "head_sha": "90e6998a4d3ed744bdbbc4f87a8f2330b8d3114c",
+      "node_id": "WFR_kwLOON0GPs8AAAAHiPG41g",
+      "head_branch": "fix/activity_config",
+      "head_sha": "7d78fe05e3926f1e3e7c6485cfc37cb24a7de1d9",
       "path": ".github/workflows/push_ci.yml",
-      "display_title": "Merge pull request #1705 from ZalithLauncher/fix/dialogs",
-      "run_number": 803,
+      "display_title": "fix: 被其他应用唤起时，不应创建 Activity 在调用方的任务栈",
+      "run_number": 804,
       "event": "push",
       "status": "completed",
       "conclusion": "success",
       "workflow_id": 253303842,
-      "check_suite_id": 87354633622,
-      "check_suite_node_id": "CS_kwDOON0GPs8AAAAUVr3tlg",
-      "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/32224775394",
-      "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32224775394",
-      "pull_requests": [
-        {
-          "url": "https://api.github.com/repos/ZerythLauncher/Zeryth-Launcher/pulls/105",
-          "id": 4321483644,
-          "number": 105,
-          "head": {
-            "ref": "main",
-            "sha": "90e6998a4d3ed744bdbbc4f87a8f2330b8d3114c",
-            "repo": {
-              "id": 954009150,
-              "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2",
-              "name": "ZalithLauncher2"
-            }
-          },
-          "base": {
-            "ref": "Zeryth-Main",
-            "sha": "5566edc6bc439a96e03a07f7ea2a5c539cb54b3d",
-            "repo": {
-              "id": 1295413137,
-              "url": "https://api.github.com/repos/ZerythLauncher/Zeryth-Launcher",
-              "name": "Zeryth-Launcher"
-            }
-          }
-        }
-      ],
-      "created_at": "2026-08-19T06:45:36Z",
-      "updated_at": "2026-08-19T06:51:00Z",
+      "check_suite_id": 87727102677,
+      "check_suite_node_id": "CS_kwDOON0GPs8AAAAUbPFa1Q",
+      "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/32362313942",
+      "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32362313942",
+      "pull_requests": [],
+      "created_at": "2026-08-20T11:08:04Z",
+      "updated_at": "2026-08-20T11:13:00Z",
       "actor": {
         "login": "MovTery",
         "id": 123115192,
@@ -484,12 +460,12 @@
       "run_attempt": 1,
       "referenced_workflows": [
         {
-          "path": "ZalithLauncher/ZalithLauncher2/.github/workflows/build.yml@90e6998a4d3ed744bdbbc4f87a8f2330b8d3114c",
-          "sha": "90e6998a4d3ed744bdbbc4f87a8f2330b8d3114c",
-          "ref": "refs/heads/main"
+          "path": "ZalithLauncher/ZalithLauncher2/.github/workflows/build.yml@7d78fe05e3926f1e3e7c6485cfc37cb24a7de1d9",
+          "sha": "7d78fe05e3926f1e3e7c6485cfc37cb24a7de1d9",
+          "ref": "refs/heads/fix/activity_config"
         }
       ],
-      "run_started_at": "2026-08-19T06:45:36Z",
+      "run_started_at": "2026-08-20T11:08:04Z",
       "triggering_actor": {
         "login": "MovTery",
         "id": 123115192,
@@ -511,26 +487,26 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/32224775394/jobs",
-      "logs_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/32224775394/logs",
-      "check_suite_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/check-suites/87354633622",
-      "artifacts_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/32224775394/artifacts",
-      "cancel_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/32224775394/cancel",
-      "rerun_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/32224775394/rerun",
+      "jobs_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/32362313942/jobs",
+      "logs_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/32362313942/logs",
+      "check_suite_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/check-suites/87727102677",
+      "artifacts_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/32362313942/artifacts",
+      "cancel_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/32362313942/cancel",
+      "rerun_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/32362313942/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/workflows/253303842",
       "head_commit": {
-        "id": "90e6998a4d3ed744bdbbc4f87a8f2330b8d3114c",
-        "tree_id": "5fdf1d3b2f07f0277902a650f22a952b7eb8173c",
-        "message": "Merge pull request #1705 from ZalithLauncher/fix/dialogs\n\nfix: 部分设备上对话框高度可能超出屏幕",
-        "timestamp": "2026-08-19T06:45:33Z",
+        "id": "7d78fe05e3926f1e3e7c6485cfc37cb24a7de1d9",
+        "tree_id": "bb86268670424d8189200b810dc35bfdbd811df3",
+        "message": "fix: 被其他应用唤起时，不应创建 Activity 在调用方的任务栈",
+        "timestamp": "2026-08-20T11:07:54Z",
         "author": {
-          "name": "MovTery",
+          "name": "movte",
           "email": "movtery228@qq.com"
         },
         "committer": {
-          "name": "GitHub",
-          "email": "noreply@github.com"
+          "name": "movte",
+          "email": "movtery228@qq.com"
         }
       },
       "repository": {
@@ -672,103 +648,103 @@
     },
     "artifacts": [
       {
-        "id": 9355248129,
-        "node_id": "MDg6QXJ0aWZhY3Q5MzU1MjQ4MTI5",
-        "name": "debug apk (all)",
-        "size_in_bytes": 392885126,
-        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9355248129",
-        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9355248129/zip",
-        "expired": false,
-        "digest": "sha256:0a7db6c2f29d14f2160ebc563eadfceab6dc83e9a5e3e59d52e0848bea0d89d2",
-        "created_at": "2026-08-19T06:50:31Z",
-        "updated_at": "2026-08-19T06:50:31Z",
-        "expires_at": "2026-08-26T06:45:36Z",
-        "workflow_run": {
-          "id": 32224775394,
-          "repository_id": 954009150,
-          "head_repository_id": 954009150,
-          "head_branch": "main",
-          "head_sha": "90e6998a4d3ed744bdbbc4f87a8f2330b8d3114c"
-        }
-      },
-      {
-        "id": 9355242774,
-        "node_id": "MDg6QXJ0aWZhY3Q5MzU1MjQyNzc0",
-        "name": "debug apk (x86_64)",
-        "size_in_bytes": 216055383,
-        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9355242774",
-        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9355242774/zip",
-        "expired": false,
-        "digest": "sha256:0098f83e17cf519d5072bb268205fb6db83c4469ba89580e740edc8fbc2aac20",
-        "created_at": "2026-08-19T06:50:16Z",
-        "updated_at": "2026-08-19T06:50:16Z",
-        "expires_at": "2026-08-26T06:45:36Z",
-        "workflow_run": {
-          "id": 32224775394,
-          "repository_id": 954009150,
-          "head_repository_id": 954009150,
-          "head_branch": "main",
-          "head_sha": "90e6998a4d3ed744bdbbc4f87a8f2330b8d3114c"
-        }
-      },
-      {
-        "id": 9355242699,
-        "node_id": "MDg6QXJ0aWZhY3Q5MzU1MjQyNjk5",
+        "id": 9404105382,
+        "node_id": "MDg6QXJ0aWZhY3Q5NDA0MTA1Mzgy",
         "name": "debug apk (arm64)",
-        "size_in_bytes": 209918630,
-        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9355242699",
-        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9355242699/zip",
+        "size_in_bytes": 209919055,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9404105382",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9404105382/zip",
         "expired": false,
-        "digest": "sha256:71e35e299e51c2416a86736e02cfc33ff2a59004c3f17185d805470b4775842f",
-        "created_at": "2026-08-19T06:50:16Z",
-        "updated_at": "2026-08-19T06:50:16Z",
-        "expires_at": "2026-08-26T06:45:36Z",
+        "digest": "sha256:e71c880bb0b76f447d5d20c09a23a292b0c84f2f112ad70283c34df3d64376f3",
+        "created_at": "2026-08-20T11:12:56Z",
+        "updated_at": "2026-08-20T11:12:56Z",
+        "expires_at": "2026-08-27T11:08:04Z",
         "workflow_run": {
-          "id": 32224775394,
+          "id": 32362313942,
           "repository_id": 954009150,
           "head_repository_id": 954009150,
-          "head_branch": "main",
-          "head_sha": "90e6998a4d3ed744bdbbc4f87a8f2330b8d3114c"
+          "head_branch": "fix/activity_config",
+          "head_sha": "7d78fe05e3926f1e3e7c6485cfc37cb24a7de1d9"
         }
       },
       {
-        "id": 9355226692,
-        "node_id": "MDg6QXJ0aWZhY3Q5MzU1MjI2Njky",
-        "name": "debug apk (arm)",
-        "size_in_bytes": 201088966,
-        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9355226692",
-        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9355226692/zip",
+        "id": 9404099426,
+        "node_id": "MDg6QXJ0aWZhY3Q5NDA0MDk5NDI2",
+        "name": "debug apk (x86_64)",
+        "size_in_bytes": 216056025,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9404099426",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9404099426/zip",
         "expired": false,
-        "digest": "sha256:357e0cd5679918580050149079151eecc16699cb7fc7c889c78d81512c816c84",
-        "created_at": "2026-08-19T06:49:35Z",
-        "updated_at": "2026-08-19T06:49:35Z",
-        "expires_at": "2026-08-26T06:45:36Z",
+        "digest": "sha256:4398552a43e9fc0bdab7c9c64f7a13a397999fa898e55ee3a54455178ead9bcc",
+        "created_at": "2026-08-20T11:12:43Z",
+        "updated_at": "2026-08-20T11:12:43Z",
+        "expires_at": "2026-08-27T11:08:04Z",
         "workflow_run": {
-          "id": 32224775394,
+          "id": 32362313942,
           "repository_id": 954009150,
           "head_repository_id": 954009150,
-          "head_branch": "main",
-          "head_sha": "90e6998a4d3ed744bdbbc4f87a8f2330b8d3114c"
+          "head_branch": "fix/activity_config",
+          "head_sha": "7d78fe05e3926f1e3e7c6485cfc37cb24a7de1d9"
         }
       },
       {
-        "id": 9355223260,
-        "node_id": "MDg6QXJ0aWZhY3Q5MzU1MjIzMjYw",
+        "id": 9404086117,
+        "node_id": "MDg6QXJ0aWZhY3Q5NDA0MDg2MTE3",
+        "name": "debug apk (all)",
+        "size_in_bytes": 392885472,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9404086117",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9404086117/zip",
+        "expired": false,
+        "digest": "sha256:8420c58f43369d1b3858c18e5a2aa169ab7cf070306c4af704984b5c44cf75d4",
+        "created_at": "2026-08-20T11:12:16Z",
+        "updated_at": "2026-08-20T11:12:16Z",
+        "expires_at": "2026-08-27T11:08:04Z",
+        "workflow_run": {
+          "id": 32362313942,
+          "repository_id": 954009150,
+          "head_repository_id": 954009150,
+          "head_branch": "fix/activity_config",
+          "head_sha": "7d78fe05e3926f1e3e7c6485cfc37cb24a7de1d9"
+        }
+      },
+      {
+        "id": 9404083638,
+        "node_id": "MDg6QXJ0aWZhY3Q5NDA0MDgzNjM4",
         "name": "debug apk (x86)",
-        "size_in_bytes": 189440103,
-        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9355223260",
-        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9355223260/zip",
+        "size_in_bytes": 189440770,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9404083638",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9404083638/zip",
         "expired": false,
-        "digest": "sha256:9f997bed0580fa6197c5aebe3051ab97d402e19c960052c465b4004e391bd7a9",
-        "created_at": "2026-08-19T06:49:26Z",
-        "updated_at": "2026-08-19T06:49:26Z",
-        "expires_at": "2026-08-26T06:45:36Z",
+        "digest": "sha256:698e6627f3c31d418aa21ce22a6d0f2fffb3beca2a4b2fbb5be299f67265dfdc",
+        "created_at": "2026-08-20T11:12:11Z",
+        "updated_at": "2026-08-20T11:12:11Z",
+        "expires_at": "2026-08-27T11:08:04Z",
         "workflow_run": {
-          "id": 32224775394,
+          "id": 32362313942,
           "repository_id": 954009150,
           "head_repository_id": 954009150,
-          "head_branch": "main",
-          "head_sha": "90e6998a4d3ed744bdbbc4f87a8f2330b8d3114c"
+          "head_branch": "fix/activity_config",
+          "head_sha": "7d78fe05e3926f1e3e7c6485cfc37cb24a7de1d9"
+        }
+      },
+      {
+        "id": 9404081084,
+        "node_id": "MDg6QXJ0aWZhY3Q5NDA0MDgxMDg0",
+        "name": "debug apk (arm)",
+        "size_in_bytes": 201089300,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9404081084",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/9404081084/zip",
+        "expired": false,
+        "digest": "sha256:eefe9d7f35f7ec356ed4d102eebed1d66c01ccf1b517cbdc014672ba8d748bf7",
+        "created_at": "2026-08-20T11:12:06Z",
+        "updated_at": "2026-08-20T11:12:06Z",
+        "expires_at": "2026-08-27T11:08:04Z",
+        "workflow_run": {
+          "id": 32362313942,
+          "repository_id": 954009150,
+          "head_repository_id": 954009150,
+          "head_branch": "fix/activity_config",
+          "head_sha": "7d78fe05e3926f1e3e7c6485cfc37cb24a7de1d9"
         }
       }
     ]
