@@ -1,5 +1,21 @@
 [
   {
+    "id": 32378738609,
+    "sha": "93bba5a362be084f64837168946d1b83732b6050",
+    "short_sha": "93bba5a",
+    "message": "fix: 修复 SDL 模式下窗口尺寸为 0 导致的渲染黑屏\n\n- JVMActivity 在 surface 可用/尺寸变化时赋值 CallbackBridge.windowWidth/Height\n- notifyLauncher 在 windowWidth/Height 未赋值时用真实屏幕分辨率兜底，避免 SDL 原生侧拿到 0x0\n- sdlEnabled 置位后补发 surface.surfaceChanged，让 SDL 原生侧收到 onNativeSurfaceChanged 就绪通知",
+    "created_at": "2026-08-20T14:11:20Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32378738609"
+  },
+  {
+    "id": 32376967536,
+    "sha": "46ffd9fa0008a8eb70b28ffa79c753d1f2fa7872",
+    "short_sha": "46ffd9f",
+    "message": "build: 更新 LWJGL 3.3.3/3.4.1 合并产物（含 SDL 相关补丁类）",
+    "created_at": "2026-08-20T13:54:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32376967536"
+  },
+  {
     "id": 32354826588,
     "sha": "38bcd00d93a95106b3b4d60675918ef64e780be9",
     "short_sha": "38bcd00",
@@ -382,21 +398,5 @@
     "message": "fix: 监听回调内增删监听导致并发修改崩溃，遍历前复制列表",
     "created_at": "2026-08-15T15:10:05Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31892061716"
-  },
-  {
-    "id": 31892058890,
-    "sha": "9319db11fdd0bdecfd668db92c60d42730b07bcc",
-    "short_sha": "9319db1",
-    "message": "fix: 监听回调内增删监听导致并发修改崩溃，遍历前复制列表",
-    "created_at": "2026-08-15T15:10:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31892058890"
-  },
-  {
-    "id": 31877532959,
-    "sha": "bd7c2a9120a203ede29411cb545e595184012ca5",
-    "short_sha": "bd7c2a9",
-    "message": "refactor: 控制布局管理页重构为 Kotlin 并改用 viewBinding，列表选择通过回调刷新右侧信息",
-    "created_at": "2026-08-15T09:36:56Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31877532959"
   }
 ]
