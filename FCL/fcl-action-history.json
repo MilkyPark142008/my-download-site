@@ -1,5 +1,45 @@
 [
   {
+    "id": 32340273894,
+    "sha": "533085b1b196bad80d1c4f6cd12c54aef15d727d",
+    "short_sha": "533085b",
+    "message": "Merge pull request #1750 from FCL-Team/refactor/ui_manager\n\nrefactor: 使用ViewPager2重构主界面UI管理",
+    "created_at": "2026-08-20T06:36:01Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32340273894"
+  },
+  {
+    "id": 32340014473,
+    "sha": "46898f15886214570cbc5b17f79828ede38e2b6f",
+    "short_sha": "46898f1",
+    "message": "refactor: 统一主界面页面切换动画为淡入上滑过渡",
+    "created_at": "2026-08-20T06:30:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32340014473"
+  },
+  {
+    "id": 32340009508,
+    "sha": "46898f15886214570cbc5b17f79828ede38e2b6f",
+    "short_sha": "46898f1",
+    "message": "refactor: 统一主界面页面切换动画为淡入上滑过渡",
+    "created_at": "2026-08-20T06:30:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32340009508"
+  },
+  {
+    "id": 32336156124,
+    "sha": "9f23b7893737de02a50d5600e9fe92c165158833",
+    "short_sha": "9f23b78",
+    "message": "fix: 修复主界面销毁后主题刷新回调加载崩溃",
+    "created_at": "2026-08-20T05:34:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32336156124"
+  },
+  {
+    "id": 32336153496,
+    "sha": "9f23b7893737de02a50d5600e9fe92c165158833",
+    "short_sha": "9f23b78",
+    "message": "fix: 修复主界面销毁后主题刷新回调加载崩溃",
+    "created_at": "2026-08-20T05:34:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32336153496"
+  },
+  {
     "id": 32225967720,
     "sha": "7a0a24b5e0ee4acf5200bafc4a88e8ea248f378f",
     "short_sha": "7a0a24b",
@@ -358,45 +398,5 @@
     "message": "feat: 下载页 tab 切换添加过渡动画，模式页间内容更新亦淡入",
     "created_at": "2026-08-15T09:17:52Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31876658648"
-  },
-  {
-    "id": 31876657502,
-    "sha": "c5ec446b16e62f72ec7506ee13552ead34ecb6a6",
-    "short_sha": "c5ec446",
-    "message": "feat: 下载页 tab 切换添加过渡动画，模式页间内容更新亦淡入",
-    "created_at": "2026-08-15T09:17:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31876657502"
-  },
-  {
-    "id": 31872221825,
-    "sha": "11021ed2008654113eca849f6be60714e2ac9a3e",
-    "short_sha": "11021ed",
-    "message": "fix: 修正 rebase 后残留的 fcllibrary.R 引用",
-    "created_at": "2026-08-15T07:30:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31872221825"
-  },
-  {
-    "id": 31872220561,
-    "sha": "11021ed2008654113eca849f6be60714e2ac9a3e",
-    "short_sha": "11021ed",
-    "message": "fix: 修正 rebase 后残留的 fcllibrary.R 引用",
-    "created_at": "2026-08-15T07:30:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31872220561"
-  },
-  {
-    "id": 31866698868,
-    "sha": "16b9e01cb4d286d1f1e74582869c6a9e7a3cfc31",
-    "short_sha": "16b9e01",
-    "message": "refactor: FCLLibrary 模块整体并入 FCL 模块",
-    "created_at": "2026-08-15T05:15:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31866698868"
-  },
-  {
-    "id": 31865506902,
-    "sha": "b9cafd9994566b463d6c88504b4e7c2b3f0a0d28",
-    "short_sha": "b9cafd9",
-    "message": "fix: 修正设置页部分中文翻译并同步英文文案",
-    "created_at": "2026-08-15T03:04:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31865506902"
   }
 ]
