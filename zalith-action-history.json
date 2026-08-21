@@ -1,5 +1,13 @@
 [
   {
+    "id": 32506417045,
+    "sha": "61887eb83f009cd1929213cbd696ab82ed82b5f9",
+    "short_sha": "61887eb",
+    "message": "fix: 移除 LWJGL 3.3.3 运行时携带的 jsr305.jar，解决与 java.annotation 模块的包冲突",
+    "created_at": "2026-08-21T17:06:19Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32506417045"
+  },
+  {
     "id": 32483987700,
     "sha": "a378c3f0c3651730f5f09aafd5dc508fc9c3c601",
     "short_sha": "a378c3f",
@@ -390,13 +398,5 @@
     "message": "fix: 删除目录时，清除相关导航历史",
     "created_at": "2026-08-14T15:03:57Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/31812649494"
-  },
-  {
-    "id": 31811554117,
-    "sha": "df9db347c9a130d65a4567c3454b822e68e27eee",
-    "short_sha": "df9db34",
-    "message": "fix: 导航到不存在的目录时崩溃",
-    "created_at": "2026-08-14T14:49:35Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/31811554117"
   }
 ]
