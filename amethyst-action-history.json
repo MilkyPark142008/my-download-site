@@ -1,5 +1,13 @@
 [
   {
+    "id": 32651382884,
+    "sha": "5d71d89fa382d84af72018fddfdf6e7dadaa903d",
+    "short_sha": "5d71d89",
+    "message": "fix(nsbypass): Add /system_ext/ to permitted_when_isolated_path\n\nSome xiaomi phones load a libmivk.so from there which seem to use a hook\nlike libadrenotools. No clue what its for but the symbols contain\nYuanshen(CN GenshinImpact), Star Rail, ZZZ, and thats all I saw. Found\nVRS in there too. Found this dump that contains those files\nhttps://babadook.keenetic.link/dumps/redmi/mist/-/tree/missi-user-16-BP2A.250605.031.A3-OS3.0.305.0.WPUCNXM-release-keys\n\nGuess its for the screen enhancements stuff in their game ready driver\nstuff.",
+    "created_at": "2026-08-23T16:20:45Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/32651382884"
+  },
+  {
     "id": 32645879255,
     "sha": "37eced30239115c7b464b51359001bf06e3d0d21",
     "short_sha": "37eced3",
@@ -390,13 +398,5 @@
     "message": "feat: Readd the force SDL switch\n\nSome devices seem to not work with the dlopen hooks, in that case, user\nshould be able to override and force SDL to always be enabled.",
     "created_at": "2026-07-31T08:42:59Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30619606915"
-  },
-  {
-    "id": 30617295711,
-    "sha": "f09033b4eba94bf946b1954f334eefc603c6238a",
-    "short_sha": "f09033b",
-    "message": "feat: Readd the force SDL switch\n\nSome devices seem to not work with the dlopen hooks, in that case, user\nshould be able to override and force SDL to always be enabled.",
-    "created_at": "2026-07-31T08:42:59Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30617295711"
   }
 ]
