@@ -1,5 +1,13 @@
 [
   {
+    "id": 32625987625,
+    "sha": "7a2fd975beeb1ac21bc47e5b2c91bda8beb833ec",
+    "short_sha": "7a2fd97",
+    "message": "build: 更新 libcc.so，方向控件统一转 ZL2 摇杆并修正 sizeType (#1759)\n\n* build: 更新 libcc.so，包含舍入修复与 ZL2 v12 摇杆支持\n\n* build: 更新 libcc.so，方向控件统一转 ZL2 摇杆并修正 sizeType 大小写",
+    "created_at": "2026-08-23T07:35:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32625987625"
+  },
+  {
     "id": 32555884035,
     "sha": "3c3f503f2f494709034106fd85a48d9d7f12b328",
     "short_sha": "3c3f503",
@@ -390,13 +398,5 @@
     "message": "test: 新增本分支重构内容的 androidTest 仪器测试\n\n覆盖 VersionSetting/Profile 普通字段与回调重构、Profiles StateFlow\n补充、FCLGameRepository 解析与 modpack 配置缓存、ModTranslations\npreload，以及 UIManager 页序与右菜单双指手势（MotionEvent 注入）；\n真机 48 用例全部通过。",
     "created_at": "2026-08-16T03:29:52Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31924446246"
-  },
-  {
-    "id": 31924443747,
-    "sha": "0f8c0d0fa2c44cba62b964c5aacee75bc5789957",
-    "short_sha": "0f8c0d0",
-    "message": "test: 新增本分支重构内容的 androidTest 仪器测试\n\n覆盖 VersionSetting/Profile 普通字段与回调重构、Profiles StateFlow\n补充、FCLGameRepository 解析与 modpack 配置缓存、ModTranslations\npreload，以及 UIManager 页序与右菜单双指手势（MotionEvent 注入）；\n真机 48 用例全部通过。",
-    "created_at": "2026-08-16T03:29:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31924443747"
   }
 ]
