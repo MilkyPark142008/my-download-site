@@ -1,5 +1,13 @@
 [
   {
+    "id": 32635112259,
+    "sha": "d0985cd8996f858c3ea9c9df4a00fa3e3afb0498",
+    "short_sha": "d0985cd",
+    "message": "refactor: 移除 FCLPath.CONTEXT，全局 Context 改用 FCLApp.getAppContext()/getActivity()\n\nFCLApplication 更名 FCLApp，getCurrentActivity 更名 getActivity，\n新增 getAppContext()（attachBaseContext 赋值，@NotNull 契约）。\n\n- 弹窗场景（控制器升级/不兼容提示、账号登录）改取当前 Activity\n  并加 isDestroyed/isFinishing 守卫，修复异步投递期间 Activity\n  销毁导致的 BadTokenException 崩溃\n- FCLBridge 剪贴板/打开链接消除 (Activity) 强转，改为 getActivity 判空\n- 其余 13 处 CONTEXT 读取改用 getAppContext，类加载期/构造期\n  不再依赖 loadPaths 时序（Curse 密钥、WorldInfo 维度名、\n  VersionSetting 内存默认值等）\n- ThemeData 消除完全限定名；AndroidUtil.copyFile 参数改 Context",
+    "created_at": "2026-08-23T10:55:32Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32635112259"
+  },
+  {
     "id": 32632834841,
     "sha": "b645ac664bdcffd24927331a16b865a291ae419d",
     "short_sha": "b645ac6",
@@ -390,13 +398,5 @@
     "message": "fix: 修复下载页重建后首次切换模式列表空白（复用缓存 adapter 时补设 LayoutManager）\n\nDownloadUI 被 ViewPager2 回收重建后，新页面的 RecyclerView 无\nLayoutManager，restoreResult 复用缓存的 adapter 时跳过设置导致\n列表不渲染。真机复现：连续瞬时跳转页面触发 DownloadUI 重建后\n切整合包 100% 复现空列表。",
     "created_at": "2026-08-16T08:15:13Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31935992935"
-  },
-  {
-    "id": 31935990405,
-    "sha": "4a3f49210a3f4e2f7d13745c5bd4a68ffd4f09e2",
-    "short_sha": "4a3f492",
-    "message": "fix: 修复下载页重建后首次切换模式列表空白（复用缓存 adapter 时补设 LayoutManager）\n\nDownloadUI 被 ViewPager2 回收重建后，新页面的 RecyclerView 无\nLayoutManager，restoreResult 复用缓存的 adapter 时跳过设置导致\n列表不渲染。真机复现：连续瞬时跳转页面触发 DownloadUI 重建后\n切整合包 100% 复现空列表。",
-    "created_at": "2026-08-16T08:15:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31935990405"
   }
 ]
