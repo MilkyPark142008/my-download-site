@@ -1,5 +1,13 @@
 [
   {
+    "id": 32643950597,
+    "sha": "b89913d9639c074e6dd192504d7842bb7a570cba",
+    "short_sha": "b89913d",
+    "message": "feat: 完善 SDL 手柄输入（DirectGamepad 桥 + 输入模式 + 直通修复）\n\n- Direct gamepad 桥补全（对齐 AAMC）\n  - nativeEnableGamepadDirectInput 由空桩改为转发 launcher 侧 onDirectInputEnable\n  - LWJGL enableGamepadDirectInput 一次性包装；app 侧创建共享 GLFWgamepadstate 缓冲\n  - 新增 DirectGamepad/DirectGamepadEnableHandler：手柄事件标准化写入缓冲，游戏经 glfwGetGamepadState 读取\n- 手柄输入模式设置\n  - 新增 GamepadInputMode（映射虚拟按键 / SDL 直通），设置页置顶 + 游戏菜单手柄分页可切换\n  - SDL 直通时禁用全部重映射设置；中英繁文案\n- SDL 直通输入通路修复\n  - 直通模式消费手柄事件，避免被系统 onBackPressed 吞键\n  - SDL 未启用时丢弃事件而非回落映射，防止触发 remapper 绑定与 UnsatisfiedLinkError\n  - 按钮改走 SDLActivity.handleKeyEvent（onNativePadDown/Up 带 deviceId/scancode），修复手柄按钮在 SDL 3 下无响应\n- SdlBridge.initializeControllerSubsystems：launcher VM 内强制初始化 SDL GAMEPAD/JOYSTICK/EVENTS\n- sdl_dlopen_hook 对齐 AAMC 安全实现：不再 hook dlopen（Turnip loader 冲突），dlsym 兜底获取 SDL handle\n- 移除调试用手柄事件链日志",
+    "created_at": "2026-08-23T13:54:57Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32643950597"
+  },
+  {
     "id": 32634480121,
     "sha": "cab81b68c78c1f4b68704aa1f02f069bfe0c6e56",
     "short_sha": "cab81b6",
@@ -390,13 +398,5 @@
     "message": "feat: 支持编辑文本",
     "created_at": "2026-08-15T10:45:25Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/31880330909"
-  },
-  {
-    "id": 31831341456,
-    "sha": "edddba9ed103f45a942cad70247e700e7a7a520c",
-    "short_sha": "edddba9",
-    "message": "chore: 跳转到路径对话框默认将光标定位到路径末尾",
-    "created_at": "2026-08-14T19:00:45Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/31831341456"
   }
 ]
