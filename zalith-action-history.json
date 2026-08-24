@@ -1,5 +1,13 @@
 [
   {
+    "id": 32675017053,
+    "sha": "36527d1231aa4bb2ae976be6617db81f80a54b30",
+    "short_sha": "36527d1",
+    "message": "fix: 兼容移动端宿主 EGL 的 SDL GL 上下文创建\n\n移动渲染器（MobileGlues 等）均为 OpenGL ES 实现，而游戏按桌面 GL 惯例\n初始化 SDL，导致 26.3 快照版的 OpenGL 后端在部分设备上创建失败：\n\n- 在窗口创建入口（SDL_CreateWindow / SDL_CreateWindowWithProperties）\n  强制 GL profile 为 ES\n- 接管 SDL_LoadFunction 对 eglChooseConfig / eglCreateContext 的解析，\n  注入归一化代理，使所有调用路径生效：\n  - eglChooseConfig：RENDERABLE_TYPE 携带的 ES3_BIT / OPENGL_BIT 归一化\n    为 ES2_BIT（部分宿主 libEGL 不接受），实际上下文版本仍由\n    CLIENT_VERSION 决定\n  - eglCreateContext：剔除 EGL_CONTEXT_MAJOR/MINOR_VERSION_KHR（部分\n    宿主不识别、直接报 EGL_BAD_ATTRIBUTE），仅保留 CLIENT_VERSION；\n    创建失败时降级为 CLIENT_VERSION=2 重试并输出警告日志\n- 修正 SDL_InitSubSystem 错误日志把 tag 当格式串传入的问题",
+    "created_at": "2026-08-23T23:21:27Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32675017053"
+  },
+  {
     "id": 32667154521,
     "sha": "593273eb598e396e001717c5c1c4f1e471a72e1f",
     "short_sha": "593273e",
@@ -390,13 +398,5 @@
     "message": "fix: SearchOptionToggle 选中状态不正确",
     "created_at": "2026-08-15T22:57:32Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/31913484019"
-  },
-  {
-    "id": 31913383251,
-    "sha": "97f87d75460cea134e30f1df2e6e604c84a7c624",
-    "short_sha": "97f87d7",
-    "message": "feat: 编辑器保存文件时弹出对话框",
-    "created_at": "2026-08-15T22:55:05Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/31913383251"
   }
 ]
