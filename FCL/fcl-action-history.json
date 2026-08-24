@@ -1,5 +1,29 @@
 [
   {
+    "id": 32690409281,
+    "sha": "352215a5ebcfb8e494d46c7e00f8af13fae982ea",
+    "short_sha": "352215a",
+    "message": "1.3.2.8",
+    "created_at": "2026-08-24T04:32:28Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32690409281"
+  },
+  {
+    "id": 32690409330,
+    "sha": "352215a5ebcfb8e494d46c7e00f8af13fae982ea",
+    "short_sha": "352215a",
+    "message": "1.3.2.8",
+    "created_at": "2026-08-24T04:32:28Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32690409330"
+  },
+  {
+    "id": 32689790442,
+    "sha": "8c75b9af35bfc18c1bd3c3361c5d6a4cf19eb900",
+    "short_sha": "8c75b9a",
+    "message": "feat: Splash 加载期间显示加载信息与进度条，SplashActivity 改用 viewBinding",
+    "created_at": "2026-08-24T04:21:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32689790442"
+  },
+  {
     "id": 32682375413,
     "sha": "8357862d39b4aa89be868a7cc1920fccfe127d41",
     "short_sha": "8357862",
@@ -374,29 +398,5 @@
     "message": "fix: Profile 字段变化统一触发配置保存，页面 detach 时注销挂单例的监听\n\n- Profile 的 onGlobalChanged/onSelectedVersionChanged 合并为统一\n  onChanged，gameDir/name 变化也触发配置保存（补全普通字段\n  迁移后的保存触发遗漏）\n- VersionSettingPage/VersionListPage 在 detach 时移除挂在\n  Profile 单例上的监听，避免页面销毁后仍被回调持有\n  （attach 时 StateFlow collect 立即发射当前值会重新注册）",
     "created_at": "2026-08-16T13:25:07Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31949875098"
-  },
-  {
-    "id": 31946514265,
-    "sha": "45794ae7da32c50697383da170678f40520ca8dd",
-    "short_sha": "45794ae",
-    "message": "Merge pull request #1753 from DHJComical/fix/glfw-driver-version-only-if-higher\n\nfix: 仅当驱动版本更高时才覆盖 GLFW 上下文版本",
-    "created_at": "2026-08-16T12:14:16Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31946514265"
-  },
-  {
-    "id": 31946142591,
-    "sha": "fb40070e7c7c4653b712d8508d948fec3c66ca47",
-    "short_sha": "fb40070",
-    "message": "fix: 修复主界面版本图标放大显示不完全（共享 Drawable 实例 bounds 互相污染）\n\n版本图标 DRAWABLE_CACHE 缓存共享同一 Drawable 实例，版本列表\nitem 设置 background 时修改共享实例的 bounds，主界面 icon 再设置\n同一实例时因 setBackgroundDrawable 同实例短路不修正 bounds，\n按列表 item 尺寸绘制在 30dp 控件上导致放大裁剪。改为缓存\nConstantState 每次 newDrawable 返回独立实例。",
-    "created_at": "2026-08-16T11:17:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31946142591"
-  },
-  {
-    "id": 31946139454,
-    "sha": "fb40070e7c7c4653b712d8508d948fec3c66ca47",
-    "short_sha": "fb40070",
-    "message": "fix: 修复主界面版本图标放大显示不完全（共享 Drawable 实例 bounds 互相污染）\n\n版本图标 DRAWABLE_CACHE 缓存共享同一 Drawable 实例，版本列表\nitem 设置 background 时修改共享实例的 bounds，主界面 icon 再设置\n同一实例时因 setBackgroundDrawable 同实例短路不修正 bounds，\n按列表 item 尺寸绘制在 30dp 控件上导致放大裁剪。改为缓存\nConstantState 每次 newDrawable 返回独立实例。",
-    "created_at": "2026-08-16T11:17:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31946139454"
   }
 ]
