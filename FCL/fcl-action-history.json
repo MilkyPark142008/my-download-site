@@ -1,5 +1,13 @@
 [
   {
+    "id": 32723487159,
+    "sha": "0b868f535bc1f78db708e75c7fdc6753dcb20eef",
+    "short_sha": "0b868f5",
+    "message": "optimize: 控制器元数据轻量加载，布局按键按需异步加载\n\n启动/列表加载原先对每个控制器完整反序列化（含全部按键），复杂\n控制器的主线程解析明显卡顿。改为只加载元数据，按键数据在布局\n首次使用时按需异步补全。\n\n- Controller 新增 parseLightweight：JsonReader 流式读取控制器与\n  各布局元数据并注册样式，不实例化按键对象；transient 源文件引用\n- 单布局解析 loadViewGroupData：流式定位目标布局解析 viewData，\n  ensureAllLoaded 保存前补全防按键丢失；完整反序列化的布局标记已加载\n- Controllers 新增 loadViewGroup 异步 API（后台解析、主线程填充并\n  回调，规避 fakefx 列表跨线程崩溃），列表互斥锁保护预初始化并发\n- ViewManager 布局未加载时申请加载并显示转圈进度框（最短显示\n  时长保证可见），就绪后渲染；加载中编辑操作有提示防护\n- ProgressDialog 重构为 Kotlin 并改为透明背景纯转圈",
+    "created_at": "2026-08-24T11:43:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32723487159"
+  },
+  {
     "id": 32721431499,
     "sha": "f111b464b1385b0a41031367b25531110410b89d",
     "short_sha": "f111b46",
@@ -390,13 +398,5 @@
     "message": "fix: 修复快速滑动/切换页面时控件首帧闪白（registerEvent 改为同步执行）",
     "created_at": "2026-08-16T16:33:07Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31958951901"
-  },
-  {
-    "id": 31958947858,
-    "sha": "0bf456d6e7d36a75017bd34b6ea5983a7c2cc514",
-    "short_sha": "0bf456d",
-    "message": "fix: 修复快速滑动/切换页面时控件首帧闪白（registerEvent 改为同步执行）",
-    "created_at": "2026-08-16T16:33:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31958947858"
   }
 ]
