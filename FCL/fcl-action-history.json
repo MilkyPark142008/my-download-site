@@ -1,5 +1,13 @@
 [
   {
+    "id": 32713795568,
+    "sha": "52e2a344c9ace8d27ee7eaa1c35d731b0568af90",
+    "short_sha": "52e2a34",
+    "message": "refactor: 区分物品栏缩放宽度/高度说明文案\n\n- 新增 menu_settings_item_bar_scale_width/height 字符串并同步全部\n  多语言目录（宽度行 / 高度行，德语目录此前缺失该组 key 一并补齐）\n- 物品栏缩放两个滑块行改用对应文案",
+    "created_at": "2026-08-24T09:25:02Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32713795568"
+  },
+  {
     "id": 32698869592,
     "sha": "6408a7e843d582f6a80e631009925f0ec57ac70c",
     "short_sha": "6408a7e",
@@ -390,13 +398,5 @@
     "message": "refactor: 移除无调用方的 ThemeEngine.getWallpaperColor 死代码",
     "created_at": "2026-08-16T15:31:15Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31955918064"
-  },
-  {
-    "id": 31949877808,
-    "sha": "4ff888bbd648b6f448edfd98438bc268338a0db9",
-    "short_sha": "4ff888b",
-    "message": "fix: Profile 字段变化统一触发配置保存，页面 detach 时注销挂单例的监听\n\n- Profile 的 onGlobalChanged/onSelectedVersionChanged 合并为统一\n  onChanged，gameDir/name 变化也触发配置保存（补全普通字段\n  迁移后的保存触发遗漏）\n- VersionSettingPage/VersionListPage 在 detach 时移除挂在\n  Profile 单例上的监听，避免页面销毁后仍被回调持有\n  （attach 时 StateFlow collect 立即发射当前值会重新注册）",
-    "created_at": "2026-08-16T13:25:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31949877808"
   }
 ]
