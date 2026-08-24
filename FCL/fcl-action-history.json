@@ -1,5 +1,13 @@
 [
   {
+    "id": 32698869592,
+    "sha": "6408a7e843d582f6a80e631009925f0ec57ac70c",
+    "short_sha": "6408a7e",
+    "message": "refactor: 移除清除缓存设置项，清理相关字符串资源",
+    "created_at": "2026-08-24T06:48:39Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32698869592"
+  },
+  {
     "id": 32690409281,
     "sha": "352215a5ebcfb8e494d46c7e00f8af13fae982ea",
     "short_sha": "352215a",
@@ -390,13 +398,5 @@
     "message": "fix: Profile 字段变化统一触发配置保存，页面 detach 时注销挂单例的监听\n\n- Profile 的 onGlobalChanged/onSelectedVersionChanged 合并为统一\n  onChanged，gameDir/name 变化也触发配置保存（补全普通字段\n  迁移后的保存触发遗漏）\n- VersionSettingPage/VersionListPage 在 detach 时移除挂在\n  Profile 单例上的监听，避免页面销毁后仍被回调持有\n  （attach 时 StateFlow collect 立即发射当前值会重新注册）",
     "created_at": "2026-08-16T13:25:07Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31949877808"
-  },
-  {
-    "id": 31949875098,
-    "sha": "4ff888bbd648b6f448edfd98438bc268338a0db9",
-    "short_sha": "4ff888b",
-    "message": "fix: Profile 字段变化统一触发配置保存，页面 detach 时注销挂单例的监听\n\n- Profile 的 onGlobalChanged/onSelectedVersionChanged 合并为统一\n  onChanged，gameDir/name 变化也触发配置保存（补全普通字段\n  迁移后的保存触发遗漏）\n- VersionSettingPage/VersionListPage 在 detach 时移除挂在\n  Profile 单例上的监听，避免页面销毁后仍被回调持有\n  （attach 时 StateFlow collect 立即发射当前值会重新注册）",
-    "created_at": "2026-08-16T13:25:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/31949875098"
   }
 ]
