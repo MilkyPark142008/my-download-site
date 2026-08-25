@@ -1,5 +1,21 @@
 [
   {
+    "id": 32860695089,
+    "sha": "298844ba207afca8371ba204c675f1b4165c384c",
+    "short_sha": "298844b",
+    "message": "fix: 关闭“自动唤起输入法（SDL）”后手动输入完全失效的问题\n\n根因：原实现在 showTextInput 入口直接 return false，跳过了整个\nShowTextInputTask。该任务除弹出软键盘外还负责创建/聚焦隐藏的\nSDLDummyEdit——Android 软键盘文字只有经它的 InputConnection 才能合成\nSDL_TEXT_INPUT 事件。任务被整体拒绝后，SDL 侧 text input 已激活、\nMC 在等待文本事件，而 Android 侧没有任何可编辑视图接收提交，导致\n即使手动唤起 IME 输入也无响应。\n\n修复：将设置判断下沉到任务内部，仅跳过 imm.showSoftInput 自动弹出，\n保留 DummyEdit 的创建、布局与焦点准备；关闭选项时用户手动唤起的\nIME 仍附着到已持有焦点的 DummyEdit 上，输入照常生效。",
+    "created_at": "2026-08-25T14:36:14Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32860695089"
+  },
+  {
+    "id": 32857370643,
+    "sha": "2f89d15f00f29b7ff6e7920f1f86b026b2d83f69",
+    "short_sha": "2f89d15",
+    "message": "fix: 收紧 SDL 直通的窗口生命周期与 EGL 兼容层\n\n排查 RenderPearl 后处理阶段 Adreno 驱动 SIGSEGV 过程中，对 sdl_hook\n的窗口与 EGL 介入点做健壮性与语义修正：\n\n- EGL config/context 兼容改为原始请求优先，仅在宿主拒绝后降级重试；\n  修正仅含 KHR 版本属性时 CLIENT_VERSION 被丢弃的问题（ES 语义下补写，\n  desktop 语义下不补写）\n- GLES 兼容层增加渲染器门控：排除 desktopgl(Kopper 桌面 GL) 与\n  gallium_*/vulkan_zink 等 OSMesa 路径，避免桌面请求被强制 ES 化；\n  MobileGlues 判定兼容绝对路径形式的 POJAVEXEC_EGL\n- 补齐 SDL_EGL_GetProcAddress 公共解析入口的代理注入（可绕过\n  SDL_LoadFunction）；原始 EGL 函数指针首次解析后固定，避免多次解析\n  不同 handle 时跨 loader 调用；swap 代理补充空函数指针保护\n- 主窗口复用增加逻辑引用计数：MC 的隐藏工具窗口与主窗口共用 Android\n  单一真实 SDL 窗口，销毁延迟至最后一个逻辑引用释放；新增\n  POJAV_SDL_REUSE_WINDOW 诊断开关（=1 强制启用，其余值禁用）\n- 销毁窗口时同步清理事件窗口缓存指针，防止悬空 SDL_Window* 回落\n\n设备实测：OpenGL + MobileGlues 正常启动并完成 GUI 切换压力测试。",
+    "created_at": "2026-08-25T14:02:33Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32857370643"
+  },
+  {
     "id": 32797298810,
     "sha": "133a1e52c6917d1d98d159a719aa2b88e644e366",
     "short_sha": "133a1e5",
@@ -382,21 +398,5 @@
     "message": "Merge pull request #1643 from dygoo/fix/120hz-refresh-rate\n\nSupport for high refresh rates on some devices.",
     "created_at": "2026-08-16T01:42:35Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/31920185762"
-  },
-  {
-    "id": 31919412466,
-    "sha": "da2950299215ce09055d2184c6a9ec58a777b9e7",
-    "short_sha": "da29502",
-    "message": "Merge pull request #1687 from ZalithLauncher/fix/game_toast\n\nfix: 游戏内未处理展示 Toast 的事件",
-    "created_at": "2026-08-16T01:22:13Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/31919412466"
-  },
-  {
-    "id": 31919396994,
-    "sha": "1d406fd215c4b3eb7856d301e93aa8ca71e189b3",
-    "short_sha": "1d406fd",
-    "message": "fix: 游戏内未处理展示 Toast 的事件",
-    "created_at": "2026-08-16T01:21:36Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/31919396994"
   }
 ]
