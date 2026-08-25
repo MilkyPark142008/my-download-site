@@ -1,5 +1,21 @@
 [
   {
+    "id": 32824580619,
+    "sha": "0efa2a8625172dcb7e2acf6e9b55eea6300b33c1",
+    "short_sha": "0efa2a8",
+    "message": "fix: SDL 输入法弹出崩溃——setLayoutParams 改复用父容器已转换的 LayoutParams，兼容 RelativeLayout 游戏布局",
+    "created_at": "2026-08-25T08:00:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32824580619"
+  },
+  {
+    "id": 32824050420,
+    "sha": "9902042bc36ff7d42793f8a28500546324f01fec",
+    "short_sha": "9902042",
+    "message": "fix: SDL 输入修复——键盘用 GLFW 键码换算 Android 键码；鼠标按 isGrabbing 捕获状态分流相对/绝对坐标",
+    "created_at": "2026-08-25T07:55:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32824050420"
+  },
+  {
     "id": 32815922453,
     "sha": "692121fcd113f844167b5ce26df311426aedf75e",
     "short_sha": "692121f",
@@ -382,21 +398,5 @@
     "message": "optimize: 完善下载页翻译按钮的布局与主题 tint",
     "created_at": "2026-08-17T11:51:35Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32027002637"
-  },
-  {
-    "id": 32025346105,
-    "sha": "c6a0fb2d1dfb84f3640de061f9f8e617366c3d9b",
-    "short_sha": "c6a0fb2",
-    "message": "fix: 修复控制器列表项 inflate 时提前 attachToRoot 的问题",
-    "created_at": "2026-08-17T11:30:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32025346105"
-  },
-  {
-    "id": 32025341691,
-    "sha": "c6a0fb2d1dfb84f3640de061f9f8e617366c3d9b",
-    "short_sha": "c6a0fb2",
-    "message": "fix: 修复控制器列表项 inflate 时提前 attachToRoot 的问题",
-    "created_at": "2026-08-17T11:30:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32025341691"
   }
 ]
