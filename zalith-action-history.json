@@ -1,5 +1,13 @@
 [
   {
+    "id": 32797298810,
+    "sha": "133a1e52c6917d1d98d159a719aa2b88e644e366",
+    "short_sha": "133a1e5",
+    "message": "fix: 桥接 SDL 原生消息框到宿主 Activity，修复弹窗时的 JniAbort 崩溃\n\nlibSDL3 的 Android_JNI_ShowMessageBox 会调用 SDLActivity.getContext()，\n并在返回对象的运行时类上查找 messageboxShowMessageBox；本启动器宿主是\nVMActivity（非 SDLActivity 子类），查找失败后带着 pending 异常继续\nCallIntMethod，触发 ART JniAbort SIGSEGV。\n\n- 在 SDLActivity 新增带宿主参数的静态 messageboxShowMessageBox：\n  MaterialAlertDialogBuilder 构建（MD3），阻塞游戏线程直至用户点击；\n  原实例方法改为一行委托，移除旧的 messageboxCreateAndShow 实现\n- VMActivity 以 @Keep 标注同名同签名方法桥接到该静态版本，\n  保证 R8 下原生层按名查找可用\n- 该文件 javadoc 暂不使用内联标签：JDK 17 上 lint 的 K2 分析器解析\n  内联标签会因 NoSuchMethodError: List.removeLast() 使\n  lintVitalAnalyzeRelease 失败，构建 JDK 升级至 21+ 后可恢复",
+    "created_at": "2026-08-25T01:21:36Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32797298810"
+  },
+  {
     "id": 32788948020,
     "sha": "c7a28efb986ae1a8995846cc062839ae112dab13",
     "short_sha": "c7a28ef",
@@ -390,13 +398,5 @@
     "message": "fix: 游戏内未处理展示 Toast 的事件",
     "created_at": "2026-08-16T01:21:36Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/31919396994"
-  },
-  {
-    "id": 31919238347,
-    "sha": "421cae10f2ec84cdc0472d0ea8fed83671e43f7a",
-    "short_sha": "421cae1",
-    "message": "Merge pull request #1686 from ZalithLauncher/fix/unpack_jre\n\nfix: 解压 JRE 时符号链接创建失败报错刷屏",
-    "created_at": "2026-08-16T01:17:34Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/31919238347"
   }
 ]
