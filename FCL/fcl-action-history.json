@@ -1,5 +1,13 @@
 [
   {
+    "id": 32808551351,
+    "sha": "237765c9421fb322c42d94d286882ff9d8c1a391",
+    "short_sha": "237765c",
+    "message": "fix: 游戏启动时应用 FPS/内存显示与持续性能模式开关\n\n开关行绑定改为先设值再挂监听后，setChecked 不再触发副作用回调，\n导致重启游戏后已开启的 FPS/内存线程不启动、性能模式不应用。\n在 setup 初始化阶段显式调用 toggleFps/toggleMemory/性能模式应用",
+    "created_at": "2026-08-25T04:18:50Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32808551351"
+  },
+  {
     "id": 32798832066,
     "sha": "6feb3ec43b1db1aa85e2b9c87299d8625c20cf8c",
     "short_sha": "6feb3ec",
@@ -390,13 +398,5 @@
     "message": "refactor: UI refactor and optimize View Binding in ControllerDownloadPage",
     "created_at": "2026-08-17T08:51:43Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32012426851"
-  },
-  {
-    "id": 32003785440,
-    "sha": "5236c6ee6617a9197e4cd6370ba046c6bb91a4f7",
-    "short_sha": "5236c6e",
-    "message": "refactor: Profile.global 重命名为 globalVersionSetting 并精简构造器",
-    "created_at": "2026-08-17T06:57:14Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32003785440"
   }
 ]
