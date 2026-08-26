@@ -1,5 +1,13 @@
 [
   {
+    "id": 32923674657,
+    "sha": "39d38989091a2a663cec4f87cfec4f1b76ee28da",
+    "short_sha": "39d3898",
+    "message": "fix: 修复版本设置页输入框失焦，FCLEditText 迁移 Kotlin 并防定制 ROM 焦点前进崩溃\n\n- 全局页（versionId 为 null）usesGlobal 同步条件恒成立，导致每次输入触发\n  notifyDataSetChanged 全量重建列表、输入框失焦；同步仅对特定版本页有意义，\n  加 versionId 守卫跳过\n- FCLEditText 由 Java 迁移 Kotlin（fakefx 属性 API 保持 JVM 方法签名），\n  构造时挂空点击监听：定制 ROM（华为/MIUI）的回车焦点前进逻辑在视图存在\n  点击监听时整段跳过，防止全屏编辑点完成时抛 IllegalStateException 崩溃\n- 行内编辑框 imeOptions 改为 actionDone",
+    "created_at": "2026-08-26T02:41:02Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32923674657"
+  },
+  {
     "id": 32883803868,
     "sha": "d8e7594b424f7cb9f200e6390356c7988df8a807",
     "short_sha": "d8e7594",
@@ -390,13 +398,5 @@
     "message": "fix: 修复主界面销毁后主题刷新回调加载崩溃",
     "created_at": "2026-08-18T02:16:56Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32091513122"
-  },
-  {
-    "id": 32091509825,
-    "sha": "8fa37c7415e9bce01abf853ffb1379909c134b95",
-    "short_sha": "8fa37c7",
-    "message": "fix: 修复主界面销毁后主题刷新回调加载崩溃",
-    "created_at": "2026-08-18T02:16:56Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32091509825"
   }
 ]
