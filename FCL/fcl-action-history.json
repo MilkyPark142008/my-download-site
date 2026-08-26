@@ -1,5 +1,37 @@
 [
   {
+    "id": 32934272072,
+    "sha": "672dc0a70ce3709ee0a94fb08095d5df8eb7dc45",
+    "short_sha": "672dc0a",
+    "message": "fix: 安装器进程通信改文件轮询，日志实时显示并修复多次创建进程时的卡死与误杀",
+    "created_at": "2026-08-26T05:27:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32934272072"
+  },
+  {
+    "id": 32933997851,
+    "sha": "254a8f722e0be443eef0350b044e2c54b3896608",
+    "short_sha": "254a8f7",
+    "message": "fix: 安装器 JVM 异常终止时守护线程补杀进程，补 zh-rHK 运行中文案",
+    "created_at": "2026-08-26T05:09:52Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32933997851"
+  },
+  {
+    "id": 32931867047,
+    "sha": "1bdd0878c9faf9bd8e3fa13d17668363ee4b1f95",
+    "short_sha": "1bdd087",
+    "message": "fix: 安装器报错信息多语言化，新增中英粤三语言文案",
+    "created_at": "2026-08-26T04:45:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32931867047"
+  },
+  {
+    "id": 32931190391,
+    "sha": "8dbc15d432ed09eaefb73c309fd1dcf759076be9",
+    "short_sha": "8dbc15d",
+    "message": "fix: 安装器进程通信改文件轮询，日志实时显示并修复多次创建进程时的卡死与误杀",
+    "created_at": "2026-08-26T04:41:41Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32931190391"
+  },
+  {
     "id": 32927473720,
     "sha": "b4d9fa5b158975c96c9e7e174e5cdd9ae0b5ea5e",
     "short_sha": "b4d9fa5",
@@ -366,37 +398,5 @@
     "message": "fix: 修复主界面销毁后主题刷新回调加载崩溃",
     "created_at": "2026-08-19T04:50:04Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32217310527"
-  },
-  {
-    "id": 32217145217,
-    "sha": "b6274abb3f6744402695c21d64a5a9edcdccf81b",
-    "short_sha": "b6274ab",
-    "message": "fix: 移除 LWJGL 3.3.3 运行时携带的 jsr305.jar，解决与 java.annotation 模块的包冲突",
-    "created_at": "2026-08-19T04:48:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32217145217"
-  },
-  {
-    "id": 32209189071,
-    "sha": "f426cb92ce713d030e7be98dec3b960e49b066bc",
-    "short_sha": "f426cb9",
-    "message": "1.3.2.7",
-    "created_at": "2026-08-19T02:34:19Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32209189071"
-  },
-  {
-    "id": 32209120985,
-    "sha": "f426cb92ce713d030e7be98dec3b960e49b066bc",
-    "short_sha": "f426cb9",
-    "message": "1.3.2.7",
-    "created_at": "2026-08-19T02:34:19Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32209120985"
-  },
-  {
-    "id": 32208532725,
-    "sha": "a931199b95b68367a4355e03ed9467ef83f05763",
-    "short_sha": "a931199",
-    "message": "fix: 修复世界列表条目上下间距过大",
-    "created_at": "2026-08-18T02:27:06Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32208532725"
   }
 ]
