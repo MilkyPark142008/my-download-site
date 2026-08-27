@@ -1,5 +1,53 @@
 [
   {
+    "id": 33087023784,
+    "sha": "990916f92c47903b407cafd0f090c5a9601a7715",
+    "short_sha": "990916f",
+    "message": "Update LauncherHelper.java",
+    "created_at": "2026-08-27T15:17:00Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33087023784"
+  },
+  {
+    "id": 33084880272,
+    "sha": "e77ee48b7a7b0efd57d9cec5d2d3e8856859f312",
+    "short_sha": "e77ee48",
+    "message": "feat: 模组一键下载前置依赖、整合包下载完成待手动安装、下载波浪进度指示器",
+    "created_at": "2026-08-27T14:54:25Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33084880272"
+  },
+  {
+    "id": 33069989726,
+    "sha": "438c36c5a9b45bfc1c1451c2cc09f0e0bb671341",
+    "short_sha": "438c36c",
+    "message": "optimize: 安装器进程超时自动重试，重启 :jvm 重跑同一命令",
+    "created_at": "2026-08-27T11:54:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33069989726"
+  },
+  {
+    "id": 33068990988,
+    "sha": "d16d1ff971143f05f11808fe4a33ecbb5952449a",
+    "short_sha": "d16d1ff",
+    "message": "optimize: 内置浏览器改为默认缓存策略，退出时不再清除缓存",
+    "created_at": "2026-08-27T11:47:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33068990988"
+  },
+  {
+    "id": 33066603958,
+    "sha": "621c5c96d7d1b05ae30f531afac3875129c3e526",
+    "short_sha": "621c5c9",
+    "message": "Update FCLEditText.kt",
+    "created_at": "2026-08-27T11:15:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33066603958"
+  },
+  {
+    "id": 33039170360,
+    "sha": "946aba0354485e7553a87ca390d6126cff0fc626",
+    "short_sha": "946aba0",
+    "message": "build: 显式声明代码直接使用的传递依赖（core-ktx/lifecycle/recyclerview/coroutines）",
+    "created_at": "2026-08-27T04:21:11Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33039170360"
+  },
+  {
     "id": 33038196998,
     "sha": "48cedce37f7b2cb5129ac1ce26443e6f44051a0c",
     "short_sha": "48cedce",
@@ -350,53 +398,5 @@
     "message": "fix: 修复 SDL 模式下窗口尺寸为 0 导致的渲染黑屏\n\n- JVMActivity 在 surface 可用/尺寸变化时赋值 CallbackBridge.windowWidth/Height\n- notifyLauncher 在 windowWidth/Height 未赋值时用真实屏幕分辨率兜底，避免 SDL 原生侧拿到 0x0\n- sdlEnabled 置位后补发 surface.surfaceChanged，让 SDL 原生侧收到 onNativeSurfaceChanged 就绪通知",
     "created_at": "2026-08-20T14:11:20Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32378738609"
-  },
-  {
-    "id": 32376967536,
-    "sha": "46ffd9fa0008a8eb70b28ffa79c753d1f2fa7872",
-    "short_sha": "46ffd9f",
-    "message": "build: 更新 LWJGL 3.3.3/3.4.1 合并产物（含 SDL 相关补丁类）",
-    "created_at": "2026-08-20T13:54:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32376967536"
-  },
-  {
-    "id": 32354826588,
-    "sha": "38bcd00d93a95106b3b4d60675918ef64e780be9",
-    "short_sha": "38bcd00",
-    "message": "Merge pull request #1755 from CiiLu/www\n\nimpl: 优化下载页面翻译按钮样式",
-    "created_at": "2026-08-20T09:37:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32354826588"
-  },
-  {
-    "id": 32354796496,
-    "sha": "f2aeb813615ce8026630d57d90c805b186489df9",
-    "short_sha": "f2aeb81",
-    "message": "refactor: 下载页翻译按钮改为与相邻按钮同款的 FCLButton，图标颜色跟随文字主题色",
-    "created_at": "2026-08-20T09:35:54Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32354796496"
-  },
-  {
-    "id": 32340273894,
-    "sha": "533085b1b196bad80d1c4f6cd12c54aef15d727d",
-    "short_sha": "533085b",
-    "message": "Merge pull request #1750 from FCL-Team/refactor/ui_manager\n\nrefactor: 使用ViewPager2重构主界面UI管理",
-    "created_at": "2026-08-20T06:36:01Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32340273894"
-  },
-  {
-    "id": 32340014473,
-    "sha": "46898f15886214570cbc5b17f79828ede38e2b6f",
-    "short_sha": "46898f1",
-    "message": "refactor: 统一主界面页面切换动画为淡入上滑过渡",
-    "created_at": "2026-08-20T06:30:06Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32340014473"
-  },
-  {
-    "id": 32340009508,
-    "sha": "46898f15886214570cbc5b17f79828ede38e2b6f",
-    "short_sha": "46898f1",
-    "message": "refactor: 统一主界面页面切换动画为淡入上滑过渡",
-    "created_at": "2026-08-20T06:30:06Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32340009508"
   }
 ]

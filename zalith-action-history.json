@@ -1,5 +1,45 @@
 [
   {
+    "id": 33089990104,
+    "sha": "d60bf8e42559c065cd3aabd5621fa97214da546f",
+    "short_sha": "d60bf8e",
+    "message": "Merge pull request #1726 from ZalithLauncher/weblate_terracotta\n\nWeblate terracotta",
+    "created_at": "2026-08-27T15:49:58Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33089990104"
+  },
+  {
+    "id": 33089429488,
+    "sha": "9c0e85bd2c7a1e1b61ff5b079de0e38637f178da",
+    "short_sha": "9c0e85b",
+    "message": "Merge pull request #1725 from ZalithLauncher/weblate_main\n\nWeblate main",
+    "created_at": "2026-08-27T15:43:55Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33089429488"
+  },
+  {
+    "id": 33088363810,
+    "sha": "f0e2e1b10341dd01632b0c09dec3526305b84418",
+    "short_sha": "f0e2e1b",
+    "message": "fix: 官方源停摆时主机级熔断换源，修复批量计数守恒\n\n海量小文件逐个\"官方源优先\"时，单一源的读停摆会让整批陷入\n0B/s 停滞（文件数仍上涨、字节数冻结），且只能靠每文件各自\n超时后才换源恢复。现按 host:port 统计滑动窗口（10s）内的\n读/连接超时，达到阈值即熔断该源 45s，后续文件在建连时刻\n直接跳到其他源；冷却到期自动重新接纳。计数采用窗口内出现\n次数而非连续次数——停摆开始时停摆前发出的请求仍在成功，\n成功清零会让超时永远凑不够连续阈值。\n\n配套修复：\n- 多路复用客户端（全部 assets 走它）readTimeout 15s→8s，\n  停摆后更早触发换源；大文件客户端维持 15s\n- DownloadStats 文件/字节计数全部原子化：此前 64 并发完成\n  会丢自增（2000 全成功只计到 1992，\"完成数守恒告警\"随机\n  触发的根源）\n- TaskBatch 先把本地复用文件登记进 stats，但 run() 开头的\n  resetFiles() 会将其清零：移除该重置，复用字节并入已下载\n  口径并在其后重置测速基线，进度条从已完成部分起步\n- BatchDownloader.clientOverride 声明后从未生效，单测/台架\n  实际一直使用生产客户端；现已优先生效并移除死字段 fileClient\n\n验证（StallReproTest 手动台架，注入官方源停摆窗口）：\n官方/镜像命中 2000:20 → 365:1695，0B/s 采样占比 43%→10%，\n2000 文件计数精确守恒。新增 SourceHealthTest、DownloadStatsTest\n入常规套件；既有引擎测试全部通过。",
+    "created_at": "2026-08-27T15:31:36Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33088363810"
+  },
+  {
+    "id": 33051464865,
+    "sha": "c4981c997a896ad50d1432bec25452f1dd94bb75",
+    "short_sha": "c4981c9",
+    "message": "fix: 速率监测改为逐秒分块采样，每秒报告真实吞吐\n\n滑动窗口每 100ms 前移一次，窗口内容随最新突发剧烈换血，\n叠加接缝/重试的重复计数，读数高频闪烁且时常冒出夸大峰值。\n\n测速重构为不重叠的逐秒块平均：每个报表值统计刚刚完整过去\n的一秒里实际落盘的字节数（含重试产生的真实流量），\n每秒更新一格、不做任何跨窗口平滑或外推。\n进度条与文件计数仍保持 100ms 细粒度刷新不变。",
+    "created_at": "2026-08-27T07:31:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33051464865"
+  },
+  {
+    "id": 33049756994,
+    "sha": "d49723a8e0f2d4498a98c7a4b991d0a865b78339",
+    "short_sha": "d49723a",
+    "message": "fix: 任务进度条按清单完整性自动选择计算口径\n\n批量任务中只要存在未声明大小的文件，字节数就不能构成可靠分母\n（分子却包含全部文件的字节，比例可能提前顶满后假死）。\n\n进度显示策略调整为三档：\n- 所有文件均声明大小：按字节数计算，最平滑\n- 大小不全但文件总数确定：退化为按完成文件数计算\n- 连文件总数都不可知：显示为不确定进度",
+    "created_at": "2026-08-27T07:23:59Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33049756994"
+  },
+  {
     "id": 32915302152,
     "sha": "e18329cc3e854e58429416de0eae2393ff8911d5",
     "short_sha": "e18329c",
@@ -358,45 +398,5 @@
     "message": "Merge pull request #1692 from ZalithLauncher/feat/lwjgl+sdl\n\nfeat: 混合 LWJGL 3.3.6 + 3.4.1",
     "created_at": "2026-08-16T23:14:03Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/31978555294"
-  },
-  {
-    "id": 31978306651,
-    "sha": "7f81a9852e2727442cf3328d5cd59b46a6809401",
-    "short_sha": "7f81a98",
-    "message": "fix: LWJGL 3.3.6 natives",
-    "created_at": "2026-08-16T22:59:11Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/31978306651"
-  },
-  {
-    "id": 31948531470,
-    "sha": "a23646d47803bf344843dcfb005861c4e2888a17",
-    "short_sha": "a23646d",
-    "message": "feat: 更新依赖库",
-    "created_at": "2026-08-16T12:58:50Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/31948531470"
-  },
-  {
-    "id": 31938816426,
-    "sha": "eba819bcf60aebdf4e70f426c6b918ebbe63d6e0",
-    "short_sha": "eba819b",
-    "message": "Merge pull request #1690 from CiiLu/qwqwqwq\n\nfeat: 显示存档游戏时长",
-    "created_at": "2026-08-16T09:21:15Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/31938816426"
-  },
-  {
-    "id": 31932464879,
-    "sha": "ecd083133e63c50c88f9de2247bf9bc22a706fd0",
-    "short_sha": "ecd0831",
-    "message": "Revert \"Merge pull request #1594 from Leowly/codex/issue-1521-touch-coordinate-fix\"",
-    "created_at": "2026-08-16T06:52:14Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/31932464879"
-  },
-  {
-    "id": 31923791155,
-    "sha": "f8fa37b093775927a0d4f893cba80ac47247bb07",
-    "short_sha": "f8fa37b",
-    "message": "Revert \"Merge pull request #1643 from dygoo/fix/120hz-refresh-rate\"",
-    "created_at": "2026-08-16T03:14:45Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/31923791155"
   }
 ]
