@@ -1,5 +1,13 @@
 [
   {
+    "id": 33252064815,
+    "sha": "0782a25f714ecfd920364ca2a85b6c4780d55ad3",
+    "short_sha": "0782a25",
+    "message": "build: 升级 Kotlin Gradle 插件 2.4.10 与 Gradle 8.14.4\n\n- serialization 插件版本收编进 version catalog（原 FCL/build.gradle.kts\n  硬编码 2.3.20 与 kotlin 版本脱钩，统一由 kotlin 版本引用）\n- Gradle wrapper 8.13 → 8.14.4（KGP 2.5.0 起最低要求 8.14.4）\n- modinfo 六文件加 @file:OptIn(InternalSerializationApi)，压制 IDE 对\n  kotlinx 1.10 序列化声明的误报（IDE 插件与工具链对齐后可移除）",
+    "created_at": "2026-08-29T12:09:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33252064815"
+  },
+  {
     "id": 33234192226,
     "sha": "da44632b4773e1f6539f6dfcd03c306dd52e2e40",
     "short_sha": "da44632",
@@ -390,13 +398,5 @@
     "message": "build: 更新 libcc.so，方向控件统一转 ZL2 摇杆并修正 sizeType (#1759)\n\n* build: 更新 libcc.so，包含舍入修复与 ZL2 v12 摇杆支持\n\n* build: 更新 libcc.so，方向控件统一转 ZL2 摇杆并修正 sizeType 大小写",
     "created_at": "2026-08-23T07:35:53Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32625987625"
-  },
-  {
-    "id": 32555884035,
-    "sha": "3c3f503f2f494709034106fd85a48d9d7f12b328",
-    "short_sha": "3c3f503",
-    "message": "build: 更新 LWJGL 3.3.3/3.4.1 合并产物（含 glfwGetWindowPos stub）",
-    "created_at": "2026-08-22T06:01:14Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32555884035"
   }
 ]

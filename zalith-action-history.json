@@ -1,5 +1,45 @@
 [
   {
+    "id": 33251655566,
+    "sha": "b0995b9a646dbd450bcf00cd39c419f9a889e4fb",
+    "short_sha": "b0995b9",
+    "message": "[Do not use!] Merge branch 'origin/weblate_main' into Weblate.",
+    "created_at": "2026-08-29T12:05:08Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33251655566"
+  },
+  {
+    "id": 33251346466,
+    "sha": "8e9c7ae5694e78d314631ca25323a5aba9185621",
+    "short_sha": "8e9c7ae",
+    "message": "Merge pull request #1738 from ZalithLauncher/main\n\nmerge main",
+    "created_at": "2026-08-29T11:58:07Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33251346466"
+  },
+  {
+    "id": 33251326143,
+    "sha": "378f86c08f757b68ce9864ae73eb9319359ca9e2",
+    "short_sha": "378f86c",
+    "message": "Merge pull request #1733 from ZalithLauncher/main\n\nmerge main",
+    "created_at": "2026-08-29T11:57:34Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33251326143"
+  },
+  {
+    "id": 33251262185,
+    "sha": "8dd00f629a49aa63d6732bb61c3876dd1e1cdf52",
+    "short_sha": "8dd00f6",
+    "message": "Merge pull request #1737 from ZalithLauncher/fix/cursor\n\nfix: 多虚拟鼠标指针图标功能失效",
+    "created_at": "2026-08-29T11:55:44Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33251262185"
+  },
+  {
+    "id": 33251005584,
+    "sha": "42e2363cee82cd335c3fc4f23bbd81d8329ac657",
+    "short_sha": "42e2363",
+    "message": "fix: 多虚拟鼠标指针图标功能失效",
+    "created_at": "2026-08-29T11:48:54Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33251005584"
+  },
+  {
     "id": 33235007355,
     "sha": "70a6d5235d9dbd4a4901e5165a917e29f3d4875d",
     "short_sha": "70a6d52",
@@ -358,45 +398,5 @@
     "message": "fix: 修复 26.3 SDL 鼠标按钮粘滞",
     "created_at": "2026-08-23T19:17:22Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32660768318"
-  },
-  {
-    "id": 32643950597,
-    "sha": "b89913d9639c074e6dd192504d7842bb7a570cba",
-    "short_sha": "b89913d",
-    "message": "feat: 完善 SDL 手柄输入（DirectGamepad 桥 + 输入模式 + 直通修复）\n\n- Direct gamepad 桥补全（对齐 AAMC）\n  - nativeEnableGamepadDirectInput 由空桩改为转发 launcher 侧 onDirectInputEnable\n  - LWJGL enableGamepadDirectInput 一次性包装；app 侧创建共享 GLFWgamepadstate 缓冲\n  - 新增 DirectGamepad/DirectGamepadEnableHandler：手柄事件标准化写入缓冲，游戏经 glfwGetGamepadState 读取\n- 手柄输入模式设置\n  - 新增 GamepadInputMode（映射虚拟按键 / SDL 直通），设置页置顶 + 游戏菜单手柄分页可切换\n  - SDL 直通时禁用全部重映射设置；中英繁文案\n- SDL 直通输入通路修复\n  - 直通模式消费手柄事件，避免被系统 onBackPressed 吞键\n  - SDL 未启用时丢弃事件而非回落映射，防止触发 remapper 绑定与 UnsatisfiedLinkError\n  - 按钮改走 SDLActivity.handleKeyEvent（onNativePadDown/Up 带 deviceId/scancode），修复手柄按钮在 SDL 3 下无响应\n- SdlBridge.initializeControllerSubsystems：launcher VM 内强制初始化 SDL GAMEPAD/JOYSTICK/EVENTS\n- sdl_dlopen_hook 对齐 AAMC 安全实现：不再 hook dlopen（Turnip loader 冲突），dlsym 兜底获取 SDL handle\n- 移除调试用手柄事件链日志",
-    "created_at": "2026-08-23T13:54:57Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32643950597"
-  },
-  {
-    "id": 32634480121,
-    "sha": "cab81b68c78c1f4b68704aa1f02f069bfe0c6e56",
-    "short_sha": "cab81b6",
-    "message": "feat: 完善 SDL 手柄输入桥",
-    "created_at": "2026-08-23T10:42:12Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32634480121"
-  },
-  {
-    "id": 32624616317,
-    "sha": "869ffd4435a7d4e97ed7a9a192a9020725b56d07",
-    "short_sha": "869ffd4",
-    "message": "fix: 完善 SDL 输入法输入生命周期",
-    "created_at": "2026-08-23T07:04:44Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32624616317"
-  },
-  {
-    "id": 32559060890,
-    "sha": "e9bd6dc95272643564d321ffc703f2c11a837139",
-    "short_sha": "e9bd6dc",
-    "message": "fix: 修复 SDL 首帧分辨率同步",
-    "created_at": "2026-08-22T07:01:26Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32559060890"
-  },
-  {
-    "id": 32506417045,
-    "sha": "61887eb83f009cd1929213cbd696ab82ed82b5f9",
-    "short_sha": "61887eb",
-    "message": "fix: 移除 LWJGL 3.3.3 运行时携带的 jsr305.jar，解决与 java.annotation 模块的包冲突",
-    "created_at": "2026-08-21T17:06:19Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32506417045"
   }
 ]
