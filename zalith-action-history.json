@@ -1,5 +1,45 @@
 [
   {
+    "id": 33235007355,
+    "sha": "70a6d5235d9dbd4a4901e5165a917e29f3d4875d",
+    "short_sha": "70a6d52",
+    "message": "Merge pull request #1736 from ZalithLauncher/chore/skip_intergrity\n\nchore: 不检查游戏完整性时，完全跳过检查任务",
+    "created_at": "2026-08-29T04:56:55Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33235007355"
+  },
+  {
+    "id": 33234911854,
+    "sha": "1078063dc902f6c105e973da86b41d1b4236a167",
+    "short_sha": "1078063",
+    "message": "chore: 不检查游戏完整性时，完全跳过检查任务",
+    "created_at": "2026-08-29T04:54:09Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33234911854"
+  },
+  {
+    "id": 33234472042,
+    "sha": "6bca037c4ef864f06cf7be786021f9e158488945",
+    "short_sha": "6bca037",
+    "message": "Merge pull request #1735 from ZalithLauncher/feat/relogin\n\nfeat: 账号凭据失效时引导重新登录 & 重构启动游戏为任务流形式",
+    "created_at": "2026-08-29T04:42:40Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33234472042"
+  },
+  {
+    "id": 33234420117,
+    "sha": "61cf6a75e75a033ed1847ee3be660d349f8789c7",
+    "short_sha": "61cf6a7",
+    "message": "fix: 账号登录异常时未取消启动任务流",
+    "created_at": "2026-08-29T04:41:15Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33234420117"
+  },
+  {
+    "id": 33233841123,
+    "sha": "f428956f47f58f40d7a3f5f4e0ae387e7e7edddd",
+    "short_sha": "f428956",
+    "message": "refactor: 重构启动游戏为任务流形式",
+    "created_at": "2026-08-29T04:26:43Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33233841123"
+  },
+  {
     "id": 33199770801,
     "sha": "71d1f8735b7d3a63a2b7ad1f35f82046622149b8",
     "short_sha": "71d1f87",
@@ -358,45 +398,5 @@
     "message": "fix: 移除 LWJGL 3.3.3 运行时携带的 jsr305.jar，解决与 java.annotation 模块的包冲突",
     "created_at": "2026-08-21T17:06:19Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32506417045"
-  },
-  {
-    "id": 32483987700,
-    "sha": "a378c3f0c3651730f5f09aafd5dc508fc9c3c601",
-    "short_sha": "a378c3f",
-    "message": "[Do not use!] Translated using Weblate (Korean)\n\nCurrently translated at 72.2% (1014 of 1403 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/ko/",
-    "created_at": "2026-08-21T12:51:42Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32483987700"
-  },
-  {
-    "id": 32407445048,
-    "sha": "3232b3dd3e065b690b01e23b1ad229fe146279bb",
-    "short_sha": "3232b3d",
-    "message": "feat: 支持重映射实体鼠标侧键",
-    "created_at": "2026-08-20T19:12:42Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32407445048"
-  },
-  {
-    "id": 32369965027,
-    "sha": "9c12d6f43b2a0bdc424b8f898781e49cc912a9c4",
-    "short_sha": "9c12d6f",
-    "message": "[Do not use!] Merge branch 'origin/weblate_main' into Weblate.",
-    "created_at": "2026-08-20T12:38:56Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32369965027"
-  },
-  {
-    "id": 32369892386,
-    "sha": "93c73ae8859dc05b5e45ab90a2a0380926ade7b6",
-    "short_sha": "93c73ae",
-    "message": "Merge pull request #1710 from ZalithLauncher/main\n\nmerge main",
-    "created_at": "2026-08-20T12:38:22Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32369892386"
-  },
-  {
-    "id": 32369886447,
-    "sha": "db5506d5e75a619f13b99625f6ea8e6b343066e7",
-    "short_sha": "db5506d",
-    "message": "Merge pull request #1709 from ZalithLauncher/main\n\nmerge main",
-    "created_at": "2026-08-20T12:38:17Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32369886447"
   }
 ]

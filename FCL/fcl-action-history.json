@@ -1,5 +1,37 @@
 [
   {
+    "id": 33234192226,
+    "sha": "da44632b4773e1f6539f6dfcd03c306dd52e2e40",
+    "short_sha": "da44632",
+    "message": "fix: 修复按需加载下 bindViewGroup 唤起布局不显示、进度框滞留与组层级错乱\n\n- switchViewGroupVisibility 三态分发：未加载走独立进度框按需加载，已加载未渲染直接渲染为可见（隐藏组不在渲染目标中时原逻辑遍历为空导致点击无效），已渲染保持翻转开关语义\n- 唤起加载改用独立一次性进度框，回调即关，不再与批量加载共享计数（跨会话计数错位导致进度框滞留不关）\n- renderGroup 按文件记录顺序以 translationZ 固定组间 z 序，防止异步加载下后加载的背景组盖住操作组；菜单 elevation 抬高避免被组序顶穿\n- ensureAllLoaded 的 latch.countDown 移入 finally，防回填异常占死 io 线程池",
+    "created_at": "2026-08-29T04:34:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33234192226"
+  },
+  {
+    "id": 33230951555,
+    "sha": "be1b6befb2b3aa9f4633370956dd045d0a87f06c",
+    "short_sha": "be1b6be",
+    "message": "fix: 编辑模式视图组改为 setup 阶段自动初始化,不再依赖菜单列表绑定兜底",
+    "created_at": "2026-08-29T03:15:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33230951555"
+  },
+  {
+    "id": 33226516430,
+    "sha": "f5df60f23e399d06f0ace54adb16affa587d95f7",
+    "short_sha": "f5df60f",
+    "message": "1.3.2.9",
+    "created_at": "2026-08-29T01:28:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33226516430"
+  },
+  {
+    "id": 33226516795,
+    "sha": "f5df60f23e399d06f0ace54adb16affa587d95f7",
+    "short_sha": "f5df60f",
+    "message": "1.3.2.9",
+    "created_at": "2026-08-29T01:28:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33226516795"
+  },
+  {
     "id": 33132528111,
     "sha": "c2b80fe4fdc5561cd02974bef6ab7728e459bf1e",
     "short_sha": "c2b80fe",
@@ -366,37 +398,5 @@
     "message": "build: 更新 LWJGL 3.3.3/3.4.1 合并产物（含 glfwGetWindowPos stub）",
     "created_at": "2026-08-22T06:01:14Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32555884035"
-  },
-  {
-    "id": 32554302474,
-    "sha": "dbc78a8f9413fb183a37ec363acbed67275cab37",
-    "short_sha": "dbc78a8",
-    "message": "Merge pull request #1760 from FCL-Team/weblate-foldcraftlauncher-fcl\n\nchore(l10n): update translations",
-    "created_at": "2026-08-22T05:25:25Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32554302474"
-  },
-  {
-    "id": 32479266024,
-    "sha": "a1ed4f08c58ed7c18058157e75c80f37ac64128e",
-    "short_sha": "a1ed4f0",
-    "message": "chore(l10n): update Chinese (Traditional Han script, Hong Kong) translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Chinese (Traditional Han script, Hong Kong)\nProgress: 84.0% (1075 of 1279 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant_HK/",
-    "created_at": "2026-08-21T11:52:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32479266024"
-  },
-  {
-    "id": 32479263350,
-    "sha": "a1ed4f08c58ed7c18058157e75c80f37ac64128e",
-    "short_sha": "a1ed4f0",
-    "message": "chore(l10n): update Chinese (Traditional Han script, Hong Kong) translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Chinese (Traditional Han script, Hong Kong)\nProgress: 84.0% (1075 of 1279 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant_HK/",
-    "created_at": "2026-08-21T11:52:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32479263350"
-  },
-  {
-    "id": 32477617291,
-    "sha": "5c632ecee365532229b73e093f7c40452ceeb296",
-    "short_sha": "5c632ec",
-    "message": "build: 更新 libcc.so，方向控件统一转 ZL2 摇杆并修正 sizeType 大小写",
-    "created_at": "2026-08-21T10:40:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32477617291"
   }
 ]
