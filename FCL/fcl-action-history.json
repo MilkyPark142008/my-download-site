@@ -1,5 +1,53 @@
 [
   {
+    "id": 33256862295,
+    "sha": "a44214c9ae874fb681925b234be3c4ac5ca4ddca",
+    "short_sha": "a44214c",
+    "message": "feat: 懒加载控制布局，优化加载速度 (#1787)\n\n* optimize: 控制器元数据轻量加载，布局按键按需异步加载\n\n启动/列表加载原先对每个控制器完整反序列化（含全部按键），复杂\n控制器的主线程解析明显卡顿。改为只加载元数据，按键数据在布局\n首次使用时按需异步补全。\n\n- Controller 新增 parseLightweight：JsonReader 流式读取控制器与\n  各布局元数据并注册样式，不实例化按键对象；transient 源文件引用\n- 单布局解析 loadViewGroupData：流式定位目标布局解析 viewData，\n  ensureAllLoaded 保存前补全防按键丢失；完整反序列化的布局标记已加载\n- Controllers 新增 loadViewGroup 异步 API（后台解析、主线程填充并\n  回调，规避 fakefx 列表跨线程崩溃），列表互斥锁保护预初始化并发\n- ViewManager 布局未加载时申请加载并显示转圈进度框（最短显示\n  时长保证可见），就绪后渲染；加载中编辑操作有提示防护\n- ProgressDialog 重构为 Kotlin 并改为透明背景纯转圈\n\n* fix: 修复按需加载下 bindViewGroup 唤起布局不显示、进度框滞留与组层级错乱\n\n- switchViewGroupVisibility 三态分发：未加载走独立进度框按需加载，已加载未渲染直接渲染为可见（隐藏组不在渲染目标中时原逻辑遍历为空导致点击无效），已渲染保持翻转开关语义\n- 唤起加载改用独立一次性进度框，回调即关，不再与批量加载共享计数（跨会话计数错位导致进度框滞留不关）\n- renderGroup 按文件记录顺序以 translationZ 固定组间 z 序，防止异步加载下后加载的背景组盖住操作组；菜单 elevation 抬高避免被组序顶穿\n- ensureAllLoaded 的 latch.countDown 移入 finally，防回填异常占死 io 线程池",
+    "created_at": "2026-08-29T14:09:46Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33256862295"
+  },
+  {
+    "id": 33256823296,
+    "sha": "6fb7c558415d7117bbddb0a44c1627bac2535c84",
+    "short_sha": "6fb7c55",
+    "message": "Merge branch 'main' into refactor/download",
+    "created_at": "2026-08-29T14:08:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33256823296"
+  },
+  {
+    "id": 33256784291,
+    "sha": "3039e931074f75ace7568254d442a145e869c03f",
+    "short_sha": "3039e93",
+    "message": "fix: buildscript classpath 覆盖 R8 9.4.17，修复 Kotlin 2.4.10 产物 dex 时 metadata 解析崩溃",
+    "created_at": "2026-08-29T14:07:50Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33256784291"
+  },
+  {
+    "id": 33256504050,
+    "sha": "e622425314d8f039923ca37c0eaec3b5f694d1ae",
+    "short_sha": "e622425",
+    "message": "fix: rebase main 后适配 record 访问器与一键下载的版本参数获取方式",
+    "created_at": "2026-08-29T14:00:24Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33256504050"
+  },
+  {
+    "id": 33255963907,
+    "sha": "da44632b4773e1f6539f6dfcd03c306dd52e2e40",
+    "short_sha": "da44632",
+    "message": "fix: 修复按需加载下 bindViewGroup 唤起布局不显示、进度框滞留与组层级错乱\n\n- switchViewGroupVisibility 三态分发：未加载走独立进度框按需加载，已加载未渲染直接渲染为可见（隐藏组不在渲染目标中时原逻辑遍历为空导致点击无效），已渲染保持翻转开关语义\n- 唤起加载改用独立一次性进度框，回调即关，不再与批量加载共享计数（跨会话计数错位导致进度框滞留不关）\n- renderGroup 按文件记录顺序以 translationZ 固定组间 z 序，防止异步加载下后加载的背景组盖住操作组；菜单 elevation 抬高避免被组序顶穿\n- ensureAllLoaded 的 latch.countDown 移入 finally，防回填异常占死 io 线程池",
+    "created_at": "2026-08-29T04:34:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33255963907"
+  },
+  {
+    "id": 33255777371,
+    "sha": "c8854fc4db8e81b1e762ff621a2ac7a973501d43",
+    "short_sha": "c8854fc",
+    "message": "feat: 一键下载对本地已安装模组去重\n\n解析前扫描 mods 目录构建本地已安装索引：先按文件名快速检测（零网络），\n未命中再通过当前下载源反查（CurseForge 文件指纹 / Modrinth SHA-1）做\n项目级检测，命中（含版本不同）即跳过下载并提示数量。\n本体已安装时仅跳过本体下载，其必需前置仍会正常解析并安装。",
+    "created_at": "2026-08-27T15:12:05Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33255777371"
+  },
+  {
     "id": 33252064815,
     "sha": "0782a25f714ecfd920364ca2a85b6c4780d55ad3",
     "short_sha": "0782a25",
@@ -350,53 +398,5 @@
     "message": "1.3.2.8",
     "created_at": "2026-08-24T04:32:28Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32690409330"
-  },
-  {
-    "id": 32689790442,
-    "sha": "8c75b9af35bfc18c1bd3c3361c5d6a4cf19eb900",
-    "short_sha": "8c75b9a",
-    "message": "feat: Splash 加载期间显示加载信息与进度条，SplashActivity 改用 viewBinding",
-    "created_at": "2026-08-24T04:21:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32689790442"
-  },
-  {
-    "id": 32682375413,
-    "sha": "8357862d39b4aa89be868a7cc1920fccfe127d41",
-    "short_sha": "8357862",
-    "message": "fix: 修复部分设备进入版本设置页卡住的问题\n\n进入设置页时 fclversion.cfg 的读取与 Gson 解析、属性变化导致的写盘\n都在主线程同步执行，慢存储/低端设备上会阻塞页面创建与切换（按压\n反馈滞留、页面迟迟不出现）。\n\n- FCLGameRepository 新增 preloadVersionSetting 后台预读缓存，主线程\n  getVersionSetting 走缓存命中即纯内存操作；saveVersionSetting 改为\n  IO 线程异步落盘\n- VersionSettingPage.loadVersion 拆分为后台预读 + 主线程装配，loadSeq\n  计数丢弃过期回调（页面销毁时亦失效）；changed() 监听与控制器回调\n  统一回主线程更新 UI",
-    "created_at": "2026-08-24T02:12:16Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32682375413"
-  },
-  {
-    "id": 32680421308,
-    "sha": "682f204b231bcab9b24a861b6abc7dfd5ba32bd5",
-    "short_sha": "682f204",
-    "message": "Update MainActivity.kt",
-    "created_at": "2026-08-24T01:38:02Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32680421308"
-  },
-  {
-    "id": 32635112259,
-    "sha": "d0985cd8996f858c3ea9c9df4a00fa3e3afb0498",
-    "short_sha": "d0985cd",
-    "message": "refactor: 移除 FCLPath.CONTEXT，全局 Context 改用 FCLApp.getAppContext()/getActivity()\n\nFCLApplication 更名 FCLApp，getCurrentActivity 更名 getActivity，\n新增 getAppContext()（attachBaseContext 赋值，@NotNull 契约）。\n\n- 弹窗场景（控制器升级/不兼容提示、账号登录）改取当前 Activity\n  并加 isDestroyed/isFinishing 守卫，修复异步投递期间 Activity\n  销毁导致的 BadTokenException 崩溃\n- FCLBridge 剪贴板/打开链接消除 (Activity) 强转，改为 getActivity 判空\n- 其余 13 处 CONTEXT 读取改用 getAppContext，类加载期/构造期\n  不再依赖 loadPaths 时序（Curse 密钥、WorldInfo 维度名、\n  VersionSetting 内存默认值等）\n- ThemeData 消除完全限定名；AndroidUtil.copyFile 参数改 Context",
-    "created_at": "2026-08-23T10:55:32Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32635112259"
-  },
-  {
-    "id": 32632834841,
-    "sha": "b645ac664bdcffd24927331a16b865a291ae419d",
-    "short_sha": "b645ac6",
-    "message": "refactor: getLocalizedText 静态 key 迁移至 R.string\n\n静态 key 调用改为 context.getString(R.string.xxx)，编译期校验资源存在；修复 fabric-api 连字符 key、world.export.wizard 点号 key 两个长期未命中的本地化；补 modpack_type_hmcl 九语言翻译。动态 key（curse_category/枚举拼接）保留 getLocalizedText 机制",
-    "created_at": "2026-08-23T10:03:49Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32632834841"
-  },
-  {
-    "id": 32625987625,
-    "sha": "7a2fd975beeb1ac21bc47e5b2c91bda8beb833ec",
-    "short_sha": "7a2fd97",
-    "message": "build: 更新 libcc.so，方向控件统一转 ZL2 摇杆并修正 sizeType (#1759)\n\n* build: 更新 libcc.so，包含舍入修复与 ZL2 v12 摇杆支持\n\n* build: 更新 libcc.so，方向控件统一转 ZL2 摇杆并修正 sizeType 大小写",
-    "created_at": "2026-08-23T07:35:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32625987625"
   }
 ]
