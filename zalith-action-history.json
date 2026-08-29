@@ -1,5 +1,37 @@
 [
   {
+    "id": 33275673189,
+    "sha": "ee621a62a9d55dc48750af74830c5c41ce62e27b",
+    "short_sha": "ee621a6",
+    "message": "fix: 修复模块化 Forge 启动时 LWJGL 组件拆分包冲突",
+    "created_at": "2026-08-29T21:16:58Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33275673189"
+  },
+  {
+    "id": 33275547059,
+    "sha": "5cf0ee39080e38313beafabea866c0606229d456",
+    "short_sha": "5cf0ee3",
+    "message": "Merge pull request #1744 from ZalithLauncher/main\n\nmerge main",
+    "created_at": "2026-08-29T21:14:12Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33275547059"
+  },
+  {
+    "id": 33275453520,
+    "sha": "87481dafbbbab0766eb29252746e01045393e3d5",
+    "short_sha": "87481da",
+    "message": "Merge pull request #1743 from ZalithLauncher/refactor/version_dedupe_lib\n\nrefactor: 重构游戏版本依赖库去重机制",
+    "created_at": "2026-08-29T21:12:06Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33275453520"
+  },
+  {
+    "id": 33275369126,
+    "sha": "90b11fcee85622b31c9494bd1ce51138099378d1",
+    "short_sha": "90b11fc",
+    "message": "refactor: 重构游戏版本依赖库去重机制",
+    "created_at": "2026-08-29T21:10:06Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33275369126"
+  },
+  {
     "id": 33272879503,
     "sha": "bce600636de12a5a11d5c6c1a953c82908ea3dfc",
     "short_sha": "bce6006",
@@ -366,37 +398,5 @@
     "message": "fix: 桥接 SDL 原生消息框到宿主 Activity，修复弹窗时的 JniAbort 崩溃\n\nlibSDL3 的 Android_JNI_ShowMessageBox 会调用 SDLActivity.getContext()，\n并在返回对象的运行时类上查找 messageboxShowMessageBox；本启动器宿主是\nVMActivity（非 SDLActivity 子类），查找失败后带着 pending 异常继续\nCallIntMethod，触发 ART JniAbort SIGSEGV。\n\n- 在 SDLActivity 新增带宿主参数的静态 messageboxShowMessageBox：\n  MaterialAlertDialogBuilder 构建（MD3），阻塞游戏线程直至用户点击；\n  原实例方法改为一行委托，移除旧的 messageboxCreateAndShow 实现\n- VMActivity 以 @Keep 标注同名同签名方法桥接到该静态版本，\n  保证 R8 下原生层按名查找可用\n- 该文件 javadoc 暂不使用内联标签：JDK 17 上 lint 的 K2 分析器解析\n  内联标签会因 NoSuchMethodError: List.removeLast() 使\n  lintVitalAnalyzeRelease 失败，构建 JDK 升级至 21+ 后可恢复",
     "created_at": "2026-08-25T01:21:36Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32797298810"
-  },
-  {
-    "id": 32788948020,
-    "sha": "c7a28efb986ae1a8995846cc062839ae112dab13",
-    "short_sha": "c7a28ef",
-    "message": "fix: 为 SDL 相关 JNI 边界类标注 @Keep",
-    "created_at": "2026-08-24T23:21:04Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32788948020"
-  },
-  {
-    "id": 32777306716,
-    "sha": "ffeb8c9c33df38c36be91bffd964912ea19b0695",
-    "short_sha": "ffeb8c9",
-    "message": "feat: 新增 “自动唤起输入法（SDL）” 设置项",
-    "created_at": "2026-08-24T21:02:30Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32777306716"
-  },
-  {
-    "id": 32775013948,
-    "sha": "1e64877eea43a7725e723994acd11da82fcff45f",
-    "short_sha": "1e64877",
-    "message": "feat: SDL 直通手柄输入接入控制布局的使用中感知",
-    "created_at": "2026-08-24T20:35:38Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32775013948"
-  },
-  {
-    "id": 32770496250,
-    "sha": "11abf516a6110e920d2be7b729a8a7968f97a68e",
-    "short_sha": "11abf51",
-    "message": "fix: 经 SDL_LoadFunction 代理 eglSwapBuffers，恢复 SDL 路径帧率捕获",
-    "created_at": "2026-08-24T19:50:34Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32770496250"
   }
 ]
