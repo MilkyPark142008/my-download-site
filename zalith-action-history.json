@@ -1,5 +1,53 @@
 [
   {
+    "id": 33272879503,
+    "sha": "bce600636de12a5a11d5c6c1a953c82908ea3dfc",
+    "short_sha": "bce6006",
+    "message": "Merge pull request #1742 from ZalithLauncher/fix/search_id_dlpath\n\nfix: “搜索ID”屏幕跳转的项目页面内下载会锁定到模组文件夹",
+    "created_at": "2026-08-29T20:12:40Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33272879503"
+  },
+  {
+    "id": 33272862076,
+    "sha": "b3a32f1246ab465fc1d6cd0fa6ff84cf802f6ace",
+    "short_sha": "b3a32f1",
+    "message": "fix: “搜索ID”屏幕跳转的项目页面内下载会锁定到模组文件夹",
+    "created_at": "2026-08-29T20:12:09Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33272862076"
+  },
+  {
+    "id": 33272289241,
+    "sha": "cafcd7ad6f40484c7accfc351fd409a9cd059e68",
+    "short_sha": "cafcd7a",
+    "message": "Merge pull request #1741 from ZalithLauncher/chore/version_mg_ui\n\nrefactor: 重构版本管理页面版本列表的 UI",
+    "created_at": "2026-08-29T19:59:34Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33272289241"
+  },
+  {
+    "id": 33272269822,
+    "sha": "ecffd4b60c75c2b202042d79f273e1564f5e3a91",
+    "short_sha": "ecffd4b",
+    "message": "Merge branch 'main' into chore/version_mg_ui",
+    "created_at": "2026-08-29T19:58:44Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33272269822"
+  },
+  {
+    "id": 33270871479,
+    "sha": "4ae121e187237f09e5afeacfb757e4cd00e98fb7",
+    "short_sha": "4ae121e",
+    "message": "Merge pull request #1740 from ZalithLauncher/fix/local_text\n\nfix: 修正一些描述文本未使用替换符的问题",
+    "created_at": "2026-08-29T19:26:18Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33270871479"
+  },
+  {
+    "id": 33270826551,
+    "sha": "39bfab9432a233d4312fb364ece6a714cbc37e44",
+    "short_sha": "39bfab9",
+    "message": "fix: 修正一些描述文本未使用替换符的问题",
+    "created_at": "2026-08-29T19:25:05Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33270826551"
+  },
+  {
     "id": 33258746938,
     "sha": "29e2ebb24b8b6779362a92fe86c0575917a17cbe",
     "short_sha": "29e2ebb",
@@ -350,53 +398,5 @@
     "message": "fix: 经 SDL_LoadFunction 代理 eglSwapBuffers，恢复 SDL 路径帧率捕获",
     "created_at": "2026-08-24T19:50:34Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32770496250"
-  },
-  {
-    "id": 32727598831,
-    "sha": "94041d07bd2322e626277cab68e4255e01424c58",
-    "short_sha": "94041d0",
-    "message": "fix: 复用主窗口绕过 Android 单窗口限制，并经 SDL_ORIENTATIONS 锁定横向",
-    "created_at": "2026-08-24T12:31:53Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32727598831"
-  },
-  {
-    "id": 32712494577,
-    "sha": "e8461dd80a2d4ca2eeb035cacfc4ba0b5835c6dd",
-    "short_sha": "e8461dd",
-    "message": "fix: 使 SDL 与 LWJGL 共用同一 Vulkan 加载器（修复 Turnip 设备 VK 后端）\n\nMC 26.3 起 RenderPearl 要求 SDL 与 LWJGL 使用同一 Vulkan 加载器实例\n（校验 vkGetInstanceProcAddr 指针一致）。启动器经 EGLBridge 将 LWJGL\n的句柄重定向到私有命名空间中的加载器副本（Turnip 链路，句柄记录于\nVULKAN_PTR 环境变量）；而 SDL 仅能按路径加载、无法触及该私有实例，\n回落到系统 libvulkan.so 后指针比对必然失败，报\nvkGetInstanceProcAddr mismatch。\n\n- SDL_LoadObject：请求加载 libvulkan* 时改还 VULKAN_PTR 句柄，\n  使 SDL 的函数解析与 surface 创建全链和 LWJGL 同源\n- SDL_UnloadObject：忽略对该句柄的卸载（引用计数由启动器持有，\n  避免 RenderPearl 的 load/unload 探测流程把模块引用减到 0）",
-    "created_at": "2026-08-24T09:36:02Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32712494577"
-  },
-  {
-    "id": 32708233220,
-    "sha": "8350dbe5d3496e30b3d40ad895872d4c2db261ad",
-    "short_sha": "8350dbe",
-    "message": "fix: 恢复移动端输入法（覆盖 MC 关闭屏幕键盘的 SDL hint）\n\nMC 26.3-snapshot-8 起在 RenderSystem.initBackendSystem 中于 SDL_Init\n之前设置 SDL_ENABLE_SCREEN_KEYBOARD=0（按桌面惯例改用自绘 IME UI），\n导致移动端无法唤起软键盘，且手动唤起后注入的文本因文本输入链路被\n压制而无法到达游戏。\n\n在 SDL_InitSubSystem hook 中（此时 MC 设置的 hint 已生效、原始\nSDL_Init 尚未执行）将该 hint 覆盖为 1，恢复移动端依赖的屏幕键盘。",
-    "created_at": "2026-08-24T08:44:48Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32708233220"
-  },
-  {
-    "id": 32675017053,
-    "sha": "36527d1231aa4bb2ae976be6617db81f80a54b30",
-    "short_sha": "36527d1",
-    "message": "fix: 兼容移动端宿主 EGL 的 SDL GL 上下文创建\n\n移动渲染器（MobileGlues 等）均为 OpenGL ES 实现，而游戏按桌面 GL 惯例\n初始化 SDL，导致 26.3 快照版的 OpenGL 后端在部分设备上创建失败：\n\n- 在窗口创建入口（SDL_CreateWindow / SDL_CreateWindowWithProperties）\n  强制 GL profile 为 ES\n- 接管 SDL_LoadFunction 对 eglChooseConfig / eglCreateContext 的解析，\n  注入归一化代理，使所有调用路径生效：\n  - eglChooseConfig：RENDERABLE_TYPE 携带的 ES3_BIT / OPENGL_BIT 归一化\n    为 ES2_BIT（部分宿主 libEGL 不接受），实际上下文版本仍由\n    CLIENT_VERSION 决定\n  - eglCreateContext：剔除 EGL_CONTEXT_MAJOR/MINOR_VERSION_KHR（部分\n    宿主不识别、直接报 EGL_BAD_ATTRIBUTE），仅保留 CLIENT_VERSION；\n    创建失败时降级为 CLIENT_VERSION=2 重试并输出警告日志\n- 修正 SDL_InitSubSystem 错误日志把 tag 当格式串传入的问题",
-    "created_at": "2026-08-23T23:21:27Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32675017053"
-  },
-  {
-    "id": 32667154521,
-    "sha": "593273eb598e396e001717c5c1c4f1e471a72e1f",
-    "short_sha": "593273e",
-    "message": "fix: 正确传入渲染器插件的 EGL 库路径",
-    "created_at": "2026-08-23T21:19:05Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32667154521"
-  },
-  {
-    "id": 32666141393,
-    "sha": "ad8dc1b80a1777431d499e1d2ad253bf5d48832c",
-    "short_sha": "ad8dc1b",
-    "message": "chore: 回退部分非预期更改 & 调整代码",
-    "created_at": "2026-08-23T20:59:41Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32666141393"
   }
 ]
