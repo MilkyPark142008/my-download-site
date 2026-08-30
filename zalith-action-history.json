@@ -1,5 +1,37 @@
 [
   {
+    "id": 33297019060,
+    "sha": "cdb2f84c2f279ab43e430ec7c2e0a6e6bbeabae7",
+    "short_sha": "cdb2f84",
+    "message": "fix: 文件管理器 Nav 堆栈相关的处理",
+    "created_at": "2026-08-30T06:29:40Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33297019060"
+  },
+  {
+    "id": 33296258660,
+    "sha": "1adee73d428e56fa3b3d66974140b0e4bfff0f4e",
+    "short_sha": "1adee73",
+    "message": "Merge pull request #1748 from TNTyep520/fix/third-party_info\n\nchore(library_info): 依赖库信息",
+    "created_at": "2026-08-30T06:09:22Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33296258660"
+  },
+  {
+    "id": 33296221134,
+    "sha": "3fd333033f777187e598a12a0350ace206003e61",
+    "short_sha": "3fd3330",
+    "message": "Merge pull request #1749 from ZalithLauncher/fix/smooth_font\n\nfix: SmoothFont 选择字体后重启字体缩放错误",
+    "created_at": "2026-08-30T06:08:22Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33296221134"
+  },
+  {
+    "id": 33296206619,
+    "sha": "af535b39dfaa8c6ab2da956556a49e276e3ddc61",
+    "short_sha": "af535b3",
+    "message": "fix: SmoothFont 选择字体后重启字体缩放错误",
+    "created_at": "2026-08-30T06:07:40Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33296206619"
+  },
+  {
     "id": 33275673189,
     "sha": "ee621a62a9d55dc48750af74830c5c41ce62e27b",
     "short_sha": "ee621a6",
@@ -366,37 +398,5 @@
     "message": "fix: 直接将 SplashActivity 的启动模式更改为 singleTop",
     "created_at": "2026-08-26T00:27:45Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32915191205"
-  },
-  {
-    "id": 32896473779,
-    "sha": "a18f7b378781cff2db236a3ba2a9597b84c46b6d",
-    "short_sha": "a18f7b3",
-    "message": "fix: 游戏运行时点击桌面图标不再重复打开主界面",
-    "created_at": "2026-08-25T20:38:02Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32896473779"
-  },
-  {
-    "id": 32860695089,
-    "sha": "298844ba207afca8371ba204c675f1b4165c384c",
-    "short_sha": "298844b",
-    "message": "fix: 关闭“自动唤起输入法（SDL）”后手动输入完全失效的问题\n\n根因：原实现在 showTextInput 入口直接 return false，跳过了整个\nShowTextInputTask。该任务除弹出软键盘外还负责创建/聚焦隐藏的\nSDLDummyEdit——Android 软键盘文字只有经它的 InputConnection 才能合成\nSDL_TEXT_INPUT 事件。任务被整体拒绝后，SDL 侧 text input 已激活、\nMC 在等待文本事件，而 Android 侧没有任何可编辑视图接收提交，导致\n即使手动唤起 IME 输入也无响应。\n\n修复：将设置判断下沉到任务内部，仅跳过 imm.showSoftInput 自动弹出，\n保留 DummyEdit 的创建、布局与焦点准备；关闭选项时用户手动唤起的\nIME 仍附着到已持有焦点的 DummyEdit 上，输入照常生效。",
-    "created_at": "2026-08-25T14:36:14Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32860695089"
-  },
-  {
-    "id": 32857370643,
-    "sha": "2f89d15f00f29b7ff6e7920f1f86b026b2d83f69",
-    "short_sha": "2f89d15",
-    "message": "fix: 收紧 SDL 直通的窗口生命周期与 EGL 兼容层\n\n排查 RenderPearl 后处理阶段 Adreno 驱动 SIGSEGV 过程中，对 sdl_hook\n的窗口与 EGL 介入点做健壮性与语义修正：\n\n- EGL config/context 兼容改为原始请求优先，仅在宿主拒绝后降级重试；\n  修正仅含 KHR 版本属性时 CLIENT_VERSION 被丢弃的问题（ES 语义下补写，\n  desktop 语义下不补写）\n- GLES 兼容层增加渲染器门控：排除 desktopgl(Kopper 桌面 GL) 与\n  gallium_*/vulkan_zink 等 OSMesa 路径，避免桌面请求被强制 ES 化；\n  MobileGlues 判定兼容绝对路径形式的 POJAVEXEC_EGL\n- 补齐 SDL_EGL_GetProcAddress 公共解析入口的代理注入（可绕过\n  SDL_LoadFunction）；原始 EGL 函数指针首次解析后固定，避免多次解析\n  不同 handle 时跨 loader 调用；swap 代理补充空函数指针保护\n- 主窗口复用增加逻辑引用计数：MC 的隐藏工具窗口与主窗口共用 Android\n  单一真实 SDL 窗口，销毁延迟至最后一个逻辑引用释放；新增\n  POJAV_SDL_REUSE_WINDOW 诊断开关（=1 强制启用，其余值禁用）\n- 销毁窗口时同步清理事件窗口缓存指针，防止悬空 SDL_Window* 回落\n\n设备实测：OpenGL + MobileGlues 正常启动并完成 GUI 切换压力测试。",
-    "created_at": "2026-08-25T14:02:33Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32857370643"
-  },
-  {
-    "id": 32797298810,
-    "sha": "133a1e52c6917d1d98d159a719aa2b88e644e366",
-    "short_sha": "133a1e5",
-    "message": "fix: 桥接 SDL 原生消息框到宿主 Activity，修复弹窗时的 JniAbort 崩溃\n\nlibSDL3 的 Android_JNI_ShowMessageBox 会调用 SDLActivity.getContext()，\n并在返回对象的运行时类上查找 messageboxShowMessageBox；本启动器宿主是\nVMActivity（非 SDLActivity 子类），查找失败后带着 pending 异常继续\nCallIntMethod，触发 ART JniAbort SIGSEGV。\n\n- 在 SDLActivity 新增带宿主参数的静态 messageboxShowMessageBox：\n  MaterialAlertDialogBuilder 构建（MD3），阻塞游戏线程直至用户点击；\n  原实例方法改为一行委托，移除旧的 messageboxCreateAndShow 实现\n- VMActivity 以 @Keep 标注同名同签名方法桥接到该静态版本，\n  保证 R8 下原生层按名查找可用\n- 该文件 javadoc 暂不使用内联标签：JDK 17 上 lint 的 K2 分析器解析\n  内联标签会因 NoSuchMethodError: List.removeLast() 使\n  lintVitalAnalyzeRelease 失败，构建 JDK 升级至 21+ 后可恢复",
-    "created_at": "2026-08-25T01:21:36Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32797298810"
   }
 ]
