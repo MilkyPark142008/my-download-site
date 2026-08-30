@@ -1,5 +1,61 @@
 [
   {
+    "id": 33315304280,
+    "sha": "ca1d31d91531dd55a1113d6df66edf6df7416ddb",
+    "short_sha": "ca1d31d",
+    "message": "chore(l10n): update Turkish translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Turkish\nProgress: 23.2% (304 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/tr/",
+    "created_at": "2026-08-30T13:51:29Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33315304280"
+  },
+  {
+    "id": 33315302504,
+    "sha": "ca1d31d91531dd55a1113d6df66edf6df7416ddb",
+    "short_sha": "ca1d31d",
+    "message": "chore(l10n): update Turkish translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Turkish\nProgress: 23.2% (304 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/tr/",
+    "created_at": "2026-08-30T13:51:29Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33315302504"
+  },
+  {
+    "id": 33312616913,
+    "sha": "060d3b88a399dffff9dac827d9a9fc0e933756e3",
+    "short_sha": "060d3b8",
+    "message": "chore(l10n): update Turkish translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Turkish\nProgress: 10.8% (142 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/tr/",
+    "created_at": "2026-08-30T12:51:28Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33312616913"
+  },
+  {
+    "id": 33312614309,
+    "sha": "060d3b88a399dffff9dac827d9a9fc0e933756e3",
+    "short_sha": "060d3b8",
+    "message": "chore(l10n): update Turkish translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Turkish\nProgress: 10.8% (142 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/tr/",
+    "created_at": "2026-08-30T12:51:28Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33312614309"
+  },
+  {
+    "id": 33308405142,
+    "sha": "f5aaba99cc9b6493cb9484eb6c1af9e07bc3d7d8",
+    "short_sha": "f5aaba9",
+    "message": "chore(l10n): add Turkish translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Turkish\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/tr/",
+    "created_at": "2026-08-30T11:13:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33308405142"
+  },
+  {
+    "id": 33308404393,
+    "sha": "f5aaba99cc9b6493cb9484eb6c1af9e07bc3d7d8",
+    "short_sha": "f5aaba9",
+    "message": "chore(l10n): add Turkish translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Turkish\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/tr/",
+    "created_at": "2026-08-30T11:13:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33308404393"
+  },
+  {
+    "id": 33308127763,
+    "sha": "b5807e7a59560680b085c7b37b4fa63c367f107e",
+    "short_sha": "b5807e7",
+    "message": "fix: 前置解析的 Stream.toList 替换为 collect(Collectors.toList())\n\nStream.toList 为 API 34+ 方法，minSdk 26 的设备在解析前置时\n会因 NoSuchMethodError 崩溃重试。",
+    "created_at": "2026-08-30T11:06:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33308127763"
+  },
+  {
     "id": 33287486603,
     "sha": "4498c6d9820f70c02e4be441ff2eb00e5d8f33ae",
     "short_sha": "4498c6d",
@@ -342,61 +398,5 @@
     "message": "feat: 恢复 native_hooks exit/chmod hook，接入 FCLBridge.initializeHooks",
     "created_at": "2026-08-25T05:15:46Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32812333857"
-  },
-  {
-    "id": 32808551351,
-    "sha": "237765c9421fb322c42d94d286882ff9d8c1a391",
-    "short_sha": "237765c",
-    "message": "fix: 游戏启动时应用 FPS/内存显示与持续性能模式开关\n\n开关行绑定改为先设值再挂监听后，setChecked 不再触发副作用回调，\n导致重启游戏后已开启的 FPS/内存线程不启动、性能模式不应用。\n在 setup 初始化阶段显式调用 toggleFps/toggleMemory/性能模式应用",
-    "created_at": "2026-08-25T04:18:50Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32808551351"
-  },
-  {
-    "id": 32798832066,
-    "sha": "6feb3ec43b1db1aa85e2b9c87299d8625c20cf8c",
-    "short_sha": "6feb3ec",
-    "message": "feat: 禁用 ViewPager2 鼠标滚轮翻页",
-    "created_at": "2026-08-25T01:41:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32798832066"
-  },
-  {
-    "id": 32737282517,
-    "sha": "9108f7801bc09e35bcdaa686ee73e77120de56b0",
-    "short_sha": "9108f78",
-    "message": "Update SplashActivity.kt",
-    "created_at": "2026-08-24T14:12:22Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32737282517"
-  },
-  {
-    "id": 32734722729,
-    "sha": "d5f843d3e643b38e0479d837a7d71eb2d1a79dd0",
-    "short_sha": "d5f843d",
-    "message": "fix: 修复整合包导出文件选择页滚动时监听器与双向绑定累积导致的 OOM",
-    "created_at": "2026-08-24T12:38:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32734722729"
-  },
-  {
-    "id": 32723487159,
-    "sha": "0b868f535bc1f78db708e75c7fdc6753dcb20eef",
-    "short_sha": "0b868f5",
-    "message": "optimize: 控制器元数据轻量加载，布局按键按需异步加载\n\n启动/列表加载原先对每个控制器完整反序列化（含全部按键），复杂\n控制器的主线程解析明显卡顿。改为只加载元数据，按键数据在布局\n首次使用时按需异步补全。\n\n- Controller 新增 parseLightweight：JsonReader 流式读取控制器与\n  各布局元数据并注册样式，不实例化按键对象；transient 源文件引用\n- 单布局解析 loadViewGroupData：流式定位目标布局解析 viewData，\n  ensureAllLoaded 保存前补全防按键丢失；完整反序列化的布局标记已加载\n- Controllers 新增 loadViewGroup 异步 API（后台解析、主线程填充并\n  回调，规避 fakefx 列表跨线程崩溃），列表互斥锁保护预初始化并发\n- ViewManager 布局未加载时申请加载并显示转圈进度框（最短显示\n  时长保证可见），就绪后渲染；加载中编辑操作有提示防护\n- ProgressDialog 重构为 Kotlin 并改为透明背景纯转圈",
-    "created_at": "2026-08-24T11:43:57Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32723487159"
-  },
-  {
-    "id": 32721431499,
-    "sha": "f111b464b1385b0a41031367b25531110410b89d",
-    "short_sha": "f111b46",
-    "message": "fix: 外部应用调用启动器安装整合包时崩溃",
-    "created_at": "2026-08-24T11:21:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32721431499"
-  },
-  {
-    "id": 32720117508,
-    "sha": "c525d6420f5c2b626bdc56e21a8e31e461376bde",
-    "short_sha": "c525d64",
-    "message": "refactor: 游戏内菜单重构为 RecyclerView 多级菜单\n\n- MenuSetting 迁移普通字段\n- 修复数字滑块数值越界裁剪与程序性进度串写设置\n- 区分物品栏缩放宽度/高度说明文案",
-    "created_at": "2026-08-24T11:04:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32720117508"
   }
 ]

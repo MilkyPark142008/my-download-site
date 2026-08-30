@@ -1,5 +1,61 @@
 [
   {
+    "id": 33311160446,
+    "sha": "cf5978878d4a93af955f8b30fd02854f73dd35c0",
+    "short_sha": "cf59788",
+    "message": "chore: 下载文件前打印日志",
+    "created_at": "2026-08-30T12:19:02Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33311160446"
+  },
+  {
+    "id": 33310077206,
+    "sha": "1a07a0fa97f4d80d2ff4e95e346e63fdad02664c",
+    "short_sha": "1a07a0f",
+    "message": "[Do not use!] Merge branch 'origin/weblate_main' into Weblate.",
+    "created_at": "2026-08-30T11:53:47Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33310077206"
+  },
+  {
+    "id": 33310024409,
+    "sha": "6904c72cde7c4cbdb32a3af7755f768fe58b9345",
+    "short_sha": "6904c72",
+    "message": "Merge pull request #1752 from ZalithLauncher/main\n\nmerge main",
+    "created_at": "2026-08-30T11:52:43Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33310024409"
+  },
+  {
+    "id": 33310006242,
+    "sha": "6ad2e87aba86a0d4fc5309d020eff2e8a11b1ed3",
+    "short_sha": "6ad2e87",
+    "message": "Merge pull request #1751 from ZalithLauncher/main\n\nmerge main",
+    "created_at": "2026-08-30T11:52:17Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33310006242"
+  },
+  {
+    "id": 33309898276,
+    "sha": "d42935781275b11894151194d88b58ab01649104",
+    "short_sha": "d429357",
+    "message": "Merge pull request #1750 from ZalithLauncher/fix/fm\n\nfix: 修正文件管理器的相关问题",
+    "created_at": "2026-08-30T11:49:45Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33309898276"
+  },
+  {
+    "id": 33309864713,
+    "sha": "2fc8fe6120f70ed8de63c27321afe282ed0a51cd",
+    "short_sha": "2fc8fe6",
+    "message": "fix: 大文件编辑器加载，内存不足时拒绝加载 & 日志查看器超大日志只读取尾部",
+    "created_at": "2026-08-30T11:48:47Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33309864713"
+  },
+  {
+    "id": 33309198690,
+    "sha": "8aa2753c2a92fbf6a4d41f45b45ccb47b5f243c2",
+    "short_sha": "8aa2753",
+    "message": "fix: jcodings unicode 表格缺失时禁用 TextMate 高亮降级为纯文本",
+    "created_at": "2026-08-30T11:25:56Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33309198690"
+  },
+  {
     "id": 33297019060,
     "sha": "cdb2f84c2f279ab43e430ec7c2e0a6e6bbeabae7",
     "short_sha": "cdb2f84",
@@ -342,61 +398,5 @@
     "message": "update: 更新语言文件",
     "created_at": "2026-08-27T16:24:44Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33093091321"
-  },
-  {
-    "id": 33089990104,
-    "sha": "d60bf8e42559c065cd3aabd5621fa97214da546f",
-    "short_sha": "d60bf8e",
-    "message": "Merge pull request #1726 from ZalithLauncher/weblate_terracotta\n\nWeblate terracotta",
-    "created_at": "2026-08-27T15:49:58Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33089990104"
-  },
-  {
-    "id": 33089429488,
-    "sha": "9c0e85bd2c7a1e1b61ff5b079de0e38637f178da",
-    "short_sha": "9c0e85b",
-    "message": "Merge pull request #1725 from ZalithLauncher/weblate_main\n\nWeblate main",
-    "created_at": "2026-08-27T15:43:55Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33089429488"
-  },
-  {
-    "id": 33088363810,
-    "sha": "f0e2e1b10341dd01632b0c09dec3526305b84418",
-    "short_sha": "f0e2e1b",
-    "message": "fix: 官方源停摆时主机级熔断换源，修复批量计数守恒\n\n海量小文件逐个\"官方源优先\"时，单一源的读停摆会让整批陷入\n0B/s 停滞（文件数仍上涨、字节数冻结），且只能靠每文件各自\n超时后才换源恢复。现按 host:port 统计滑动窗口（10s）内的\n读/连接超时，达到阈值即熔断该源 45s，后续文件在建连时刻\n直接跳到其他源；冷却到期自动重新接纳。计数采用窗口内出现\n次数而非连续次数——停摆开始时停摆前发出的请求仍在成功，\n成功清零会让超时永远凑不够连续阈值。\n\n配套修复：\n- 多路复用客户端（全部 assets 走它）readTimeout 15s→8s，\n  停摆后更早触发换源；大文件客户端维持 15s\n- DownloadStats 文件/字节计数全部原子化：此前 64 并发完成\n  会丢自增（2000 全成功只计到 1992，\"完成数守恒告警\"随机\n  触发的根源）\n- TaskBatch 先把本地复用文件登记进 stats，但 run() 开头的\n  resetFiles() 会将其清零：移除该重置，复用字节并入已下载\n  口径并在其后重置测速基线，进度条从已完成部分起步\n- BatchDownloader.clientOverride 声明后从未生效，单测/台架\n  实际一直使用生产客户端；现已优先生效并移除死字段 fileClient\n\n验证（StallReproTest 手动台架，注入官方源停摆窗口）：\n官方/镜像命中 2000:20 → 365:1695，0B/s 采样占比 43%→10%，\n2000 文件计数精确守恒。新增 SourceHealthTest、DownloadStatsTest\n入常规套件；既有引擎测试全部通过。",
-    "created_at": "2026-08-27T15:31:36Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33088363810"
-  },
-  {
-    "id": 33051464865,
-    "sha": "c4981c997a896ad50d1432bec25452f1dd94bb75",
-    "short_sha": "c4981c9",
-    "message": "fix: 速率监测改为逐秒分块采样，每秒报告真实吞吐\n\n滑动窗口每 100ms 前移一次，窗口内容随最新突发剧烈换血，\n叠加接缝/重试的重复计数，读数高频闪烁且时常冒出夸大峰值。\n\n测速重构为不重叠的逐秒块平均：每个报表值统计刚刚完整过去\n的一秒里实际落盘的字节数（含重试产生的真实流量），\n每秒更新一格、不做任何跨窗口平滑或外推。\n进度条与文件计数仍保持 100ms 细粒度刷新不变。",
-    "created_at": "2026-08-27T07:31:49Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33051464865"
-  },
-  {
-    "id": 33049756994,
-    "sha": "d49723a8e0f2d4498a98c7a4b991d0a865b78339",
-    "short_sha": "d49723a",
-    "message": "fix: 任务进度条按清单完整性自动选择计算口径\n\n批量任务中只要存在未声明大小的文件，字节数就不能构成可靠分母\n（分子却包含全部文件的字节，比例可能提前顶满后假死）。\n\n进度显示策略调整为三档：\n- 所有文件均声明大小：按字节数计算，最平滑\n- 大小不全但文件总数确定：退化为按完成文件数计算\n- 连文件总数都不可知：显示为不确定进度",
-    "created_at": "2026-08-27T07:23:59Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33049756994"
-  },
-  {
-    "id": 32915302152,
-    "sha": "e18329cc3e854e58429416de0eae2393ff8911d5",
-    "short_sha": "e18329c",
-    "message": "Merge pull request #1723 from ZalithLauncher/fix/duplicate_activity\n\nfix: 游戏运行时点击桌面图标不再重复打开主界面",
-    "created_at": "2026-08-26T00:29:32Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32915302152"
-  },
-  {
-    "id": 32915191205,
-    "sha": "6ae6e854d3e014b61316709a88e5c01dfbc2cb1c",
-    "short_sha": "6ae6e85",
-    "message": "fix: 直接将 SplashActivity 的启动模式更改为 singleTop",
-    "created_at": "2026-08-26T00:27:45Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/32915191205"
   }
 ]
