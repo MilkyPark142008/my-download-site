@@ -1,5 +1,109 @@
 [
   {
+    "id": 33352096733,
+    "sha": "248b8806e0f7d5a31e073ffb319eee90fe4126a2",
+    "short_sha": "248b880",
+    "message": "chore(l10n): update Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
+    "created_at": "2026-08-31T02:53:46Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33352096733"
+  },
+  {
+    "id": 33352093936,
+    "sha": "248b8806e0f7d5a31e073ffb319eee90fe4126a2",
+    "short_sha": "248b880",
+    "message": "chore(l10n): update Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
+    "created_at": "2026-08-31T02:53:46Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33352093936"
+  },
+  {
+    "id": 33352082704,
+    "sha": "6f7d876b46785729f6b0b659c16b06df0dac5f3c",
+    "short_sha": "6f7d876",
+    "message": "refactor: MenuView 重写为 Kotlin，优化触摸打开抽屉判定\n\n- 点击判定改用 raw 坐标：拖动 setX/setY 移动 View 后相对坐标差恒为 0，\n  快速拖动松手会被误判为点击而打开抽屉\n- 位移阈值 10px 硬编码改为 ViewConfiguration touchSlop（随密度缩放，\n  高密度屏上点击易失灵）；长按 400ms 改用系统 getLongPressTimeout\n- ACTION_CANCEL 不再触发 openDrawer（拦截/打断非点击意图）\n- 计时改用事件时间戳 eventTime，不受系统时间跳变影响\n- 同包同名重写，ViewManager/GameMenu/JVMActivity 等调用方无需改动",
+    "created_at": "2026-08-31T02:53:27Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33352082704"
+  },
+  {
+    "id": 33350896652,
+    "sha": "e04b8da1b799ffa07c5c08502c88b82da9e52758",
+    "short_sha": "e04b8da",
+    "message": "chore(l10n): update Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
+    "created_at": "2026-08-31T02:30:29Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33350896652"
+  },
+  {
+    "id": 33350893629,
+    "sha": "e04b8da1b799ffa07c5c08502c88b82da9e52758",
+    "short_sha": "e04b8da",
+    "message": "chore(l10n): update Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
+    "created_at": "2026-08-31T02:30:29Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33350893629"
+  },
+  {
+    "id": 33350872960,
+    "sha": "dd186352a1019131fe1a5516c5a795dffb4cb64d",
+    "short_sha": "dd18635",
+    "message": "fix: 主题刷新消息合并，修复取色拖动时部分设备卡死\n\n拖动取色每个 MOVE 事件都会触发 applyColor → notifyThemeChanged，\n原实现把全局所有 registerEvent 回调逐个 post 到主线程（运行时可达\n数百个 view），高刷/低端设备上每秒数万条消息淹没主线程队列导致\nANR。改为单个 refreshRunnable 合并刷新：post 前 removeCallbacks\n判重，一帧内最多执行一轮全量刷新；遍历改快照复制，防回调内再注册\n控件触发 CME。",
+    "created_at": "2026-08-31T02:29:01Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33350872960"
+  },
+  {
+    "id": 33350241520,
+    "sha": "35a9f2febe89d4322df87d8a23fdfe7cb9f18e47",
+    "short_sha": "35a9f2f",
+    "message": "chore(l10n): update Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
+    "created_at": "2026-08-31T02:17:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33350241520"
+  },
+  {
+    "id": 33350239441,
+    "sha": "35a9f2febe89d4322df87d8a23fdfe7cb9f18e47",
+    "short_sha": "35a9f2f",
+    "message": "chore(l10n): update Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
+    "created_at": "2026-08-31T02:17:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33350239441"
+  },
+  {
+    "id": 33350226947,
+    "sha": "3d995dcf7b86d4979e94262bf19c8b19257d7319",
+    "short_sha": "3d995dc",
+    "message": "Update MioLibPatcher.jar",
+    "created_at": "2026-08-31T02:17:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33350226947"
+  },
+  {
+    "id": 33348851595,
+    "sha": "21c74434ced9b1b00785c082807aae9f18fbf620",
+    "short_sha": "21c7443",
+    "message": "chore(l10n): update Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
+    "created_at": "2026-08-31T01:51:25Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33348851595"
+  },
+  {
+    "id": 33348849717,
+    "sha": "21c74434ced9b1b00785c082807aae9f18fbf620",
+    "short_sha": "21c7443",
+    "message": "chore(l10n): update Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
+    "created_at": "2026-08-31T01:51:25Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33348849717"
+  },
+  {
+    "id": 33348271255,
+    "sha": "246335022091de25dbaebbb9327a89c92c4502c0",
+    "short_sha": "2463350",
+    "message": "chore(l10n): add Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
+    "created_at": "2026-08-31T01:39:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33348271255"
+  },
+  {
+    "id": 33348269142,
+    "sha": "246335022091de25dbaebbb9327a89c92c4502c0",
+    "short_sha": "2463350",
+    "message": "chore(l10n): add Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
+    "created_at": "2026-08-31T01:39:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33348269142"
+  },
+  {
     "id": 33315304280,
     "sha": "ca1d31d91531dd55a1113d6df66edf6df7416ddb",
     "short_sha": "ca1d31d",
@@ -294,109 +398,5 @@
     "message": "fix: 安装器报错信息多语言化，新增中英粤三语言文案",
     "created_at": "2026-08-26T04:45:53Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32931867047"
-  },
-  {
-    "id": 32931190391,
-    "sha": "8dbc15d432ed09eaefb73c309fd1dcf759076be9",
-    "short_sha": "8dbc15d",
-    "message": "fix: 安装器进程通信改文件轮询，日志实时显示并修复多次创建进程时的卡死与误杀",
-    "created_at": "2026-08-26T04:41:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32931190391"
-  },
-  {
-    "id": 32927473720,
-    "sha": "b4d9fa5b158975c96c9e7e174e5cdd9ae0b5ea5e",
-    "short_sha": "b4d9fa5",
-    "message": "fix: ProcessService 启动时加载 FCLPath",
-    "created_at": "2026-08-26T03:38:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32927473720"
-  },
-  {
-    "id": 32923674657,
-    "sha": "39d38989091a2a663cec4f87cfec4f1b76ee28da",
-    "short_sha": "39d3898",
-    "message": "fix: 修复版本设置页输入框失焦，FCLEditText 迁移 Kotlin 并防定制 ROM 焦点前进崩溃\n\n- 全局页（versionId 为 null）usesGlobal 同步条件恒成立，导致每次输入触发\n  notifyDataSetChanged 全量重建列表、输入框失焦；同步仅对特定版本页有意义，\n  加 versionId 守卫跳过\n- FCLEditText 由 Java 迁移 Kotlin（fakefx 属性 API 保持 JVM 方法签名），\n  构造时挂空点击监听：定制 ROM（华为/MIUI）的回车焦点前进逻辑在视图存在\n  点击监听时整段跳过，防止全屏编辑点完成时抛 IllegalStateException 崩溃\n- 行内编辑框 imeOptions 改为 actionDone",
-    "created_at": "2026-08-26T02:41:02Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32923674657"
-  },
-  {
-    "id": 32883803868,
-    "sha": "d8e7594b424f7cb9f200e6390356c7988df8a807",
-    "short_sha": "d8e7594",
-    "message": "i18n: 图形后端描述改为优先于游戏内设置，同步英文翻译",
-    "created_at": "2026-08-25T18:20:59Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32883803868"
-  },
-  {
-    "id": 32856421235,
-    "sha": "3ca693404aba2adf15589487d35d262bfad9c847",
-    "short_sha": "3ca6934",
-    "message": "fix: 下载页搜索框移除 flagNoFullscreen",
-    "created_at": "2026-08-25T13:55:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32856421235"
-  },
-  {
-    "id": 32854742837,
-    "sha": "e6b472f9aa8bc54eddab3c478889763fc9afb0b2",
-    "short_sha": "e6b472f",
-    "message": "Revert \"optimize: 控制器元数据轻量加载，布局按键按需异步加载\"\n\nThis reverts commit 0b868f535bc1f78db708e75c7fdc6753dcb20eef.",
-    "created_at": "2026-08-25T13:38:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32854742837"
-  },
-  {
-    "id": 32848603816,
-    "sha": "582da1eb49a56f98a38c419a016a4c6c67cbfefb",
-    "short_sha": "582da1e",
-    "message": "Update LauncherSettingAdapter.kt",
-    "created_at": "2026-08-25T12:37:10Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32848603816"
-  },
-  {
-    "id": 32846991925,
-    "sha": "5c9923337971cad62e24a3c35f3222639f8ae3b1",
-    "short_sha": "5c99233",
-    "message": "refactor: 清理模块合并后的死代码与重复启动逻辑",
-    "created_at": "2026-08-25T12:19:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32846991925"
-  },
-  {
-    "id": 32842197616,
-    "sha": "fee1d3b391b4e6f2eb11effdb2fc78ba47587ff5",
-    "short_sha": "fee1d3b",
-    "message": "Update DefaultLauncher.java",
-    "created_at": "2026-08-25T11:24:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32842197616"
-  },
-  {
-    "id": 32824580619,
-    "sha": "0efa2a8625172dcb7e2acf6e9b55eea6300b33c1",
-    "short_sha": "0efa2a8",
-    "message": "fix: SDL 输入法弹出崩溃——setLayoutParams 改复用父容器已转换的 LayoutParams，兼容 RelativeLayout 游戏布局",
-    "created_at": "2026-08-25T08:00:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32824580619"
-  },
-  {
-    "id": 32824050420,
-    "sha": "9902042bc36ff7d42793f8a28500546324f01fec",
-    "short_sha": "9902042",
-    "message": "fix: SDL 输入修复——键盘用 GLFW 键码换算 Android 键码；鼠标按 isGrabbing 捕获状态分流相对/绝对坐标",
-    "created_at": "2026-08-25T07:55:21Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32824050420"
-  },
-  {
-    "id": 32815922453,
-    "sha": "692121fcd113f844167b5ce26df311426aedf75e",
-    "short_sha": "692121f",
-    "message": "fix: 修复游标抓取状态回调的竞态与空指针隐患\n\nCallbackBridge.onGrabStateChanged:\n- 写入端与检查+应用共用 grabLock，避免应用过期抓取状态\n- 回调内判空 fclBridge，防止游戏退出时序下 UI 线程空指针\n- 延迟回调加 Activity 销毁守卫，不再触碰已销毁的 UI\n- isGrabbing 加 volatile，保证跨线程可见性\n\ninput_bridge_v3.c nativeSetGrabbing:\n- GetEnv + 仅 EDETACHED 时 attach/detach，避免 detach 已附加的游戏线程\n- stdout 已重定向，保留 printf 调试输出",
-    "created_at": "2026-08-25T06:08:02Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32815922453"
-  },
-  {
-    "id": 32812333857,
-    "sha": "8c7b289b53e1093ebaf36901eaccce56f0fbb1c8",
-    "short_sha": "8c7b289",
-    "message": "feat: 恢复 native_hooks exit/chmod hook，接入 FCLBridge.initializeHooks",
-    "created_at": "2026-08-25T05:15:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32812333857"
   }
 ]
