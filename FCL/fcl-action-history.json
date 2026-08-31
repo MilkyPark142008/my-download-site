@@ -1,5 +1,45 @@
 [
   {
+    "id": 33405090308,
+    "sha": "fc0f693a4b1703080978a5a8046db34d42baa14a",
+    "short_sha": "fc0f693",
+    "message": "Merge pull request #1790 from FCL-Team/weblate-foldcraftlauncher-fcl\n\nchore(l10n): update translations",
+    "created_at": "2026-08-31T14:51:34Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33405090308"
+  },
+  {
+    "id": 33404522056,
+    "sha": "0427525b7e1fd614ae2a9e229533537b41e4ac5b",
+    "short_sha": "0427525",
+    "message": "feat: 版本列表刷新任务显示名称，安装加载器期间等待可见\n\ninstallLibraryAsync 与 VersionJsonDownloadTask 的联网刷新版本列表\n任务原为无名匿名任务，任务列表直接跳过，大整合包安装时装 Fabric/Forge\n前刷新远程列表的长时间网络等待在对话框中毫无输出。为其命名\n（新增 version_list_refreshing 字符串并同步 9 个语言目录），\n等待期间显示\"正在获取远程版本列表\"行",
+    "created_at": "2026-08-31T14:44:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33404522056"
+  },
+  {
+    "id": 33402814828,
+    "sha": "88cad1fefedf68138d42336f8f917f1e92719529",
+    "short_sha": "88cad1f",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): add Japanese translation\n\nCo-authored-by: haozi <qdilovolibp@hotmail.com>\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-08-31T14:28:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33402814828"
+  },
+  {
+    "id": 33402809421,
+    "sha": "88cad1fefedf68138d42336f8f917f1e92719529",
+    "short_sha": "88cad1f",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): add Japanese translation\n\nCo-authored-by: haozi <qdilovolibp@hotmail.com>\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-08-31T14:28:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33402809421"
+  },
+  {
+    "id": 33402783511,
+    "sha": "05f4d149cd80d6978ee86cb34c8fcc2b52ff95f2",
+    "short_sha": "05f4d14",
+    "message": "fix: 任务对话框日志区在写日志的任务结束后自动收起\n\n记录当前写日志的任务，其结束时清空文本并恢复日志区 GONE，\n避免最后一条信息（如整合包解压的文件路径、Forge 安装器输出）\n在后续阶段一直占据对话框空间",
+    "created_at": "2026-08-31T14:27:24Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33402783511"
+  },
+  {
     "id": 33352096733,
     "sha": "248b8806e0f7d5a31e073ffb319eee90fe4126a2",
     "short_sha": "248b880",
@@ -358,45 +398,5 @@
     "message": "feat: 图形后端 --graphicsBackend 参数增加 26.2-snapshot-2 版本下限筛选",
     "created_at": "2026-08-26T16:19:45Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32989239497"
-  },
-  {
-    "id": 32941005083,
-    "sha": "e03a5c68dfcfd5904173e954abedd085c42f7fc5",
-    "short_sha": "e03a5c6",
-    "message": "fix: 修复布局编辑关闭后按键位置偏移（千分比换算向下截断致相邻按键贴住）",
-    "created_at": "2026-08-26T07:00:20Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32941005083"
-  },
-  {
-    "id": 32937337618,
-    "sha": "b72da809d3f42c2c55bee0a2b0e5ccf1e61db10b",
-    "short_sha": "b72da80",
-    "message": "fix: 修复反复安装后 View 树泄漏（TaskDialog 引用链与临时页动画回调）",
-    "created_at": "2026-08-26T06:14:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32937337618"
-  },
-  {
-    "id": 32934272072,
-    "sha": "672dc0a70ce3709ee0a94fb08095d5df8eb7dc45",
-    "short_sha": "672dc0a",
-    "message": "fix: 安装器进程通信改文件轮询，日志实时显示并修复多次创建进程时的卡死与误杀",
-    "created_at": "2026-08-26T05:27:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32934272072"
-  },
-  {
-    "id": 32933997851,
-    "sha": "254a8f722e0be443eef0350b044e2c54b3896608",
-    "short_sha": "254a8f7",
-    "message": "fix: 安装器 JVM 异常终止时守护线程补杀进程，补 zh-rHK 运行中文案",
-    "created_at": "2026-08-26T05:09:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32933997851"
-  },
-  {
-    "id": 32931867047,
-    "sha": "1bdd0878c9faf9bd8e3fa13d17668363ee4b1f95",
-    "short_sha": "1bdd087",
-    "message": "fix: 安装器报错信息多语言化，新增中英粤三语言文案",
-    "created_at": "2026-08-26T04:45:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/32931867047"
   }
 ]

@@ -1,5 +1,13 @@
 [
   {
+    "id": 33382125884,
+    "sha": "08c390b48f194760fa5289fe4eed24b668327c42",
+    "short_sha": "08c390b",
+    "message": "chore: 将 README 默认语言修改为简体中文",
+    "created_at": "2026-08-31T10:22:22Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33382125884"
+  },
+  {
     "id": 33341726282,
     "sha": "ce670c714b612717e51a162e5651c0003460e671",
     "short_sha": "ce670c7",
@@ -390,13 +398,5 @@
     "message": "fix: 并行校验本地文件\n\n批量下载开头的本地已存在文件校验（SHA-1/压缩包 CRC）原先逐个\n串行执行，且跑在调用方的 CPU 调度器（Default，线程数=核数）上：\n重装/二次安装共享 assets 时要逐个读几百 MB，既拉长\"统计下载任务\"\n到正式下载之间的间隙，阻塞 IO 又占满 CPU 池与主线程抢核，\n表现为 Choreographer \"Skipped frames\"。\n\n改为在 Dispatchers.IO.limitedParallelism(4) 上并行校验（闪存\n随机读的较优并发度），不再占用 CPU 调度池；完成后输出一条\nreusable/pending 计数与耗时的观测日志，便于真机量化。",
     "created_at": "2026-08-27T17:53:33Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33100734386"
-  },
-  {
-    "id": 33098652240,
-    "sha": "7bf579967b797f8fb117179c676fcb75445408f2",
-    "short_sha": "7bf5799",
-    "message": "fix: 前台安装服务卡死的问题",
-    "created_at": "2026-08-27T17:29:10Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33098652240"
   }
 ]
