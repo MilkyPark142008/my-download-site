@@ -1,5 +1,53 @@
 [
   {
+    "id": 33474372124,
+    "sha": "d3ebf13a6f941877e0785e239c7616064fcabdc6",
+    "short_sha": "d3ebf13",
+    "message": "Merge pull request #1760 from ZalithLauncher/fix/sdl_keyboard_input\n\nfix: SDL 未启用时 IME 回调触发 UnsatisfiedLinkError 崩溃",
+    "created_at": "2026-09-01T05:38:21Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33474372124"
+  },
+  {
+    "id": 33474354333,
+    "sha": "cea6b7ae14945107694fa4c95f6c0f7ae4b07455",
+    "short_sha": "cea6b7a",
+    "message": "fix: SDL 未启用时 IME 回调触发 UnsatisfiedLinkError 崩溃",
+    "created_at": "2026-09-01T05:37:58Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33474354333"
+  },
+  {
+    "id": 33473709405,
+    "sha": "3d64fe5afe11a30deeedf5a36ccdd1136271b19c",
+    "short_sha": "3d64fe5",
+    "message": "fix: 账号管理直接使用 EventViewModel 发布事件",
+    "created_at": "2026-09-01T05:27:54Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33473709405"
+  },
+  {
+    "id": 33463143021,
+    "sha": "223f52e6cfa4b43af8b7ceb073860871294a8c77",
+    "short_sha": "223f52e",
+    "message": "fix: 外置账号重新登录时未提交任务",
+    "created_at": "2026-09-01T02:35:52Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33463143021"
+  },
+  {
+    "id": 33461291025,
+    "sha": "30ab0634bf7086aec793d88796a18d0cd701ef68",
+    "short_sha": "30ab063",
+    "message": "Merge pull request #1758 from ZalithLauncher/fix/inputfiled\n\nfix: 对话框内输入时，对话框弹跳的问题",
+    "created_at": "2026-09-01T02:06:27Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33461291025"
+  },
+  {
+    "id": 33461247464,
+    "sha": "cab3552b6b11a65be4af2c650d948b57d2788781",
+    "short_sha": "cab3552",
+    "message": "fix: 对话框内输入时，对话框弹跳的问题",
+    "created_at": "2026-09-01T02:05:39Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33461247464"
+  },
+  {
     "id": 33456384612,
     "sha": "88305c0ffeb0ad2b71a452efe44253663de4fb9c",
     "short_sha": "88305c0",
@@ -350,53 +398,5 @@
     "message": "Merge pull request #1625 from TNTyep520/bump/auth_libs\n\nbump (version): 更新 auth_libs 版本号",
     "created_at": "2026-08-28T08:05:14Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33153945890"
-  },
-  {
-    "id": 33153871429,
-    "sha": "c5547ee79a473b0253b8302ad41bb03f1a9c9b30",
-    "short_sha": "c5547ee",
-    "message": "Merge pull request #1715 from youfeng11/main\n\nfeat: 调整摇杆大小时锁定宽高比",
-    "created_at": "2026-08-28T08:04:12Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33153871429"
-  },
-  {
-    "id": 33153829650,
-    "sha": "084f07fff28f8ee8e3a0407dafd3957b4851b0e1",
-    "short_sha": "084f07f",
-    "message": "Merge pull request #1732 from ZalithLauncher/fix/version_sort\n\nfix: 游戏版本排序比较算法异常导致崩溃",
-    "created_at": "2026-08-28T08:03:37Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33153829650"
-  },
-  {
-    "id": 33153807752,
-    "sha": "96658c1a4659e018baa012a10ca2d400d6ed1602",
-    "short_sha": "96658c1",
-    "message": "fix: 游戏版本排序比较算法异常导致崩溃",
-    "created_at": "2026-08-28T08:03:12Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33153807752"
-  },
-  {
-    "id": 33152221965,
-    "sha": "c647b132eb4aed3ee869c899ac85cd97ba922815",
-    "short_sha": "c647b13",
-    "message": "chore: 移除“强制在高性能核心运行”设置",
-    "created_at": "2026-08-28T07:38:27Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33152221965"
-  },
-  {
-    "id": 33151481526,
-    "sha": "38f09161af024b9a45753457253c1e1439bf2b1a",
-    "short_sha": "38f0916",
-    "message": "Merge pull request #1731 from ZalithLauncher/main\n\nmerge main",
-    "created_at": "2026-08-28T07:26:42Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33151481526"
-  },
-  {
-    "id": 33151478221,
-    "sha": "e918670f79c410f388a3ca3ed18168be1daba5be",
-    "short_sha": "e918670",
-    "message": "Merge pull request #1730 from ZalithLauncher/main\n\nmerge main",
-    "created_at": "2026-08-28T07:26:38Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33151478221"
   }
 ]
