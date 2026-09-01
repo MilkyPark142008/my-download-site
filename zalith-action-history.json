@@ -1,5 +1,13 @@
 [
   {
+    "id": 33500617152,
+    "sha": "bdb81d6dedd40d9708d48e91fb3326663a0e2232",
+    "short_sha": "bdb81d6",
+    "message": "fix: 修复下载器源停摆时的 0B/s 冻结\n\n- 超时分类：okio 的 InterruptedIOException(timeout) 计入熔断而非当作取消吞掉\n- 全源熔断时原地等待冷却到期，不再派发注定空转的工人；等待上限后走降级通道真实尝试\n- 降级通道（acquireDegraded）不再核对熔断，每个源至多付一次读超时，保证有界终止\n- 小文件读超时 8s→5s，熔断冷却 45s→15s，缩短停摆冻结窗口\n- 新增 StallRecoveryTest，更新 SourceHealthTest",
+    "created_at": "2026-09-01T11:04:00Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33500617152"
+  },
+  {
     "id": 33474372124,
     "sha": "d3ebf13a6f941877e0785e239c7616064fcabdc6",
     "short_sha": "d3ebf13",
@@ -390,13 +398,5 @@
     "message": "Update version",
     "created_at": "2026-08-28T08:06:12Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33154015867"
-  },
-  {
-    "id": 33153945890,
-    "sha": "a903c789fae3cd5ae45c2dfb22820166819c2a89",
-    "short_sha": "a903c78",
-    "message": "Merge pull request #1625 from TNTyep520/bump/auth_libs\n\nbump (version): 更新 auth_libs 版本号",
-    "created_at": "2026-08-28T08:05:14Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33153945890"
   }
 ]
