@@ -1,5 +1,29 @@
 [
   {
+    "id": 33545505949,
+    "sha": "8ad33bb726eb6b34832c024fe17574de21091cd6",
+    "short_sha": "8ad33bb",
+    "message": "rework: Rewrite Turnip loading to use something more flexible\n\nIn the future, we want to shrink this to one codepath for all renderers.\nNo more using janky renderers.",
+    "created_at": "2026-09-01T18:45:03Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33545505949"
+  },
+  {
+    "id": 33545298243,
+    "sha": "51a47a2c6286e2706f4537cbe99ef8785dfff59f",
+    "short_sha": "51a47a2",
+    "message": "rework: Rewrite Turnip loading to use something more flexible\n\nIn the future, we want to shrink this to one codepath for all renderers.\nNo more using janky renderers.",
+    "created_at": "2026-09-01T18:42:34Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33545298243"
+  },
+  {
+    "id": 33541280287,
+    "sha": "446bd11feba5e976eb5e5e47b145f04e9063bf45",
+    "short_sha": "446bd11",
+    "message": "rework: Rewrite Turnip loading to use something more flexible\n\nIn the future, we want to shrink this to one codepath for all renderers.\nNo more using janky renderers.",
+    "created_at": "2026-09-01T18:02:07Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33541280287"
+  },
+  {
     "id": 33263235045,
     "sha": "247d25bd760f7d88fd8dc9ca6370ba1bab9d0025",
     "short_sha": "247d25b",
@@ -374,29 +398,5 @@
     "message": "feat: Set env var for Application jobject\n\nFor use by mods who need to load their own classes or something",
     "created_at": "2026-08-02T12:34:43Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30748138220"
-  },
-  {
-    "id": 30747713381,
-    "sha": "08d28215b798fd68aecd0483c623a0b0251eaaf7",
-    "short_sha": "08d2821",
-    "message": "feat: Export Application jobject as env var\n\nThis allows for mods to get access to stuff without relying on hidden\nAPIs",
-    "created_at": "2026-08-02T12:22:47Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30747713381"
-  },
-  {
-    "id": 30747700242,
-    "sha": "08d28215b798fd68aecd0483c623a0b0251eaaf7",
-    "short_sha": "08d2821",
-    "message": "feat: Export Application jobject as env var\n\nThis allows for mods to get access to stuff without relying on hidden\nAPIs",
-    "created_at": "2026-08-02T12:22:47Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30747700242"
-  },
-  {
-    "id": 30701075409,
-    "sha": "0f6f559a8e160d641e922cf4543c06902f8a813e",
-    "short_sha": "0f6f559",
-    "message": "bump(AGP): 8.7.2 to 9.3.1\n\nRequired for bytehook to build",
-    "created_at": "2026-08-01T13:07:02Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30701075409"
   }
 ]
