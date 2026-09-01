@@ -1,5 +1,53 @@
 [
   {
+    "id": 33456384612,
+    "sha": "88305c0ffeb0ad2b71a452efe44253663de4fb9c",
+    "short_sha": "88305c0",
+    "message": "Merge pull request #1745 from ZalithLauncher/feat/sdl3\n\nfix: 修复模块化 Forge 启动时 LWJGL 组件拆分包冲突",
+    "created_at": "2026-09-01T00:50:27Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33456384612"
+  },
+  {
+    "id": 33455379946,
+    "sha": "7028b20e2db18c9cfb7dbee01b17cb55f28ce4a5",
+    "short_sha": "7028b20",
+    "message": "update MioLibPatcher.jar",
+    "created_at": "2026-09-01T00:35:32Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33455379946"
+  },
+  {
+    "id": 33454866299,
+    "sha": "7768af805fe31ea974deae66794bcf2611d1fcfe",
+    "short_sha": "7768af8",
+    "message": "bump version to 2.5_pre",
+    "created_at": "2026-09-01T00:27:58Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33454866299"
+  },
+  {
+    "id": 33454555948,
+    "sha": "9ceaf206041556b06f29ada70e3a59ce0c4b1a39",
+    "short_sha": "9ceaf20",
+    "message": "Merge pull request #1756 from ZalithLauncher/fix/sdl_keyboard_input\n\nfix: SDL 端实体键盘输入相关的问题",
+    "created_at": "2026-09-01T00:23:21Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33454555948"
+  },
+  {
+    "id": 33454355642,
+    "sha": "a395adc3c5bca89fa974dfa9382d5e16ec380943",
+    "short_sha": "a395adc",
+    "message": "fix: SDL 文本输入时实体键盘按键无法输入的问题",
+    "created_at": "2026-09-01T00:20:15Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33454355642"
+  },
+  {
+    "id": 33452414659,
+    "sha": "0a0522730ded5b4e1fc3dd05190f109fdbd94832",
+    "short_sha": "0a05227",
+    "message": "fix: 修复 SDL 非输入通道时实体键盘按键仍会弹出软键盘的问题",
+    "created_at": "2026-08-31T23:48:25Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33452414659"
+  },
+  {
     "id": 33382125884,
     "sha": "08c390b48f194760fa5289fe4eed24b668327c42",
     "short_sha": "08c390b",
@@ -350,53 +398,5 @@
     "message": "Merge pull request #1730 from ZalithLauncher/main\n\nmerge main",
     "created_at": "2026-08-28T07:26:38Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33151478221"
-  },
-  {
-    "id": 33151162160,
-    "sha": "b26577170d310fff995d6d286af162dd73978003",
-    "short_sha": "b265771",
-    "message": "Merge pull request #1721 from ZalithLauncher/feat/sdl3\n\nfeat: 添加 SDL3 以支持启动 26.3 snapshot 4+ & 支持 Controlify 模组",
-    "created_at": "2026-08-28T07:21:31Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33151162160"
-  },
-  {
-    "id": 33151148613,
-    "sha": "4b2e349d077ffef02cf846227ca89253c70bb9da",
-    "short_sha": "4b2e349",
-    "message": "feat: 游戏内使用手柄前弹出偏好设置对话框",
-    "created_at": "2026-08-28T07:21:09Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33151148613"
-  },
-  {
-    "id": 33147235663,
-    "sha": "f17d52b86eb775a7bce4e84dda3ba436894c06d7",
-    "short_sha": "f17d52b",
-    "message": "Merge pull request #1729 from ZalithLauncher/chore/default_dl_source\n\nchore: 调整资源搜索默认平台为 CurseForge",
-    "created_at": "2026-08-28T06:13:50Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33147235663"
-  },
-  {
-    "id": 33147187209,
-    "sha": "6cf8f79109181525e9f7a469134624b6db8cc538",
-    "short_sha": "6cf8f79",
-    "message": "chore: 调整资源搜索默认平台为 CurseForge",
-    "created_at": "2026-08-28T06:12:50Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33147187209"
-  },
-  {
-    "id": 33100766833,
-    "sha": "9eb62f2449c026f862f3e88f6a2c7b4bff64ea7a",
-    "short_sha": "9eb62f2",
-    "message": "Merge pull request #1727 from ZalithLauncher/refactor/download\n\nrefactor: 重构下载体系为统一的多线程下载引擎，收敛镜像源设置",
-    "created_at": "2026-08-27T17:54:01Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33100766833"
-  },
-  {
-    "id": 33100734386,
-    "sha": "4ad6f328d5601a80eae142e8df4bd030999e634e",
-    "short_sha": "4ad6f32",
-    "message": "fix: 并行校验本地文件\n\n批量下载开头的本地已存在文件校验（SHA-1/压缩包 CRC）原先逐个\n串行执行，且跑在调用方的 CPU 调度器（Default，线程数=核数）上：\n重装/二次安装共享 assets 时要逐个读几百 MB，既拉长\"统计下载任务\"\n到正式下载之间的间隙，阻塞 IO 又占满 CPU 池与主线程抢核，\n表现为 Choreographer \"Skipped frames\"。\n\n改为在 Dispatchers.IO.limitedParallelism(4) 上并行校验（闪存\n随机读的较优并发度），不再占用 CPU 调度池；完成后输出一条\nreusable/pending 计数与耗时的观测日志，便于真机量化。",
-    "created_at": "2026-08-27T17:53:33Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33100734386"
   }
 ]
