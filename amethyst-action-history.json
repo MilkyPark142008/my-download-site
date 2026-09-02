@@ -1,5 +1,53 @@
 [
   {
+    "id": 33599084772,
+    "sha": "b343e76846f3e26b578a1743374e00ac300e8c4a",
+    "short_sha": "b343e76",
+    "message": "regression: load_turnip_vulkan returning incorrect when VULKAN_PTR set",
+    "created_at": "2026-09-02T06:29:32Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33599084772"
+  },
+  {
+    "id": 33591172936,
+    "sha": "6b7bedeb48d371cafbf0de3cbbd42bddc8b3f959",
+    "short_sha": "6b7bede",
+    "message": "remove(Settings/MobileGlues): Multidraw emulation option\n\nI cannot be bothered to add in the benchmarker the plugin has nor the\noptions for it. We're deprecating this soon anyway for MobileGL",
+    "created_at": "2026-09-02T04:32:02Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33591172936"
+  },
+  {
+    "id": 33590167478,
+    "sha": "780a53d84dd37eec8e0c9f0e6696d396c490af5e",
+    "short_sha": "780a53d",
+    "message": "remove: FSR setting in MobileGlues\n\nIt does next to nothing visually and has some graphical bugs on some\nadrenos",
+    "created_at": "2026-09-02T04:15:59Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33590167478"
+  },
+  {
+    "id": 33589766441,
+    "sha": "cc4fc5c74dc9730b55fcc52a85705de7fad7be41",
+    "short_sha": "cc4fc5c",
+    "message": "rework: Rewrite Turnip loading to use something more flexible\n\nIn the future, we want to shrink this to one codepath for all renderers.\nNo more using janky renderers.",
+    "created_at": "2026-09-02T04:10:01Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33589766441"
+  },
+  {
+    "id": 33589701298,
+    "sha": "aa2927bd335b7eeb4530c34e08bfbe3e7a121855",
+    "short_sha": "aa2927b",
+    "message": "rework: Rewrite Turnip loading to use something more flexible\n\nIn the future, we want to shrink this to one codepath for all renderers.\nNo more using janky renderers.",
+    "created_at": "2026-09-02T04:09:03Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33589701298"
+  },
+  {
+    "id": 33588791287,
+    "sha": "92613940f78c0b54b14d507748ece9142481701b",
+    "short_sha": "9261394",
+    "message": "rework: Rewrite Turnip loading to use something more flexible\n\nIn the future, we want to shrink this to one codepath for all renderers.\nNo more using janky renderers.",
+    "created_at": "2026-09-02T03:54:09Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33588791287"
+  },
+  {
     "id": 33545505949,
     "sha": "8ad33bb726eb6b34832c024fe17574de21091cd6",
     "short_sha": "8ad33bb",
@@ -350,53 +398,5 @@
     "message": "change: Replace methods_injector_agent with MioLibPatcher",
     "created_at": "2026-08-10T16:57:14Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31415130280"
-  },
-  {
-    "id": 31411606461,
-    "sha": "7881c7362e89fc2165bc428bbd735388aefb1cf8",
-    "short_sha": "7881c73",
-    "message": "change: Replace methods_injector_agent with MioLibPatcher",
-    "created_at": "2026-08-10T16:57:14Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31411606461"
-  },
-  {
-    "id": 30791793147,
-    "sha": "4cf805a93124269b47f8a4ba27fcce36b79ab5ef",
-    "short_sha": "4cf805a",
-    "message": "Merge pull request #334 from AngelAuraMC/fix/sdl-issues\n\nfix bytehook crash when conflicting with turnip loader",
-    "created_at": "2026-08-03T06:55:35Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30791793147"
-  },
-  {
-    "id": 30790196323,
-    "sha": "2ffd1ab0267af59d3170b79b441ad74aa123be21",
-    "short_sha": "2ffd1ab",
-    "message": "bump(AGP): 8.7.2 to 9.3.1\n\nRequired for bytehook to build",
-    "created_at": "2026-08-02T03:20:19Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30790196323"
-  },
-  {
-    "id": 30790152534,
-    "sha": "2ffd1ab0267af59d3170b79b441ad74aa123be21",
-    "short_sha": "2ffd1ab",
-    "message": "bump(AGP): 8.7.2 to 9.3.1\n\nRequired for bytehook to build",
-    "created_at": "2026-08-02T03:20:19Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30790152534"
-  },
-  {
-    "id": 30789306691,
-    "sha": "49fc5c53adfbc4042ad23744c28b2f00a35aa618",
-    "short_sha": "49fc5c5",
-    "message": "Merge pull request #332 from AngelAuraMC/feat/export-javavm-pointer\n\nqol for modders",
-    "created_at": "2026-08-03T06:10:19Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30789306691"
-  },
-  {
-    "id": 30748138220,
-    "sha": "32d8b69d640594303c5ebf3b9b01c0f0de3b6429",
-    "short_sha": "32d8b69",
-    "message": "feat: Set env var for Application jobject\n\nFor use by mods who need to load their own classes or something",
-    "created_at": "2026-08-02T12:34:43Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/30748138220"
   }
 ]
