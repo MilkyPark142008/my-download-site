@@ -1,5 +1,53 @@
 [
   {
+    "id": 33637065422,
+    "sha": "c5036dfd92382e624ca739ad5985587d4415ce57",
+    "short_sha": "c5036df",
+    "message": "chore(l10n): update Chinese (Traditional Han script) translation\n\nchore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nProgress: 5.0% (66 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-02T13:39:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33637065422"
+  },
+  {
+    "id": 33637058856,
+    "sha": "c5036dfd92382e624ca739ad5985587d4415ce57",
+    "short_sha": "c5036df",
+    "message": "chore(l10n): update Chinese (Traditional Han script) translation\n\nchore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nProgress: 5.0% (66 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-02T13:39:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33637058856"
+  },
+  {
+    "id": 33637030036,
+    "sha": "01f225a91d147154961a64bb4db68df8c8ebaf1f",
+    "short_sha": "01f225a",
+    "message": "fix: 修复下载通知在某些设备上不显示的问题\n\nAndroid 13+ 未授予 POST_NOTIFICATIONS 权限时通知被系统静默丢弃，\n而启动时的授权引导仅提示一次，拒绝后无补救入口；\n现下载开始时检测权限缺失就地发起一次授权请求（每次运行至多一次）。\n通知渠道由 IMPORTANCE_LOW 升级为 DEFAULT（下载开始弹横幅提醒），\n并更换渠道 id、清理旧低重要性渠道。",
+    "created_at": "2026-09-02T13:39:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33637030036"
+  },
+  {
+    "id": 33636920300,
+    "sha": "a81a3bef97238864f46a044aca0aaf0d9381fe34",
+    "short_sha": "a81a3be",
+    "message": "chore(l10n): update Chinese (Traditional Han script) translation\n\nchore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nProgress: 5.0% (66 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-02T13:37:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33636920300"
+  },
+  {
+    "id": 33636914995,
+    "sha": "a81a3bef97238864f46a044aca0aaf0d9381fe34",
+    "short_sha": "a81a3be",
+    "message": "chore(l10n): update Chinese (Traditional Han script) translation\n\nchore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nProgress: 5.0% (66 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-02T13:37:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33636914995"
+  },
+  {
+    "id": 33636885884,
+    "sha": "a24f1e33548d3d70445eef092f36276a83072bc4",
+    "short_sha": "a24f1e3",
+    "message": "fix: 修复下载通知在某些设备上不显示的问题\n\nAndroid 13+ 未授予 POST_NOTIFICATIONS 权限时通知被系统静默丢弃，\n而启动时的授权引导仅提示一次，拒绝后无补救入口；\n现下载开始时检测权限缺失就地发起一次授权请求（每次运行至多一次）。\n通知渠道由 IMPORTANCE_LOW 升级为 DEFAULT（下载开始弹横幅提醒），\n并更换渠道 id、清理旧低重要性渠道。",
+    "created_at": "2026-09-02T13:37:27Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33636885884"
+  },
+  {
     "id": 33616405609,
     "sha": "8d685171459bf77c55036143a5e846eb8674d5c0",
     "short_sha": "8d68517",
@@ -350,53 +398,5 @@
     "message": "fix: rebase main 后适配 record 访问器与一键下载的版本参数获取方式",
     "created_at": "2026-08-29T14:00:24Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33256504050"
-  },
-  {
-    "id": 33255963907,
-    "sha": "da44632b4773e1f6539f6dfcd03c306dd52e2e40",
-    "short_sha": "da44632",
-    "message": "fix: 修复按需加载下 bindViewGroup 唤起布局不显示、进度框滞留与组层级错乱\n\n- switchViewGroupVisibility 三态分发：未加载走独立进度框按需加载，已加载未渲染直接渲染为可见（隐藏组不在渲染目标中时原逻辑遍历为空导致点击无效），已渲染保持翻转开关语义\n- 唤起加载改用独立一次性进度框，回调即关，不再与批量加载共享计数（跨会话计数错位导致进度框滞留不关）\n- renderGroup 按文件记录顺序以 translationZ 固定组间 z 序，防止异步加载下后加载的背景组盖住操作组；菜单 elevation 抬高避免被组序顶穿\n- ensureAllLoaded 的 latch.countDown 移入 finally，防回填异常占死 io 线程池",
-    "created_at": "2026-08-29T04:34:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33255963907"
-  },
-  {
-    "id": 33255777371,
-    "sha": "c8854fc4db8e81b1e762ff621a2ac7a973501d43",
-    "short_sha": "c8854fc",
-    "message": "feat: 一键下载对本地已安装模组去重\n\n解析前扫描 mods 目录构建本地已安装索引：先按文件名快速检测（零网络），\n未命中再通过当前下载源反查（CurseForge 文件指纹 / Modrinth SHA-1）做\n项目级检测，命中（含版本不同）即跳过下载并提示数量。\n本体已安装时仅跳过本体下载，其必需前置仍会正常解析并安装。",
-    "created_at": "2026-08-27T15:12:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33255777371"
-  },
-  {
-    "id": 33252064815,
-    "sha": "0782a25f714ecfd920364ca2a85b6c4780d55ad3",
-    "short_sha": "0782a25",
-    "message": "build: 升级 Kotlin Gradle 插件 2.4.10 与 Gradle 8.14.4\n\n- serialization 插件版本收编进 version catalog（原 FCL/build.gradle.kts\n  硬编码 2.3.20 与 kotlin 版本脱钩，统一由 kotlin 版本引用）\n- Gradle wrapper 8.13 → 8.14.4（KGP 2.5.0 起最低要求 8.14.4）\n- modinfo 六文件加 @file:OptIn(InternalSerializationApi)，压制 IDE 对\n  kotlinx 1.10 序列化声明的误报（IDE 插件与工具链对齐后可移除）",
-    "created_at": "2026-08-29T12:09:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33252064815"
-  },
-  {
-    "id": 33234192226,
-    "sha": "da44632b4773e1f6539f6dfcd03c306dd52e2e40",
-    "short_sha": "da44632",
-    "message": "fix: 修复按需加载下 bindViewGroup 唤起布局不显示、进度框滞留与组层级错乱\n\n- switchViewGroupVisibility 三态分发：未加载走独立进度框按需加载，已加载未渲染直接渲染为可见（隐藏组不在渲染目标中时原逻辑遍历为空导致点击无效），已渲染保持翻转开关语义\n- 唤起加载改用独立一次性进度框，回调即关，不再与批量加载共享计数（跨会话计数错位导致进度框滞留不关）\n- renderGroup 按文件记录顺序以 translationZ 固定组间 z 序，防止异步加载下后加载的背景组盖住操作组；菜单 elevation 抬高避免被组序顶穿\n- ensureAllLoaded 的 latch.countDown 移入 finally，防回填异常占死 io 线程池",
-    "created_at": "2026-08-29T04:34:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33234192226"
-  },
-  {
-    "id": 33230951555,
-    "sha": "be1b6befb2b3aa9f4633370956dd045d0a87f06c",
-    "short_sha": "be1b6be",
-    "message": "fix: 编辑模式视图组改为 setup 阶段自动初始化,不再依赖菜单列表绑定兜底",
-    "created_at": "2026-08-29T03:15:26Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33230951555"
-  },
-  {
-    "id": 33226516430,
-    "sha": "f5df60f23e399d06f0ace54adb16affa587d95f7",
-    "short_sha": "f5df60f",
-    "message": "1.3.2.9",
-    "created_at": "2026-08-29T01:28:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33226516430"
   }
 ]
