@@ -1,5 +1,53 @@
 [
   {
+    "id": 33704920238,
+    "sha": "69107b866afd01f3da237ff78a2940420c4d1ff7",
+    "short_sha": "69107b8",
+    "message": "fix: 检查更新时间戳比较统一秒级精度，修复缓存序列化截断亚秒导致的首次误报",
+    "created_at": "2026-09-03T01:37:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33704920238"
+  },
+  {
+    "id": 33700369533,
+    "sha": "0f9d117ea50a4bec1307e6edffd3e0328dcafa17",
+    "short_sha": "0f9d117",
+    "message": "Merge branch 'main' into weblate-foldcraftlauncher-fcl",
+    "created_at": "2026-09-03T00:38:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33700369533"
+  },
+  {
+    "id": 33698990397,
+    "sha": "01575c9dc13888a8730f58e6353a63cf39fe1dfe",
+    "short_sha": "01575c9",
+    "message": "chore(l10n): update Chinese (Traditional Han script) translation\n\nchore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nProgress: 5.0% (66 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-03T00:18:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33698990397"
+  },
+  {
+    "id": 33698987756,
+    "sha": "01575c9dc13888a8730f58e6353a63cf39fe1dfe",
+    "short_sha": "01575c9",
+    "message": "chore(l10n): update Chinese (Traditional Han script) translation\n\nchore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nProgress: 5.0% (66 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-03T00:18:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33698987756"
+  },
+  {
+    "id": 33698973670,
+    "sha": "62dfa68b3d9e5e12dccf6a27936081471d8177df",
+    "short_sha": "62dfa68",
+    "message": "1.3.3.0",
+    "created_at": "2026-09-03T00:18:20Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33698973670"
+  },
+  {
+    "id": 33698973606,
+    "sha": "62dfa68b3d9e5e12dccf6a27936081471d8177df",
+    "short_sha": "62dfa68",
+    "message": "1.3.3.0",
+    "created_at": "2026-09-03T00:18:20Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33698973606"
+  },
+  {
     "id": 33637065422,
     "sha": "c5036dfd92382e624ca739ad5985587d4415ce57",
     "short_sha": "c5036df",
@@ -350,53 +398,5 @@
     "message": "fix: 待安装整合包条目按 100% 计入聚合进度\n\n进度更新有节流，下载结束时可能停在最后一次上报值（如 60%），\n导致下载完成后波浪/通知进度停滞不再前进；\n聚合计算改为待安装（ready）条目固定按 100% 计入。",
     "created_at": "2026-08-30T01:58:44Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33287308318"
-  },
-  {
-    "id": 33287022467,
-    "sha": "5220629b9eaec59239b3efe51ea1ac8ea2625356",
-    "short_sha": "5220629",
-    "message": "fix: 待安装整合包条目按 100% 计入聚合进度\n\n进度更新有节流，下载结束时可能停在最后一次上报值（如 60%），\n导致下载完成后波浪/通知进度停滞不再前进；\n聚合计算改为待安装（ready）条目固定按 100% 计入。",
-    "created_at": "2026-08-30T01:58:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33287022467"
-  },
-  {
-    "id": 33286269116,
-    "sha": "25b91e6356b0bf43ff8e12e033ec5787ac77669d",
-    "short_sha": "25b91e6",
-    "message": "feat: 下载开始弹出提示、整合包临时 zip 全周期清理，面板改为顶部居中弹出\n\n每次添加任务时 Toast 提示已开始下载（连续提交仅显示最新一条）；\n整合包 zip 覆盖完整生命周期：下载取消/失败、待安装丢弃、放弃安装、\n安装完成均会清理临时文件；面板改为从上方居中弹出，背景随主题模式\n取白/黑，宽度调整为 50% 屏宽。",
-    "created_at": "2026-08-29T15:38:01Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33286269116"
-  },
-  {
-    "id": 33256862295,
-    "sha": "a44214c9ae874fb681925b234be3c4ac5ca4ddca",
-    "short_sha": "a44214c",
-    "message": "feat: 懒加载控制布局，优化加载速度 (#1787)\n\n* optimize: 控制器元数据轻量加载，布局按键按需异步加载\n\n启动/列表加载原先对每个控制器完整反序列化（含全部按键），复杂\n控制器的主线程解析明显卡顿。改为只加载元数据，按键数据在布局\n首次使用时按需异步补全。\n\n- Controller 新增 parseLightweight：JsonReader 流式读取控制器与\n  各布局元数据并注册样式，不实例化按键对象；transient 源文件引用\n- 单布局解析 loadViewGroupData：流式定位目标布局解析 viewData，\n  ensureAllLoaded 保存前补全防按键丢失；完整反序列化的布局标记已加载\n- Controllers 新增 loadViewGroup 异步 API（后台解析、主线程填充并\n  回调，规避 fakefx 列表跨线程崩溃），列表互斥锁保护预初始化并发\n- ViewManager 布局未加载时申请加载并显示转圈进度框（最短显示\n  时长保证可见），就绪后渲染；加载中编辑操作有提示防护\n- ProgressDialog 重构为 Kotlin 并改为透明背景纯转圈\n\n* fix: 修复按需加载下 bindViewGroup 唤起布局不显示、进度框滞留与组层级错乱\n\n- switchViewGroupVisibility 三态分发：未加载走独立进度框按需加载，已加载未渲染直接渲染为可见（隐藏组不在渲染目标中时原逻辑遍历为空导致点击无效），已渲染保持翻转开关语义\n- 唤起加载改用独立一次性进度框，回调即关，不再与批量加载共享计数（跨会话计数错位导致进度框滞留不关）\n- renderGroup 按文件记录顺序以 translationZ 固定组间 z 序，防止异步加载下后加载的背景组盖住操作组；菜单 elevation 抬高避免被组序顶穿\n- ensureAllLoaded 的 latch.countDown 移入 finally，防回填异常占死 io 线程池",
-    "created_at": "2026-08-29T14:09:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33256862295"
-  },
-  {
-    "id": 33256823296,
-    "sha": "6fb7c558415d7117bbddb0a44c1627bac2535c84",
-    "short_sha": "6fb7c55",
-    "message": "Merge branch 'main' into refactor/download",
-    "created_at": "2026-08-29T14:08:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33256823296"
-  },
-  {
-    "id": 33256784291,
-    "sha": "3039e931074f75ace7568254d442a145e869c03f",
-    "short_sha": "3039e93",
-    "message": "fix: buildscript classpath 覆盖 R8 9.4.17，修复 Kotlin 2.4.10 产物 dex 时 metadata 解析崩溃",
-    "created_at": "2026-08-29T14:07:50Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33256784291"
-  },
-  {
-    "id": 33256504050,
-    "sha": "e622425314d8f039923ca37c0eaec3b5f694d1ae",
-    "short_sha": "e622425",
-    "message": "fix: rebase main 后适配 record 访问器与一键下载的版本参数获取方式",
-    "created_at": "2026-08-29T14:00:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33256504050"
   }
 ]
