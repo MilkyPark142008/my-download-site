@@ -1,5 +1,13 @@
 [
   {
+    "id": 33743498681,
+    "sha": "45a6058aef7fccb9d41c909c59c82414c1effae9",
+    "short_sha": "45a6058",
+    "message": "refactor: 删除\"强制渲染器在大核上运行\"功能\n\n移除版本设置中的大核开关及整条传递链：VersionSetting 字段与序列化、\nLaunchOptions/FCLConfig 透传、POJAV_BIG_CORE_AFFINITY 环境变量、\nnative 绑核实现（bigcoreaffinity.c）及各语言字符串，同步更新测试。",
+    "created_at": "2026-09-03T10:17:03Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33743498681"
+  },
+  {
     "id": 33704920238,
     "sha": "69107b866afd01f3da237ff78a2940420c4d1ff7",
     "short_sha": "69107b8",
@@ -390,13 +398,5 @@
     "message": "feat: 全局下载管理与模组前置依赖一键下载 (#1788)\n\n* feat: 新增全局下载管理（非阻塞下载、左菜单开关与进度面板、后台保活）\n\n简单文件下载不再弹模态对话框：DownloadManager 单例收集任务列表，\n左侧菜单出现下载开关按钮，有任务时自动滑出右侧卡片面板实时显示\n（文件名/字节进度文字/视觉进度条/取消），并在下载期间持有\nWakeLock+WifiLock 保活。安装/启动类流程保持原模态对话框不变。\n\n* feat: 下载期间启动前台服务发布进度通知，后台下载不中断\n\n任务出现时启动 dataSync 前台服务保活（Doze 豁免、进程保护），\n通知显示聚合进度并可点击回到主界面；任务全部完成后移除通知并停止服务。\nAndroid 13+ 未授予通知权限时显式检查后跳过通知，服务照常保活；\n后台启动前台服务被系统限制时降级为仅持唤醒锁。\n\n* fix: 下载面板列表迁移 RecyclerView 并修复多任务取消崩溃\n\n面板列表由 ListView 改为 RecyclerView（ListAdapter + DiffUtil 增量刷新、\nItemDecoration 提供条目间隔），条目加圆角边框背景，面板与条目改用\nViewBinding；修复多次取消任务时 AsyncTaskExecutor 遍历 listener 列表\n与主线程移除并发导致的 ConcurrentModificationException（onStop 中不再\nremoveTaskListener）。\n\n* fix: 下载取消统一按取消处理，修复取消误报失败与占位符弹窗标题\n\nFetchTask 下载循环取消检查与大小校验存在竞态窗口，取消瞬间会抛\nIOException 并重试，最终以 DownloadException 误报下载失败弹窗；\n现取消优先（校验前补检查、重试分支与收尾均转为 CancellationException）。\n整合包下载失败弹窗标题改用无占位符的 install_failed_downloading\n（原 download_failed 带 %1$s/%2$d 未传参导致标题显示占位符）。\n面板文字颜色统一为 darker_gray。\n\n* Update Versions.java\n\n* feat: 模组一键下载前置依赖、整合包下载完成待手动安装、下载波浪进度指示器\n\n* feat: 一键下载对本地已安装模组去重\n\n解析前扫描 mods 目录构建本地已安装索引：先按文件名快速检测（零网络），\n未命中再通过当前下载源反查（CurseForge 文件指纹 / Modrinth SHA-1）做\n项目级检测，命中（含版本不同）即跳过下载并提示数量。\n本体已安装时仅跳过本体下载，其必需前置仍会正常解析并安装。\n\n* fix: rebase main 后适配 record 访问器与一键下载的版本参数获取方式\n\n* optimize: 波浪进度指示器增加进度平滑过渡\n\n绘制用进度逐帧向目标缓动，聚合进度每秒跳变时交界线平滑推进，\n不再生硬跳变。\n\n* feat: 下载开始弹出提示、整合包临时 zip 全周期清理，面板改为顶部居中弹出\n\n每次添加任务时 Toast 提示已开始下载（连续提交仅显示最新一条）；\n整合包 zip 覆盖完整生命周期：下载取消/失败、待安装丢弃、放弃安装、\n安装完成均会清理临时文件；面板改为从上方居中弹出，背景随主题模式\n取白/黑，宽度调整为 50% 屏宽。\n\n* fix: 待安装整合包条目按 100% 计入聚合进度\n\n进度更新有节流，下载结束时可能停在最后一次上报值（如 60%），\n导致下载完成后波浪/通知进度停滞不再前进；\n聚合计算改为待安装（ready）条目固定按 100% 计入。",
     "created_at": "2026-08-30T02:13:30Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33287486603"
-  },
-  {
-    "id": 33287308318,
-    "sha": "5220629b9eaec59239b3efe51ea1ac8ea2625356",
-    "short_sha": "5220629",
-    "message": "fix: 待安装整合包条目按 100% 计入聚合进度\n\n进度更新有节流，下载结束时可能停在最后一次上报值（如 60%），\n导致下载完成后波浪/通知进度停滞不再前进；\n聚合计算改为待安装（ready）条目固定按 100% 计入。",
-    "created_at": "2026-08-30T01:58:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33287308318"
   }
 ]
