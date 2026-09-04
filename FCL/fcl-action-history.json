@@ -1,5 +1,21 @@
 [
   {
+    "id": 33884233845,
+    "sha": "a768c8eff92f3f0d8e9242cdab63d1227ed74bed",
+    "short_sha": "a768c8e",
+    "message": "test: 新增控制数据序列化回归测试\n\n覆盖手写 JSON 序列化改造：Event/BaseInfo/DirectionEvent/按钮/完整\n控制器往返一致；列表字段保持 JSON 数组、percentage 保持 reference/size\n结构（防回退 TypeToken 解析模式）；assets 默认控制器样例可被手写\nSerializer 完整解析（既有文件格式兼容）；并发 saveToDisk 50 线程\n合并保存不丢数据不崩溃。192.168.2.8 真机 8 用例全部通过。",
+    "created_at": "2026-09-04T14:30:01Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33884233845"
+  },
+  {
+    "id": 33882256223,
+    "sha": "4a841cac3c0cc25c080468bd5db36c61dc64d875",
+    "short_sha": "4a841ca",
+    "message": "optimize: Schedulers.io() 线程数 4 调整为 8\n\nIO 线程池被控制布局保存等任务占满时，交互请求排队无反馈，\n增大并发容量降低排队概率。",
+    "created_at": "2026-09-04T14:10:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33882256223"
+  },
+  {
     "id": 33846459863,
     "sha": "64bbfb4f6d1ff00ca9fd72be9385a64966f25989",
     "short_sha": "64bbfb4",
@@ -382,21 +398,5 @@
     "message": "chore(l10n): update Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
     "created_at": "2026-08-31T02:17:44Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33350241520"
-  },
-  {
-    "id": 33350239441,
-    "sha": "35a9f2febe89d4322df87d8a23fdfe7cb9f18e47",
-    "short_sha": "35a9f2f",
-    "message": "chore(l10n): update Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
-    "created_at": "2026-08-31T02:17:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33350239441"
-  },
-  {
-    "id": 33350226947,
-    "sha": "3d995dcf7b86d4979e94262bf19c8b19257d7319",
-    "short_sha": "3d995dc",
-    "message": "Update MioLibPatcher.jar",
-    "created_at": "2026-08-31T02:17:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33350226947"
   }
 ]
