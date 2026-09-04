@@ -1,5 +1,13 @@
 [
   {
+    "id": 33848080997,
+    "sha": "3163ad44357cd7423d7ad11c9431b29facbb256c",
+    "short_sha": "3163ad4",
+    "message": "fix: 非 SDL 后端输入法无法输入中文的问题\n\n触摸层焦点恢复（FocusableBox）在非 SDL 后端会抢走输入栏编辑器的 view 焦点，\n输入法失去编辑目标后退化为直发按键事件：中文组合输入无法送达游戏，\n英文字母以按键事件的形式漏进游戏聊天栏。\n\n- 输入栏编辑器（TouchCharInput）活跃时，触摸层禁止抢夺 view 焦点\n- 输入栏关闭时将 view 焦点归还 compose 视图，避免窗口内没有 focused view\n  导致指针捕获事件沿焦点链分发失效",
+    "created_at": "2026-09-04T07:16:51Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33848080997"
+  },
+  {
     "id": 33770554924,
     "sha": "66518e15d2ef85a34625772d7f8934eed203f868",
     "short_sha": "66518e1",
@@ -390,13 +398,5 @@
     "message": "Merge pull request #1741 from ZalithLauncher/chore/version_mg_ui\n\nrefactor: 重构版本管理页面版本列表的 UI",
     "created_at": "2026-08-29T19:59:34Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33272289241"
-  },
-  {
-    "id": 33272269822,
-    "sha": "ecffd4b60c75c2b202042d79f273e1564f5e3a91",
-    "short_sha": "ecffd4b",
-    "message": "Merge branch 'main' into chore/version_mg_ui",
-    "created_at": "2026-08-29T19:58:44Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33272269822"
   }
 ]
