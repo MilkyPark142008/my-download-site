@@ -1,5 +1,77 @@
 [
   {
+    "id": 33829024932,
+    "sha": "22042fcdfd743c5f7f77045140860a529b324bc4",
+    "short_sha": "22042fc",
+    "message": "feat: 插件管理功能 (#1799)\n\n* feat: 新增插件管理页面，统一插件扫描与启用/禁用机制\n\n- 新增 PluginManager 统一扫描插件应用（渲染器/驱动/原生库/FFmpeg），\n  三个插件 object 共享扫描结果，仅保留各自 meta-data 解析\n- 启用/禁用状态走 DataStore（plugin_settings.json）持久化，\n  切换后立即重扫各插件列表（renderer 回落 NGGL4ES、driver 回落内置 Turnip）\n- 卸载走系统 ACTION_DELETE，从卸载页返回后自动刷新列表\n- 设置页新增\"插件管理\"tab（启动器设置与关于之间），展示图标/名称/包名/版本/类型，\n  字符串同步 9 个语言目录\n\n* Update ThemePreference.kt\n\n* Update item_plugin.xml\n\n* refactor: 插件实现统一迁移到 com.mio.plugin 包\n\n- RendererPlugin/DriverPlugin/NativeLibPlugin/FFmpegPlugin/_Bundle 自\n  com.tungsten.fclauncher.plugins 迁入 com.mio.plugin\n- PluginManager 自 com.mio.manager 迁入 com.mio.plugin，插件域代码统一一个包\n- 更新 10 处引用方 import 与 AGENTS.md 插件体系描述\n\n* refactor: 新增 AbstractPlugin 基类统一插件共有逻辑\n\n- 懒初始化列表、enabledApps 扫描遍历、refresh 流程下沉到 AbstractPlugin\n- RendererPlugin/DriverPlugin/NativeLibPlugin 继承基类，仅保留各自的\n  meta-data 解析与去重逻辑（DriverPlugin 的内置 Turnip 走 onInit 钩子）\n- 对外属性改为只读 List 并保留 @JvmStatic，Java 静态调用点不变\n- 删除无调用者的 isAvailable()\n\n* refactor: PluginManagePage 迁入 com.tungsten.fcl.ui.setting 包\n\n与 LauncherSettingPage/AboutPage 等设置页子页面同包，删除 SettingUI 的同包 import\n\n* fix: 修复卸载插件返回管理页后列表不刷新\n\n卸载发生在系统侧，进程内扫描缓存不会自动感知，allApps 一直返回旧列表\n导致 DiffUtil 判定无变化：\n- PluginManager 新增 invalidate() 失效扫描缓存\n- 管理页 onHostResume 重扫，按包名+lastUpdateTime 对比，变化时联动\n  refreshAll（渲染器/驱动选择器不再残留已卸载的插件）\n- PluginApp 记录 lastUpdateTime，覆盖安装也能被检测\n- Adapter 的 DiffUtil 改为手写内容比较，避免重扫后 icon 新实例导致整表误判重绑\n\n* 格式化",
+    "created_at": "2026-09-04T02:18:18Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33829024932"
+  },
+  {
+    "id": 33828989266,
+    "sha": "45ec4bbc76b3469fbed77f68ff16dd1342fef7a7",
+    "short_sha": "45ec4bb",
+    "message": "格式化",
+    "created_at": "2026-09-04T02:17:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33828989266"
+  },
+  {
+    "id": 33828986276,
+    "sha": "45ec4bbc76b3469fbed77f68ff16dd1342fef7a7",
+    "short_sha": "45ec4bb",
+    "message": "格式化",
+    "created_at": "2026-09-04T02:17:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33828986276"
+  },
+  {
+    "id": 33828634267,
+    "sha": "6769567e4e9ad2dc1f2bbeb1872144ac8b0ac152",
+    "short_sha": "6769567",
+    "message": "fix: 修复卸载插件返回管理页后列表不刷新\n\n卸载发生在系统侧，进程内扫描缓存不会自动感知，allApps 一直返回旧列表\n导致 DiffUtil 判定无变化：\n- PluginManager 新增 invalidate() 失效扫描缓存\n- 管理页 onHostResume 重扫，按包名+lastUpdateTime 对比，变化时联动\n  refreshAll（渲染器/驱动选择器不再残留已卸载的插件）\n- PluginApp 记录 lastUpdateTime，覆盖安装也能被检测\n- Adapter 的 DiffUtil 改为手写内容比较，避免重扫后 icon 新实例导致整表误判重绑",
+    "created_at": "2026-09-04T02:08:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33828634267"
+  },
+  {
+    "id": 33828549589,
+    "sha": "6769567e4e9ad2dc1f2bbeb1872144ac8b0ac152",
+    "short_sha": "6769567",
+    "message": "fix: 修复卸载插件返回管理页后列表不刷新\n\n卸载发生在系统侧，进程内扫描缓存不会自动感知，allApps 一直返回旧列表\n导致 DiffUtil 判定无变化：\n- PluginManager 新增 invalidate() 失效扫描缓存\n- 管理页 onHostResume 重扫，按包名+lastUpdateTime 对比，变化时联动\n  refreshAll（渲染器/驱动选择器不再残留已卸载的插件）\n- PluginApp 记录 lastUpdateTime，覆盖安装也能被检测\n- Adapter 的 DiffUtil 改为手写内容比较，避免重扫后 icon 新实例导致整表误判重绑",
+    "created_at": "2026-09-04T02:08:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33828549589"
+  },
+  {
+    "id": 33823113837,
+    "sha": "0f67c9b7bd44e8922cb37c7d8f9ccade71638148",
+    "short_sha": "0f67c9b",
+    "message": "Merge pull request #1798 from FCL-Team/weblate-foldcraftlauncher-fcl\n\nchore(l10n): update translations",
+    "created_at": "2026-09-04T00:45:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33823113837"
+  },
+  {
+    "id": 33822696706,
+    "sha": "6c8c3b9ca1a29472f3b41f71cad75b86ef742da2",
+    "short_sha": "6c8c3b9",
+    "message": "chore(l10n): update translation files\n\nchore(l10n): update Chinese (Simplified Han script) translation\n\nAdd-on: Remove blank strings\nCo-authored-by: Anonymous <noreply@weblate.org>\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nLanguage: Chinese (Simplified Han script)\nProgress: 100.0% (1311 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hans/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-04T00:39:43Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33822696706"
+  },
+  {
+    "id": 33822695147,
+    "sha": "6c8c3b9ca1a29472f3b41f71cad75b86ef742da2",
+    "short_sha": "6c8c3b9",
+    "message": "chore(l10n): update translation files\n\nchore(l10n): update Chinese (Simplified Han script) translation\n\nAdd-on: Remove blank strings\nCo-authored-by: Anonymous <noreply@weblate.org>\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nLanguage: Chinese (Simplified Han script)\nProgress: 100.0% (1311 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hans/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-04T00:39:43Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33822695147"
+  },
+  {
+    "id": 33822259989,
+    "sha": "e5e1eeff9012738ae4484c61f19f25d441ac0a47",
+    "short_sha": "e5e1eef",
+    "message": "chore(l10n): update translations (#1796)\n\n* chore(l10n): update Chinese (Traditional Han script) translation\n\nchore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nProgress: 5.0% (66 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL\n\n---------\n\nCo-authored-by: ShirosakiMio <852468399@qq.com>\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>",
+    "created_at": "2026-09-04T00:33:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33822259989"
+  },
+  {
     "id": 33743498681,
     "sha": "45a6058aef7fccb9d41c909c59c82414c1effae9",
     "short_sha": "45a6058",
@@ -326,77 +398,5 @@
     "message": "chore(l10n): add Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
     "created_at": "2026-08-31T01:39:38Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33348271255"
-  },
-  {
-    "id": 33348269142,
-    "sha": "246335022091de25dbaebbb9327a89c92c4502c0",
-    "short_sha": "2463350",
-    "message": "chore(l10n): add Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
-    "created_at": "2026-08-31T01:39:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33348269142"
-  },
-  {
-    "id": 33315304280,
-    "sha": "ca1d31d91531dd55a1113d6df66edf6df7416ddb",
-    "short_sha": "ca1d31d",
-    "message": "chore(l10n): update Turkish translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Turkish\nProgress: 23.2% (304 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/tr/",
-    "created_at": "2026-08-30T13:51:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33315304280"
-  },
-  {
-    "id": 33315302504,
-    "sha": "ca1d31d91531dd55a1113d6df66edf6df7416ddb",
-    "short_sha": "ca1d31d",
-    "message": "chore(l10n): update Turkish translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Turkish\nProgress: 23.2% (304 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/tr/",
-    "created_at": "2026-08-30T13:51:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33315302504"
-  },
-  {
-    "id": 33312616913,
-    "sha": "060d3b88a399dffff9dac827d9a9fc0e933756e3",
-    "short_sha": "060d3b8",
-    "message": "chore(l10n): update Turkish translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Turkish\nProgress: 10.8% (142 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/tr/",
-    "created_at": "2026-08-30T12:51:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33312616913"
-  },
-  {
-    "id": 33312614309,
-    "sha": "060d3b88a399dffff9dac827d9a9fc0e933756e3",
-    "short_sha": "060d3b8",
-    "message": "chore(l10n): update Turkish translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Turkish\nProgress: 10.8% (142 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/tr/",
-    "created_at": "2026-08-30T12:51:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33312614309"
-  },
-  {
-    "id": 33308405142,
-    "sha": "f5aaba99cc9b6493cb9484eb6c1af9e07bc3d7d8",
-    "short_sha": "f5aaba9",
-    "message": "chore(l10n): add Turkish translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Turkish\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/tr/",
-    "created_at": "2026-08-30T11:13:36Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33308405142"
-  },
-  {
-    "id": 33308404393,
-    "sha": "f5aaba99cc9b6493cb9484eb6c1af9e07bc3d7d8",
-    "short_sha": "f5aaba9",
-    "message": "chore(l10n): add Turkish translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Turkish\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/tr/",
-    "created_at": "2026-08-30T11:13:36Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33308404393"
-  },
-  {
-    "id": 33308127763,
-    "sha": "b5807e7a59560680b085c7b37b4fa63c367f107e",
-    "short_sha": "b5807e7",
-    "message": "fix: 前置解析的 Stream.toList 替换为 collect(Collectors.toList())\n\nStream.toList 为 API 34+ 方法，minSdk 26 的设备在解析前置时\n会因 NoSuchMethodError 崩溃重试。",
-    "created_at": "2026-08-30T11:06:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33308127763"
-  },
-  {
-    "id": 33287486603,
-    "sha": "4498c6d9820f70c02e4be441ff2eb00e5d8f33ae",
-    "short_sha": "4498c6d",
-    "message": "feat: 全局下载管理与模组前置依赖一键下载 (#1788)\n\n* feat: 新增全局下载管理（非阻塞下载、左菜单开关与进度面板、后台保活）\n\n简单文件下载不再弹模态对话框：DownloadManager 单例收集任务列表，\n左侧菜单出现下载开关按钮，有任务时自动滑出右侧卡片面板实时显示\n（文件名/字节进度文字/视觉进度条/取消），并在下载期间持有\nWakeLock+WifiLock 保活。安装/启动类流程保持原模态对话框不变。\n\n* feat: 下载期间启动前台服务发布进度通知，后台下载不中断\n\n任务出现时启动 dataSync 前台服务保活（Doze 豁免、进程保护），\n通知显示聚合进度并可点击回到主界面；任务全部完成后移除通知并停止服务。\nAndroid 13+ 未授予通知权限时显式检查后跳过通知，服务照常保活；\n后台启动前台服务被系统限制时降级为仅持唤醒锁。\n\n* fix: 下载面板列表迁移 RecyclerView 并修复多任务取消崩溃\n\n面板列表由 ListView 改为 RecyclerView（ListAdapter + DiffUtil 增量刷新、\nItemDecoration 提供条目间隔），条目加圆角边框背景，面板与条目改用\nViewBinding；修复多次取消任务时 AsyncTaskExecutor 遍历 listener 列表\n与主线程移除并发导致的 ConcurrentModificationException（onStop 中不再\nremoveTaskListener）。\n\n* fix: 下载取消统一按取消处理，修复取消误报失败与占位符弹窗标题\n\nFetchTask 下载循环取消检查与大小校验存在竞态窗口，取消瞬间会抛\nIOException 并重试，最终以 DownloadException 误报下载失败弹窗；\n现取消优先（校验前补检查、重试分支与收尾均转为 CancellationException）。\n整合包下载失败弹窗标题改用无占位符的 install_failed_downloading\n（原 download_failed 带 %1$s/%2$d 未传参导致标题显示占位符）。\n面板文字颜色统一为 darker_gray。\n\n* Update Versions.java\n\n* feat: 模组一键下载前置依赖、整合包下载完成待手动安装、下载波浪进度指示器\n\n* feat: 一键下载对本地已安装模组去重\n\n解析前扫描 mods 目录构建本地已安装索引：先按文件名快速检测（零网络），\n未命中再通过当前下载源反查（CurseForge 文件指纹 / Modrinth SHA-1）做\n项目级检测，命中（含版本不同）即跳过下载并提示数量。\n本体已安装时仅跳过本体下载，其必需前置仍会正常解析并安装。\n\n* fix: rebase main 后适配 record 访问器与一键下载的版本参数获取方式\n\n* optimize: 波浪进度指示器增加进度平滑过渡\n\n绘制用进度逐帧向目标缓动，聚合进度每秒跳变时交界线平滑推进，\n不再生硬跳变。\n\n* feat: 下载开始弹出提示、整合包临时 zip 全周期清理，面板改为顶部居中弹出\n\n每次添加任务时 Toast 提示已开始下载（连续提交仅显示最新一条）；\n整合包 zip 覆盖完整生命周期：下载取消/失败、待安装丢弃、放弃安装、\n安装完成均会清理临时文件；面板改为从上方居中弹出，背景随主题模式\n取白/黑，宽度调整为 50% 屏宽。\n\n* fix: 待安装整合包条目按 100% 计入聚合进度\n\n进度更新有节流，下载结束时可能停在最后一次上报值（如 60%），\n导致下载完成后波浪/通知进度停滞不再前进；\n聚合计算改为待安装（ready）条目固定按 100% 计入。",
-    "created_at": "2026-08-30T02:13:30Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33287486603"
   }
 ]
