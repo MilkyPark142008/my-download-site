@@ -1,402 +1,402 @@
 [
   {
-    "id": 33848080997,
-    "sha": "3163ad44357cd7423d7ad11c9431b29facbb256c",
-    "short_sha": "3163ad4",
-    "message": "fix: 非 SDL 后端输入法无法输入中文的问题\n\n触摸层焦点恢复（FocusableBox）在非 SDL 后端会抢走输入栏编辑器的 view 焦点，\n输入法失去编辑目标后退化为直发按键事件：中文组合输入无法送达游戏，\n英文字母以按键事件的形式漏进游戏聊天栏。\n\n- 输入栏编辑器（TouchCharInput）活跃时，触摸层禁止抢夺 view 焦点\n- 输入栏关闭时将 view 焦点归还 compose 视图，避免窗口内没有 focused view\n  导致指针捕获事件沿焦点链分发失效",
-    "created_at": "2026-09-04T07:16:51Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33848080997"
+    "id": 30243733831,
+    "sha": "e4cbd3fbae6e93b950119c96ee90b08f5b426281",
+    "short_sha": "e4cbd3f",
+    "message": "fix: 摇杆组件销毁时，未松开已触发的事件",
+    "created_at": "2026-07-27T06:44:38Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/30243733831"
   },
   {
-    "id": 33770554924,
-    "sha": "66518e15d2ef85a34625772d7f8934eed203f868",
-    "short_sha": "66518e1",
-    "message": "Merge pull request #1774 from ZalithLauncher/main\n\nmerge main",
-    "created_at": "2026-09-03T15:04:36Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33770554924"
+    "id": 30242323769,
+    "sha": "ade0bfb6bfa17b938c809550ba3276b8786c889a",
+    "short_sha": "ade0bfb",
+    "message": "feat: 摇杆方向、锁定事件编辑器",
+    "created_at": "2026-07-27T06:18:35Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/30242323769"
   },
   {
-    "id": 33770520819,
-    "sha": "62bf18a6d1334aba221e6207b9badcbdd5a94313",
-    "short_sha": "62bf18a",
-    "message": "Merge pull request #1773 from ZalithLauncher/main\n\nmerge main",
-    "created_at": "2026-09-03T15:04:13Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33770520819"
+    "id": 30233575838,
+    "sha": "c7b3aea13aead71c6f7e0155f1b9cf94f5f853e7",
+    "short_sha": "c7b3aea",
+    "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1254 of 1254 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
+    "created_at": "2026-07-27T03:01:51Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/30233575838"
   },
   {
-    "id": 33769373322,
-    "sha": "bfa38a9db86f24789787a3affea5225b416c1683",
-    "short_sha": "bfa38a9",
-    "message": "Merge pull request #1772 from ZalithLauncher/fix/download\n\nfix: CurseForge 分页加载在主线程取消请求时触发崩溃",
-    "created_at": "2026-09-03T14:52:00Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33769373322"
+    "id": 29851669333,
+    "sha": "36bc1adaae7deaefb3fe61d615d8ada0332bc012",
+    "short_sha": "36bc1ad",
+    "message": "Merge pull request #1590 from ZalithLauncher/fix/addons_fetch\n\nfix: 填写页码时，若总页数为 0 则导致崩溃",
+    "created_at": "2026-07-21T17:08:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29851669333"
   },
   {
-    "id": 33769258976,
-    "sha": "7432d93ebb685dffb2234b3eca870f1b91f858de",
-    "short_sha": "7432d93",
-    "message": "fix: CurseForge 分页加载在主线程取消请求时触发崩溃",
-    "created_at": "2026-09-03T14:50:34Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33769258976"
+    "id": 29851441656,
+    "sha": "2428c910abfc19d6e9d70b3e8a28587855b86caa",
+    "short_sha": "2428c91",
+    "message": "fix: 搜索源全部失败时，应抛出第一个源的异常",
+    "created_at": "2026-07-21T17:05:01Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29851441656"
   },
   {
-    "id": 33761423276,
-    "sha": "0cd27d8340be8b035c38c0455c6086331783b50c",
-    "short_sha": "0cd27d8",
-    "message": "fix: 游戏版本列表 item 未加上背景模糊",
-    "created_at": "2026-09-03T13:29:06Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33761423276"
+    "id": 29850933191,
+    "sha": "19341ec7428cda3e35041d21534b500cded0a633",
+    "short_sha": "19341ec",
+    "message": "fix: 填写页码时，若总页数为 0 则导致崩溃",
+    "created_at": "2026-07-21T16:58:00Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29850933191"
   },
   {
-    "id": 33754737443,
-    "sha": "7976102c97636ae0cda5a7722bf3a9e6814a9b2a",
-    "short_sha": "7976102",
-    "message": "Merge pull request #1771 from ZalithLauncher/fix/srv-dns-config\n\nfix: 修复游戏内无法解析 SRV 记录的问题",
-    "created_at": "2026-09-03T12:21:21Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33754737443"
+    "id": 29160095054,
+    "sha": "10ad51b879112fbbd53f7264d38c28da2b4c1980",
+    "short_sha": "10ad51b",
+    "message": "fix: 环境变量配置项为空时不绘制 UI",
+    "created_at": "2026-07-11T16:35:56Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29160095054"
   },
   {
-    "id": 33754671592,
-    "sha": "964c770103975bc312cd3cc6c5dd1201dddb8bfd",
-    "short_sha": "964c770",
-    "message": "fix: 修复游戏内无法解析 SRV 记录的问题",
-    "created_at": "2026-09-03T12:20:33Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33754671592"
+    "id": 29157588504,
+    "sha": "aa6294085fcaa68fd3b3eee98eca445ddcb8e518",
+    "short_sha": "aa62940",
+    "message": "fix: 修复遗漏的路径替换功能",
+    "created_at": "2026-07-11T15:15:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29157588504"
   },
   {
-    "id": 33687407946,
-    "sha": "e7cce4454483a779f0a678d74288456c4c7f5eed",
-    "short_sha": "e7cce44",
-    "message": "Merge pull request #1767 from ZalithLauncher/fix/sdl_keyboard_input\n\nfix: 实体鼠标无法使虚拟指针移动",
-    "created_at": "2026-09-02T21:51:35Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33687407946"
+    "id": 29157126415,
+    "sha": "901e73c4ff853a7f326f73bf2fff39608d0f1557",
+    "short_sha": "901e73c",
+    "message": "feat: 渲染器插件环境变量配置实现",
+    "created_at": "2026-07-11T14:59:56Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29157126415"
   },
   {
-    "id": 33687361821,
-    "sha": "a98ca9126bfc342cff9ca91b07c3364b73707b47",
-    "short_sha": "a98ca91",
-    "message": "fix: 实体鼠标无法使虚拟指针移动",
-    "created_at": "2026-09-02T21:50:57Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33687361821"
+    "id": 29154133689,
+    "sha": "8a570416a9e93224865c2bb93e783fcac7185896",
+    "short_sha": "8a57041",
+    "message": "Merge pull request #1546 from ZalithLauncher/fix/jna_java.library.path\n\nfix: 启动游戏时重复配置 java.library.path",
+    "created_at": "2026-07-11T13:19:59Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29154133689"
   },
   {
-    "id": 33658714997,
-    "sha": "ef574a693dde1528548d699cc5a4d2e27b9a07d3",
-    "short_sha": "ef574a6",
-    "message": "Merge pull request #1765 from ZalithLauncher/fix/install_service\n\nfix: 缓解安装模组加载器时前台服务创建失败的问题",
-    "created_at": "2026-09-02T06:26:16Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33658714997"
+    "id": 29154109732,
+    "sha": "13f276882960da936678c39583e2d616dddc3cc7",
+    "short_sha": "13f2768",
+    "message": "fix: 启动游戏时重复配置 java.library.path",
+    "created_at": "2026-07-11T13:19:02Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29154109732"
   },
   {
-    "id": 33598833422,
-    "sha": "ef574a693dde1528548d699cc5a4d2e27b9a07d3",
-    "short_sha": "ef574a6",
-    "message": "Merge pull request #1765 from ZalithLauncher/fix/install_service\n\nfix: 缓解安装模组加载器时前台服务创建失败的问题",
-    "created_at": "2026-09-02T06:26:16Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33598833422"
+    "id": 29145849028,
+    "sha": "49b626c9aadbebcd0bf4cc585cebe62b5d41aab7",
+    "short_sha": "49b626c",
+    "message": "Merge pull request #1545 from ZalithLauncher/feat/asset_info_screen\n\nfeat: 管理模组时查看信息，切换到独立的模组版本屏幕",
+    "created_at": "2026-07-11T08:16:09Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29145849028"
   },
   {
-    "id": 33598532319,
-    "sha": "3fe718829193f9faad6857e9ad77f569c8dc0a6f",
-    "short_sha": "3fe7188",
-    "message": "fix: 缓解安装模组加载器时前台服务创建失败的问题",
-    "created_at": "2026-09-02T06:22:02Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33598532319"
+    "id": 29145087490,
+    "sha": "69f36ea776f69764df1ecf0519f8656150ad9b57",
+    "short_sha": "69f36ea",
+    "message": "refactor: 主页标题可状态化",
+    "created_at": "2026-07-11T07:47:21Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29145087490"
   },
   {
-    "id": 33554242715,
-    "sha": "d6f7df2d4333ee67cf3fac084a03c98c553b3bdd",
-    "short_sha": "d6f7df2",
-    "message": "Merge pull request #1763 from ZalithLauncher/fix/soraeditor_theme\n\nfix: SoraEditor 因 R8 混淆失去语法高亮、主题",
-    "created_at": "2026-09-01T20:15:22Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33554242715"
+    "id": 29143512879,
+    "sha": "cf1addc8f4ff52cfc8ab9ecbb7b9c880b8430b06",
+    "short_sha": "cf1addc",
+    "message": "feat: 使用加载 Activity 广播的方式获取插件的配置",
+    "created_at": "2026-07-11T06:51:31Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29143512879"
   },
   {
-    "id": 33548950307,
-    "sha": "00b1bf33ca53c6ec43ffa7c7a3a0f75da47c4e61",
-    "short_sha": "00b1bf3",
-    "message": "fix: SoraEditor 因 R8 混淆失去语法高亮、主题",
-    "created_at": "2026-09-01T19:20:04Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33548950307"
+    "id": 29107919020,
+    "sha": "4b8d850157c2b3d990f073b193e72d687291163c",
+    "short_sha": "4b8d850",
+    "message": "feat: 使用加载 dex 的方式获取新架构渲染器插件",
+    "created_at": "2026-07-10T16:35:15Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29107919020"
   },
   {
-    "id": 33535933493,
-    "sha": "92e9e4e1250724d941da0ae67a34d086a6f81c51",
-    "short_sha": "92e9e4e",
-    "message": "update MioLibPatcher.jar",
-    "created_at": "2026-09-01T17:07:34Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33535933493"
+    "id": 29076586979,
+    "sha": "24bdd358523dacf81abfd631e8dbeba000eddb36",
+    "short_sha": "24bdd35",
+    "message": "refactor: 优化代码结构",
+    "created_at": "2026-07-10T07:22:39Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29076586979"
   },
   {
-    "id": 33518307318,
-    "sha": "ac23cb6c4e2cbb7c93041ee7620ff4f12c026960",
-    "short_sha": "ac23cb6",
-    "message": "chore: 版本列表新增顶部遮挡淡化",
-    "created_at": "2026-09-01T14:14:38Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33518307318"
+    "id": 29020156100,
+    "sha": "a4d7907596703cd590455baac4e828e830eaa6f7",
+    "short_sha": "a4d7907",
+    "message": "refactor: 重构任务流标题文本本地化创建/使用方式",
+    "created_at": "2026-07-09T13:04:58Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/29020156100"
   },
   {
-    "id": 33500617152,
-    "sha": "bdb81d6dedd40d9708d48e91fb3326663a0e2232",
-    "short_sha": "bdb81d6",
-    "message": "fix: 修复下载器源停摆时的 0B/s 冻结\n\n- 超时分类：okio 的 InterruptedIOException(timeout) 计入熔断而非当作取消吞掉\n- 全源熔断时原地等待冷却到期，不再派发注定空转的工人；等待上限后走降级通道真实尝试\n- 降级通道（acquireDegraded）不再核对熔断，每个源至多付一次读超时，保证有界终止\n- 小文件读超时 8s→5s，熔断冷却 45s→15s，缩短停摆冻结窗口\n- 新增 StallRecoveryTest，更新 SourceHealthTest",
-    "created_at": "2026-09-01T11:04:00Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33500617152"
+    "id": 28997729080,
+    "sha": "b8f4b3173f86e0a95354e0471f702cd3df0ac9a2",
+    "short_sha": "b8f4b31",
+    "message": "refactor: 重构任务消息构建方式",
+    "created_at": "2026-07-09T06:03:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28997729080"
   },
   {
-    "id": 33474372124,
-    "sha": "d3ebf13a6f941877e0785e239c7616064fcabdc6",
-    "short_sha": "d3ebf13",
-    "message": "Merge pull request #1760 from ZalithLauncher/fix/sdl_keyboard_input\n\nfix: SDL 未启用时 IME 回调触发 UnsatisfiedLinkError 崩溃",
-    "created_at": "2026-09-01T05:38:21Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33474372124"
+    "id": 28919989731,
+    "sha": "bdc8f56ad6c2d9432e3c18ff0f917c9eb08ff4b1",
+    "short_sha": "bdc8f56",
+    "message": "feat: 管理模组时查看信息，切换到独立的模组版本屏幕 #1537",
+    "created_at": "2026-07-08T05:32:20Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28919989731"
   },
   {
-    "id": 33474354333,
-    "sha": "cea6b7ae14945107694fa4c95f6c0f7ae4b07455",
-    "short_sha": "cea6b7a",
-    "message": "fix: SDL 未启用时 IME 回调触发 UnsatisfiedLinkError 崩溃",
-    "created_at": "2026-09-01T05:37:58Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33474354333"
+    "id": 28917726972,
+    "sha": "1bcd8de73302ba4cc4afa643d236675e7d7dc393",
+    "short_sha": "1bcd8de",
+    "message": "Merge pull request #1539 from ZalithLauncher/fix/launcher_ua\n\nfix: 下载文件时，始终标注启动器UA",
+    "created_at": "2026-07-08T04:33:28Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28917726972"
   },
   {
-    "id": 33473709405,
-    "sha": "3d64fe5afe11a30deeedf5a36ccdd1136271b19c",
-    "short_sha": "3d64fe5",
-    "message": "fix: 账号管理直接使用 EventViewModel 发布事件",
-    "created_at": "2026-09-01T05:27:54Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33473709405"
+    "id": 28917710483,
+    "sha": "bb20962339b63fd3f4f5d55daadd3bc9a7de83bd",
+    "short_sha": "bb20962",
+    "message": "fix: 下载文件时，始终标注启动器UA",
+    "created_at": "2026-07-08T04:32:56Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28917710483"
   },
   {
-    "id": 33463143021,
-    "sha": "223f52e6cfa4b43af8b7ceb073860871294a8c77",
-    "short_sha": "223f52e",
-    "message": "fix: 外置账号重新登录时未提交任务",
-    "created_at": "2026-09-01T02:35:52Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33463143021"
+    "id": 28917157228,
+    "sha": "c285bf7e0e766a14ac8375cbb847afef8ce92186",
+    "short_sha": "c285bf7",
+    "message": "Merge pull request #1533 from ZalithLauncher/chore/log_output\n\nfix: 执行 Jar 文件日志输入右侧栏被遮挡",
+    "created_at": "2026-07-08T04:18:10Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28917157228"
   },
   {
-    "id": 33461291025,
-    "sha": "30ab0634bf7086aec793d88796a18d0cd701ef68",
-    "short_sha": "30ab063",
-    "message": "Merge pull request #1758 from ZalithLauncher/fix/inputfiled\n\nfix: 对话框内输入时，对话框弹跳的问题",
-    "created_at": "2026-09-01T02:06:27Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33461291025"
+    "id": 28917153726,
+    "sha": "993bbab1c070d488d20ed1bd3016e711c34b541e",
+    "short_sha": "993bbab",
+    "message": "Merge pull request #1538 from ZalithLauncher/fix/game_launch\n\nfix: 混淆导致 Parcel 反序列化时崩溃",
+    "created_at": "2026-07-08T04:18:04Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28917153726"
   },
   {
-    "id": 33461247464,
-    "sha": "cab3552b6b11a65be4af2c650d948b57d2788781",
-    "short_sha": "cab3552",
-    "message": "fix: 对话框内输入时，对话框弹跳的问题",
-    "created_at": "2026-09-01T02:05:39Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33461247464"
+    "id": 28917090653,
+    "sha": "cacd1fd4d9b43dbb81a2f15c0c10588ac7b07c6c",
+    "short_sha": "cacd1fd",
+    "message": "fix: 混淆导致 Parcel 反序列化时崩溃",
+    "created_at": "2026-07-08T04:16:14Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28917090653"
   },
   {
-    "id": 33456384612,
-    "sha": "88305c0ffeb0ad2b71a452efe44253663de4fb9c",
-    "short_sha": "88305c0",
-    "message": "Merge pull request #1745 from ZalithLauncher/feat/sdl3\n\nfix: 修复模块化 Forge 启动时 LWJGL 组件拆分包冲突",
-    "created_at": "2026-09-01T00:50:27Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33456384612"
+    "id": 28915956828,
+    "sha": "f5bee88eb75d1cb5873f3f0dc10d26533c78c7b8",
+    "short_sha": "f5bee88",
+    "message": "fix: 执行 Jar 文件日志输入右侧栏被遮挡",
+    "created_at": "2026-07-08T03:45:53Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28915956828"
   },
   {
-    "id": 33455379946,
-    "sha": "7028b20e2db18c9cfb7dbee01b17cb55f28ce4a5",
-    "short_sha": "7028b20",
-    "message": "update MioLibPatcher.jar",
-    "created_at": "2026-09-01T00:35:32Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33455379946"
+    "id": 28837214259,
+    "sha": "efa61165814f83ee882cf1e8a24b07214c0b65c3",
+    "short_sha": "efa6116",
+    "message": "Merge pull request #1529 from ZalithLauncher/chore/scroll_bar\n\nchore: 游戏菜单、控制布局编辑器菜单添加滚动条",
+    "created_at": "2026-07-07T02:28:35Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28837214259"
   },
   {
-    "id": 33454866299,
-    "sha": "7768af805fe31ea974deae66794bcf2611d1fcfe",
-    "short_sha": "7768af8",
-    "message": "bump version to 2.5_pre",
-    "created_at": "2026-09-01T00:27:58Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33454866299"
+    "id": 28837195367,
+    "sha": "0cd8d6d6bedac3e4ea2ebcbb0d4088058e199b25",
+    "short_sha": "0cd8d6d",
+    "message": "chore: 游戏菜单、控制布局编辑器菜单添加滚动条",
+    "created_at": "2026-07-07T02:27:54Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28837195367"
   },
   {
-    "id": 33454555948,
-    "sha": "9ceaf206041556b06f29ada70e3a59ce0c4b1a39",
-    "short_sha": "9ceaf20",
-    "message": "Merge pull request #1756 from ZalithLauncher/fix/sdl_keyboard_input\n\nfix: SDL 端实体键盘输入相关的问题",
-    "created_at": "2026-09-01T00:23:21Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33454555948"
+    "id": 28836541745,
+    "sha": "ae43a9663578985098bcffee7f3480a7c4b8dec2",
+    "short_sha": "ae43a96",
+    "message": "Merge pull request #1528 from ZalithLauncher/chore/update_deps\n\nchore: 更新项目依赖库",
+    "created_at": "2026-07-07T02:09:54Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28836541745"
   },
   {
-    "id": 33454355642,
-    "sha": "a395adc3c5bca89fa974dfa9382d5e16ec380943",
-    "short_sha": "a395adc",
-    "message": "fix: SDL 文本输入时实体键盘按键无法输入的问题",
-    "created_at": "2026-09-01T00:20:15Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33454355642"
+    "id": 28835370984,
+    "sha": "0f864202443da5a83b90f8435edce996063811bd",
+    "short_sha": "0f86420",
+    "message": "chore: 更新项目依赖库",
+    "created_at": "2026-07-07T01:37:47Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28835370984"
   },
   {
-    "id": 33452414659,
-    "sha": "0a0522730ded5b4e1fc3dd05190f109fdbd94832",
-    "short_sha": "0a05227",
-    "message": "fix: 修复 SDL 非输入通道时实体键盘按键仍会弹出软键盘的问题",
-    "created_at": "2026-08-31T23:48:25Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33452414659"
+    "id": 28834992489,
+    "sha": "ff25336d4e49868147c45cf34794282c3954c6d7",
+    "short_sha": "ff25336",
+    "message": "Merge pull request #1526 from ZalithLauncher/fix/layout_color_adapter\n\nfix: 新旧 Compose 色彩空间 ID 不再匹配导致的崩溃",
+    "created_at": "2026-07-07T01:27:33Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28834992489"
   },
   {
-    "id": 33382125884,
-    "sha": "08c390b48f194760fa5289fe4eed24b668327c42",
-    "short_sha": "08c390b",
-    "message": "chore: 将 README 默认语言修改为简体中文",
-    "created_at": "2026-08-31T10:22:22Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33382125884"
+    "id": 28732743503,
+    "sha": "29a2b5597442fce8120e8c6b8bb5b304d451414f",
+    "short_sha": "29a2b55",
+    "message": "[Do not use!] Translated using Weblate (Turkish)\n\nCurrently translated at 100.0% (86 of 86 strings)\n\nTranslation: ZalithLauncher2/Terracota\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/terracota/tr/",
+    "created_at": "2026-07-05T07:01:28Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28732743503"
   },
   {
-    "id": 33341726282,
-    "sha": "ce670c714b612717e51a162e5651c0003460e671",
-    "short_sha": "ce670c7",
-    "message": "Revert \"fix: 游戏内 SDL 侧无法使用发送消息功能\"\n\nThis reverts commit 9dfee34a629167855caa2db9a4b5562f43d99e92.",
-    "created_at": "2026-08-30T23:23:36Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33341726282"
+    "id": 28699904615,
+    "sha": "73c3294d0daed8746e1d506173fc10dae774d361",
+    "short_sha": "73c3294",
+    "message": "[Do not use!] Translated using Weblate (Portuguese)\n\nCurrently translated at 99.3% (1244 of 1252 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt/",
+    "created_at": "2026-07-04T08:01:30Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28699904615"
   },
   {
-    "id": 33311160446,
-    "sha": "cf5978878d4a93af955f8b30fd02854f73dd35c0",
-    "short_sha": "cf59788",
-    "message": "chore: 下载文件前打印日志",
-    "created_at": "2026-08-30T12:19:02Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33311160446"
+    "id": 28697719983,
+    "sha": "9eaaeeec2a28225d1d81d9354e1dd8c6b4b81ecd",
+    "short_sha": "9eaaeee",
+    "message": "[Do not use!] Merge branch 'origin/weblate_terracotta' into Weblate.",
+    "created_at": "2026-07-04T06:28:24Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28697719983"
   },
   {
-    "id": 33310077206,
-    "sha": "1a07a0fa97f4d80d2ff4e95e346e63fdad02664c",
-    "short_sha": "1a07a0f",
-    "message": "[Do not use!] Merge branch 'origin/weblate_main' into Weblate.",
-    "created_at": "2026-08-30T11:53:47Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33310077206"
+    "id": 28697711054,
+    "sha": "481d4220194d23e4e04c2950821b06e5ef0e98ed",
+    "short_sha": "481d422",
+    "message": "Merge pull request #1515 from ZalithLauncher/main\n\nmerge main",
+    "created_at": "2026-07-04T06:28:05Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28697711054"
   },
   {
-    "id": 33310024409,
-    "sha": "6904c72cde7c4cbdb32a3af7755f768fe58b9345",
-    "short_sha": "6904c72",
-    "message": "Merge pull request #1752 from ZalithLauncher/main\n\nmerge main",
-    "created_at": "2026-08-30T11:52:43Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33310024409"
+    "id": 28697686286,
+    "sha": "2d0b03b2a78b299d44228b20c49c72bd14c439a9",
+    "short_sha": "2d0b03b",
+    "message": "fix: 陶瓦联机语言文本源文本",
+    "created_at": "2026-07-04T06:26:57Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/28697686286"
   },
   {
-    "id": 33310006242,
-    "sha": "6ad2e87aba86a0d4fc5309d020eff2e8a11b1ed3",
-    "short_sha": "6ad2e87",
-    "message": "Merge pull request #1751 from ZalithLauncher/main\n\nmerge main",
-    "created_at": "2026-08-30T11:52:17Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33310006242"
+    "id": 27994811642,
+    "sha": "2ebe5e7c99986f981a71887c30cac7fd1d7be96e",
+    "short_sha": "2ebe5e7",
+    "message": "[Do not use!] Translated using Weblate (Turkish)\n\nCurrently translated at 100.0% (1252 of 1252 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/tr/",
+    "created_at": "2026-06-23T01:01:18Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27994811642"
   },
   {
-    "id": 33309898276,
-    "sha": "d42935781275b11894151194d88b58ab01649104",
-    "short_sha": "d429357",
-    "message": "Merge pull request #1750 from ZalithLauncher/fix/fm\n\nfix: 修正文件管理器的相关问题",
-    "created_at": "2026-08-30T11:49:45Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33309898276"
+    "id": 27816524650,
+    "sha": "f8bccc0e20e81e860d7752ae083cff2e88ca113e",
+    "short_sha": "f8bccc0",
+    "message": "fix: 版本配置枚举序列化因混淆导致失效",
+    "created_at": "2026-06-19T09:08:05Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27816524650"
   },
   {
-    "id": 33309864713,
-    "sha": "2fc8fe6120f70ed8de63c27321afe282ed0a51cd",
-    "short_sha": "2fc8fe6",
-    "message": "fix: 大文件编辑器加载，内存不足时拒绝加载 & 日志查看器超大日志只读取尾部",
-    "created_at": "2026-08-30T11:48:47Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33309864713"
+    "id": 27671311395,
+    "sha": "b33f5238359598de6dc87035b315a532d7a584ae",
+    "short_sha": "b33f523",
+    "message": "bump version to 2.4.8",
+    "created_at": "2026-06-17T06:47:44Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27671311395"
   },
   {
-    "id": 33309198690,
-    "sha": "8aa2753c2a92fbf6a4d41f45b45ccb47b5f243c2",
-    "short_sha": "8aa2753",
-    "message": "fix: jcodings unicode 表格缺失时禁用 TextMate 高亮降级为纯文本",
-    "created_at": "2026-08-30T11:25:56Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33309198690"
+    "id": 27671076516,
+    "sha": "b33f5238359598de6dc87035b315a532d7a584ae",
+    "short_sha": "b33f523",
+    "message": "bump version to 2.4.8",
+    "created_at": "2026-06-17T06:47:44Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27671076516"
   },
   {
-    "id": 33297019060,
-    "sha": "cdb2f84c2f279ab43e430ec7c2e0a6e6bbeabae7",
-    "short_sha": "cdb2f84",
-    "message": "fix: 文件管理器 Nav 堆栈相关的处理",
-    "created_at": "2026-08-30T06:29:40Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33297019060"
+    "id": 27113266378,
+    "sha": "302887a1b7dda90e2498dd635130461c664570e5",
+    "short_sha": "302887a",
+    "message": "ci(release): 修复 mapping 文件打包逻辑",
+    "created_at": "2026-06-08T02:51:23Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27113266378"
   },
   {
-    "id": 33296258660,
-    "sha": "1adee73d428e56fa3b3d66974140b0e4bfff0f4e",
-    "short_sha": "1adee73",
-    "message": "Merge pull request #1748 from TNTyep520/fix/third-party_info\n\nchore(library_info): 依赖库信息",
-    "created_at": "2026-08-30T06:09:22Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33296258660"
+    "id": 27113246107,
+    "sha": "302887a1b7dda90e2498dd635130461c664570e5",
+    "short_sha": "302887a",
+    "message": "ci(release): 修复 mapping 文件打包逻辑",
+    "created_at": "2026-06-08T02:51:23Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27113246107"
   },
   {
-    "id": 33296221134,
-    "sha": "3fd333033f777187e598a12a0350ace206003e61",
-    "short_sha": "3fd3330",
-    "message": "Merge pull request #1749 from ZalithLauncher/fix/smooth_font\n\nfix: SmoothFont 选择字体后重启字体缩放错误",
-    "created_at": "2026-08-30T06:08:22Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33296221134"
+    "id": 27112791556,
+    "sha": "58bb041b86f9821ad848b033960cbe590b632eda",
+    "short_sha": "58bb041",
+    "message": "bump version to 2.4.7",
+    "created_at": "2026-06-08T02:34:08Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27112791556"
   },
   {
-    "id": 33296206619,
-    "sha": "af535b39dfaa8c6ab2da956556a49e276e3ddc61",
-    "short_sha": "af535b3",
-    "message": "fix: SmoothFont 选择字体后重启字体缩放错误",
-    "created_at": "2026-08-30T06:07:40Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33296206619"
+    "id": 27112754146,
+    "sha": "4f2c2081e5e289edcc2500cc748d727f9d4e5467",
+    "short_sha": "4f2c208",
+    "message": "Merge pull request #1377 from ZalithLauncher/weblate_main\n\nWeblate main",
+    "created_at": "2026-06-08T02:32:57Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27112754146"
   },
   {
-    "id": 33275673189,
-    "sha": "ee621a62a9d55dc48750af74830c5c41ce62e27b",
-    "short_sha": "ee621a6",
-    "message": "fix: 修复模块化 Forge 启动时 LWJGL 组件拆分包冲突",
-    "created_at": "2026-08-29T21:16:58Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33275673189"
+    "id": 27112709445,
+    "sha": "394dda08ad184d7e7c18d800e9211885215dc971",
+    "short_sha": "394dda0",
+    "message": "[Do not use!] Translated using Weblate (Indonesian)\n\nCurrently translated at 100.0% (1254 of 1254 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/id/",
+    "created_at": "2026-06-08T02:31:19Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27112709445"
   },
   {
-    "id": 33275547059,
-    "sha": "5cf0ee39080e38313beafabea866c0606229d456",
-    "short_sha": "5cf0ee3",
-    "message": "Merge pull request #1744 from ZalithLauncher/main\n\nmerge main",
-    "created_at": "2026-08-29T21:14:12Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33275547059"
+    "id": 27111071827,
+    "sha": "cebcda280343b64fe56df4c857585d4f67e9aa09",
+    "short_sha": "cebcda2",
+    "message": "fix: 设置Bundle的ClassLoader",
+    "created_at": "2026-06-08T01:30:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27111071827"
   },
   {
-    "id": 33275453520,
-    "sha": "87481dafbbbab0766eb29252746e01045393e3d5",
-    "short_sha": "87481da",
-    "message": "Merge pull request #1743 from ZalithLauncher/refactor/version_dedupe_lib\n\nrefactor: 重构游戏版本依赖库去重机制",
-    "created_at": "2026-08-29T21:12:06Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33275453520"
+    "id": 27109708686,
+    "sha": "ca92aff55c35d20be18c1e67484117514ffff3dc",
+    "short_sha": "ca92aff",
+    "message": "Merge pull request #1367 from ZalithLauncher/fix/control_pointer_conflict#1\n\nrefactor(控制): 重写控制布局交互逻辑",
+    "created_at": "2026-06-08T00:37:47Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27109708686"
   },
   {
-    "id": 33275369126,
-    "sha": "90b11fcee85622b31c9494bd1ce51138099378d1",
-    "short_sha": "90b11fc",
-    "message": "refactor: 重构游戏版本依赖库去重机制",
-    "created_at": "2026-08-29T21:10:06Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33275369126"
+    "id": 27064306966,
+    "sha": "7c2c0d5a321e61080a39199b0526f3e3613a61b9",
+    "short_sha": "7c2c0d5",
+    "message": "[Do not use!] Translated using Weblate (Indonesian)\n\nCurrently translated at 100.0% (1253 of 1253 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/id/",
+    "created_at": "2026-06-06T14:01:10Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27064306966"
   },
   {
-    "id": 33272879503,
-    "sha": "bce600636de12a5a11d5c6c1a953c82908ea3dfc",
-    "short_sha": "bce6006",
-    "message": "Merge pull request #1742 from ZalithLauncher/fix/search_id_dlpath\n\nfix: “搜索ID”屏幕跳转的项目页面内下载会锁定到模组文件夹",
-    "created_at": "2026-08-29T20:12:40Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33272879503"
+    "id": 27057860680,
+    "sha": "597ead26d62fad55920793de9da9fa57eafe752c",
+    "short_sha": "597ead2",
+    "message": "fix(gl): 使用 SurfaceView 时切换后台导致持续黑屏",
+    "created_at": "2026-06-06T08:49:01Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27057860680"
   },
   {
-    "id": 33272862076,
-    "sha": "b3a32f1246ab465fc1d6cd0fa6ff84cf802f6ace",
-    "short_sha": "b3a32f1",
-    "message": "fix: “搜索ID”屏幕跳转的项目页面内下载会锁定到模组文件夹",
-    "created_at": "2026-08-29T20:12:09Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33272862076"
+    "id": 27015924379,
+    "sha": "aac355dec7498f0b8b67f33773d68c7ccf16781b",
+    "short_sha": "aac355d",
+    "message": "fixme: 标记插件与数据包类型识别问题",
+    "created_at": "2026-06-05T12:51:48Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27015924379"
   },
   {
-    "id": 33272289241,
-    "sha": "cafcd7ad6f40484c7accfc351fd409a9cd059e68",
-    "short_sha": "cafcd7a",
-    "message": "Merge pull request #1741 from ZalithLauncher/chore/version_mg_ui\n\nrefactor: 重构版本管理页面版本列表的 UI",
-    "created_at": "2026-08-29T19:59:34Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33272289241"
+    "id": 27015782981,
+    "sha": "34b4432dba0bc5fcb37909ce89852735b837ad40",
+    "short_sha": "34b4432",
+    "message": "fix(modrinth): 修复未知项目类型反序列化失败问题",
+    "created_at": "2026-06-05T12:48:46Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/27015782981"
   }
 ]
