@@ -1,5 +1,13 @@
 [
   {
+    "id": 33938185643,
+    "sha": "80ee021d7b5b07246caf59d59c5b3abbb24b7f48",
+    "short_sha": "80ee021",
+    "message": "feat: 控件转换器改用纯 Kotlin 实现并支持导入 ZL2 布局 (#1795)\n\n* feat: 控件转换器改用纯 Kotlin 实现并支持导入 ZL2 布局\n\n以 control-converter 项目的 cc.py 为语义基准，用纯 Kotlin 重写\nFCL 与 ZalithLauncher2 控件布局的双向转换，替代原 libcc.so (Go) JNI\n方案：不再依赖 arm64 ABI，APK 减小约 4.2MB。\n\n- 新增 com.mio.controlconverter 引擎（保序 JSON 树、银行家舍入、\n  Python repr 浮点格式、键码映射、样式/事件/几何/方向控件转换、\n  图层开关状态机、lossless 往返元数据），门面 com.mio.util.LayoutConverter\n  保持旧 JNI 签名（成功返回 null，失败返回错误串）\n- 默认参数与旧 Go JNI 一致（lossless=true，方向控件转 ZL2 摇杆）\n- 布局导入自动识别 ZalithLauncher2 格式并转换后导入（5 语言文案）\n- 删除 jniLibs/arm64-v8a/libcc.so 与 JNI 版 LayoutConverter.java\n- 新增 JVM 单测：与 Go 金样字节级对拍（还原 HTML 转义后）、\n  无损往返、真实布局（仿原神键位 4bf3d919，2.2MB）结构校验与压测\n\n* fix: 布局导入移至后台线程并添加进度提示，避免大文件 ANR\n\n文件选择回调在主线程执行，原实现在主线程做文件拷贝、整文件读入、\nZL2 识别转换与 Gson 完整解析，大布局导入会阻塞主线程引发 ANR。\n改用 Task 任务链在后台完成全部耗时步骤，UI 提示经 thenAcceptAsync/\nwhenComplete 回主线程；导入选完文件后弹 ProgressDialog，结束时关闭。\nZL2 转换失败改用私有异常沿任务链传递，错误文案区分保持不变。\n\n* fix: 金样测试资源禁止换行符转换，修复 Windows 检出后字节级对拍失败\n\n仓库 * text=auto 叠加本机 core.autocrlf=true 时，controlconverter\n金样 JSON 检出为 CRLF，goldenFclToZlByteMatch 字节级对拍失败。\n为该目录添加 -text 规则并重新检出恢复 LF。\n\n* docs: README 同步控件转换器改动\n\n- 功能亮点新增 FCL/ZL2 控制布局互转与 ZL2 布局自动转换导入\n- 依赖区 control-converter 更新为内置纯 Kotlin 实现（cc.py 语义基准），\n  不再打包 libcc.so，转换方向修正为 FCL↔ZL2 双向\n- 中文/英文/俄文三个版本同步",
+    "created_at": "2026-09-05T02:07:40Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33938185643"
+  },
+  {
     "id": 33884233845,
     "sha": "a768c8eff92f3f0d8e9242cdab63d1227ed74bed",
     "short_sha": "a768c8e",
@@ -390,13 +398,5 @@
     "message": "fix: 主题刷新消息合并，修复取色拖动时部分设备卡死\n\n拖动取色每个 MOVE 事件都会触发 applyColor → notifyThemeChanged，\n原实现把全局所有 registerEvent 回调逐个 post 到主线程（运行时可达\n数百个 view），高刷/低端设备上每秒数万条消息淹没主线程队列导致\nANR。改为单个 refreshRunnable 合并刷新：post 前 removeCallbacks\n判重，一帧内最多执行一轮全量刷新；遍历改快照复制，防回调内再注册\n控件触发 CME。",
     "created_at": "2026-08-31T02:29:01Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33350872960"
-  },
-  {
-    "id": 33350241520,
-    "sha": "35a9f2febe89d4322df87d8a23fdfe7cb9f18e47",
-    "short_sha": "35a9f2f",
-    "message": "chore(l10n): update Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
-    "created_at": "2026-08-31T02:17:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33350241520"
   }
 ]
