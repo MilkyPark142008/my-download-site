@@ -1,5 +1,77 @@
 [
   {
+    "id": 33952929597,
+    "sha": "0255a235439fc2c265d0b5a64c9d62227a4a0c29",
+    "short_sha": "0255a23",
+    "message": "Update LauncherHelper.java",
+    "created_at": "2026-09-05T07:31:52Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33952929597"
+  },
+  {
+    "id": 33952299780,
+    "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
+    "short_sha": "750a474",
+    "message": "feat: 动画选择持久化，并补回遗漏的举手蹦跳条目\n\n- 新增 SkinAnimationSetting（DataStore，存动画 id，默认走路）\n- 新增 SkinAnimations 动画注册表（id/名称/工厂/Class），弹窗与持久化共用，\n  新增动画只需加一个 Entry；补回重构弹窗时遗漏的举手蹦跳\n- MainUI 创建渲染器时恢复上次选择的动画，弹窗选中后保存\n- 扩展函数置于文件顶层，Java 侧静态导入调用",
+    "created_at": "2026-09-05T07:20:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33952299780"
+  },
+  {
+    "id": 33949958769,
+    "sha": "97dc0f6c4a5f5fada8b86aa68e1e9d4b189d1b25",
+    "short_sha": "97dc0f6",
+    "message": "feat: 新增飞行/潜行/游泳动画（skinview3d 公式移植）\n\n- Flying：玩家绕 X 轴俯身至水平并展开双臂（PlayerModel 新增 rootRotationX，\n  resetJoints 同步重置）；鞘翅网格未移植，姿态部分完整\n- Crouch：身体前倾下蹲、头部下移、手臂前伸、双腿后移、披风压低，\n  位置公式换算到玩家根坐标系；保留 showProgress/runOnce 参数\n- Swim：手臂四元数关键帧 slerp 插值（内置 Quat：轴角构造/Hamilton 乘法/\n  短路径 slerp/Rx·Ry·Rz 欧拉提取），入水下潜与双腿打水公式逐行移植\n- 动画切换弹窗新增飞行/游泳/潜行三项，字符串同步 10 个语言目录",
+    "created_at": "2026-09-05T06:28:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33949958769"
+  },
+  {
+    "id": 33949848919,
+    "sha": "5e2a474d7859724dc53b20e22620a1df37c1d2a6",
+    "short_sha": "5e2a474",
+    "message": "feat: 新增飞行/潜行/游泳动画（skinview3d 公式移植）\n\n- Flying：玩家绕 X 轴俯身至水平并展开双臂（PlayerModel 新增 rootRotationX，\n  resetJoints 同步重置）；鞘翅网格未移植，姿态部分完整\n- Crouch：身体前倾下蹲、头部下移、手臂前伸、双腿后移、披风压低，\n  位置公式换算到玩家根坐标系；保留 showProgress/runOnce 参数\n- Swim：手臂四元数关键帧 slerp 插值（内置 Quat：轴角构造/Hamilton 乘法/\n  短路径 slerp/Rx·Ry·Rz 欧拉提取），入水下潜与双腿打水公式逐行移植\n- 动画切换弹窗新增飞行/游泳/潜行三项，字符串同步 10 个语言目录",
+    "created_at": "2026-09-05T06:25:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33949848919"
+  },
+  {
+    "id": 33948898927,
+    "sha": "89163ab5327f536f3e16261962b815608fe1bf94",
+    "short_sha": "89163ab",
+    "message": "皮肤 3D 预览重构：TextureView + Kotlin + GLES 2.0，新增动画系统与第二层轮廓挤出 (#1803)\n\n* fix: 修复右菜单隐藏时切回主页皮肤预览宽度归零而消失\n\n* refactor: 皮肤模型渲染重构为 TextureView + GLES 2.0（skinview3d 蓝本）\n\n- 新增 com.mio.skin：SkinViewer（TextureView+EGL14+Choreographer 渲染线程）、\n  SkinRenderer（ES2 shader）、PlayerModel/BoxMesh（部件几何与标准盒式 UV）、\n  WalkingAnimation（腿臂摆动/头部摆动/披风摆动）\n- 删除旧 fcllibrary.skin 包（GLSurfaceView + ES1 固定管线，23 个 Java 文件）\n- MainUI 的 fakefx textureProperty 绑定改为 ObjectBinding + InvalidationListener，\n  addListener 后主动 get() 同步当前值；updateTexture 同步 texture 字段，\n  避免页面重进时皮肤退回默认\n- EGL context 重建时归零 VBO/纹理 id 强制重传，修复切页后模型消失\n- 第二层（overlay）几何与 UV 尺寸分离，修复第二层采到其他部位色块\n\n* feat: 皮肤预览支持多个 skinview3d 动画，双击模型弹出窗口切换\n\n- 新增 PlayerAnimation 基类（update(player, dt) 无状态语义，与 skinview3d 一致）\n  及待机/奔跑/挥手/挥击动画，Walking 重构到基类；公式逐行对照 animation.ts\n- PlayerModel 增加可复位部件位置与整体变换（root 平移/倾斜，奔跑的跳跃躲闪），\n  新增 resetJoints() 供切换动画时恢复姿态\n- SkinRenderer.playAnimation() 切换动画并重置姿态与进度\n- SkinViewer 新增双击检测（300ms + touch slop），AnimationDialog 卡片式列表\n  标记当前动画（主题色高亮 + 对勾），亮暗模式自适应（文字默认色、卡片背景\n  以 dialog_background 为基准混合）\n- 动画名与标题字符串同步 10 个语言目录\n\n* feat: 第二层皮肤轮廓挤出，增强 3D 立体效果（参考 3d-Skin-Layers）\n\n- 新增 OverlayExtrusion：遍历第二层 UV 区像素，为边缘不透明像素（四邻透明）\n  生成从第二层表面到第一层表面的正交直壁侧壁，UV 指向像素中心取临近色块\n- 挤出网格挂到所属部件，在第二层网格同矩阵下绘制（独立绘制会错位到原点）\n- 皮肤更新与 slim 切换时用缓存的皮肤像素重建；context 重建随 resetGpuResources 失效重传\n- 片元着色器新增 uShade 亮度系数，挤出侧壁以 0.8 背光渲染，模拟方向光照增强立体感\n\n* fix: 修复启动时主界面皮肤显示为默认的覆盖竞态\n\n皮肤异步加载的完成回调在后台线程执行 updateTexture，而页面 attach 的重喂\n在主线程读 texture 字段后发兜底任务；attach 的读旧值→post 插入后台回调的\n写→post 之间时，默认皮肤兜底任务会排在真皮肤任务之后执行，终态被覆盖。\n渲染线程 onSurfaceCreated 本就从 texture 字段重建纹理，彻底移除 attach 重喂。\n\n* optimize: 皮肤预览渲染帧率上限锁定 60fps\n\nChoreographer 帧回调加 16ms 帧间隔节流，高刷新率屏幕（90/120Hz）下不再\n随 vsync 满帧渲染；动画时长按实际渲染帧间隔计算，节流不影响动画速度\n\n* style: 皮肤渲染相关代码 IDE 格式化\n\n长行拆分、import 排序、catch 参数改用未命名占位、XML 属性排序、\nOverlayExtrusion 构造参数直接声明为属性，无行为变更",
+    "created_at": "2026-09-05T06:05:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33948898927"
+  },
+  {
+    "id": 33948843491,
+    "sha": "4e975e638843b8df4ba2af66104ebc7a2636e70c",
+    "short_sha": "4e975e6",
+    "message": "style: 皮肤渲染相关代码 IDE 格式化\n\n长行拆分、import 排序、catch 参数改用未命名占位、XML 属性排序、\nOverlayExtrusion 构造参数直接声明为属性，无行为变更",
+    "created_at": "2026-09-05T06:03:09Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33948843491"
+  },
+  {
+    "id": 33948841140,
+    "sha": "4e975e638843b8df4ba2af66104ebc7a2636e70c",
+    "short_sha": "4e975e6",
+    "message": "style: 皮肤渲染相关代码 IDE 格式化\n\n长行拆分、import 排序、catch 参数改用未命名占位、XML 属性排序、\nOverlayExtrusion 构造参数直接声明为属性，无行为变更",
+    "created_at": "2026-09-05T06:03:09Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33948841140"
+  },
+  {
+    "id": 33948420474,
+    "sha": "2ebd084dcf0ef41ec71e38bbb58e51e17278f8e3",
+    "short_sha": "2ebd084",
+    "message": "optimize: 皮肤预览渲染帧率上限锁定 60fps\n\nChoreographer 帧回调加 16ms 帧间隔节流，高刷新率屏幕（90/120Hz）下不再\n随 vsync 满帧渲染；动画时长按实际渲染帧间隔计算，节流不影响动画速度",
+    "created_at": "2026-09-05T05:50:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33948420474"
+  },
+  {
+    "id": 33948406525,
+    "sha": "2ebd084dcf0ef41ec71e38bbb58e51e17278f8e3",
+    "short_sha": "2ebd084",
+    "message": "optimize: 皮肤预览渲染帧率上限锁定 60fps\n\nChoreographer 帧回调加 16ms 帧间隔节流，高刷新率屏幕（90/120Hz）下不再\n随 vsync 满帧渲染；动画时长按实际渲染帧间隔计算，节流不影响动画速度",
+    "created_at": "2026-09-05T05:50:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33948406525"
+  },
+  {
     "id": 33938185643,
     "sha": "80ee021d7b5b07246caf59d59c5b3abbb24b7f48",
     "short_sha": "80ee021",
@@ -326,77 +398,5 @@
     "message": "feat: 版本列表刷新任务显示名称，安装加载器期间等待可见\n\ninstallLibraryAsync 与 VersionJsonDownloadTask 的联网刷新版本列表\n任务原为无名匿名任务，任务列表直接跳过，大整合包安装时装 Fabric/Forge\n前刷新远程列表的长时间网络等待在对话框中毫无输出。为其命名\n（新增 version_list_refreshing 字符串并同步 9 个语言目录），\n等待期间显示\"正在获取远程版本列表\"行",
     "created_at": "2026-08-31T14:44:12Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33404522056"
-  },
-  {
-    "id": 33402814828,
-    "sha": "88cad1fefedf68138d42336f8f917f1e92719529",
-    "short_sha": "88cad1f",
-    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): add Japanese translation\n\nCo-authored-by: haozi <qdilovolibp@hotmail.com>\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-08-31T14:28:06Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33402814828"
-  },
-  {
-    "id": 33402809421,
-    "sha": "88cad1fefedf68138d42336f8f917f1e92719529",
-    "short_sha": "88cad1f",
-    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): add Japanese translation\n\nCo-authored-by: haozi <qdilovolibp@hotmail.com>\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-08-31T14:28:06Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33402809421"
-  },
-  {
-    "id": 33402783511,
-    "sha": "05f4d149cd80d6978ee86cb34c8fcc2b52ff95f2",
-    "short_sha": "05f4d14",
-    "message": "fix: 任务对话框日志区在写日志的任务结束后自动收起\n\n记录当前写日志的任务，其结束时清空文本并恢复日志区 GONE，\n避免最后一条信息（如整合包解压的文件路径、Forge 安装器输出）\n在后续阶段一直占据对话框空间",
-    "created_at": "2026-08-31T14:27:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33402783511"
-  },
-  {
-    "id": 33352096733,
-    "sha": "248b8806e0f7d5a31e073ffb319eee90fe4126a2",
-    "short_sha": "248b880",
-    "message": "chore(l10n): update Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
-    "created_at": "2026-08-31T02:53:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33352096733"
-  },
-  {
-    "id": 33352093936,
-    "sha": "248b8806e0f7d5a31e073ffb319eee90fe4126a2",
-    "short_sha": "248b880",
-    "message": "chore(l10n): update Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
-    "created_at": "2026-08-31T02:53:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33352093936"
-  },
-  {
-    "id": 33352082704,
-    "sha": "6f7d876b46785729f6b0b659c16b06df0dac5f3c",
-    "short_sha": "6f7d876",
-    "message": "refactor: MenuView 重写为 Kotlin，优化触摸打开抽屉判定\n\n- 点击判定改用 raw 坐标：拖动 setX/setY 移动 View 后相对坐标差恒为 0，\n  快速拖动松手会被误判为点击而打开抽屉\n- 位移阈值 10px 硬编码改为 ViewConfiguration touchSlop（随密度缩放，\n  高密度屏上点击易失灵）；长按 400ms 改用系统 getLongPressTimeout\n- ACTION_CANCEL 不再触发 openDrawer（拦截/打断非点击意图）\n- 计时改用事件时间戳 eventTime，不受系统时间跳变影响\n- 同包同名重写，ViewManager/GameMenu/JVMActivity 等调用方无需改动",
-    "created_at": "2026-08-31T02:53:27Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33352082704"
-  },
-  {
-    "id": 33350896652,
-    "sha": "e04b8da1b799ffa07c5c08502c88b82da9e52758",
-    "short_sha": "e04b8da",
-    "message": "chore(l10n): update Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
-    "created_at": "2026-08-31T02:30:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33350896652"
-  },
-  {
-    "id": 33350893629,
-    "sha": "e04b8da1b799ffa07c5c08502c88b82da9e52758",
-    "short_sha": "e04b8da",
-    "message": "chore(l10n): update Japanese translation\n\nTranslation: FoldCraftLauncher/FCL\nLanguage: Japanese\nProgress: 5.4% (71 of 1310 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/",
-    "created_at": "2026-08-31T02:30:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33350893629"
-  },
-  {
-    "id": 33350872960,
-    "sha": "dd186352a1019131fe1a5516c5a795dffb4cb64d",
-    "short_sha": "dd18635",
-    "message": "fix: 主题刷新消息合并，修复取色拖动时部分设备卡死\n\n拖动取色每个 MOVE 事件都会触发 applyColor → notifyThemeChanged，\n原实现把全局所有 registerEvent 回调逐个 post 到主线程（运行时可达\n数百个 view），高刷/低端设备上每秒数万条消息淹没主线程队列导致\nANR。改为单个 refreshRunnable 合并刷新：post 前 removeCallbacks\n判重，一帧内最多执行一轮全量刷新；遍历改快照复制，防回调内再注册\n控件触发 CME。",
-    "created_at": "2026-08-31T02:29:01Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33350872960"
   }
 ]
