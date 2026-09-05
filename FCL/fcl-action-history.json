@@ -1,5 +1,37 @@
 [
   {
+    "id": 33966365389,
+    "sha": "53c0e2f4f965fb10e7f1bf1774f97e83c1aaa8fc",
+    "short_sha": "53c0e2f",
+    "message": "fix: 主界面皮肤改回调式加载，消除概率性显示默认皮肤的竞态\n\n- 新增 SkinTextureLoader：IO 线程加载 + 主线程回调 + 代际号防过期覆盖，\n  textures 属性就绪后（微软/正版账户 profile 异步加载）自动重载\n- TexturesLoader 新增 loadSkinAndCape 同步加载方法（兜底行为与 textureBinding 一致）\n- MainUI 移除 currentAccount/ObjectBinding/AsyncMappedBinding 整条 fakefx 链，\n  账户监听改 attach 注册 / detach 注销，页面重建时主动对齐选中账户\n- 皮肤挤出背光亮度系数 0.8 -> 0.92（手动调优）",
+    "created_at": "2026-09-05T12:32:03Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33966365389"
+  },
+  {
+    "id": 33963483108,
+    "sha": "a5c5b88a51d136ea9e28fff05beef217ccb8cd27",
+    "short_sha": "a5c5b88",
+    "message": "fix: SDL_OPENGL_LIBRARY 改用渲染器 GL 库 so 绝对路径（renderer.getGlName），替换无效的渲染器 id",
+    "created_at": "2026-09-05T11:22:43Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33963483108"
+  },
+  {
+    "id": 33963431584,
+    "sha": "a5c5b88a51d136ea9e28fff05beef217ccb8cd27",
+    "short_sha": "a5c5b88",
+    "message": "fix: SDL_OPENGL_LIBRARY 改用渲染器 GL 库 so 绝对路径（renderer.getGlName），替换无效的渲染器 id",
+    "created_at": "2026-09-05T11:22:43Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33963431584"
+  },
+  {
+    "id": 33961540098,
+    "sha": "84e002b3c6ce4255a28111ab4104420b7607bc76",
+    "short_sha": "84e002b",
+    "message": "feat: 桥接 SDL 原生消息框到 JVMActivity（实现 Zalith 133a1e52）\n\nSDL 原生层 Android_JNI_ShowMessageBox 会在宿主对象的运行时类上按名查找\nmessageboxShowMessageBox；JVMActivity 非 SDLActivity 子类，查找失败后带着\npending 异常继续 CallIntMethod 触发 JniAbort 崩溃。以 @Keep 标注同名同签名\n实例方法桥接到 SDLActivity 的静态 MD3 对话框实现，阻塞游戏线程直至用户选择",
+    "created_at": "2026-09-05T09:04:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33961540098"
+  },
+  {
     "id": 33952929597,
     "sha": "0255a235439fc2c265d0b5a64c9d62227a4a0c29",
     "short_sha": "0255a23",
@@ -366,37 +398,5 @@
     "message": "Update control-converter description to rust implementation",
     "created_at": "2026-09-01T15:15:42Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33524912464"
-  },
-  {
-    "id": 33513539125,
-    "sha": "4369ac66cd7e383cdf2e7c858f091193ac18e276",
-    "short_sha": "4369ac6",
-    "message": "optimize: 下载连接超时从 8 秒调整为 10 秒",
-    "created_at": "2026-09-01T13:17:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33513539125"
-  },
-  {
-    "id": 33471726127,
-    "sha": "9116b9adeebb0285ac4082ca5b61f1384da3cf8d",
-    "short_sha": "9116b9a",
-    "message": "feat: 下载面板标题行显示实时下载速度\n\n订阅 FetchTask.speedEvent 全局速度总线（每秒聚合），\n格式化为可读速度显示在面板标题行，无下载活动时自动隐藏；\n监听器以字段强引用持有（registerWeak 弱注册需调用方保活），\nformatBytes 提升为顶层函数供进度文字与速度显示共用。",
-    "created_at": "2026-09-01T03:54:19Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33471726127"
-  },
-  {
-    "id": 33405090308,
-    "sha": "fc0f693a4b1703080978a5a8046db34d42baa14a",
-    "short_sha": "fc0f693",
-    "message": "Merge pull request #1790 from FCL-Team/weblate-foldcraftlauncher-fcl\n\nchore(l10n): update translations",
-    "created_at": "2026-08-31T14:51:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33405090308"
-  },
-  {
-    "id": 33404522056,
-    "sha": "0427525b7e1fd614ae2a9e229533537b41e4ac5b",
-    "short_sha": "0427525",
-    "message": "feat: 版本列表刷新任务显示名称，安装加载器期间等待可见\n\ninstallLibraryAsync 与 VersionJsonDownloadTask 的联网刷新版本列表\n任务原为无名匿名任务，任务列表直接跳过，大整合包安装时装 Fabric/Forge\n前刷新远程列表的长时间网络等待在对话框中毫无输出。为其命名\n（新增 version_list_refreshing 字符串并同步 9 个语言目录），\n等待期间显示\"正在获取远程版本列表\"行",
-    "created_at": "2026-08-31T14:44:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33404522056"
   }
 ]
