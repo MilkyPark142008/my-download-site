@@ -1,5 +1,13 @@
 [
   {
+    "id": 34010922453,
+    "sha": "0e1b12d32c54b7db4fc43ab4d0678e541b165da8",
+    "short_sha": "0e1b12d",
+    "message": "feat: 集成 JSound(javax.sound → OpenAL 桥接)到 lwjgl 共享源码\n\n- 新增 LWJGL/shared 共享源码目录:jsound 桥接(13 个类 + MixerProvider services 声明)\n  由 3.3.3 与 3.4.1 两个 lwjgl 版本共同引用,修改只需同步 shared 一处\n- 两个版本的 build.gradle.kts 通过 sourceSets.srcDir 引用共享目录\n- 重建合并 jar:JSound 类与 services 随 lwjgl 库进入游戏,ServiceLoader 可直接发现",
+    "created_at": "2026-09-06T04:11:42Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34010922453"
+  },
+  {
     "id": 33963399853,
     "sha": "92069452f91913c11f19135a65e65d3bd0182c63",
     "short_sha": "9206945",
@@ -390,13 +398,5 @@
     "message": "fix: jcodings unicode 表格缺失时禁用 TextMate 高亮降级为纯文本",
     "created_at": "2026-08-30T11:25:56Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33309198690"
-  },
-  {
-    "id": 33297019060,
-    "sha": "cdb2f84c2f279ab43e430ec7c2e0a6e6bbeabae7",
-    "short_sha": "cdb2f84",
-    "message": "fix: 文件管理器 Nav 堆栈相关的处理",
-    "created_at": "2026-08-30T06:29:40Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33297019060"
   }
 ]

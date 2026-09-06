@@ -1,5 +1,29 @@
 [
   {
+    "id": 34009825720,
+    "sha": "089ac878a0e38c1eb0e2280ca07a12e516e60696",
+    "short_sha": "089ac87",
+    "message": "feat: 集成 JSound(javax.sound → OpenAL 桥接)到 lwjgl 共享源码\n\n- 新增 LWJGL/shared 共享源码目录:jsound 桥接(13 个类 + MixerProvider services 声明)\n  由 3.3.3 与 3.4.1 两个 lwjgl 版本共同引用,修改只需同步 shared 一处\n- 两个版本的 build.gradle.kts 通过 sourceSets.srcDir 引用共享目录\n- 重建合并 jar:JSound 类与 services 随 lwjgl 库进入游戏,ServiceLoader 可直接发现,\n  不再依赖外部 agent",
+    "created_at": "2026-09-06T03:45:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34009825720"
+  },
+  {
+    "id": 34003952551,
+    "sha": "990007a5e6b5acaefa50adc4266e8f725a100123",
+    "short_sha": "990007a",
+    "message": "fix: SDL_OPENGL_LIBRARY 改用渲染器 GL 库 so 绝对路径（renderer.getGlName），替换无效的渲染器 id",
+    "created_at": "2026-09-06T01:17:27Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34003952551"
+  },
+  {
+    "id": 34003950974,
+    "sha": "990007a5e6b5acaefa50adc4266e8f725a100123",
+    "short_sha": "990007a",
+    "message": "fix: SDL_OPENGL_LIBRARY 改用渲染器 GL 库 so 绝对路径（renderer.getGlName），替换无效的渲染器 id",
+    "created_at": "2026-09-06T01:17:27Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34003950974"
+  },
+  {
     "id": 33972746203,
     "sha": "c05ef56b790bf2beb4e0802436b95abff2a9ec7f",
     "short_sha": "c05ef56",
@@ -374,29 +398,5 @@
     "message": "chore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
     "created_at": "2026-09-02T09:02:47Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33611980673"
-  },
-  {
-    "id": 33591635497,
-    "sha": "9bb215af307e4032afa0604a88d23b25e134b9bd",
-    "short_sha": "9bb215a",
-    "message": "docs: README 同步控件转换器改动\n\n- 功能亮点新增 FCL/ZL2 控制布局互转与 ZL2 布局自动转换导入\n- 依赖区 control-converter 更新为内置纯 Kotlin 实现（cc.py 语义基准），\n  不再打包 libcc.so，转换方向修正为 FCL↔ZL2 双向\n- 中文/英文/俄文三个版本同步",
-    "created_at": "2026-09-02T04:39:18Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33591635497"
-  },
-  {
-    "id": 33591183295,
-    "sha": "7303617a1862b33696efeb8986f20dad331746c8",
-    "short_sha": "7303617",
-    "message": "fix: 金样测试资源禁止换行符转换，修复 Windows 检出后字节级对拍失败\n\n仓库 * text=auto 叠加本机 core.autocrlf=true 时，controlconverter\n金样 JSON 检出为 CRLF，goldenFclToZlByteMatch 字节级对拍失败。\n为该目录添加 -text 规则并重新检出恢复 LF。",
-    "created_at": "2026-09-02T04:31:57Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33591183295"
-  },
-  {
-    "id": 33591005065,
-    "sha": "c20412629e21b5deb5c6638a1c1e2a609aaad299",
-    "short_sha": "c204126",
-    "message": "fix: 布局导入移至后台线程并添加进度提示，避免大文件 ANR\n\n文件选择回调在主线程执行，原实现在主线程做文件拷贝、整文件读入、\nZL2 识别转换与 Gson 完整解析，大布局导入会阻塞主线程引发 ANR。\n改用 Task 任务链在后台完成全部耗时步骤，UI 提示经 thenAcceptAsync/\nwhenComplete 回主线程；导入选完文件后弹 ProgressDialog，结束时关闭。\nZL2 转换失败改用私有异常沿任务链传递，错误文案区分保持不变。",
-    "created_at": "2026-09-02T04:27:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33591005065"
   }
 ]
