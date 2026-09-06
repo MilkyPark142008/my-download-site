@@ -1,5 +1,45 @@
 [
   {
+    "id": 34055370736,
+    "sha": "8fd78afed1651399e9de12cf3c7ed65eb026e88a",
+    "short_sha": "8fd78af",
+    "message": "fix: 提升手柄映射模式摇杆的轮询采样率，并按实际间隔归一化偏移量",
+    "created_at": "2026-09-06T19:35:16Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34055370736"
+  },
+  {
+    "id": 34053515356,
+    "sha": "5168dc205534df075da85337dae8286d7493fc3d",
+    "short_sha": "5168dc2",
+    "message": "fix: 外部存储异常时保存控件布局报 ENOENT (#1728)\n\n- saveToFile() 写入前确保父目录存在，并改为临时文件原子写入，避免写入失败破坏原有布局\n- 外部存储不可用时回退到内部存储，不再使用手动拼接的 Android/data 路径\n- 目录创建失败与外部存储回退均记录日志，便于诊断\n- 保存控件布局失败时不再删除原有布局文件",
+    "created_at": "2026-09-06T19:00:02Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34053515356"
+  },
+  {
+    "id": 34053069791,
+    "sha": "80fff4e22b196edb9a7aef77f49fd872b9b646b0",
+    "short_sha": "80fff4e",
+    "message": "Merge pull request #1797 from youfeng11/main\n\nfeat: 使用拖动手柄调整摇杆大小时最小大小匹配属性最小大小",
+    "created_at": "2026-09-06T18:52:02Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34053069791"
+  },
+  {
+    "id": 34051778742,
+    "sha": "fd40e736790fdcd56fe488e09b6563028e188f69",
+    "short_sha": "fd40e73",
+    "message": "Merge pull request #1795 from ZalithLauncher/fix/hotbar\n\nfix: 单击快捷栏槽位连续触发两次切换按键",
+    "created_at": "2026-09-06T18:27:30Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34051778742"
+  },
+  {
+    "id": 34051739324,
+    "sha": "188284d94e2ef4bff59e90bfecf054bcf62833b3",
+    "short_sha": "188284d",
+    "message": "fix: 单击快捷栏槽位连续触发两次切换按键",
+    "created_at": "2026-09-06T18:26:39Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34051739324"
+  },
+  {
     "id": 34047925073,
     "sha": "9a3f8f0ea3e774bc4ac274f51233058a5472c0d0",
     "short_sha": "9a3f8f0",
@@ -358,45 +398,5 @@
     "message": "Merge pull request #1745 from ZalithLauncher/feat/sdl3\n\nfix: 修复模块化 Forge 启动时 LWJGL 组件拆分包冲突",
     "created_at": "2026-09-01T00:50:27Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33456384612"
-  },
-  {
-    "id": 33455379946,
-    "sha": "7028b20e2db18c9cfb7dbee01b17cb55f28ce4a5",
-    "short_sha": "7028b20",
-    "message": "update MioLibPatcher.jar",
-    "created_at": "2026-09-01T00:35:32Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33455379946"
-  },
-  {
-    "id": 33454866299,
-    "sha": "7768af805fe31ea974deae66794bcf2611d1fcfe",
-    "short_sha": "7768af8",
-    "message": "bump version to 2.5_pre",
-    "created_at": "2026-09-01T00:27:58Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33454866299"
-  },
-  {
-    "id": 33454555948,
-    "sha": "9ceaf206041556b06f29ada70e3a59ce0c4b1a39",
-    "short_sha": "9ceaf20",
-    "message": "Merge pull request #1756 from ZalithLauncher/fix/sdl_keyboard_input\n\nfix: SDL 端实体键盘输入相关的问题",
-    "created_at": "2026-09-01T00:23:21Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33454555948"
-  },
-  {
-    "id": 33454355642,
-    "sha": "a395adc3c5bca89fa974dfa9382d5e16ec380943",
-    "short_sha": "a395adc",
-    "message": "fix: SDL 文本输入时实体键盘按键无法输入的问题",
-    "created_at": "2026-09-01T00:20:15Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33454355642"
-  },
-  {
-    "id": 33452414659,
-    "sha": "0a0522730ded5b4e1fc3dd05190f109fdbd94832",
-    "short_sha": "0a05227",
-    "message": "fix: 修复 SDL 非输入通道时实体键盘按键仍会弹出软键盘的问题",
-    "created_at": "2026-08-31T23:48:25Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33452414659"
   }
 ]
