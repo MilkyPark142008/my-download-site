@@ -1,5 +1,53 @@
 [
   {
+    "id": 34025139094,
+    "sha": "18879740b176e53f3841f216402fe0cbf23d7ae9",
+    "short_sha": "1887974",
+    "message": "chore(l10n): update translation files\n\nAdd-on: Cleanup translation files\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-06T09:36:20Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34025139094"
+  },
+  {
+    "id": 34025137845,
+    "sha": "18879740b176e53f3841f216402fe0cbf23d7ae9",
+    "short_sha": "1887974",
+    "message": "chore(l10n): update translation files\n\nAdd-on: Cleanup translation files\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-06T09:36:20Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34025137845"
+  },
+  {
+    "id": 34017448704,
+    "sha": "f35833af0d087fb2ac5e748b49cfcf6fea083e9b",
+    "short_sha": "f35833a",
+    "message": "feat: 集成 SDL3 输入/渲染以支持启动26.3+（以 ZalithLauncher2 为蓝本） (#1806)\n\n* refactor: 迁移 Amethyst utils.c 与 awt_bridge.c，移除 fcl 全局结构体与 setFCLBridge\n\n* feat: 恢复 native_hooks exit/chmod hook，接入 FCLBridge.initializeHooks\n\n* feat: 集成 SDL3（以 ZalithLauncher2 为蓝本）——sdl_hook/窗口复用/EGL 兼容/手柄直通/LWJGL 补丁\n\n- C 层：native_hooks 新增 sdl_hook.c（SDL_Init 通知、主窗口复用、EGL 归一化代理、\n  Vulkan 加载器共用）与 sdl_dlopen_hook.c（隔离游戏 JVM 的 SDL JNI_OnLoad）；\n  input_bridge_v3 新增 notifyLauncher/手柄直通缓冲区/越界守卫/守卫式 Attach\n- Java 层：org.libsdl.app 移植（SDLActivity/SDLSurface 等 12 类）、SdlBridge/\n  DirectGamepad/SdlSettings、CallbackBridge 双路输入与 notifyLauncher、\n  JVMActivity surface 对接与方向锁定、FCLInput SDL 直通、FCLauncher SDL 环境变量\n- LWJGL 3.4.1：GLFW.java 手柄直通、SDLInit/SDLMouse 补丁类，重建合并 jar\n- SDL-release.aar（4 ABI libSDL3.so/libSDL2.so）\n\n* feat: 游戏内菜单新增 SDL 设置——自动唤起输入法开关与手柄输入模式选择\n\n* fix: SDL 输入修复——键盘用 GLFW 键码换算 Android 键码；鼠标按 isGrabbing 捕获状态分流相对/绝对坐标\n\n* fix: SDL 输入法弹出崩溃——setLayoutParams 改复用父容器已转换的 LayoutParams，兼容 RelativeLayout 游戏布局\n\n* Update LauncherHelper.java\n\n* fix: SDL 模式手动输入法由 SDL 输入框接管（SdlImeController），同步 ZalithLauncher2 的 SDL 修复\n\n- 全量同步 Zalith org.libsdl.app（新增 SdlImeController 统一管理 SDL 软键盘：\n  游戏请求/启动器手动开关/自动唤起设置/顽固 IME 压制/焦点回弹）\n- TouchCharInput.switchKeyboardState 在 SDL 启用时走 enableSDLEditKeyboard/\n  disableSDLEditKeyboard 接管，字符经 SDLInputConnection 直达 SDL 原生文本事件\n- SdlBridge 补 requestComposeFocus；SdlImeController 的 setLayoutParams\n  复用已转换的父容器 params，兼容 FCL RelativeLayout 游戏布局\n\n* fix: OpenGL 后端 SDL 模式启动崩溃——渲染桥函数按渲染器白名单调用并加 NULL 守卫（对齐 Zalith）\n\nfixPojavGLContext 以 window=NULL 调 glfwMakeContextCurrent 走 pojavMakeCurrent，\nSDL 模式下渲染桥（br_*）未初始化为 NULL 导致空指针调用。pojavMakeCurrent/\npojavSwapBuffers/pojavSwapInterval 改为按 config_renderer 白名单调用\n（SDL 模式下为 no-op），pojavGetCurrentContext/pojavCreateContext 补 NULL 守卫\n\n* feat: 桥接 SDL 原生消息框到 JVMActivity（实现 Zalith 133a1e52）\n\nSDL 原生层 Android_JNI_ShowMessageBox 会在宿主对象的运行时类上按名查找\nmessageboxShowMessageBox；JVMActivity 非 SDLActivity 子类，查找失败后带着\npending 异常继续 CallIntMethod 触发 JniAbort 崩溃。以 @Keep 标注同名同签名\n实例方法桥接到 SDLActivity 的静态 MD3 对话框实现，阻塞游戏线程直至用户选择\n\n* fix: SDL_OPENGL_LIBRARY/SDL_EGL_LIBRARY 对插件渲染器未生效——addRendererEnv 拆分 inner 统一设置\n\nSDL 变量原本在 addRendererEnv 末尾，但插件渲染器（MobileGLUES 等）在\n外部分支中途 return 走不到，导致 SDL 用系统 EGL 创建上下文而 MC 的 GL\n调用走插件 so，MobileGLUES 内部状态全空（GPU 名 unknown、limit 查询\n返回 0 触发 DynamicGpuDataStorageMapped 除零）。拆分为 wrapper+inner，\nSDL 变量对所有渲染器路径统一生效（对齐 Zalith setRendererEnv 顺序结构）\n\n* fix: SDL_EGL_LIBRARY 插件渲染器指向主 APK 目录——纯文件名 EGL 优先用插件自身 lib 目录拼接绝对路径\n\n* fix: SDL_OPENGL_LIBRARY 改用渲染器 GL 库 so 绝对路径（renderer.getGlName），替换无效的渲染器 id\n\n* refactor: 清理 SDL 集成代码格式——去除无用导入、修正 import 位置与排序、修复修饰符顺序与尾随空白",
+    "created_at": "2026-09-06T06:48:09Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34017448704"
+  },
+  {
+    "id": 34017420084,
+    "sha": "3fd5bf08892b8679a4d687dae9768047c4a12a16",
+    "short_sha": "3fd5bf0",
+    "message": "Merge branch 'main' into feat/sdl3",
+    "created_at": "2026-09-06T06:47:24Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34017420084"
+  },
+  {
+    "id": 34017418116,
+    "sha": "3fd5bf08892b8679a4d687dae9768047c4a12a16",
+    "short_sha": "3fd5bf0",
+    "message": "Merge branch 'main' into feat/sdl3",
+    "created_at": "2026-09-06T06:47:24Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34017418116"
+  },
+  {
+    "id": 34017350660,
+    "sha": "aa86a334b8a3826ba0aa27c44224713e97c7d938",
+    "short_sha": "aa86a33",
+    "message": "refactor: 清理 SDL 集成代码格式——去除无用导入、修正 import 位置与排序、修复修饰符顺序与尾随空白",
+    "created_at": "2026-09-06T06:45:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34017350660"
+  },
+  {
     "id": 34009825720,
     "sha": "089ac878a0e38c1eb0e2280ca07a12e516e60696",
     "short_sha": "089ac87",
@@ -350,53 +398,5 @@
     "message": "chore(l10n): update Chinese (Traditional Han script) translation\n\nchore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nProgress: 5.0% (66 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
     "created_at": "2026-09-02T13:37:55Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33636920300"
-  },
-  {
-    "id": 33636914995,
-    "sha": "a81a3bef97238864f46a044aca0aaf0d9381fe34",
-    "short_sha": "a81a3be",
-    "message": "chore(l10n): update Chinese (Traditional Han script) translation\n\nchore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nProgress: 5.0% (66 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-09-02T13:37:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33636914995"
-  },
-  {
-    "id": 33636885884,
-    "sha": "a24f1e33548d3d70445eef092f36276a83072bc4",
-    "short_sha": "a24f1e3",
-    "message": "fix: 修复下载通知在某些设备上不显示的问题\n\nAndroid 13+ 未授予 POST_NOTIFICATIONS 权限时通知被系统静默丢弃，\n而启动时的授权引导仅提示一次，拒绝后无补救入口；\n现下载开始时检测权限缺失就地发起一次授权请求（每次运行至多一次）。\n通知渠道由 IMPORTANCE_LOW 升级为 DEFAULT（下载开始弹横幅提醒），\n并更换渠道 id、清理旧低重要性渠道。",
-    "created_at": "2026-09-02T13:37:27Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33636885884"
-  },
-  {
-    "id": 33616405609,
-    "sha": "8d685171459bf77c55036143a5e846eb8674d5c0",
-    "short_sha": "8d68517",
-    "message": "chore(l10n): update Chinese (Traditional Han script) translation\n\nchore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nProgress: 5.0% (66 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-09-02T09:51:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33616405609"
-  },
-  {
-    "id": 33616400617,
-    "sha": "8d685171459bf77c55036143a5e846eb8674d5c0",
-    "short_sha": "8d68517",
-    "message": "chore(l10n): update Chinese (Traditional Han script) translation\n\nchore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nProgress: 5.0% (66 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-09-02T09:51:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33616400617"
-  },
-  {
-    "id": 33611984789,
-    "sha": "82a59cafa1c6b3394586289208c35d2a865c3f1b",
-    "short_sha": "82a59ca",
-    "message": "chore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-09-02T09:02:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33611984789"
-  },
-  {
-    "id": 33611980673,
-    "sha": "82a59cafa1c6b3394586289208c35d2a865c3f1b",
-    "short_sha": "82a59ca",
-    "message": "chore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-09-02T09:02:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33611980673"
   }
 ]
