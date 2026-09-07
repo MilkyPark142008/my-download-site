@@ -1,5 +1,45 @@
 [
   {
+    "id": 34085369936,
+    "sha": "221e6c7805445450f8cafd36dc399e3c0dba013a",
+    "short_sha": "221e6c7",
+    "message": "Merge remote-tracking branch 'origin/main'",
+    "created_at": "2026-09-07T04:58:53Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34085369936"
+  },
+  {
+    "id": 34085109962,
+    "sha": "221e6c7805445450f8cafd36dc399e3c0dba013a",
+    "short_sha": "221e6c7",
+    "message": "Merge remote-tracking branch 'origin/main'",
+    "created_at": "2026-09-07T04:58:53Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34085109962"
+  },
+  {
+    "id": 34085024054,
+    "sha": "26edaff028ae41ffd1fafc8361607e649414ad94",
+    "short_sha": "26edaff",
+    "message": "Merge pull request #1799 from ZalithLauncher/fix/gamepad-joystick-poll-rate\n\nfix: 提升手柄映射模式摇杆的轮询采样率，并按实际间隔归一化偏移量",
+    "created_at": "2026-09-07T04:57:46Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34085024054"
+  },
+  {
+    "id": 34084951056,
+    "sha": "758e59a51ad96cde3fd02f3095008199dd02d72b",
+    "short_sha": "758e59a",
+    "message": "update PathManager.kt",
+    "created_at": "2026-09-07T04:56:23Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34084951056"
+  },
+  {
+    "id": 34083663668,
+    "sha": "4e10af8fcaead7213ca623784c828fd985b7e4b4",
+    "short_sha": "4e10af8",
+    "message": "Merge pull request #1798 from ZalithLauncher/fix/control_layout_save\n\nfix: 外部存储异常时保存控件布局报 ENOENT",
+    "created_at": "2026-09-07T04:35:22Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34083663668"
+  },
+  {
     "id": 34055370736,
     "sha": "8fd78afed1651399e9de12cf3c7ed65eb026e88a",
     "short_sha": "8fd78af",
@@ -358,45 +398,5 @@
     "message": "fix: SDL 未启用时 IME 回调触发 UnsatisfiedLinkError 崩溃",
     "created_at": "2026-09-01T05:37:58Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33474354333"
-  },
-  {
-    "id": 33473709405,
-    "sha": "3d64fe5afe11a30deeedf5a36ccdd1136271b19c",
-    "short_sha": "3d64fe5",
-    "message": "fix: 账号管理直接使用 EventViewModel 发布事件",
-    "created_at": "2026-09-01T05:27:54Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33473709405"
-  },
-  {
-    "id": 33463143021,
-    "sha": "223f52e6cfa4b43af8b7ceb073860871294a8c77",
-    "short_sha": "223f52e",
-    "message": "fix: 外置账号重新登录时未提交任务",
-    "created_at": "2026-09-01T02:35:52Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33463143021"
-  },
-  {
-    "id": 33461291025,
-    "sha": "30ab0634bf7086aec793d88796a18d0cd701ef68",
-    "short_sha": "30ab063",
-    "message": "Merge pull request #1758 from ZalithLauncher/fix/inputfiled\n\nfix: 对话框内输入时，对话框弹跳的问题",
-    "created_at": "2026-09-01T02:06:27Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33461291025"
-  },
-  {
-    "id": 33461247464,
-    "sha": "cab3552b6b11a65be4af2c650d948b57d2788781",
-    "short_sha": "cab3552",
-    "message": "fix: 对话框内输入时，对话框弹跳的问题",
-    "created_at": "2026-09-01T02:05:39Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33461247464"
-  },
-  {
-    "id": 33456384612,
-    "sha": "88305c0ffeb0ad2b71a452efe44253663de4fb9c",
-    "short_sha": "88305c0",
-    "message": "Merge pull request #1745 from ZalithLauncher/feat/sdl3\n\nfix: 修复模块化 Forge 启动时 LWJGL 组件拆分包冲突",
-    "created_at": "2026-09-01T00:50:27Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33456384612"
   }
 ]
