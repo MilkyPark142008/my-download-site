@@ -1,5 +1,45 @@
 [
   {
+    "id": 34103563721,
+    "sha": "628698b3b1b27269b5456a1d6581a608b683540a",
+    "short_sha": "628698b",
+    "message": "feat: 新增游戏内双指滑动滚动手势",
+    "created_at": "2026-09-07T08:59:18Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34103563721"
+  },
+  {
+    "id": 34098141498,
+    "sha": "7d040f2d65b58b501f7bde9e8d02488945211af4",
+    "short_sha": "7d040f2",
+    "message": "fix: 修正渲染器最大版本判断",
+    "created_at": "2026-09-07T07:58:19Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34098141498"
+  },
+  {
+    "id": 34097437585,
+    "sha": "24500621ba1f862994dcf326089da2bf5da91a74",
+    "short_sha": "2450062",
+    "message": "Merge pull request #1804 from ZalithLauncher/fix/save_playtime\n\nfix: 存档游玩时间格式化未正确分解为互不重叠的分量",
+    "created_at": "2026-09-07T07:50:06Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34097437585"
+  },
+  {
+    "id": 34097382929,
+    "sha": "bb1ad49719617eebf037efca7e6c079f1acbfb03",
+    "short_sha": "bb1ad49",
+    "message": "Merge pull request #1803 from Xirren/renderer\n\n修正渲染器版本适配情况",
+    "created_at": "2026-09-07T07:49:27Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34097382929"
+  },
+  {
+    "id": 34097248330,
+    "sha": "34c5a8ed7f4e78a5bbfbcc0683fc5c06f017836e",
+    "short_sha": "34c5a8e",
+    "message": "fix: 存档游玩时间格式化未正确分解为互不重叠的分量",
+    "created_at": "2026-09-07T07:47:44Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34097248330"
+  },
+  {
     "id": 34085369936,
     "sha": "221e6c7805445450f8cafd36dc399e3c0dba013a",
     "short_sha": "221e6c7",
@@ -358,45 +398,5 @@
     "message": "fix: SoraEditor 因 R8 混淆失去语法高亮、主题",
     "created_at": "2026-09-01T19:20:04Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33548950307"
-  },
-  {
-    "id": 33535933493,
-    "sha": "92e9e4e1250724d941da0ae67a34d086a6f81c51",
-    "short_sha": "92e9e4e",
-    "message": "update MioLibPatcher.jar",
-    "created_at": "2026-09-01T17:07:34Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33535933493"
-  },
-  {
-    "id": 33518307318,
-    "sha": "ac23cb6c4e2cbb7c93041ee7620ff4f12c026960",
-    "short_sha": "ac23cb6",
-    "message": "chore: 版本列表新增顶部遮挡淡化",
-    "created_at": "2026-09-01T14:14:38Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33518307318"
-  },
-  {
-    "id": 33500617152,
-    "sha": "bdb81d6dedd40d9708d48e91fb3326663a0e2232",
-    "short_sha": "bdb81d6",
-    "message": "fix: 修复下载器源停摆时的 0B/s 冻结\n\n- 超时分类：okio 的 InterruptedIOException(timeout) 计入熔断而非当作取消吞掉\n- 全源熔断时原地等待冷却到期，不再派发注定空转的工人；等待上限后走降级通道真实尝试\n- 降级通道（acquireDegraded）不再核对熔断，每个源至多付一次读超时，保证有界终止\n- 小文件读超时 8s→5s，熔断冷却 45s→15s，缩短停摆冻结窗口\n- 新增 StallRecoveryTest，更新 SourceHealthTest",
-    "created_at": "2026-09-01T11:04:00Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33500617152"
-  },
-  {
-    "id": 33474372124,
-    "sha": "d3ebf13a6f941877e0785e239c7616064fcabdc6",
-    "short_sha": "d3ebf13",
-    "message": "Merge pull request #1760 from ZalithLauncher/fix/sdl_keyboard_input\n\nfix: SDL 未启用时 IME 回调触发 UnsatisfiedLinkError 崩溃",
-    "created_at": "2026-09-01T05:38:21Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33474372124"
-  },
-  {
-    "id": 33474354333,
-    "sha": "cea6b7ae14945107694fa4c95f6c0f7ae4b07455",
-    "short_sha": "cea6b7a",
-    "message": "fix: SDL 未启用时 IME 回调触发 UnsatisfiedLinkError 崩溃",
-    "created_at": "2026-09-01T05:37:58Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33474354333"
   }
 ]
