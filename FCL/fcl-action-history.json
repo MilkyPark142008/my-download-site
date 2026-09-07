@@ -1,5 +1,37 @@
 [
   {
+    "id": 34156007805,
+    "sha": "71836960a104e802be283d7a7296a667444701cb",
+    "short_sha": "7183696",
+    "message": "updatr",
+    "created_at": "2026-09-07T19:32:18Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34156007805"
+  },
+  {
+    "id": 34156007763,
+    "sha": "71836960a104e802be283d7a7296a667444701cb",
+    "short_sha": "7183696",
+    "message": "updatr",
+    "created_at": "2026-09-07T19:32:18Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34156007763"
+  },
+  {
+    "id": 34155166471,
+    "sha": "8b64898cebf3b8c236ca8e4b9a2a3ecb9701fba5",
+    "short_sha": "8b64898",
+    "message": "updatw",
+    "created_at": "2026-09-07T19:17:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34155166471"
+  },
+  {
+    "id": 34155166416,
+    "sha": "8b64898cebf3b8c236ca8e4b9a2a3ecb9701fba5",
+    "short_sha": "8b64898",
+    "message": "updatw",
+    "created_at": "2026-09-07T19:17:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34155166416"
+  },
+  {
     "id": 34135800596,
     "sha": "f05ddfc33f114d030df32553fd6b26a5e4daa8b6",
     "short_sha": "f05ddfc",
@@ -366,37 +398,5 @@
     "message": "feat: 新增飞行/潜行/游泳动画（skinview3d 公式移植）\n\n- Flying：玩家绕 X 轴俯身至水平并展开双臂（PlayerModel 新增 rootRotationX，\n  resetJoints 同步重置）；鞘翅网格未移植，姿态部分完整\n- Crouch：身体前倾下蹲、头部下移、手臂前伸、双腿后移、披风压低，\n  位置公式换算到玩家根坐标系；保留 showProgress/runOnce 参数\n- Swim：手臂四元数关键帧 slerp 插值（内置 Quat：轴角构造/Hamilton 乘法/\n  短路径 slerp/Rx·Ry·Rz 欧拉提取），入水下潜与双腿打水公式逐行移植\n- 动画切换弹窗新增飞行/游泳/潜行三项，字符串同步 10 个语言目录",
     "created_at": "2026-09-05T06:25:58Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33949848919"
-  },
-  {
-    "id": 33948898927,
-    "sha": "89163ab5327f536f3e16261962b815608fe1bf94",
-    "short_sha": "89163ab",
-    "message": "皮肤 3D 预览重构：TextureView + Kotlin + GLES 2.0，新增动画系统与第二层轮廓挤出 (#1803)\n\n* fix: 修复右菜单隐藏时切回主页皮肤预览宽度归零而消失\n\n* refactor: 皮肤模型渲染重构为 TextureView + GLES 2.0（skinview3d 蓝本）\n\n- 新增 com.mio.skin：SkinViewer（TextureView+EGL14+Choreographer 渲染线程）、\n  SkinRenderer（ES2 shader）、PlayerModel/BoxMesh（部件几何与标准盒式 UV）、\n  WalkingAnimation（腿臂摆动/头部摆动/披风摆动）\n- 删除旧 fcllibrary.skin 包（GLSurfaceView + ES1 固定管线，23 个 Java 文件）\n- MainUI 的 fakefx textureProperty 绑定改为 ObjectBinding + InvalidationListener，\n  addListener 后主动 get() 同步当前值；updateTexture 同步 texture 字段，\n  避免页面重进时皮肤退回默认\n- EGL context 重建时归零 VBO/纹理 id 强制重传，修复切页后模型消失\n- 第二层（overlay）几何与 UV 尺寸分离，修复第二层采到其他部位色块\n\n* feat: 皮肤预览支持多个 skinview3d 动画，双击模型弹出窗口切换\n\n- 新增 PlayerAnimation 基类（update(player, dt) 无状态语义，与 skinview3d 一致）\n  及待机/奔跑/挥手/挥击动画，Walking 重构到基类；公式逐行对照 animation.ts\n- PlayerModel 增加可复位部件位置与整体变换（root 平移/倾斜，奔跑的跳跃躲闪），\n  新增 resetJoints() 供切换动画时恢复姿态\n- SkinRenderer.playAnimation() 切换动画并重置姿态与进度\n- SkinViewer 新增双击检测（300ms + touch slop），AnimationDialog 卡片式列表\n  标记当前动画（主题色高亮 + 对勾），亮暗模式自适应（文字默认色、卡片背景\n  以 dialog_background 为基准混合）\n- 动画名与标题字符串同步 10 个语言目录\n\n* feat: 第二层皮肤轮廓挤出，增强 3D 立体效果（参考 3d-Skin-Layers）\n\n- 新增 OverlayExtrusion：遍历第二层 UV 区像素，为边缘不透明像素（四邻透明）\n  生成从第二层表面到第一层表面的正交直壁侧壁，UV 指向像素中心取临近色块\n- 挤出网格挂到所属部件，在第二层网格同矩阵下绘制（独立绘制会错位到原点）\n- 皮肤更新与 slim 切换时用缓存的皮肤像素重建；context 重建随 resetGpuResources 失效重传\n- 片元着色器新增 uShade 亮度系数，挤出侧壁以 0.8 背光渲染，模拟方向光照增强立体感\n\n* fix: 修复启动时主界面皮肤显示为默认的覆盖竞态\n\n皮肤异步加载的完成回调在后台线程执行 updateTexture，而页面 attach 的重喂\n在主线程读 texture 字段后发兜底任务；attach 的读旧值→post 插入后台回调的\n写→post 之间时，默认皮肤兜底任务会排在真皮肤任务之后执行，终态被覆盖。\n渲染线程 onSurfaceCreated 本就从 texture 字段重建纹理，彻底移除 attach 重喂。\n\n* optimize: 皮肤预览渲染帧率上限锁定 60fps\n\nChoreographer 帧回调加 16ms 帧间隔节流，高刷新率屏幕（90/120Hz）下不再\n随 vsync 满帧渲染；动画时长按实际渲染帧间隔计算，节流不影响动画速度\n\n* style: 皮肤渲染相关代码 IDE 格式化\n\n长行拆分、import 排序、catch 参数改用未命名占位、XML 属性排序、\nOverlayExtrusion 构造参数直接声明为属性，无行为变更",
-    "created_at": "2026-09-05T06:05:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33948898927"
-  },
-  {
-    "id": 33948843491,
-    "sha": "4e975e638843b8df4ba2af66104ebc7a2636e70c",
-    "short_sha": "4e975e6",
-    "message": "style: 皮肤渲染相关代码 IDE 格式化\n\n长行拆分、import 排序、catch 参数改用未命名占位、XML 属性排序、\nOverlayExtrusion 构造参数直接声明为属性，无行为变更",
-    "created_at": "2026-09-05T06:03:09Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33948843491"
-  },
-  {
-    "id": 33948841140,
-    "sha": "4e975e638843b8df4ba2af66104ebc7a2636e70c",
-    "short_sha": "4e975e6",
-    "message": "style: 皮肤渲染相关代码 IDE 格式化\n\n长行拆分、import 排序、catch 参数改用未命名占位、XML 属性排序、\nOverlayExtrusion 构造参数直接声明为属性，无行为变更",
-    "created_at": "2026-09-05T06:03:09Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33948841140"
-  },
-  {
-    "id": 33948420474,
-    "sha": "2ebd084dcf0ef41ec71e38bbb58e51e17278f8e3",
-    "short_sha": "2ebd084",
-    "message": "optimize: 皮肤预览渲染帧率上限锁定 60fps\n\nChoreographer 帧回调加 16ms 帧间隔节流，高刷新率屏幕（90/120Hz）下不再\n随 vsync 满帧渲染；动画时长按实际渲染帧间隔计算，节流不影响动画速度",
-    "created_at": "2026-09-05T05:50:56Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33948420474"
   }
 ]
