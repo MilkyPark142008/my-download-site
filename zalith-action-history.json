@@ -1,5 +1,13 @@
 [
   {
+    "id": 34145209426,
+    "sha": "e33cca70510ff053c68e7a512787496ea8d1620b",
+    "short_sha": "e33cca7",
+    "message": "fix: 解除游戏帧率对屏幕刷新率的锁定 #1807\n\n- 移除 Kopper Zink 的垂直同步门控，无条件透传 MC 的交换间隔。\n  此前的门控从不调用 eglSwapInterval，导致 EGL 默认交换间隔 1\n  永久生效，帧率始终被锁在屏幕刷新率\n- 垂直同步开关关闭时，对游戏窗口主动应用交换间隔 0，使 Surface\n  切入 BufferQueue 异步模式，渲染循环不再按垂直同步信号阻塞\n- 记录 MC 最近一次的交换间隔，窗口重建（旋转、分屏等）时重新\n  应用，避免生产者状态重置后帧率退回锁定状态；纯 Vulkan 路径\n  不干预\n- 游戏窗口创建时向系统投票设备支持的最高屏幕刷新率，防止面板\n  被省电策略降至 60/90Hz\n\n参考 MinecraftGLSurface（https://github.com/AngelAuraMC/Amethyst-Android/blob/v3_openjdk/app_pojavlauncher/src/main/java/net/kdt/pojavlaunch/MinecraftGLSurface.java）",
+    "created_at": "2026-09-07T16:51:47Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34145209426"
+  },
+  {
     "id": 34103563721,
     "sha": "628698b3b1b27269b5456a1d6581a608b683540a",
     "short_sha": "628698b",
@@ -390,13 +398,5 @@
     "message": "Merge pull request #1763 from ZalithLauncher/fix/soraeditor_theme\n\nfix: SoraEditor 因 R8 混淆失去语法高亮、主题",
     "created_at": "2026-09-01T20:15:22Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33554242715"
-  },
-  {
-    "id": 33548950307,
-    "sha": "00b1bf33ca53c6ec43ffa7c7a3a0f75da47c4e61",
-    "short_sha": "00b1bf3",
-    "message": "fix: SoraEditor 因 R8 混淆失去语法高亮、主题",
-    "created_at": "2026-09-01T19:20:04Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33548950307"
   }
 ]

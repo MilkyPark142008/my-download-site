@@ -1,5 +1,85 @@
 [
   {
+    "id": 34135800596,
+    "sha": "f05ddfc33f114d030df32553fd6b26a5e4daa8b6",
+    "short_sha": "f05ddfc",
+    "message": "Revert \"refactor: 下载任务列表样式主题化并去掉首行间隔\"\n\nThis reverts commit 4cd33d5c0b71a24a5a8e37634baf7d9599f84fdc.",
+    "created_at": "2026-09-07T14:57:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34135800596"
+  },
+  {
+    "id": 34135800638,
+    "sha": "f05ddfc33f114d030df32553fd6b26a5e4daa8b6",
+    "short_sha": "f05ddfc",
+    "message": "Revert \"refactor: 下载任务列表样式主题化并去掉首行间隔\"\n\nThis reverts commit 4cd33d5c0b71a24a5a8e37634baf7d9599f84fdc.",
+    "created_at": "2026-09-07T14:57:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34135800638"
+  },
+  {
+    "id": 34135796002,
+    "sha": "f05ddfc33f114d030df32553fd6b26a5e4daa8b6",
+    "short_sha": "f05ddfc",
+    "message": "Revert \"refactor: 下载任务列表样式主题化并去掉首行间隔\"\n\nThis reverts commit 4cd33d5c0b71a24a5a8e37634baf7d9599f84fdc.",
+    "created_at": "2026-09-07T14:57:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34135796002"
+  },
+  {
+    "id": 34135796118,
+    "sha": "f05ddfc33f114d030df32553fd6b26a5e4daa8b6",
+    "short_sha": "f05ddfc",
+    "message": "Revert \"refactor: 下载任务列表样式主题化并去掉首行间隔\"\n\nThis reverts commit 4cd33d5c0b71a24a5a8e37634baf7d9599f84fdc.",
+    "created_at": "2026-09-07T14:57:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34135796118"
+  },
+  {
+    "id": 34135516050,
+    "sha": "14581ba0cff0afe32382f3cc2267fe6efd5422ed",
+    "short_sha": "14581ba",
+    "message": "refactor: 移除 SplashActivity 启动页的加载进度显示",
+    "created_at": "2026-09-07T14:50:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34135516050"
+  },
+  {
+    "id": 34135516122,
+    "sha": "14581ba0cff0afe32382f3cc2267fe6efd5422ed",
+    "short_sha": "14581ba",
+    "message": "refactor: 移除 SplashActivity 启动页的加载进度显示",
+    "created_at": "2026-09-07T14:50:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34135516122"
+  },
+  {
+    "id": 34135497356,
+    "sha": "14581ba0cff0afe32382f3cc2267fe6efd5422ed",
+    "short_sha": "14581ba",
+    "message": "refactor: 移除 SplashActivity 启动页的加载进度显示",
+    "created_at": "2026-09-07T14:50:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34135497356"
+  },
+  {
+    "id": 34135497433,
+    "sha": "14581ba0cff0afe32382f3cc2267fe6efd5422ed",
+    "short_sha": "14581ba",
+    "message": "refactor: 移除 SplashActivity 启动页的加载进度显示",
+    "created_at": "2026-09-07T14:50:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34135497433"
+  },
+  {
+    "id": 34124257133,
+    "sha": "8def2f6c6e3f477812b44322d639d18301af65a4",
+    "short_sha": "8def2f6",
+    "message": "refactor: 重写 Turnip 加载为命名空间方案（移植 Amethyst cc4fc5c）\n\n- vendor androidnsbypass（616dc33，MIT）替代自研 nsbypass，命名空间 API 统一\n- linkerhook 改为拦截 android_dlopen_ext，懒加载 Turnip 驱动\n- 新增 glxshim 为 LWJGL 3.3.5 之前版本转发 glXGetProcAddress\n- dlopen 失败经逃逸命名空间兜底（loader_dlopen / FCLBridge.dlopen）\n- kopper-zink AAR 同步移除 libcutils.so（Amethyst b04dfa2）\n- MESA_LOADER_DRIVER_OVERRIDE 从 Java 移到 C 侧 zink_kopper 分支",
+    "created_at": "2026-09-07T12:51:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34124257133"
+  },
+  {
+    "id": 34124256933,
+    "sha": "8def2f6c6e3f477812b44322d639d18301af65a4",
+    "short_sha": "8def2f6",
+    "message": "refactor: 重写 Turnip 加载为命名空间方案（移植 Amethyst cc4fc5c）\n\n- vendor androidnsbypass（616dc33，MIT）替代自研 nsbypass，命名空间 API 统一\n- linkerhook 改为拦截 android_dlopen_ext，懒加载 Turnip 驱动\n- 新增 glxshim 为 LWJGL 3.3.5 之前版本转发 glXGetProcAddress\n- dlopen 失败经逃逸命名空间兜底（loader_dlopen / FCLBridge.dlopen）\n- kopper-zink AAR 同步移除 libcutils.so（Amethyst b04dfa2）\n- MESA_LOADER_DRIVER_OVERRIDE 从 Java 移到 C 侧 zink_kopper 分支",
+    "created_at": "2026-09-07T12:51:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34124256933"
+  },
+  {
     "id": 34118192530,
     "sha": "aa4cf456a8fd5c5faa3d9f9106e408f4afcfdd51",
     "short_sha": "aa4cf45",
@@ -318,85 +398,5 @@
     "message": "optimize: 皮肤预览渲染帧率上限锁定 60fps\n\nChoreographer 帧回调加 16ms 帧间隔节流，高刷新率屏幕（90/120Hz）下不再\n随 vsync 满帧渲染；动画时长按实际渲染帧间隔计算，节流不影响动画速度",
     "created_at": "2026-09-05T05:50:56Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33948420474"
-  },
-  {
-    "id": 33948406525,
-    "sha": "2ebd084dcf0ef41ec71e38bbb58e51e17278f8e3",
-    "short_sha": "2ebd084",
-    "message": "optimize: 皮肤预览渲染帧率上限锁定 60fps\n\nChoreographer 帧回调加 16ms 帧间隔节流，高刷新率屏幕（90/120Hz）下不再\n随 vsync 满帧渲染；动画时长按实际渲染帧间隔计算，节流不影响动画速度",
-    "created_at": "2026-09-05T05:50:56Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33948406525"
-  },
-  {
-    "id": 33938185643,
-    "sha": "80ee021d7b5b07246caf59d59c5b3abbb24b7f48",
-    "short_sha": "80ee021",
-    "message": "feat: 控件转换器改用纯 Kotlin 实现并支持导入 ZL2 布局 (#1795)\n\n* feat: 控件转换器改用纯 Kotlin 实现并支持导入 ZL2 布局\n\n以 control-converter 项目的 cc.py 为语义基准，用纯 Kotlin 重写\nFCL 与 ZalithLauncher2 控件布局的双向转换，替代原 libcc.so (Go) JNI\n方案：不再依赖 arm64 ABI，APK 减小约 4.2MB。\n\n- 新增 com.mio.controlconverter 引擎（保序 JSON 树、银行家舍入、\n  Python repr 浮点格式、键码映射、样式/事件/几何/方向控件转换、\n  图层开关状态机、lossless 往返元数据），门面 com.mio.util.LayoutConverter\n  保持旧 JNI 签名（成功返回 null，失败返回错误串）\n- 默认参数与旧 Go JNI 一致（lossless=true，方向控件转 ZL2 摇杆）\n- 布局导入自动识别 ZalithLauncher2 格式并转换后导入（5 语言文案）\n- 删除 jniLibs/arm64-v8a/libcc.so 与 JNI 版 LayoutConverter.java\n- 新增 JVM 单测：与 Go 金样字节级对拍（还原 HTML 转义后）、\n  无损往返、真实布局（仿原神键位 4bf3d919，2.2MB）结构校验与压测\n\n* fix: 布局导入移至后台线程并添加进度提示，避免大文件 ANR\n\n文件选择回调在主线程执行，原实现在主线程做文件拷贝、整文件读入、\nZL2 识别转换与 Gson 完整解析，大布局导入会阻塞主线程引发 ANR。\n改用 Task 任务链在后台完成全部耗时步骤，UI 提示经 thenAcceptAsync/\nwhenComplete 回主线程；导入选完文件后弹 ProgressDialog，结束时关闭。\nZL2 转换失败改用私有异常沿任务链传递，错误文案区分保持不变。\n\n* fix: 金样测试资源禁止换行符转换，修复 Windows 检出后字节级对拍失败\n\n仓库 * text=auto 叠加本机 core.autocrlf=true 时，controlconverter\n金样 JSON 检出为 CRLF，goldenFclToZlByteMatch 字节级对拍失败。\n为该目录添加 -text 规则并重新检出恢复 LF。\n\n* docs: README 同步控件转换器改动\n\n- 功能亮点新增 FCL/ZL2 控制布局互转与 ZL2 布局自动转换导入\n- 依赖区 control-converter 更新为内置纯 Kotlin 实现（cc.py 语义基准），\n  不再打包 libcc.so，转换方向修正为 FCL↔ZL2 双向\n- 中文/英文/俄文三个版本同步",
-    "created_at": "2026-09-05T02:07:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33938185643"
-  },
-  {
-    "id": 33884233845,
-    "sha": "a768c8eff92f3f0d8e9242cdab63d1227ed74bed",
-    "short_sha": "a768c8e",
-    "message": "test: 新增控制数据序列化回归测试\n\n覆盖手写 JSON 序列化改造：Event/BaseInfo/DirectionEvent/按钮/完整\n控制器往返一致；列表字段保持 JSON 数组、percentage 保持 reference/size\n结构（防回退 TypeToken 解析模式）；assets 默认控制器样例可被手写\nSerializer 完整解析（既有文件格式兼容）；并发 saveToDisk 50 线程\n合并保存不丢数据不崩溃。192.168.2.8 真机 8 用例全部通过。",
-    "created_at": "2026-09-04T14:30:01Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33884233845"
-  },
-  {
-    "id": 33882256223,
-    "sha": "4a841cac3c0cc25c080468bd5db36c61dc64d875",
-    "short_sha": "4a841ca",
-    "message": "optimize: Schedulers.io() 线程数 4 调整为 8\n\nIO 线程池被控制布局保存等任务占满时，交互请求排队无反馈，\n增大并发容量降低排队概率。",
-    "created_at": "2026-09-04T14:10:26Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33882256223"
-  },
-  {
-    "id": 33846459863,
-    "sha": "64bbfb4f6d1ff00ca9fd72be9385a64966f25989",
-    "short_sha": "64bbfb4",
-    "message": "fix: RendererEnvDialog 的 FCLSpinner 深色模式文字与对话框背景同色，补充 ALC10 说明\n\n- FCLSpinner 构造时已按 autoTint 着色，setAutoTextTint(false) 不恢复文字色，\n  深色模式下白色对比色与恒浅灰对话框背景（dialog_background）同色看不清；\n  显式使用固定深色 primary_text\n- ALC10 说明改为：修复 1.6.4 Mite 没有声音的问题，同步 9 个语言目录",
-    "created_at": "2026-09-04T06:50:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33846459863"
-  },
-  {
-    "id": 33843767727,
-    "sha": "15895e003c4a80d3df00092f9c521714acbbc215",
-    "short_sha": "15895e0",
-    "message": "feat: 渲染器选择对话框改用 RecyclerView 自定义卡片 item，统一行高并新增来源显示（内置/插件名），无版本范围时显示未知",
-    "created_at": "2026-09-04T06:17:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33843767727"
-  },
-  {
-    "id": 33835569612,
-    "sha": "8f9459371a1b2ccca58c26b64f9d972cfa5ff9bf",
-    "short_sha": "8f94593",
-    "message": "fix: 修复插件 v2 环境变量配置不持久的问题\n\n- Spinner 在首次布局前 setSelection 会被重置回默认项，post 到布局后再选中\n- toggleable 开关读取误用裸 key 导致保存的状态永远读不到，统一改读 @enabled 后缀\n- 环境变量配置落盘失败时记录日志（原先被静默吞掉）",
-    "created_at": "2026-09-04T04:01:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33835569612"
-  },
-  {
-    "id": 33829024932,
-    "sha": "22042fcdfd743c5f7f77045140860a529b324bc4",
-    "short_sha": "22042fc",
-    "message": "feat: 插件管理功能 (#1799)\n\n* feat: 新增插件管理页面，统一插件扫描与启用/禁用机制\n\n- 新增 PluginManager 统一扫描插件应用（渲染器/驱动/原生库/FFmpeg），\n  三个插件 object 共享扫描结果，仅保留各自 meta-data 解析\n- 启用/禁用状态走 DataStore（plugin_settings.json）持久化，\n  切换后立即重扫各插件列表（renderer 回落 NGGL4ES、driver 回落内置 Turnip）\n- 卸载走系统 ACTION_DELETE，从卸载页返回后自动刷新列表\n- 设置页新增\"插件管理\"tab（启动器设置与关于之间），展示图标/名称/包名/版本/类型，\n  字符串同步 9 个语言目录\n\n* Update ThemePreference.kt\n\n* Update item_plugin.xml\n\n* refactor: 插件实现统一迁移到 com.mio.plugin 包\n\n- RendererPlugin/DriverPlugin/NativeLibPlugin/FFmpegPlugin/_Bundle 自\n  com.tungsten.fclauncher.plugins 迁入 com.mio.plugin\n- PluginManager 自 com.mio.manager 迁入 com.mio.plugin，插件域代码统一一个包\n- 更新 10 处引用方 import 与 AGENTS.md 插件体系描述\n\n* refactor: 新增 AbstractPlugin 基类统一插件共有逻辑\n\n- 懒初始化列表、enabledApps 扫描遍历、refresh 流程下沉到 AbstractPlugin\n- RendererPlugin/DriverPlugin/NativeLibPlugin 继承基类，仅保留各自的\n  meta-data 解析与去重逻辑（DriverPlugin 的内置 Turnip 走 onInit 钩子）\n- 对外属性改为只读 List 并保留 @JvmStatic，Java 静态调用点不变\n- 删除无调用者的 isAvailable()\n\n* refactor: PluginManagePage 迁入 com.tungsten.fcl.ui.setting 包\n\n与 LauncherSettingPage/AboutPage 等设置页子页面同包，删除 SettingUI 的同包 import\n\n* fix: 修复卸载插件返回管理页后列表不刷新\n\n卸载发生在系统侧，进程内扫描缓存不会自动感知，allApps 一直返回旧列表\n导致 DiffUtil 判定无变化：\n- PluginManager 新增 invalidate() 失效扫描缓存\n- 管理页 onHostResume 重扫，按包名+lastUpdateTime 对比，变化时联动\n  refreshAll（渲染器/驱动选择器不再残留已卸载的插件）\n- PluginApp 记录 lastUpdateTime，覆盖安装也能被检测\n- Adapter 的 DiffUtil 改为手写内容比较，避免重扫后 icon 新实例导致整表误判重绑\n\n* 格式化",
-    "created_at": "2026-09-04T02:18:18Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33829024932"
-  },
-  {
-    "id": 33828989266,
-    "sha": "45ec4bbc76b3469fbed77f68ff16dd1342fef7a7",
-    "short_sha": "45ec4bb",
-    "message": "格式化",
-    "created_at": "2026-09-04T02:17:36Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33828989266"
-  },
-  {
-    "id": 33828986276,
-    "sha": "45ec4bbc76b3469fbed77f68ff16dd1342fef7a7",
-    "short_sha": "45ec4bb",
-    "message": "格式化",
-    "created_at": "2026-09-04T02:17:36Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33828986276"
   }
 ]
