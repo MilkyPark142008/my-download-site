@@ -1,5 +1,21 @@
 [
   {
+    "id": 34195153268,
+    "sha": "5f81ab8499c6a895420b27c535df9abaf7885869",
+    "short_sha": "5f81ab8",
+    "message": "test",
+    "created_at": "2026-09-08T06:32:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34195153268"
+  },
+  {
+    "id": 34195153244,
+    "sha": "5f81ab8499c6a895420b27c535df9abaf7885869",
+    "short_sha": "5f81ab8",
+    "message": "test",
+    "created_at": "2026-09-08T06:32:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34195153244"
+  },
+  {
     "id": 34189693353,
     "sha": "c9f4590d4a8de4b6a58a145fcc7c8b1f0f0be354",
     "short_sha": "c9f4590",
@@ -48,14 +64,6 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34177315948"
   },
   {
-    "id": 34177211811,
-    "sha": "8198af44eb2565dec52b74534a79bf0f3a96c5a9",
-    "short_sha": "8198af4",
-    "message": "feat: 下载页分类 tab 添加图标&调整下载管理面板样式 (#1813)\n\n* feat: 下载页分类 tab 添加图标\n\n* refactor: 设置页列表布局统一为 page_setting_list 并支持首行间隔\n\n* refactor: 下载任务列表样式主题化并去掉首行间隔\n\n* refactor: 移除 SplashActivity 启动页的加载进度显示\n\n* Revert \"refactor: 下载任务列表样式主题化并去掉首行间隔\"\n\nThis reverts commit 4cd33d5c0b71a24a5a8e37634baf7d9599f84fdc.\n\n* refactor: 下载面板改为右菜单列内容替换并适配主题配色\n\n* Update WaveProgressView.kt\n\n* Update activity_main.xml",
-    "created_at": "2026-09-08T01:36:19Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34177211811"
-  },
-  {
     "id": 34177211892,
     "sha": "8198af44eb2565dec52b74534a79bf0f3a96c5a9",
     "short_sha": "8198af4",
@@ -64,12 +72,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34177211892"
   },
   {
-    "id": 34177169418,
-    "sha": "eafaa27ad692f9f9d3e79e810929a1961c80de88",
-    "short_sha": "eafaa27",
-    "message": "Update activity_main.xml",
-    "created_at": "2026-09-08T01:34:01Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34177169418"
+    "id": 34177211811,
+    "sha": "8198af44eb2565dec52b74534a79bf0f3a96c5a9",
+    "short_sha": "8198af4",
+    "message": "feat: 下载页分类 tab 添加图标&调整下载管理面板样式 (#1813)\n\n* feat: 下载页分类 tab 添加图标\n\n* refactor: 设置页列表布局统一为 page_setting_list 并支持首行间隔\n\n* refactor: 下载任务列表样式主题化并去掉首行间隔\n\n* refactor: 移除 SplashActivity 启动页的加载进度显示\n\n* Revert \"refactor: 下载任务列表样式主题化并去掉首行间隔\"\n\nThis reverts commit 4cd33d5c0b71a24a5a8e37634baf7d9599f84fdc.\n\n* refactor: 下载面板改为右菜单列内容替换并适配主题配色\n\n* Update WaveProgressView.kt\n\n* Update activity_main.xml",
+    "created_at": "2026-09-08T01:36:19Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34177211811"
   },
   {
     "id": 34177169429,
@@ -78,6 +86,14 @@
     "message": "Update activity_main.xml",
     "created_at": "2026-09-08T01:34:01Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34177169429"
+  },
+  {
+    "id": 34177169418,
+    "sha": "eafaa27ad692f9f9d3e79e810929a1961c80de88",
+    "short_sha": "eafaa27",
+    "message": "Update activity_main.xml",
+    "created_at": "2026-09-08T01:34:01Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34177169418"
   },
   {
     "id": 34177166842,
@@ -382,21 +398,5 @@
     "message": "chore(l10n): update translation files\n\nAdd-on: Cleanup translation files\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/\nTranslation: FoldCraftLauncher/FCL",
     "created_at": "2026-09-06T09:36:20Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34025137845"
-  },
-  {
-    "id": 34017448704,
-    "sha": "f35833af0d087fb2ac5e748b49cfcf6fea083e9b",
-    "short_sha": "f35833a",
-    "message": "feat: 集成 SDL3 输入/渲染以支持启动26.3+（以 ZalithLauncher2 为蓝本） (#1806)\n\n* refactor: 迁移 Amethyst utils.c 与 awt_bridge.c，移除 fcl 全局结构体与 setFCLBridge\n\n* feat: 恢复 native_hooks exit/chmod hook，接入 FCLBridge.initializeHooks\n\n* feat: 集成 SDL3（以 ZalithLauncher2 为蓝本）——sdl_hook/窗口复用/EGL 兼容/手柄直通/LWJGL 补丁\n\n- C 层：native_hooks 新增 sdl_hook.c（SDL_Init 通知、主窗口复用、EGL 归一化代理、\n  Vulkan 加载器共用）与 sdl_dlopen_hook.c（隔离游戏 JVM 的 SDL JNI_OnLoad）；\n  input_bridge_v3 新增 notifyLauncher/手柄直通缓冲区/越界守卫/守卫式 Attach\n- Java 层：org.libsdl.app 移植（SDLActivity/SDLSurface 等 12 类）、SdlBridge/\n  DirectGamepad/SdlSettings、CallbackBridge 双路输入与 notifyLauncher、\n  JVMActivity surface 对接与方向锁定、FCLInput SDL 直通、FCLauncher SDL 环境变量\n- LWJGL 3.4.1：GLFW.java 手柄直通、SDLInit/SDLMouse 补丁类，重建合并 jar\n- SDL-release.aar（4 ABI libSDL3.so/libSDL2.so）\n\n* feat: 游戏内菜单新增 SDL 设置——自动唤起输入法开关与手柄输入模式选择\n\n* fix: SDL 输入修复——键盘用 GLFW 键码换算 Android 键码；鼠标按 isGrabbing 捕获状态分流相对/绝对坐标\n\n* fix: SDL 输入法弹出崩溃——setLayoutParams 改复用父容器已转换的 LayoutParams，兼容 RelativeLayout 游戏布局\n\n* Update LauncherHelper.java\n\n* fix: SDL 模式手动输入法由 SDL 输入框接管（SdlImeController），同步 ZalithLauncher2 的 SDL 修复\n\n- 全量同步 Zalith org.libsdl.app（新增 SdlImeController 统一管理 SDL 软键盘：\n  游戏请求/启动器手动开关/自动唤起设置/顽固 IME 压制/焦点回弹）\n- TouchCharInput.switchKeyboardState 在 SDL 启用时走 enableSDLEditKeyboard/\n  disableSDLEditKeyboard 接管，字符经 SDLInputConnection 直达 SDL 原生文本事件\n- SdlBridge 补 requestComposeFocus；SdlImeController 的 setLayoutParams\n  复用已转换的父容器 params，兼容 FCL RelativeLayout 游戏布局\n\n* fix: OpenGL 后端 SDL 模式启动崩溃——渲染桥函数按渲染器白名单调用并加 NULL 守卫（对齐 Zalith）\n\nfixPojavGLContext 以 window=NULL 调 glfwMakeContextCurrent 走 pojavMakeCurrent，\nSDL 模式下渲染桥（br_*）未初始化为 NULL 导致空指针调用。pojavMakeCurrent/\npojavSwapBuffers/pojavSwapInterval 改为按 config_renderer 白名单调用\n（SDL 模式下为 no-op），pojavGetCurrentContext/pojavCreateContext 补 NULL 守卫\n\n* feat: 桥接 SDL 原生消息框到 JVMActivity（实现 Zalith 133a1e52）\n\nSDL 原生层 Android_JNI_ShowMessageBox 会在宿主对象的运行时类上按名查找\nmessageboxShowMessageBox；JVMActivity 非 SDLActivity 子类，查找失败后带着\npending 异常继续 CallIntMethod 触发 JniAbort 崩溃。以 @Keep 标注同名同签名\n实例方法桥接到 SDLActivity 的静态 MD3 对话框实现，阻塞游戏线程直至用户选择\n\n* fix: SDL_OPENGL_LIBRARY/SDL_EGL_LIBRARY 对插件渲染器未生效——addRendererEnv 拆分 inner 统一设置\n\nSDL 变量原本在 addRendererEnv 末尾，但插件渲染器（MobileGLUES 等）在\n外部分支中途 return 走不到，导致 SDL 用系统 EGL 创建上下文而 MC 的 GL\n调用走插件 so，MobileGLUES 内部状态全空（GPU 名 unknown、limit 查询\n返回 0 触发 DynamicGpuDataStorageMapped 除零）。拆分为 wrapper+inner，\nSDL 变量对所有渲染器路径统一生效（对齐 Zalith setRendererEnv 顺序结构）\n\n* fix: SDL_EGL_LIBRARY 插件渲染器指向主 APK 目录——纯文件名 EGL 优先用插件自身 lib 目录拼接绝对路径\n\n* fix: SDL_OPENGL_LIBRARY 改用渲染器 GL 库 so 绝对路径（renderer.getGlName），替换无效的渲染器 id\n\n* refactor: 清理 SDL 集成代码格式——去除无用导入、修正 import 位置与排序、修复修饰符顺序与尾随空白",
-    "created_at": "2026-09-06T06:48:09Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34017448704"
-  },
-  {
-    "id": 34017420084,
-    "sha": "3fd5bf08892b8679a4d687dae9768047c4a12a16",
-    "short_sha": "3fd5bf0",
-    "message": "Merge branch 'main' into feat/sdl3",
-    "created_at": "2026-09-06T06:47:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34017420084"
   }
 ]
