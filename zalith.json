@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 11189708,
         "digest": "sha256:0adf5b6517bf9a14252600651bd309522dd9773747b55723adf75d9f615d13bb",
-        "download_count": 120,
+        "download_count": 125,
         "created_at": "2026-09-07T05:15:08Z",
         "updated_at": "2026-09-07T05:15:09Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.5.1/mapping.all.zip"
@@ -140,7 +140,7 @@
         "state": "uploaded",
         "size": 11189708,
         "digest": "sha256:0adf5b6517bf9a14252600651bd309522dd9773747b55723adf75d9f615d13bb",
-        "download_count": 26,
+        "download_count": 28,
         "created_at": "2026-09-07T05:15:08Z",
         "updated_at": "2026-09-07T05:15:09Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.5.1/mapping.arm64.zip"
@@ -212,7 +212,7 @@
         "state": "uploaded",
         "size": 11189708,
         "digest": "sha256:0adf5b6517bf9a14252600651bd309522dd9773747b55723adf75d9f615d13bb",
-        "download_count": 12,
+        "download_count": 13,
         "created_at": "2026-09-07T05:15:08Z",
         "updated_at": "2026-09-07T05:15:09Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.5.1/mapping.x86_64.zip"
@@ -248,7 +248,7 @@
         "state": "uploaded",
         "size": 181071291,
         "digest": "sha256:e0033658f765f540bc2960742b37e83c58c84d78ee09b036e3c8f17fd5236158",
-        "download_count": 8006,
+        "download_count": 8332,
         "created_at": "2026-09-07T05:15:08Z",
         "updated_at": "2026-09-07T05:15:15Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.5.1/ZalithLauncher-2.5.1-arm64-v8a.apk"
@@ -284,7 +284,7 @@
         "state": "uploaded",
         "size": 172990536,
         "digest": "sha256:9f38189683f064dc7be8486e534d3e11114ab066a1064926914468692a8a0884",
-        "download_count": 343,
+        "download_count": 359,
         "created_at": "2026-09-07T05:15:08Z",
         "updated_at": "2026-09-07T05:15:14Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.5.1/ZalithLauncher-2.5.1-armeabi-v7a.apk"
@@ -320,7 +320,7 @@
         "state": "uploaded",
         "size": 161526610,
         "digest": "sha256:ede4013e24b43f18a8f5478e32ed37af1db1b35256ae761337e608539c6fdaee",
-        "download_count": 218,
+        "download_count": 235,
         "created_at": "2026-09-07T05:15:08Z",
         "updated_at": "2026-09-07T05:15:13Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.5.1/ZalithLauncher-2.5.1-x86.apk"
@@ -356,7 +356,7 @@
         "state": "uploaded",
         "size": 186899985,
         "digest": "sha256:4b0564174e546b09164b781ad5c4d3d22f47f0e2646d9227515ed577fc2a1dc3",
-        "download_count": 249,
+        "download_count": 265,
         "created_at": "2026-09-07T05:15:08Z",
         "updated_at": "2026-09-07T05:15:14Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.5.1/ZalithLauncher-2.5.1-x86_64.apk"
@@ -392,7 +392,7 @@
         "state": "uploaded",
         "size": 354125720,
         "digest": "sha256:7ec235801acd90d9b79c1dd54d56551722c34f21c8ea8ccd0ff43409638c62fa",
-        "download_count": 1858,
+        "download_count": 1944,
         "created_at": "2026-09-07T05:15:08Z",
         "updated_at": "2026-09-07T05:15:19Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.5.1/ZalithLauncher-2.5.1.apk"
@@ -403,8 +403,8 @@
     "body": "## Updates:\r\n- #0e1b12d: Integrated JSound into LWJGL (by @ShirosakiMio)\r\n\r\n## Changes:\r\n- #1797: Limit joystick resize via drag handle to the size allowed by properties (by @youfeng11)\r\n- #1799: Increased polling sample rate for joystick in controller mapping mode, and normalized offsets by actual interval (by @MovTery)\r\n\r\n## Fixes:\r\n- #1789: CurseForge downloads failing (by @MovTery)\r\n- #1793: Window size oscillation in picture-in-picture/split-screen mode causing severe screen flickering (by @MovTery)\r\n- #1793: Control layout not functioning properly when window size changes (by @MovTery)\r\n- #1794: Keep-alive foreground service startup timeout causing game process crash (by @MovTery)\r\n- #1795: Single click on hotbar slot triggering the switch key twice (by @MovTery)\r\n- #1798: ENOENT error when saving control layout due to external storage issues (by @MovTery)",
     "reactions": {
       "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/releases/383839948/reactions",
-      "total_count": 6,
-      "+1": 6,
+      "total_count": 7,
+      "+1": 7,
       "-1": 0,
       "laugh": 0,
       "hooray": 0,
