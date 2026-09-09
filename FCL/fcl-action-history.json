@@ -1,5 +1,45 @@
 [
   {
+    "id": 34409200578,
+    "sha": "f835147aaa4ea01cb813004a25ff6e2ab5918e47",
+    "short_sha": "f835147",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-09T21:51:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34409200578"
+  },
+  {
+    "id": 34409196695,
+    "sha": "f835147aaa4ea01cb813004a25ff6e2ab5918e47",
+    "short_sha": "f835147",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-09T21:51:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34409196695"
+  },
+  {
+    "id": 34403568038,
+    "sha": "840d086ba4c6d636382004320d371c3818355963",
+    "short_sha": "840d086",
+    "message": "chore(l10n): update Japanese translation\n\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-09T20:51:29Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34403568038"
+  },
+  {
+    "id": 34403564905,
+    "sha": "840d086ba4c6d636382004320d371c3818355963",
+    "short_sha": "840d086",
+    "message": "chore(l10n): update Japanese translation\n\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-09T20:51:29Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34403564905"
+  },
+  {
+    "id": 34403564910,
+    "sha": "840d086ba4c6d636382004320d371c3818355963",
+    "short_sha": "840d086",
+    "message": "chore(l10n): update Japanese translation\n\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-09T20:51:29Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34403564910"
+  },
+  {
     "id": 34333050487,
     "sha": "656a30d247b4fee794f1319af1962ea8b756f0d0",
     "short_sha": "656a30d",
@@ -358,45 +398,5 @@
     "message": "refactor: 重写 Turnip 加载为命名空间方案（移植 Amethyst cc4fc5c）\n\n- vendor androidnsbypass（616dc33，MIT）替代自研 nsbypass，命名空间 API 统一\n- linkerhook 改为拦截 android_dlopen_ext，懒加载 Turnip 驱动\n- 新增 glxshim 为 LWJGL 3.3.5 之前版本转发 glXGetProcAddress\n- dlopen 失败经逃逸命名空间兜底（loader_dlopen / FCLBridge.dlopen）\n- kopper-zink AAR 同步移除 libcutils.so（Amethyst b04dfa2）\n- MESA_LOADER_DRIVER_OVERRIDE 从 Java 移到 C 侧 zink_kopper 分支",
     "created_at": "2026-09-07T12:51:13Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34124256933"
-  },
-  {
-    "id": 34118192530,
-    "sha": "aa4cf456a8fd5c5faa3d9f9106e408f4afcfdd51",
-    "short_sha": "aa4cf45",
-    "message": "fix: SDL 函数经 dlsym 解析时改用代理，修复窗口复用不生效\n\nLWJGL 的 org.lwjgl.sdl 绑定经 dlopen+dlsym 解析 SDL 函数指针后调用，\nbytehook 的 hook_all（GOT 导入补丁）拦截不到这类调用，主窗口记录/复用与\nlauncher 集成全部失效，SDL 第二个窗口被后端拒绝导致崩溃。\ncustomDlsym 出口对 SDL 符号统一返回 sdl_hook 代理：代理直接调用缓存的\n真实 SDL 函数，与 hook 共用 sPrimaryWindow 复用、sdlInitSubSystemPrepare\n集成通知、EGL 计帧代理等逻辑（InitSubSystem hook 的启动器逻辑抽为共用\n函数）。LOG_TO_* 改由 printf 输出到游戏日志，便于真机诊断。",
-    "created_at": "2026-09-07T11:44:33Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34118192530"
-  },
-  {
-    "id": 34118192649,
-    "sha": "aa4cf456a8fd5c5faa3d9f9106e408f4afcfdd51",
-    "short_sha": "aa4cf45",
-    "message": "fix: SDL 函数经 dlsym 解析时改用代理，修复窗口复用不生效\n\nLWJGL 的 org.lwjgl.sdl 绑定经 dlopen+dlsym 解析 SDL 函数指针后调用，\nbytehook 的 hook_all（GOT 导入补丁）拦截不到这类调用，主窗口记录/复用与\nlauncher 集成全部失效，SDL 第二个窗口被后端拒绝导致崩溃。\ncustomDlsym 出口对 SDL 符号统一返回 sdl_hook 代理：代理直接调用缓存的\n真实 SDL 函数，与 hook 共用 sPrimaryWindow 复用、sdlInitSubSystemPrepare\n集成通知、EGL 计帧代理等逻辑（InitSubSystem hook 的启动器逻辑抽为共用\n函数）。LOG_TO_* 改由 printf 输出到游戏日志，便于真机诊断。",
-    "created_at": "2026-09-07T11:44:33Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34118192649"
-  },
-  {
-    "id": 34091954153,
-    "sha": "41a883b4bcc54836ca3137c89d3f0c048731fdd9",
-    "short_sha": "41a883b",
-    "message": "refactor: 版本列表分类指示器改为 TabLayout 并自适应铺满",
-    "created_at": "2026-09-07T06:40:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34091954153"
-  },
-  {
-    "id": 34091954148,
-    "sha": "41a883b4bcc54836ca3137c89d3f0c048731fdd9",
-    "short_sha": "41a883b",
-    "message": "refactor: 版本列表分类指示器改为 TabLayout 并自适应铺满",
-    "created_at": "2026-09-07T06:40:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34091954148"
-  },
-  {
-    "id": 34075361615,
-    "sha": "9009dff0bd32a551b7b699252544b7a8d82495ad",
-    "short_sha": "9009dff",
-    "message": "refactor: 选择类弹窗统一为 ItemSelectionDialog 卡片式风格",
-    "created_at": "2026-09-07T02:09:51Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34075361615"
   }
 ]

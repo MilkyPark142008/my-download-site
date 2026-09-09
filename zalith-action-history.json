@@ -1,5 +1,29 @@
 [
   {
+    "id": 34403453049,
+    "sha": "062c1eeff9907f66af29c5f7b13f077c31912fce",
+    "short_sha": "062c1ee",
+    "message": "Merge pull request #1810 from ZalithLauncher/fix/unlimited_fps\n\nfix: 解除游戏帧率对屏幕刷新率的锁定 #1807",
+    "created_at": "2026-09-09T20:50:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34403453049"
+  },
+  {
+    "id": 34403378701,
+    "sha": "b8cb6ba32df5ddea6d76f429c017d97483f57fa3",
+    "short_sha": "b8cb6ba",
+    "message": "feat: 支持自定义游戏分辨率",
+    "created_at": "2026-09-09T20:49:33Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34403378701"
+  },
+  {
+    "id": 34403349131,
+    "sha": "83ff86eb8814e6d230568466189bd80d67b40df8",
+    "short_sha": "83ff86e",
+    "message": "Merge pull request #1819 from ZalithLauncher/feat/vulkan-dependency-model\n\nfeat: 重构 Vulkan 检测，按 Minecraft 版本范围标注依赖",
+    "created_at": "2026-09-09T20:49:23Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34403349131"
+  },
+  {
     "id": 34388485457,
     "sha": "4637d071c4e95871ceb56b70943c2a69ec4b5ffa",
     "short_sha": "4637d07",
@@ -374,29 +398,5 @@
     "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1410 of 1410 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
     "created_at": "2026-09-04T17:51:26Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33902797108"
-  },
-  {
-    "id": 33886718124,
-    "sha": "6cbb9c0586368851f5133e761d6138f1cbe4ab42",
-    "short_sha": "6cbb9c0",
-    "message": "fix: 版本列表顶部操作栏收起时多出几像素误差",
-    "created_at": "2026-09-04T14:57:21Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33886718124"
-  },
-  {
-    "id": 33881563563,
-    "sha": "853f549ddab02479d766d7979c0768b02bde8c45",
-    "short_sha": "853f549",
-    "message": "Merge pull request #1778 from ZalithLauncher/chore/renderer_mc_ver\n\n调整渲染器最大支持的 MC 版本、提前检查 Vulkan 支持情况决定是否弹出渲染器兼容性警告、修正 Turnip 驱动器初始化与获取",
-    "created_at": "2026-09-04T14:03:48Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33881563563"
-  },
-  {
-    "id": 33881360246,
-    "sha": "e0c9fecee95214559d885e170197e1a073745ef2",
-    "short_sha": "e0c9fec",
-    "message": "feat: Vulkan 检测持久化结果，设备完全支持时跳过渲染器兼容性检查",
-    "created_at": "2026-09-04T14:01:35Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33881360246"
   }
 ]
