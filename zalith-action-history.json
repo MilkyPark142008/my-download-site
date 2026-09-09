@@ -1,5 +1,45 @@
 [
   {
+    "id": 34388485457,
+    "sha": "4637d071c4e95871ceb56b70943c2a69ec4b5ffa",
+    "short_sha": "4637d07",
+    "message": "Merge pull request #1822 from ZalithLauncher/fix/floating_ball_offscreen_after_resolution_change\n\nfix: 悬浮球位置在窗口尺寸变化后超出屏幕不可见",
+    "created_at": "2026-09-09T18:21:19Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34388485457"
+  },
+  {
+    "id": 34388443135,
+    "sha": "12a5f5ffcf5e51ff7784e9cf3f9f2a24a63124b7",
+    "short_sha": "12a5f5f",
+    "message": "fix: 悬浮球位置在窗口尺寸变化后超出屏幕不可见\n\n持久化的悬浮球坐标是像素值，系统（如游戏模式的分辨率切换）调整\n窗口尺寸后，原有仅在 onSizeChanged 时执行的钳制存在时序漏洞：\n全新 :game 进程首次布局时 isInitialized 尚未置位，钳制被跳过，\n且此后会话内不再有尺寸变化事件，导致悬浮球停留在越界坐标上。\n\n- 位置钳制移入 Modifier.offset，每次布局实时生效，不依赖事件时序\n- 移除首次测量钳制的 isInitialized 守卫，让持久化状态及时收敛\n- 手势按下时将状态吸附到实际渲染位置，避免从越界值起算导致拖动不跟手",
+    "created_at": "2026-09-09T18:19:35Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34388443135"
+  },
+  {
+    "id": 34382468391,
+    "sha": "fdd6d23faa12394472bfc282bf2d16b6a13dd1f6",
+    "short_sha": "fdd6d23",
+    "message": "[Do not use!] Added translation using Weblate (Estonian)",
+    "created_at": "2026-09-09T17:21:51Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34382468391"
+  },
+  {
+    "id": 34382468213,
+    "sha": "b0258c56c1b7c9092d7a9cd88581f08ab4aafbbf",
+    "short_sha": "b0258c5",
+    "message": "[Do not use!] Added translation using Weblate (Estonian)",
+    "created_at": "2026-09-09T17:21:58Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34382468213"
+  },
+  {
+    "id": 34381195389,
+    "sha": "536a14afaeeedbe537c16bd7bc5fe6c4df188f3b",
+    "short_sha": "536a14a",
+    "message": "feat: 复述播报改为异步排队并支持游戏侧即时截停",
+    "created_at": "2026-09-09T17:08:53Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34381195389"
+  },
+  {
     "id": 34343540372,
     "sha": "d22f3c24f266c0405465fcc1b8965716b74e0755",
     "short_sha": "d22f3c2",
@@ -358,45 +398,5 @@
     "message": "feat: Vulkan 检测持久化结果，设备完全支持时跳过渲染器兼容性检查",
     "created_at": "2026-09-04T14:01:35Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33881360246"
-  },
-  {
-    "id": 33869857780,
-    "sha": "9fb8afc5a531c3497eadbc77188ceb0b3f52f2ae",
-    "short_sha": "9fb8afc",
-    "message": "chore: 调整渲染器最大支持的 MC 版本 & 修复渲染器游戏版本兼容性判断",
-    "created_at": "2026-09-04T11:50:34Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33869857780"
-  },
-  {
-    "id": 33866850629,
-    "sha": "fee29137f197e26f972b1893f78a441036b0800e",
-    "short_sha": "fee2913",
-    "message": "Merge pull request #1777 from ZalithLauncher/fix/nomedia_file\n\nfix: .nomedia 文件创建前未检查父目录是否存在",
-    "created_at": "2026-09-04T11:12:33Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33866850629"
-  },
-  {
-    "id": 33866823919,
-    "sha": "dcfabc8ebe7bf9bd49b8a72e9e73938119b74fd9",
-    "short_sha": "dcfabc8",
-    "message": "fix: .nomedia 文件创建前未检查父目录是否存在",
-    "created_at": "2026-09-04T11:12:09Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33866823919"
-  },
-  {
-    "id": 33866002176,
-    "sha": "0ec9a09efa631f2b3322ead53b75fb1b6b724e05",
-    "short_sha": "0ec9a09",
-    "message": "refactor: 下载源选择自适应化，主机健康泛化与慢速看门狗",
-    "created_at": "2026-09-04T11:01:42Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33866002176"
-  },
-  {
-    "id": 33848080997,
-    "sha": "3163ad44357cd7423d7ad11c9431b29facbb256c",
-    "short_sha": "3163ad4",
-    "message": "fix: 非 SDL 后端输入法无法输入中文的问题\n\n触摸层焦点恢复（FocusableBox）在非 SDL 后端会抢走输入栏编辑器的 view 焦点，\n输入法失去编辑目标后退化为直发按键事件：中文组合输入无法送达游戏，\n英文字母以按键事件的形式漏进游戏聊天栏。\n\n- 输入栏编辑器（TouchCharInput）活跃时，触摸层禁止抢夺 view 焦点\n- 输入栏关闭时将 view 焦点归还 compose 视图，避免窗口内没有 focused view\n  导致指针捕获事件沿焦点链分发失效",
-    "created_at": "2026-09-04T07:16:51Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33848080997"
   }
 ]
