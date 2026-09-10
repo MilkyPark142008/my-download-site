@@ -1,5 +1,29 @@
 [
   {
+    "id": 34477848701,
+    "sha": "faaa44caa5cb974a264024f0258852a292f0578f",
+    "short_sha": "faaa44c",
+    "message": "Merge pull request #1827 from ZalithLauncher/feat/fm-md3e-entry-cards\n\nfeat: 文件管理器条目 MD3E 卡片化与彩色圆底图标",
+    "created_at": "2026-09-10T12:38:16Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34477848701"
+  },
+  {
+    "id": 34477350086,
+    "sha": "c3ce21022b00bc0f0eb9344d6f520308429aeccd",
+    "short_sha": "c3ce210",
+    "message": "feat: 拖动项时，线性增强卡片阴影",
+    "created_at": "2026-09-10T12:32:52Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34477350086"
+  },
+  {
+    "id": 34477335287,
+    "sha": "19e05656abe6f6699a1ac0958df0bfbfa7024c61",
+    "short_sha": "19e0565",
+    "message": "feat: 文件管理器条目 MD3E 卡片化与彩色圆底图标\n\n- 条目改为按方位适配圆角的卡片（outer 28dp / inner 4dp），新增 FmCardPosition 推导单列与网格方位，含单行组、末行未占满缺口等边界\n- 移除横屏列表的大圆角容器卡，横竖屏统一 2dp 间距与 12dp 边距\n- 图标改为 40dp 圆底 + 24dp 表面图标的固定双色设计（深浅色各一套），新增 jar/apk/代码配置类别及 Material Symbols 图标资源",
+    "created_at": "2026-09-10T11:59:31Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34477335287"
+  },
+  {
     "id": 34444564549,
     "sha": "72a7d50f32d7bbfa8fcc9d99630df0b05bfe4dc4",
     "short_sha": "72a7d50",
@@ -374,29 +398,5 @@
     "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1410 of 1410 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
     "created_at": "2026-09-06T11:58:56Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34031765754"
-  },
-  {
-    "id": 34021310712,
-    "sha": "cf495401b3bdbfead22479e7925ce48ed7b8fcbc",
-    "short_sha": "cf49540",
-    "message": "Merge pull request #1789 from ZalithLauncher/fix/curseforge_download\n\nfix: CurseForge 无法正常下载文件",
-    "created_at": "2026-09-06T08:14:42Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34021310712"
-  },
-  {
-    "id": 34021287204,
-    "sha": "97b3187385d640f23984d0f057c6677623c96ec0",
-    "short_sha": "97b3187",
-    "message": "fix: CurseForge 无法正常下载文件",
-    "created_at": "2026-09-06T08:14:02Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34021287204"
-  },
-  {
-    "id": 34010922453,
-    "sha": "0e1b12d32c54b7db4fc43ab4d0678e541b165da8",
-    "short_sha": "0e1b12d",
-    "message": "feat: 集成 JSound(javax.sound → OpenAL 桥接)到 lwjgl 共享源码\n\n- 新增 LWJGL/shared 共享源码目录:jsound 桥接(13 个类 + MixerProvider services 声明)\n  由 3.3.3 与 3.4.1 两个 lwjgl 版本共同引用,修改只需同步 shared 一处\n- 两个版本的 build.gradle.kts 通过 sourceSets.srcDir 引用共享目录\n- 重建合并 jar:JSound 类与 services 随 lwjgl 库进入游戏,ServiceLoader 可直接发现",
-    "created_at": "2026-09-06T04:11:42Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34010922453"
   }
 ]
