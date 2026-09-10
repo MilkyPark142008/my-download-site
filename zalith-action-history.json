@@ -1,5 +1,29 @@
 [
   {
+    "id": 34444564549,
+    "sha": "72a7d50f32d7bbfa8fcc9d99630df0b05bfe4dc4",
+    "short_sha": "72a7d50",
+    "message": "Merge pull request #1821 from ZalithLauncher/feat/narrator-tts\n\nfeat: 支持在游戏内使用复述功能",
+    "created_at": "2026-09-10T06:17:34Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34444564549"
+  },
+  {
+    "id": 34443417303,
+    "sha": "55698cd24dda07c82854d0f25915b05725b22440",
+    "short_sha": "55698cd",
+    "message": "update MioLibPatcher.jar",
+    "created_at": "2026-09-10T06:01:13Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34443417303"
+  },
+  {
+    "id": 34442882358,
+    "sha": "0af2818351fc25aa2fa5581c4363f383988715c5",
+    "short_sha": "0af2818",
+    "message": "Merge pull request #1824 from ZalithLauncher/feat/custom-game-resolution\n\nfeat: 支持自定义游戏分辨率",
+    "created_at": "2026-09-10T05:53:25Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34442882358"
+  },
+  {
     "id": 34403453049,
     "sha": "062c1eeff9907f66af29c5f7b13f077c31912fce",
     "short_sha": "062c1ee",
@@ -374,29 +398,5 @@
     "message": "feat: 集成 JSound(javax.sound → OpenAL 桥接)到 lwjgl 共享源码\n\n- 新增 LWJGL/shared 共享源码目录:jsound 桥接(13 个类 + MixerProvider services 声明)\n  由 3.3.3 与 3.4.1 两个 lwjgl 版本共同引用,修改只需同步 shared 一处\n- 两个版本的 build.gradle.kts 通过 sourceSets.srcDir 引用共享目录\n- 重建合并 jar:JSound 类与 services 随 lwjgl 库进入游戏,ServiceLoader 可直接发现",
     "created_at": "2026-09-06T04:11:42Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34010922453"
-  },
-  {
-    "id": 33963399853,
-    "sha": "92069452f91913c11f19135a65e65d3bd0182c63",
-    "short_sha": "9206945",
-    "message": "bump version to 2.5",
-    "created_at": "2026-09-05T11:24:04Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33963399853"
-  },
-  {
-    "id": 33963239607,
-    "sha": "92069452f91913c11f19135a65e65d3bd0182c63",
-    "short_sha": "9206945",
-    "message": "bump version to 2.5",
-    "created_at": "2026-09-05T11:24:04Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33963239607"
-  },
-  {
-    "id": 33902797108,
-    "sha": "0749432361f1ad7ad83045c7b62d4b36952a030d",
-    "short_sha": "0749432",
-    "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1410 of 1410 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
-    "created_at": "2026-09-04T17:51:26Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/33902797108"
   }
 ]

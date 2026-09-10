@@ -1,5 +1,309 @@
 [
   {
+    "id": 34444553324,
+    "sha": "64c034885923b87ce5d08981e80fd7a360614fe9",
+    "short_sha": "64c0348",
+    "message": "fix: 下载模组列表已安装标记实时刷新——扫描完成后通知列表、下载成功回调触发重检、payload 局部绑定避免动画重播",
+    "created_at": "2026-09-10T06:16:41Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34444553324"
+  },
+  {
+    "id": 34444553348,
+    "sha": "64c034885923b87ce5d08981e80fd7a360614fe9",
+    "short_sha": "64c0348",
+    "message": "fix: 下载模组列表已安装标记实时刷新——扫描完成后通知列表、下载成功回调触发重检、payload 局部绑定避免动画重播",
+    "created_at": "2026-09-10T06:16:41Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34444553348"
+  },
+  {
+    "id": 34443206498,
+    "sha": "e1d6bba2e6f4c99445c95bf4f893f275db5cd12e",
+    "short_sha": "e1d6bba",
+    "message": "feat: 渲染器版本上限调整——判断/展示双轨版本号与 26.3 版本目录",
+    "created_at": "2026-09-10T05:57:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34443206498"
+  },
+  {
+    "id": 34443206519,
+    "sha": "e1d6bba2e6f4c99445c95bf4f893f275db5cd12e",
+    "short_sha": "e1d6bba",
+    "message": "feat: 渲染器版本上限调整——判断/展示双轨版本号与 26.3 版本目录",
+    "created_at": "2026-09-10T05:57:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34443206519"
+  },
+  {
+    "id": 34441132991,
+    "sha": "2f97c24377bf680f55c0199f2052caab3f80ac42",
+    "short_sha": "2f97c24",
+    "message": "修正渲染器版本适配情况 (#1814)\n\n* update\n\n* updatw\n\n* updatr",
+    "created_at": "2026-09-10T05:27:20Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34441132991"
+  },
+  {
+    "id": 34441132970,
+    "sha": "2f97c24377bf680f55c0199f2052caab3f80ac42",
+    "short_sha": "2f97c24",
+    "message": "修正渲染器版本适配情况 (#1814)\n\n* update\n\n* updatw\n\n* updatr",
+    "created_at": "2026-09-10T05:27:20Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34441132970"
+  },
+  {
+    "id": 34440130417,
+    "sha": "383c3717655cd793162f72e614a90fa640b874cb",
+    "short_sha": "383c371",
+    "message": "Update strings.xml",
+    "created_at": "2026-09-10T05:12:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34440130417"
+  },
+  {
+    "id": 34439702661,
+    "sha": "24e09e80a0f17acc48e7328d14cd093cbc7e4983",
+    "short_sha": "24e09e8",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-10T05:05:32Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34439702661"
+  },
+  {
+    "id": 34439388338,
+    "sha": "5f7483f9365074c33ad2688a6583bc417ff995c5",
+    "short_sha": "5f7483f",
+    "message": "feat: 控制布局编辑与运行时增强——双角手柄缩放、悬浮操作栏、控件组管理面板、滑动链、摇杆死区与前进锁、全局控件不透明度\n\n* feat: 控制布局编辑增强——双角手柄缩放、编辑参考组、悬浮操作栏\n\n- 编辑模式选中控件后可拖动左上/右下手柄实时缩放（方向键强制等比），\n  位置与尺寸随锚点一起写回，修复缩放后视觉位置跳变\n- 新增\"显示其他布局组\"开关：编辑模式下其余布局组以半透明参考组渲染，\n  不响应触摸、不参与吸附\n- 选中控件显示悬浮操作栏（设置/复制/删除，淡入淡出过渡），\n  编辑对话框入口从控件迁移至 ViewManager\n- 摇杆缩放时同步圆角半径，修复杆体变方形\n- 触摸板空白处点击取消选中；操作提示文案同步多语言\n\n* feat: 控制布局运行时增强——滑动链、摇杆死区与前进锁、全局不透明度\n\n- 按钮新增滑动联动（swipable）：手指滑出边界自动释放，滑入相邻联动\n  按钮触发其按下，可滑动串联与滑回重按；Event 编辑页新增开关\n- 摇杆新增死区（位移比例不足视为未推动，杆体回中释放方向）与前进锁\n  （推杆正北超过阈值后松手保持前进，杆体描边变主题色提示，再次触摸\n  解除）；方向键事件页新增死区/前进锁/锁定阈值配置\n- 新增全局控件不透明度（右菜单功能分类滑条 10–100%），透明度合成\n  规则：一键隐藏 > 参考组 > 全局不透明度\n- 控制数据新增字段均为可选兼容（缺键回默认值），补序列化 roundTrip\n  测试；新字符串同步多语言\n\n* feat: 编辑模式右菜单替换为控件组管理面板\n\n- 开启编辑模式后，右侧菜单整体切换为控件组面板：列出全部布局组，\n  点击组名切换当前编辑组（主题色高亮），开关控制该组在编辑画布的\n  显示/隐藏（会话级临时显隐，不改持久属性），上移/下移按钮调整组\n  渲染层级（z 序，随布局持久化）\n- 顶部提供管理布局组入口（复用管理对话框，关闭后刷新左右菜单与\n  控件渲染）与完成编辑按钮\n- 切换当前编辑组逻辑提取为 GameMenu.selectViewGroup，左右菜单共用\n\n* refactor: 控件组管理全面迁移至编辑模式右菜单面板\n\n- 右菜单组行开关直接控制各控件组在编辑画布的显示/隐藏，默认全部\n  显示（非当前组以参考组半透明渲染），允许多组同时显示；移除左菜单\n  \"显示其他布局组\"总开关\n- 组行渲染层级调整从上移/下移按钮改为 Zalith 式长按拖动排序\n  （ItemTouchHelper，拖动实时交换、松手持久化并按新 z 序重建控件）\n- 组管理集成到各行：属性编辑（名称/初始可见性）与删除（带确认）\n  按钮直接作用于所在组，新建按钮位于面板顶部\n- 移除左菜单的当前布局组 Spinner、管理布局组入口与相关回调；\n  编辑模式切换控制器时自动选中第一个控件组\n\n* feat: 编辑模式再次轻点已选中控件时收起悬浮操作栏\n\n* fix: 切换布局方案刷新控件组面板，新增组改底部固定按钮\n\n- 修复切换布局方案后右侧控件组面板不跟随刷新的问题\n- 面板底部固定\"添加控件组\"按钮（不随列表滚动），编辑模式显示\n- 移除\"完成编辑\"按钮（退出编辑走左菜单编辑开关）及相关代码与字符串\n- 编辑模式下右侧菜单标题显示\"控件组\"，退出恢复\"设置\"\n\n* Update GameMenu.java\n\n* fix: 修复编辑模式下右侧菜单标题不跟随切换\n\n- editModeProperty 监听注册早于右菜单标题初始化，布局编辑器\n  （启动即编辑态）触发时标题未初始化被跳过，initRightMenu 末尾\n  补一次标题同步\n- 退出编辑改走 showCategories() 恢复设置中心，避免从二级分类\n  进入编辑后退出残留分类条目与返回按钮状态\n\n* Update RightMenuAdapter.kt\n\n* fix: 修复控件组拖动排序的首项不可拖动与拖至首位不生效\n\n顶部操作行移除后组行已从位置 0 开始，拖动索引转换仍按存在\n操作行偏移处理：首项被排除在可拖动范围外、拖至首位时目标索引\n为 -1 被拒绝。移除偏移，编辑模式列表位置即组索引\n\n* fix: 重构编辑拖动吸附，消除部分设备上的位置抖动\n\n旧实现先按手指增量 setX 再由吸附二次修正，下一帧手指增量又基于\n吸附后的 view 坐标计算，形成\"吸附→弹回\"的循环抖动。\n\n- 吸附改为解耦模型：期望位置每帧由手指屏幕坐标独立计算（相对按下\n  时的位置），吸附仅作为纯修正叠加，不再反馈到拖动基准\n- 两份重复的 autoFitPosition 合并为 ViewManager.snapPosition，\n  对齐规则不变（自身边缘对兄弟边缘/对边），阈值取吸附距离设置\n  （最小 2dp），参考线由 snapPosition 统一绘制与清理\n- 方向键拖动保留灵敏度乘子",
+    "created_at": "2026-09-10T05:00:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34439388338"
+  },
+  {
+    "id": 34439388355,
+    "sha": "5f7483f9365074c33ad2688a6583bc417ff995c5",
+    "short_sha": "5f7483f",
+    "message": "feat: 控制布局编辑与运行时增强——双角手柄缩放、悬浮操作栏、控件组管理面板、滑动链、摇杆死区与前进锁、全局控件不透明度\n\n* feat: 控制布局编辑增强——双角手柄缩放、编辑参考组、悬浮操作栏\n\n- 编辑模式选中控件后可拖动左上/右下手柄实时缩放（方向键强制等比），\n  位置与尺寸随锚点一起写回，修复缩放后视觉位置跳变\n- 新增\"显示其他布局组\"开关：编辑模式下其余布局组以半透明参考组渲染，\n  不响应触摸、不参与吸附\n- 选中控件显示悬浮操作栏（设置/复制/删除，淡入淡出过渡），\n  编辑对话框入口从控件迁移至 ViewManager\n- 摇杆缩放时同步圆角半径，修复杆体变方形\n- 触摸板空白处点击取消选中；操作提示文案同步多语言\n\n* feat: 控制布局运行时增强——滑动链、摇杆死区与前进锁、全局不透明度\n\n- 按钮新增滑动联动（swipable）：手指滑出边界自动释放，滑入相邻联动\n  按钮触发其按下，可滑动串联与滑回重按；Event 编辑页新增开关\n- 摇杆新增死区（位移比例不足视为未推动，杆体回中释放方向）与前进锁\n  （推杆正北超过阈值后松手保持前进，杆体描边变主题色提示，再次触摸\n  解除）；方向键事件页新增死区/前进锁/锁定阈值配置\n- 新增全局控件不透明度（右菜单功能分类滑条 10–100%），透明度合成\n  规则：一键隐藏 > 参考组 > 全局不透明度\n- 控制数据新增字段均为可选兼容（缺键回默认值），补序列化 roundTrip\n  测试；新字符串同步多语言\n\n* feat: 编辑模式右菜单替换为控件组管理面板\n\n- 开启编辑模式后，右侧菜单整体切换为控件组面板：列出全部布局组，\n  点击组名切换当前编辑组（主题色高亮），开关控制该组在编辑画布的\n  显示/隐藏（会话级临时显隐，不改持久属性），上移/下移按钮调整组\n  渲染层级（z 序，随布局持久化）\n- 顶部提供管理布局组入口（复用管理对话框，关闭后刷新左右菜单与\n  控件渲染）与完成编辑按钮\n- 切换当前编辑组逻辑提取为 GameMenu.selectViewGroup，左右菜单共用\n\n* refactor: 控件组管理全面迁移至编辑模式右菜单面板\n\n- 右菜单组行开关直接控制各控件组在编辑画布的显示/隐藏，默认全部\n  显示（非当前组以参考组半透明渲染），允许多组同时显示；移除左菜单\n  \"显示其他布局组\"总开关\n- 组行渲染层级调整从上移/下移按钮改为 Zalith 式长按拖动排序\n  （ItemTouchHelper，拖动实时交换、松手持久化并按新 z 序重建控件）\n- 组管理集成到各行：属性编辑（名称/初始可见性）与删除（带确认）\n  按钮直接作用于所在组，新建按钮位于面板顶部\n- 移除左菜单的当前布局组 Spinner、管理布局组入口与相关回调；\n  编辑模式切换控制器时自动选中第一个控件组\n\n* feat: 编辑模式再次轻点已选中控件时收起悬浮操作栏\n\n* fix: 切换布局方案刷新控件组面板，新增组改底部固定按钮\n\n- 修复切换布局方案后右侧控件组面板不跟随刷新的问题\n- 面板底部固定\"添加控件组\"按钮（不随列表滚动），编辑模式显示\n- 移除\"完成编辑\"按钮（退出编辑走左菜单编辑开关）及相关代码与字符串\n- 编辑模式下右侧菜单标题显示\"控件组\"，退出恢复\"设置\"\n\n* Update GameMenu.java\n\n* fix: 修复编辑模式下右侧菜单标题不跟随切换\n\n- editModeProperty 监听注册早于右菜单标题初始化，布局编辑器\n  （启动即编辑态）触发时标题未初始化被跳过，initRightMenu 末尾\n  补一次标题同步\n- 退出编辑改走 showCategories() 恢复设置中心，避免从二级分类\n  进入编辑后退出残留分类条目与返回按钮状态\n\n* Update RightMenuAdapter.kt\n\n* fix: 修复控件组拖动排序的首项不可拖动与拖至首位不生效\n\n顶部操作行移除后组行已从位置 0 开始，拖动索引转换仍按存在\n操作行偏移处理：首项被排除在可拖动范围外、拖至首位时目标索引\n为 -1 被拒绝。移除偏移，编辑模式列表位置即组索引\n\n* fix: 重构编辑拖动吸附，消除部分设备上的位置抖动\n\n旧实现先按手指增量 setX 再由吸附二次修正，下一帧手指增量又基于\n吸附后的 view 坐标计算，形成\"吸附→弹回\"的循环抖动。\n\n- 吸附改为解耦模型：期望位置每帧由手指屏幕坐标独立计算（相对按下\n  时的位置），吸附仅作为纯修正叠加，不再反馈到拖动基准\n- 两份重复的 autoFitPosition 合并为 ViewManager.snapPosition，\n  对齐规则不变（自身边缘对兄弟边缘/对边），阈值取吸附距离设置\n  （最小 2dp），参考线由 snapPosition 统一绘制与清理\n- 方向键拖动保留灵敏度乘子",
+    "created_at": "2026-09-10T05:00:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34439388355"
+  },
+  {
+    "id": 34438872990,
+    "sha": "dbee80657340f5aef8ab40b11097c3944b00da6a",
+    "short_sha": "dbee806",
+    "message": "fix: 重构编辑拖动吸附，消除部分设备上的位置抖动\n\n旧实现先按手指增量 setX 再由吸附二次修正，下一帧手指增量又基于\n吸附后的 view 坐标计算，形成\"吸附→弹回\"的循环抖动。\n\n- 吸附改为解耦模型：期望位置每帧由手指屏幕坐标独立计算（相对按下\n  时的位置），吸附仅作为纯修正叠加，不再反馈到拖动基准\n- 两份重复的 autoFitPosition 合并为 ViewManager.snapPosition，\n  对齐规则不变（自身边缘对兄弟边缘/对边），阈值取吸附距离设置\n  （最小 2dp），参考线由 snapPosition 统一绘制与清理\n- 方向键拖动保留灵敏度乘子",
+    "created_at": "2026-09-10T04:52:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34438872990"
+  },
+  {
+    "id": 34438872971,
+    "sha": "dbee80657340f5aef8ab40b11097c3944b00da6a",
+    "short_sha": "dbee806",
+    "message": "fix: 重构编辑拖动吸附，消除部分设备上的位置抖动\n\n旧实现先按手指增量 setX 再由吸附二次修正，下一帧手指增量又基于\n吸附后的 view 坐标计算，形成\"吸附→弹回\"的循环抖动。\n\n- 吸附改为解耦模型：期望位置每帧由手指屏幕坐标独立计算（相对按下\n  时的位置），吸附仅作为纯修正叠加，不再反馈到拖动基准\n- 两份重复的 autoFitPosition 合并为 ViewManager.snapPosition，\n  对齐规则不变（自身边缘对兄弟边缘/对边），阈值取吸附距离设置\n  （最小 2dp），参考线由 snapPosition 统一绘制与清理\n- 方向键拖动保留灵敏度乘子",
+    "created_at": "2026-09-10T04:52:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34438872971"
+  },
+  {
+    "id": 34438870677,
+    "sha": "dbee80657340f5aef8ab40b11097c3944b00da6a",
+    "short_sha": "dbee806",
+    "message": "fix: 重构编辑拖动吸附，消除部分设备上的位置抖动\n\n旧实现先按手指增量 setX 再由吸附二次修正，下一帧手指增量又基于\n吸附后的 view 坐标计算，形成\"吸附→弹回\"的循环抖动。\n\n- 吸附改为解耦模型：期望位置每帧由手指屏幕坐标独立计算（相对按下\n  时的位置），吸附仅作为纯修正叠加，不再反馈到拖动基准\n- 两份重复的 autoFitPosition 合并为 ViewManager.snapPosition，\n  对齐规则不变（自身边缘对兄弟边缘/对边），阈值取吸附距离设置\n  （最小 2dp），参考线由 snapPosition 统一绘制与清理\n- 方向键拖动保留灵敏度乘子",
+    "created_at": "2026-09-10T04:52:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34438870677"
+  },
+  {
+    "id": 34438870565,
+    "sha": "dbee80657340f5aef8ab40b11097c3944b00da6a",
+    "short_sha": "dbee806",
+    "message": "fix: 重构编辑拖动吸附，消除部分设备上的位置抖动\n\n旧实现先按手指增量 setX 再由吸附二次修正，下一帧手指增量又基于\n吸附后的 view 坐标计算，形成\"吸附→弹回\"的循环抖动。\n\n- 吸附改为解耦模型：期望位置每帧由手指屏幕坐标独立计算（相对按下\n  时的位置），吸附仅作为纯修正叠加，不再反馈到拖动基准\n- 两份重复的 autoFitPosition 合并为 ViewManager.snapPosition，\n  对齐规则不变（自身边缘对兄弟边缘/对边），阈值取吸附距离设置\n  （最小 2dp），参考线由 snapPosition 统一绘制与清理\n- 方向键拖动保留灵敏度乘子",
+    "created_at": "2026-09-10T04:52:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34438870565"
+  },
+  {
+    "id": 34437958086,
+    "sha": "a38a784f67e23f0e4f2aa3206958a67016fc413b",
+    "short_sha": "a38a784",
+    "message": "Merge branch 'main' into feat/control-layout-p0",
+    "created_at": "2026-09-10T04:28:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437958086"
+  },
+  {
+    "id": 34437958089,
+    "sha": "a38a784f67e23f0e4f2aa3206958a67016fc413b",
+    "short_sha": "a38a784",
+    "message": "Merge branch 'main' into feat/control-layout-p0",
+    "created_at": "2026-09-10T04:28:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437958089"
+  },
+  {
+    "id": 34437954866,
+    "sha": "a38a784f67e23f0e4f2aa3206958a67016fc413b",
+    "short_sha": "a38a784",
+    "message": "Merge branch 'main' into feat/control-layout-p0",
+    "created_at": "2026-09-10T04:28:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437954866"
+  },
+  {
+    "id": 34437954744,
+    "sha": "a38a784f67e23f0e4f2aa3206958a67016fc413b",
+    "short_sha": "a38a784",
+    "message": "Merge branch 'main' into feat/control-layout-p0",
+    "created_at": "2026-09-10T04:28:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437954744"
+  },
+  {
+    "id": 34437951987,
+    "sha": "ab11ed4968b75d1aaf11353fcf2098a2c601f067",
+    "short_sha": "ab11ed4",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-10T04:38:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437951987"
+  },
+  {
+    "id": 34437949042,
+    "sha": "ab11ed4968b75d1aaf11353fcf2098a2c601f067",
+    "short_sha": "ab11ed4",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-10T04:38:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437949042"
+  },
+  {
+    "id": 34437949029,
+    "sha": "ab11ed4968b75d1aaf11353fcf2098a2c601f067",
+    "short_sha": "ab11ed4",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-10T04:38:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437949029"
+  },
+  {
+    "id": 34437936515,
+    "sha": "02169b437f5e9c53e58a1958974e300ddca6da9d",
+    "short_sha": "02169b4",
+    "message": "fix: 修复游戏内无法解析 SRV 记录的问题\n\n- resolv.conf 注入系统当前网络的真实 DNS（仅 IPv4），再按地区追加公共 DNS 兜底\n- 中国区公共 DNS 从 8.8.8.8/8.8.4.4 换为 223.5.5.5/119.29.29.29\n- 配置不存在或内容不一致时覆写，失败时清理残留文件",
+    "created_at": "2026-09-10T04:36:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437936515"
+  },
+  {
+    "id": 34437936588,
+    "sha": "02169b437f5e9c53e58a1958974e300ddca6da9d",
+    "short_sha": "02169b4",
+    "message": "fix: 修复游戏内无法解析 SRV 记录的问题\n\n- resolv.conf 注入系统当前网络的真实 DNS（仅 IPv4），再按地区追加公共 DNS 兜底\n- 中国区公共 DNS 从 8.8.8.8/8.8.4.4 换为 223.5.5.5/119.29.29.29\n- 配置不存在或内容不一致时覆写，失败时清理残留文件",
+    "created_at": "2026-09-10T04:36:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437936588"
+  },
+  {
+    "id": 34437280144,
+    "sha": "6e7d90ee641b1d0d827bd3312208ab0f85901338",
+    "short_sha": "6e7d90e",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-10T04:27:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437280144"
+  },
+  {
+    "id": 34437277587,
+    "sha": "6e7d90ee641b1d0d827bd3312208ab0f85901338",
+    "short_sha": "6e7d90e",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-10T04:27:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437277587"
+  },
+  {
+    "id": 34437277559,
+    "sha": "6e7d90ee641b1d0d827bd3312208ab0f85901338",
+    "short_sha": "6e7d90e",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-10T04:27:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437277559"
+  },
+  {
+    "id": 34437266454,
+    "sha": "691d629ad2d4da7f897c5c8f613ac15790b308c5",
+    "short_sha": "691d629",
+    "message": "fix: 解除游戏帧率对屏幕刷新率的锁定\n\n- JVMActivity 在 surface 可用时向系统投票设备最高刷新率\n- 关闭垂直同步时交换间隔强制置 0，Surface 切入 BufferQueue 异步模式\n- egl_bridge 跟踪 MC 最近请求的交换间隔，窗口重建时重新应用\n- gl_bridge 移除 zink_kopper 渲染器跳过 eglSwapInterval 的豁免",
+    "created_at": "2026-09-10T04:27:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437266454"
+  },
+  {
+    "id": 34437266509,
+    "sha": "691d629ad2d4da7f897c5c8f613ac15790b308c5",
+    "short_sha": "691d629",
+    "message": "fix: 解除游戏帧率对屏幕刷新率的锁定\n\n- JVMActivity 在 surface 可用时向系统投票设备最高刷新率\n- 关闭垂直同步时交换间隔强制置 0，Surface 切入 BufferQueue 异步模式\n- egl_bridge 跟踪 MC 最近请求的交换间隔，窗口重建时重新应用\n- gl_bridge 移除 zink_kopper 渲染器跳过 eglSwapInterval 的豁免",
+    "created_at": "2026-09-10T04:27:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437266509"
+  },
+  {
+    "id": 34436914016,
+    "sha": "5479a73c41bae2372dfc6a96fa42bd95d9e36d1f",
+    "short_sha": "5479a73",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-10T04:22:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436914016"
+  },
+  {
+    "id": 34436911559,
+    "sha": "5479a73c41bae2372dfc6a96fa42bd95d9e36d1f",
+    "short_sha": "5479a73",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-10T04:22:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436911559"
+  },
+  {
+    "id": 34436911409,
+    "sha": "5479a73c41bae2372dfc6a96fa42bd95d9e36d1f",
+    "short_sha": "5479a73",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-10T04:22:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436911409"
+  },
+  {
+    "id": 34436653032,
+    "sha": "ec27d6317a9cf5571f423441e17fc8fa7f5f9760",
+    "short_sha": "ec27d63",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-10T04:18:01Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436653032"
+  },
+  {
+    "id": 34436650238,
+    "sha": "ec27d6317a9cf5571f423441e17fc8fa7f5f9760",
+    "short_sha": "ec27d63",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-10T04:18:01Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436650238"
+  },
+  {
+    "id": 34436650239,
+    "sha": "ec27d6317a9cf5571f423441e17fc8fa7f5f9760",
+    "short_sha": "ec27d63",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-10T04:18:01Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436650239"
+  },
+  {
+    "id": 34436643204,
+    "sha": "b6d3f521697d2be73224ba4bff70b13760f30762",
+    "short_sha": "b6d3f52",
+    "message": "feat: libflite 桥接安卓系统 TTS，恢复游戏内复述功能 (#1821)\n\n* feat: libflite 桥接安卓系统 TTS，恢复游戏内复述功能\n\n* optimize: 复述 TTS 桥接增加朗读超时、emoji 字节透传与多引擎回退\n\n* feat: 复述支持即时打断，clear() 经 TTSCancel 注入 JNA 调用停止系统 TTS\n\n* chore: 同步含修复版 TTSCancelTransformer 的 MioLibPatcher.jar",
+    "created_at": "2026-09-10T04:17:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436643204"
+  },
+  {
+    "id": 34436643192,
+    "sha": "b6d3f521697d2be73224ba4bff70b13760f30762",
+    "short_sha": "b6d3f52",
+    "message": "feat: libflite 桥接安卓系统 TTS，恢复游戏内复述功能 (#1821)\n\n* feat: libflite 桥接安卓系统 TTS，恢复游戏内复述功能\n\n* optimize: 复述 TTS 桥接增加朗读超时、emoji 字节透传与多引擎回退\n\n* feat: 复述支持即时打断，clear() 经 TTSCancel 注入 JNA 调用停止系统 TTS\n\n* chore: 同步含修复版 TTSCancelTransformer 的 MioLibPatcher.jar",
+    "created_at": "2026-09-10T04:17:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436643192"
+  },
+  {
+    "id": 34436628278,
+    "sha": "182ace1454577617ac96165bd7d1966014b48f3c",
+    "short_sha": "182ace1",
+    "message": "refactor: JNA natives 去 zip 化，改为分架构 natives 目录并随 APK 架构裁剪打包\n\n- 新增 scripts/fetch-jna.sh，从 Maven Central 的 jna-<版本>.aar 提取各架构 libjnidispatch.so 到 assets/app_runtime/jna/<版本>/natives/<abi>/\n- 版本范围收敛为 5.13.0~5.18.0（LibFilter 已将 <5.13 替换为 5.13.0），删除旧 jna-arm64.zip\n- version 文件改为 so 内容哈希派生，产物不变不触发重装；isLatest 读取 trim 防换行解析崩溃\n- installJna 按设备 ABI 安装，运行时 jna/<版本>/libjnidispatch.so 加载结构不变\n- mergeAssets 裁剪逻辑与 LWJGL natives 一致",
+    "created_at": "2026-09-10T04:17:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436628278"
+  },
+  {
+    "id": 34436628229,
+    "sha": "182ace1454577617ac96165bd7d1966014b48f3c",
+    "short_sha": "182ace1",
+    "message": "refactor: JNA natives 去 zip 化，改为分架构 natives 目录并随 APK 架构裁剪打包\n\n- 新增 scripts/fetch-jna.sh，从 Maven Central 的 jna-<版本>.aar 提取各架构 libjnidispatch.so 到 assets/app_runtime/jna/<版本>/natives/<abi>/\n- 版本范围收敛为 5.13.0~5.18.0（LibFilter 已将 <5.13 替换为 5.13.0），删除旧 jna-arm64.zip\n- version 文件改为 so 内容哈希派生，产物不变不触发重装；isLatest 读取 trim 防换行解析崩溃\n- installJna 按设备 ABI 安装，运行时 jna/<版本>/libjnidispatch.so 加载结构不变\n- mergeAssets 裁剪逻辑与 LWJGL natives 一致",
+    "created_at": "2026-09-10T04:17:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436628229"
+  },
+  {
     "id": 34433407270,
     "sha": "e0ef89427bd91db561aab0b30c326c21037548d1",
     "short_sha": "e0ef894",
@@ -24,14 +328,6 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34433404578"
   },
   {
-    "id": 34431958507,
-    "sha": "5ed5612188ff455a3452d660c3b4d1282c60ea87",
-    "short_sha": "5ed5612",
-    "message": "fix: 修复控件组拖动排序的首项不可拖动与拖至首位不生效\n\n顶部操作行移除后组行已从位置 0 开始，拖动索引转换仍按存在\n操作行偏移处理：首项被排除在可拖动范围外、拖至首位时目标索引\n为 -1 被拒绝。移除偏移，编辑模式列表位置即组索引",
-    "created_at": "2026-09-10T03:05:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34431958507"
-  },
-  {
     "id": 34431958563,
     "sha": "5ed5612188ff455a3452d660c3b4d1282c60ea87",
     "short_sha": "5ed5612",
@@ -40,12 +336,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34431958563"
   },
   {
-    "id": 34431954762,
+    "id": 34431958507,
     "sha": "5ed5612188ff455a3452d660c3b4d1282c60ea87",
     "short_sha": "5ed5612",
     "message": "fix: 修复控件组拖动排序的首项不可拖动与拖至首位不生效\n\n顶部操作行移除后组行已从位置 0 开始，拖动索引转换仍按存在\n操作行偏移处理：首项被排除在可拖动范围外、拖至首位时目标索引\n为 -1 被拒绝。移除偏移，编辑模式列表位置即组索引",
     "created_at": "2026-09-10T03:05:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34431954762"
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34431958507"
   },
   {
     "id": 34431954748,
@@ -54,6 +350,14 @@
     "message": "fix: 修复控件组拖动排序的首项不可拖动与拖至首位不生效\n\n顶部操作行移除后组行已从位置 0 开始，拖动索引转换仍按存在\n操作行偏移处理：首项被排除在可拖动范围外、拖至首位时目标索引\n为 -1 被拒绝。移除偏移，编辑模式列表位置即组索引",
     "created_at": "2026-09-10T03:05:03Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34431954748"
+  },
+  {
+    "id": 34431954762,
+    "sha": "5ed5612188ff455a3452d660c3b4d1282c60ea87",
+    "short_sha": "5ed5612",
+    "message": "fix: 修复控件组拖动排序的首项不可拖动与拖至首位不生效\n\n顶部操作行移除后组行已从位置 0 开始，拖动索引转换仍按存在\n操作行偏移处理：首项被排除在可拖动范围外、拖至首位时目标索引\n为 -1 被拒绝。移除偏移，编辑模式列表位置即组索引",
+    "created_at": "2026-09-10T03:05:03Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34431954762"
   },
   {
     "id": 34431164810,
@@ -94,309 +398,5 @@
     "message": "fix: FCLEditText 增加焦点恢复守卫，规避 ViewPager2 布局时误清输入框焦点",
     "created_at": "2026-09-10T02:49:24Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34431144948"
-  },
-  {
-    "id": 34430969110,
-    "sha": "a22dd99bfe01eaf1959be537abe7f24188e00096",
-    "short_sha": "a22dd99",
-    "message": "feat: 复述支持即时打断，clear() 经 TTSCancel 注入 JNA 调用停止系统 TTS",
-    "created_at": "2026-09-10T02:49:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34430969110"
-  },
-  {
-    "id": 34430969098,
-    "sha": "a22dd99bfe01eaf1959be537abe7f24188e00096",
-    "short_sha": "a22dd99",
-    "message": "feat: 复述支持即时打断，clear() 经 TTSCancel 注入 JNA 调用停止系统 TTS",
-    "created_at": "2026-09-10T02:49:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34430969098"
-  },
-  {
-    "id": 34430967068,
-    "sha": "a22dd99bfe01eaf1959be537abe7f24188e00096",
-    "short_sha": "a22dd99",
-    "message": "feat: 复述支持即时打断，clear() 经 TTSCancel 注入 JNA 调用停止系统 TTS",
-    "created_at": "2026-09-10T02:49:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34430967068"
-  },
-  {
-    "id": 34430967002,
-    "sha": "a22dd99bfe01eaf1959be537abe7f24188e00096",
-    "short_sha": "a22dd99",
-    "message": "feat: 复述支持即时打断，clear() 经 TTSCancel 注入 JNA 调用停止系统 TTS",
-    "created_at": "2026-09-10T02:49:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34430967002"
-  },
-  {
-    "id": 34430736944,
-    "sha": "250e30c296fc1900d04a65ed70663dfbbe415954",
-    "short_sha": "250e30c",
-    "message": "Update GameMenu.java",
-    "created_at": "2026-09-10T02:46:04Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34430736944"
-  },
-  {
-    "id": 34430736948,
-    "sha": "250e30c296fc1900d04a65ed70663dfbbe415954",
-    "short_sha": "250e30c",
-    "message": "Update GameMenu.java",
-    "created_at": "2026-09-10T02:46:04Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34430736948"
-  },
-  {
-    "id": 34430734495,
-    "sha": "250e30c296fc1900d04a65ed70663dfbbe415954",
-    "short_sha": "250e30c",
-    "message": "Update GameMenu.java",
-    "created_at": "2026-09-10T02:46:04Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34430734495"
-  },
-  {
-    "id": 34430734493,
-    "sha": "250e30c296fc1900d04a65ed70663dfbbe415954",
-    "short_sha": "250e30c",
-    "message": "Update GameMenu.java",
-    "created_at": "2026-09-10T02:46:04Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34430734493"
-  },
-  {
-    "id": 34430628712,
-    "sha": "656a30d247b4fee794f1319af1962ea8b756f0d0",
-    "short_sha": "656a30d",
-    "message": "fix: 主题色带透明度时 ltColor/dkColor 透明度跟随",
-    "created_at": "2026-09-09T08:45:18Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34430628712"
-  },
-  {
-    "id": 34430515314,
-    "sha": "bca57ef7b4d9d498db01242ef0102be8ce00d974",
-    "short_sha": "bca57ef",
-    "message": "fix: 切换布局方案刷新控件组面板，新增组改底部固定按钮\n\n- 修复切换布局方案后右侧控件组面板不跟随刷新的问题\n- 面板底部固定\"添加控件组\"按钮（不随列表滚动），编辑模式显示\n- 移除\"完成编辑\"按钮（退出编辑走左菜单编辑开关）及相关代码与字符串\n- 编辑模式下右侧菜单标题显示\"控件组\"，退出恢复\"设置\"",
-    "created_at": "2026-09-09T16:09:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34430515314"
-  },
-  {
-    "id": 34430104615,
-    "sha": "bca57ef7b4d9d498db01242ef0102be8ce00d974",
-    "short_sha": "bca57ef",
-    "message": "fix: 切换布局方案刷新控件组面板，新增组改底部固定按钮\n\n- 修复切换布局方案后右侧控件组面板不跟随刷新的问题\n- 面板底部固定\"添加控件组\"按钮（不随列表滚动），编辑模式显示\n- 移除\"完成编辑\"按钮（退出编辑走左菜单编辑开关）及相关代码与字符串\n- 编辑模式下右侧菜单标题显示\"控件组\"，退出恢复\"设置\"",
-    "created_at": "2026-09-09T16:09:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34430104615"
-  },
-  {
-    "id": 34409200578,
-    "sha": "f835147aaa4ea01cb813004a25ff6e2ab5918e47",
-    "short_sha": "f835147",
-    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-09-09T21:51:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34409200578"
-  },
-  {
-    "id": 34409196695,
-    "sha": "f835147aaa4ea01cb813004a25ff6e2ab5918e47",
-    "short_sha": "f835147",
-    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-09-09T21:51:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34409196695"
-  },
-  {
-    "id": 34403568038,
-    "sha": "840d086ba4c6d636382004320d371c3818355963",
-    "short_sha": "840d086",
-    "message": "chore(l10n): update Japanese translation\n\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-09-09T20:51:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34403568038"
-  },
-  {
-    "id": 34403564910,
-    "sha": "840d086ba4c6d636382004320d371c3818355963",
-    "short_sha": "840d086",
-    "message": "chore(l10n): update Japanese translation\n\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-09-09T20:51:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34403564910"
-  },
-  {
-    "id": 34403564905,
-    "sha": "840d086ba4c6d636382004320d371c3818355963",
-    "short_sha": "840d086",
-    "message": "chore(l10n): update Japanese translation\n\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-09-09T20:51:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34403564905"
-  },
-  {
-    "id": 34333050487,
-    "sha": "656a30d247b4fee794f1319af1962ea8b756f0d0",
-    "short_sha": "656a30d",
-    "message": "fix: 主题色带透明度时 ltColor/dkColor 透明度跟随",
-    "created_at": "2026-09-09T08:45:18Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34333050487"
-  },
-  {
-    "id": 34333050167,
-    "sha": "656a30d247b4fee794f1319af1962ea8b756f0d0",
-    "short_sha": "656a30d",
-    "message": "fix: 主题色带透明度时 ltColor/dkColor 透明度跟随",
-    "created_at": "2026-09-09T08:45:18Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34333050167"
-  },
-  {
-    "id": 34311008518,
-    "sha": "5d882092da79c738de4adbf0dc828556e86e6a31",
-    "short_sha": "5d88209",
-    "message": "optimize: 复述 TTS 桥接增加朗读超时、emoji 字节透传与多引擎回退",
-    "created_at": "2026-09-09T04:13:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34311008518"
-  },
-  {
-    "id": 34311008535,
-    "sha": "5d882092da79c738de4adbf0dc828556e86e6a31",
-    "short_sha": "5d88209",
-    "message": "optimize: 复述 TTS 桥接增加朗读超时、emoji 字节透传与多引擎回退",
-    "created_at": "2026-09-09T04:13:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34311008535"
-  },
-  {
-    "id": 34310216036,
-    "sha": "3c7dc97f42b77ddf40383533ae54a12b93930f48",
-    "short_sha": "3c7dc97",
-    "message": "fix: 熄屏状态下打开启动器可能崩溃",
-    "created_at": "2026-09-09T02:38:18Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34310216036"
-  },
-  {
-    "id": 34310216049,
-    "sha": "3c7dc97f42b77ddf40383533ae54a12b93930f48",
-    "short_sha": "3c7dc97",
-    "message": "fix: 熄屏状态下打开启动器可能崩溃",
-    "created_at": "2026-09-09T02:38:18Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34310216049"
-  },
-  {
-    "id": 34310143053,
-    "sha": "5d882092da79c738de4adbf0dc828556e86e6a31",
-    "short_sha": "5d88209",
-    "message": "optimize: 复述 TTS 桥接增加朗读超时、emoji 字节透传与多引擎回退",
-    "created_at": "2026-09-09T04:13:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34310143053"
-  },
-  {
-    "id": 34310143052,
-    "sha": "5d882092da79c738de4adbf0dc828556e86e6a31",
-    "short_sha": "5d88209",
-    "message": "optimize: 复述 TTS 桥接增加朗读超时、emoji 字节透传与多引擎回退",
-    "created_at": "2026-09-09T04:13:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34310143052"
-  },
-  {
-    "id": 34310109847,
-    "sha": "5d882092da79c738de4adbf0dc828556e86e6a31",
-    "short_sha": "5d88209",
-    "message": "optimize: 复述 TTS 桥接增加朗读超时、emoji 字节透传与多引擎回退",
-    "created_at": "2026-09-09T04:13:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34310109847"
-  },
-  {
-    "id": 34310109823,
-    "sha": "5d882092da79c738de4adbf0dc828556e86e6a31",
-    "short_sha": "5d88209",
-    "message": "optimize: 复述 TTS 桥接增加朗读超时、emoji 字节透传与多引擎回退",
-    "created_at": "2026-09-09T04:13:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34310109823"
-  },
-  {
-    "id": 34240631396,
-    "sha": "09847b61ea0a8d8ccf3c99cd362d1a1b099eda2c",
-    "short_sha": "09847b6",
-    "message": "optimize: 缩小皮肤模型腰部接缝间隙",
-    "created_at": "2026-09-08T14:48:00Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34240631396"
-  },
-  {
-    "id": 34240631435,
-    "sha": "09847b61ea0a8d8ccf3c99cd362d1a1b099eda2c",
-    "short_sha": "09847b6",
-    "message": "optimize: 缩小皮肤模型腰部接缝间隙",
-    "created_at": "2026-09-08T14:48:00Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34240631435"
-  },
-  {
-    "id": 34230611370,
-    "sha": "b5b25acec4981d76b74a24c5133af3de9dfa2a00",
-    "short_sha": "b5b25ac",
-    "message": "style: 调整下载管理面板",
-    "created_at": "2026-09-08T13:12:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34230611370"
-  },
-  {
-    "id": 34230611369,
-    "sha": "b5b25acec4981d76b74a24c5133af3de9dfa2a00",
-    "short_sha": "b5b25ac",
-    "message": "style: 调整下载管理面板",
-    "created_at": "2026-09-08T13:12:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34230611369"
-  },
-  {
-    "id": 34195153268,
-    "sha": "5f81ab8499c6a895420b27c535df9abaf7885869",
-    "short_sha": "5f81ab8",
-    "message": "test",
-    "created_at": "2026-09-08T06:32:54Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34195153268"
-  },
-  {
-    "id": 34195153244,
-    "sha": "5f81ab8499c6a895420b27c535df9abaf7885869",
-    "short_sha": "5f81ab8",
-    "message": "test",
-    "created_at": "2026-09-08T06:32:54Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34195153244"
-  },
-  {
-    "id": 34189693353,
-    "sha": "c9f4590d4a8de4b6a58a145fcc7c8b1f0f0be354",
-    "short_sha": "c9f4590",
-    "message": "fix: 使用zink启动26.3+时无法自动回退vulkan",
-    "created_at": "2026-09-08T02:41:14Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34189693353"
-  },
-  {
-    "id": 34177693572,
-    "sha": "f06b5c539b42c58172e33204dbd8e4220bd49403",
-    "short_sha": "f06b5c5",
-    "message": "1.3.3.1",
-    "created_at": "2026-09-08T01:44:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34177693572"
-  },
-  {
-    "id": 34177693944,
-    "sha": "f06b5c539b42c58172e33204dbd8e4220bd49403",
-    "short_sha": "f06b5c5",
-    "message": "1.3.3.1",
-    "created_at": "2026-09-08T01:44:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34177693944"
-  },
-  {
-    "id": 34177693802,
-    "sha": "f06b5c539b42c58172e33204dbd8e4220bd49403",
-    "short_sha": "f06b5c5",
-    "message": "1.3.3.1",
-    "created_at": "2026-09-08T01:44:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34177693802"
-  },
-  {
-    "id": 34177316044,
-    "sha": "d2384d845c35dca7857feb2e1c6059e6e28b723a",
-    "short_sha": "d2384d8",
-    "message": "feat: 待机动画随机插播变体，基础待机 8~15 秒后插播一个变体（避开上一次，播完回待机）",
-    "created_at": "2026-09-08T01:38:11Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34177316044"
-  },
-  {
-    "id": 34177315948,
-    "sha": "d2384d845c35dca7857feb2e1c6059e6e28b723a",
-    "short_sha": "d2384d8",
-    "message": "feat: 待机动画随机插播变体，基础待机 8~15 秒后插播一个变体（避开上一次，播完回待机）",
-    "created_at": "2026-09-08T01:38:11Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34177315948"
   }
 ]
