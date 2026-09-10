@@ -16,20 +16,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34444553348"
   },
   {
-    "id": 34443206498,
-    "sha": "e1d6bba2e6f4c99445c95bf4f893f275db5cd12e",
-    "short_sha": "e1d6bba",
-    "message": "feat: 渲染器版本上限调整——判断/展示双轨版本号与 26.3 版本目录",
-    "created_at": "2026-09-10T05:57:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34443206498"
-  },
-  {
     "id": 34443206519,
     "sha": "e1d6bba2e6f4c99445c95bf4f893f275db5cd12e",
     "short_sha": "e1d6bba",
     "message": "feat: 渲染器版本上限调整——判断/展示双轨版本号与 26.3 版本目录",
     "created_at": "2026-09-10T05:57:55Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34443206519"
+  },
+  {
+    "id": 34443206498,
+    "sha": "e1d6bba2e6f4c99445c95bf4f893f275db5cd12e",
+    "short_sha": "e1d6bba",
+    "message": "feat: 渲染器版本上限调整——判断/展示双轨版本号与 26.3 版本目录",
+    "created_at": "2026-09-10T05:57:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34443206498"
   },
   {
     "id": 34441132991,
@@ -112,14 +112,6 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34438870565"
   },
   {
-    "id": 34437958086,
-    "sha": "a38a784f67e23f0e4f2aa3206958a67016fc413b",
-    "short_sha": "a38a784",
-    "message": "Merge branch 'main' into feat/control-layout-p0",
-    "created_at": "2026-09-10T04:28:36Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437958086"
-  },
-  {
     "id": 34437958089,
     "sha": "a38a784f67e23f0e4f2aa3206958a67016fc413b",
     "short_sha": "a38a784",
@@ -128,12 +120,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437958089"
   },
   {
-    "id": 34437954866,
+    "id": 34437958086,
     "sha": "a38a784f67e23f0e4f2aa3206958a67016fc413b",
     "short_sha": "a38a784",
     "message": "Merge branch 'main' into feat/control-layout-p0",
     "created_at": "2026-09-10T04:28:36Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437954866"
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437958086"
   },
   {
     "id": 34437954744,
@@ -142,6 +134,14 @@
     "message": "Merge branch 'main' into feat/control-layout-p0",
     "created_at": "2026-09-10T04:28:36Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437954744"
+  },
+  {
+    "id": 34437954866,
+    "sha": "a38a784f67e23f0e4f2aa3206958a67016fc413b",
+    "short_sha": "a38a784",
+    "message": "Merge branch 'main' into feat/control-layout-p0",
+    "created_at": "2026-09-10T04:28:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437954866"
   },
   {
     "id": 34437951987,
@@ -192,14 +192,6 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437280144"
   },
   {
-    "id": 34437277587,
-    "sha": "6e7d90ee641b1d0d827bd3312208ab0f85901338",
-    "short_sha": "6e7d90e",
-    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-09-10T04:27:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437277587"
-  },
-  {
     "id": 34437277559,
     "sha": "6e7d90ee641b1d0d827bd3312208ab0f85901338",
     "short_sha": "6e7d90e",
@@ -208,12 +200,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437277559"
   },
   {
-    "id": 34437266454,
-    "sha": "691d629ad2d4da7f897c5c8f613ac15790b308c5",
-    "short_sha": "691d629",
-    "message": "fix: 解除游戏帧率对屏幕刷新率的锁定\n\n- JVMActivity 在 surface 可用时向系统投票设备最高刷新率\n- 关闭垂直同步时交换间隔强制置 0，Surface 切入 BufferQueue 异步模式\n- egl_bridge 跟踪 MC 最近请求的交换间隔，窗口重建时重新应用\n- gl_bridge 移除 zink_kopper 渲染器跳过 eglSwapInterval 的豁免",
-    "created_at": "2026-09-10T04:27:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437266454"
+    "id": 34437277587,
+    "sha": "6e7d90ee641b1d0d827bd3312208ab0f85901338",
+    "short_sha": "6e7d90e",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-10T04:27:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437277587"
   },
   {
     "id": 34437266509,
@@ -224,6 +216,14 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437266509"
   },
   {
+    "id": 34437266454,
+    "sha": "691d629ad2d4da7f897c5c8f613ac15790b308c5",
+    "short_sha": "691d629",
+    "message": "fix: 解除游戏帧率对屏幕刷新率的锁定\n\n- JVMActivity 在 surface 可用时向系统投票设备最高刷新率\n- 关闭垂直同步时交换间隔强制置 0，Surface 切入 BufferQueue 异步模式\n- egl_bridge 跟踪 MC 最近请求的交换间隔，窗口重建时重新应用\n- gl_bridge 移除 zink_kopper 渲染器跳过 eglSwapInterval 的豁免",
+    "created_at": "2026-09-10T04:27:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34437266454"
+  },
+  {
     "id": 34436914016,
     "sha": "5479a73c41bae2372dfc6a96fa42bd95d9e36d1f",
     "short_sha": "5479a73",
@@ -232,20 +232,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436914016"
   },
   {
-    "id": 34436911559,
-    "sha": "5479a73c41bae2372dfc6a96fa42bd95d9e36d1f",
-    "short_sha": "5479a73",
-    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-09-10T04:22:06Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436911559"
-  },
-  {
     "id": 34436911409,
     "sha": "5479a73c41bae2372dfc6a96fa42bd95d9e36d1f",
     "short_sha": "5479a73",
     "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
     "created_at": "2026-09-10T04:22:06Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436911409"
+  },
+  {
+    "id": 34436911559,
+    "sha": "5479a73c41bae2372dfc6a96fa42bd95d9e36d1f",
+    "short_sha": "5479a73",
+    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-10T04:22:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436911559"
   },
   {
     "id": 34436653032,
