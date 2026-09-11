@@ -1,5 +1,93 @@
 [
   {
+    "id": 34599628629,
+    "sha": "fb4f63b7b5f8b158f01ec31422a23d2c25e60fc2",
+    "short_sha": "fb4f63b",
+    "message": "refactor: 控件编辑器重构为 Kotlin 并全面对齐游戏菜单视觉，修复吸附与编辑条问题，新增控件组复制\n\n- EditViewDialog 重构为 Kotlin 并拆分为外壳 + 共享基类 + 按钮/方向键编辑四文件，重复装配逻辑收拢，调用方零改动\n- 数值进度全量换 FCLNumberSeekBar，新增 setValueScale 缩放显示，FCLTabLayout 新增 auto_text_tint\n- 修复：参考对象 spinner 选项缺失；编辑对话框改 bg_game_menu 半透明并全面对齐游戏菜单配色；X/Y 坐标拖满显示 1000%；确认后 ControlEditBar 不跟随与错位；拖动吸附恢复邻接间距语义\n- 新增：参考组（主动显示的其他控件组）参与拖动吸附；控件组复制（异步补全 viewData、控件 id 重新生成、插源组后立即显示）；按键事件页四触发方式说明文案",
+    "created_at": "2026-09-11T12:34:34Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34599628629"
+  },
+  {
+    "id": 34599628597,
+    "sha": "fb4f63b7b5f8b158f01ec31422a23d2c25e60fc2",
+    "short_sha": "fb4f63b",
+    "message": "refactor: 控件编辑器重构为 Kotlin 并全面对齐游戏菜单视觉，修复吸附与编辑条问题，新增控件组复制\n\n- EditViewDialog 重构为 Kotlin 并拆分为外壳 + 共享基类 + 按钮/方向键编辑四文件，重复装配逻辑收拢，调用方零改动\n- 数值进度全量换 FCLNumberSeekBar，新增 setValueScale 缩放显示，FCLTabLayout 新增 auto_text_tint\n- 修复：参考对象 spinner 选项缺失；编辑对话框改 bg_game_menu 半透明并全面对齐游戏菜单配色；X/Y 坐标拖满显示 1000%；确认后 ControlEditBar 不跟随与错位；拖动吸附恢复邻接间距语义\n- 新增：参考组（主动显示的其他控件组）参与拖动吸附；控件组复制（异步补全 viewData、控件 id 重新生成、插源组后立即显示）；按键事件页四触发方式说明文案",
+    "created_at": "2026-09-11T12:34:34Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34599628597"
+  },
+  {
+    "id": 34599114898,
+    "sha": "5494c23c872dec55b72a50d5df56f3796c2bd570",
+    "short_sha": "5494c23",
+    "message": "update",
+    "created_at": "2026-09-11T12:28:37Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34599114898"
+  },
+  {
+    "id": 34599114920,
+    "sha": "5494c23c872dec55b72a50d5df56f3796c2bd570",
+    "short_sha": "5494c23",
+    "message": "update",
+    "created_at": "2026-09-11T12:28:37Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34599114920"
+  },
+  {
+    "id": 34599110192,
+    "sha": "5494c23c872dec55b72a50d5df56f3796c2bd570",
+    "short_sha": "5494c23",
+    "message": "update",
+    "created_at": "2026-09-11T12:28:37Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34599110192"
+  },
+  {
+    "id": 34599110091,
+    "sha": "5494c23c872dec55b72a50d5df56f3796c2bd570",
+    "short_sha": "5494c23",
+    "message": "update",
+    "created_at": "2026-09-11T12:28:37Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34599110091"
+  },
+  {
+    "id": 34598376790,
+    "sha": "1da3e9365b2b942910bb1cdf1c11f0f30ef94aff",
+    "short_sha": "1da3e93",
+    "message": "fix: 插件卸载缺少 REQUEST_DELETE_PACKAGES 权限导致系统卸载器立即退出 (#1826)",
+    "created_at": "2026-09-11T12:20:01Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34598376790"
+  },
+  {
+    "id": 34598109120,
+    "sha": "dd4e51e891c5293387e19aa2224a7fb06f7db28f",
+    "short_sha": "dd4e51e",
+    "message": "feat: 控件组面板新增复制功能——完整克隆组内按键与方向键（id 重新生成），未加载组先异步补全数据，副本插入源组之后并立即显示",
+    "created_at": "2026-09-11T12:11:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34598109120"
+  },
+  {
+    "id": 34598109082,
+    "sha": "dd4e51e891c5293387e19aa2224a7fb06f7db28f",
+    "short_sha": "dd4e51e",
+    "message": "feat: 控件组面板新增复制功能——完整克隆组内按键与方向键（id 重新生成），未加载组先异步补全数据，副本插入源组之后并立即显示",
+    "created_at": "2026-09-11T12:11:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34598109082"
+  },
+  {
+    "id": 34598068479,
+    "sha": "dd4e51e891c5293387e19aa2224a7fb06f7db28f",
+    "short_sha": "dd4e51e",
+    "message": "feat: 控件组面板新增复制功能——完整克隆组内按键与方向键（id 重新生成），未加载组先异步补全数据，副本插入源组之后并立即显示",
+    "created_at": "2026-09-11T12:11:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34598068479"
+  },
+  {
+    "id": 34598068509,
+    "sha": "dd4e51e891c5293387e19aa2224a7fb06f7db28f",
+    "short_sha": "dd4e51e",
+    "message": "feat: 控件组面板新增复制功能——完整克隆组内按键与方向键（id 重新生成），未加载组先异步补全数据，副本插入源组之后并立即显示",
+    "created_at": "2026-09-11T12:11:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34598068509"
+  },
+  {
     "id": 34579831062,
     "sha": "96ace20214ef266264ca2c03706f410d143f5ddd",
     "short_sha": "96ace20",
@@ -310,93 +398,5 @@
     "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
     "created_at": "2026-09-10T04:18:01Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436650238"
-  },
-  {
-    "id": 34436643192,
-    "sha": "b6d3f521697d2be73224ba4bff70b13760f30762",
-    "short_sha": "b6d3f52",
-    "message": "feat: libflite 桥接安卓系统 TTS，恢复游戏内复述功能 (#1821)\n\n* feat: libflite 桥接安卓系统 TTS，恢复游戏内复述功能\n\n* optimize: 复述 TTS 桥接增加朗读超时、emoji 字节透传与多引擎回退\n\n* feat: 复述支持即时打断，clear() 经 TTSCancel 注入 JNA 调用停止系统 TTS\n\n* chore: 同步含修复版 TTSCancelTransformer 的 MioLibPatcher.jar",
-    "created_at": "2026-09-10T04:17:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436643192"
-  },
-  {
-    "id": 34436643204,
-    "sha": "b6d3f521697d2be73224ba4bff70b13760f30762",
-    "short_sha": "b6d3f52",
-    "message": "feat: libflite 桥接安卓系统 TTS，恢复游戏内复述功能 (#1821)\n\n* feat: libflite 桥接安卓系统 TTS，恢复游戏内复述功能\n\n* optimize: 复述 TTS 桥接增加朗读超时、emoji 字节透传与多引擎回退\n\n* feat: 复述支持即时打断，clear() 经 TTSCancel 注入 JNA 调用停止系统 TTS\n\n* chore: 同步含修复版 TTSCancelTransformer 的 MioLibPatcher.jar",
-    "created_at": "2026-09-10T04:17:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436643204"
-  },
-  {
-    "id": 34436628229,
-    "sha": "182ace1454577617ac96165bd7d1966014b48f3c",
-    "short_sha": "182ace1",
-    "message": "refactor: JNA natives 去 zip 化，改为分架构 natives 目录并随 APK 架构裁剪打包\n\n- 新增 scripts/fetch-jna.sh，从 Maven Central 的 jna-<版本>.aar 提取各架构 libjnidispatch.so 到 assets/app_runtime/jna/<版本>/natives/<abi>/\n- 版本范围收敛为 5.13.0~5.18.0（LibFilter 已将 <5.13 替换为 5.13.0），删除旧 jna-arm64.zip\n- version 文件改为 so 内容哈希派生，产物不变不触发重装；isLatest 读取 trim 防换行解析崩溃\n- installJna 按设备 ABI 安装，运行时 jna/<版本>/libjnidispatch.so 加载结构不变\n- mergeAssets 裁剪逻辑与 LWJGL natives 一致",
-    "created_at": "2026-09-10T04:17:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436628229"
-  },
-  {
-    "id": 34436628278,
-    "sha": "182ace1454577617ac96165bd7d1966014b48f3c",
-    "short_sha": "182ace1",
-    "message": "refactor: JNA natives 去 zip 化，改为分架构 natives 目录并随 APK 架构裁剪打包\n\n- 新增 scripts/fetch-jna.sh，从 Maven Central 的 jna-<版本>.aar 提取各架构 libjnidispatch.so 到 assets/app_runtime/jna/<版本>/natives/<abi>/\n- 版本范围收敛为 5.13.0~5.18.0（LibFilter 已将 <5.13 替换为 5.13.0），删除旧 jna-arm64.zip\n- version 文件改为 so 内容哈希派生，产物不变不触发重装；isLatest 读取 trim 防换行解析崩溃\n- installJna 按设备 ABI 安装，运行时 jna/<版本>/libjnidispatch.so 加载结构不变\n- mergeAssets 裁剪逻辑与 LWJGL natives 一致",
-    "created_at": "2026-09-10T04:17:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34436628278"
-  },
-  {
-    "id": 34433407270,
-    "sha": "e0ef89427bd91db561aab0b30c326c21037548d1",
-    "short_sha": "e0ef894",
-    "message": "chore: 同步含修复版 TTSCancelTransformer 的 MioLibPatcher.jar",
-    "created_at": "2026-09-10T03:27:27Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34433407270"
-  },
-  {
-    "id": 34433407311,
-    "sha": "e0ef89427bd91db561aab0b30c326c21037548d1",
-    "short_sha": "e0ef894",
-    "message": "chore: 同步含修复版 TTSCancelTransformer 的 MioLibPatcher.jar",
-    "created_at": "2026-09-10T03:27:27Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34433407311"
-  },
-  {
-    "id": 34433404578,
-    "sha": "e0ef89427bd91db561aab0b30c326c21037548d1",
-    "short_sha": "e0ef894",
-    "message": "chore: 同步含修复版 TTSCancelTransformer 的 MioLibPatcher.jar",
-    "created_at": "2026-09-10T03:27:27Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34433404578"
-  },
-  {
-    "id": 34431958563,
-    "sha": "5ed5612188ff455a3452d660c3b4d1282c60ea87",
-    "short_sha": "5ed5612",
-    "message": "fix: 修复控件组拖动排序的首项不可拖动与拖至首位不生效\n\n顶部操作行移除后组行已从位置 0 开始，拖动索引转换仍按存在\n操作行偏移处理：首项被排除在可拖动范围外、拖至首位时目标索引\n为 -1 被拒绝。移除偏移，编辑模式列表位置即组索引",
-    "created_at": "2026-09-10T03:05:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34431958563"
-  },
-  {
-    "id": 34431958507,
-    "sha": "5ed5612188ff455a3452d660c3b4d1282c60ea87",
-    "short_sha": "5ed5612",
-    "message": "fix: 修复控件组拖动排序的首项不可拖动与拖至首位不生效\n\n顶部操作行移除后组行已从位置 0 开始，拖动索引转换仍按存在\n操作行偏移处理：首项被排除在可拖动范围外、拖至首位时目标索引\n为 -1 被拒绝。移除偏移，编辑模式列表位置即组索引",
-    "created_at": "2026-09-10T03:05:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34431958507"
-  },
-  {
-    "id": 34431954748,
-    "sha": "5ed5612188ff455a3452d660c3b4d1282c60ea87",
-    "short_sha": "5ed5612",
-    "message": "fix: 修复控件组拖动排序的首项不可拖动与拖至首位不生效\n\n顶部操作行移除后组行已从位置 0 开始，拖动索引转换仍按存在\n操作行偏移处理：首项被排除在可拖动范围外、拖至首位时目标索引\n为 -1 被拒绝。移除偏移，编辑模式列表位置即组索引",
-    "created_at": "2026-09-10T03:05:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34431954748"
-  },
-  {
-    "id": 34431954762,
-    "sha": "5ed5612188ff455a3452d660c3b4d1282c60ea87",
-    "short_sha": "5ed5612",
-    "message": "fix: 修复控件组拖动排序的首项不可拖动与拖至首位不生效\n\n顶部操作行移除后组行已从位置 0 开始，拖动索引转换仍按存在\n操作行偏移处理：首项被排除在可拖动范围外、拖至首位时目标索引\n为 -1 被拒绝。移除偏移，编辑模式列表位置即组索引",
-    "created_at": "2026-09-10T03:05:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34431954762"
   }
 ]
