@@ -1,5 +1,13 @@
 [
   {
+    "id": 34579831062,
+    "sha": "96ace20214ef266264ca2c03706f410d143f5ddd",
+    "short_sha": "96ace20",
+    "message": "fix: 插件卸载缺少 REQUEST_DELETE_PACKAGES 权限导致系统卸载器立即退出",
+    "created_at": "2026-09-11T08:32:27Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34579831062"
+  },
+  {
     "id": 34560371284,
     "sha": "dfca7fa7f28134b98f2d87f5c4e83aaef4e1fc38",
     "short_sha": "dfca7fa",
@@ -390,13 +398,5 @@
     "message": "fix: 修复控件组拖动排序的首项不可拖动与拖至首位不生效\n\n顶部操作行移除后组行已从位置 0 开始，拖动索引转换仍按存在\n操作行偏移处理：首项被排除在可拖动范围外、拖至首位时目标索引\n为 -1 被拒绝。移除偏移，编辑模式列表位置即组索引",
     "created_at": "2026-09-10T03:05:03Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34431954762"
-  },
-  {
-    "id": 34431164810,
-    "sha": "ce1a2361237c44bfe88c08e0e10d49644ae6b8c9",
-    "short_sha": "ce1a236",
-    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-09-10T02:52:49Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34431164810"
   }
 ]
