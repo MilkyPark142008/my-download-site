@@ -1,20 +1,20 @@
 {"run": {
-  "id": 34444553324,
+  "id": 34560371284,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAIBQ4sbA",
+  "node_id": "WFR_kwLOIQeFGs8AAAAIC_VqVA",
   "head_branch": "main",
-  "head_sha": "64c034885923b87ce5d08981e80fd7a360614fe9",
+  "head_sha": "dfca7fa7f28134b98f2d87f5c4e83aaef4e1fc38",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "fix: 下载模组列表已安装标记实时刷新——扫描完成后通知列表、下载成功回调触发重检、payload 局部绑定避免动画重播",
-  "run_number": 56,
+  "display_title": "refactor: FCLNumberSeekBar 重构为 Kotlin，轨道加粗为胶囊条、数值文本去除底衬并修复两端点击热区与显示位置不一致",
+  "run_number": 58,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 93308315953,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAVuZvpMQ",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34444553324",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34444553324",
+  "check_suite_id": 93622796202,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAVzFp_qg",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34560371284",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34560371284",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/root-S7/FoldCraftLauncher/pulls/132",
@@ -22,7 +22,7 @@
       "number": 132,
       "head": {
         "ref": "main",
-        "sha": "64c034885923b87ce5d08981e80fd7a360614fe9",
+        "sha": "dfca7fa7f28134b98f2d87f5c4e83aaef4e1fc38",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -45,7 +45,7 @@
       "number": 364,
       "head": {
         "ref": "main",
-        "sha": "64c034885923b87ce5d08981e80fd7a360614fe9",
+        "sha": "dfca7fa7f28134b98f2d87f5c4e83aaef4e1fc38",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -68,7 +68,7 @@
       "number": 37,
       "head": {
         "ref": "main",
-        "sha": "64c034885923b87ce5d08981e80fd7a360614fe9",
+        "sha": "dfca7fa7f28134b98f2d87f5c4e83aaef4e1fc38",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -91,7 +91,7 @@
       "number": 400,
       "head": {
         "ref": "main",
-        "sha": "64c034885923b87ce5d08981e80fd7a360614fe9",
+        "sha": "dfca7fa7f28134b98f2d87f5c4e83aaef4e1fc38",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -109,8 +109,8 @@
       }
     }
   ],
-  "created_at": "2026-09-10T06:17:27Z",
-  "updated_at": "2026-09-10T06:18:53Z",
+  "created_at": "2026-09-11T03:57:15Z",
+  "updated_at": "2026-09-11T03:58:52Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -134,7 +134,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-09-10T06:17:27Z",
+  "run_started_at": "2026-09-11T03:57:15Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -156,19 +156,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34444553324/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34444553324/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/93308315953",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34444553324/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34444553324/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34444553324/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34560371284/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34560371284/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/93622796202",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34560371284/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34560371284/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34560371284/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "64c034885923b87ce5d08981e80fd7a360614fe9",
-    "tree_id": "a2d5b53d9ce71cc39cc5436a84d05ae9324dc2c7",
-    "message": "fix: 下载模组列表已安装标记实时刷新——扫描完成后通知列表、下载成功回调触发重检、payload 局部绑定避免动画重播",
-    "timestamp": "2026-09-10T06:16:41Z",
+    "id": "dfca7fa7f28134b98f2d87f5c4e83aaef4e1fc38",
+    "tree_id": "daefd157c43b42a36496ac8aa1aed8b8e04fbe32",
+    "message": "refactor: FCLNumberSeekBar 重构为 Kotlin，轨道加粗为胶囊条、数值文本去除底衬并修复两端点击热区与显示位置不一致",
+    "timestamp": "2026-09-11T03:52:24Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
