@@ -1,5 +1,21 @@
 [
   {
+    "id": 34713181160,
+    "sha": "e88c2dd0a6d27f5e740ba7fabcb26b7ae0de8719",
+    "short_sha": "e88c2dd",
+    "message": "Merge pull request #1844 from ZalithLauncher/fix/size_refresh\n\nfix: 切换启动器至后台时，未正常刷新窗口大小",
+    "created_at": "2026-09-12T19:06:28Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34713181160"
+  },
+  {
+    "id": 34713153200,
+    "sha": "499a242017018fdba3da21bf3f87214897890e72",
+    "short_sha": "499a242",
+    "message": "fix: 切换启动器至后台时，未正常刷新窗口大小",
+    "created_at": "2026-09-12T19:05:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34713153200"
+  },
+  {
     "id": 34706025044,
     "sha": "eb1cf355155cc5af0df03fc7d7a34a6f446c5c72",
     "short_sha": "eb1cf35",
@@ -382,21 +398,5 @@
     "message": "feat: 下载模组页面标注本地已安装的模组\n\n- 扫描当前版本 mods 目录，单次 IO 同时计算 SHA-1 与 MurmurHash2 双指纹并做进程级内存缓存\n- 按选中平台批量匹配（Modrinth version_files / CurseForge fingerprints），结果持久缓存于 MMKV 且各平台独立\n- 搜索结果卡片以绿色 check 徽标标注已安装项目，版本列表标注已安装版本（分组栏徽标、版本项标绿）",
     "created_at": "2026-09-07T18:28:02Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34151810967"
-  },
-  {
-    "id": 34145209426,
-    "sha": "e33cca70510ff053c68e7a512787496ea8d1620b",
-    "short_sha": "e33cca7",
-    "message": "fix: 解除游戏帧率对屏幕刷新率的锁定 #1807\n\n- 移除 Kopper Zink 的垂直同步门控，无条件透传 MC 的交换间隔。\n  此前的门控从不调用 eglSwapInterval，导致 EGL 默认交换间隔 1\n  永久生效，帧率始终被锁在屏幕刷新率\n- 垂直同步开关关闭时，对游戏窗口主动应用交换间隔 0，使 Surface\n  切入 BufferQueue 异步模式，渲染循环不再按垂直同步信号阻塞\n- 记录 MC 最近一次的交换间隔，窗口重建（旋转、分屏等）时重新\n  应用，避免生产者状态重置后帧率退回锁定状态；纯 Vulkan 路径\n  不干预\n- 游戏窗口创建时向系统投票设备支持的最高屏幕刷新率，防止面板\n  被省电策略降至 60/90Hz\n\n参考 MinecraftGLSurface（https://github.com/AngelAuraMC/Amethyst-Android/blob/v3_openjdk/app_pojavlauncher/src/main/java/net/kdt/pojavlaunch/MinecraftGLSurface.java）",
-    "created_at": "2026-09-07T16:51:47Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34145209426"
-  },
-  {
-    "id": 34103563721,
-    "sha": "628698b3b1b27269b5456a1d6581a608b683540a",
-    "short_sha": "628698b",
-    "message": "feat: 新增游戏内双指滑动滚动手势",
-    "created_at": "2026-09-07T08:59:18Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34103563721"
   }
 ]
