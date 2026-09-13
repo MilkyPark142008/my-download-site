@@ -1,5 +1,21 @@
 [
   {
+    "id": 34768565955,
+    "sha": "cdc1c8ed56a4ea7c218fe84d6b31503366a1e7e4",
+    "short_sha": "cdc1c8e",
+    "message": "fix: CI release 构建改用 JDK 21，修复 AGP 9.3 lint 在 JDK 17 上的 NoSuchMethodError\n\nAGP 9.3 lint 内置的 intellij-core JavaDocParser 调用了 JDK 21 才有的\nList.removeLast()，Gradle 守护进程跑在 JDK 17 时 lintVitalAnalyzeRelease\n直接崩溃（issuetracker.google.com/issues/522845800，9.3.1 仍受影响）。\n编译目标保持 Java 17 字节码不变，已在本地用 JDK 21 完整验证\nassembleRelease 通过。",
+    "created_at": "2026-09-13T16:20:28Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34768565955"
+  },
+  {
+    "id": 34768285908,
+    "sha": "cdc1c8ed56a4ea7c218fe84d6b31503366a1e7e4",
+    "short_sha": "cdc1c8e",
+    "message": "fix: CI release 构建改用 JDK 21，修复 AGP 9.3 lint 在 JDK 17 上的 NoSuchMethodError\n\nAGP 9.3 lint 内置的 intellij-core JavaDocParser 调用了 JDK 21 才有的\nList.removeLast()，Gradle 守护进程跑在 JDK 17 时 lintVitalAnalyzeRelease\n直接崩溃（issuetracker.google.com/issues/522845800，9.3.1 仍受影响）。\n编译目标保持 Java 17 字节码不变，已在本地用 JDK 21 完整验证\nassembleRelease 通过。",
+    "created_at": "2026-09-13T16:20:28Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34768285908"
+  },
+  {
     "id": 34766162575,
     "sha": "1561cb21b632a5f17d906a847b6627163917d926",
     "short_sha": "1561cb2",
@@ -382,21 +398,5 @@
     "message": "feat: 接入复述功能",
     "created_at": "2026-09-08T20:04:30Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34272960128"
-  },
-  {
-    "id": 34246344902,
-    "sha": "1aea3976cfcf06963881f1b5389f076a3916eeaf",
-    "short_sha": "1aea397",
-    "message": "fix: 修复 Vulkan 版本检测补丁号丢失与特性查询路径",
-    "created_at": "2026-09-08T15:41:03Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34246344902"
-  },
-  {
-    "id": 34234259982,
-    "sha": "f66c9b4bce59418b2792208fc7cbb3d3ab196be8",
-    "short_sha": "f66c9b4",
-    "message": "Merge pull request #1817 from ZalithLauncher/weblate_main\n\nWeblate main",
-    "created_at": "2026-09-08T13:48:26Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34234259982"
   }
 ]
