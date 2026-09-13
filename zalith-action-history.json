@@ -1,5 +1,61 @@
 [
   {
+    "id": 34766162575,
+    "sha": "1561cb21b632a5f17d906a847b6627163917d926",
+    "short_sha": "1561cb2",
+    "message": "bump version to 2.5.2",
+    "created_at": "2026-09-13T15:37:25Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34766162575"
+  },
+  {
+    "id": 34766130855,
+    "sha": "95c20cbb7cc8f4f86446766b444cc190fbc64ada",
+    "short_sha": "95c20cb",
+    "message": "Merge pull request #1852 from ZalithLauncher/weblate_terracotta\n\nWeblate terracotta",
+    "created_at": "2026-09-13T15:36:51Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34766130855"
+  },
+  {
+    "id": 34766110798,
+    "sha": "5a1e813d11c873c3c08e15c3dbbedee4bef7baed",
+    "short_sha": "5a1e813",
+    "message": "Merge pull request #1851 from ZalithLauncher/weblate_main\n\nWeblate main",
+    "created_at": "2026-09-13T15:36:28Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34766110798"
+  },
+  {
+    "id": 34766003833,
+    "sha": "dbb1b7362e2ef0f101d60e99668d53fa03a37f23",
+    "short_sha": "dbb1b73",
+    "message": "Merge pull request #1850 from ZalithLauncher/fix/sdl-ime-render-path\n\nfix: SDL 输入法按渲染路径分流，修复 Controlify 环境无法呼出软键盘",
+    "created_at": "2026-09-13T15:34:20Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34766003833"
+  },
+  {
+    "id": 34765945813,
+    "sha": "a8ef6c2f50a23fcd73cd566233a59a951a3dc894",
+    "short_sha": "a8ef6c2",
+    "message": "fix: SDL 输入法按渲染路径分流，修复 Controlify 环境无法呼出软键盘",
+    "created_at": "2026-09-13T15:17:44Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34765945813"
+  },
+  {
+    "id": 34763270521,
+    "sha": "a36726d44d5ef992b057aea1f4e424818913535e",
+    "short_sha": "a36726d",
+    "message": "Merge pull request #1849 from ZalithLauncher/fix/terracotta_fgs_timeout\n\nfix: 陶瓦联机 VPN 服务未及时进入前台导致游戏进程崩溃",
+    "created_at": "2026-09-13T14:38:52Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34763270521"
+  },
+  {
+    "id": 34763216723,
+    "sha": "e66de25c03120c9b495e56aad6d532c9bfee5d5f",
+    "short_sha": "e66de25",
+    "message": "fix: 陶瓦联机 VPN 服务未及时进入前台导致游戏进程崩溃\n\n- 服务所有经 startForegroundService 启动的路径统一先调用 startForeground，\n  并在进入前台失败时拒绝挂起的联机请求后优雅停止，避免系统抛出\n  ForegroundServiceDidNotStartInTimeException 导致 :game 进程崩溃\n- 联机模式未确定时通知改用兜底文案，不再返回 null\n- 前台服务类型由 connectedDevice 改为 specialUse：\n  connectedDevice 在 targetSdk 34+ 下要求额外资格权限，项目均未声明\n- 联机状态更新仅在服务运行时经 startService 投递，避免将未前台的服务重新拉起\n\nCloses #1839",
+    "created_at": "2026-09-13T14:37:07Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34763216723"
+  },
+  {
     "id": 34713181160,
     "sha": "e88c2dd0a6d27f5e740ba7fabcb26b7ae0de8719",
     "short_sha": "e88c2dd",
@@ -342,61 +398,5 @@
     "message": "Merge pull request #1817 from ZalithLauncher/weblate_main\n\nWeblate main",
     "created_at": "2026-09-08T13:48:26Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34234259982"
-  },
-  {
-    "id": 34202587434,
-    "sha": "c7dc1f1f5297f1b652a4e6cdc2489687eedcec4b",
-    "short_sha": "c7dc1f1",
-    "message": "Merge pull request #1805 from ZalithLauncher/feat/two_finger_scroll_gesture\n\nfeat: 新增游戏内双指滑动滚动手势",
-    "created_at": "2026-09-08T08:04:55Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34202587434"
-  },
-  {
-    "id": 34202504595,
-    "sha": "278811444e81266cc315dd0048cc9800822bb401",
-    "short_sha": "2788114",
-    "message": "Merge pull request #1811 from ZalithLauncher/feat/download-mod-installed-check\n\nfeat: 下载模组页面检查并标记当前版本已安装的模组",
-    "created_at": "2026-09-08T08:03:57Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34202504595"
-  },
-  {
-    "id": 34202474886,
-    "sha": "4e77bc23a6d6cd3045e2a2fb9fef1f0d44e0a4b4",
-    "short_sha": "4e77bc2",
-    "message": "chore: 调整模组版本列表已安装图标的配色",
-    "created_at": "2026-09-08T08:03:30Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34202474886"
-  },
-  {
-    "id": 34201474149,
-    "sha": "7892ec98861177c8e0edfc3c071bdaae794c2733",
-    "short_sha": "7892ec9",
-    "message": "[Do not use!] Translated using Weblate (Indonesian)\n\nCurrently translated at 99.5% (1404 of 1410 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/id/",
-    "created_at": "2026-09-08T07:51:38Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34201474149"
-  },
-  {
-    "id": 34154249622,
-    "sha": "425a5ccd058943d65230d10971621d189986228f",
-    "short_sha": "425a5cc",
-    "message": "chore: 调整模组版本列表已安装图标 padding",
-    "created_at": "2026-09-07T19:05:36Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34154249622"
-  },
-  {
-    "id": 34154133157,
-    "sha": "f89e2dd9b86b9aca3d15cd664698c2d9bc5fc8f0",
-    "short_sha": "f89e2dd",
-    "message": "fix: 提升模组安装标注功能的稳定性",
-    "created_at": "2026-09-07T19:03:55Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34154133157"
-  },
-  {
-    "id": 34151810967,
-    "sha": "ec5a9262b4fddf6f2853fe7bc686a57ee028097d",
-    "short_sha": "ec5a926",
-    "message": "feat: 下载模组页面标注本地已安装的模组\n\n- 扫描当前版本 mods 目录，单次 IO 同时计算 SHA-1 与 MurmurHash2 双指纹并做进程级内存缓存\n- 按选中平台批量匹配（Modrinth version_files / CurseForge fingerprints），结果持久缓存于 MMKV 且各平台独立\n- 搜索结果卡片以绿色 check 徽标标注已安装项目，版本列表标注已安装版本（分组栏徽标、版本项标绿）",
-    "created_at": "2026-09-07T18:28:02Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34151810967"
   }
 ]
