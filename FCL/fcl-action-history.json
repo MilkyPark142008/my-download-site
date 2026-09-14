@@ -1,11 +1,35 @@
 [
   {
-    "id": 34831622399,
-    "sha": "4085d957c5013bad194f0a0ab9b36b8c4b42212f",
-    "short_sha": "4085d95",
-    "message": "merge: 合并 main（下载源重构 squash 版、SDL 输入法分流、FCLNumberSeekBar 自绘）并解决冲突",
-    "created_at": "2026-09-14T10:07:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34831622399"
+    "id": 34852868734,
+    "sha": "d16c8d891a8514947e2371a8456bc97148750404",
+    "short_sha": "d16c8d8",
+    "message": "feat: 左滑菜单打开时点击菜单外区域自动关闭\n\nRecyclerView 条目触摸拦截：菜单打开时按下其他条目/空白区域\n仅关闭菜单并消费该次点击，防止误触；收藏列表与搜索结果列表均接入",
+    "created_at": "2026-09-14T13:59:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34852868734"
+  },
+  {
+    "id": 34852868711,
+    "sha": "d16c8d891a8514947e2371a8456bc97148750404",
+    "short_sha": "d16c8d8",
+    "message": "feat: 左滑菜单打开时点击菜单外区域自动关闭\n\nRecyclerView 条目触摸拦截：菜单打开时按下其他条目/空白区域\n仅关闭菜单并消费该次点击，防止误触；收藏列表与搜索结果列表均接入",
+    "created_at": "2026-09-14T13:59:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34852868711"
+  },
+  {
+    "id": 34852861904,
+    "sha": "d16c8d891a8514947e2371a8456bc97148750404",
+    "short_sha": "d16c8d8",
+    "message": "feat: 左滑菜单打开时点击菜单外区域自动关闭\n\nRecyclerView 条目触摸拦截：菜单打开时按下其他条目/空白区域\n仅关闭菜单并消费该次点击，防止误触；收藏列表与搜索结果列表均接入",
+    "created_at": "2026-09-14T13:59:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34852861904"
+  },
+  {
+    "id": 34852861945,
+    "sha": "d16c8d891a8514947e2371a8456bc97148750404",
+    "short_sha": "d16c8d8",
+    "message": "feat: 左滑菜单打开时点击菜单外区域自动关闭\n\nRecyclerView 条目触摸拦截：菜单打开时按下其他条目/空白区域\n仅关闭菜单并消费该次点击，防止误触；收藏列表与搜索结果列表均接入",
+    "created_at": "2026-09-14T13:59:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34852861945"
   },
   {
     "id": 34831622432,
@@ -16,12 +40,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34831622432"
   },
   {
-    "id": 34831598050,
+    "id": 34831622399,
     "sha": "4085d957c5013bad194f0a0ab9b36b8c4b42212f",
     "short_sha": "4085d95",
     "message": "merge: 合并 main（下载源重构 squash 版、SDL 输入法分流、FCLNumberSeekBar 自绘）并解决冲突",
     "created_at": "2026-09-14T10:07:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34831598050"
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34831622399"
   },
   {
     "id": 34831598021,
@@ -30,6 +54,14 @@
     "message": "merge: 合并 main（下载源重构 squash 版、SDL 输入法分流、FCLNumberSeekBar 自绘）并解决冲突",
     "created_at": "2026-09-14T10:07:12Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34831598021"
+  },
+  {
+    "id": 34831598050,
+    "sha": "4085d957c5013bad194f0a0ab9b36b8c4b42212f",
+    "short_sha": "4085d95",
+    "message": "merge: 合并 main（下载源重构 squash 版、SDL 输入法分流、FCLNumberSeekBar 自绘）并解决冲突",
+    "created_at": "2026-09-14T10:07:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34831598050"
   },
   {
     "id": 34829951352,
@@ -366,37 +398,5 @@
     "message": "feat: 控件组面板新增复制功能——完整克隆组内按键与方向键（id 重新生成），未加载组先异步补全数据，副本插入源组之后并立即显示",
     "created_at": "2026-09-11T12:11:38Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34598068509"
-  },
-  {
-    "id": 34579831062,
-    "sha": "96ace20214ef266264ca2c03706f410d143f5ddd",
-    "short_sha": "96ace20",
-    "message": "fix: 插件卸载缺少 REQUEST_DELETE_PACKAGES 权限导致系统卸载器立即退出",
-    "created_at": "2026-09-11T08:32:27Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34579831062"
-  },
-  {
-    "id": 34560371284,
-    "sha": "dfca7fa7f28134b98f2d87f5c4e83aaef4e1fc38",
-    "short_sha": "dfca7fa",
-    "message": "refactor: FCLNumberSeekBar 重构为 Kotlin，轨道加粗为胶囊条、数值文本去除底衬并修复两端点击热区与显示位置不一致",
-    "created_at": "2026-09-11T03:52:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34560371284"
-  },
-  {
-    "id": 34560371306,
-    "sha": "dfca7fa7f28134b98f2d87f5c4e83aaef4e1fc38",
-    "short_sha": "dfca7fa",
-    "message": "refactor: FCLNumberSeekBar 重构为 Kotlin，轨道加粗为胶囊条、数值文本去除底衬并修复两端点击热区与显示位置不一致",
-    "created_at": "2026-09-11T03:52:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34560371306"
-  },
-  {
-    "id": 34556332723,
-    "sha": "c755316baa86334f3579b24a04ded9123f9ec39e",
-    "short_sha": "c755316",
-    "message": "refactor: 右菜单重构为顶部图标 Tab 直接显示分类内容，物品栏缩放移入手势页、控件不透明度移入左菜单、锁定/隐藏控件移入调试页",
-    "created_at": "2026-09-11T02:53:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34556332723"
   }
 ]
