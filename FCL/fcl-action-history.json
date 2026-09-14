@@ -1,5 +1,85 @@
 [
   {
+    "id": 34831622399,
+    "sha": "4085d957c5013bad194f0a0ab9b36b8c4b42212f",
+    "short_sha": "4085d95",
+    "message": "merge: 合并 main（下载源重构 squash 版、SDL 输入法分流、FCLNumberSeekBar 自绘）并解决冲突",
+    "created_at": "2026-09-14T10:07:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34831622399"
+  },
+  {
+    "id": 34831622432,
+    "sha": "4085d957c5013bad194f0a0ab9b36b8c4b42212f",
+    "short_sha": "4085d95",
+    "message": "merge: 合并 main（下载源重构 squash 版、SDL 输入法分流、FCLNumberSeekBar 自绘）并解决冲突",
+    "created_at": "2026-09-14T10:07:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34831622432"
+  },
+  {
+    "id": 34831598050,
+    "sha": "4085d957c5013bad194f0a0ab9b36b8c4b42212f",
+    "short_sha": "4085d95",
+    "message": "merge: 合并 main（下载源重构 squash 版、SDL 输入法分流、FCLNumberSeekBar 自绘）并解决冲突",
+    "created_at": "2026-09-14T10:07:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34831598050"
+  },
+  {
+    "id": 34831598021,
+    "sha": "4085d957c5013bad194f0a0ab9b36b8c4b42212f",
+    "short_sha": "4085d95",
+    "message": "merge: 合并 main（下载源重构 squash 版、SDL 输入法分流、FCLNumberSeekBar 自绘）并解决冲突",
+    "created_at": "2026-09-14T10:07:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34831598021"
+  },
+  {
+    "id": 34829951352,
+    "sha": "b68f069fedd6f76070194b49a5b504b4e881b872",
+    "short_sha": "b68f069",
+    "message": "Merge pull request #1835 from FCL-Team/refactor/download-provider\n\nfeat: 下载源体系跟进上游 HMCL 重构，附带下载页聚合搜索与 MultiMC 整合包导入同步",
+    "created_at": "2026-09-14T09:49:00Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34829951352"
+  },
+  {
+    "id": 34829951448,
+    "sha": "b68f069fedd6f76070194b49a5b504b4e881b872",
+    "short_sha": "b68f069",
+    "message": "Merge pull request #1835 from FCL-Team/refactor/download-provider\n\nfeat: 下载源体系跟进上游 HMCL 重构，附带下载页聚合搜索与 MultiMC 整合包导入同步",
+    "created_at": "2026-09-14T09:49:00Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34829951448"
+  },
+  {
+    "id": 34829765390,
+    "sha": "d0a49e47b491c2e3adc265d397288377aadf5022",
+    "short_sha": "d0a49e4",
+    "message": "refactor: 跟进上游 HMCL 下载源体系重构（DownloadProvider 全链路）\n\n- 接口重写：getVersionListURL→getVersionListURLs 多候选、删除 getAssetBaseURL、\n  getVersionListById(String)→getVersionList(GameComponentType) 枚举驱动、\n  injectURLsWithCandidates 去重\n- 新增 GameComponentType / ComponentRemoteVersion / ComponentVersionList（Task 化），\n  删除 VersionList / RemoteVersion / AdaptedDownloadProvider / BalancedDownloadProvider /\n  MultipleSourceVersionList / OptiFine302VersionList\n- AutoDownloadProvider 改为版本列表/文件下载双候选列表，多源刷新具名 Task\n  （修复安装静默窗口）；新增 DownloadProviderWrapper 热替换\n- BMCLAPI 替换表拆分 fallbackReplacement：Modrinth/CurseForge 镜像改为先直连后回退，\n  新增 fmllibs 镜像；新增 NetworkUtils.doGet(List<URL>) 候选回退\n- 新增 legacyfabric 组件（Legacy Fabric / API 版本列表与安装任务）\n- 设置模型迁移：DownloadSource 枚举 + versionListSource/fileDownloadSource 双设置\n  （含旧配置迁移），默认源按网络环境自动排序；下载错误识别 DNS 污染\n- 版本列表全部转 GetTask/Task 链；UI（设置页/下载页/管理页）同步适配\n- DownloadProviderWrapper 按组件类型缓存代理版本列表，修复无状态页面\n  refresh/loadVersions 读到不同实例导致列表恒空\n- GetTask JSON 解析失败时清除 ETag 缓存条目自愈，修复网络劣化后 304 永久\n  返回坏缓存；新增下载功能 androidTest\n- 新增 BMCLAPI 候选回退与 GameComponentType 映射单元测试",
+    "created_at": "2026-09-14T09:45:51Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34829765390"
+  },
+  {
+    "id": 34829765358,
+    "sha": "d0a49e47b491c2e3adc265d397288377aadf5022",
+    "short_sha": "d0a49e4",
+    "message": "refactor: 跟进上游 HMCL 下载源体系重构（DownloadProvider 全链路）\n\n- 接口重写：getVersionListURL→getVersionListURLs 多候选、删除 getAssetBaseURL、\n  getVersionListById(String)→getVersionList(GameComponentType) 枚举驱动、\n  injectURLsWithCandidates 去重\n- 新增 GameComponentType / ComponentRemoteVersion / ComponentVersionList（Task 化），\n  删除 VersionList / RemoteVersion / AdaptedDownloadProvider / BalancedDownloadProvider /\n  MultipleSourceVersionList / OptiFine302VersionList\n- AutoDownloadProvider 改为版本列表/文件下载双候选列表，多源刷新具名 Task\n  （修复安装静默窗口）；新增 DownloadProviderWrapper 热替换\n- BMCLAPI 替换表拆分 fallbackReplacement：Modrinth/CurseForge 镜像改为先直连后回退，\n  新增 fmllibs 镜像；新增 NetworkUtils.doGet(List<URL>) 候选回退\n- 新增 legacyfabric 组件（Legacy Fabric / API 版本列表与安装任务）\n- 设置模型迁移：DownloadSource 枚举 + versionListSource/fileDownloadSource 双设置\n  （含旧配置迁移），默认源按网络环境自动排序；下载错误识别 DNS 污染\n- 版本列表全部转 GetTask/Task 链；UI（设置页/下载页/管理页）同步适配\n- DownloadProviderWrapper 按组件类型缓存代理版本列表，修复无状态页面\n  refresh/loadVersions 读到不同实例导致列表恒空\n- GetTask JSON 解析失败时清除 ETag 缓存条目自愈，修复网络劣化后 304 永久\n  返回坏缓存；新增下载功能 androidTest\n- 新增 BMCLAPI 候选回退与 GameComponentType 映射单元测试",
+    "created_at": "2026-09-14T09:45:51Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34829765358"
+  },
+  {
+    "id": 34829760606,
+    "sha": "d0a49e47b491c2e3adc265d397288377aadf5022",
+    "short_sha": "d0a49e4",
+    "message": "refactor: 跟进上游 HMCL 下载源体系重构（DownloadProvider 全链路）\n\n- 接口重写：getVersionListURL→getVersionListURLs 多候选、删除 getAssetBaseURL、\n  getVersionListById(String)→getVersionList(GameComponentType) 枚举驱动、\n  injectURLsWithCandidates 去重\n- 新增 GameComponentType / ComponentRemoteVersion / ComponentVersionList（Task 化），\n  删除 VersionList / RemoteVersion / AdaptedDownloadProvider / BalancedDownloadProvider /\n  MultipleSourceVersionList / OptiFine302VersionList\n- AutoDownloadProvider 改为版本列表/文件下载双候选列表，多源刷新具名 Task\n  （修复安装静默窗口）；新增 DownloadProviderWrapper 热替换\n- BMCLAPI 替换表拆分 fallbackReplacement：Modrinth/CurseForge 镜像改为先直连后回退，\n  新增 fmllibs 镜像；新增 NetworkUtils.doGet(List<URL>) 候选回退\n- 新增 legacyfabric 组件（Legacy Fabric / API 版本列表与安装任务）\n- 设置模型迁移：DownloadSource 枚举 + versionListSource/fileDownloadSource 双设置\n  （含旧配置迁移），默认源按网络环境自动排序；下载错误识别 DNS 污染\n- 版本列表全部转 GetTask/Task 链；UI（设置页/下载页/管理页）同步适配\n- DownloadProviderWrapper 按组件类型缓存代理版本列表，修复无状态页面\n  refresh/loadVersions 读到不同实例导致列表恒空\n- GetTask JSON 解析失败时清除 ETag 缓存条目自愈，修复网络劣化后 304 永久\n  返回坏缓存；新增下载功能 androidTest\n- 新增 BMCLAPI 候选回退与 GameComponentType 映射单元测试",
+    "created_at": "2026-09-14T09:45:51Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34829760606"
+  },
+  {
+    "id": 34829760559,
+    "sha": "d0a49e47b491c2e3adc265d397288377aadf5022",
+    "short_sha": "d0a49e4",
+    "message": "refactor: 跟进上游 HMCL 下载源体系重构（DownloadProvider 全链路）\n\n- 接口重写：getVersionListURL→getVersionListURLs 多候选、删除 getAssetBaseURL、\n  getVersionListById(String)→getVersionList(GameComponentType) 枚举驱动、\n  injectURLsWithCandidates 去重\n- 新增 GameComponentType / ComponentRemoteVersion / ComponentVersionList（Task 化），\n  删除 VersionList / RemoteVersion / AdaptedDownloadProvider / BalancedDownloadProvider /\n  MultipleSourceVersionList / OptiFine302VersionList\n- AutoDownloadProvider 改为版本列表/文件下载双候选列表，多源刷新具名 Task\n  （修复安装静默窗口）；新增 DownloadProviderWrapper 热替换\n- BMCLAPI 替换表拆分 fallbackReplacement：Modrinth/CurseForge 镜像改为先直连后回退，\n  新增 fmllibs 镜像；新增 NetworkUtils.doGet(List<URL>) 候选回退\n- 新增 legacyfabric 组件（Legacy Fabric / API 版本列表与安装任务）\n- 设置模型迁移：DownloadSource 枚举 + versionListSource/fileDownloadSource 双设置\n  （含旧配置迁移），默认源按网络环境自动排序；下载错误识别 DNS 污染\n- 版本列表全部转 GetTask/Task 链；UI（设置页/下载页/管理页）同步适配\n- DownloadProviderWrapper 按组件类型缓存代理版本列表，修复无状态页面\n  refresh/loadVersions 读到不同实例导致列表恒空\n- GetTask JSON 解析失败时清除 ETag 缓存条目自愈，修复网络劣化后 304 永久\n  返回坏缓存；新增下载功能 androidTest\n- 新增 BMCLAPI 候选回退与 GameComponentType 映射单元测试",
+    "created_at": "2026-09-14T09:45:51Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34829760559"
+  },
+  {
     "id": 34748535680,
     "sha": "c1ba508b601a2ca074fa71ee63ec7c3a50665d32",
     "short_sha": "c1ba508",
@@ -152,20 +232,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34732691675"
   },
   {
-    "id": 34732677421,
-    "sha": "2491dd4befaea13f56b935986c3053e3586ed59a",
-    "short_sha": "2491dd4",
-    "message": "fix: GetTask JSON 解析失败时清除 ETag 缓存条目自愈 + 下载功能 androidTest\n\n修复：大响应（version_manifest）在网络劣化时被截断，截断正文会连同 ETag\n一起写入缓存，此后每次 If-None-Match 命中 304 永久返回坏缓存（JSON EOF）。\nthenGetJsonAsync 解析失败时移除对应 URL 的缓存条目，下次强制重新下载；\nCacheRepository.removeRemoteEntry 增加 String url 重载。\n\n测试（androidTest，29 用例）：\n- DownloadProviderTest：wrapper 按组件类型缓存与热替换、缓存实例数据可见\n  （ba705310 回归锚点）、多源回退/全失败静默降级、候选聚合、游戏/Forge/\n  Fabric/LegacyFabric/API/OptiFine/NeoForge/Cleanroom 列表真实网络刷新\n- DownloadSourceMigrationTest：旧配置四组合迁移、新格式防降级、空/未知值\n  回退、枚举名往返、DownloadProviders 装配热切换与候选数\n- NetworkUtilsDoGetTest：候选回退、聚合 suppressed、空候选\n\n模拟器 192.168.2.8 全量 androidTest 连续两轮 135/135 通过",
-    "created_at": "2026-09-12T08:27:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34732677421"
-  },
-  {
     "id": 34732677391,
     "sha": "2491dd4befaea13f56b935986c3053e3586ed59a",
     "short_sha": "2491dd4",
     "message": "fix: GetTask JSON 解析失败时清除 ETag 缓存条目自愈 + 下载功能 androidTest\n\n修复：大响应（version_manifest）在网络劣化时被截断，截断正文会连同 ETag\n一起写入缓存，此后每次 If-None-Match 命中 304 永久返回坏缓存（JSON EOF）。\nthenGetJsonAsync 解析失败时移除对应 URL 的缓存条目，下次强制重新下载；\nCacheRepository.removeRemoteEntry 增加 String url 重载。\n\n测试（androidTest，29 用例）：\n- DownloadProviderTest：wrapper 按组件类型缓存与热替换、缓存实例数据可见\n  （ba705310 回归锚点）、多源回退/全失败静默降级、候选聚合、游戏/Forge/\n  Fabric/LegacyFabric/API/OptiFine/NeoForge/Cleanroom 列表真实网络刷新\n- DownloadSourceMigrationTest：旧配置四组合迁移、新格式防降级、空/未知值\n  回退、枚举名往返、DownloadProviders 装配热切换与候选数\n- NetworkUtilsDoGetTest：候选回退、聚合 suppressed、空候选\n\n模拟器 192.168.2.8 全量 androidTest 连续两轮 135/135 通过",
     "created_at": "2026-09-12T08:27:35Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34732677391"
+  },
+  {
+    "id": 34732677421,
+    "sha": "2491dd4befaea13f56b935986c3053e3586ed59a",
+    "short_sha": "2491dd4",
+    "message": "fix: GetTask JSON 解析失败时清除 ETag 缓存条目自愈 + 下载功能 androidTest\n\n修复：大响应（version_manifest）在网络劣化时被截断，截断正文会连同 ETag\n一起写入缓存，此后每次 If-None-Match 命中 304 永久返回坏缓存（JSON EOF）。\nthenGetJsonAsync 解析失败时移除对应 URL 的缓存条目，下次强制重新下载；\nCacheRepository.removeRemoteEntry 增加 String url 重载。\n\n测试（androidTest，29 用例）：\n- DownloadProviderTest：wrapper 按组件类型缓存与热替换、缓存实例数据可见\n  （ba705310 回归锚点）、多源回退/全失败静默降级、候选聚合、游戏/Forge/\n  Fabric/LegacyFabric/API/OptiFine/NeoForge/Cleanroom 列表真实网络刷新\n- DownloadSourceMigrationTest：旧配置四组合迁移、新格式防降级、空/未知值\n  回退、枚举名往返、DownloadProviders 装配热切换与候选数\n- NetworkUtilsDoGetTest：候选回退、聚合 suppressed、空候选\n\n模拟器 192.168.2.8 全量 androidTest 连续两轮 135/135 通过",
+    "created_at": "2026-09-12T08:27:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34732677421"
   },
   {
     "id": 34731863855,
@@ -318,85 +398,5 @@
     "message": "refactor: 右菜单重构为顶部图标 Tab 直接显示分类内容，物品栏缩放移入手势页、控件不透明度移入左菜单、锁定/隐藏控件移入调试页",
     "created_at": "2026-09-11T02:53:03Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34556332723"
-  },
-  {
-    "id": 34556332685,
-    "sha": "c755316baa86334f3579b24a04ded9123f9ec39e",
-    "short_sha": "c755316",
-    "message": "refactor: 右菜单重构为顶部图标 Tab 直接显示分类内容，物品栏缩放移入手势页、控件不透明度移入左菜单、锁定/隐藏控件移入调试页",
-    "created_at": "2026-09-11T02:53:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34556332685"
-  },
-  {
-    "id": 34444553324,
-    "sha": "64c034885923b87ce5d08981e80fd7a360614fe9",
-    "short_sha": "64c0348",
-    "message": "fix: 下载模组列表已安装标记实时刷新——扫描完成后通知列表、下载成功回调触发重检、payload 局部绑定避免动画重播",
-    "created_at": "2026-09-10T06:16:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34444553324"
-  },
-  {
-    "id": 34444553348,
-    "sha": "64c034885923b87ce5d08981e80fd7a360614fe9",
-    "short_sha": "64c0348",
-    "message": "fix: 下载模组列表已安装标记实时刷新——扫描完成后通知列表、下载成功回调触发重检、payload 局部绑定避免动画重播",
-    "created_at": "2026-09-10T06:16:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34444553348"
-  },
-  {
-    "id": 34443206498,
-    "sha": "e1d6bba2e6f4c99445c95bf4f893f275db5cd12e",
-    "short_sha": "e1d6bba",
-    "message": "feat: 渲染器版本上限调整——判断/展示双轨版本号与 26.3 版本目录",
-    "created_at": "2026-09-10T05:57:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34443206498"
-  },
-  {
-    "id": 34443206519,
-    "sha": "e1d6bba2e6f4c99445c95bf4f893f275db5cd12e",
-    "short_sha": "e1d6bba",
-    "message": "feat: 渲染器版本上限调整——判断/展示双轨版本号与 26.3 版本目录",
-    "created_at": "2026-09-10T05:57:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34443206519"
-  },
-  {
-    "id": 34441132991,
-    "sha": "2f97c24377bf680f55c0199f2052caab3f80ac42",
-    "short_sha": "2f97c24",
-    "message": "修正渲染器版本适配情况 (#1814)\n\n* update\n\n* updatw\n\n* updatr",
-    "created_at": "2026-09-10T05:27:20Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34441132991"
-  },
-  {
-    "id": 34441132970,
-    "sha": "2f97c24377bf680f55c0199f2052caab3f80ac42",
-    "short_sha": "2f97c24",
-    "message": "修正渲染器版本适配情况 (#1814)\n\n* update\n\n* updatw\n\n* updatr",
-    "created_at": "2026-09-10T05:27:20Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34441132970"
-  },
-  {
-    "id": 34440130417,
-    "sha": "383c3717655cd793162f72e614a90fa640b874cb",
-    "short_sha": "383c371",
-    "message": "Update strings.xml",
-    "created_at": "2026-09-10T05:12:10Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34440130417"
-  },
-  {
-    "id": 34439702661,
-    "sha": "24e09e80a0f17acc48e7328d14cd093cbc7e4983",
-    "short_sha": "24e09e8",
-    "message": "chore(l10n): update Japanese translation\n\nchore(l10n): update Japanese translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: 方長 <q1953775078@gmail.com>\nLanguage: Japanese\nProgress: 6.4% (86 of 1341 strings)\nProgress: 9.1% (123 of 1341 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/ja/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-09-10T05:05:32Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34439702661"
-  },
-  {
-    "id": 34439388338,
-    "sha": "5f7483f9365074c33ad2688a6583bc417ff995c5",
-    "short_sha": "5f7483f",
-    "message": "feat: 控制布局编辑与运行时增强——双角手柄缩放、悬浮操作栏、控件组管理面板、滑动链、摇杆死区与前进锁、全局控件不透明度\n\n* feat: 控制布局编辑增强——双角手柄缩放、编辑参考组、悬浮操作栏\n\n- 编辑模式选中控件后可拖动左上/右下手柄实时缩放（方向键强制等比），\n  位置与尺寸随锚点一起写回，修复缩放后视觉位置跳变\n- 新增\"显示其他布局组\"开关：编辑模式下其余布局组以半透明参考组渲染，\n  不响应触摸、不参与吸附\n- 选中控件显示悬浮操作栏（设置/复制/删除，淡入淡出过渡），\n  编辑对话框入口从控件迁移至 ViewManager\n- 摇杆缩放时同步圆角半径，修复杆体变方形\n- 触摸板空白处点击取消选中；操作提示文案同步多语言\n\n* feat: 控制布局运行时增强——滑动链、摇杆死区与前进锁、全局不透明度\n\n- 按钮新增滑动联动（swipable）：手指滑出边界自动释放，滑入相邻联动\n  按钮触发其按下，可滑动串联与滑回重按；Event 编辑页新增开关\n- 摇杆新增死区（位移比例不足视为未推动，杆体回中释放方向）与前进锁\n  （推杆正北超过阈值后松手保持前进，杆体描边变主题色提示，再次触摸\n  解除）；方向键事件页新增死区/前进锁/锁定阈值配置\n- 新增全局控件不透明度（右菜单功能分类滑条 10–100%），透明度合成\n  规则：一键隐藏 > 参考组 > 全局不透明度\n- 控制数据新增字段均为可选兼容（缺键回默认值），补序列化 roundTrip\n  测试；新字符串同步多语言\n\n* feat: 编辑模式右菜单替换为控件组管理面板\n\n- 开启编辑模式后，右侧菜单整体切换为控件组面板：列出全部布局组，\n  点击组名切换当前编辑组（主题色高亮），开关控制该组在编辑画布的\n  显示/隐藏（会话级临时显隐，不改持久属性），上移/下移按钮调整组\n  渲染层级（z 序，随布局持久化）\n- 顶部提供管理布局组入口（复用管理对话框，关闭后刷新左右菜单与\n  控件渲染）与完成编辑按钮\n- 切换当前编辑组逻辑提取为 GameMenu.selectViewGroup，左右菜单共用\n\n* refactor: 控件组管理全面迁移至编辑模式右菜单面板\n\n- 右菜单组行开关直接控制各控件组在编辑画布的显示/隐藏，默认全部\n  显示（非当前组以参考组半透明渲染），允许多组同时显示；移除左菜单\n  \"显示其他布局组\"总开关\n- 组行渲染层级调整从上移/下移按钮改为 Zalith 式长按拖动排序\n  （ItemTouchHelper，拖动实时交换、松手持久化并按新 z 序重建控件）\n- 组管理集成到各行：属性编辑（名称/初始可见性）与删除（带确认）\n  按钮直接作用于所在组，新建按钮位于面板顶部\n- 移除左菜单的当前布局组 Spinner、管理布局组入口与相关回调；\n  编辑模式切换控制器时自动选中第一个控件组\n\n* feat: 编辑模式再次轻点已选中控件时收起悬浮操作栏\n\n* fix: 切换布局方案刷新控件组面板，新增组改底部固定按钮\n\n- 修复切换布局方案后右侧控件组面板不跟随刷新的问题\n- 面板底部固定\"添加控件组\"按钮（不随列表滚动），编辑模式显示\n- 移除\"完成编辑\"按钮（退出编辑走左菜单编辑开关）及相关代码与字符串\n- 编辑模式下右侧菜单标题显示\"控件组\"，退出恢复\"设置\"\n\n* Update GameMenu.java\n\n* fix: 修复编辑模式下右侧菜单标题不跟随切换\n\n- editModeProperty 监听注册早于右菜单标题初始化，布局编辑器\n  （启动即编辑态）触发时标题未初始化被跳过，initRightMenu 末尾\n  补一次标题同步\n- 退出编辑改走 showCategories() 恢复设置中心，避免从二级分类\n  进入编辑后退出残留分类条目与返回按钮状态\n\n* Update RightMenuAdapter.kt\n\n* fix: 修复控件组拖动排序的首项不可拖动与拖至首位不生效\n\n顶部操作行移除后组行已从位置 0 开始，拖动索引转换仍按存在\n操作行偏移处理：首项被排除在可拖动范围外、拖至首位时目标索引\n为 -1 被拒绝。移除偏移，编辑模式列表位置即组索引\n\n* fix: 重构编辑拖动吸附，消除部分设备上的位置抖动\n\n旧实现先按手指增量 setX 再由吸附二次修正，下一帧手指增量又基于\n吸附后的 view 坐标计算，形成\"吸附→弹回\"的循环抖动。\n\n- 吸附改为解耦模型：期望位置每帧由手指屏幕坐标独立计算（相对按下\n  时的位置），吸附仅作为纯修正叠加，不再反馈到拖动基准\n- 两份重复的 autoFitPosition 合并为 ViewManager.snapPosition，\n  对齐规则不变（自身边缘对兄弟边缘/对边），阈值取吸附距离设置\n  （最小 2dp），参考线由 snapPosition 统一绘制与清理\n- 方向键拖动保留灵敏度乘子",
-    "created_at": "2026-09-10T05:00:54Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34439388338"
   }
 ]

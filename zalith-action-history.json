@@ -1,5 +1,93 @@
 [
   {
+    "id": 34831141860,
+    "sha": "4643e3b8695a75a01294e07df5bcf06c0f329e75",
+    "short_sha": "4643e3b",
+    "message": "Merge pull request #1869 from ZalithLauncher/chore/default_joystick\n\nchore: 控制布局中，新创建的摇杆控件的锁定事件默认添加 Ctrl",
+    "created_at": "2026-09-14T10:02:50Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34831141860"
+  },
+  {
+    "id": 34831059181,
+    "sha": "16a032056884ce4c7d2c938c90babd8da2118766",
+    "short_sha": "16a0320",
+    "message": "chore: 调整摇杆方向事件编辑器样式",
+    "created_at": "2026-09-14T10:01:47Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34831059181"
+  },
+  {
+    "id": 34828378361,
+    "sha": "d87783114ee24b381332ae1e1cdf962cc49d75e6",
+    "short_sha": "d877831",
+    "message": "chore: 新创建的摇杆控件的锁定事件默认添加 Ctrl",
+    "created_at": "2026-09-14T09:30:43Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34828378361"
+  },
+  {
+    "id": 34826885930,
+    "sha": "6ecc5ba0dbe2b775af96064e317c215388891246",
+    "short_sha": "6ecc5ba",
+    "message": "Merge pull request #1868 from ZalithLauncher/chore/update-default_layout\n\nchore: 更新默认控制布局",
+    "created_at": "2026-09-14T09:14:43Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34826885930"
+  },
+  {
+    "id": 34826837306,
+    "sha": "2fe7c4af9eb7861a9ab30db0ae332773c3531d86",
+    "short_sha": "2fe7c4a",
+    "message": "chore: 更新默认控制布局",
+    "created_at": "2026-09-14T09:14:04Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34826837306"
+  },
+  {
+    "id": 34826645942,
+    "sha": "d882c5d0c07f194a00cbb404a677f1c7c5428296",
+    "short_sha": "d882c5d",
+    "message": "Merge pull request #1843 from CiiLu/yy\n\nfeat: 支持长按运行 jar 文件按钮时单次选择 Java 运行时",
+    "created_at": "2026-09-14T09:12:00Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34826645942"
+  },
+  {
+    "id": 34825953519,
+    "sha": "8316f247a6a0754e72babd9ef1ec9a071e63661f",
+    "short_sha": "8316f24",
+    "message": "feat: 任务流对话框新增安装 JVM 实时日志卡片\n\n- 新增 TaskLogOutput 通用日志输出接口（@Keep）：支持定义标题、单行/多行\n  增量、发起/停止会话，内置 1000 行环形缓冲\n- 新增 ProcessLogTailer：主进程按字节偏移增量轮询 latest_process.log，\n  无侵入获取 :jvm 进程安装器的实时输出；自动处理 JRE 重试时的文件截断\n- GameInstaller 持有日志输出容器并暴露 logOutput；仅在进入前台安装时\n  创建会话，任务结束（含异常/取消）后停止并置空\n- ModPackInstaller、ModpackImporter（经 AbstractPack.buildTaskPhases\n  下发至 ModPackInfoTask/MCBBSPack/MultiMCPack）转发容器\n- TitleTaskFlowDialog 新增显式 logOutput 参数，非空时切换双栏布局：\n  右侧日志卡片（标题 + 可滚动日志行，自动滚动到底，不可关闭）\n- 覆盖安装游戏、加载器变更、整合包下载、本地导入四条安装流程；\n  其余对话框调用点零改动\n\n检查步骤：\n- compileDebugKotlin、assembleDebug、minifyReleaseWithR8 全部通过\n- R8 seeds.txt 确认 @Keep 生效：TaskLogOutput 类及 19 项成员混淆后保留\n- usage.txt 复查仅 Kotlin 合成桥接被内联移除，无类/成员误裁剪\n- 单元测试 8 例失败经干净工作区复现，确认为存量环境问题，与本次无关",
+    "created_at": "2026-09-14T09:02:15Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34825953519"
+  },
+  {
+    "id": 34817696515,
+    "sha": "67cb0283f9c0ee28d0604d50d6f3d24de6f5c432",
+    "short_sha": "67cb028",
+    "message": "Merge pull request #1865 from ZalithLauncher/fix/jvm-service-globalcontext-init\n\nfix: 未初始化 GlobalContext 安装器在前台服务中启动失败 #1854 #1680 #1233",
+    "created_at": "2026-09-14T07:24:13Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34817696515"
+  },
+  {
+    "id": 34817660060,
+    "sha": "da54ae2af411c3104bc6d87035652b53161b0214",
+    "short_sha": "da54ae2",
+    "message": "fix: 未初始化 GlobalContext 安装器在前台服务中启动失败 #1854 #1680 #1233",
+    "created_at": "2026-09-14T07:23:38Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34817660060"
+  },
+  {
+    "id": 34816870005,
+    "sha": "c911fde23f891e8c81e34bf0e62b0ce55a272211",
+    "short_sha": "c911fde",
+    "message": "Merge pull request #1864 from ZalithLauncher/fix/jvm-default-charset-utf8\n\nfix: 强制游戏 JVM 使用 UTF-8 编码，修复 FTB 系模组无法正常初始化",
+    "created_at": "2026-09-14T07:13:35Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34816870005"
+  },
+  {
+    "id": 34813588360,
+    "sha": "07550b014a8752e30b8bc2a3eb019582d3b85bb7",
+    "short_sha": "07550b0",
+    "message": "fix: 强制游戏 JVM 使用 UTF-8 编码，修复 FTB 系模组无法正常初始化",
+    "created_at": "2026-09-14T06:27:39Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34813588360"
+  },
+  {
     "id": 34802307242,
     "sha": "e7d4af7699bad94064e3bb86c9843c3130a09ff6",
     "short_sha": "e7d4af7",
@@ -310,93 +398,5 @@
     "message": "Merge pull request #1821 from ZalithLauncher/feat/narrator-tts\n\nfeat: 支持在游戏内使用复述功能",
     "created_at": "2026-09-10T06:17:34Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34444564549"
-  },
-  {
-    "id": 34443417303,
-    "sha": "55698cd24dda07c82854d0f25915b05725b22440",
-    "short_sha": "55698cd",
-    "message": "update MioLibPatcher.jar",
-    "created_at": "2026-09-10T06:01:13Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34443417303"
-  },
-  {
-    "id": 34442882358,
-    "sha": "0af2818351fc25aa2fa5581c4363f383988715c5",
-    "short_sha": "0af2818",
-    "message": "Merge pull request #1824 from ZalithLauncher/feat/custom-game-resolution\n\nfeat: 支持自定义游戏分辨率",
-    "created_at": "2026-09-10T05:53:25Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34442882358"
-  },
-  {
-    "id": 34403453049,
-    "sha": "062c1eeff9907f66af29c5f7b13f077c31912fce",
-    "short_sha": "062c1ee",
-    "message": "Merge pull request #1810 from ZalithLauncher/fix/unlimited_fps\n\nfix: 解除游戏帧率对屏幕刷新率的锁定 #1807",
-    "created_at": "2026-09-09T20:50:26Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34403453049"
-  },
-  {
-    "id": 34403378701,
-    "sha": "b8cb6ba32df5ddea6d76f429c017d97483f57fa3",
-    "short_sha": "b8cb6ba",
-    "message": "feat: 支持自定义游戏分辨率",
-    "created_at": "2026-09-09T20:49:33Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34403378701"
-  },
-  {
-    "id": 34403349131,
-    "sha": "83ff86eb8814e6d230568466189bd80d67b40df8",
-    "short_sha": "83ff86e",
-    "message": "Merge pull request #1819 from ZalithLauncher/feat/vulkan-dependency-model\n\nfeat: 重构 Vulkan 检测，按 Minecraft 版本范围标注依赖",
-    "created_at": "2026-09-09T20:49:23Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34403349131"
-  },
-  {
-    "id": 34388485457,
-    "sha": "4637d071c4e95871ceb56b70943c2a69ec4b5ffa",
-    "short_sha": "4637d07",
-    "message": "Merge pull request #1822 from ZalithLauncher/fix/floating_ball_offscreen_after_resolution_change\n\nfix: 悬浮球位置在窗口尺寸变化后超出屏幕不可见",
-    "created_at": "2026-09-09T18:21:19Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34388485457"
-  },
-  {
-    "id": 34388443135,
-    "sha": "12a5f5ffcf5e51ff7784e9cf3f9f2a24a63124b7",
-    "short_sha": "12a5f5f",
-    "message": "fix: 悬浮球位置在窗口尺寸变化后超出屏幕不可见\n\n持久化的悬浮球坐标是像素值，系统（如游戏模式的分辨率切换）调整\n窗口尺寸后，原有仅在 onSizeChanged 时执行的钳制存在时序漏洞：\n全新 :game 进程首次布局时 isInitialized 尚未置位，钳制被跳过，\n且此后会话内不再有尺寸变化事件，导致悬浮球停留在越界坐标上。\n\n- 位置钳制移入 Modifier.offset，每次布局实时生效，不依赖事件时序\n- 移除首次测量钳制的 isInitialized 守卫，让持久化状态及时收敛\n- 手势按下时将状态吸附到实际渲染位置，避免从越界值起算导致拖动不跟手",
-    "created_at": "2026-09-09T18:19:35Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34388443135"
-  },
-  {
-    "id": 34382468391,
-    "sha": "fdd6d23faa12394472bfc282bf2d16b6a13dd1f6",
-    "short_sha": "fdd6d23",
-    "message": "[Do not use!] Added translation using Weblate (Estonian)",
-    "created_at": "2026-09-09T17:21:51Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34382468391"
-  },
-  {
-    "id": 34382468213,
-    "sha": "b0258c56c1b7c9092d7a9cd88581f08ab4aafbbf",
-    "short_sha": "b0258c5",
-    "message": "[Do not use!] Added translation using Weblate (Estonian)",
-    "created_at": "2026-09-09T17:21:58Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34382468213"
-  },
-  {
-    "id": 34381195389,
-    "sha": "536a14afaeeedbe537c16bd7bc5fe6c4df188f3b",
-    "short_sha": "536a14a",
-    "message": "feat: 复述播报改为异步排队并支持游戏侧即时截停",
-    "created_at": "2026-09-09T17:08:53Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34381195389"
-  },
-  {
-    "id": 34343540372,
-    "sha": "d22f3c24f266c0405465fcc1b8965716b74e0755",
-    "short_sha": "d22f3c2",
-    "message": "refactor: 复述桥接重构为假 flite 库方案",
-    "created_at": "2026-09-09T11:03:37Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34343540372"
   }
 ]
