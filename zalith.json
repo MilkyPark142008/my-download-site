@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 181160752,
         "digest": "sha256:0bd10cb063ebd5b835c3b6bbd68f91be3ed608fdd5bef144958ea67f2ef9cef6",
-        "download_count": 7729,
+        "download_count": 8461,
         "created_at": "2026-09-14T03:31:09Z",
         "updated_at": "2026-09-14T03:31:18Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.5.2_hotfix/ZalithLauncher-2.5.2_hotfix-arm64-v8a.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 173079339,
         "digest": "sha256:f96581fe8c1660cde94be9a2f4c42cc931ac3af23570f6a1f30e8d19e0f64f29",
-        "download_count": 193,
+        "download_count": 201,
         "created_at": "2026-09-14T03:31:09Z",
         "updated_at": "2026-09-14T03:31:18Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.5.2_hotfix/ZalithLauncher-2.5.2_hotfix-armeabi-v7a.apk"
@@ -140,7 +140,7 @@
         "state": "uploaded",
         "size": 161616605,
         "digest": "sha256:4f57231026a68c5de00c157a79745b074be164c3c93f55a66c316b2a9a414bb0",
-        "download_count": 80,
+        "download_count": 88,
         "created_at": "2026-09-14T03:31:09Z",
         "updated_at": "2026-09-14T03:31:17Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.5.2_hotfix/ZalithLauncher-2.5.2_hotfix-x86.apk"
@@ -176,7 +176,7 @@
         "state": "uploaded",
         "size": 186989693,
         "digest": "sha256:fbd28933f3812020c78db407e2d217337805839a3dd6caff610a2a8b91025bed",
-        "download_count": 70,
+        "download_count": 78,
         "created_at": "2026-09-14T03:31:09Z",
         "updated_at": "2026-09-14T03:31:18Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.5.2_hotfix/ZalithLauncher-2.5.2_hotfix-x86_64.apk"
@@ -212,7 +212,7 @@
         "state": "uploaded",
         "size": 354238187,
         "digest": "sha256:47a98f2181ffd2c5cfe931ecc0e6d405c406a7194dc7e12404b8c241da4dd699",
-        "download_count": 1602,
+        "download_count": 1752,
         "created_at": "2026-09-14T03:31:09Z",
         "updated_at": "2026-09-14T03:31:25Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.5.2_hotfix/ZalithLauncher-2.5.2_hotfix.apk"
@@ -223,8 +223,8 @@
     "body": "## Hotfix\r\n- R8 obfuscation causing Vulkan detection crash (by @MovTery)\r\n\r\n\r\n## Updates:\r\n- #1805: Added two-finger swipe scroll gesture in-game (by @MovTery)\r\n- #1811: Check and mark mods already installed for the current version on the mod download page (by @MovTery)\r\n- #1824: Added support for custom game resolution (by @MovTery)\r\n- #1821: Added support for using the Narrator in-game (by @MovTery)\r\n- #1827: File manager entries now use MD3E cards and colored circular icons (by @MovTery)\r\n- #1829: Foreground keep-alive for tasks to prevent interruption when switched to background (by @MovTery)\r\n- #1830: Added support for selecting and installing dependency projects when downloading resources (by @MovTery)\r\n- #1838: Display resource type badges in project details on the right side of the resource download screen (by @MovTery)\r\n\r\n## Refactors:\r\n- #1819: Refactored Vulkan detection, annotate dependencies by Minecraft version range (by @MovTery)\r\n\r\n## Changes:\r\n- #1830: On the resource download page, dependency project info is now cached asynchronously in the background (by @MovTery)\r\n- #1833: Version management top action bar adjusted to semi-transparent when custom background content is set (by @MovTery)\r\n\r\n## Fixes:\r\n- #1803: Corrected renderer version compatibility (by @Xirren)\r\n- #1804: Save playtime formatting not correctly decomposed into non-overlapping components (by @MovTery)\r\n- #1810: Removed frame rate lock to screen refresh rate (by @MovTery)\r\n- #1822: Floating ball position becomes off-screen and invisible after window size changes (by @MovTery)\r\n- #1844: Window size not refreshing properly when switching launcher to background (by @MovTery)\r\n- #1849: Terracotta multiplayer VPN service not entering foreground in time causing game process crash\r\n- #1850: SDL input method routed by render path, fixed inability to invoke soft keyboard in Controlify environment (by @MovTery)",
     "reactions": {
       "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/releases/388129677/reactions",
-      "total_count": 4,
-      "+1": 3,
+      "total_count": 5,
+      "+1": 4,
       "-1": 0,
       "laugh": 0,
       "hooray": 1,
