@@ -1,5 +1,21 @@
 [
   {
+    "id": 34963249316,
+    "sha": "72739538b8b682ff678c2f436de88c207c5f4f04",
+    "short_sha": "7273953",
+    "message": "optimize: 主题派生色透明度改为独立设置项，修复主色全透明时背景不可见",
+    "created_at": "2026-09-15T11:24:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34963249316"
+  },
+  {
+    "id": 34963249427,
+    "sha": "72739538b8b682ff678c2f436de88c207c5f4f04",
+    "short_sha": "7273953",
+    "message": "optimize: 主题派生色透明度改为独立设置项，修复主色全透明时背景不可见",
+    "created_at": "2026-09-15T11:24:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34963249427"
+  },
+  {
     "id": 34943360886,
     "sha": "e398181caaccf186247057dfa1ba0cf4e5cbc83e",
     "short_sha": "e398181",
@@ -382,21 +398,5 @@
     "message": "fix: GetTask JSON 解析失败时清除 ETag 缓存条目自愈 + 下载功能 androidTest\n\n修复：大响应（version_manifest）在网络劣化时被截断，截断正文会连同 ETag\n一起写入缓存，此后每次 If-None-Match 命中 304 永久返回坏缓存（JSON EOF）。\nthenGetJsonAsync 解析失败时移除对应 URL 的缓存条目，下次强制重新下载；\nCacheRepository.removeRemoteEntry 增加 String url 重载。\n\n测试（androidTest，29 用例）：\n- DownloadProviderTest：wrapper 按组件类型缓存与热替换、缓存实例数据可见\n  （ba705310 回归锚点）、多源回退/全失败静默降级、候选聚合、游戏/Forge/\n  Fabric/LegacyFabric/API/OptiFine/NeoForge/Cleanroom 列表真实网络刷新\n- DownloadSourceMigrationTest：旧配置四组合迁移、新格式防降级、空/未知值\n  回退、枚举名往返、DownloadProviders 装配热切换与候选数\n- NetworkUtilsDoGetTest：候选回退、聚合 suppressed、空候选\n\n模拟器 192.168.2.8 全量 androidTest 连续两轮 135/135 通过",
     "created_at": "2026-09-12T08:27:35Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34732677421"
-  },
-  {
-    "id": 34731863855,
-    "sha": "9ed6bcf313dbc503049b68788ed90c402a7bd952",
-    "short_sha": "9ed6bcf",
-    "message": "1.3.3.2",
-    "created_at": "2026-09-13T01:58:25Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34731863855"
-  },
-  {
-    "id": 34731863735,
-    "sha": "9ed6bcf313dbc503049b68788ed90c402a7bd952",
-    "short_sha": "9ed6bcf",
-    "message": "1.3.3.2",
-    "created_at": "2026-09-13T01:58:25Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34731863735"
   }
 ]
