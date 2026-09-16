@@ -1,5 +1,21 @@
 [
   {
+    "id": 35086098547,
+    "sha": "1f1db59c0396b6bf8add9fd707f6f0a09a1ef718",
+    "short_sha": "1f1db59",
+    "message": "fix: 微软登录结束时自动关闭内嵌登录页，返回键直接退出不回退网页；登录对话框补充长按可改用外部浏览器的说明",
+    "created_at": "2026-09-16T10:35:39Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35086098547"
+  },
+  {
+    "id": 35086098540,
+    "sha": "1f1db59c0396b6bf8add9fd707f6f0a09a1ef718",
+    "short_sha": "1f1db59",
+    "message": "fix: 微软登录结束时自动关闭内嵌登录页，返回键直接退出不回退网页；登录对话框补充长按可改用外部浏览器的说明",
+    "created_at": "2026-09-16T10:35:39Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35086098540"
+  },
+  {
     "id": 35058710414,
     "sha": "535270040375159910f81d324ccf66135a88c349",
     "short_sha": "5352700",
@@ -382,21 +398,5 @@
     "message": "optimize: FCLNumberSeekBar 轨道改为自绘，在数值文本两侧断开并圆角收口",
     "created_at": "2026-09-13T07:19:20Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34745123577"
-  },
-  {
-    "id": 34745123470,
-    "sha": "5046315ae761e640e80e7deb11ee6f2e7fe9ffc0",
-    "short_sha": "5046315",
-    "message": "optimize: FCLNumberSeekBar 轨道改为自绘，在数值文本两侧断开并圆角收口",
-    "created_at": "2026-09-13T07:19:20Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34745123470"
-  },
-  {
-    "id": 34745065126,
-    "sha": "3db3225328a0d6a38953c9b8e4624faa717c8b3e",
-    "short_sha": "3db3225",
-    "message": "fix: 收藏页左侧面板——类别选项直接展开、面板背景与卡片严格一致\n\n- 类别 Spinner 改为直接展开的选项列表（左栏空间充足无需下拉），\n  选中项主题次色 + 粗体，其余常规文字色，随主题联动\n- 面板背景改用与条目卡片完全相同的着色路径\n  （setBackgroundResource + backgroundTintList=ltColor，像素取样一致），\n  替换此前依赖共享 drawable 间接着色的写法（深浅主题下颜色不可控）",
-    "created_at": "2026-09-13T07:14:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34745065126"
   }
 ]
