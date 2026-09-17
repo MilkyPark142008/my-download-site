@@ -1,5 +1,61 @@
 [
   {
+    "id": 35243638900,
+    "sha": "3effc743609bdeeed60a3b5013885b6c25cf1cb6",
+    "short_sha": "3effc74",
+    "message": "chore: 缩小收藏页内容板块与过滤器板块之间的间隙",
+    "created_at": "2026-09-17T15:58:01Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35243638900"
+  },
+  {
+    "id": 35243439603,
+    "sha": "60f5dfcaa5c205eca3f917ff024b36861b9b6b3a",
+    "short_sha": "60f5dfc",
+    "message": "chore: 更换收藏页无收藏项目时，提示语上方的图标",
+    "created_at": "2026-09-17T15:56:00Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35243439603"
+  },
+  {
+    "id": 35243342666,
+    "sha": "3398ad7559f418079291411faf1e8775b8dedb36",
+    "short_sha": "3398ad7",
+    "message": "refactor: 收藏仓库协程化，MMKV 读写移至 IO 调度器",
+    "created_at": "2026-09-17T15:54:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35243342666"
+  },
+  {
+    "id": 35241457272,
+    "sha": "3771ad400e282a0cf8dae39e8a908fa0ef7ce372",
+    "short_sha": "3771ad4",
+    "message": "fix: 进入下载屏幕时初始化收藏仓库",
+    "created_at": "2026-09-17T15:37:22Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35241457272"
+  },
+  {
+    "id": 35240517452,
+    "sha": "514436a18a680464f2ce90e111c1b6a6b24c63f7",
+    "short_sha": "514436a",
+    "message": "chore: 已安装标识不再贴合条目底部",
+    "created_at": "2026-09-17T15:27:30Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35240517452"
+  },
+  {
+    "id": 35239592519,
+    "sha": "35a54998c781381d214bda19ad6783d071cd3b48",
+    "short_sha": "35a5499",
+    "message": "feat: 平台标识标签按平台品牌色区分",
+    "created_at": "2026-09-17T15:20:20Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35239592519"
+  },
+  {
+    "id": 35238170507,
+    "sha": "6e0149f8037d839f3b8e0d4789f43443a8a340fa",
+    "short_sha": "6e0149f",
+    "message": "feat: 下载屏幕新增资源收藏功能\n\n- 基于本地 MMKV 分平台存储收藏项目（Modrinth / CurseForge），数据结构为自定项目缓存\n- 搜索结果条目右下角与资源详情页项目卡片提供收藏开关\n- 新增收藏分页：悬浮分类操作栏、名称搜索、平台过滤、排序、模组加载器过滤\n- 收藏条目支持本地缓存态与远端数据态两态渲染，远端数据按需回写本地缓存\n- 点击收藏条目按资源类型跳转至对应下载分类屏幕详情页",
+    "created_at": "2026-09-17T15:07:08Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35238170507"
+  },
+  {
     "id": 35216128014,
     "sha": "d4d4200498fcb44057462f429849ce0f1fdc16cc",
     "short_sha": "d4d4200",
@@ -342,61 +398,5 @@
     "message": "fix: 切换启动器至后台时，未正常刷新窗口大小",
     "created_at": "2026-09-12T19:05:49Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34713153200"
-  },
-  {
-    "id": 34706025044,
-    "sha": "eb1cf355155cc5af0df03fc7d7a34a6f446c5c72",
-    "short_sha": "eb1cf35",
-    "message": "Merge pull request #1842 from CiiLu/git\n\nfix: .gitignore 缺少 LWJGL/*/build LWJGL/build",
-    "created_at": "2026-09-12T16:41:51Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34706025044"
-  },
-  {
-    "id": 34682411832,
-    "sha": "1e9be5652492bfa320c0b068f8653d6192c12a20",
-    "short_sha": "1e9be56",
-    "message": "perf: 已安装模组批量匹配限流4并发并缩小批次，匹配结果即时持久化",
-    "created_at": "2026-09-12T08:06:03Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34682411832"
-  },
-  {
-    "id": 34681843664,
-    "sha": "860460cafc69014677c8c75797902eddfebe7cad",
-    "short_sha": "860460c",
-    "message": "feat: 已安装模组匹配结果增量实时同步到界面",
-    "created_at": "2026-09-12T07:49:13Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34681843664"
-  },
-  {
-    "id": 34641113237,
-    "sha": "484bac2d9841ed0a28e2e3b7025e985fe9e6af12",
-    "short_sha": "484bac2",
-    "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1426 of 1426 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
-    "created_at": "2026-09-11T19:51:39Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34641113237"
-  },
-  {
-    "id": 34640951541,
-    "sha": "f9688e67be27c6c642a630a096153505804996dc",
-    "short_sha": "f9688e6",
-    "message": "fix: 下载模组页已安装模组扫描被导航反复取消",
-    "created_at": "2026-09-11T19:49:50Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34640951541"
-  },
-  {
-    "id": 34639746979,
-    "sha": "b7c73a4430ecd15d100aa6c7970b6f637df9d67b",
-    "short_sha": "b7c73a4",
-    "message": "Merge pull request #1838 from ZalithLauncher/feat/download-assets-classes-badge\n\nfeat: 下载资源屏幕右侧项目详情展示资源类型徽标",
-    "created_at": "2026-09-11T19:36:26Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34639746979"
-  },
-  {
-    "id": 34639704652,
-    "sha": "2c4fddc4e70bf119b5eb68eba7781f07d0f73b70",
-    "short_sha": "2c4fddc",
-    "message": "chore: 前置依赖UI组件显示资源类型",
-    "created_at": "2026-09-11T19:35:52Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34639704652"
   }
 ]
