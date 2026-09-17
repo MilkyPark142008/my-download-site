@@ -1,5 +1,53 @@
 [
   {
+    "id": 35215045934,
+    "sha": "afef685d249bd96b06a7551fad398f1e6235686c",
+    "short_sha": "afef685",
+    "message": "fix: 对话框重获焦点时恢复沉浸标志，修复多任务返回后导航栏常驻遮挡底部按钮；编辑控件对话框背景补 10dp inset 恢复屏幕边缘间隔",
+    "created_at": "2026-09-17T11:17:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35215045934"
+  },
+  {
+    "id": 35215045890,
+    "sha": "afef685d249bd96b06a7551fad398f1e6235686c",
+    "short_sha": "afef685",
+    "message": "fix: 对话框重获焦点时恢复沉浸标志，修复多任务返回后导航栏常驻遮挡底部按钮；编辑控件对话框背景补 10dp inset 恢复屏幕边缘间隔",
+    "created_at": "2026-09-17T11:17:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35215045890"
+  },
+  {
+    "id": 35213157589,
+    "sha": "ad32027bd601040a949fa7c8b42fe202e1fa53d1",
+    "short_sha": "ad32027",
+    "message": "feat: 新增支持FCL弹窗，点击启动游戏按保底概率触发",
+    "created_at": "2026-09-17T10:57:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35213157589"
+  },
+  {
+    "id": 35213157596,
+    "sha": "ad32027bd601040a949fa7c8b42fe202e1fa53d1",
+    "short_sha": "ad32027",
+    "message": "feat: 新增支持FCL弹窗，点击启动游戏按保底概率触发",
+    "created_at": "2026-09-17T10:57:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35213157596"
+  },
+  {
+    "id": 35208909338,
+    "sha": "d0dfcd049148241c3530323fdbdbefc4d28f1199",
+    "short_sha": "d0dfcd0",
+    "message": "optimize: 渲染器选择对话框打开时自动定位到当前选中的渲染器",
+    "created_at": "2026-09-17T10:07:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35208909338"
+  },
+  {
+    "id": 35208909360,
+    "sha": "d0dfcd049148241c3530323fdbdbefc4d28f1199",
+    "short_sha": "d0dfcd0",
+    "message": "optimize: 渲染器选择对话框打开时自动定位到当前选中的渲染器",
+    "created_at": "2026-09-17T10:07:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35208909360"
+  },
+  {
     "id": 35185145540,
     "sha": "b56ddd7c2182452a519531937ab5d867a15ef471",
     "short_sha": "b56ddd7",
@@ -350,53 +398,5 @@
     "message": "refactor: 跟进上游 HMCL 下载源体系重构（DownloadProvider 全链路）\n\n- 接口重写：getVersionListURL→getVersionListURLs 多候选、删除 getAssetBaseURL、\n  getVersionListById(String)→getVersionList(GameComponentType) 枚举驱动、\n  injectURLsWithCandidates 去重\n- 新增 GameComponentType / ComponentRemoteVersion / ComponentVersionList（Task 化），\n  删除 VersionList / RemoteVersion / AdaptedDownloadProvider / BalancedDownloadProvider /\n  MultipleSourceVersionList / OptiFine302VersionList\n- AutoDownloadProvider 改为版本列表/文件下载双候选列表，多源刷新具名 Task\n  （修复安装静默窗口）；新增 DownloadProviderWrapper 热替换\n- BMCLAPI 替换表拆分 fallbackReplacement：Modrinth/CurseForge 镜像改为先直连后回退，\n  新增 fmllibs 镜像；新增 NetworkUtils.doGet(List<URL>) 候选回退\n- 新增 legacyfabric 组件（Legacy Fabric / API 版本列表与安装任务）\n- 设置模型迁移：DownloadSource 枚举 + versionListSource/fileDownloadSource 双设置\n  （含旧配置迁移），默认源按网络环境自动排序；下载错误识别 DNS 污染\n- 版本列表全部转 GetTask/Task 链；UI（设置页/下载页/管理页）同步适配\n- DownloadProviderWrapper 按组件类型缓存代理版本列表，修复无状态页面\n  refresh/loadVersions 读到不同实例导致列表恒空\n- GetTask JSON 解析失败时清除 ETag 缓存条目自愈，修复网络劣化后 304 永久\n  返回坏缓存；新增下载功能 androidTest\n- 新增 BMCLAPI 候选回退与 GameComponentType 映射单元测试",
     "created_at": "2026-09-14T09:45:51Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34829765390"
-  },
-  {
-    "id": 34829765358,
-    "sha": "d0a49e47b491c2e3adc265d397288377aadf5022",
-    "short_sha": "d0a49e4",
-    "message": "refactor: 跟进上游 HMCL 下载源体系重构（DownloadProvider 全链路）\n\n- 接口重写：getVersionListURL→getVersionListURLs 多候选、删除 getAssetBaseURL、\n  getVersionListById(String)→getVersionList(GameComponentType) 枚举驱动、\n  injectURLsWithCandidates 去重\n- 新增 GameComponentType / ComponentRemoteVersion / ComponentVersionList（Task 化），\n  删除 VersionList / RemoteVersion / AdaptedDownloadProvider / BalancedDownloadProvider /\n  MultipleSourceVersionList / OptiFine302VersionList\n- AutoDownloadProvider 改为版本列表/文件下载双候选列表，多源刷新具名 Task\n  （修复安装静默窗口）；新增 DownloadProviderWrapper 热替换\n- BMCLAPI 替换表拆分 fallbackReplacement：Modrinth/CurseForge 镜像改为先直连后回退，\n  新增 fmllibs 镜像；新增 NetworkUtils.doGet(List<URL>) 候选回退\n- 新增 legacyfabric 组件（Legacy Fabric / API 版本列表与安装任务）\n- 设置模型迁移：DownloadSource 枚举 + versionListSource/fileDownloadSource 双设置\n  （含旧配置迁移），默认源按网络环境自动排序；下载错误识别 DNS 污染\n- 版本列表全部转 GetTask/Task 链；UI（设置页/下载页/管理页）同步适配\n- DownloadProviderWrapper 按组件类型缓存代理版本列表，修复无状态页面\n  refresh/loadVersions 读到不同实例导致列表恒空\n- GetTask JSON 解析失败时清除 ETag 缓存条目自愈，修复网络劣化后 304 永久\n  返回坏缓存；新增下载功能 androidTest\n- 新增 BMCLAPI 候选回退与 GameComponentType 映射单元测试",
-    "created_at": "2026-09-14T09:45:51Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34829765358"
-  },
-  {
-    "id": 34829760606,
-    "sha": "d0a49e47b491c2e3adc265d397288377aadf5022",
-    "short_sha": "d0a49e4",
-    "message": "refactor: 跟进上游 HMCL 下载源体系重构（DownloadProvider 全链路）\n\n- 接口重写：getVersionListURL→getVersionListURLs 多候选、删除 getAssetBaseURL、\n  getVersionListById(String)→getVersionList(GameComponentType) 枚举驱动、\n  injectURLsWithCandidates 去重\n- 新增 GameComponentType / ComponentRemoteVersion / ComponentVersionList（Task 化），\n  删除 VersionList / RemoteVersion / AdaptedDownloadProvider / BalancedDownloadProvider /\n  MultipleSourceVersionList / OptiFine302VersionList\n- AutoDownloadProvider 改为版本列表/文件下载双候选列表，多源刷新具名 Task\n  （修复安装静默窗口）；新增 DownloadProviderWrapper 热替换\n- BMCLAPI 替换表拆分 fallbackReplacement：Modrinth/CurseForge 镜像改为先直连后回退，\n  新增 fmllibs 镜像；新增 NetworkUtils.doGet(List<URL>) 候选回退\n- 新增 legacyfabric 组件（Legacy Fabric / API 版本列表与安装任务）\n- 设置模型迁移：DownloadSource 枚举 + versionListSource/fileDownloadSource 双设置\n  （含旧配置迁移），默认源按网络环境自动排序；下载错误识别 DNS 污染\n- 版本列表全部转 GetTask/Task 链；UI（设置页/下载页/管理页）同步适配\n- DownloadProviderWrapper 按组件类型缓存代理版本列表，修复无状态页面\n  refresh/loadVersions 读到不同实例导致列表恒空\n- GetTask JSON 解析失败时清除 ETag 缓存条目自愈，修复网络劣化后 304 永久\n  返回坏缓存；新增下载功能 androidTest\n- 新增 BMCLAPI 候选回退与 GameComponentType 映射单元测试",
-    "created_at": "2026-09-14T09:45:51Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34829760606"
-  },
-  {
-    "id": 34829760559,
-    "sha": "d0a49e47b491c2e3adc265d397288377aadf5022",
-    "short_sha": "d0a49e4",
-    "message": "refactor: 跟进上游 HMCL 下载源体系重构（DownloadProvider 全链路）\n\n- 接口重写：getVersionListURL→getVersionListURLs 多候选、删除 getAssetBaseURL、\n  getVersionListById(String)→getVersionList(GameComponentType) 枚举驱动、\n  injectURLsWithCandidates 去重\n- 新增 GameComponentType / ComponentRemoteVersion / ComponentVersionList（Task 化），\n  删除 VersionList / RemoteVersion / AdaptedDownloadProvider / BalancedDownloadProvider /\n  MultipleSourceVersionList / OptiFine302VersionList\n- AutoDownloadProvider 改为版本列表/文件下载双候选列表，多源刷新具名 Task\n  （修复安装静默窗口）；新增 DownloadProviderWrapper 热替换\n- BMCLAPI 替换表拆分 fallbackReplacement：Modrinth/CurseForge 镜像改为先直连后回退，\n  新增 fmllibs 镜像；新增 NetworkUtils.doGet(List<URL>) 候选回退\n- 新增 legacyfabric 组件（Legacy Fabric / API 版本列表与安装任务）\n- 设置模型迁移：DownloadSource 枚举 + versionListSource/fileDownloadSource 双设置\n  （含旧配置迁移），默认源按网络环境自动排序；下载错误识别 DNS 污染\n- 版本列表全部转 GetTask/Task 链；UI（设置页/下载页/管理页）同步适配\n- DownloadProviderWrapper 按组件类型缓存代理版本列表，修复无状态页面\n  refresh/loadVersions 读到不同实例导致列表恒空\n- GetTask JSON 解析失败时清除 ETag 缓存条目自愈，修复网络劣化后 304 永久\n  返回坏缓存；新增下载功能 androidTest\n- 新增 BMCLAPI 候选回退与 GameComponentType 映射单元测试",
-    "created_at": "2026-09-14T09:45:51Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34829760559"
-  },
-  {
-    "id": 34748535680,
-    "sha": "c1ba508b601a2ca074fa71ee63ec7c3a50665d32",
-    "short_sha": "c1ba508",
-    "message": "feat: 收藏页类别选项美化——卡片行 + 数量徽标，修复文字不可见\n\n- 类别选项改为卡片行：选中项主要主题色实底 + 粗体 + 自动对比色文字，\n  未选中项透明底，右侧显示各类别收藏数量徽标，随主题联动\n- 空状态标题/引导文字与星形图标改用次要主题色（use_theme_color / color2），\n  深色主色主题下不再使用低对比的 autoTint 白字\n- 修复选项文字不可见：FCLLinearLayout 行内 weight=1 分配失效导致文字被压成\n  12px 竖条，行布局改用 ConstraintLayout 约束；代码创建的 FCLTextView 补\n  setAutoTint(true) 使文字色随主题",
-    "created_at": "2026-09-13T08:47:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34748535680"
-  },
-  {
-    "id": 34748535683,
-    "sha": "c1ba508b601a2ca074fa71ee63ec7c3a50665d32",
-    "short_sha": "c1ba508",
-    "message": "feat: 收藏页类别选项美化——卡片行 + 数量徽标，修复文字不可见\n\n- 类别选项改为卡片行：选中项主要主题色实底 + 粗体 + 自动对比色文字，\n  未选中项透明底，右侧显示各类别收藏数量徽标，随主题联动\n- 空状态标题/引导文字与星形图标改用次要主题色（use_theme_color / color2），\n  深色主色主题下不再使用低对比的 autoTint 白字\n- 修复选项文字不可见：FCLLinearLayout 行内 weight=1 分配失效导致文字被压成\n  12px 竖条，行布局改用 ConstraintLayout 约束；代码创建的 FCLTextView 补\n  setAutoTint(true) 使文字色随主题",
-    "created_at": "2026-09-13T08:47:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34748535683"
-  },
-  {
-    "id": 34745829752,
-    "sha": "81060a50a3328c0914480949e58a7cec0c5856aa",
-    "short_sha": "81060a5",
-    "message": "Merge remote-tracking branch 'origin/main' into refactor/download-provider\n\n# Conflicts:\n#\tFCL/src/main/java/com/tungsten/fcl/setting/DownloadProviders.java",
-    "created_at": "2026-09-13T07:40:14Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34745829752"
   }
 ]
