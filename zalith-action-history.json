@@ -1,5 +1,77 @@
 [
   {
+    "id": 35277033662,
+    "sha": "a59418839319fee5eafc9fe90e0baaca9a7c93dc",
+    "short_sha": "a594188",
+    "message": "refactor: 滑动条组件迁移至 Material3 SliderState API",
+    "created_at": "2026-09-17T21:30:08Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35277033662"
+  },
+  {
+    "id": 35269802047,
+    "sha": "a6ed25d706e319eb806cec6750b246322ba1379b",
+    "short_sha": "a6ed25d",
+    "message": "Merge pull request #1900 from ZalithLauncher/main\n\nmerge main",
+    "created_at": "2026-09-17T20:16:19Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35269802047"
+  },
+  {
+    "id": 35269761438,
+    "sha": "b77b7f0a5ee7e7d70ba7f43fa06aa8265ed37d61",
+    "short_sha": "b77b7f0",
+    "message": "Merge pull request #1899 from ZalithLauncher/main\n\nmerge main",
+    "created_at": "2026-09-17T20:15:51Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35269761438"
+  },
+  {
+    "id": 35268570183,
+    "sha": "2eb7b6e1dd739734bed76598715311f0703fd771",
+    "short_sha": "2eb7b6e",
+    "message": "Merge pull request #1898 from ZalithLauncher/fix/addons_author\n\nfix: 平台项目作者名称太长时，显示异常",
+    "created_at": "2026-09-17T20:03:54Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35268570183"
+  },
+  {
+    "id": 35268511656,
+    "sha": "35965bd1695f672536b8bd9ff7ffd3b10d17f33d",
+    "short_sha": "35965bd",
+    "message": "fix: 平台项目作者名称太长时，显示异常",
+    "created_at": "2026-09-17T20:03:14Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35268511656"
+  },
+  {
+    "id": 35262788173,
+    "sha": "1e4ba6daaf484223add1f4ba90ccaa0c5dc20804",
+    "short_sha": "1e4ba6d",
+    "message": "Merge pull request #1897 from ZalithLauncher/feat/download-favorites\n\nfeat: 下载屏幕新增资源收藏功能 & 平台标识标签按平台品牌色区分",
+    "created_at": "2026-09-17T19:05:22Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35262788173"
+  },
+  {
+    "id": 35260524908,
+    "sha": "20622371013d3f1d28326dd43b63064e614bc5f7",
+    "short_sha": "2062237",
+    "message": "fix: 收藏页平台过滤器无法重新选中“全部”",
+    "created_at": "2026-09-17T18:43:01Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35260524908"
+  },
+  {
+    "id": 35259598712,
+    "sha": "d1672d8ef123265f026726f3044bbe32540debee",
+    "short_sha": "d1672d8",
+    "message": "feat: 收藏列表条目添加 animateItem 移除与重排动效",
+    "created_at": "2026-09-17T18:33:38Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35259598712"
+  },
+  {
+    "id": 35258427729,
+    "sha": "52f100b73967c5051dadaa714a0449ad39a37428",
+    "short_sha": "52f100b",
+    "message": "feat: 收藏条目远端不可用时标记失效（404 或被平台删除）",
+    "created_at": "2026-09-17T18:21:12Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35258427729"
+  },
+  {
     "id": 35243638900,
     "sha": "3effc743609bdeeed60a3b5013885b6c25cf1cb6",
     "short_sha": "3effc74",
@@ -326,77 +398,5 @@
     "message": "fix: CI release 构建改用 JDK 21，修复 AGP 9.3 lint 在 JDK 17 上的 NoSuchMethodError\n\nAGP 9.3 lint 内置的 intellij-core JavaDocParser 调用了 JDK 21 才有的\nList.removeLast()，Gradle 守护进程跑在 JDK 17 时 lintVitalAnalyzeRelease\n直接崩溃（issuetracker.google.com/issues/522845800，9.3.1 仍受影响）。\n编译目标保持 Java 17 字节码不变，已在本地用 JDK 21 完整验证\nassembleRelease 通过。",
     "created_at": "2026-09-13T16:20:28Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34768285908"
-  },
-  {
-    "id": 34766162575,
-    "sha": "1561cb21b632a5f17d906a847b6627163917d926",
-    "short_sha": "1561cb2",
-    "message": "bump version to 2.5.2",
-    "created_at": "2026-09-13T15:37:25Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34766162575"
-  },
-  {
-    "id": 34766130855,
-    "sha": "95c20cbb7cc8f4f86446766b444cc190fbc64ada",
-    "short_sha": "95c20cb",
-    "message": "Merge pull request #1852 from ZalithLauncher/weblate_terracotta\n\nWeblate terracotta",
-    "created_at": "2026-09-13T15:36:51Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34766130855"
-  },
-  {
-    "id": 34766110798,
-    "sha": "5a1e813d11c873c3c08e15c3dbbedee4bef7baed",
-    "short_sha": "5a1e813",
-    "message": "Merge pull request #1851 from ZalithLauncher/weblate_main\n\nWeblate main",
-    "created_at": "2026-09-13T15:36:28Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34766110798"
-  },
-  {
-    "id": 34766003833,
-    "sha": "dbb1b7362e2ef0f101d60e99668d53fa03a37f23",
-    "short_sha": "dbb1b73",
-    "message": "Merge pull request #1850 from ZalithLauncher/fix/sdl-ime-render-path\n\nfix: SDL 输入法按渲染路径分流，修复 Controlify 环境无法呼出软键盘",
-    "created_at": "2026-09-13T15:34:20Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34766003833"
-  },
-  {
-    "id": 34765945813,
-    "sha": "a8ef6c2f50a23fcd73cd566233a59a951a3dc894",
-    "short_sha": "a8ef6c2",
-    "message": "fix: SDL 输入法按渲染路径分流，修复 Controlify 环境无法呼出软键盘",
-    "created_at": "2026-09-13T15:17:44Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34765945813"
-  },
-  {
-    "id": 34763270521,
-    "sha": "a36726d44d5ef992b057aea1f4e424818913535e",
-    "short_sha": "a36726d",
-    "message": "Merge pull request #1849 from ZalithLauncher/fix/terracotta_fgs_timeout\n\nfix: 陶瓦联机 VPN 服务未及时进入前台导致游戏进程崩溃",
-    "created_at": "2026-09-13T14:38:52Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34763270521"
-  },
-  {
-    "id": 34763216723,
-    "sha": "e66de25c03120c9b495e56aad6d532c9bfee5d5f",
-    "short_sha": "e66de25",
-    "message": "fix: 陶瓦联机 VPN 服务未及时进入前台导致游戏进程崩溃\n\n- 服务所有经 startForegroundService 启动的路径统一先调用 startForeground，\n  并在进入前台失败时拒绝挂起的联机请求后优雅停止，避免系统抛出\n  ForegroundServiceDidNotStartInTimeException 导致 :game 进程崩溃\n- 联机模式未确定时通知改用兜底文案，不再返回 null\n- 前台服务类型由 connectedDevice 改为 specialUse：\n  connectedDevice 在 targetSdk 34+ 下要求额外资格权限，项目均未声明\n- 联机状态更新仅在服务运行时经 startService 投递，避免将未前台的服务重新拉起\n\nCloses #1839",
-    "created_at": "2026-09-13T14:37:07Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34763216723"
-  },
-  {
-    "id": 34713181160,
-    "sha": "e88c2dd0a6d27f5e740ba7fabcb26b7ae0de8719",
-    "short_sha": "e88c2dd",
-    "message": "Merge pull request #1844 from ZalithLauncher/fix/size_refresh\n\nfix: 切换启动器至后台时，未正常刷新窗口大小",
-    "created_at": "2026-09-12T19:06:28Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34713181160"
-  },
-  {
-    "id": 34713153200,
-    "sha": "499a242017018fdba3da21bf3f87214897890e72",
-    "short_sha": "499a242",
-    "message": "fix: 切换启动器至后台时，未正常刷新窗口大小",
-    "created_at": "2026-09-12T19:05:49Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34713153200"
   }
 ]
