@@ -1,5 +1,45 @@
 [
   {
+    "id": 35320256478,
+    "sha": "fa899bdfe629962e59e77c00615d17cc484d832b",
+    "short_sha": "fa899bd",
+    "message": "Merge pull request #1906 from ZalithLauncher/fix/mcbbs-modpack-args\n\nfix: MCBBS 整合包游戏参数与 JVM 参数导入导出错位",
+    "created_at": "2026-09-18T07:36:40Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35320256478"
+  },
+  {
+    "id": 35320215385,
+    "sha": "410f01b7e940ae210ac0355861c8d5356252eb5c",
+    "short_sha": "410f01b",
+    "message": "fix: MCBBS 整合包游戏参数与 JVM 参数导入导出错位（#1896）\n\n- 导入：launchArgument（游戏参数）写入新增的版本级 gameArgs 字段，\n  javaArgument（JVM 参数）写入 jvmArgs，不再被静默丢弃\n- 启动：版本游戏参数追加在命令行游戏参数末尾，可覆盖同名参数；\n  修复原先游戏参数被当作 JVM 选项导致无法启动的隐患\n- 导出：MCBBS 导出的游戏参数/JVM 参数输入框从版本配置预填，\n  导入↔导出回环不丢数据；MultiMC 导出 JVM 参数改读版本实际配置\n- 版本配置页新增「游戏参数」编辑框，提供 11 种语言的初始文案\n- 存量已导入版本不做自动迁移（无法与手输参数区分）",
+    "created_at": "2026-09-18T07:35:36Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35320215385"
+  },
+  {
+    "id": 35315859028,
+    "sha": "c5d934da987e8d06443614f2770b45ca7d0faa56",
+    "short_sha": "c5d934d",
+    "message": "Merge pull request #1905 from ZalithLauncher/fix/mod-fingerprint-scan-gc\n\nfix: 加载已安装模组时，模组指纹扫描逐字节装箱导致 GC 压力与加载缓慢",
+    "created_at": "2026-09-18T06:39:51Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35315859028"
+  },
+  {
+    "id": 35315786787,
+    "sha": "5c239107197289e78c6a6d64b6755e82756abfea",
+    "short_sha": "5c23910",
+    "message": "Merge pull request #1901 from ZalithLauncher/update/deps\n\nupdate: 更新项目依赖库",
+    "created_at": "2026-09-18T06:38:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35315786787"
+  },
+  {
+    "id": 35315733615,
+    "sha": "cd43c733ba1d7a707f5b8bad566630ed0277b19e",
+    "short_sha": "cd43c73",
+    "message": "fix: 模组指纹扫描逐字节装箱导致 GC 压力与加载缓慢\n\n扫描热循环中以 值 in List<Int> 判断剔除字节，会按字节装箱\n（Integer 缓存仅覆盖 -128..127，约一半字节各分配一个新对象），\n并对 4 元素列表做线性查找；SHA-1 与 MurmurHash2 两遍全文扫描\n叠加后产生海量小对象，造成持续并发 GC 与扫描耗时暴涨。\n\n改用 256 长度 BooleanArray 查找表，逐字节判断零分配、O(1)；\nSHA-1 扫描循环外捕获一次协程上下文，按块检查取消。\n\n新增自包含单测与 commons-codec 参考实现比对哈希语义不变。",
+    "created_at": "2026-09-18T06:37:37Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35315733615"
+  },
+  {
     "id": 35277033662,
     "sha": "a59418839319fee5eafc9fe90e0baaca9a7c93dc",
     "short_sha": "a594188",
@@ -358,45 +398,5 @@
     "message": "fix: 强制游戏 JVM 使用 UTF-8 编码，修复 FTB 系模组无法正常初始化",
     "created_at": "2026-09-14T06:27:39Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34813588360"
-  },
-  {
-    "id": 34802307242,
-    "sha": "e7d4af7699bad94064e3bb86c9843c3130a09ff6",
-    "short_sha": "e7d4af7",
-    "message": "bump version to 2.5.2_hotfix",
-    "created_at": "2026-09-14T03:19:28Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34802307242"
-  },
-  {
-    "id": 34802225789,
-    "sha": "e7d4af7699bad94064e3bb86c9843c3130a09ff6",
-    "short_sha": "e7d4af7",
-    "message": "bump version to 2.5.2_hotfix",
-    "created_at": "2026-09-14T03:19:28Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34802225789"
-  },
-  {
-    "id": 34802100018,
-    "sha": "2868026d05fee74879f586a790136ae343e736b6",
-    "short_sha": "2868026",
-    "message": "hotfix: R8 混淆导致 Vulkan 检测失效 #1856 #1853",
-    "created_at": "2026-09-14T03:16:54Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34802100018"
-  },
-  {
-    "id": 34768565955,
-    "sha": "cdc1c8ed56a4ea7c218fe84d6b31503366a1e7e4",
-    "short_sha": "cdc1c8e",
-    "message": "fix: CI release 构建改用 JDK 21，修复 AGP 9.3 lint 在 JDK 17 上的 NoSuchMethodError\n\nAGP 9.3 lint 内置的 intellij-core JavaDocParser 调用了 JDK 21 才有的\nList.removeLast()，Gradle 守护进程跑在 JDK 17 时 lintVitalAnalyzeRelease\n直接崩溃（issuetracker.google.com/issues/522845800，9.3.1 仍受影响）。\n编译目标保持 Java 17 字节码不变，已在本地用 JDK 21 完整验证\nassembleRelease 通过。",
-    "created_at": "2026-09-13T16:20:28Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34768565955"
-  },
-  {
-    "id": 34768285908,
-    "sha": "cdc1c8ed56a4ea7c218fe84d6b31503366a1e7e4",
-    "short_sha": "cdc1c8e",
-    "message": "fix: CI release 构建改用 JDK 21，修复 AGP 9.3 lint 在 JDK 17 上的 NoSuchMethodError\n\nAGP 9.3 lint 内置的 intellij-core JavaDocParser 调用了 JDK 21 才有的\nList.removeLast()，Gradle 守护进程跑在 JDK 17 时 lintVitalAnalyzeRelease\n直接崩溃（issuetracker.google.com/issues/522845800，9.3.1 仍受影响）。\n编译目标保持 Java 17 字节码不变，已在本地用 JDK 21 完整验证\nassembleRelease 通过。",
-    "created_at": "2026-09-13T16:20:28Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34768285908"
   }
 ]
