@@ -1,5 +1,37 @@
 [
   {
+    "id": 35374406312,
+    "sha": "28ea087233434dcf909309299cb710a6750a69ec",
+    "short_sha": "28ea087",
+    "message": "Merge remote-tracking branch 'origin/main' into feat/new_main_page\n\n# Conflicts:\n#\tZalithLauncher/src/main/java/com/movtery/zalithlauncher/ui/activities/MainActivity.kt",
+    "created_at": "2026-09-18T17:25:13Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35374406312"
+  },
+  {
+    "id": 35371777767,
+    "sha": "1bef4ab9c49ee98db46c4fa39a6ea7b74dfac0b3",
+    "short_sha": "1bef4ab",
+    "message": "Merge pull request #1911 from ZalithLauncher/refactor/version-encapsulate-gamepath\n\nrefactor: Version 封装游戏目录，版本链路路径由 Version 实例提供",
+    "created_at": "2026-09-18T17:00:17Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35371777767"
+  },
+  {
+    "id": 35371451164,
+    "sha": "192aaf7d55e96e3b364d33dd40ca9606107e5bb4",
+    "short_sha": "192aaf7",
+    "message": "refactor: Version 封装游戏目录，版本链路路径由 Version 实例提供\n\n- Version 新增 gameHome 字段，versions/gameDir/图标/日志/继承 jar 等\n  路径全部由实例派生，不再依赖 GamePathManager 全局当前目录\n- GamePathHome 助手提供 gameHome 参数重载，无版本上下文的流程\n  （下载、安装、文件监听）继续使用全局当前目录\n- VersionsManager 刷新时捕获目录快照，扫描与 CurrentGameInfo\n  全程绑定同一 gameHome；图标/日志等路径助手下沉到 Version\n- 启动链（GameLauncher/LaunchArgs/Launcher）与启动前完整性校验\n  （MinecraftDownloader）全部改用版本自身目录\n- GameInstaller/BaseMinecraftDownloader 支持指定目标游戏目录\n- 顺带修复隔离模式 gameDir 依赖 VersionConfig 瞬态路径的失配隐患",
+    "created_at": "2026-09-18T16:56:33Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35371451164"
+  },
+  {
+    "id": 35364588766,
+    "sha": "8657b4897a41121f653549cbdf8541a2dfb975f2",
+    "short_sha": "8657b48",
+    "message": "feat: 加入主界面卡片引擎",
+    "created_at": "2026-09-18T15:47:35Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35364588766"
+  },
+  {
     "id": 35320256478,
     "sha": "fa899bdfe629962e59e77c00615d17cc484d832b",
     "short_sha": "fa899bd",
@@ -366,37 +398,5 @@
     "message": "feat: 任务流对话框新增安装 JVM 实时日志卡片\n\n- 新增 TaskLogOutput 通用日志输出接口（@Keep）：支持定义标题、单行/多行\n  增量、发起/停止会话，内置 1000 行环形缓冲\n- 新增 ProcessLogTailer：主进程按字节偏移增量轮询 latest_process.log，\n  无侵入获取 :jvm 进程安装器的实时输出；自动处理 JRE 重试时的文件截断\n- GameInstaller 持有日志输出容器并暴露 logOutput；仅在进入前台安装时\n  创建会话，任务结束（含异常/取消）后停止并置空\n- ModPackInstaller、ModpackImporter（经 AbstractPack.buildTaskPhases\n  下发至 ModPackInfoTask/MCBBSPack/MultiMCPack）转发容器\n- TitleTaskFlowDialog 新增显式 logOutput 参数，非空时切换双栏布局：\n  右侧日志卡片（标题 + 可滚动日志行，自动滚动到底，不可关闭）\n- 覆盖安装游戏、加载器变更、整合包下载、本地导入四条安装流程；\n  其余对话框调用点零改动\n\n检查步骤：\n- compileDebugKotlin、assembleDebug、minifyReleaseWithR8 全部通过\n- R8 seeds.txt 确认 @Keep 生效：TaskLogOutput 类及 19 项成员混淆后保留\n- usage.txt 复查仅 Kotlin 合成桥接被内联移除，无类/成员误裁剪\n- 单元测试 8 例失败经干净工作区复现，确认为存量环境问题，与本次无关",
     "created_at": "2026-09-14T09:02:15Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34825953519"
-  },
-  {
-    "id": 34817696515,
-    "sha": "67cb0283f9c0ee28d0604d50d6f3d24de6f5c432",
-    "short_sha": "67cb028",
-    "message": "Merge pull request #1865 from ZalithLauncher/fix/jvm-service-globalcontext-init\n\nfix: 未初始化 GlobalContext 安装器在前台服务中启动失败 #1854 #1680 #1233",
-    "created_at": "2026-09-14T07:24:13Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34817696515"
-  },
-  {
-    "id": 34817660060,
-    "sha": "da54ae2af411c3104bc6d87035652b53161b0214",
-    "short_sha": "da54ae2",
-    "message": "fix: 未初始化 GlobalContext 安装器在前台服务中启动失败 #1854 #1680 #1233",
-    "created_at": "2026-09-14T07:23:38Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34817660060"
-  },
-  {
-    "id": 34816870005,
-    "sha": "c911fde23f891e8c81e34bf0e62b0ce55a272211",
-    "short_sha": "c911fde",
-    "message": "Merge pull request #1864 from ZalithLauncher/fix/jvm-default-charset-utf8\n\nfix: 强制游戏 JVM 使用 UTF-8 编码，修复 FTB 系模组无法正常初始化",
-    "created_at": "2026-09-14T07:13:35Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34816870005"
-  },
-  {
-    "id": 34813588360,
-    "sha": "07550b014a8752e30b8bc2a3eb019582d3b85bb7",
-    "short_sha": "07550b0",
-    "message": "fix: 强制游戏 JVM 使用 UTF-8 编码，修复 FTB 系模组无法正常初始化",
-    "created_at": "2026-09-14T06:27:39Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34813588360"
   }
 ]
