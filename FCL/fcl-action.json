@@ -1,20 +1,20 @@
 {"run": {
-  "id": 35420595822,
+  "id": 35484266883,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAIPztmbg",
+  "node_id": "WFR_kwLOIQeFGs8AAAAIQwbxgw",
   "head_branch": "main",
-  "head_sha": "1db59b34bebc5f81611fb8df3e7c3d265b3e7a16",
+  "head_sha": "f4f2624d20fef6afd15430473cbbac280f4e5fed",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "feat: 皮肤模型新增身体与腿部分离开关（关闭后上身贴合腿部，腰部接缝可能闪烁由用户自担）",
-  "run_number": 109,
+  "display_title": "feat: 长按版本卡片弹出版本快速切换菜单，数据与版本列表页共享快照",
+  "run_number": 111,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 95927023930,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAWVbI5Og",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/35420595822",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35420595822",
+  "check_suite_id": 96086205375,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAWXy8jvw",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/35484266883",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35484266883",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
@@ -22,7 +22,7 @@
       "number": 364,
       "head": {
         "ref": "main",
-        "sha": "1db59b34bebc5f81611fb8df3e7c3d265b3e7a16",
+        "sha": "f4f2624d20fef6afd15430473cbbac280f4e5fed",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -45,7 +45,7 @@
       "number": 37,
       "head": {
         "ref": "main",
-        "sha": "1db59b34bebc5f81611fb8df3e7c3d265b3e7a16",
+        "sha": "f4f2624d20fef6afd15430473cbbac280f4e5fed",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -68,7 +68,7 @@
       "number": 400,
       "head": {
         "ref": "main",
-        "sha": "1db59b34bebc5f81611fb8df3e7c3d265b3e7a16",
+        "sha": "f4f2624d20fef6afd15430473cbbac280f4e5fed",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -86,8 +86,8 @@
       }
     }
   ],
-  "created_at": "2026-09-19T04:10:55Z",
-  "updated_at": "2026-09-19T04:12:21Z",
+  "created_at": "2026-09-20T02:32:46Z",
+  "updated_at": "2026-09-20T02:34:07Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-09-19T04:10:55Z",
+  "run_started_at": "2026-09-20T02:32:46Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,19 +133,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/35420595822/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/35420595822/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/95927023930",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/35420595822/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/35420595822/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/35420595822/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/35484266883/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/35484266883/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/96086205375",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/35484266883/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/35484266883/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/35484266883/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "1db59b34bebc5f81611fb8df3e7c3d265b3e7a16",
-    "tree_id": "8524c45edeb4a8cd7ea9c90bb277ea122546d950",
-    "message": "feat: 皮肤模型新增身体与腿部分离开关（关闭后上身贴合腿部，腰部接缝可能闪烁由用户自担）",
-    "timestamp": "2026-09-19T04:10:22Z",
+    "id": "f4f2624d20fef6afd15430473cbbac280f4e5fed",
+    "tree_id": "be601aba8ed0e587436a88fa912d7dcf60a7e51c",
+    "message": "feat: 长按版本卡片弹出版本快速切换菜单，数据与版本列表页共享快照",
+    "timestamp": "2026-09-20T02:31:12Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
