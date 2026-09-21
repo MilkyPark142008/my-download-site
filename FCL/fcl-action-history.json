@@ -1,5 +1,37 @@
 [
   {
+    "id": 35622958413,
+    "sha": "357cb3dd54738d08e1affa06431fe94d1dfdeff5",
+    "short_sha": "357cb3d",
+    "message": "fix: 恢复主界面版本卡片点击进入实例设置、右侧按钮切换版本，长按切换按钮改用上游版本快速切换弹窗",
+    "created_at": "2026-09-21T16:02:00Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35622958413"
+  },
+  {
+    "id": 35622958213,
+    "sha": "357cb3dd54738d08e1affa06431fe94d1dfdeff5",
+    "short_sha": "357cb3d",
+    "message": "fix: 恢复主界面版本卡片点击进入实例设置、右侧按钮切换版本，长按切换按钮改用上游版本快速切换弹窗",
+    "created_at": "2026-09-21T16:02:00Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35622958213"
+  },
+  {
+    "id": 35621493316,
+    "sha": "61db144b4853207d154816ac920cf4363a566589",
+    "short_sha": "61db144",
+    "message": "Merge remote-tracking branch 'upstream/main' into feature/instance-quick-actions\n\n# Conflicts:\n#\tFCL/src/main/java/com/tungsten/fcl/activity/MainActivity.kt\n#\tFCL/src/main/java/com/tungsten/fcl/ui/version/VersionListPage.kt",
+    "created_at": "2026-09-21T15:48:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35621493316"
+  },
+  {
+    "id": 35588494550,
+    "sha": "699160df7a0bf2cfae3ca0b3ba028c8d013d50a8",
+    "short_sha": "699160d",
+    "message": "fix: 下载与收藏列表标题过长时来源徽标被挤出可视区，标题行改 ConstraintLayout 保证徽标固定行尾",
+    "created_at": "2026-09-21T10:14:07Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35588494550"
+  },
+  {
     "id": 35484266883,
     "sha": "f4f2624d20fef6afd15430473cbbac280f4e5fed",
     "short_sha": "f4f2624",
@@ -366,37 +398,5 @@
     "message": "Merge branch 'main' into feature/download-favorites",
     "created_at": "2026-09-16T05:14:02Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35058707346"
-  },
-  {
-    "id": 35043236731,
-    "sha": "73706117ccc0323bf0dc516abc02eed888f1dc87",
-    "short_sha": "7370611",
-    "message": "fix: 修复 goSetting 菜单已选中时不触发切页，usesGlobal 反序列化缺省值改为 true",
-    "created_at": "2026-09-16T00:52:25Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35043236731"
-  },
-  {
-    "id": 35043236733,
-    "sha": "73706117ccc0323bf0dc516abc02eed888f1dc87",
-    "short_sha": "7370611",
-    "message": "fix: 修复 goSetting 菜单已选中时不触发切页，usesGlobal 反序列化缺省值改为 true",
-    "created_at": "2026-09-16T00:52:25Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35043236733"
-  },
-  {
-    "id": 35039885708,
-    "sha": "c3a4f5f34faeb8322a6eb1b6b68adb7235c600e3",
-    "short_sha": "c3a4f5f",
-    "message": "fix: 修复 SeekBar 行复用时 max/min 钳制回调误写数据的问题",
-    "created_at": "2026-09-16T00:21:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35039885708"
-  },
-  {
-    "id": 35039885704,
-    "sha": "c3a4f5f34faeb8322a6eb1b6b68adb7235c600e3",
-    "short_sha": "c3a4f5f",
-    "message": "fix: 修复 SeekBar 行复用时 max/min 钳制回调误写数据的问题",
-    "created_at": "2026-09-16T00:21:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35039885704"
   }
 ]
