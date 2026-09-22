@@ -1,5 +1,13 @@
 [
   {
+    "id": 35708608294,
+    "sha": "0046f62b8778d78e998603135e68673ed1d859f5",
+    "short_sha": "0046f62",
+    "message": "fix: 补齐按键与字符事件成对发送，修复 Cleanroom 字母键与聊天输入失效",
+    "created_at": "2026-09-22T09:07:14Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35708608294"
+  },
+  {
     "id": 35684693904,
     "sha": "69800a0fef0ed4f145a6f877dda56d4688e39e00",
     "short_sha": "69800a0",
@@ -390,13 +398,5 @@
     "message": "Merge pull request #1874 from ZalithLauncher/fix/glfw-bridge-jni-env\n\nfix: GLFW 桥初始化改用调用线程 JNIEnv，修复跨线程复用导致的崩溃与卡死",
     "created_at": "2026-09-14T15:05:19Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34859852604"
-  },
-  {
-    "id": 34859618166,
-    "sha": "20ce564840e3879df0ee7a339ca070a3e8952672",
-    "short_sha": "20ce564",
-    "message": "fix: GLFW 桥初始化改用调用线程 JNIEnv，修复跨线程复用导致的崩溃与卡死\n\nnativeInitializeGLFWNativeBridge 此前复用 JNI_OnLoad 时缓存的\nruntimeJNIEnvPtr_JRE，该指针绑定在最先加载 pojavexec 的线程上；当 GLFW 类\n在其它线程上先于渲染线程完成初始化时，跨线程使用 JNIEnv 属未定义行为，\nFindClass 返回 NULL，桥保持未初始化，后续 updateMonitorSize 等路径以\nNULL 类/方法 ID 调用 JNI，引发 SIGSEGV 或线程阻塞。\n\n- 初始化改用调用线程自身的 JNIEnv，必要时经 GetEnv 获取\n- 初始化幂等化并原子提交，失败不再覆盖已成功的全局状态\n- pojavInit 在渲染线程上对桥状态兜底重试\n- updateMonitorSize/updateWindowSize/nativeSetWindowAttrib 增加空值守卫",
-    "created_at": "2026-09-14T15:01:19Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34859618166"
   }
 ]
