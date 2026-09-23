@@ -1,5 +1,53 @@
 [
   {
+    "id": 35871529556,
+    "sha": "1ea09b48057f31ad0fd65b32e0c71d2c7af71988",
+    "short_sha": "1ea09b4",
+    "message": "fix: 主界面卡片空隙",
+    "created_at": "2026-09-23T14:03:44Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35871529556"
+  },
+  {
+    "id": 35868289743,
+    "sha": "3cbea46cb1d058e9232c7fe74c738ea0a45a226a",
+    "short_sha": "3cbea46",
+    "message": "[Do not use!] Merge branch 'origin/weblate_main' into Weblate.",
+    "created_at": "2026-09-23T13:36:30Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35868289743"
+  },
+  {
+    "id": 35868168430,
+    "sha": "480a443ed08b6f85aa61fd03dd9651d547fcb3b4",
+    "short_sha": "480a443",
+    "message": "Merge pull request #1931 from ZalithLauncher/main\n\nmerge  main",
+    "created_at": "2026-09-23T13:35:43Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35868168430"
+  },
+  {
+    "id": 35868089797,
+    "sha": "abc17cc9ff32b01edcdce54314e59b289d4633bf",
+    "short_sha": "abc17cc",
+    "message": "Merge pull request #1930 from ZalithLauncher/main\n\nmerge main",
+    "created_at": "2026-09-23T13:35:04Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35868089797"
+  },
+  {
+    "id": 35866589192,
+    "sha": "f851eb4cf7df8b2c630fa0d15543c56c5ef23f0e",
+    "short_sha": "f851eb4",
+    "message": "Merge pull request #1929 from ZalithLauncher/refactor/downloader\n\nrefactor: 重构下载器引擎，参考 HMCL FetchTask",
+    "created_at": "2026-09-23T13:22:13Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35866589192"
+  },
+  {
+    "id": 35866291605,
+    "sha": "fe73c6b135dbb6cce60f26291977b0aae6ad6216",
+    "short_sha": "fe73c6b",
+    "message": "fix: 下载源官方档对齐 HMCL 语义，独占官方源不再镜像兜底\n\n- 游戏内容下载源与资源平台下载源的官方档改为仅使用官方源\n- MirrorSourceType 枚举改名 OFFICIAL/MIRROR，保留旧枚举名读取兼容\n- 同步修订 12 个语言的设置文案（优先→尽量）",
+    "created_at": "2026-09-23T13:17:36Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35866291605"
+  },
+  {
     "id": 35840172949,
     "sha": "746e00a0dde43beb29ba331a0441635ad4412dcf",
     "short_sha": "746e00a",
@@ -350,53 +398,5 @@
     "message": "refactor: 收藏仓库协程化，MMKV 读写移至 IO 调度器",
     "created_at": "2026-09-17T15:54:26Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35243342666"
-  },
-  {
-    "id": 35241457272,
-    "sha": "3771ad400e282a0cf8dae39e8a908fa0ef7ce372",
-    "short_sha": "3771ad4",
-    "message": "fix: 进入下载屏幕时初始化收藏仓库",
-    "created_at": "2026-09-17T15:37:22Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35241457272"
-  },
-  {
-    "id": 35240517452,
-    "sha": "514436a18a680464f2ce90e111c1b6a6b24c63f7",
-    "short_sha": "514436a",
-    "message": "chore: 已安装标识不再贴合条目底部",
-    "created_at": "2026-09-17T15:27:30Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35240517452"
-  },
-  {
-    "id": 35239592519,
-    "sha": "35a54998c781381d214bda19ad6783d071cd3b48",
-    "short_sha": "35a5499",
-    "message": "feat: 平台标识标签按平台品牌色区分",
-    "created_at": "2026-09-17T15:20:20Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35239592519"
-  },
-  {
-    "id": 35238170507,
-    "sha": "6e0149f8037d839f3b8e0d4789f43443a8a340fa",
-    "short_sha": "6e0149f",
-    "message": "feat: 下载屏幕新增资源收藏功能\n\n- 基于本地 MMKV 分平台存储收藏项目（Modrinth / CurseForge），数据结构为自定项目缓存\n- 搜索结果条目右下角与资源详情页项目卡片提供收藏开关\n- 新增收藏分页：悬浮分类操作栏、名称搜索、平台过滤、排序、模组加载器过滤\n- 收藏条目支持本地缓存态与远端数据态两态渲染，远端数据按需回写本地缓存\n- 点击收藏条目按资源类型跳转至对应下载分类屏幕详情页",
-    "created_at": "2026-09-17T15:07:08Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35238170507"
-  },
-  {
-    "id": 35216128014,
-    "sha": "d4d4200498fcb44057462f429849ce0f1fdc16cc",
-    "short_sha": "d4d4200",
-    "message": "Merge pull request #1892 from ZalithLauncher/update/mod-translation-search-ranking\n\nfix: 中文搜索翻译关键词时固定使用相关性排序",
-    "created_at": "2026-09-17T11:31:20Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35216128014"
-  },
-  {
-    "id": 35215503434,
-    "sha": "c9d8c95e6cb9ccf1e0cd2f91cc97616cabb558d8",
-    "short_sha": "c9d8c95",
-    "message": "fix: 中文搜索翻译关键词时固定使用相关性排序\n\n参考 HMCL 8767cc0e：含中文的搜索词翻译出英文短语后，\n原实现会携带用户所选排序方式发起搜索，目标资源可能被\n挤出结果页；现固定以相关性排序搜索，中文译名重排逻辑\n保持不变，非中文搜索仍尊重用户所选排序。",
-    "created_at": "2026-09-17T11:22:59Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35215503434"
   }
 ]

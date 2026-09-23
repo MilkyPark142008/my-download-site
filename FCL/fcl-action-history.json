@@ -1,5 +1,117 @@
 [
   {
+    "id": 35873067970,
+    "sha": "d6f224db933174aeef900d2fc28d6d8812b82830",
+    "short_sha": "d6f224d",
+    "message": "refactor: 精简资源包页属性初始化与世界列表过滤判空",
+    "created_at": "2026-09-23T14:16:24Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35873067970"
+  },
+  {
+    "id": 35873067966,
+    "sha": "d6f224db933174aeef900d2fc28d6d8812b82830",
+    "short_sha": "d6f224d",
+    "message": "refactor: 精简资源包页属性初始化与世界列表过滤判空",
+    "created_at": "2026-09-23T14:16:24Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35873067966"
+  },
+  {
+    "id": 35872241750,
+    "sha": "0a6777938d7e95a78579c5bae16f8d5f0a8b7876",
+    "short_sha": "0a67779",
+    "message": "feat: 兼容 lwjgl3ify (#1857)\n\n* 兼容lwjgl3ify\n\n支持开箱即玩 GT New Horizons（MC 1.7.10 + lwjgl3ify/RFB，Java 17+），\n参考 Amethyst-Android 的 lwjgl3ify 支持实现。\nlwjgl3ify 支持（新增 Lwjgl3ifyPatcher，在 LauncherHelper 启动链最早处调用）：\n- 检测 mods 目录中的 lwjgl3ify jar，提取内嵌的 relauncher version.json\n  （RetroFuturaBootstrap 主类、javaVersion 17+/25、全套 --add-opens JVM\n  参数、1.7.10-Forge 完整依赖闭包）合并进实例版本并落盘，幂等可重复；\n  lwjgl3ify 升级后自动重新合并，首次合并前备份原 JSON 为\n  <id>.json.before-lwjgl3ify 便于手工恢复\n- 内嵌 version.json 的库不带下载地址，按 groupId 重写 Maven 源：\n  com.github.GTNewHorizons → GTNH Nexus；\n  net.minecraftforge/org.scala-lang/com.typesafe → Forge Maven；\n  其余库 libraries.minecraft.net 均可命中\n- 从 lwjgl3ify jar 内嵌的 forgePatches.zip 离线还原\n  com.github.GTNewHorizons:lwjgl3ify:*:forgePatches（该构件在\n  Mojang/Forge Maven 均不存在），失败时回退 GTNH Nexus 下载\n- 写盘时剥离 resolved 版本对象残留的 root/patches 字段，避免\n  resolve() 走合成根分支丢失 mainClass 导致\"已装模组但未装加载器\"\n  误报；FCLGameRepository 新增 reloadVersionFromDisk() 同步内存缓存\n\n修复 Caciocavallo 1.19.1 在 JDK 25 上 AWT 全面失效导致依赖\njava.awt.Font 的 mod（GTNH 的 Malisis' Doors、Opis）启动即崩：\n- cacio 1.19.1 的 CTCGraphicsEnvironment 构造调用\n  sun.java2d.SurfaceManagerFactory.setInstance，该类自 JDK 24 起\n  已移除，构造抛 NoSuchMethodError 被 GraphicsEnvironment.createGE\n  静默吞掉后回退 headless。caciocavallo17 资产换回 1.18-SNAPSHOT\n  （与 Amethyst 同款，CTCToolkit/事件泵等核心类方法签名与 1.19.1\n  完全一致，仅移除 SurfaceManagerFactory 覆盖），agent 改用\n  cacio-tta-1.18 自带的 PreMain-Class，资产 version 5→6 触发设备\n  自动重装。Java 8 路径的 cacio-androidnw 不受影响\n\n其他：\n- MojangDownloadProvider 为 libraries.minecraft.net 增加候选链\n  （bmclapi → Maven Central），纯官方源下缺失的第三方构件不再\n  直接中断启动；首选 URL 成功路径不变\n- ModChecker：检测到 lwjgl3ify 且版本设置强制 jre8 时提示切换\n  Auto（jre17+）并建议 ≥4GB 内存\n\n* 删除多余注释\n\n* fix：修复lwjgl3ify异常退出\n\nlwjgl3ify 初始化时会向 XDG_DATA_HOME/~/.local/share 写桌面快捷\n方式，Android 上不存在该目录，异常杀死 RFB 主线程导致游戏静默\n退出（exit code 0）。\n- 检测到 lwjgl3ify 时自动写 config/lwjgl3ify.cfg 关闭\n  linuxCreateAppDesktopEntry（GTNH 官方包自带，自组包自动补）\n- 启动环境注入 XDG_DATA_HOME 指向实例可写目录（仅 lwjgl3ify\n  实例生效，其他版本零变更）\n- lwjgl3ify 识别改用 mod 列表按 modid 检查，改名不再漏判\n\n* fix: Angelica+lwjgl3ify 组合跳过渲染器版本误报警告\n\n* fix: 移除lwjgl3ify兼容引入的重复Java检查\n\n* fix: 修复lwjgl3ify实例XDG_DATA_HOME兜底从未生效的问题\n\nhasLwjgl3ify 传入的是 <gameDir>/mods，内部却拼接 config/lwjgl3ify.cfg，\n实际检查 <gameDir>/mods/config/lwjgl3ify.cfg 永远不存在，环境变量兜底\n分支从未触发，静默退出修复仅剩写 cfg 一条路径生效。\n\n同时 XDG 定位不再解析最终启动参数中的 --gameDir 标记，直接使用\nFCLConfig.workingDir（DefaultLauncher 传入的 repository.getRunDirectory，\n与 ${game_directory} 一致）；Jar 执行器等没有 --gameDir 参数的调用方\n也不再依赖\"解析失败返回 null 跳过\"的巧合行为。\n\n* fix: lwjgl3ify 从 mods 移除后自动还原版本 JSON\n\n原地改写实例版本的方案下，卸载或停用 lwjgl3ify 后版本 JSON 仍保持\nRFB 入口 + javaVersion 25 + GTNH 库闭包，实例无法启动，此前只能手工\n用 <id>.json.before-lwjgl3ify 备份恢复（FCL UI 不感知该文件）。\n\n现在 patchIfNeeded 检测不到启用的 lwjgl3ify 时，若磁盘版本仍为 RFB\n入口且备份存在，则自动还原备份、刷新版本缓存并重建内存版本对象；\n备份缺失时仅告警。再次放入 lwjgl3ify 会重新合并，备份仍指向最初的\n补丁前状态（合并逻辑本就不覆盖已有备份）。\n\n* fix: lwjgl3ify.cfg 补写改为行级检测并优先插入已有 window 段\n\n- contains 检查会把被注释掉的键误判为已存在而跳过补写，改为跳过\n  # 与 // 注释行的行级检测\n- 一律在文件尾追加会产生重复的 window 段名，依赖 CarbonConfig 的\n  段名合并行为且未验证；改为插入已有 window { 段首，无该段才追加\n\n* fix: forgePatches 解压写临时文件后原子替换，version.json 与补丁共用一次 jar 打开\n\n- 直接写目标文件时启动中途被杀会留下截断的 jar，之后目标存在即跳过\n  重解压，坏文件永久滞留；改为写临时文件后 Files.move 原子替换，\n  失败清理临时文件并回退 GTNH Nexus 下载\n- readEmbeddedVersionJson 与 ensureForgePatchesFile 原本各打开一次\n  lwjgl3ify jar，合并为 patchIfNeeded 内一次 ZipFile 生命周期\n- 流拷贝复用 FCL 自带 IOUtils.copyTo\n\n* fix: 版本 JSON 落盘保留 hidden 字段，修正内嵌库下载地址的注释\n\n- hidden 是版本 JSON 的合法字段，剥离 root/patches 时不应连带移除，\n  否则隐藏版本打补丁后会变可见\n- 类注释与 patchLibraryUrls 注释声称内嵌库不带下载地址，实测 3.0.31\n  的 185 个库中 182 个自带完整 downloads.artifact.url 且指向正确\n  Maven 源，仅旧版才需要 groupId 重写兜底，据实修正\n\n* perf: 启动前 mod 全量扫描仅做一次，Angelica+lwjgl3ify 特判收敛到 Lwjgl3ifyPatcher\n\n- getModManager() 每次调用都新建实例并触发全量 mod 扫描，此前一次启动中\n  patchIfNeeded、checkRenderer、checkModLoader 各扫一遍（GTNH 200+ 模组，\n  移动存储上开销可感知）；现在 launch0 扫描一次传给三者，扫描失败时\n  各自按原路径回退\n- \"Angelica 与 lwjgl3ify 同时启用时跳过渲染器版本兼容性警告\"的判断从\n  LauncherHelper 移入 Lwjgl3ifyPatcher.shouldSkipRendererCheck，lwjgl3ify\n  相关的 modid 特判集中一处，并补上 isActive 过滤（停用的模组不参与\n  组合判断）\n\n* revert: 还原 cacio 降级与 ModChecker 空行，lwjgl3ify 兼容不依赖这些更改\n\n* fix: 全限定名改为显式 import，通过 checkstyle\n\n* perf: checkMod 复用启动链已扫描的模组列表，避免二次全量扫描\n\n* fix: lwjgl3ify 合并的 Java 版本要求约束到 cacio 兼容上限（21），避免自动选中 jre25 触发 AWT headless\n\n* fix: 升级 caciocavallo17 至 jdk25 修复版，jre25 下 AWT 不再回退 headless\n\n参考 aaaapai/caciocavallo17（https://github.com/aaaapai/caciocavallo17）2026-01-09 的修复：\nCTCJavaAgent/CTCGraphicsEnvironment 对 sun.java2d.SurfaceManagerFactory 的引用\n改为自带 CacioSurfaceManagerFactory，JDK 25 已移除该内部类，旧构建在 jre25 上\nagent 初始化失败导致 AWT 回退 headless。已在 jre17/21/25 最小 AWT 复现验证通过，\nversion 5->6 触发设备重解压。\n\n* fix: 移除 lwjgl3ify Java 版本 cap，已合并实例对齐内嵌声明的 Java 版本要求\n\n---------\n\nCo-authored-by: ShirosakiMio <852468399@qq.com>",
+    "created_at": "2026-09-23T14:10:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35872241750"
+  },
+  {
+    "id": 35872241714,
+    "sha": "0a6777938d7e95a78579c5bae16f8d5f0a8b7876",
+    "short_sha": "0a67779",
+    "message": "feat: 兼容 lwjgl3ify (#1857)\n\n* 兼容lwjgl3ify\n\n支持开箱即玩 GT New Horizons（MC 1.7.10 + lwjgl3ify/RFB，Java 17+），\n参考 Amethyst-Android 的 lwjgl3ify 支持实现。\nlwjgl3ify 支持（新增 Lwjgl3ifyPatcher，在 LauncherHelper 启动链最早处调用）：\n- 检测 mods 目录中的 lwjgl3ify jar，提取内嵌的 relauncher version.json\n  （RetroFuturaBootstrap 主类、javaVersion 17+/25、全套 --add-opens JVM\n  参数、1.7.10-Forge 完整依赖闭包）合并进实例版本并落盘，幂等可重复；\n  lwjgl3ify 升级后自动重新合并，首次合并前备份原 JSON 为\n  <id>.json.before-lwjgl3ify 便于手工恢复\n- 内嵌 version.json 的库不带下载地址，按 groupId 重写 Maven 源：\n  com.github.GTNewHorizons → GTNH Nexus；\n  net.minecraftforge/org.scala-lang/com.typesafe → Forge Maven；\n  其余库 libraries.minecraft.net 均可命中\n- 从 lwjgl3ify jar 内嵌的 forgePatches.zip 离线还原\n  com.github.GTNewHorizons:lwjgl3ify:*:forgePatches（该构件在\n  Mojang/Forge Maven 均不存在），失败时回退 GTNH Nexus 下载\n- 写盘时剥离 resolved 版本对象残留的 root/patches 字段，避免\n  resolve() 走合成根分支丢失 mainClass 导致\"已装模组但未装加载器\"\n  误报；FCLGameRepository 新增 reloadVersionFromDisk() 同步内存缓存\n\n修复 Caciocavallo 1.19.1 在 JDK 25 上 AWT 全面失效导致依赖\njava.awt.Font 的 mod（GTNH 的 Malisis' Doors、Opis）启动即崩：\n- cacio 1.19.1 的 CTCGraphicsEnvironment 构造调用\n  sun.java2d.SurfaceManagerFactory.setInstance，该类自 JDK 24 起\n  已移除，构造抛 NoSuchMethodError 被 GraphicsEnvironment.createGE\n  静默吞掉后回退 headless。caciocavallo17 资产换回 1.18-SNAPSHOT\n  （与 Amethyst 同款，CTCToolkit/事件泵等核心类方法签名与 1.19.1\n  完全一致，仅移除 SurfaceManagerFactory 覆盖），agent 改用\n  cacio-tta-1.18 自带的 PreMain-Class，资产 version 5→6 触发设备\n  自动重装。Java 8 路径的 cacio-androidnw 不受影响\n\n其他：\n- MojangDownloadProvider 为 libraries.minecraft.net 增加候选链\n  （bmclapi → Maven Central），纯官方源下缺失的第三方构件不再\n  直接中断启动；首选 URL 成功路径不变\n- ModChecker：检测到 lwjgl3ify 且版本设置强制 jre8 时提示切换\n  Auto（jre17+）并建议 ≥4GB 内存\n\n* 删除多余注释\n\n* fix：修复lwjgl3ify异常退出\n\nlwjgl3ify 初始化时会向 XDG_DATA_HOME/~/.local/share 写桌面快捷\n方式，Android 上不存在该目录，异常杀死 RFB 主线程导致游戏静默\n退出（exit code 0）。\n- 检测到 lwjgl3ify 时自动写 config/lwjgl3ify.cfg 关闭\n  linuxCreateAppDesktopEntry（GTNH 官方包自带，自组包自动补）\n- 启动环境注入 XDG_DATA_HOME 指向实例可写目录（仅 lwjgl3ify\n  实例生效，其他版本零变更）\n- lwjgl3ify 识别改用 mod 列表按 modid 检查，改名不再漏判\n\n* fix: Angelica+lwjgl3ify 组合跳过渲染器版本误报警告\n\n* fix: 移除lwjgl3ify兼容引入的重复Java检查\n\n* fix: 修复lwjgl3ify实例XDG_DATA_HOME兜底从未生效的问题\n\nhasLwjgl3ify 传入的是 <gameDir>/mods，内部却拼接 config/lwjgl3ify.cfg，\n实际检查 <gameDir>/mods/config/lwjgl3ify.cfg 永远不存在，环境变量兜底\n分支从未触发，静默退出修复仅剩写 cfg 一条路径生效。\n\n同时 XDG 定位不再解析最终启动参数中的 --gameDir 标记，直接使用\nFCLConfig.workingDir（DefaultLauncher 传入的 repository.getRunDirectory，\n与 ${game_directory} 一致）；Jar 执行器等没有 --gameDir 参数的调用方\n也不再依赖\"解析失败返回 null 跳过\"的巧合行为。\n\n* fix: lwjgl3ify 从 mods 移除后自动还原版本 JSON\n\n原地改写实例版本的方案下，卸载或停用 lwjgl3ify 后版本 JSON 仍保持\nRFB 入口 + javaVersion 25 + GTNH 库闭包，实例无法启动，此前只能手工\n用 <id>.json.before-lwjgl3ify 备份恢复（FCL UI 不感知该文件）。\n\n现在 patchIfNeeded 检测不到启用的 lwjgl3ify 时，若磁盘版本仍为 RFB\n入口且备份存在，则自动还原备份、刷新版本缓存并重建内存版本对象；\n备份缺失时仅告警。再次放入 lwjgl3ify 会重新合并，备份仍指向最初的\n补丁前状态（合并逻辑本就不覆盖已有备份）。\n\n* fix: lwjgl3ify.cfg 补写改为行级检测并优先插入已有 window 段\n\n- contains 检查会把被注释掉的键误判为已存在而跳过补写，改为跳过\n  # 与 // 注释行的行级检测\n- 一律在文件尾追加会产生重复的 window 段名，依赖 CarbonConfig 的\n  段名合并行为且未验证；改为插入已有 window { 段首，无该段才追加\n\n* fix: forgePatches 解压写临时文件后原子替换，version.json 与补丁共用一次 jar 打开\n\n- 直接写目标文件时启动中途被杀会留下截断的 jar，之后目标存在即跳过\n  重解压，坏文件永久滞留；改为写临时文件后 Files.move 原子替换，\n  失败清理临时文件并回退 GTNH Nexus 下载\n- readEmbeddedVersionJson 与 ensureForgePatchesFile 原本各打开一次\n  lwjgl3ify jar，合并为 patchIfNeeded 内一次 ZipFile 生命周期\n- 流拷贝复用 FCL 自带 IOUtils.copyTo\n\n* fix: 版本 JSON 落盘保留 hidden 字段，修正内嵌库下载地址的注释\n\n- hidden 是版本 JSON 的合法字段，剥离 root/patches 时不应连带移除，\n  否则隐藏版本打补丁后会变可见\n- 类注释与 patchLibraryUrls 注释声称内嵌库不带下载地址，实测 3.0.31\n  的 185 个库中 182 个自带完整 downloads.artifact.url 且指向正确\n  Maven 源，仅旧版才需要 groupId 重写兜底，据实修正\n\n* perf: 启动前 mod 全量扫描仅做一次，Angelica+lwjgl3ify 特判收敛到 Lwjgl3ifyPatcher\n\n- getModManager() 每次调用都新建实例并触发全量 mod 扫描，此前一次启动中\n  patchIfNeeded、checkRenderer、checkModLoader 各扫一遍（GTNH 200+ 模组，\n  移动存储上开销可感知）；现在 launch0 扫描一次传给三者，扫描失败时\n  各自按原路径回退\n- \"Angelica 与 lwjgl3ify 同时启用时跳过渲染器版本兼容性警告\"的判断从\n  LauncherHelper 移入 Lwjgl3ifyPatcher.shouldSkipRendererCheck，lwjgl3ify\n  相关的 modid 特判集中一处，并补上 isActive 过滤（停用的模组不参与\n  组合判断）\n\n* revert: 还原 cacio 降级与 ModChecker 空行，lwjgl3ify 兼容不依赖这些更改\n\n* fix: 全限定名改为显式 import，通过 checkstyle\n\n* perf: checkMod 复用启动链已扫描的模组列表，避免二次全量扫描\n\n* fix: lwjgl3ify 合并的 Java 版本要求约束到 cacio 兼容上限（21），避免自动选中 jre25 触发 AWT headless\n\n* fix: 升级 caciocavallo17 至 jdk25 修复版，jre25 下 AWT 不再回退 headless\n\n参考 aaaapai/caciocavallo17（https://github.com/aaaapai/caciocavallo17）2026-01-09 的修复：\nCTCJavaAgent/CTCGraphicsEnvironment 对 sun.java2d.SurfaceManagerFactory 的引用\n改为自带 CacioSurfaceManagerFactory，JDK 25 已移除该内部类，旧构建在 jre25 上\nagent 初始化失败导致 AWT 回退 headless。已在 jre17/21/25 最小 AWT 复现验证通过，\nversion 5->6 触发设备重解压。\n\n* fix: 移除 lwjgl3ify Java 版本 cap，已合并实例对齐内嵌声明的 Java 版本要求\n\n---------\n\nCo-authored-by: ShirosakiMio <852468399@qq.com>",
+    "created_at": "2026-09-23T14:10:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35872241714"
+  },
+  {
+    "id": 35871804956,
+    "sha": "a1f52c8fb74d0f45420a1d7e330103b49dc4a3d2",
+    "short_sha": "a1f52c8",
+    "message": "feat: 同步上游 HMCL World 存档能力与 26.1 新存档格式支持\n\n- World.java 对齐上游：NBT 读取/写入双格式（WorldGenSettings 与玩家数据外置文件、singleplayer_uuid 定位）、getSeed/isLargeBiomes/getLevelData/writeWorldData/reloadWorldData、session.lock 锁检测（lock/isLocked + WorldLockedException）、delete/copy、世界图标读取（Bitmap）、getGameVersion 返回 GameVersionNumber\n- NBT 库层：OpenNBT 基础上增压缩检测（GZip/LZ4 Block/未压缩），规避 HelloNBT 依赖 privateLookupIn 等 Android API 34 才有的 JDK 特性\n- WorldInfoPage：difficulty_settings/generate_structures/respawn 等新格式字段适配，修复维度映射与难度序号越界\n- 世界列表：条目新增世界图标与复制世界入口，删除改走 world.delete()，数据包入口改用 supportDataPacks 门控",
+    "created_at": "2026-09-23T14:06:05Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35871804956"
+  },
+  {
+    "id": 35871804918,
+    "sha": "a1f52c8fb74d0f45420a1d7e330103b49dc4a3d2",
+    "short_sha": "a1f52c8",
+    "message": "feat: 同步上游 HMCL World 存档能力与 26.1 新存档格式支持\n\n- World.java 对齐上游：NBT 读取/写入双格式（WorldGenSettings 与玩家数据外置文件、singleplayer_uuid 定位）、getSeed/isLargeBiomes/getLevelData/writeWorldData/reloadWorldData、session.lock 锁检测（lock/isLocked + WorldLockedException）、delete/copy、世界图标读取（Bitmap）、getGameVersion 返回 GameVersionNumber\n- NBT 库层：OpenNBT 基础上增压缩检测（GZip/LZ4 Block/未压缩），规避 HelloNBT 依赖 privateLookupIn 等 Android API 34 才有的 JDK 特性\n- WorldInfoPage：difficulty_settings/generate_structures/respawn 等新格式字段适配，修复维度映射与难度序号越界\n- 世界列表：条目新增世界图标与复制世界入口，删除改走 world.delete()，数据包入口改用 supportDataPacks 门控",
+    "created_at": "2026-09-23T14:06:05Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35871804918"
+  },
+  {
+    "id": 35863632160,
+    "sha": "b44fe2f9c4946c54d31662f6325184a7eb76c438",
+    "short_sha": "b44fe2f",
+    "message": "perf: checkMod 复用启动链已扫描的模组列表，避免二次全量扫描",
+    "created_at": "2026-09-23T12:55:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35863632160"
+  },
+  {
+    "id": 35863632179,
+    "sha": "b44fe2f9c4946c54d31662f6325184a7eb76c438",
+    "short_sha": "b44fe2f",
+    "message": "perf: checkMod 复用启动链已扫描的模组列表，避免二次全量扫描",
+    "created_at": "2026-09-23T12:55:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35863632179"
+  },
+  {
+    "id": 35862984822,
+    "sha": "953fbbb94602bf4de75754182e7553ad4b486e1f",
+    "short_sha": "953fbbb",
+    "message": "fix: 全限定名改为显式 import，通过 checkstyle",
+    "created_at": "2026-09-23T12:49:32Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35862984822"
+  },
+  {
+    "id": 35862984457,
+    "sha": "953fbbb94602bf4de75754182e7553ad4b486e1f",
+    "short_sha": "953fbbb",
+    "message": "fix: 全限定名改为显式 import，通过 checkstyle",
+    "created_at": "2026-09-23T12:49:32Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35862984457"
+  },
+  {
+    "id": 35854333989,
+    "sha": "267872f1279f577e7468b7ac4dbfbfd460578c0f",
+    "short_sha": "267872f",
+    "message": "fix: 修复整合包导出的任务名显示、禁用态文件重复与后缀提示\n\n- TaskListPane 导出任务命名分支补上 CurseForge/Modrinth 两个新任务类；\n  getExportTask 与各 exportAsXxx 的匿名包装任务设为 MINOR，不再以类名\n  显示在任务对话框中\n- Modrinth 导出的 overrides 排除按去后缀路径匹配，修复禁用态文件同时\n  出现在 files 列表与 client-overrides 的问题\n- 导出信息页文件名后缀按类型动态显示（Modrinth 为 .mrpack）",
+    "created_at": "2026-09-23T11:21:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35854333989"
+  },
+  {
+    "id": 35854334016,
+    "sha": "267872f1279f577e7468b7ac4dbfbfd460578c0f",
+    "short_sha": "267872f",
+    "message": "fix: 修复整合包导出的任务名显示、禁用态文件重复与后缀提示\n\n- TaskListPane 导出任务命名分支补上 CurseForge/Modrinth 两个新任务类；\n  getExportTask 与各 exportAsXxx 的匿名包装任务设为 MINOR，不再以类名\n  显示在任务对话框中\n- Modrinth 导出的 overrides 排除按去后缀路径匹配，修复禁用态文件同时\n  出现在 files 列表与 client-overrides 的问题\n- 导出信息页文件名后缀按类型动态显示（Modrinth 为 .mrpack）",
+    "created_at": "2026-09-23T11:21:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35854334016"
+  },
+  {
+    "id": 35854189230,
+    "sha": "267872f1279f577e7468b7ac4dbfbfd460578c0f",
+    "short_sha": "267872f",
+    "message": "fix: 修复整合包导出的任务名显示、禁用态文件重复与后缀提示\n\n- TaskListPane 导出任务命名分支补上 CurseForge/Modrinth 两个新任务类；\n  getExportTask 与各 exportAsXxx 的匿名包装任务设为 MINOR，不再以类名\n  显示在任务对话框中\n- Modrinth 导出的 overrides 排除按去后缀路径匹配，修复禁用态文件同时\n  出现在 files 列表与 client-overrides 的问题\n- 导出信息页文件名后缀按类型动态显示（Modrinth 为 .mrpack）",
+    "created_at": "2026-09-23T11:21:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35854189230"
+  },
+  {
+    "id": 35854189234,
+    "sha": "267872f1279f577e7468b7ac4dbfbfd460578c0f",
+    "short_sha": "267872f",
+    "message": "fix: 修复整合包导出的任务名显示、禁用态文件重复与后缀提示\n\n- TaskListPane 导出任务命名分支补上 CurseForge/Modrinth 两个新任务类；\n  getExportTask 与各 exportAsXxx 的匿名包装任务设为 MINOR，不再以类名\n  显示在任务对话框中\n- Modrinth 导出的 overrides 排除按去后缀路径匹配，修复禁用态文件同时\n  出现在 files 列表与 client-overrides 的问题\n- 导出信息页文件名后缀按类型动态显示（Modrinth 为 .mrpack）",
+    "created_at": "2026-09-23T11:21:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35854189234"
+  },
+  {
     "id": 35848721894,
     "sha": "8d128d8f6c28ec2d5326a35eefe8795facd9af21",
     "short_sha": "8d128d8",
@@ -286,117 +398,5 @@
     "message": "Merge branch 'main' into feature/download-favorites",
     "created_at": "2026-09-18T01:20:59Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35294965261"
-  },
-  {
-    "id": 35294963455,
-    "sha": "9ecb8853876a801069df98f0ed1a87d833aa4ddb",
-    "short_sha": "9ecb885",
-    "message": "Merge branch 'main' into feature/download-favorites",
-    "created_at": "2026-09-18T01:20:59Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35294963455"
-  },
-  {
-    "id": 35294963447,
-    "sha": "9ecb8853876a801069df98f0ed1a87d833aa4ddb",
-    "short_sha": "9ecb885",
-    "message": "Merge branch 'main' into feature/download-favorites",
-    "created_at": "2026-09-18T01:20:59Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35294963447"
-  },
-  {
-    "id": 35294093025,
-    "sha": "279e342e519d2ddc28d2ea9d873c630017c82f60",
-    "short_sha": "279e342",
-    "message": "1.3.3.3",
-    "created_at": "2026-09-18T01:08:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35294093025"
-  },
-  {
-    "id": 35294092789,
-    "sha": "279e342e519d2ddc28d2ea9d873c630017c82f60",
-    "short_sha": "279e342",
-    "message": "1.3.3.3",
-    "created_at": "2026-09-18T01:08:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35294092789"
-  },
-  {
-    "id": 35294092762,
-    "sha": "279e342e519d2ddc28d2ea9d873c630017c82f60",
-    "short_sha": "279e342",
-    "message": "1.3.3.3",
-    "created_at": "2026-09-18T01:08:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35294092762"
-  },
-  {
-    "id": 35215045934,
-    "sha": "afef685d249bd96b06a7551fad398f1e6235686c",
-    "short_sha": "afef685",
-    "message": "fix: 对话框重获焦点时恢复沉浸标志，修复多任务返回后导航栏常驻遮挡底部按钮；编辑控件对话框背景补 10dp inset 恢复屏幕边缘间隔",
-    "created_at": "2026-09-17T11:17:30Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35215045934"
-  },
-  {
-    "id": 35215045890,
-    "sha": "afef685d249bd96b06a7551fad398f1e6235686c",
-    "short_sha": "afef685",
-    "message": "fix: 对话框重获焦点时恢复沉浸标志，修复多任务返回后导航栏常驻遮挡底部按钮；编辑控件对话框背景补 10dp inset 恢复屏幕边缘间隔",
-    "created_at": "2026-09-17T11:17:30Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35215045890"
-  },
-  {
-    "id": 35213157589,
-    "sha": "ad32027bd601040a949fa7c8b42fe202e1fa53d1",
-    "short_sha": "ad32027",
-    "message": "feat: 新增支持FCL弹窗，点击启动游戏按保底概率触发",
-    "created_at": "2026-09-17T10:57:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35213157589"
-  },
-  {
-    "id": 35213157596,
-    "sha": "ad32027bd601040a949fa7c8b42fe202e1fa53d1",
-    "short_sha": "ad32027",
-    "message": "feat: 新增支持FCL弹窗，点击启动游戏按保底概率触发",
-    "created_at": "2026-09-17T10:57:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35213157596"
-  },
-  {
-    "id": 35208909338,
-    "sha": "d0dfcd049148241c3530323fdbdbefc4d28f1199",
-    "short_sha": "d0dfcd0",
-    "message": "optimize: 渲染器选择对话框打开时自动定位到当前选中的渲染器",
-    "created_at": "2026-09-17T10:07:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35208909338"
-  },
-  {
-    "id": 35208909360,
-    "sha": "d0dfcd049148241c3530323fdbdbefc4d28f1199",
-    "short_sha": "d0dfcd0",
-    "message": "optimize: 渲染器选择对话框打开时自动定位到当前选中的渲染器",
-    "created_at": "2026-09-17T10:07:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35208909360"
-  },
-  {
-    "id": 35185145540,
-    "sha": "b56ddd7c2182452a519531937ab5d867a15ef471",
-    "short_sha": "b56ddd7",
-    "message": "fix: 安装器、下载页等其余版本图标加载点统一走像素感知加载，修复低分辨率图标放大糊化",
-    "created_at": "2026-09-17T05:17:00Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35185145540"
-  },
-  {
-    "id": 35185145542,
-    "sha": "b56ddd7c2182452a519531937ab5d867a15ef471",
-    "short_sha": "b56ddd7",
-    "message": "fix: 安装器、下载页等其余版本图标加载点统一走像素感知加载，修复低分辨率图标放大糊化",
-    "created_at": "2026-09-17T05:17:00Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35185145542"
-  },
-  {
-    "id": 35176499407,
-    "sha": "b14bdb90916945c946198f07e0b7494eccd736b3",
-    "short_sha": "b14bdb9",
-    "message": "Update img_neoforge.png",
-    "created_at": "2026-09-17T02:59:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35176499407"
   }
 ]
