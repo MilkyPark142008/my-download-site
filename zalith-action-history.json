@@ -1,5 +1,77 @@
 [
   {
+    "id": 35840172949,
+    "sha": "746e00a0dde43beb29ba331a0441635ad4412dcf",
+    "short_sha": "746e00a",
+    "message": "Merge pull request #1920 from Leowly/fix/multi-touch\n\nfix: 多指触控坐标偏移",
+    "created_at": "2026-09-23T08:58:15Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35840172949"
+  },
+  {
+    "id": 35835202015,
+    "sha": "c68ca9f6c6fa483d5fcc0daca5b4ef83d7138789",
+    "short_sha": "c68ca9f",
+    "message": "Merge pull request #1927 from ZalithLauncher/main\n\nmerge main",
+    "created_at": "2026-09-23T08:05:43Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35835202015"
+  },
+  {
+    "id": 35835192045,
+    "sha": "e70415c2850d3775260d0a6f29a30095ccf803c2",
+    "short_sha": "e70415c",
+    "message": "Merge pull request #1928 from ZalithLauncher/main\n\nmerge main",
+    "created_at": "2026-09-23T08:05:37Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35835192045"
+  },
+  {
+    "id": 35835080612,
+    "sha": "88dcb6dec6658a39dc4c1bd61750e4ab03222043",
+    "short_sha": "88dcb6d",
+    "message": "update README.md",
+    "created_at": "2026-09-23T08:04:21Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35835080612"
+  },
+  {
+    "id": 35834249866,
+    "sha": "14588e72a5a385374ef10aad41b9a525a8ebfb45",
+    "short_sha": "14588e7",
+    "message": "Merge remote-tracking branch 'origin/weblate_terracotta'",
+    "created_at": "2026-09-23T07:54:53Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35834249866"
+  },
+  {
+    "id": 35832850060,
+    "sha": "909b77f4c8972d441fba4ad0d860711c6558c177",
+    "short_sha": "909b77f",
+    "message": "Merge pull request #1926 from ZalithLauncher/feat/new_main_page\n\nfeat: 移除自定义主页，加入卡片式主界面系统",
+    "created_at": "2026-09-23T07:39:19Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35832850060"
+  },
+  {
+    "id": 35832555700,
+    "sha": "76959905ac2f34aa3ad2a396a95dca5a52e3dbcb",
+    "short_sha": "7695990",
+    "message": "Merge pull request #1925 from ZalithLauncher/feat/update_vk_check\n\nfeat: 更新 Vulkan 检测 (26.4-snapshot-1)",
+    "created_at": "2026-09-23T07:35:54Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35832555700"
+  },
+  {
+    "id": 35832351323,
+    "sha": "9794b9c7815a3d64fb496af4fa91cbf39f35b839",
+    "short_sha": "9794b9c",
+    "message": "feat: 为 Vulkan 检测器添加版本号，及时触发重检查",
+    "created_at": "2026-09-23T07:33:29Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35832351323"
+  },
+  {
+    "id": 35831362577,
+    "sha": "94d72191df186986a2ce6427d54ac8211b49e8e0",
+    "short_sha": "94d7219",
+    "message": "feat: 更新 Vulkan 检测 (26.4-snapshot-1)",
+    "created_at": "2026-09-23T07:22:12Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35831362577"
+  },
+  {
     "id": 35712870841,
     "sha": "7ff223826d15f27feae0dfa07d83261266d9308d",
     "short_sha": "7ff2238",
@@ -326,77 +398,5 @@
     "message": "fix: 中文搜索翻译关键词时固定使用相关性排序\n\n参考 HMCL 8767cc0e：含中文的搜索词翻译出英文短语后，\n原实现会携带用户所选排序方式发起搜索，目标资源可能被\n挤出结果页；现固定以相关性排序搜索，中文译名重排逻辑\n保持不变，非中文搜索仍尊重用户所选排序。",
     "created_at": "2026-09-17T11:22:59Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35215503434"
-  },
-  {
-    "id": 35213201816,
-    "sha": "041a4b9b8a2aa3f75778fc1bfbf12ff02412b523",
-    "short_sha": "041a4b9",
-    "message": "Merge pull request #1889 from youfeng11/feat/auto\n\nfeat: 默认展开下载模组时的版本列表中的适配版本",
-    "created_at": "2026-09-17T10:57:56Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35213201816"
-  },
-  {
-    "id": 35213064937,
-    "sha": "0c6cbdf163e30b5499c3bb22299d82c8a8b01a79",
-    "short_sha": "0c6cbdf",
-    "message": "Merge pull request #1891 from ZalithLauncher/feat/update_moddata\n\nfeat: 更新模组数据",
-    "created_at": "2026-09-17T10:56:14Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35213064937"
-  },
-  {
-    "id": 35213012531,
-    "sha": "5e8b02470415085347703fc2b7a0bbb1ff1bcfca",
-    "short_sha": "5e8b024",
-    "message": "feat: 更新模组数据",
-    "created_at": "2026-09-17T10:55:29Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35213012531"
-  },
-  {
-    "id": 35210694426,
-    "sha": "ba8b80e91f8e856aac14d3f172677f89c48471f6",
-    "short_sha": "ba8b80e",
-    "message": "Merge pull request #1890 from ZalithLauncher/fix/sdl-dlsym-proxy\n\nfix: 新增 SDL dlsym 层代理，销毁门控覆盖复用窗口",
-    "created_at": "2026-09-17T10:28:43Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35210694426"
-  },
-  {
-    "id": 35210645639,
-    "sha": "76a094317cc10726487fbbd27c85874b7638ab82",
-    "short_sha": "76a0943",
-    "message": "fix: 新增 SDL dlsym 层代理，销毁门控覆盖复用窗口\n\nLWJGL 的 org.lwjgl.sdl 绑定经 dlopen+dlsym 解析 SDL 函数指针后直接调用，\nbytehook 的 hook_all（GOT 导入补丁）拦截不到这类调用，主窗口复用与销毁\n跟踪对此类调用不生效。customDlsym 在 dlsym 出口将 SDL 符号解析结果换成\nsdl_hook 的 dlsym 层代理：代理直接调用缓存的真实函数，与 bytehook 层\n共用主窗口复用、逻辑引用计数与 launcher 集成逻辑。\n\n销毁门控抽为 releasePrimaryWindow 统一入口：复用窗口在逻辑引用全部\n释放前跳过真实 SDL_DestroyWindow，防止复用窗口被提前销毁导致\nuse-after-destroy 崩溃。\n\n参考 FCL-Team/FoldCraftLauncher 的 sdl_hook.c（https://github.com/FCL-Team/FoldCraftLauncher/blob/e398181caaccf186247057dfa1ba0cf4e5cbc83e/FCL/src/main/jni/native_hooks/sdl_hook.c）",
-    "created_at": "2026-09-17T10:27:47Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35210645639"
-  },
-  {
-    "id": 35205682015,
-    "sha": "1c53e0fa2b9bb6f19032c91d6970803b07cd3374",
-    "short_sha": "1c53e0f",
-    "message": "Merge pull request #1885 from youfeng11/main\n\nchore: 调整选择Java运行时对话框样式",
-    "created_at": "2026-09-17T09:32:33Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35205682015"
-  },
-  {
-    "id": 35205581238,
-    "sha": "a8fa885af63f5cf1e22474a1e6adb5408835c06b",
-    "short_sha": "a8fa885",
-    "message": "Merge pull request #1884 from ZalithLauncher/fix/lwjgl-natives-verify\n\nfix: 统一 LWJGL natives 路径单次初始化，启动前自检缺失时自动重解包",
-    "created_at": "2026-09-17T09:31:26Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35205581238"
-  },
-  {
-    "id": 35016828725,
-    "sha": "90ec8c4d8caa46f8f1f483566b0d009434b4d960",
-    "short_sha": "90ec8c4",
-    "message": "fix: 统一 LWJGL natives 路径单次初始化，启动前自检缺失时自动重解包",
-    "created_at": "2026-09-15T19:58:43Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35016828725"
-  },
-  {
-    "id": 34915799530,
-    "sha": "b4c9415bf5be0d2f1ad6af511d695a50f7c6dc6e",
-    "short_sha": "b4c9415",
-    "message": "bump version to 2.5.3",
-    "created_at": "2026-09-15T01:02:31Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/34915799530"
   }
 ]
