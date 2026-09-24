@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 181357034,
         "digest": "sha256:56cf2b89afd0379c1684c16cbbbd8bc210f5cda32f8c7425046df387a05c4e54",
-        "download_count": 0,
+        "download_count": 2567,
         "created_at": "2026-09-24T14:39:39Z",
         "updated_at": "2026-09-24T14:39:47Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.6/ZalithLauncher-2.6_hotfix-arm64-v8a.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 173275725,
         "digest": "sha256:794f41a6cda517b7925ede7b6074622ebf66678cbb2f48e114072fa38dc6c5de",
-        "download_count": 0,
+        "download_count": 50,
         "created_at": "2026-09-24T14:39:39Z",
         "updated_at": "2026-09-24T14:39:47Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.6/ZalithLauncher-2.6_hotfix-armeabi-v7a.apk"
@@ -140,7 +140,7 @@
         "state": "uploaded",
         "size": 161813579,
         "digest": "sha256:596634905c68a48220c2c2f3e37e1f796826b9c22c83502371079d22ed5f2726",
-        "download_count": 0,
+        "download_count": 27,
         "created_at": "2026-09-24T14:39:39Z",
         "updated_at": "2026-09-24T14:39:48Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.6/ZalithLauncher-2.6_hotfix-x86.apk"
@@ -176,7 +176,7 @@
         "state": "uploaded",
         "size": 187186347,
         "digest": "sha256:66c7aefeccb3a1da97e0239f4a04290bfa625ebdb2f1916648e00ab887b8918c",
-        "download_count": 0,
+        "download_count": 24,
         "created_at": "2026-09-24T14:39:39Z",
         "updated_at": "2026-09-24T14:39:49Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.6/ZalithLauncher-2.6_hotfix-x86_64.apk"
@@ -212,7 +212,7 @@
         "state": "uploaded",
         "size": 354439913,
         "digest": "sha256:214ec08ac09f667f1ba7d1056c1f33787ebb50f9773b785419c0cf9d018f2c72",
-        "download_count": 0,
+        "download_count": 517,
         "created_at": "2026-09-24T14:39:39Z",
         "updated_at": "2026-09-24T14:39:51Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.6/ZalithLauncher-2.6_hotfix.apk"
@@ -223,14 +223,14 @@
     "body": "## Hotfix:\r\n- Main interface card width stalling on ultra-wide windows (by @MovTery)\r\n- Touch coordinate offset after closing page fullscreen (by @MovTery)\r\n\r\n## Updates:\r\n- #1891: Updated mod data (by @MovTery)\r\n- #1892: Use relevance sorting when searching translation keywords in Chinese (by @MovTery)\r\n- #1897: Added resource favorites feature to the download screen (by @MovTery)\r\n- #1906: Added game argument configuration options (by @MovTery)\r\n- #1925: Updated Vulkan detection (26.4-snapshot-1) (by @MovTery)\r\n- #1926: Removed custom home page, added card-based main interface system (by @MovTery)\r\n- #1934: Main interface action menu bar supports long-press drag to switch sides (by @MovTery)\r\n\r\n## Refactors:\r\n- #1911: Version encapsulates game directory, version chain paths now provided by Version instances (by @MovTery)\r\n- #1929: Refactored downloader engine, referencing HMCL FetchTask (by @MovTery)\r\n\r\n## Changes:\r\n- #1885: Adjusted Java runtime selection dialog style (by @youfeng11)\r\n- #1889: Expand compatible versions by default in the version list when downloading mods (by @youfeng11)\r\n- #1897: Resource platform badges now distinguished by platform brand colors (by @MovTery)\r\n\r\n## Fixes:\r\n- #1884: Unified single initialization of LWJGL natives paths, auto re-extract when self-check detects missing files before launch (by @MovTery)\r\n- #1890: Added SDL dlsym layer proxy, destroy gating covers reused windows (by @MovTery)\r\n- #1898: Abnormally long author names displayed incorrectly on the download screen (by @MovTery)\r\n- #1905: Byte-by-byte boxing during mod fingerprint scanning causes GC pressure and slow loading when loading installed mods (by @MovTery)\r\n- #1906: Misaligned game arguments and JVM arguments when importing/exporting MCBBS modpacks (by @MovTery)\r\n- #1923: Completed paired sending of key and character events, fixing Cleanroom letter keys and chat input not working (by @MovTery)\r\n- #1920: Some systems scale app windows, causing decorView size to differ from physical display size and leading to multi-touch coordinate offset (by @Leowly)\r\n- #1932: Fixed physical mouse movement being dispatched as key events after switching system input method (by @MovTery)",
     "reactions": {
       "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/releases/395773514/reactions",
-      "total_count": 1,
-      "+1": 1,
+      "total_count": 11,
+      "+1": 7,
       "-1": 0,
       "laugh": 0,
       "hooray": 0,
       "confused": 0,
       "heart": 0,
-      "rocket": 0,
+      "rocket": 4,
       "eyes": 0
     },
     "mentions_count": 3
