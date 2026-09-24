@@ -1,5 +1,37 @@
 [
   {
+    "id": 35945278521,
+    "sha": "06b386bfe0479f366e699ef706bc1b6f68b443dc",
+    "short_sha": "06b386b",
+    "message": "feat: 同步上游 HMCL 的 Legacy Fabric 安装功能\n\n- LibraryAnalyzer 新增 LEGACY_FABRIC/LEGACY_FABRIC_API 识别,与 fabric 按是否存在 net.legacyfabric 库互斥区分\n- 安装页新增 Legacy Fabric/API 条目:兼容矩阵、依赖绑定、版本区间(1.12.2 与 <=1.13.2)对齐上游,顺带修正 1.13.x 分支判断\n- 启动链路将 legacyfabric 归入 fabric 体系(InjectorMap 注入参数与 INST_FABRIC 环境变量)\n- 配套安装任务命名、版本列表图标与警告弹窗文案",
+    "created_at": "2026-09-24T01:55:24Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35945278521"
+  },
+  {
+    "id": 35945278119,
+    "sha": "06b386bfe0479f366e699ef706bc1b6f68b443dc",
+    "short_sha": "06b386b",
+    "message": "feat: 同步上游 HMCL 的 Legacy Fabric 安装功能\n\n- LibraryAnalyzer 新增 LEGACY_FABRIC/LEGACY_FABRIC_API 识别,与 fabric 按是否存在 net.legacyfabric 库互斥区分\n- 安装页新增 Legacy Fabric/API 条目:兼容矩阵、依赖绑定、版本区间(1.12.2 与 <=1.13.2)对齐上游,顺带修正 1.13.x 分支判断\n- 启动链路将 legacyfabric 归入 fabric 体系(InjectorMap 注入参数与 INST_FABRIC 环境变量)\n- 配套安装任务命名、版本列表图标与警告弹窗文案",
+    "created_at": "2026-09-24T01:55:24Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35945278119"
+  },
+  {
+    "id": 35941141175,
+    "sha": "263773ff52c6478c2025236d2b180855fb4ee77e",
+    "short_sha": "263773f",
+    "message": "optimize: 主题色透明度改为百分比显示，FCLMenuView 选中色不受透明度影响",
+    "created_at": "2026-09-24T01:01:43Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35941141175"
+  },
+  {
+    "id": 35941141022,
+    "sha": "263773ff52c6478c2025236d2b180855fb4ee77e",
+    "short_sha": "263773f",
+    "message": "optimize: 主题色透明度改为百分比显示，FCLMenuView 选中色不受透明度影响",
+    "created_at": "2026-09-24T01:01:43Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35941141022"
+  },
+  {
     "id": 35873067970,
     "sha": "d6f224db933174aeef900d2fc28d6d8812b82830",
     "short_sha": "d6f224d",
@@ -366,37 +398,5 @@
     "message": "chore(l10n): update translation files\n\nAdd-on: Cleanup translation files\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/\nTranslation: FoldCraftLauncher/FCL",
     "created_at": "2026-09-18T11:05:42Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35337936554"
-  },
-  {
-    "id": 35337936562,
-    "sha": "dd930c09a55dde7a2d8d5f1909a199a9577fca0d",
-    "short_sha": "dd930c0",
-    "message": "chore(l10n): update translation files\n\nAdd-on: Cleanup translation files\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-09-18T11:05:42Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35337936562"
-  },
-  {
-    "id": 35337894395,
-    "sha": "6d3aaa3d4ec1fd8640183789852f685e7a5ebcb9",
-    "short_sha": "6d3aaa3",
-    "message": "feat: 皮肤模型新增 3D 皮肤层开关，禁用时第二层回落原版面片，状态随动画一起持久化到 DataStore",
-    "created_at": "2026-09-18T11:05:01Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35337894395"
-  },
-  {
-    "id": 35294965260,
-    "sha": "9ecb8853876a801069df98f0ed1a87d833aa4ddb",
-    "short_sha": "9ecb885",
-    "message": "Merge branch 'main' into feature/download-favorites",
-    "created_at": "2026-09-18T01:20:59Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35294965260"
-  },
-  {
-    "id": 35294965261,
-    "sha": "9ecb8853876a801069df98f0ed1a87d833aa4ddb",
-    "short_sha": "9ecb885",
-    "message": "Merge branch 'main' into feature/download-favorites",
-    "created_at": "2026-09-18T01:20:59Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35294965261"
   }
 ]
