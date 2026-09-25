@@ -1,5 +1,45 @@
 [
   {
+    "id": 36089500752,
+    "sha": "5ccb04aea5e4a2a69e24bd40a6293601565cc99b",
+    "short_sha": "5ccb04a",
+    "message": "optimize: 皮肤模型判定优先使用账户提供的模型类型，无指定时回退图像检测",
+    "created_at": "2026-09-25T03:12:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36089500752"
+  },
+  {
+    "id": 36089500747,
+    "sha": "5ccb04aea5e4a2a69e24bd40a6293601565cc99b",
+    "short_sha": "5ccb04a",
+    "message": "optimize: 皮肤模型判定优先使用账户提供的模型类型，无指定时回退图像检测",
+    "created_at": "2026-09-25T03:12:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36089500747"
+  },
+  {
+    "id": 36082836060,
+    "sha": "aa35a790a5b8965927c3caf561bf09356b2edfe9",
+    "short_sha": "aa35a79",
+    "message": "1.3.3.5",
+    "created_at": "2026-09-25T01:37:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36082836060"
+  },
+  {
+    "id": 36082836435,
+    "sha": "aa35a790a5b8965927c3caf561bf09356b2edfe9",
+    "short_sha": "aa35a79",
+    "message": "1.3.3.5",
+    "created_at": "2026-09-25T01:37:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36082836435"
+  },
+  {
+    "id": 36082836076,
+    "sha": "aa35a790a5b8965927c3caf561bf09356b2edfe9",
+    "short_sha": "aa35a79",
+    "message": "1.3.3.5",
+    "created_at": "2026-09-25T01:37:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36082836076"
+  },
+  {
     "id": 35945278521,
     "sha": "06b386bfe0479f366e699ef706bc1b6f68b443dc",
     "short_sha": "06b386b",
@@ -358,45 +398,5 @@
     "message": "feat: 下载页资源收藏 + 自定义分组 + 批量管理（左滑收藏 / 分组筛选 / 多选 / 一键下载） (#1838)\n\n* feat: 同步上游 HMCL 的 MultiMC 整合包导入功能\n\n- 新增 MultiMCComponents 与重写 MultiMCInstancePatch:补全\n  assetIndex/jvmArgs/compatibleJavaMajors/mainJar/traits/mavenFiles/jarMods/\n  requires 字段,resolveArtifact 将组件 Json-Patch 合成官方版本格式补丁\n  (--tweakClass 提取、去重、FirstThreadOnMacOS、ForgeWrapper 特判)\n- 重写 MultiMCModpackInstallTask 为八阶段流程:overrides 解包、组件加载\n  (本地 patches 优先,远程拉 meta.multimc.org)、requires 依赖递归补齐、\n  补丁合成、内嵌文件拷贝与图标、游戏文件下载、jarmod 合并进主 jar;\n  移除 GameBuilder 安装加载器路线与 HMCLMultiMCBootstrap 引导层,\n  mainClass 直接使用组件声明\n- 实测兼容修复:Library.natives 键改为 String(ARM 变体键不再解析为\n  重复 null 键)、local 库无 MMC-filename 时按 artifact 坐标推导文件名、\n  compatibleJavaMajors 序列化名修正、合成参数以 minecraftArguments 承载\n  避免与新格式 game args 重复拼接、OperatingSystem 补充 FREEBSD\n- LWJGL 版本解析取最高声明版本,lwj3ify 等 3.x 场景正确分配内置 3.4.1\n- 启动注入 -Dorg.lwjgl.egl.libname,LWJGL3 EGL 场景走渲染插件 EGL;\n  isModded 补充 RetroFuturaBootstrap 入口与 multimc 补丁识别,修复\n  MultiMC 实例装 mod 后误弹未安装加载器提示\n\n* feat: 下载页支持 CurseForge 与 Modrinth 聚合搜索——双源并行检索、交错合并、保守跨平台合并（更新时间同步确认）、PCL 式统一分类表与 Zalith 风格来源徽标\n\n* fix: CurseForge 搜索相关性排序重写——归一化（忽略空格/标点）三档匹配（全等/前缀/Levenshtein+词减分），修复 DragonMine Z 等正确结果被 addon 挤到后方的问题（HMCL 上游 Always sort 提交的算法缺陷）\n\n* refactor: 跟进上游 HMCL 下载源体系重构（DownloadProvider 全链路）\n\n- 接口重写：getVersionListURL→getVersionListURLs 多候选、删除 getAssetBaseURL、\n  getVersionListById(String)→getVersionList(GameComponentType) 枚举驱动、\n  injectURLsWithCandidates 去重\n- 新增 GameComponentType / ComponentRemoteVersion / ComponentVersionList（Task 化），\n  删除 VersionList / RemoteVersion / AdaptedDownloadProvider / BalancedDownloadProvider /\n  MultipleSourceVersionList / OptiFine302VersionList\n- AutoDownloadProvider 改为版本列表/文件下载双候选列表，多源刷新具名 Task\n  （修复安装静默窗口）；新增 DownloadProviderWrapper 热替换\n- BMCLAPI 替换表拆分 fallbackReplacement：Modrinth/CurseForge 镜像改为先直连后回退，\n  新增 fmllibs 镜像；新增 NetworkUtils.doGet(List<URL>) 候选回退\n- 新增 legacyfabric 组件（Legacy Fabric / API 版本列表与安装任务）\n- 设置模型迁移：DownloadSource 枚举 + versionListSource/fileDownloadSource 双设置\n  （含旧配置迁移），默认源按网络环境自动排序；下载错误识别 DNS 污染\n- 版本列表全部转 GetTask/Task 链；UI（设置页/下载页/管理页）同步适配\n\n* fix: DownloadProviderWrapper 按组件类型缓存代理版本列表\n\ngetVersionList 每次调用都新建匿名实例，导致页面刷新合并数据与后续读取\n落在不同实例上（下载页版本列表永远为空）。改为 wrapper 内按\nGameComponentType 缓存同一实例，与热替换语义一致。\n\n* test: BMCLAPI 候选回退与 GameComponentType 映射单元测试\n\n- BMCLAPIDownloadProvider：Mojang/libraries 重写、Modrinth/CurseForge\n  官方优先+镜像回退双候选、fabric-meta 单候选、候选去重、fmllibs 镜像、\n  版本列表/资产根地址、组件列表覆盖与缓存\n- GameComponentType：patchId 往返、LibraryAnalyzer patch id 全映射、未知值\n\n* fix: GetTask JSON 解析失败时清除 ETag 缓存条目自愈 + 下载功能 androidTest\n\n修复：大响应（version_manifest）在网络劣化时被截断，截断正文会连同 ETag\n一起写入缓存，此后每次 If-None-Match 命中 304 永久返回坏缓存（JSON EOF）。\nthenGetJsonAsync 解析失败时移除对应 URL 的缓存条目，下次强制重新下载；\nCacheRepository.removeRemoteEntry 增加 String url 重载。\n\n测试（androidTest，29 用例）：\n- DownloadProviderTest：wrapper 按组件类型缓存与热替换、缓存实例数据可见\n  （ba705310 回归锚点）、多源回退/全失败静默降级、候选聚合、游戏/Forge/\n  Fabric/LegacyFabric/API/OptiFine/NeoForge/Cleanroom 列表真实网络刷新\n- DownloadSourceMigrationTest：旧配置四组合迁移、新格式防降级、空/未知值\n  回退、枚举名往返、DownloadProviders 装配热切换与候选数\n- NetworkUtilsDoGetTest：候选回退、聚合 suppressed、空候选\n\n模拟器 192.168.2.8 全量 androidTest 连续两轮 135/135 通过\n\n* feat: 下载页资源收藏（左滑菜单收藏 + 收藏页）并将 RemoteModCache 迁移到 Room\n\n- 下载页新增第 7 个「收藏」页签，空状态展示使用方法引导\n- 新增 SwipeMenuLayout 通用左滑菜单组件：搜索结果左滑收藏、收藏页左滑取消收藏，菜单可扩展\n- 收藏数据 Room 持久化（FavoriteDatabase，schema 导出），FavoriteManager 内存镜像供同步判断\n- 收藏项点击后对齐下载页模式并经 getModById 重新拉取详情，跳转对应下载详情页\n- RemoteModCache 由原生 SQLite 迁移到 Room，对外 API 不变\n- DownloadPage.repositoryFor/getLocalizedCategory 改为始终按条目自身来源路由\n- 引入 KSP + Room 依赖（libs.versions.toml）；页签栏用 HorizontalScrollView 包裹支持 7 页签滚动\n\n* refactor: 去掉页签栏外层 HorizontalScrollView\n\nTabLayout 本身继承 HorizontalScrollView，scrollable 模式下自身即可拖动滚动、\n选中页签自动滚入视野，外层包裹多余；container 约束恢复引用 tab_layout。\n布局抖动时内部滚动被 clamp 的自愈监听改挂到 tabLayout 宽度变化上\n\n* fix: 左滑菜单视觉调整——与 item 增加间隔、背景色与 item 一致、修正图标主题色不生效\n\n- SwipeMenuLayout 打开位移增加 8dp 间隔（openOffset = menuWidth + gap）\n- 菜单层由普通 LinearLayout（app:auto_tint 不生效、背景恒白）改为 FCLLinearLayout\n  + app:auto_linear_background_tint，与 item 卡片同色且随主题联动\n- FCLImageButton 的属性是 app:auto_tint（auto_src_tint 属于 FCLImageView，静默忽略导致图标保持灰色）\n\n* fix: 收藏操作改为差量局部刷新，不再整表重绑\n\n- RemoteModListAdapter 收藏 flow 收集改为差量计算：仅收藏状态变化的条目\n  notifyItemChanged(PAYLOAD_FAVORITE)，payload 分支只更新星形图标，\n  不再 notifyDataSetChanged 触发整表重播入场动画/图片重载闪烁\n- FavoriteAdapter.submit 改用 DiffUtil，收藏页增删带动画、未变化条目不重绑\n\n* feat: 收藏页支持分类过滤与一键下载模组\n\n- 顶部新增分类条：全部/模组/整合包/资源包/光影/世界，选中态高亮（alpha+粗体）\n- 一键下载模组：按当前游戏版本与加载器匹配各收藏模组最新版本，\n  复用 downloadWithDependencies（解析 REQUIRED 前置闭包、已安装去重、入队下载面板）；\n  当前版本无加载器（原版）时仅匹配无加载器要求的模组；\n  无匹配/下载失败/未选版本分别 toast 提示\n- 修复 FavoritePage 字段被属性初始化器覆盖的问题：FCLPage 在超类构造期间回调\n  onCreate，属性初始化器于构造完成时执行会覆盖 onCreate 的赋值，字段一律改 lateinit\n  （filterChips 此前被覆盖为空列表导致分类选中态不刷新）\n\n* feat: 一键下载改为对话框交互——解析进度 + 勾选确认，去除连续 toast\n\n- 新增 FavoriteBatchDialog：阶段一显示解析进度；阶段二列出与当前版本/加载器\n  匹配的收藏模组（默认全选、展示目标文件名），用户勾选确认后提交下载\n- DownloadPage 新增 downloadModsBatch：批量解析 REQUIRED 前置闭包（后台）、\n  跨模组按文件名去重、已安装跳过，统一入队下载面板并回调统计\n- 入队后仅弹一条汇总 toast，消除逐模组解析/下载的连续 toast 刷屏\n- 修复 Kotlin FCLPage 子类属性初始化器覆盖 onCreate 赋值的初始化顺序问题\n  （FavoritePage 字段改 lateinit，含 filterChips 选中态不刷新的根因）\n\n* fix: 一键下载对话框样式对齐 RendererSelectDialog\n\n- 对话框标题/提示/跳过说明改用默认主题文字色（FCLTextView 的 auto_text_tint\n  在 dialog_background 上渲染为浅色导致低对比），与 RendererSelectDialog 一致\n- 按钮去掉 app:ripple（该属性会切换为特殊 ripple 底样式），恢复标准按钮样式\n- 列表项布局对齐 item_renderer_select：Checkbox 居左，标题/文件名右移两行\n\n* feat: 依赖解析阶段接入下载面板显示逐模组进度\n\ndownloadModsBatch 的前置解析改为自定义 Task（updateProgress 按模组数推进），\n经 DownloadManager.submit 作为面板条目展示（标题「解析模组前置依赖」+ 进度条），\n解析完成后条目自动移除、下载任务接续入列——长时间解析不再让用户感觉无响应\n\n* feat: 收藏页布局与下载页风格统一\n\n- 顶部 chip 按钮条改为与搜索页同构的左侧筛选面板：圆角卡片内\n  「类别」FCLSpinner（全部/模组/整合包/资源包/光影/世界）+ 沉底的\n  「一键下载模组」按钮，位置与搜索页搜索面板/搜索按钮一致\n- 列表项类别文字改用主题提示色弱化（次级信息层级），随主题联动\n- 移除自造胶囊样式（此前 alpha 选中态在浅色主题下对比不足）\n\n* fix: 收藏页左侧面板——类别选项直接展开、面板背景与卡片严格一致\n\n- 类别 Spinner 改为直接展开的选项列表（左栏空间充足无需下拉），\n  选中项主题次色 + 粗体，其余常规文字色，随主题联动\n- 面板背景改用与条目卡片完全相同的着色路径\n  （setBackgroundResource + backgroundTintList=ltColor，像素取样一致），\n  替换此前依赖共享 drawable 间接着色的写法（深浅主题下颜色不可控）\n\n* feat: 收藏页类别选项美化——卡片行 + 数量徽标 + 修复初始化崩溃\n\n- 类别选项改为卡片行样式：选中项主题色暗变体（dkColor）实底 + 粗体 + 自动对比\n  色文字，未选中项半透明胶囊，右侧显示各类别收藏数量徽标，随主题联动\n- 修复 setupFilter 崩溃：registerEvent 注册即同步执行回调，而回调读取的\n  filterOptionRows 尚未完成赋值（UninitializedPropertyAccessException），\n  改为先构建赋值、后注册监听\n- 行布局由 LinearLayout+weight 改为 ConstraintLayout（weight 分配在\n  FCLLinearLayout 组合下失效导致文字被压成竖条不可见）\n\n* fix: 收藏页类别选中色改用主要主题色\n\n选中项底色由 dkColor（暗变体）改为 getColor()（按当前亮暗模式动态取主要主题色）\n\n* feat: 收藏页类别选项美化——卡片行 + 数量徽标，修复文字不可见\n\n- 类别选项改为卡片行：选中项主要主题色实底 + 粗体 + 自动对比色文字，\n  未选中项透明底，右侧显示各类别收藏数量徽标，随主题联动\n- 空状态标题/引导文字与星形图标改用次要主题色（use_theme_color / color2），\n  深色主色主题下不再使用低对比的 autoTint 白字\n- 修复选项文字不可见：FCLLinearLayout 行内 weight=1 分配失效导致文字被压成\n  12px 竖条，行布局改用 ConstraintLayout 约束；代码创建的 FCLTextView 补\n  setAutoTint(true) 使文字色随主题\n\n* optimize: 对话框条目卡片底色改为亮暗固定色值\n\n* feat: 收藏支持自定义分组（收藏/修改选分组、分组筛选管理、一键下载按分组生效）\n\n- 数据层：新增 favorite_groups 表与收藏条目 groups 列，库升 v2（测试阶段破坏式重建，合并前补正式迁移）\n- FavoriteManager：分组 StateFlow、toggle 携带分组、setGroups、建组同名复用、删组仅摘标签\n- 搜索结果点星标弹分组多选对话框（可对话框内新建），已收藏点星仍为取消收藏\n- 收藏页左侧新增分组筛选区（与类别交叉过滤），条目左滑支持修改分组并显示分组标签\n- 一键下载模组改为仅解析当前筛选（类别×分组）下的收藏\n\n* fix: 修复修改分组后切回全部时条目左滑菜单仍打开\n\n被筛选移除的条目经 RecyclerView 缓存原样复用（复用不重绑），\nSwipeMenuLayout 的打开状态会被带回列表；数据刷新时统一收起\n\n* fix: 分组选择对话框空列表时提示可直接确认收藏，避免误导必须建组\n\n收藏与管理两个对话框的空态提示分离：收藏场景明确分组可选；\n管理场景保留\"暂无分组，点击下方新建\"\n\n* 调整布局\n\n* feat: 左滑菜单打开时点击菜单外区域自动关闭\n\nRecyclerView 条目触摸拦截：菜单打开时按下其他条目/空白区域\n仅关闭菜单并消费该次点击，防止误触；收藏列表与搜索结果列表均接入\n\n* optimize: 管理分组入口改为分组标题右侧的扳手图标\n\n* optimize: 构造期确定赋值的字段由 lateinit 改为 val\n\n* optimize: setter 调用改为属性访问语法\n\n* optimize: 管理分组扳手图标 padding 显式置 0\n\n* optimize: setAutoTint 改用 isAutoTint 属性语法\n\n* optimize: 管理分组扳手图标放大到 35dp\n\n* fix: 管理分组行加间隔，修复双击确认重复创建同名分组\n\ncreateGroup/renameGroup 的查重与写入经 Mutex 串行化：\n双击确认触发两次并发回调时，第二次进入锁内即可命中内存查重，\n返回既有分组而不是再插一条同名记录\n\n* feat: 点击滑动菜单按钮后立即收起菜单\n\n收藏星标、修改分组、取消收藏三个菜单动作触发时先关闭菜单，\n不再保持打开状态\n\n* feat: 使用 DialogCard 背景的条目卡片添加 3dp 投影\n\n新增 applyCardElevation 统一设置 elevation，applySelectableItemStyle\n与右菜单控件组行接入，覆盖 ItemSelection/SelectController/渲染器选择/\nJava 管理/皮肤动画/游戏内右菜单等全部卡片\n\n* Update RightMenuAdapter.kt\n\n* fix: DialogCard 背景条目补齐四周间距，避免投影被布局裁剪\n\n条目此前 match_parent 且无 margin，卡片贴死列表边界：\n3dp 阴影被边界裁掉、相邻条目互相遮挡。为 item_text/renderer_select/\nmanage_java/controller_selectable 及皮肤动画行补水平 6dp、垂直 5dp 间距\n\n* optimize: DialogCard 条目间距收紧到水平 3dp、垂直 2dp\n\n* feat: 详情页添加收藏按钮\n\n顶部标题行新增星形按钮，与列表收藏行为一致：未收藏时弹分组\n多选（可跳过）后收藏，已收藏时点击直接取消；星形在状态实际\n变更后刷新。列表页与详情页的收藏点击逻辑收敛到 FavoriteActions\n公共函数，FavoriteManager 相关方法补 @JvmStatic 供 Java 调用\n\n* feat: 收藏条目长按进入多选模式，支持批量修改分组/取消收藏\n\n- 长按条目进入多选，条目显示勾选框，点击切换选中；全选/退出按钮在底部操作栏\n- 批量修改分组：预勾选所有选中条目的公共分组，确认后整体覆盖\n- 批量取消收藏：确认对话框后移除；FavoriteManager 新增 removeFavorites/setGroupsBulk\n- 多选时隐藏一键下载按钮、停用左滑菜单，操作完成自动退出多选\n\n* optimize: 多选操作栏移到列表下方不遮挡条目，新增反选与按钮间距\n\n- 列表底部约束到操作栏顶部，多选时列表被压缩而非被覆盖\n- 操作栏新增反选按钮（FavoriteAdapter.invertSelect）\n- 操作栏按钮间加 8dp 间距\n\n* optimize: 去除多选操作栏的选中数量显示\n\n* optimize: 管理分组列表与渲染器选择对话框样式统一\n\n改为 RecyclerView + SpacingItemDecoration(10dp) 结构，行样式走\napplySelectableItemStyle（DialogCard 背景投影、默认主题文字色），\n替代手写 LinearLayout 行与固定白色背景\n\n* 调整布局",
     "created_at": "2026-09-19T00:46:41Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35410502639"
-  },
-  {
-    "id": 35410468634,
-    "sha": "c66b29291a700d139b5801482d202e336eda4f75",
-    "short_sha": "c66b292",
-    "message": "fix: 修复新建控件组后因数据未标记加载完成而无法添加按键",
-    "created_at": "2026-09-19T00:45:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35410468634"
-  },
-  {
-    "id": 35410468593,
-    "sha": "c66b29291a700d139b5801482d202e336eda4f75",
-    "short_sha": "c66b292",
-    "message": "fix: 修复新建控件组后因数据未标记加载完成而无法添加按键",
-    "created_at": "2026-09-19T00:45:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35410468593"
-  },
-  {
-    "id": 35338497073,
-    "sha": "0c9dacb55248e93e11edc504d1c31e0f18368d9e",
-    "short_sha": "0c9dacb",
-    "message": "Merge pull request #1850 from FCL-Team/weblate-foldcraftlauncher-fcl\n\nchore(l10n): update translations",
-    "created_at": "2026-09-18T11:12:39Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35338497073"
-  },
-  {
-    "id": 35337938428,
-    "sha": "dd930c09a55dde7a2d8d5f1909a199a9577fca0d",
-    "short_sha": "dd930c0",
-    "message": "chore(l10n): update translation files\n\nAdd-on: Cleanup translation files\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-09-18T11:05:42Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35337938428"
-  },
-  {
-    "id": 35337936554,
-    "sha": "dd930c09a55dde7a2d8d5f1909a199a9577fca0d",
-    "short_sha": "dd930c0",
-    "message": "chore(l10n): update translation files\n\nAdd-on: Cleanup translation files\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-09-18T11:05:42Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35337936554"
   }
 ]
