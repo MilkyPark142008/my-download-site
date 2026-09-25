@@ -1,23 +1,93 @@
 {"run": {
-  "id": 33972746203,
-  "name": "Build",
-  "node_id": "WFR_kwLOIQeFGs8AAAAH6O732w",
-  "head_branch": "weblate-foldcraftlauncher-fcl",
-  "head_sha": "c05ef56b790bf2beb4e0802436b95abff2a9ec7f",
-  "path": ".github/workflows/build.yml",
-  "display_title": "refactor: 皮肤 3D 预览重构：GLTF 模型 + 烘焙动画 + 体素化第二层",
-  "run_number": 961,
+  "id": 36124433514,
+  "name": "Check Codes",
+  "node_id": "WFR_kwLOIQeFGs8AAAAIaS8cag",
+  "head_branch": "main",
+  "head_sha": "84017a2485b977348ca35e6aa21e87c8b069a075",
+  "path": ".github/workflows/check-codes.yml",
+  "display_title": "fix: 完善引导描述并同步英文翻译",
+  "run_number": 137,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
-  "workflow_id": 200966783,
-  "check_suite_id": 92062033605,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAVb1MmxQ",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/33972746203",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33972746203",
-  "pull_requests": [],
-  "created_at": "2026-09-05T14:45:19Z",
-  "updated_at": "2026-09-05T14:50:18Z",
+  "workflow_id": 351611475,
+  "check_suite_id": 97823454221,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAWxrt0DQ",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36124433514",
+  "pull_requests": [
+    {
+      "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
+      "id": 4452442002,
+      "number": 364,
+      "head": {
+        "ref": "main",
+        "sha": "84017a2485b977348ca35e6aa21e87c8b069a075",
+        "repo": {
+          "id": 554140954,
+          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      },
+      "base": {
+        "ref": "main",
+        "sha": "97dc0f6c4a5f5fada8b86aa68e1e9d4b189d1b25",
+        "repo": {
+          "id": 1026321990,
+          "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher/pulls/37",
+      "id": 4452270030,
+      "number": 37,
+      "head": {
+        "ref": "main",
+        "sha": "84017a2485b977348ca35e6aa21e87c8b069a075",
+        "repo": {
+          "id": 554140954,
+          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      },
+      "base": {
+        "ref": "main",
+        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
+        "repo": {
+          "id": 1335592322,
+          "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher/pulls/400",
+      "id": 4451484148,
+      "number": 400,
+      "head": {
+        "ref": "main",
+        "sha": "84017a2485b977348ca35e6aa21e87c8b069a075",
+        "repo": {
+          "id": 554140954,
+          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      },
+      "base": {
+        "ref": "main",
+        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
+        "repo": {
+          "id": 835628097,
+          "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      }
+    }
+  ],
+  "created_at": "2026-09-25T10:31:21Z",
+  "updated_at": "2026-09-25T10:32:51Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -41,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-09-05T14:45:19Z",
+  "run_started_at": "2026-09-25T10:31:21Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -63,19 +133,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/33972746203/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/33972746203/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/92062033605",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/33972746203/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/33972746203/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/33972746203/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/97823454221",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514/rerun",
   "previous_attempt_url": null,
-  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/200966783",
+  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "c05ef56b790bf2beb4e0802436b95abff2a9ec7f",
-    "tree_id": "a5f23a7ed07e8d648704ab2e4b8cd202fd5693b0",
-    "message": "refactor: 皮肤 3D 预览重构：GLTF 模型 + 烘焙动画 + 体素化第二层\n\n- 新增 GltfModel/GltfPlayerModel/Quat：加载玩家 GLTF 模型（无蒙皮刚体层级），预缩放为像素单位、居中，烘焙 clip LINEAR 采样驱动动画\n- 新增 SolidSkinLayer 体素化第二层（3D Skin Layers 式逐像素立方体 + 方向光照），SkinViewer 以 TextureView + EGL 独立线程渲染\n- 动画选择弹窗与 DataStore 持久化恢复，SkinAnimations 条目即模型内 clip 名，未知 id 回退待机\n- 模型资产来自 Modrinth App (modrinth/code packages/assets/models，GPL-3.0)",
-    "timestamp": "2026-09-05T14:21:19Z",
+    "id": "84017a2485b977348ca35e6aa21e87c8b069a075",
+    "tree_id": "50babcf5776b63a68a582580aadbce3142618274",
+    "message": "fix: 完善引导描述并同步英文翻译\n\n- 启动引导明确长按选择渲染器后直接启动\n- 管理页补充游戏设置调整的说明，下载与管理描述加\"等\"收尾\n- 控制器引导改为配置或下载虚拟按键布局",
+    "timestamp": "2026-09-25T10:30:50Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
