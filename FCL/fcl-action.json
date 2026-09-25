@@ -1,20 +1,20 @@
 {"run": {
-  "id": 36089500752,
+  "id": 36124433514,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAIZxoUUA",
+  "node_id": "WFR_kwLOIQeFGs8AAAAIaS8cag",
   "head_branch": "main",
-  "head_sha": "5ccb04aea5e4a2a69e24bd40a6293601565cc99b",
+  "head_sha": "84017a2485b977348ca35e6aa21e87c8b069a075",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "optimize: 皮肤模型判定优先使用账户提供的模型类型，无指定时回退图像检测",
-  "run_number": 134,
+  "display_title": "fix: 完善引导描述并同步英文翻译",
+  "run_number": 137,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 97730154036,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAWwSvONA",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36089500752",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36089500752",
+  "check_suite_id": 97823454221,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAWxrt0DQ",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36124433514",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
@@ -22,7 +22,7 @@
       "number": 364,
       "head": {
         "ref": "main",
-        "sha": "5ccb04aea5e4a2a69e24bd40a6293601565cc99b",
+        "sha": "84017a2485b977348ca35e6aa21e87c8b069a075",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -45,7 +45,7 @@
       "number": 37,
       "head": {
         "ref": "main",
-        "sha": "5ccb04aea5e4a2a69e24bd40a6293601565cc99b",
+        "sha": "84017a2485b977348ca35e6aa21e87c8b069a075",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -68,7 +68,7 @@
       "number": 400,
       "head": {
         "ref": "main",
-        "sha": "5ccb04aea5e4a2a69e24bd40a6293601565cc99b",
+        "sha": "84017a2485b977348ca35e6aa21e87c8b069a075",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -86,8 +86,8 @@
       }
     }
   ],
-  "created_at": "2026-09-25T03:13:43Z",
-  "updated_at": "2026-09-25T03:15:02Z",
+  "created_at": "2026-09-25T10:31:21Z",
+  "updated_at": "2026-09-25T10:32:51Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-09-25T03:13:43Z",
+  "run_started_at": "2026-09-25T10:31:21Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,19 +133,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36089500752/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36089500752/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/97730154036",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36089500752/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36089500752/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36089500752/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/97823454221",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "5ccb04aea5e4a2a69e24bd40a6293601565cc99b",
-    "tree_id": "5358f792beb8a976ca7ba308a3132c35423ca41a",
-    "message": "optimize: 皮肤模型判定优先使用账户提供的模型类型，无指定时回退图像检测",
-    "timestamp": "2026-09-25T03:12:55Z",
+    "id": "84017a2485b977348ca35e6aa21e87c8b069a075",
+    "tree_id": "50babcf5776b63a68a582580aadbce3142618274",
+    "message": "fix: 完善引导描述并同步英文翻译\n\n- 启动引导明确长按选择渲染器后直接启动\n- 管理页补充游戏设置调整的说明，下载与管理描述加\"等\"收尾\n- 控制器引导改为配置或下载虚拟按键布局",
+    "timestamp": "2026-09-25T10:30:50Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
