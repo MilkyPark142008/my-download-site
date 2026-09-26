@@ -1,20 +1,20 @@
 {"run": {
-  "id": 36124433514,
+  "id": 36204023430,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAIaS8cag",
+  "node_id": "WFR_kwLOIQeFGs8AAAAIbe2Ohg",
   "head_branch": "main",
-  "head_sha": "84017a2485b977348ca35e6aa21e87c8b069a075",
+  "head_sha": "c4af5a45d4ee87340bde5239ab2390e41b479d06",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "fix: 完善引导描述并同步英文翻译",
-  "run_number": 137,
+  "display_title": "feat: 引导遮罩添加位置过渡动画",
+  "run_number": 138,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 97823454221,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAWxrt0DQ",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36124433514",
+  "check_suite_id": 98046218954,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAW1AKSyg",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36204023430",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36204023430",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
@@ -22,7 +22,7 @@
       "number": 364,
       "head": {
         "ref": "main",
-        "sha": "84017a2485b977348ca35e6aa21e87c8b069a075",
+        "sha": "c4af5a45d4ee87340bde5239ab2390e41b479d06",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -45,7 +45,7 @@
       "number": 37,
       "head": {
         "ref": "main",
-        "sha": "84017a2485b977348ca35e6aa21e87c8b069a075",
+        "sha": "c4af5a45d4ee87340bde5239ab2390e41b479d06",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -68,7 +68,7 @@
       "number": 400,
       "head": {
         "ref": "main",
-        "sha": "84017a2485b977348ca35e6aa21e87c8b069a075",
+        "sha": "c4af5a45d4ee87340bde5239ab2390e41b479d06",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -86,8 +86,8 @@
       }
     }
   ],
-  "created_at": "2026-09-25T10:31:21Z",
-  "updated_at": "2026-09-25T10:32:51Z",
+  "created_at": "2026-09-26T00:13:23Z",
+  "updated_at": "2026-09-26T00:14:48Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-09-25T10:31:21Z",
+  "run_started_at": "2026-09-26T00:13:23Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,19 +133,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/97823454221",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36124433514/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36204023430/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36204023430/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/98046218954",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36204023430/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36204023430/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36204023430/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "84017a2485b977348ca35e6aa21e87c8b069a075",
-    "tree_id": "50babcf5776b63a68a582580aadbce3142618274",
-    "message": "fix: 完善引导描述并同步英文翻译\n\n- 启动引导明确长按选择渲染器后直接启动\n- 管理页补充游戏设置调整的说明，下载与管理描述加\"等\"收尾\n- 控制器引导改为配置或下载虚拟按键布局",
-    "timestamp": "2026-09-25T10:30:50Z",
+    "id": "c4af5a45d4ee87340bde5239ab2390e41b479d06",
+    "tree_id": "3b7ffe1e489e84eae521c485fc209922b487e2e5",
+    "message": "feat: 引导遮罩添加位置过渡动画\n\n- 显示时高亮洞从目标中心扩散点亮，步骤间从旧位置平滑滑动到新位置，隐藏时收缩回中心\n- 气泡淡入与洞的滑动动画衔接（延迟 50ms），洞动画时长 150ms\n- 修复气泡定位：新增 targetHoleRect 以动画目标位置计算，改用固定宽度 EXACTLY\n  测量取高，不再依赖布局回调时序（doOnNextLayout 中改 margin 会部分设备被吞导致气泡偏移到 0,0）",
+    "timestamp": "2026-09-26T00:12:29Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
