@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 181357034,
         "digest": "sha256:56cf2b89afd0379c1684c16cbbbd8bc210f5cda32f8c7425046df387a05c4e54",
-        "download_count": 19046,
+        "download_count": 21401,
         "created_at": "2026-09-24T14:39:39Z",
         "updated_at": "2026-09-24T14:39:47Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.6/ZalithLauncher-2.6_hotfix-arm64-v8a.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 173275725,
         "digest": "sha256:794f41a6cda517b7925ede7b6074622ebf66678cbb2f48e114072fa38dc6c5de",
-        "download_count": 381,
+        "download_count": 443,
         "created_at": "2026-09-24T14:39:39Z",
         "updated_at": "2026-09-24T14:39:47Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.6/ZalithLauncher-2.6_hotfix-armeabi-v7a.apk"
@@ -140,7 +140,7 @@
         "state": "uploaded",
         "size": 161813579,
         "digest": "sha256:596634905c68a48220c2c2f3e37e1f796826b9c22c83502371079d22ed5f2726",
-        "download_count": 173,
+        "download_count": 193,
         "created_at": "2026-09-24T14:39:39Z",
         "updated_at": "2026-09-24T14:39:48Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.6/ZalithLauncher-2.6_hotfix-x86.apk"
@@ -176,7 +176,7 @@
         "state": "uploaded",
         "size": 187186347,
         "digest": "sha256:66c7aefeccb3a1da97e0239f4a04290bfa625ebdb2f1916648e00ab887b8918c",
-        "download_count": 160,
+        "download_count": 196,
         "created_at": "2026-09-24T14:39:39Z",
         "updated_at": "2026-09-24T14:39:49Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.6/ZalithLauncher-2.6_hotfix-x86_64.apk"
@@ -212,7 +212,7 @@
         "state": "uploaded",
         "size": 354439913,
         "digest": "sha256:214ec08ac09f667f1ba7d1056c1f33787ebb50f9773b785419c0cf9d018f2c72",
-        "download_count": 3589,
+        "download_count": 4130,
         "created_at": "2026-09-24T14:39:39Z",
         "updated_at": "2026-09-24T14:39:51Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.6/ZalithLauncher-2.6_hotfix.apk"
@@ -223,13 +223,13 @@
     "body": "## Hotfix:\r\n- Main interface card width stalling on ultra-wide windows (by @MovTery)\r\n- Touch coordinate offset after closing page fullscreen (by @MovTery)\r\n\r\n## Updates:\r\n- #1891: Updated mod data (by @MovTery)\r\n- #1892: Use relevance sorting when searching translation keywords in Chinese (by @MovTery)\r\n- #1897: Added resource favorites feature to the download screen (by @MovTery)\r\n- #1906: Added game argument configuration options (by @MovTery)\r\n- #1925: Updated Vulkan detection (26.4-snapshot-1) (by @MovTery)\r\n- #1926: Removed custom home page, added card-based main interface system (by @MovTery)\r\n- #1934: Main interface action menu bar supports long-press drag to switch sides (by @MovTery)\r\n\r\n## Refactors:\r\n- #1911: Version encapsulates game directory, version chain paths now provided by Version instances (by @MovTery)\r\n- #1929: Refactored downloader engine, referencing HMCL FetchTask (by @MovTery)\r\n\r\n## Changes:\r\n- #1885: Adjusted Java runtime selection dialog style (by @youfeng11)\r\n- #1889: Expand compatible versions by default in the version list when downloading mods (by @youfeng11)\r\n- #1897: Resource platform badges now distinguished by platform brand colors (by @MovTery)\r\n\r\n## Fixes:\r\n- #1884: Unified single initialization of LWJGL natives paths, auto re-extract when self-check detects missing files before launch (by @MovTery)\r\n- #1890: Added SDL dlsym layer proxy, destroy gating covers reused windows (by @MovTery)\r\n- #1898: Abnormally long author names displayed incorrectly on the download screen (by @MovTery)\r\n- #1905: Byte-by-byte boxing during mod fingerprint scanning causes GC pressure and slow loading when loading installed mods (by @MovTery)\r\n- #1906: Misaligned game arguments and JVM arguments when importing/exporting MCBBS modpacks (by @MovTery)\r\n- #1923: Completed paired sending of key and character events, fixing Cleanroom letter keys and chat input not working (by @MovTery)\r\n- #1920: Some systems scale app windows, causing decorView size to differ from physical display size and leading to multi-touch coordinate offset (by @Leowly)\r\n- #1932: Fixed physical mouse movement being dispatched as key events after switching system input method (by @MovTery)",
     "reactions": {
       "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/releases/395773514/reactions",
-      "total_count": 12,
+      "total_count": 14,
       "+1": 8,
       "-1": 0,
-      "laugh": 0,
+      "laugh": 1,
       "hooray": 0,
       "confused": 0,
-      "heart": 0,
+      "heart": 1,
       "rocket": 4,
       "eyes": 0
     },
@@ -237,49 +237,25 @@
   },
   "action": {
     "run": {
-      "id": 36207340729,
+      "id": 36239855565,
       "name": "Build CI",
-      "node_id": "WFR_kwLOON0GPs8AAAAIbiAsuQ",
-      "head_branch": "feature/guide-library",
-      "head_sha": "16e28a7779b05887f80ca7381bfd1fd9ea64dd9b",
+      "node_id": "WFR_kwLOON0GPs8AAAAIcBBPzQ",
+      "head_branch": "feat/festival-effects",
+      "head_sha": "c86dc8809325a6f2f025898b46184e0234d7dd4d",
       "path": ".github/workflows/push_ci.yml",
-      "display_title": "feat: Guide 库镂空出现与移除时自锚点中心弹性缩放过渡",
-      "run_number": 1124,
+      "display_title": "Merge branch 'main' into feat/festival-effects",
+      "run_number": 1130,
       "event": "push",
       "status": "completed",
       "conclusion": "success",
       "workflow_id": 253303842,
-      "check_suite_id": 98054823655,
-      "check_suite_node_id": "CS_kwDOON0GPs8AAAAW1IXe5w",
-      "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/36207340729",
-      "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36207340729",
-      "pull_requests": [
-        {
-          "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/pulls/1950",
-          "id": 4641443455,
-          "number": 1950,
-          "head": {
-            "ref": "feature/guide-library",
-            "sha": "16e28a7779b05887f80ca7381bfd1fd9ea64dd9b",
-            "repo": {
-              "id": 954009150,
-              "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2",
-              "name": "ZalithLauncher2"
-            }
-          },
-          "base": {
-            "ref": "main",
-            "sha": "044a60a3ab49ab108b387a5cd439a752b6d918ef",
-            "repo": {
-              "id": 954009150,
-              "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2",
-              "name": "ZalithLauncher2"
-            }
-          }
-        }
-      ],
-      "created_at": "2026-09-26T01:07:30Z",
-      "updated_at": "2026-09-26T01:14:17Z",
+      "check_suite_id": 98139242106,
+      "check_suite_node_id": "CS_kwDOON0GPs8AAAAW2Y3-eg",
+      "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/36239855565",
+      "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36239855565",
+      "pull_requests": [],
+      "created_at": "2026-09-26T11:46:19Z",
+      "updated_at": "2026-09-26T11:53:01Z",
       "actor": {
         "login": "MovTery",
         "id": 123115192,
@@ -304,12 +280,12 @@
       "run_attempt": 1,
       "referenced_workflows": [
         {
-          "path": "ZalithLauncher/ZalithLauncher2/.github/workflows/build.yml@16e28a7779b05887f80ca7381bfd1fd9ea64dd9b",
-          "sha": "16e28a7779b05887f80ca7381bfd1fd9ea64dd9b",
-          "ref": "refs/heads/feature/guide-library"
+          "path": "ZalithLauncher/ZalithLauncher2/.github/workflows/build.yml@c86dc8809325a6f2f025898b46184e0234d7dd4d",
+          "sha": "c86dc8809325a6f2f025898b46184e0234d7dd4d",
+          "ref": "refs/heads/feat/festival-effects"
         }
       ],
-      "run_started_at": "2026-09-26T01:07:30Z",
+      "run_started_at": "2026-09-26T11:46:19Z",
       "triggering_actor": {
         "login": "MovTery",
         "id": 123115192,
@@ -331,19 +307,19 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/36207340729/jobs",
-      "logs_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/36207340729/logs",
-      "check_suite_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/check-suites/98054823655",
-      "artifacts_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/36207340729/artifacts",
-      "cancel_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/36207340729/cancel",
-      "rerun_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/36207340729/rerun",
+      "jobs_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/36239855565/jobs",
+      "logs_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/36239855565/logs",
+      "check_suite_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/check-suites/98139242106",
+      "artifacts_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/36239855565/artifacts",
+      "cancel_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/36239855565/cancel",
+      "rerun_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/36239855565/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/workflows/253303842",
       "head_commit": {
-        "id": "16e28a7779b05887f80ca7381bfd1fd9ea64dd9b",
-        "tree_id": "fb654d98dbb4b923bb8c4f7a8593674989360f1d",
-        "message": "feat: Guide 库镂空出现与移除时自锚点中心弹性缩放过渡",
-        "timestamp": "2026-09-26T01:06:42Z",
+        "id": "c86dc8809325a6f2f025898b46184e0234d7dd4d",
+        "tree_id": "82583c501e853caa5119661173b1706c11cff3d1",
+        "message": "Merge branch 'main' into feat/festival-effects",
+        "timestamp": "2026-09-26T11:46:07Z",
         "author": {
           "name": "movte",
           "email": "movtery228@qq.com"
@@ -492,103 +468,103 @@
     },
     "artifacts": [
       {
-        "id": 10894481503,
-        "node_id": "MDg6QXJ0aWZhY3QxMDg5NDQ4MTUwMw==",
-        "name": "debug apk (all)",
-        "size_in_bytes": 395779376,
-        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10894481503",
-        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10894481503/zip",
-        "expired": false,
-        "digest": "sha256:f6efdc96a0633aeb5bd5990b7bf9ca18650e4abd9684ab807be7ad1fc41106eb",
-        "created_at": "2026-09-26T01:14:13Z",
-        "updated_at": "2026-09-26T01:14:13Z",
-        "expires_at": "2026-10-03T01:07:30Z",
-        "workflow_run": {
-          "id": 36207340729,
-          "repository_id": 954009150,
-          "head_repository_id": 954009150,
-          "head_branch": "feature/guide-library",
-          "head_sha": "16e28a7779b05887f80ca7381bfd1fd9ea64dd9b"
-        }
-      },
-      {
-        "id": 10894121822,
-        "node_id": "MDg6QXJ0aWZhY3QxMDg5NDEyMTgyMg==",
+        "id": 10905810256,
+        "node_id": "MDg6QXJ0aWZhY3QxMDkwNTgxMDI1Ng==",
         "name": "debug apk (arm64)",
-        "size_in_bytes": 212309191,
-        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10894121822",
-        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10894121822/zip",
+        "size_in_bytes": 212360732,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10905810256",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10905810256/zip",
         "expired": false,
-        "digest": "sha256:6f2a0d31d787e18d241aea19b0744c9d9dd34bcb4680f23c19a759fe2595677a",
-        "created_at": "2026-09-26T01:13:43Z",
-        "updated_at": "2026-09-26T01:13:43Z",
-        "expires_at": "2026-10-03T01:07:30Z",
+        "digest": "sha256:d7319dc5afea1c86457b985283c3d6989341acbcbfd418569648a5a1770cf211",
+        "created_at": "2026-09-26T11:51:38Z",
+        "updated_at": "2026-09-26T11:51:38Z",
+        "expires_at": "2026-10-03T11:46:19Z",
         "workflow_run": {
-          "id": 36207340729,
+          "id": 36239855565,
           "repository_id": 954009150,
           "head_repository_id": 954009150,
-          "head_branch": "feature/guide-library",
-          "head_sha": "16e28a7779b05887f80ca7381bfd1fd9ea64dd9b"
+          "head_branch": "feat/festival-effects",
+          "head_sha": "c86dc8809325a6f2f025898b46184e0234d7dd4d"
         }
       },
       {
-        "id": 10894012054,
-        "node_id": "MDg6QXJ0aWZhY3QxMDg5NDAxMjA1NA==",
+        "id": 10905790430,
+        "node_id": "MDg6QXJ0aWZhY3QxMDkwNTc5MDQzMA==",
         "name": "debug apk (x86_64)",
-        "size_in_bytes": 218603549,
-        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10894012054",
-        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10894012054/zip",
+        "size_in_bytes": 218654187,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10905790430",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10905790430/zip",
         "expired": false,
-        "digest": "sha256:16c75af5f85033b9d8fca22c7e0845b76793fa4471e5cccb5006f27c466d2bbf",
-        "created_at": "2026-09-26T01:13:52Z",
-        "updated_at": "2026-09-26T01:13:52Z",
-        "expires_at": "2026-10-03T01:07:30Z",
+        "digest": "sha256:de7cf9ac1fb08116ba0411ba9698cf630d672af87e10a2c209d5049da924c514",
+        "created_at": "2026-09-26T11:52:47Z",
+        "updated_at": "2026-09-26T11:52:47Z",
+        "expires_at": "2026-10-03T11:46:19Z",
         "workflow_run": {
-          "id": 36207340729,
+          "id": 36239855565,
           "repository_id": 954009150,
           "head_repository_id": 954009150,
-          "head_branch": "feature/guide-library",
-          "head_sha": "16e28a7779b05887f80ca7381bfd1fd9ea64dd9b"
+          "head_branch": "feat/festival-effects",
+          "head_sha": "c86dc8809325a6f2f025898b46184e0234d7dd4d"
         }
       },
       {
-        "id": 10893933616,
-        "node_id": "MDg6QXJ0aWZhY3QxMDg5MzkzMzYxNg==",
-        "name": "debug apk (x86)",
-        "size_in_bytes": 191921835,
-        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10893933616",
-        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10893933616/zip",
-        "expired": false,
-        "digest": "sha256:89d2f6cba12ec296c585187a92825cb27a0a9daf595e3bffe285ab36ec397ce6",
-        "created_at": "2026-09-26T01:14:11Z",
-        "updated_at": "2026-09-26T01:14:11Z",
-        "expires_at": "2026-10-03T01:07:30Z",
-        "workflow_run": {
-          "id": 36207340729,
-          "repository_id": 954009150,
-          "head_repository_id": 954009150,
-          "head_branch": "feature/guide-library",
-          "head_sha": "16e28a7779b05887f80ca7381bfd1fd9ea64dd9b"
-        }
-      },
-      {
-        "id": 10893853773,
-        "node_id": "MDg6QXJ0aWZhY3QxMDg5Mzg1Mzc3Mw==",
+        "id": 10905388656,
+        "node_id": "MDg6QXJ0aWZhY3QxMDkwNTM4ODY1Ng==",
         "name": "debug apk (arm)",
-        "size_in_bytes": 203377017,
-        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10893853773",
-        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10893853773/zip",
+        "size_in_bytes": 203427649,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10905388656",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10905388656/zip",
         "expired": false,
-        "digest": "sha256:71d265f7d02ae074e119713ef7aa96fb3a8ef93006c765090337464e49ab863d",
-        "created_at": "2026-09-26T01:12:44Z",
-        "updated_at": "2026-09-26T01:12:44Z",
-        "expires_at": "2026-10-03T01:07:30Z",
+        "digest": "sha256:b47c224bbf8eeb738813484950a424396e6e9d8e9d53193269e17b2d7c86b7eb",
+        "created_at": "2026-09-26T11:52:58Z",
+        "updated_at": "2026-09-26T11:52:58Z",
+        "expires_at": "2026-10-03T11:46:19Z",
         "workflow_run": {
-          "id": 36207340729,
+          "id": 36239855565,
           "repository_id": 954009150,
           "head_repository_id": 954009150,
-          "head_branch": "feature/guide-library",
-          "head_sha": "16e28a7779b05887f80ca7381bfd1fd9ea64dd9b"
+          "head_branch": "feat/festival-effects",
+          "head_sha": "c86dc8809325a6f2f025898b46184e0234d7dd4d"
+        }
+      },
+      {
+        "id": 10905098392,
+        "node_id": "MDg6QXJ0aWZhY3QxMDkwNTA5ODM5Mg==",
+        "name": "debug apk (all)",
+        "size_in_bytes": 395829601,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10905098392",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10905098392/zip",
+        "expired": false,
+        "digest": "sha256:087c859fbf484f35609613f42936e8825298d8adf91ce7ea8f3679de5a2ca2c9",
+        "created_at": "2026-09-26T11:52:48Z",
+        "updated_at": "2026-09-26T11:52:48Z",
+        "expires_at": "2026-10-03T11:46:19Z",
+        "workflow_run": {
+          "id": 36239855565,
+          "repository_id": 954009150,
+          "head_repository_id": 954009150,
+          "head_branch": "feat/festival-effects",
+          "head_sha": "c86dc8809325a6f2f025898b46184e0234d7dd4d"
+        }
+      },
+      {
+        "id": 10904758788,
+        "node_id": "MDg6QXJ0aWZhY3QxMDkwNDc1ODc4OA==",
+        "name": "debug apk (x86)",
+        "size_in_bytes": 191970303,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10904758788",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/10904758788/zip",
+        "expired": false,
+        "digest": "sha256:54d68c30b4ff5710d3cbdf7e04b657ec8f89c22b3699b0fbc78878c7940dd87e",
+        "created_at": "2026-09-26T11:52:39Z",
+        "updated_at": "2026-09-26T11:52:39Z",
+        "expires_at": "2026-10-03T11:46:19Z",
+        "workflow_run": {
+          "id": 36239855565,
+          "repository_id": 954009150,
+          "head_repository_id": 954009150,
+          "head_branch": "feat/festival-effects",
+          "head_sha": "c86dc8809325a6f2f025898b46184e0234d7dd4d"
         }
       }
     ]
