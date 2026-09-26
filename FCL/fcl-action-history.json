@@ -1,11 +1,67 @@
 [
   {
-    "id": 36204023430,
-    "sha": "c4af5a45d4ee87340bde5239ab2390e41b479d06",
-    "short_sha": "c4af5a4",
-    "message": "feat: 引导遮罩添加位置过渡动画\n\n- 显示时高亮洞从目标中心扩散点亮，步骤间从旧位置平滑滑动到新位置，隐藏时收缩回中心\n- 气泡淡入与洞的滑动动画衔接（延迟 50ms），洞动画时长 150ms\n- 修复气泡定位：新增 targetHoleRect 以动画目标位置计算，改用固定宽度 EXACTLY\n  测量取高，不再依赖布局回调时序（doOnNextLayout 中改 margin 会部分设备被吞导致气泡偏移到 0,0）",
-    "created_at": "2026-09-26T00:12:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36204023430"
+    "id": 36215297972,
+    "sha": "72e156685d59ac3d338a7616f76f7094b57ac34e",
+    "short_sha": "72e1566",
+    "message": "feat: 安装新游戏选择 Fabric/Quilt 时自动选择对应 API",
+    "created_at": "2026-09-26T03:34:52Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36215297972"
+  },
+  {
+    "id": 36215297946,
+    "sha": "72e156685d59ac3d338a7616f76f7094b57ac34e",
+    "short_sha": "72e1566",
+    "message": "feat: 安装新游戏选择 Fabric/Quilt 时自动选择对应 API",
+    "created_at": "2026-09-26T03:34:52Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36215297946"
+  },
+  {
+    "id": 36213896982,
+    "sha": "df52527e66f6e1f63f04603c06a7d4e2cd02de35",
+    "short_sha": "df52527",
+    "message": "fix: Java 管理弹窗删除图标过小且删除选中项后未回落自动选择",
+    "created_at": "2026-09-26T03:08:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36213896982"
+  },
+  {
+    "id": 36213897021,
+    "sha": "df52527e66f6e1f63f04603c06a7d4e2cd02de35",
+    "short_sha": "df52527",
+    "message": "fix: Java 管理弹窗删除图标过小且删除选中项后未回落自动选择",
+    "created_at": "2026-09-26T03:08:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36213897021"
+  },
+  {
+    "id": 36208632904,
+    "sha": "3382cf3b7068424b0f153165f7dfcaec2e5ec0bb",
+    "short_sha": "3382cf3",
+    "message": "feat: vkshim 新增 fillModeNonSolid 降级模拟\n\n对齐 VulkanFix-Renderer 的 fill_mode_non_solid 模块策略，补齐\n26.2 依赖表中另一常见缺口（线框/点填充能力位）：\n- vkGetPhysicalDeviceFeatures(2/KHR) 谎报 fillModeNonSolid 开启\n- vkCreateDevice 时剥除应用启用的该能力位（副本替换 + pNext 链\n  原位改写并恢复原值），避免真驱动拒绝设备创建\n- vkCreateGraphicsPipelines 对模拟设备的非 FILL 光栅化状态降级\n  为 FILL（gipa 与 gdpa 两条解析路径均拦截），线框视觉让位可运行性\n- 每物理设备独立探测原生支持，原生支持则全链路直通；检测侧同步\n  判定 needsFillModeEmulation 并在依赖评估中按补齐状态计算",
+    "created_at": "2026-09-26T01:14:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36208632904"
+  },
+  {
+    "id": 36208632973,
+    "sha": "3382cf3b7068424b0f153165f7dfcaec2e5ec0bb",
+    "short_sha": "3382cf3",
+    "message": "feat: vkshim 新增 fillModeNonSolid 降级模拟\n\n对齐 VulkanFix-Renderer 的 fill_mode_non_solid 模块策略，补齐\n26.2 依赖表中另一常见缺口（线框/点填充能力位）：\n- vkGetPhysicalDeviceFeatures(2/KHR) 谎报 fillModeNonSolid 开启\n- vkCreateDevice 时剥除应用启用的该能力位（副本替换 + pNext 链\n  原位改写并恢复原值），避免真驱动拒绝设备创建\n- vkCreateGraphicsPipelines 对模拟设备的非 FILL 光栅化状态降级\n  为 FILL（gipa 与 gdpa 两条解析路径均拦截），线框视觉让位可运行性\n- 每物理设备独立探测原生支持，原生支持则全链路直通；检测侧同步\n  判定 needsFillModeEmulation 并在依赖评估中按补齐状态计算",
+    "created_at": "2026-09-26T01:14:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36208632973"
+  },
+  {
+    "id": 36208595048,
+    "sha": "3382cf3b7068424b0f153165f7dfcaec2e5ec0bb",
+    "short_sha": "3382cf3",
+    "message": "feat: vkshim 新增 fillModeNonSolid 降级模拟\n\n对齐 VulkanFix-Renderer 的 fill_mode_non_solid 模块策略，补齐\n26.2 依赖表中另一常见缺口（线框/点填充能力位）：\n- vkGetPhysicalDeviceFeatures(2/KHR) 谎报 fillModeNonSolid 开启\n- vkCreateDevice 时剥除应用启用的该能力位（副本替换 + pNext 链\n  原位改写并恢复原值），避免真驱动拒绝设备创建\n- vkCreateGraphicsPipelines 对模拟设备的非 FILL 光栅化状态降级\n  为 FILL（gipa 与 gdpa 两条解析路径均拦截），线框视觉让位可运行性\n- 每物理设备独立探测原生支持，原生支持则全链路直通；检测侧同步\n  判定 needsFillModeEmulation 并在依赖评估中按补齐状态计算",
+    "created_at": "2026-09-26T01:14:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36208595048"
+  },
+  {
+    "id": 36208595058,
+    "sha": "3382cf3b7068424b0f153165f7dfcaec2e5ec0bb",
+    "short_sha": "3382cf3",
+    "message": "feat: vkshim 新增 fillModeNonSolid 降级模拟\n\n对齐 VulkanFix-Renderer 的 fill_mode_non_solid 模块策略，补齐\n26.2 依赖表中另一常见缺口（线框/点填充能力位）：\n- vkGetPhysicalDeviceFeatures(2/KHR) 谎报 fillModeNonSolid 开启\n- vkCreateDevice 时剥除应用启用的该能力位（副本替换 + pNext 链\n  原位改写并恢复原值），避免真驱动拒绝设备创建\n- vkCreateGraphicsPipelines 对模拟设备的非 FILL 光栅化状态降级\n  为 FILL（gipa 与 gdpa 两条解析路径均拦截），线框视觉让位可运行性\n- 每物理设备独立探测原生支持，原生支持则全链路直通；检测侧同步\n  判定 needsFillModeEmulation 并在依赖评估中按补齐状态计算",
+    "created_at": "2026-09-26T01:14:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36208595058"
   },
   {
     "id": 36204023451,
@@ -14,6 +70,14 @@
     "message": "feat: 引导遮罩添加位置过渡动画\n\n- 显示时高亮洞从目标中心扩散点亮，步骤间从旧位置平滑滑动到新位置，隐藏时收缩回中心\n- 气泡淡入与洞的滑动动画衔接（延迟 50ms），洞动画时长 150ms\n- 修复气泡定位：新增 targetHoleRect 以动画目标位置计算，改用固定宽度 EXACTLY\n  测量取高，不再依赖布局回调时序（doOnNextLayout 中改 margin 会部分设备被吞导致气泡偏移到 0,0）",
     "created_at": "2026-09-26T00:12:29Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36204023451"
+  },
+  {
+    "id": 36204023430,
+    "sha": "c4af5a45d4ee87340bde5239ab2390e41b479d06",
+    "short_sha": "c4af5a4",
+    "message": "feat: 引导遮罩添加位置过渡动画\n\n- 显示时高亮洞从目标中心扩散点亮，步骤间从旧位置平滑滑动到新位置，隐藏时收缩回中心\n- 气泡淡入与洞的滑动动画衔接（延迟 50ms），洞动画时长 150ms\n- 修复气泡定位：新增 targetHoleRect 以动画目标位置计算，改用固定宽度 EXACTLY\n  测量取高，不再依赖布局回调时序（doOnNextLayout 中改 margin 会部分设备被吞导致气泡偏移到 0,0）",
+    "created_at": "2026-09-26T00:12:29Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36204023430"
   },
   {
     "id": 36124433514,
@@ -334,69 +398,5 @@
     "message": "feat: 控件转换器同步滑动联动与摇杆死区/前进锁字段的双向映射",
     "created_at": "2026-09-22T06:28:16Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35695378151"
-  },
-  {
-    "id": 35622958413,
-    "sha": "357cb3dd54738d08e1affa06431fe94d1dfdeff5",
-    "short_sha": "357cb3d",
-    "message": "fix: 恢复主界面版本卡片点击进入实例设置、右侧按钮切换版本，长按切换按钮改用上游版本快速切换弹窗",
-    "created_at": "2026-09-21T16:02:00Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35622958413"
-  },
-  {
-    "id": 35622958213,
-    "sha": "357cb3dd54738d08e1affa06431fe94d1dfdeff5",
-    "short_sha": "357cb3d",
-    "message": "fix: 恢复主界面版本卡片点击进入实例设置、右侧按钮切换版本，长按切换按钮改用上游版本快速切换弹窗",
-    "created_at": "2026-09-21T16:02:00Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35622958213"
-  },
-  {
-    "id": 35621493316,
-    "sha": "61db144b4853207d154816ac920cf4363a566589",
-    "short_sha": "61db144",
-    "message": "Merge remote-tracking branch 'upstream/main' into feature/instance-quick-actions\n\n# Conflicts:\n#\tFCL/src/main/java/com/tungsten/fcl/activity/MainActivity.kt\n#\tFCL/src/main/java/com/tungsten/fcl/ui/version/VersionListPage.kt",
-    "created_at": "2026-09-21T15:48:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35621493316"
-  },
-  {
-    "id": 35588494550,
-    "sha": "699160df7a0bf2cfae3ca0b3ba028c8d013d50a8",
-    "short_sha": "699160d",
-    "message": "fix: 下载与收藏列表标题过长时来源徽标被挤出可视区，标题行改 ConstraintLayout 保证徽标固定行尾",
-    "created_at": "2026-09-21T10:14:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35588494550"
-  },
-  {
-    "id": 35484266883,
-    "sha": "f4f2624d20fef6afd15430473cbbac280f4e5fed",
-    "short_sha": "f4f2624",
-    "message": "feat: 长按版本卡片弹出版本快速切换菜单，数据与版本列表页共享快照",
-    "created_at": "2026-09-20T02:31:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35484266883"
-  },
-  {
-    "id": 35484266873,
-    "sha": "f4f2624d20fef6afd15430473cbbac280f4e5fed",
-    "short_sha": "f4f2624",
-    "message": "feat: 长按版本卡片弹出版本快速切换菜单，数据与版本列表页共享快照",
-    "created_at": "2026-09-20T02:31:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35484266873"
-  },
-  {
-    "id": 35481272499,
-    "sha": "b3251ae9d540888941b87fccd6d8448d4e8e18e1",
-    "short_sha": "b3251ae",
-    "message": "fix: 补齐按键与字符事件成对发送，修复 Cleanroom 字母键与聊天输入失效",
-    "created_at": "2026-09-19T11:54:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35481272499"
-  },
-  {
-    "id": 35481272395,
-    "sha": "b3251ae9d540888941b87fccd6d8448d4e8e18e1",
-    "short_sha": "b3251ae",
-    "message": "fix: 补齐按键与字符事件成对发送，修复 Cleanroom 字母键与聊天输入失效",
-    "created_at": "2026-09-19T11:54:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/35481272395"
   }
 ]
