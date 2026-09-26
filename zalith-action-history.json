@@ -1,5 +1,13 @@
 [
   {
+    "id": 36257972285,
+    "sha": "47a1a556a40647ead039f0cdcde29f6ee0fef982",
+    "short_sha": "47a1a55",
+    "message": "feat: 兼容 lwjgl3ify\n\n支持开箱即玩 GT New Horizons（MC 1.7.10 + lwjgl3ify/RFB，Java 17+），\n参考 FCL 的 Lwjgl3ifyPatcher（https://github.com/FCL-Team/FoldCraftLauncher/blob/main/FCL/src/main/java/com/tungsten/fcl/game/Lwjgl3ifyPatcher.java）：\n\n- 新增 Lwjgl3ifyPatcher：检测 mods 中的 lwjgl3ify，提取其内嵌的\n  RetroFuturaBootstrap 启动清单（RFB 主类、--add-opens JVM 参数、\n  1.7.10-Forge 全量依赖闭包）在内存中合并进当前版本清单，\n  版本 JSON 不落盘；幂等可重复，兼容其他启动器已写入补丁的版本 JSON，\n  lwjgl3ify 升级后自动重新合并\n- 从 jar 内嵌的 forgePatches.zip 离线还原该构件（GTNH Maven 无国内\n  镜像），写临时文件后原子替换；旧版缺下载地址的库按 groupId\n  兜底改写 Maven 源\n- 启动流程新增\"检查模组\"任务（checkEnableTouchProxy 扩展为\n  checkMods），置于游戏文件校验之前，一次模组扫描同时驱动\n  touchcontroller 代理与 lwjgl3ify 补丁；补丁命中时经\n  GameLibDownloader 下载补丁引入的支持库（已存在文件自动跳过）\n- lwjgl3ify 实例自动补写 config/lwjgl3ify.cfg 关闭桌面快捷方式\n  写入，并注入 XDG_DATA_HOME 指向实例可写目录，修复 Android 上\n  游戏静默退出\n- caciocavallo17 资产更新至 jdk25 修复版构建，version 1→7 触发\n  设备重解压，修复 jre25 下 AWT 回退 headless",
+    "created_at": "2026-09-26T17:08:17Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36257972285"
+  },
+  {
     "id": 36253858524,
     "sha": "483c2f958540e09a9c926f088e83a88ed6e0a087",
     "short_sha": "483c2f9",
@@ -390,13 +398,5 @@
     "message": "Merge pull request #1926 from ZalithLauncher/feat/new_main_page\n\nfeat: 移除自定义主页，加入卡片式主界面系统",
     "created_at": "2026-09-23T07:39:19Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35832850060"
-  },
-  {
-    "id": 35832555700,
-    "sha": "76959905ac2f34aa3ad2a396a95dca5a52e3dbcb",
-    "short_sha": "7695990",
-    "message": "Merge pull request #1925 from ZalithLauncher/feat/update_vk_check\n\nfeat: 更新 Vulkan 检测 (26.4-snapshot-1)",
-    "created_at": "2026-09-23T07:35:54Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35832555700"
   }
 ]
