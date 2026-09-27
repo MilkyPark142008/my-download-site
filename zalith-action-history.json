@@ -1,5 +1,85 @@
 [
   {
+    "id": 36334788827,
+    "sha": "f34ef9c3afe8e79eb46e58c025e7962e49db4106",
+    "short_sha": "f34ef9c",
+    "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1451 of 1451 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
+    "created_at": "2026-09-27T16:51:28Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36334788827"
+  },
+  {
+    "id": 36334432540,
+    "sha": "b8529d3ea8859aa754c48226fbd25ea873362029",
+    "short_sha": "b8529d3",
+    "message": "Merge pull request #1971 from ZalithLauncher/fix/cleanroom-ime-key-events\n\nfix: 修复 Cleanroom 输入法输入被误判为按键",
+    "created_at": "2026-09-27T16:45:44Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36334432540"
+  },
+  {
+    "id": 36334406276,
+    "sha": "058d98c9c00e6255a42f66077587927fb47c5a33",
+    "short_sha": "058d98c",
+    "message": "Merge branch 'main' into fix/cleanroom-ime-key-events",
+    "created_at": "2026-09-27T16:30:20Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36334406276"
+  },
+  {
+    "id": 36333472282,
+    "sha": "99d68b29ae313831e8b328e830244eb2db5d0c18",
+    "short_sha": "99d68b2",
+    "message": "fix: MioLibPatcher 注册位置错误导致安装器无法解析参数",
+    "created_at": "2026-09-27T16:30:00Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36333472282"
+  },
+  {
+    "id": 36331256409,
+    "sha": "692f79e7770e7a2e628bce7f73792a448a67d3c6",
+    "short_sha": "692f79e",
+    "message": "Merge branch 'main' into fix/cleanroom-ime-key-events",
+    "created_at": "2026-09-27T15:52:15Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36331256409"
+  },
+  {
+    "id": 36331115614,
+    "sha": "5fde4e89443417e90fc3f06140d465e5f7257549",
+    "short_sha": "5fde4e8",
+    "message": "Merge pull request #1969 from ZalithLauncher/feat/festival-effects\n\nchore: 调整 FestivalTapObserver 为事件订阅形式",
+    "created_at": "2026-09-27T15:51:55Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36331115614"
+  },
+  {
+    "id": 36331078411,
+    "sha": "2f92764dc876be3f797cef94c3a7d1324a71ad7b",
+    "short_sha": "2f92764",
+    "message": "chore: 调整 FestivalTapObserver 为事件订阅形式",
+    "created_at": "2026-09-27T15:51:10Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36331078411"
+  },
+  {
+    "id": 36330442747,
+    "sha": "83a4876a436d1618c45d4c4fd7933b23ac47605c",
+    "short_sha": "83a4876",
+    "message": "fix: Cleanroom 库加载顺序修复，原版旧库遮蔽新库导致启动崩溃",
+    "created_at": "2026-09-27T15:40:35Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36330442747"
+  },
+  {
+    "id": 36328243661,
+    "sha": "7b24ce83f8a825999f6899aa4d040d486fb32014",
+    "short_sha": "7b24ce8",
+    "message": "fix: 检查 Rule 时避免 null 对象 equals 调用",
+    "created_at": "2026-09-27T15:04:54Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36328243661"
+  },
+  {
+    "id": 36328211261,
+    "sha": "e6ac4df7c2f40a21d696c01a71e9c4a6c4280430",
+    "short_sha": "e6ac4df",
+    "message": "fix: 输入法字符类按键事件不再以游戏按键形式转发",
+    "created_at": "2026-09-27T15:04:13Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36328211261"
+  },
+  {
     "id": 36313237023,
     "sha": "6e89c9b6d07874cd08d41c1c867d26daa387a442",
     "short_sha": "6e89c9b",
@@ -318,85 +398,5 @@
     "message": "Merge pull request #1936 from ZalithLauncher/feat/main-action-menu\n\nfix: 主界面操作菜单栏长按与版本列表入口长按冲突",
     "created_at": "2026-09-24T11:24:26Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35992833779"
-  },
-  {
-    "id": 35992786510,
-    "sha": "5d7ec1b0496f7b4c529f93f3cb9b9f75363b357c",
-    "short_sha": "5d7ec1b",
-    "message": "refactor: 重构 ActionMenu 布局",
-    "created_at": "2026-09-24T11:23:50Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35992786510"
-  },
-  {
-    "id": 35984230187,
-    "sha": "6cf6e739ed2e54c1d9f1fd9a26d76012c883a4de",
-    "short_sha": "6cf6e73",
-    "message": "fix: 主界面操作菜单栏长按与版本列表入口长按冲突",
-    "created_at": "2026-09-24T09:54:46Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35984230187"
-  },
-  {
-    "id": 35977136630,
-    "sha": "713051c57b625295f19fbb30a9c6fa328398e4ff",
-    "short_sha": "713051c",
-    "message": "Merge pull request #1934 from ZalithLauncher/feat/main-action-menu\n\nfeat: 主界面操作菜单栏支持长按提起拖拽换边",
-    "created_at": "2026-09-24T08:45:36Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35977136630"
-  },
-  {
-    "id": 35977024434,
-    "sha": "dc23cffe568723a040702a38ee595eeb5fee171c",
-    "short_sha": "dc23cff",
-    "message": "fix: 卡片网格播种与几何测量竞态导致卡片概率性消失及布局损坏",
-    "created_at": "2026-09-24T08:42:36Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35977024434"
-  },
-  {
-    "id": 35971650234,
-    "sha": "73552688f4f21276a3370469bcc112121f502031",
-    "short_sha": "7355268",
-    "message": "feat: 主界面操作菜单栏支持长按提起拖拽换边",
-    "created_at": "2026-09-24T07:48:30Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35971650234"
-  },
-  {
-    "id": 35936328979,
-    "sha": "8bbc5ec06df9ccda92644b05e9c4705bf83f6ca1",
-    "short_sha": "8bbc5ec",
-    "message": "fix: 卡片网格整体强制 LTR 锚定，不随布局方向镜像",
-    "created_at": "2026-09-24T00:00:00Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35936328979"
-  },
-  {
-    "id": 35927103776,
-    "sha": "f41ad91012c38c85a6a0258ae7015a6584d5ed96",
-    "short_sha": "f41ad91",
-    "message": "Merge pull request #1932 from ZalithLauncher/fix/mouse_ime_input\n\nfix: 修复切换系统输入法后实体鼠标移动被当作按键事件下发",
-    "created_at": "2026-09-23T22:13:15Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35927103776"
-  },
-  {
-    "id": 35927013951,
-    "sha": "d0d50f79d4b1ab52c68339c24e851d75fdee07cc",
-    "short_sha": "d0d50f7",
-    "message": "fix: 修复切换系统输入法后实体鼠标移动被当作按键事件下发\n\n- 新增 rememberTextInputActive()：以 composeFocus 变化为刷新时机，\n  标记启动器输入栏 / SDL 输入框的文本输入会话状态\n- 虚拟鼠标模式（physicalMouseMode 关）下文本输入时释放指针捕获，\n  把系统指针与输入法交还输入框，输入结束自动恢复；抓取模式保持恒捕获\n- 输入会话开启与关闭时补发 composeFocus 通知，\n  输入栏关闭后焦点立即归还鼠标层，避免残留 IME 会话把鼠标移动注入为按键",
-    "created_at": "2026-09-23T22:11:24Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35927013951"
-  },
-  {
-    "id": 35871529556,
-    "sha": "1ea09b48057f31ad0fd65b32e0c71d2c7af71988",
-    "short_sha": "1ea09b4",
-    "message": "fix: 主界面卡片空隙",
-    "created_at": "2026-09-23T14:03:44Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35871529556"
-  },
-  {
-    "id": 35868289743,
-    "sha": "3cbea46cb1d058e9232c7fe74c738ea0a45a226a",
-    "short_sha": "3cbea46",
-    "message": "[Do not use!] Merge branch 'origin/weblate_main' into Weblate.",
-    "created_at": "2026-09-23T13:36:30Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35868289743"
   }
 ]

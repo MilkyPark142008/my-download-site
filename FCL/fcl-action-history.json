@@ -1,5 +1,37 @@
 [
   {
+    "id": 36327621258,
+    "sha": "ed44953c94eb54b060e9a5e28c4c5f60ecd376f4",
+    "short_sha": "ed44953",
+    "message": "fix: 修复 Modrinth 整合包更新读旧配置 TypeToken 误用 CurseManifest 致 CCE 必然回滚；GameOption 键值表与文件观察者改实例级防跨游戏目录串数据，观察者随监听注册启动，修监听移除比较失效；修 ControlDirectionData.equals 参数类型笔误、InstantTypeAdapter catch 误引外层变量；EventBus 事件日志降 FINE；删 rebaseArgs 孤立死代码；同步源码通读报告遗留项状态",
+    "created_at": "2026-09-27T14:53:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36327621258"
+  },
+  {
+    "id": 36327621244,
+    "sha": "ed44953c94eb54b060e9a5e28c4c5f60ecd376f4",
+    "short_sha": "ed44953",
+    "message": "fix: 修复 Modrinth 整合包更新读旧配置 TypeToken 误用 CurseManifest 致 CCE 必然回滚；GameOption 键值表与文件观察者改实例级防跨游戏目录串数据，观察者随监听注册启动，修监听移除比较失效；修 ControlDirectionData.equals 参数类型笔误、InstantTypeAdapter catch 误引外层变量；EventBus 事件日志降 FINE；删 rebaseArgs 孤立死代码；同步源码通读报告遗留项状态",
+    "created_at": "2026-09-27T14:53:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36327621244"
+  },
+  {
+    "id": 36325825607,
+    "sha": "0ac88547affbc9cf1068e17971d32d0bcbfe55b9",
+    "short_sha": "0ac8854",
+    "message": "refactor: 删除 fakefx 包不可达死代码（113/322 类）\n\n字节码常量池可达性分析：收集全部 Utf8 引用（描述符/签名/注解/Kotlin @Metadata），\n从外部引用根与 androidTest 根做闭包，event、beans/property/adapter、property/adapter、\nutil/converter 四个子包整体不可达，另删 ReadOnlyXxxWrapper、Duration、Pair、FxGson 等散类。\n已排除同名类歧义（util.Pair/fclcore.event.Event/ButtonEventData.Event）、\ncom.sun.javafx.* 反射目标（类不存在且异常被吞）、产物 stale（GameMenu 未重编译）误判。\n\n验证：Zulu17 下 debug/fordebug 主源集与单元测试编译通过；MuMu 模拟器实测\n冷启动、皮肤渲染、1.20.1-Forge 完整启动到主菜单，全程无 ClassNotFoundError。",
+    "created_at": "2026-09-27T14:24:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36325825607"
+  },
+  {
+    "id": 36325825535,
+    "sha": "0ac88547affbc9cf1068e17971d32d0bcbfe55b9",
+    "short_sha": "0ac8854",
+    "message": "refactor: 删除 fakefx 包不可达死代码（113/322 类）\n\n字节码常量池可达性分析：收集全部 Utf8 引用（描述符/签名/注解/Kotlin @Metadata），\n从外部引用根与 androidTest 根做闭包，event、beans/property/adapter、property/adapter、\nutil/converter 四个子包整体不可达，另删 ReadOnlyXxxWrapper、Duration、Pair、FxGson 等散类。\n已排除同名类歧义（util.Pair/fclcore.event.Event/ButtonEventData.Event）、\ncom.sun.javafx.* 反射目标（类不存在且异常被吞）、产物 stale（GameMenu 未重编译）误判。\n\n验证：Zulu17 下 debug/fordebug 主源集与单元测试编译通过；MuMu 模拟器实测\n冷启动、皮肤渲染、1.20.1-Forge 完整启动到主菜单，全程无 ClassNotFoundError。",
+    "created_at": "2026-09-27T14:24:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36325825535"
+  },
+  {
     "id": 36321976701,
     "sha": "6e993f4e1148255056ce9c0aed892ca544edd4b7",
     "short_sha": "6e993f4",
@@ -366,37 +398,5 @@
     "message": "fix: EGL 上下文重建后未重传披风纹理，导致切换页面后披风消失",
     "created_at": "2026-09-27T01:29:08Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36285712297"
-  },
-  {
-    "id": 36285712327,
-    "sha": "3a9d5d0d30e1020cdde08ff0ebd1bdd314fb7c9d",
-    "short_sha": "3a9d5d0",
-    "message": "fix: EGL 上下文重建后未重传披风纹理，导致切换页面后披风消失",
-    "created_at": "2026-09-27T01:29:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36285712327"
-  },
-  {
-    "id": 36285175793,
-    "sha": "9b000c05dfc67e4cfd0b8797e79e4f188ca40409",
-    "short_sha": "9b000c0",
-    "message": "fix: 日志分享迁移后台线程并对超大文件跳过处理，避免 ANR #1871",
-    "created_at": "2026-09-27T01:16:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36285175793"
-  },
-  {
-    "id": 36285175788,
-    "sha": "9b000c05dfc67e4cfd0b8797e79e4f188ca40409",
-    "short_sha": "9b000c0",
-    "message": "fix: 日志分享迁移后台线程并对超大文件跳过处理，避免 ANR #1871",
-    "created_at": "2026-09-27T01:16:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36285175788"
-  },
-  {
-    "id": 36284981991,
-    "sha": "6d3c84028119a71cce99a884183f038b0b3bf9e0",
-    "short_sha": "6d3c840",
-    "message": "fix: 深度删除按钮文案缩短为深度删除并在弹窗中补充功能说明",
-    "created_at": "2026-09-26T12:10:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36284981991"
   }
 ]

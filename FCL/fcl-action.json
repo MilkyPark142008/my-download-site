@@ -1,20 +1,20 @@
 {"run": {
-  "id": 36321976701,
+  "id": 36327621258,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAIdPVhfQ",
+  "node_id": "WFR_kwLOIQeFGs8AAAAIdUuCig",
   "head_branch": "main",
-  "head_sha": "6e993f4e1148255056ce9c0aed892ca544edd4b7",
+  "head_sha": "ed44953c94eb54b060e9a5e28c4c5f60ecd376f4",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "fix: 补全 Classic 账户密码重登弹窗修复重登线程永久阻塞；收藏库补 v1→v2 正式迁移替代破坏式重建；修光标 Y 偏移笔误、…",
-  "run_number": 169,
+  "display_title": "fix: 修复 Modrinth 整合包更新读旧配置 TypeToken 误用 CurseManifest 致 CCE 必然回滚；Game…",
+  "run_number": 171,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 98351466633,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAW5jRIiQ",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36321976701",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36321976701",
+  "check_suite_id": 98366299651,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAW5xaeAw",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36327621258",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36327621258",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
@@ -22,7 +22,7 @@
       "number": 364,
       "head": {
         "ref": "main",
-        "sha": "6e993f4e1148255056ce9c0aed892ca544edd4b7",
+        "sha": "ed44953c94eb54b060e9a5e28c4c5f60ecd376f4",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -45,7 +45,7 @@
       "number": 37,
       "head": {
         "ref": "main",
-        "sha": "6e993f4e1148255056ce9c0aed892ca544edd4b7",
+        "sha": "ed44953c94eb54b060e9a5e28c4c5f60ecd376f4",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -68,7 +68,7 @@
       "number": 400,
       "head": {
         "ref": "main",
-        "sha": "6e993f4e1148255056ce9c0aed892ca544edd4b7",
+        "sha": "ed44953c94eb54b060e9a5e28c4c5f60ecd376f4",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -86,8 +86,8 @@
       }
     }
   ],
-  "created_at": "2026-09-27T13:19:11Z",
-  "updated_at": "2026-09-27T13:20:26Z",
+  "created_at": "2026-09-27T14:54:42Z",
+  "updated_at": "2026-09-27T14:56:43Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-09-27T13:19:11Z",
+  "run_started_at": "2026-09-27T14:54:42Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,19 +133,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36321976701/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36321976701/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/98351466633",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36321976701/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36321976701/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36321976701/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36327621258/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36327621258/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/98366299651",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36327621258/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36327621258/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36327621258/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "6e993f4e1148255056ce9c0aed892ca544edd4b7",
-    "tree_id": "ca2044d8dcd61b99fb68c5dde4efa9f46b972165",
-    "message": "fix: 补全 Classic 账户密码重登弹窗修复重登线程永久阻塞；收藏库补 v1→v2 正式迁移替代破坏式重建；修光标 Y 偏移笔误、OAuth 取消标志跨线程可见性、缓存 Storage 并发竞态；删除未使用的帮助文档组件与孤儿布局",
-    "timestamp": "2026-09-27T13:15:16Z",
+    "id": "ed44953c94eb54b060e9a5e28c4c5f60ecd376f4",
+    "tree_id": "3cf0d22efbb1848e177805081659e67ca8c6a087",
+    "message": "fix: 修复 Modrinth 整合包更新读旧配置 TypeToken 误用 CurseManifest 致 CCE 必然回滚；GameOption 键值表与文件观察者改实例级防跨游戏目录串数据，观察者随监听注册启动，修监听移除比较失效；修 ControlDirectionData.equals 参数类型笔误、InstantTypeAdapter catch 误引外层变量；EventBus 事件日志降 FINE；删 rebaseArgs 孤立死代码；同步源码通读报告遗留项状态",
+    "timestamp": "2026-09-27T14:53:47Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
