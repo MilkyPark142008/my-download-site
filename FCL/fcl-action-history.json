@@ -1,5 +1,141 @@
 [
   {
+    "id": 36321976701,
+    "sha": "6e993f4e1148255056ce9c0aed892ca544edd4b7",
+    "short_sha": "6e993f4",
+    "message": "fix: 补全 Classic 账户密码重登弹窗修复重登线程永久阻塞；收藏库补 v1→v2 正式迁移替代破坏式重建；修光标 Y 偏移笔误、OAuth 取消标志跨线程可见性、缓存 Storage 并发竞态；删除未使用的帮助文档组件与孤儿布局",
+    "created_at": "2026-09-27T13:15:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36321976701"
+  },
+  {
+    "id": 36321976691,
+    "sha": "6e993f4e1148255056ce9c0aed892ca544edd4b7",
+    "short_sha": "6e993f4",
+    "message": "fix: 补全 Classic 账户密码重登弹窗修复重登线程永久阻塞；收藏库补 v1→v2 正式迁移替代破坏式重建；修光标 Y 偏移笔误、OAuth 取消标志跨线程可见性、缓存 Storage 并发竞态；删除未使用的帮助文档组件与孤儿布局",
+    "created_at": "2026-09-27T13:15:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36321976691"
+  },
+  {
+    "id": 36318392183,
+    "sha": "e8e909cb78d728ac2d222fdb6c00da3d7b3cf9b5",
+    "short_sha": "e8e909c",
+    "message": "refactor: lwjgl3ify 补丁改为启动时内存合并，不再改写版本 JSON",
+    "created_at": "2026-09-27T12:04:09Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36318392183"
+  },
+  {
+    "id": 36318392200,
+    "sha": "e8e909cb78d728ac2d222fdb6c00da3d7b3cf9b5",
+    "short_sha": "e8e909c",
+    "message": "refactor: lwjgl3ify 补丁改为启动时内存合并，不再改写版本 JSON",
+    "created_at": "2026-09-27T12:04:09Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36318392200"
+  },
+  {
+    "id": 36317188576,
+    "sha": "0013cd947a3cc9f0a7e1afa481446a7cdb624761",
+    "short_sha": "0013cd9",
+    "message": "fix: 仅吸附相邻按键时同边对齐只对另一轴相邻目标开放（不重叠且间隔≤2×阈值），修复无法与同一按钮横纵两轴同时对齐；对角/远离/掠过行为不变",
+    "created_at": "2026-09-27T11:35:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36317188576"
+  },
+  {
+    "id": 36317188587,
+    "sha": "0013cd947a3cc9f0a7e1afa481446a7cdb624761",
+    "short_sha": "0013cd9",
+    "message": "fix: 仅吸附相邻按键时同边对齐只对另一轴相邻目标开放（不重叠且间隔≤2×阈值），修复无法与同一按钮横纵两轴同时对齐；对角/远离/掠过行为不变",
+    "created_at": "2026-09-27T11:35:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36317188587"
+  },
+  {
+    "id": 36315834614,
+    "sha": "0a06e7f85f62891804f71a925b4c22c6a8fea136",
+    "short_sha": "0a06e7f",
+    "message": "style: 修复 selectViewGroup/openEditDialog 方法签名后缺少换行导致的 checkstyle 违规",
+    "created_at": "2026-09-27T11:28:07Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315834614"
+  },
+  {
+    "id": 36315834583,
+    "sha": "0a06e7f85f62891804f71a925b4c22c6a8fea136",
+    "short_sha": "0a06e7f",
+    "message": "style: 修复 selectViewGroup/openEditDialog 方法签名后缺少换行导致的 checkstyle 违规",
+    "created_at": "2026-09-27T11:28:07Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315834583"
+  },
+  {
+    "id": 36315832488,
+    "sha": "0a06e7f85f62891804f71a925b4c22c6a8fea136",
+    "short_sha": "0a06e7f",
+    "message": "style: 修复 selectViewGroup/openEditDialog 方法签名后缺少换行导致的 checkstyle 违规",
+    "created_at": "2026-09-27T11:28:07Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315832488"
+  },
+  {
+    "id": 36315832594,
+    "sha": "0a06e7f85f62891804f71a925b4c22c6a8fea136",
+    "short_sha": "0a06e7f",
+    "message": "style: 修复 selectViewGroup/openEditDialog 方法签名后缺少换行导致的 checkstyle 违规",
+    "created_at": "2026-09-27T11:28:07Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315832594"
+  },
+  {
+    "id": 36315139785,
+    "sha": "feb51a55e80711873866631b10dfe5113c959589",
+    "short_sha": "feb51a5",
+    "message": "feat: 启动器设置新增\"更新内容\"入口，可重复查看当前版本更新说明 (#1856)；检查更新与更新内容拉取改同步 CAS 防抖，修复快速连点重复触发",
+    "created_at": "2026-09-27T10:27:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315139785"
+  },
+  {
+    "id": 36315066723,
+    "sha": "a575ea0bcfc478c432da1247a56759e7be370105",
+    "short_sha": "a575ea0",
+    "message": "feat: 控件编辑跨组能力——参考组控件可直接编辑(归属组解析)、编辑栏新增跨组复制/移动、控件组可合并到其他组、绑定控件组支持按下显示/隐藏而非仅切换 (#1763)",
+    "created_at": "2026-09-27T11:06:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315066723"
+  },
+  {
+    "id": 36315037440,
+    "sha": "a575ea0bcfc478c432da1247a56759e7be370105",
+    "short_sha": "a575ea0",
+    "message": "feat: 控件编辑跨组能力——参考组控件可直接编辑(归属组解析)、编辑栏新增跨组复制/移动、控件组可合并到其他组、绑定控件组支持按下显示/隐藏而非仅切换 (#1763)",
+    "created_at": "2026-09-27T11:06:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315037440"
+  },
+  {
+    "id": 36312698381,
+    "sha": "feb51a55e80711873866631b10dfe5113c959589",
+    "short_sha": "feb51a5",
+    "message": "feat: 启动器设置新增\"更新内容\"入口，可重复查看当前版本更新说明 (#1856)；检查更新与更新内容拉取改同步 CAS 防抖，修复快速连点重复触发",
+    "created_at": "2026-09-27T10:27:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36312698381"
+  },
+  {
+    "id": 36312698326,
+    "sha": "feb51a55e80711873866631b10dfe5113c959589",
+    "short_sha": "feb51a5",
+    "message": "feat: 启动器设置新增\"更新内容\"入口，可重复查看当前版本更新说明 (#1856)；检查更新与更新内容拉取改同步 CAS 防抖，修复快速连点重复触发",
+    "created_at": "2026-09-27T10:27:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36312698326"
+  },
+  {
+    "id": 36310966530,
+    "sha": "56be088d550e4ba7d7a744e1d914ff0350c89cfa",
+    "short_sha": "56be088",
+    "message": "fix: 控件编辑器修复与增强——新建/克隆控件默认屏幕中心并对齐组 z 序，修复添加控件被菜单遮挡看似消失 (#1865)；编辑吸附新增仅吸附相邻按键开关 (#646)；配置文件原子写入与布局按键数据按 id 去重，避免崩溃后键位重复 (#624)",
+    "created_at": "2026-09-27T09:01:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36310966530"
+  },
+  {
+    "id": 36310966525,
+    "sha": "56be088d550e4ba7d7a744e1d914ff0350c89cfa",
+    "short_sha": "56be088",
+    "message": "fix: 控件编辑器修复与增强——新建/克隆控件默认屏幕中心并对齐组 z 序，修复添加控件被菜单遮挡看似消失 (#1865)；编辑吸附新增仅吸附相邻按键开关 (#646)；配置文件原子写入与布局按键数据按 id 去重，避免崩溃后键位重复 (#624)",
+    "created_at": "2026-09-27T09:01:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36310966525"
+  },
+  {
     "id": 36300509192,
     "sha": "fb8156e08fc97d8fadd9ed8d55b94abcc07277f1",
     "short_sha": "fb8156e",
@@ -96,20 +232,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36294684018"
   },
   {
-    "id": 36290169719,
-    "sha": "6c77921d2daf3435cdb4fbf50c3fa64e99d1f424",
-    "short_sha": "6c77921",
-    "message": "optimize: 启动准备段迁至后台线程，消除点击启动卡顿并在弹窗内显示解析与扫描模组进度",
-    "created_at": "2026-09-27T03:00:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36290169719"
-  },
-  {
     "id": 36290169756,
     "sha": "6c77921d2daf3435cdb4fbf50c3fa64e99d1f424",
     "short_sha": "6c77921",
     "message": "optimize: 启动准备段迁至后台线程，消除点击启动卡顿并在弹窗内显示解析与扫描模组进度",
     "created_at": "2026-09-27T03:00:23Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36290169756"
+  },
+  {
+    "id": 36290169719,
+    "sha": "6c77921d2daf3435cdb4fbf50c3fa64e99d1f424",
+    "short_sha": "6c77921",
+    "message": "optimize: 启动准备段迁至后台线程，消除点击启动卡顿并在弹窗内显示解析与扫描模组进度",
+    "created_at": "2026-09-27T03:00:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36290169719"
   },
   {
     "id": 36289091350,
@@ -262,141 +398,5 @@
     "message": "fix: 深度删除按钮文案缩短为深度删除并在弹窗中补充功能说明",
     "created_at": "2026-09-26T12:10:55Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36284981991"
-  },
-  {
-    "id": 36284981920,
-    "sha": "6d3c84028119a71cce99a884183f038b0b3bf9e0",
-    "short_sha": "6d3c840",
-    "message": "fix: 深度删除按钮文案缩短为深度删除并在弹窗中补充功能说明",
-    "created_at": "2026-09-26T12:10:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36284981920"
-  },
-  {
-    "id": 36284966249,
-    "sha": "6d3c84028119a71cce99a884183f038b0b3bf9e0",
-    "short_sha": "6d3c840",
-    "message": "fix: 深度删除按钮文案缩短为深度删除并在弹窗中补充功能说明",
-    "created_at": "2026-09-26T12:10:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36284966249"
-  },
-  {
-    "id": 36284966279,
-    "sha": "6d3c84028119a71cce99a884183f038b0b3bf9e0",
-    "short_sha": "6d3c840",
-    "message": "fix: 深度删除按钮文案缩短为深度删除并在弹窗中补充功能说明",
-    "created_at": "2026-09-26T12:10:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36284966279"
-  },
-  {
-    "id": 36215297972,
-    "sha": "72e156685d59ac3d338a7616f76f7094b57ac34e",
-    "short_sha": "72e1566",
-    "message": "feat: 安装新游戏选择 Fabric/Quilt 时自动选择对应 API",
-    "created_at": "2026-09-26T03:34:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36215297972"
-  },
-  {
-    "id": 36215297946,
-    "sha": "72e156685d59ac3d338a7616f76f7094b57ac34e",
-    "short_sha": "72e1566",
-    "message": "feat: 安装新游戏选择 Fabric/Quilt 时自动选择对应 API",
-    "created_at": "2026-09-26T03:34:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36215297946"
-  },
-  {
-    "id": 36213896982,
-    "sha": "df52527e66f6e1f63f04603c06a7d4e2cd02de35",
-    "short_sha": "df52527",
-    "message": "fix: Java 管理弹窗删除图标过小且删除选中项后未回落自动选择",
-    "created_at": "2026-09-26T03:08:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36213896982"
-  },
-  {
-    "id": 36213897021,
-    "sha": "df52527e66f6e1f63f04603c06a7d4e2cd02de35",
-    "short_sha": "df52527",
-    "message": "fix: Java 管理弹窗删除图标过小且删除选中项后未回落自动选择",
-    "created_at": "2026-09-26T03:08:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36213897021"
-  },
-  {
-    "id": 36208632904,
-    "sha": "3382cf3b7068424b0f153165f7dfcaec2e5ec0bb",
-    "short_sha": "3382cf3",
-    "message": "feat: vkshim 新增 fillModeNonSolid 降级模拟\n\n对齐 VulkanFix-Renderer 的 fill_mode_non_solid 模块策略，补齐\n26.2 依赖表中另一常见缺口（线框/点填充能力位）：\n- vkGetPhysicalDeviceFeatures(2/KHR) 谎报 fillModeNonSolid 开启\n- vkCreateDevice 时剥除应用启用的该能力位（副本替换 + pNext 链\n  原位改写并恢复原值），避免真驱动拒绝设备创建\n- vkCreateGraphicsPipelines 对模拟设备的非 FILL 光栅化状态降级\n  为 FILL（gipa 与 gdpa 两条解析路径均拦截），线框视觉让位可运行性\n- 每物理设备独立探测原生支持，原生支持则全链路直通；检测侧同步\n  判定 needsFillModeEmulation 并在依赖评估中按补齐状态计算",
-    "created_at": "2026-09-26T01:14:54Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36208632904"
-  },
-  {
-    "id": 36208632973,
-    "sha": "3382cf3b7068424b0f153165f7dfcaec2e5ec0bb",
-    "short_sha": "3382cf3",
-    "message": "feat: vkshim 新增 fillModeNonSolid 降级模拟\n\n对齐 VulkanFix-Renderer 的 fill_mode_non_solid 模块策略，补齐\n26.2 依赖表中另一常见缺口（线框/点填充能力位）：\n- vkGetPhysicalDeviceFeatures(2/KHR) 谎报 fillModeNonSolid 开启\n- vkCreateDevice 时剥除应用启用的该能力位（副本替换 + pNext 链\n  原位改写并恢复原值），避免真驱动拒绝设备创建\n- vkCreateGraphicsPipelines 对模拟设备的非 FILL 光栅化状态降级\n  为 FILL（gipa 与 gdpa 两条解析路径均拦截），线框视觉让位可运行性\n- 每物理设备独立探测原生支持，原生支持则全链路直通；检测侧同步\n  判定 needsFillModeEmulation 并在依赖评估中按补齐状态计算",
-    "created_at": "2026-09-26T01:14:54Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36208632973"
-  },
-  {
-    "id": 36208595048,
-    "sha": "3382cf3b7068424b0f153165f7dfcaec2e5ec0bb",
-    "short_sha": "3382cf3",
-    "message": "feat: vkshim 新增 fillModeNonSolid 降级模拟\n\n对齐 VulkanFix-Renderer 的 fill_mode_non_solid 模块策略，补齐\n26.2 依赖表中另一常见缺口（线框/点填充能力位）：\n- vkGetPhysicalDeviceFeatures(2/KHR) 谎报 fillModeNonSolid 开启\n- vkCreateDevice 时剥除应用启用的该能力位（副本替换 + pNext 链\n  原位改写并恢复原值），避免真驱动拒绝设备创建\n- vkCreateGraphicsPipelines 对模拟设备的非 FILL 光栅化状态降级\n  为 FILL（gipa 与 gdpa 两条解析路径均拦截），线框视觉让位可运行性\n- 每物理设备独立探测原生支持，原生支持则全链路直通；检测侧同步\n  判定 needsFillModeEmulation 并在依赖评估中按补齐状态计算",
-    "created_at": "2026-09-26T01:14:54Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36208595048"
-  },
-  {
-    "id": 36208595058,
-    "sha": "3382cf3b7068424b0f153165f7dfcaec2e5ec0bb",
-    "short_sha": "3382cf3",
-    "message": "feat: vkshim 新增 fillModeNonSolid 降级模拟\n\n对齐 VulkanFix-Renderer 的 fill_mode_non_solid 模块策略，补齐\n26.2 依赖表中另一常见缺口（线框/点填充能力位）：\n- vkGetPhysicalDeviceFeatures(2/KHR) 谎报 fillModeNonSolid 开启\n- vkCreateDevice 时剥除应用启用的该能力位（副本替换 + pNext 链\n  原位改写并恢复原值），避免真驱动拒绝设备创建\n- vkCreateGraphicsPipelines 对模拟设备的非 FILL 光栅化状态降级\n  为 FILL（gipa 与 gdpa 两条解析路径均拦截），线框视觉让位可运行性\n- 每物理设备独立探测原生支持，原生支持则全链路直通；检测侧同步\n  判定 needsFillModeEmulation 并在依赖评估中按补齐状态计算",
-    "created_at": "2026-09-26T01:14:54Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36208595058"
-  },
-  {
-    "id": 36204023430,
-    "sha": "c4af5a45d4ee87340bde5239ab2390e41b479d06",
-    "short_sha": "c4af5a4",
-    "message": "feat: 引导遮罩添加位置过渡动画\n\n- 显示时高亮洞从目标中心扩散点亮，步骤间从旧位置平滑滑动到新位置，隐藏时收缩回中心\n- 气泡淡入与洞的滑动动画衔接（延迟 50ms），洞动画时长 150ms\n- 修复气泡定位：新增 targetHoleRect 以动画目标位置计算，改用固定宽度 EXACTLY\n  测量取高，不再依赖布局回调时序（doOnNextLayout 中改 margin 会部分设备被吞导致气泡偏移到 0,0）",
-    "created_at": "2026-09-26T00:12:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36204023430"
-  },
-  {
-    "id": 36204023451,
-    "sha": "c4af5a45d4ee87340bde5239ab2390e41b479d06",
-    "short_sha": "c4af5a4",
-    "message": "feat: 引导遮罩添加位置过渡动画\n\n- 显示时高亮洞从目标中心扩散点亮，步骤间从旧位置平滑滑动到新位置，隐藏时收缩回中心\n- 气泡淡入与洞的滑动动画衔接（延迟 50ms），洞动画时长 150ms\n- 修复气泡定位：新增 targetHoleRect 以动画目标位置计算，改用固定宽度 EXACTLY\n  测量取高，不再依赖布局回调时序（doOnNextLayout 中改 margin 会部分设备被吞导致气泡偏移到 0,0）",
-    "created_at": "2026-09-26T00:12:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36204023451"
-  },
-  {
-    "id": 36124433514,
-    "sha": "84017a2485b977348ca35e6aa21e87c8b069a075",
-    "short_sha": "84017a2",
-    "message": "fix: 完善引导描述并同步英文翻译\n\n- 启动引导明确长按选择渲染器后直接启动\n- 管理页补充游戏设置调整的说明，下载与管理描述加\"等\"收尾\n- 控制器引导改为配置或下载虚拟按键布局",
-    "created_at": "2026-09-25T10:30:50Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36124433514"
-  },
-  {
-    "id": 36124433522,
-    "sha": "84017a2485b977348ca35e6aa21e87c8b069a075",
-    "short_sha": "84017a2",
-    "message": "fix: 完善引导描述并同步英文翻译\n\n- 启动引导明确长按选择渲染器后直接启动\n- 管理页补充游戏设置调整的说明，下载与管理描述加\"等\"收尾\n- 控制器引导改为配置或下载虚拟按键布局",
-    "created_at": "2026-09-25T10:30:50Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36124433522"
-  },
-  {
-    "id": 36117878608,
-    "sha": "abf5a12156465e4fed7a1617d141ac6bae883602",
-    "short_sha": "abf5a12",
-    "message": "fix: 修复整合包导出的任务名显示、禁用态文件重复与后缀提示\n\n- TaskListPane 导出任务命名分支补上 CurseForge/Modrinth 两个新任务类；\n  getExportTask 与各 exportAsXxx 的匿名包装任务设为 MINOR，不再以类名\n  显示在任务对话框中\n- Modrinth 导出的 overrides 排除按去后缀路径匹配，修复禁用态文件同时\n  出现在 files 列表与 client-overrides 的问题\n- 导出信息页文件名后缀按类型动态显示（Modrinth 为 .mrpack）",
-    "created_at": "2026-09-25T09:16:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36117878608"
-  },
-  {
-    "id": 36117878786,
-    "sha": "abf5a12156465e4fed7a1617d141ac6bae883602",
-    "short_sha": "abf5a12",
-    "message": "fix: 修复整合包导出的任务名显示、禁用态文件重复与后缀提示\n\n- TaskListPane 导出任务命名分支补上 CurseForge/Modrinth 两个新任务类；\n  getExportTask 与各 exportAsXxx 的匿名包装任务设为 MINOR，不再以类名\n  显示在任务对话框中\n- Modrinth 导出的 overrides 排除按去后缀路径匹配，修复禁用态文件同时\n  出现在 files 列表与 client-overrides 的问题\n- 导出信息页文件名后缀按类型动态显示（Modrinth 为 .mrpack）",
-    "created_at": "2026-09-25T09:16:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36117878786"
   }
 ]

@@ -1,5 +1,45 @@
 [
   {
+    "id": 36313237023,
+    "sha": "6e89c9b6d07874cd08d41c1c867d26daa387a442",
+    "short_sha": "6e89c9b",
+    "message": "Merge pull request #1964 from ZalithLauncher/fix/sdl-messagebox-message\n\nfix: SDL 消息框 message 误设为标题导致错误信息显示不全",
+    "created_at": "2026-09-27T10:39:29Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36313237023"
+  },
+  {
+    "id": 36313191626,
+    "sha": "be68425f6defa5453853b9d91c073cfc14f2570f",
+    "short_sha": "be68425",
+    "message": "fix: SDL 消息框 message 误设为标题导致错误信息显示不全",
+    "created_at": "2026-09-27T10:38:31Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36313191626"
+  },
+  {
+    "id": 36310815417,
+    "sha": "6383d9b92c9493be3fb323b05f85f762a9ec12e5",
+    "short_sha": "6383d9b",
+    "message": "Merge pull request #1963 from ZalithLauncher/feat/card-grid-free-placement\n\nfeat: 卡片网格支持自由摆放，允许卡片间纵向留空",
+    "created_at": "2026-09-27T09:53:44Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36310815417"
+  },
+  {
+    "id": 36310746134,
+    "sha": "bd90ed99d59c4ae4da6495149b479abb3386bcb0",
+    "short_sha": "bd90ed9",
+    "message": "feat: 卡片网格支持自由摆放，允许卡片间纵向留空\n\n移除垂直压实不变量：拖动/缩放松手落在吸附预览的精确位置，\n删除卡片留下空洞，加载校验保留持久化布局的纵向空隙；\n添加卡片维持最上最左优先填洞，列数变化重排维持贪心打包。\n\nGridEngine.compact 无剩余调用方随之删除；validate 输出\n恢复按阅读顺序返回的契约，保证幂等。",
+    "created_at": "2026-09-27T09:52:08Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36310746134"
+  },
+  {
+    "id": 36307066434,
+    "sha": "e43c8a11a6e1103f8a11023158999116d2db5f0f",
+    "short_sha": "e43c8a1",
+    "message": "Merge pull request #1957 from ZalithLauncher/feat/lwjgl3ify-support\n\nfeat: 兼容 lwjgl3ify & 使用 MioLauncherWrapper",
+    "created_at": "2026-09-27T08:42:51Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36307066434"
+  },
+  {
     "id": 36272740378,
     "sha": "b6f0e68966821445607a8819e61ba981f2a55bbb",
     "short_sha": "b6f0e68",
@@ -358,45 +398,5 @@
     "message": "[Do not use!] Merge branch 'origin/weblate_main' into Weblate.",
     "created_at": "2026-09-23T13:36:30Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35868289743"
-  },
-  {
-    "id": 35868168430,
-    "sha": "480a443ed08b6f85aa61fd03dd9651d547fcb3b4",
-    "short_sha": "480a443",
-    "message": "Merge pull request #1931 from ZalithLauncher/main\n\nmerge  main",
-    "created_at": "2026-09-23T13:35:43Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35868168430"
-  },
-  {
-    "id": 35868089797,
-    "sha": "abc17cc9ff32b01edcdce54314e59b289d4633bf",
-    "short_sha": "abc17cc",
-    "message": "Merge pull request #1930 from ZalithLauncher/main\n\nmerge main",
-    "created_at": "2026-09-23T13:35:04Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35868089797"
-  },
-  {
-    "id": 35866589192,
-    "sha": "f851eb4cf7df8b2c630fa0d15543c56c5ef23f0e",
-    "short_sha": "f851eb4",
-    "message": "Merge pull request #1929 from ZalithLauncher/refactor/downloader\n\nrefactor: 重构下载器引擎，参考 HMCL FetchTask",
-    "created_at": "2026-09-23T13:22:13Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35866589192"
-  },
-  {
-    "id": 35866291605,
-    "sha": "fe73c6b135dbb6cce60f26291977b0aae6ad6216",
-    "short_sha": "fe73c6b",
-    "message": "fix: 下载源官方档对齐 HMCL 语义，独占官方源不再镜像兜底\n\n- 游戏内容下载源与资源平台下载源的官方档改为仅使用官方源\n- MirrorSourceType 枚举改名 OFFICIAL/MIRROR，保留旧枚举名读取兼容\n- 同步修订 12 个语言的设置文案（优先→尽量）",
-    "created_at": "2026-09-23T13:17:36Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35866291605"
-  },
-  {
-    "id": 35840172949,
-    "sha": "746e00a0dde43beb29ba331a0441635ad4412dcf",
-    "short_sha": "746e00a",
-    "message": "Merge pull request #1920 from Leowly/fix/multi-touch\n\nfix: 多指触控坐标偏移",
-    "created_at": "2026-09-23T08:58:15Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35840172949"
   }
 ]
