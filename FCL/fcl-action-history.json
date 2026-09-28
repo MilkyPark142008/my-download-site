@@ -1,5 +1,165 @@
 [
   {
+    "id": 36379750931,
+    "sha": "ad8fc5624e386ba7e608d657c127fbdeb1e981c8",
+    "short_sha": "ad8fc56",
+    "message": "fix: 控件组绑定对话框补取消按钮，合并按钮按入口能力显示\n\n- 按键绑定控件组对话框原先只有“确定”一个出口，打开后无法反悔，只能把当前选择写入绑定；\n  补取消按钮\n- 合并按钮对未实现 onMergeToGroup 的入口（新建控件组）点击后无任何效果：Callback 新增\n  supportsMerge 能力声明，对话框据此显示或隐藏合并按钮；编辑已有组时仍提供合并",
+    "created_at": "2026-09-28T04:55:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379750931"
+  },
+  {
+    "id": 36379750947,
+    "sha": "ad8fc5624e386ba7e608d657c127fbdeb1e981c8",
+    "short_sha": "ad8fc56",
+    "message": "fix: 控件组绑定对话框补取消按钮，合并按钮按入口能力显示\n\n- 按键绑定控件组对话框原先只有“确定”一个出口，打开后无法反悔，只能把当前选择写入绑定；\n  补取消按钮\n- 合并按钮对未实现 onMergeToGroup 的入口（新建控件组）点击后无任何效果：Callback 新增\n  supportsMerge 能力声明，对话框据此显示或隐藏合并按钮；编辑已有组时仍提供合并",
+    "created_at": "2026-09-28T04:55:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379750947"
+  },
+  {
+    "id": 36379746989,
+    "sha": "ad8fc5624e386ba7e608d657c127fbdeb1e981c8",
+    "short_sha": "ad8fc56",
+    "message": "fix: 控件组绑定对话框补取消按钮，合并按钮按入口能力显示\n\n- 按键绑定控件组对话框原先只有“确定”一个出口，打开后无法反悔，只能把当前选择写入绑定；\n  补取消按钮\n- 合并按钮对未实现 onMergeToGroup 的入口（新建控件组）点击后无任何效果：Callback 新增\n  supportsMerge 能力声明，对话框据此显示或隐藏合并按钮；编辑已有组时仍提供合并",
+    "created_at": "2026-09-28T04:55:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379746989"
+  },
+  {
+    "id": 36379746994,
+    "sha": "ad8fc5624e386ba7e608d657c127fbdeb1e981c8",
+    "short_sha": "ad8fc56",
+    "message": "fix: 控件组绑定对话框补取消按钮，合并按钮按入口能力显示\n\n- 按键绑定控件组对话框原先只有“确定”一个出口，打开后无法反悔，只能把当前选择写入绑定；\n  补取消按钮\n- 合并按钮对未实现 onMergeToGroup 的入口（新建控件组）点击后无任何效果：Callback 新增\n  supportsMerge 能力声明，对话框据此显示或隐藏合并按钮；编辑已有组时仍提供合并",
+    "created_at": "2026-09-28T04:55:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379746994"
+  },
+  {
+    "id": 36379675752,
+    "sha": "d96f1f2da1bd9dc3d647644895d9f9ffdc8e248e",
+    "short_sha": "d96f1f2",
+    "message": "fix: 单选的文件选择模式不再提供批量操作入口\n\n批量菜单的“全选”会把当前目录全部文件塞进选择结果，确认后向调用方返回多个路径，\n而 launchSingleSelection 的调用方按单选契约只取首个路径。改为单选的文件选择模式下\n不显示批量入口，多选模式与浏览模式不受影响",
+    "created_at": "2026-09-28T04:54:46Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379675752"
+  },
+  {
+    "id": 36379675780,
+    "sha": "d96f1f2da1bd9dc3d647644895d9f9ffdc8e248e",
+    "short_sha": "d96f1f2",
+    "message": "fix: 单选的文件选择模式不再提供批量操作入口\n\n批量菜单的“全选”会把当前目录全部文件塞进选择结果，确认后向调用方返回多个路径，\n而 launchSingleSelection 的调用方按单选契约只取首个路径。改为单选的文件选择模式下\n不显示批量入口，多选模式与浏览模式不受影响",
+    "created_at": "2026-09-28T04:54:46Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379675780"
+  },
+  {
+    "id": 36379671660,
+    "sha": "d96f1f2da1bd9dc3d647644895d9f9ffdc8e248e",
+    "short_sha": "d96f1f2",
+    "message": "fix: 单选的文件选择模式不再提供批量操作入口\n\n批量菜单的“全选”会把当前目录全部文件塞进选择结果，确认后向调用方返回多个路径，\n而 launchSingleSelection 的调用方按单选契约只取首个路径。改为单选的文件选择模式下\n不显示批量入口，多选模式与浏览模式不受影响",
+    "created_at": "2026-09-28T04:54:46Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379671660"
+  },
+  {
+    "id": 36379671709,
+    "sha": "d96f1f2da1bd9dc3d647644895d9f9ffdc8e248e",
+    "short_sha": "d96f1f2",
+    "message": "fix: 单选的文件选择模式不再提供批量操作入口\n\n批量菜单的“全选”会把当前目录全部文件塞进选择结果，确认后向调用方返回多个路径，\n而 launchSingleSelection 的调用方按单选契约只取首个路径。改为单选的文件选择模式下\n不显示批量入口，多选模式与浏览模式不受影响",
+    "created_at": "2026-09-28T04:54:46Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379671709"
+  },
+  {
+    "id": 36379620478,
+    "sha": "79beffc1872b0c112bc6680cf0caac350b60b172",
+    "short_sha": "79beffc",
+    "message": "fix: 快捷键按下同样拦截，按键监听态随界面收起退出\n\n- 自定义快捷键此前只在抬起时匹配：按下被转发给游戏而抬起被吞，游戏侧收不到释放会持续\n  按住（F8 等非 ENTER 快捷键即可触发）；改为匹配后按下与抬起一律不再下发\n- 按键监听态原先只有成功捕获按键才清除：点开设置行后不按键、直接收回右菜单或切到后台，\n  监听会一直吞掉所有按键（含菜单视图隐藏后用于唤回菜单的音量键），并把下一个按下的键\n  误绑定为快捷键；改为右菜单收起、菜单视图隐藏、页面暂停三处统一放弃监听",
+    "created_at": "2026-09-28T04:54:01Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379620478"
+  },
+  {
+    "id": 36379620507,
+    "sha": "79beffc1872b0c112bc6680cf0caac350b60b172",
+    "short_sha": "79beffc",
+    "message": "fix: 快捷键按下同样拦截，按键监听态随界面收起退出\n\n- 自定义快捷键此前只在抬起时匹配：按下被转发给游戏而抬起被吞，游戏侧收不到释放会持续\n  按住（F8 等非 ENTER 快捷键即可触发）；改为匹配后按下与抬起一律不再下发\n- 按键监听态原先只有成功捕获按键才清除：点开设置行后不按键、直接收回右菜单或切到后台，\n  监听会一直吞掉所有按键（含菜单视图隐藏后用于唤回菜单的音量键），并把下一个按下的键\n  误绑定为快捷键；改为右菜单收起、菜单视图隐藏、页面暂停三处统一放弃监听",
+    "created_at": "2026-09-28T04:54:01Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379620507"
+  },
+  {
+    "id": 36379470586,
+    "sha": "45f903d4e0977a22ed74e1a321e1deaa4bdb9da7",
+    "short_sha": "45f903d",
+    "message": "fix: modloader 安装引导改在主线程跳转\n\nawaitChoice 在主线程执行，但返回后调用方恢复在 IO 上下文，跳转版本管理页的界面操作\n（选中 manage 页、切到“游戏”标签页）在后台线程执行会抛 CalledFromWrongThreadException，\n该异常随即被同一函数的兜底 catch 吞掉——用户选择“安装”却照常启动游戏。改为显式切回主\n线程执行跳转，跳转失败同样取消本次启动，不再退化为继续启动",
+    "created_at": "2026-09-28T04:51:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379470586"
+  },
+  {
+    "id": 36379470575,
+    "sha": "45f903d4e0977a22ed74e1a321e1deaa4bdb9da7",
+    "short_sha": "45f903d",
+    "message": "fix: modloader 安装引导改在主线程跳转\n\nawaitChoice 在主线程执行，但返回后调用方恢复在 IO 上下文，跳转版本管理页的界面操作\n（选中 manage 页、切到“游戏”标签页）在后台线程执行会抛 CalledFromWrongThreadException，\n该异常随即被同一函数的兜底 catch 吞掉——用户选择“安装”却照常启动游戏。改为显式切回主\n线程执行跳转，跳转失败同样取消本次启动，不再退化为继续启动",
+    "created_at": "2026-09-28T04:51:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379470575"
+  },
+  {
+    "id": 36379402285,
+    "sha": "9374b3c1609528a3333fc7a7a92e73426b82e9a4",
+    "short_sha": "9374b3c",
+    "message": "fix: 深度删除校验待删路径位于共享目录内\n\n库路径、资产 hash 与 assetId 均取自版本 json 与资产索引，属外部数据：携带 .. 或指向\n外部目录时原实现会直接删除共享目录之外的文件或目录。改为删除前对规范路径做目录内断言\n（libraries / assets/indexes / assets/objects / assets/virtual 各自判定），越界一律\n跳过并记日志；清理后收缩空目录同样改按规范路径比较，不越过各自根目录",
+    "created_at": "2026-09-28T04:50:41Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379402285"
+  },
+  {
+    "id": 36379402279,
+    "sha": "9374b3c1609528a3333fc7a7a92e73426b82e9a4",
+    "short_sha": "9374b3c",
+    "message": "fix: 深度删除校验待删路径位于共享目录内\n\n库路径、资产 hash 与 assetId 均取自版本 json 与资产索引，属外部数据：携带 .. 或指向\n外部目录时原实现会直接删除共享目录之外的文件或目录。改为删除前对规范路径做目录内断言\n（libraries / assets/indexes / assets/objects / assets/virtual 各自判定），越界一律\n跳过并记日志；清理后收缩空目录同样改按规范路径比较，不越过各自根目录",
+    "created_at": "2026-09-28T04:50:41Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379402279"
+  },
+  {
+    "id": 36379399835,
+    "sha": "9374b3c1609528a3333fc7a7a92e73426b82e9a4",
+    "short_sha": "9374b3c",
+    "message": "fix: 深度删除校验待删路径位于共享目录内\n\n库路径、资产 hash 与 assetId 均取自版本 json 与资产索引，属外部数据：携带 .. 或指向\n外部目录时原实现会直接删除共享目录之外的文件或目录。改为删除前对规范路径做目录内断言\n（libraries / assets/indexes / assets/objects / assets/virtual 各自判定），越界一律\n跳过并记日志；清理后收缩空目录同样改按规范路径比较，不越过各自根目录",
+    "created_at": "2026-09-28T04:50:41Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379399835"
+  },
+  {
+    "id": 36379399702,
+    "sha": "9374b3c1609528a3333fc7a7a92e73426b82e9a4",
+    "short_sha": "9374b3c",
+    "message": "fix: 深度删除校验待删路径位于共享目录内\n\n库路径、资产 hash 与 assetId 均取自版本 json 与资产索引，属外部数据：携带 .. 或指向\n外部目录时原实现会直接删除共享目录之外的文件或目录。改为删除前对规范路径做目录内断言\n（libraries / assets/indexes / assets/objects / assets/virtual 各自判定），越界一律\n跳过并记日志；清理后收缩空目录同样改按规范路径比较，不越过各自根目录",
+    "created_at": "2026-09-28T04:50:41Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379399702"
+  },
+  {
+    "id": 36379344805,
+    "sha": "ea7c18e903042af1873d88d4e0e4d2a4fc595572",
+    "short_sha": "ea7c18e",
+    "message": "fix: Vulkan 检测补建补丁目录，vkshim divisor 特性位按驱动报告值置位\n\n- 检测用的 cacheDir 未经创建即传给 native：驱动补丁文件在该目录生成，目录缺失时\n  打开输出文件直接失败，Turnip 驱动加载必然回落到系统加载器，检测结论与 vkshim\n  门控随之失真\n- vkshim 补写的 divisor features 节点原先把两个特性位无条件置位，而启用驱动不支持的\n  位会让 vkCreateDevice 返回 VK_ERROR_FEATURE_NOT_PRESENT；改为先经\n  vkGetPhysicalDeviceFeatures2 查询驱动报告的支持情况，应用自带节点时同样把不支持的\n  位临时置回（调用后恢复）",
+    "created_at": "2026-09-28T04:49:49Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379344805"
+  },
+  {
+    "id": 36379344799,
+    "sha": "ea7c18e903042af1873d88d4e0e4d2a4fc595572",
+    "short_sha": "ea7c18e",
+    "message": "fix: Vulkan 检测补建补丁目录，vkshim divisor 特性位按驱动报告值置位\n\n- 检测用的 cacheDir 未经创建即传给 native：驱动补丁文件在该目录生成，目录缺失时\n  打开输出文件直接失败，Turnip 驱动加载必然回落到系统加载器，检测结论与 vkshim\n  门控随之失真\n- vkshim 补写的 divisor features 节点原先把两个特性位无条件置位，而启用驱动不支持的\n  位会让 vkCreateDevice 返回 VK_ERROR_FEATURE_NOT_PRESENT；改为先经\n  vkGetPhysicalDeviceFeatures2 查询驱动报告的支持情况，应用自带节点时同样把不支持的\n  位临时置回（调用后恢复）",
+    "created_at": "2026-09-28T04:49:49Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379344799"
+  },
+  {
+    "id": 36379340799,
+    "sha": "ea7c18e903042af1873d88d4e0e4d2a4fc595572",
+    "short_sha": "ea7c18e",
+    "message": "fix: Vulkan 检测补建补丁目录，vkshim divisor 特性位按驱动报告值置位\n\n- 检测用的 cacheDir 未经创建即传给 native：驱动补丁文件在该目录生成，目录缺失时\n  打开输出文件直接失败，Turnip 驱动加载必然回落到系统加载器，检测结论与 vkshim\n  门控随之失真\n- vkshim 补写的 divisor features 节点原先把两个特性位无条件置位，而启用驱动不支持的\n  位会让 vkCreateDevice 返回 VK_ERROR_FEATURE_NOT_PRESENT；改为先经\n  vkGetPhysicalDeviceFeatures2 查询驱动报告的支持情况，应用自带节点时同样把不支持的\n  位临时置回（调用后恢复）",
+    "created_at": "2026-09-28T04:49:49Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379340799"
+  },
+  {
+    "id": 36379340828,
+    "sha": "ea7c18e903042af1873d88d4e0e4d2a4fc595572",
+    "short_sha": "ea7c18e",
+    "message": "fix: Vulkan 检测补建补丁目录，vkshim divisor 特性位按驱动报告值置位\n\n- 检测用的 cacheDir 未经创建即传给 native：驱动补丁文件在该目录生成，目录缺失时\n  打开输出文件直接失败，Turnip 驱动加载必然回落到系统加载器，检测结论与 vkshim\n  门控随之失真\n- vkshim 补写的 divisor features 节点原先把两个特性位无条件置位，而启用驱动不支持的\n  位会让 vkCreateDevice 返回 VK_ERROR_FEATURE_NOT_PRESENT；改为先经\n  vkGetPhysicalDeviceFeatures2 查询驱动报告的支持情况，应用自带节点时同样把不支持的\n  位临时置回（调用后恢复）",
+    "created_at": "2026-09-28T04:49:49Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379340828"
+  },
+  {
     "id": 36327621258,
     "sha": "ed44953c94eb54b060e9a5e28c4c5f60ecd376f4",
     "short_sha": "ed44953",
@@ -238,165 +398,5 @@
     "message": "fix: 启动进度恢复为任务列表阶段展示，修复检查弹窗取消后启动弹窗卡住\n\n- TaskListPane 新增纯展示模式：按传入阶段列表预生成阶段行，\n  attachExecutor 转发桥接执行器事件；任务名映射链抽为 applyTaskName 共享\n- TaskDialog 新增 setStages/beginStage/succeedStage/failStage；\n  setExecutor 检测到展示模式列表时转发而非重建，安装器流程行为不变\n- LauncherHelper 以与原 withStagesHint 一致的六个阶段 key 驱动阶段行，\n  进入下一阶段时前一阶段打勾，成功收尾与失败分别标记\n- launch() 的 CancellationException 分支幂等关闭启动弹窗：经检查弹窗\n  取消时 Job 未真正 cancel，原实现无人关闭弹窗导致其卡在屏幕上\n- 设备实测：阶段列表随协程推进打勾；模组不兼容弹窗点取消后全部弹窗\n  关闭且启动中止，点无视风险则正常启动",
     "created_at": "2026-09-27T04:24:55Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36294690362"
-  },
-  {
-    "id": 36294690337,
-    "sha": "39ab34999a070067b782c3b148812b9eedadc07e",
-    "short_sha": "39ab349",
-    "message": "fix: 启动进度恢复为任务列表阶段展示，修复检查弹窗取消后启动弹窗卡住\n\n- TaskListPane 新增纯展示模式：按传入阶段列表预生成阶段行，\n  attachExecutor 转发桥接执行器事件；任务名映射链抽为 applyTaskName 共享\n- TaskDialog 新增 setStages/beginStage/succeedStage/failStage；\n  setExecutor 检测到展示模式列表时转发而非重建，安装器流程行为不变\n- LauncherHelper 以与原 withStagesHint 一致的六个阶段 key 驱动阶段行，\n  进入下一阶段时前一阶段打勾，成功收尾与失败分别标记\n- launch() 的 CancellationException 分支幂等关闭启动弹窗：经检查弹窗\n  取消时 Job 未真正 cancel，原实现无人关闭弹窗导致其卡在屏幕上\n- 设备实测：阶段列表随协程推进打勾；模组不兼容弹窗点取消后全部弹窗\n  关闭且启动中止，点无视风险则正常启动",
-    "created_at": "2026-09-27T04:24:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36294690337"
-  },
-  {
-    "id": 36294684060,
-    "sha": "39ab34999a070067b782c3b148812b9eedadc07e",
-    "short_sha": "39ab349",
-    "message": "fix: 启动进度恢复为任务列表阶段展示，修复检查弹窗取消后启动弹窗卡住\n\n- TaskListPane 新增纯展示模式：按传入阶段列表预生成阶段行，\n  attachExecutor 转发桥接执行器事件；任务名映射链抽为 applyTaskName 共享\n- TaskDialog 新增 setStages/beginStage/succeedStage/failStage；\n  setExecutor 检测到展示模式列表时转发而非重建，安装器流程行为不变\n- LauncherHelper 以与原 withStagesHint 一致的六个阶段 key 驱动阶段行，\n  进入下一阶段时前一阶段打勾，成功收尾与失败分别标记\n- launch() 的 CancellationException 分支幂等关闭启动弹窗：经检查弹窗\n  取消时 Job 未真正 cancel，原实现无人关闭弹窗导致其卡在屏幕上\n- 设备实测：阶段列表随协程推进打勾；模组不兼容弹窗点取消后全部弹窗\n  关闭且启动中止，点无视风险则正常启动",
-    "created_at": "2026-09-27T04:24:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36294684060"
-  },
-  {
-    "id": 36294684018,
-    "sha": "39ab34999a070067b782c3b148812b9eedadc07e",
-    "short_sha": "39ab349",
-    "message": "fix: 启动进度恢复为任务列表阶段展示，修复检查弹窗取消后启动弹窗卡住\n\n- TaskListPane 新增纯展示模式：按传入阶段列表预生成阶段行，\n  attachExecutor 转发桥接执行器事件；任务名映射链抽为 applyTaskName 共享\n- TaskDialog 新增 setStages/beginStage/succeedStage/failStage；\n  setExecutor 检测到展示模式列表时转发而非重建，安装器流程行为不变\n- LauncherHelper 以与原 withStagesHint 一致的六个阶段 key 驱动阶段行，\n  进入下一阶段时前一阶段打勾，成功收尾与失败分别标记\n- launch() 的 CancellationException 分支幂等关闭启动弹窗：经检查弹窗\n  取消时 Job 未真正 cancel，原实现无人关闭弹窗导致其卡在屏幕上\n- 设备实测：阶段列表随协程推进打勾；模组不兼容弹窗点取消后全部弹窗\n  关闭且启动中止，点无视风险则正常启动",
-    "created_at": "2026-09-27T04:24:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36294684018"
-  },
-  {
-    "id": 36290169756,
-    "sha": "6c77921d2daf3435cdb4fbf50c3fa64e99d1f424",
-    "short_sha": "6c77921",
-    "message": "optimize: 启动准备段迁至后台线程，消除点击启动卡顿并在弹窗内显示解析与扫描模组进度",
-    "created_at": "2026-09-27T03:00:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36290169756"
-  },
-  {
-    "id": 36290169719,
-    "sha": "6c77921d2daf3435cdb4fbf50c3fa64e99d1f424",
-    "short_sha": "6c77921",
-    "message": "optimize: 启动准备段迁至后台线程，消除点击启动卡顿并在弹窗内显示解析与扫描模组进度",
-    "created_at": "2026-09-27T03:00:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36290169719"
-  },
-  {
-    "id": 36289091350,
-    "sha": "bf1ff2a717d84bee81c7025550bcf0efe50349c6",
-    "short_sha": "bf1ff2a",
-    "message": "docs: 版本卡片引导文案补充长按快速选择版本说明",
-    "created_at": "2026-09-27T02:28:25Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36289091350"
-  },
-  {
-    "id": 36288931196,
-    "sha": "c36f30992265f4d0152075eb6c2200125d2f8a3e",
-    "short_sha": "c36f309",
-    "message": "fix: 清理其余语言目录中已废弃的陀螺仪文案，修复 lint ExtraTranslation 构建失败",
-    "created_at": "2026-09-27T02:34:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36288931196"
-  },
-  {
-    "id": 36288931200,
-    "sha": "c36f30992265f4d0152075eb6c2200125d2f8a3e",
-    "short_sha": "c36f309",
-    "message": "fix: 清理其余语言目录中已废弃的陀螺仪文案，修复 lint ExtraTranslation 构建失败",
-    "created_at": "2026-09-27T02:34:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36288931200"
-  },
-  {
-    "id": 36288928916,
-    "sha": "c36f30992265f4d0152075eb6c2200125d2f8a3e",
-    "short_sha": "c36f309",
-    "message": "fix: 清理其余语言目录中已废弃的陀螺仪文案，修复 lint ExtraTranslation 构建失败",
-    "created_at": "2026-09-27T02:34:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36288928916"
-  },
-  {
-    "id": 36288223277,
-    "sha": "46ac14de9c8406e775be021d533d4ee502cad44e",
-    "short_sha": "46ac14d",
-    "message": "fix: 视角虚拟按键改走增量流，修复与触控同时使用时视角抽搐\n\n指针跟随按键捕获态仍推绝对坐标，会不断抹掉触控增量流累计的位移，\n两路互相拉扯导致视角抽搐；统一为逐帧增量后叠加互不干扰。\n顺带移除陀螺仪特判，开启陀螺仪时按键视角移动恢复正常生效。",
-    "created_at": "2026-09-27T02:20:09Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36288223277"
-  },
-  {
-    "id": 36288223328,
-    "sha": "46ac14de9c8406e775be021d533d4ee502cad44e",
-    "short_sha": "46ac14d",
-    "message": "fix: 视角虚拟按键改走增量流，修复与触控同时使用时视角抽搐\n\n指针跟随按键捕获态仍推绝对坐标，会不断抹掉触控增量流累计的位移，\n两路互相拉扯导致视角抽搐；统一为逐帧增量后叠加互不干扰。\n顺带移除陀螺仪特判，开启陀螺仪时按键视角移动恢复正常生效。",
-    "created_at": "2026-09-27T02:20:09Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36288223328"
-  },
-  {
-    "id": 36288218896,
-    "sha": "46ac14de9c8406e775be021d533d4ee502cad44e",
-    "short_sha": "46ac14d",
-    "message": "fix: 视角虚拟按键改走增量流，修复与触控同时使用时视角抽搐\n\n指针跟随按键捕获态仍推绝对坐标，会不断抹掉触控增量流累计的位移，\n两路互相拉扯导致视角抽搐；统一为逐帧增量后叠加互不干扰。\n顺带移除陀螺仪特判，开启陀螺仪时按键视角移动恢复正常生效。",
-    "created_at": "2026-09-27T02:20:09Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36288218896"
-  },
-  {
-    "id": 36287882039,
-    "sha": "db3c4802bd1ce1c8c6dab9cc0683688e72d402d2",
-    "short_sha": "db3c480",
-    "message": "feat: 陀螺仪改为相对增量流并新增分轴灵敏度与触控加速\n\n- 陀螺仪重写：滑动窗口平滑、死区过滤、屏幕旋转轴映射、传感器判空\n- 修复开启陀螺仪后触控无法转视角：捕获态（触控/物理鼠标/手柄）统一走 sendCursorDelta 增量流\n- 修复关闭陀螺仪时视角大幅抖动：不再补发绝对坐标\n- X/Y 轴独立反转与独立灵敏度（百分比显示），旧配置自动迁移\n- 新增滑动加速与距离加速开关（手势分类）",
-    "created_at": "2026-09-27T02:12:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36287882039"
-  },
-  {
-    "id": 36287881951,
-    "sha": "db3c4802bd1ce1c8c6dab9cc0683688e72d402d2",
-    "short_sha": "db3c480",
-    "message": "feat: 陀螺仪改为相对增量流并新增分轴灵敏度与触控加速\n\n- 陀螺仪重写：滑动窗口平滑、死区过滤、屏幕旋转轴映射、传感器判空\n- 修复开启陀螺仪后触控无法转视角：捕获态（触控/物理鼠标/手柄）统一走 sendCursorDelta 增量流\n- 修复关闭陀螺仪时视角大幅抖动：不再补发绝对坐标\n- X/Y 轴独立反转与独立灵敏度（百分比显示），旧配置自动迁移\n- 新增滑动加速与距离加速开关（手势分类）",
-    "created_at": "2026-09-27T02:12:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36287881951"
-  },
-  {
-    "id": 36287866542,
-    "sha": "db3c4802bd1ce1c8c6dab9cc0683688e72d402d2",
-    "short_sha": "db3c480",
-    "message": "feat: 陀螺仪改为相对增量流并新增分轴灵敏度与触控加速\n\n- 陀螺仪重写：滑动窗口平滑、死区过滤、屏幕旋转轴映射、传感器判空\n- 修复开启陀螺仪后触控无法转视角：捕获态（触控/物理鼠标/手柄）统一走 sendCursorDelta 增量流\n- 修复关闭陀螺仪时视角大幅抖动：不再补发绝对坐标\n- X/Y 轴独立反转与独立灵敏度（百分比显示），旧配置自动迁移\n- 新增滑动加速与距离加速开关（手势分类）",
-    "created_at": "2026-09-27T02:12:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36287866542"
-  },
-  {
-    "id": 36287647740,
-    "sha": "7540c7bd165b447660d8f9e00e5b696ffaaeee2e",
-    "short_sha": "7540c7b",
-    "message": "fix: 文件列表按名称/大小/时间排序时丢失目录优先分组\n\n最后一次 sort 决定最终顺序，改为先按所选方式排序、再稳定地目录前置，\n保证目录分组在任何排序方式下不被覆盖（192.168.2.8 真机测试发现）",
-    "created_at": "2026-09-27T02:08:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36287647740"
-  },
-  {
-    "id": 36287647650,
-    "sha": "7540c7bd165b447660d8f9e00e5b696ffaaeee2e",
-    "short_sha": "7540c7b",
-    "message": "fix: 文件列表按名称/大小/时间排序时丢失目录优先分组\n\n最后一次 sort 决定最终顺序，改为先按所选方式排序、再稳定地目录前置，\n保证目录分组在任何排序方式下不被覆盖（192.168.2.8 真机测试发现）",
-    "created_at": "2026-09-27T02:08:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36287647650"
-  },
-  {
-    "id": 36287630771,
-    "sha": "7540c7bd165b447660d8f9e00e5b696ffaaeee2e",
-    "short_sha": "7540c7b",
-    "message": "fix: 文件列表按名称/大小/时间排序时丢失目录优先分组\n\n最后一次 sort 决定最终顺序，改为先按所选方式排序、再稳定地目录前置，\n保证目录分组在任何排序方式下不被覆盖（192.168.2.8 真机测试发现）",
-    "created_at": "2026-09-27T02:08:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36287630771"
-  },
-  {
-    "id": 36287630778,
-    "sha": "7540c7bd165b447660d8f9e00e5b696ffaaeee2e",
-    "short_sha": "7540c7b",
-    "message": "fix: 文件列表按名称/大小/时间排序时丢失目录优先分组\n\n最后一次 sort 决定最终顺序，改为先按所选方式排序、再稳定地目录前置，\n保证目录分组在任何排序方式下不被覆盖（192.168.2.8 真机测试发现）",
-    "created_at": "2026-09-27T02:08:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36287630778"
-  },
-  {
-    "id": 36285712297,
-    "sha": "3a9d5d0d30e1020cdde08ff0ebd1bdd314fb7c9d",
-    "short_sha": "3a9d5d0",
-    "message": "fix: EGL 上下文重建后未重传披风纹理，导致切换页面后披风消失",
-    "created_at": "2026-09-27T01:29:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36285712297"
   }
 ]
