@@ -1,402 +1,402 @@
 [
   {
-    "id": 35652840331,
-    "sha": "330c6eae3164df64bdc4828e946a9e62cc5169e4",
-    "short_sha": "330c6ea",
-    "message": "fix(SDL/Controller): Incorrect numbers copy pasted",
-    "created_at": "2026-09-21T20:43:17Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/35652840331"
+    "id": 31539476613,
+    "sha": "186af896ad93a5fd82f2e70f90b0a575d399dafb",
+    "short_sha": "186af89",
+    "message": "[TESTME] fix(forge_installer): Fail to find OK button on install if localized",
+    "created_at": "2026-08-11T21:46:14Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31539476613"
   },
   {
-    "id": 35652828374,
-    "sha": "0f633b1e2cf2c0d8de2c48cfd865e88d0795a9d4",
-    "short_sha": "0f633b1",
-    "message": "fix(SDL/Controller): Incorrect numbers copy pasted",
-    "created_at": "2026-09-21T20:42:34Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/35652828374"
+    "id": 31415130280,
+    "sha": "7881c7362e89fc2165bc428bbd735388aefb1cf8",
+    "short_sha": "7881c73",
+    "message": "change: Replace methods_injector_agent with MioLibPatcher",
+    "created_at": "2026-08-10T16:57:14Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31415130280"
   },
   {
-    "id": 35652774267,
-    "sha": "0f633b1e2cf2c0d8de2c48cfd865e88d0795a9d4",
-    "short_sha": "0f633b1",
-    "message": "fix(SDL/Controller): Incorrect numbers copy pasted",
-    "created_at": "2026-09-21T20:42:34Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/35652774267"
+    "id": 31411606461,
+    "sha": "7881c7362e89fc2165bc428bbd735388aefb1cf8",
+    "short_sha": "7881c73",
+    "message": "change: Replace methods_injector_agent with MioLibPatcher",
+    "created_at": "2026-08-10T16:57:14Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31411606461"
   },
   {
-    "id": 35652635902,
-    "sha": "8d9f8f8f3465b3e58a5f556ef78b807aa95609e5",
-    "short_sha": "8d9f8f8",
-    "message": "fix(SDL/Controller): Use SDL_OpenJoystick/Gamepad for controller detection\n\nPreviously, SDL_Init was used, but people can just init the GAMEPAD and\nJOYSTICK subsystems which disables the mouse+kb emulation without making\nsure anything was there to eat the controller events. This should fix\nthat.",
-    "created_at": "2026-09-21T20:41:13Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/35652635902"
+    "id": 28885239909,
+    "sha": "61cf32ca17a11273529875a40a7d15adf5f7b620",
+    "short_sha": "61cf32c",
+    "message": "fix: #295",
+    "created_at": "2026-07-07T17:19:48Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/28885239909"
   },
   {
-    "id": 35649512419,
-    "sha": "241652f52c5d7ed0d9dc0ad0714f3b301c87bc63",
-    "short_sha": "241652f",
-    "message": "Merge pull request #371 from AngelAuraMC/feat/misc\n\nmisc fixes",
-    "created_at": "2026-09-21T20:11:29Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/35649512419"
+    "id": 26576959685,
+    "sha": "8afa5ec3dae9a851bbc44379f03643534b8c3ebb",
+    "short_sha": "8afa5ec",
+    "message": "mitigation: very old forge will crash trying to load package name starting with \"mod_\"\n\nBecause of crummy regex\nhttps://github.com/MinecraftForge/FML/blob/57be417b7c29bb23e152f400752f68f33115915d/common/cpw/mods/fml/common/Loader.java#L66\nOld forge will incorrectly load \"mod_blahblah/yourclass.class\" while\nexpecting a \"yourclass.class\" because package name started with \"mod_\".\n\nFixes https://github.com/AngelAuraMC/Amethyst-Android/issues/265",
+    "created_at": "2026-05-28T13:14:19Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/26576959685"
   },
   {
-    "id": 35649359200,
-    "sha": "9ab59e6e169606a6d69e3cc67c31a90109515457",
-    "short_sha": "9ab59e6",
-    "message": "Merge pull request #354 from TouchController/feat/ime-clamping\n\nfix(TouchController): add more clamping to IME",
-    "created_at": "2026-09-21T20:10:00Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/35649359200"
+    "id": 26576932740,
+    "sha": "8afa5ec3dae9a851bbc44379f03643534b8c3ebb",
+    "short_sha": "8afa5ec",
+    "message": "mitigation: very old forge will crash trying to load package name starting with \"mod_\"\n\nBecause of crummy regex\nhttps://github.com/MinecraftForge/FML/blob/57be417b7c29bb23e152f400752f68f33115915d/common/cpw/mods/fml/common/Loader.java#L66\nOld forge will incorrectly load \"mod_blahblah/yourclass.class\" while\nexpecting a \"yourclass.class\" because package name started with \"mod_\".\n\nFixes https://github.com/AngelAuraMC/Amethyst-Android/issues/265",
+    "created_at": "2026-05-28T13:14:19Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/26576932740"
   },
   {
-    "id": 35648569939,
-    "sha": "bc0736010be22a9b9beb3e4f7ae7a760942fbfa9",
-    "short_sha": "bc07360",
-    "message": "fix(SDL/Controller): Use SDL_OpenJoystick/Gamepad for controller detection\n\nPreviously, SDL_Init was used, but people can just init the GAMEPAD and\nJOYSTICK subsystems which disables the mouse+kb emulation without making\nsure anything was there to eat the controller events. This should fix\nthat.",
-    "created_at": "2026-09-21T20:02:03Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/35648569939"
+    "id": 26576875822,
+    "sha": "b45e5dd9dfa5dc7c1dc45368e6c36485a5b1e2df",
+    "short_sha": "b45e5dd",
+    "message": "mitigation: very old forge will crash trying to load package name starting with \"mod_\"\n\nBecause of crummy regex\nhttps://github.com/MinecraftForge/FML/blob/57be417b7c29bb23e152f400752f68f33115915d/common/cpw/mods/fml/common/Loader.java#L66\nOld forge will incorrectly load \"mod_blahblah/yourclass.class\" while\nexpecting a \"yourclass.class\" because package name started with \"mod_\".\n\nFixes https://github.com/AngelAuraMC/Amethyst-Android/issues/265",
+    "created_at": "2026-05-28T13:13:11Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/26576875822"
   },
   {
-    "id": 34246796407,
-    "sha": "7d851fba2ff387fdfe622bccf2ea6ad53b01965d",
-    "short_sha": "7d851fb",
-    "message": "fix(MioLibPatcher): Only enable patches if needed",
-    "created_at": "2026-09-08T15:45:00Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/34246796407"
+    "id": 25055894707,
+    "sha": "e2e8292ba122aca468fc77e70f38f83e3ae56555",
+    "short_sha": "e2e8292",
+    "message": "bump: version from 1.1.4 to 1.1.5",
+    "created_at": "2026-04-28T13:32:28Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25055894707"
   },
   {
-    "id": 34236449551,
-    "sha": "0b2949f9d753d598d4aaa1f3fe56d945fe59a4fc",
-    "short_sha": "0b2949f",
-    "message": "fix(MioLibPatcher): Only enable patches if needed",
-    "created_at": "2026-09-08T14:08:01Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/34236449551"
+    "id": 25055869853,
+    "sha": "fcc66daa582c7ed7389a816c460e2326d82a5ed1",
+    "short_sha": "fcc66da",
+    "message": "fix(build): Correct location of local curseforge_key.txt file\n\nRelative path bad, use absolute. It causes issues in gradle vers that\nhave workingDir in caches.",
+    "created_at": "2026-04-28T13:31:59Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25055869853"
   },
   {
-    "id": 34236332505,
-    "sha": "0b2949f9d753d598d4aaa1f3fe56d945fe59a4fc",
-    "short_sha": "0b2949f",
-    "message": "fix(MioLibPatcher): Only enable patches if needed",
-    "created_at": "2026-09-08T14:08:01Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/34236332505"
+    "id": 25055218845,
+    "sha": "b113d9086479b59cc6465c15ccbf1c0968a18e46",
+    "short_sha": "b113d90",
+    "message": "fix(build): Correct location of local curseforge_key.txt file\n\nRelative path bad, use absolute. It causes issues in gradle vers that\nhave workingDir in caches.",
+    "created_at": "2026-04-28T13:19:09Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25055218845"
   },
   {
-    "id": 33927375207,
-    "sha": "3ad1100904fef8e3aaa7f50f1b6a05cef918b29c",
-    "short_sha": "3ad1100",
-    "message": "fix(MobileGL): Define LIBGL_ES properly",
-    "created_at": "2026-09-04T22:53:33Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33927375207"
+    "id": 25003564226,
+    "sha": "1a9a5fa76413ecc60734458989f3b4723a653433",
+    "short_sha": "1a9a5fa",
+    "message": "[revertme] arm64 only builds. fix for MobileGL",
+    "created_at": "2026-04-27T15:18:19Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25003564226"
   },
   {
-    "id": 33927352902,
-    "sha": "61e860faa047cb288f14757e6bb606f27e23898e",
-    "short_sha": "61e860f",
-    "message": "fix(MobileGL): Define LIBGL_ES properly",
-    "created_at": "2026-09-04T22:51:42Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33927352902"
+    "id": 25003344690,
+    "sha": "3de7f1b07335fcdbd2a1f2cfc07399f5ffb78b34",
+    "short_sha": "3de7f1b",
+    "message": "[revertme] arm64 only builds. fix for MobileGL",
+    "created_at": "2026-04-27T15:14:03Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/25003344690"
   },
   {
-    "id": 33927258390,
-    "sha": "61e860faa047cb288f14757e6bb606f27e23898e",
-    "short_sha": "61e860f",
-    "message": "fix(MobileGL): Define LIBGL_ES properly",
-    "created_at": "2026-09-04T22:51:42Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33927258390"
+    "id": 24992672438,
+    "sha": "11831418a32954f6664a0ef4317a76ca2c51c28c",
+    "short_sha": "1183141",
+    "message": "fix(build): Correct location of local curseforge_key.txt file\n\nRelative path bad, use absolute. It causes issues in gradle vers that\nhave workingDir in caches.",
+    "created_at": "2026-04-27T10:56:34Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24992672438"
   },
   {
-    "id": 33906177864,
-    "sha": "cc93cf2626725a53b290b77b9a599e5b6ef58586",
-    "short_sha": "cc93cf2",
-    "message": "fix(README): Bump max supported version to 26.3-snapshot-1\n\nSigned-off-by: tomikun <60690056+alexytomi@users.noreply.github.com>",
-    "created_at": "2026-09-04T18:29:35Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33906177864"
+    "id": 24990549497,
+    "sha": "ee2285ed2168cae2701a23f3262b5b68044e62db",
+    "short_sha": "ee2285e",
+    "message": "bump: version from 1.1.4 to 1.1.5",
+    "created_at": "2026-04-27T10:45:19Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24990549497"
   },
   {
-    "id": 33906159027,
-    "sha": "d7410939dd9d1afa383cbc93e8c8f5e29961f4f0",
-    "short_sha": "d741093",
-    "message": "fix(README): Bump max supported version to 26.3-snapshot-1\n\nSigned-off-by: tomikun <60690056+alexytomi@users.noreply.github.com>",
-    "created_at": "2026-09-04T18:28:54Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33906159027"
+    "id": 24989745900,
+    "sha": "2fe19967dac0b8616f8bd2c1d478c7358b7e2029",
+    "short_sha": "2fe1996",
+    "message": "bump: version from 1.1.4 to 1.1.5",
+    "created_at": "2026-04-27T10:26:34Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24989745900"
   },
   {
-    "id": 33906117152,
-    "sha": "d7410939dd9d1afa383cbc93e8c8f5e29961f4f0",
-    "short_sha": "d741093",
-    "message": "fix(README): Bump max supported version to 26.3-snapshot-1\n\nSigned-off-by: tomikun <60690056+alexytomi@users.noreply.github.com>",
-    "created_at": "2026-09-04T18:28:54Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33906117152"
+    "id": 24957623277,
+    "sha": "09b0f20d045d07aa47f05e95ff704a8bd30778ad",
+    "short_sha": "09b0f20",
+    "message": "bump(MobileGlues): 1.1.5-dev, BGRA Swizzling\n\nFixes rendering for LWJGL3ify\nUses\nhttps://github.com/AngelAuraMC/amethyst-prebuilt-libraries/actions/runs/24894710100",
+    "created_at": "2026-04-26T13:12:49Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24957623277"
   },
   {
-    "id": 33755961472,
-    "sha": "b9ab7ca153240f9930b40dce2ddc887e3165ff20",
-    "short_sha": "b9ab7ca",
-    "message": "change: Define LIBGL_ES 3 for MobileGL-devs renderers",
-    "created_at": "2026-09-03T12:33:53Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33755961472"
+    "id": 24955174699,
+    "sha": "8045422171057a8c3d59e718556a181593a00c08",
+    "short_sha": "8045422",
+    "message": "fix(SDL): Define preferred OpenGL driver\n\nTODO: Detect Angelica versions supporting GLES directly and unset so SDL\ndefaults to it.",
+    "created_at": "2026-04-26T11:09:52Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24955174699"
   },
   {
-    "id": 33735725132,
-    "sha": "d9661c6c265ce147a7eee3e9056bf2f4b31966b4",
-    "short_sha": "d9661c6",
-    "message": "change: Define LIBGL_ES 3 for MobileGL-devs renderers",
-    "created_at": "2026-09-03T08:52:04Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33735725132"
+    "id": 24955053398,
+    "sha": "87481ece59e20d794bee5fa85837ff0f0d096c09",
+    "short_sha": "87481ec",
+    "message": "bump(MobileGlues): 1.1.5-dev, BGRA Swizzling\n\nFixes rendering\nUses\nhttps://github.com/AngelAuraMC/amethyst-prebuilt-libraries/actions/runs/24894710100",
+    "created_at": "2026-04-26T11:03:24Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24955053398"
   },
   {
-    "id": 33727458818,
-    "sha": "ebf74ac33f9e9ff2c4f15a2a837e53b1179cc2b4",
-    "short_sha": "ebf74ac",
-    "message": "Merge pull request #363 from AngelAuraMC/feat/sfpew_angle\n\nregression:  fallback to nsbypass when normal dlopen failed was incorrectly implemented",
-    "created_at": "2026-09-03T07:18:50Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33727458818"
+    "id": 24926961142,
+    "sha": "92f105a05e4de5f1e30db1419fa69bfc1de61c44",
+    "short_sha": "92f105a",
+    "message": "bump: version from 1.1.4 to 1.1.5",
+    "created_at": "2026-04-25T08:39:59Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24926961142"
   },
   {
-    "id": 33727243547,
-    "sha": "72a4c3ca0abda688ec9240382897176d1fb93694",
-    "short_sha": "72a4c3c",
-    "message": "regression: https://github.com/AngelAuraMC/Amethyst-Android/commit/dc0f511add6125f4ae28d71acc7b6e594014837b was incorrectly implemented",
-    "created_at": "2026-09-03T07:14:48Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33727243547"
+    "id": 24926943074,
+    "sha": "dd94a7f2e8e19f22fde523389fe5a9c170fbe3bd",
+    "short_sha": "dd94a7f",
+    "message": "fix(lwjgl): Load pojavexec earlier\n\nFixes 26.2-snapshot-4 crash\n\nWe put System.loadLibrary(\"pojavexec\") in Library.java and Sys.java and\nseperate out GLFW pojavexec init to GLFW static block initializer.\n\nUses\n(3.4.1)\nhttps://github.com/AngelAuraMC/lwjgl3/commit/b84bec48c80f41249ecd0c07cf40f27b71506bd1\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24783965974\n(3.3.3)\nhttps://github.com/AngelAuraMC/lwjgl3/commit/b0ee05e8947598ecc269476401cb1f4e615c4ccc\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24783304994",
+    "created_at": "2026-04-25T08:38:46Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24926943074"
   },
   {
-    "id": 33727141061,
-    "sha": "72a4c3ca0abda688ec9240382897176d1fb93694",
-    "short_sha": "72a4c3c",
-    "message": "regression: https://github.com/AngelAuraMC/Amethyst-Android/commit/dc0f511add6125f4ae28d71acc7b6e594014837b was incorrectly implemented",
-    "created_at": "2026-09-03T07:14:48Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33727141061"
+    "id": 24886618263,
+    "sha": "e676b1ac608372edc5b066565c6cb1269965c73d",
+    "short_sha": "e676b1a",
+    "message": "fix(SDL): Define preferred OpenGL driver\n\nTODO: Detect Angelica versions supporting GLES directly and unset so SDL\ndefaults to it.",
+    "created_at": "2026-04-24T11:14:06Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24886618263"
   },
   {
-    "id": 33726359484,
-    "sha": "9ee2e17b8cad7c170c72c9a512e9e52710cdd1dd",
-    "short_sha": "9ee2e17",
-    "message": "regression: https://github.com/AngelAuraMC/Amethyst-Android/commit/dc0f511add6125f4ae28d71acc7b6e594014837b was incorrectly implemented",
-    "created_at": "2026-09-03T07:05:16Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33726359484"
+    "id": 24841593805,
+    "sha": "1e314a60cfa473aafad23fdd51a7be1f64dc37de",
+    "short_sha": "1e314a6",
+    "message": "rework(SDLActivity): Move initialization to SDLActivity, mSingleton now generic Activity\n\nThis is for LWJGL3ify. They swapped over GLFW with SDL. That includes\nwindow setup. We have to implement that.",
+    "created_at": "2026-04-23T14:43:27Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24841593805"
   },
   {
-    "id": 33724175183,
-    "sha": "fac6af01216aa36d126a7720e18f9ef6098cad42",
-    "short_sha": "fac6af0",
-    "message": "fix: ANGLE switch for MobileGL",
-    "created_at": "2026-09-03T06:38:27Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33724175183"
+    "id": 24841471760,
+    "sha": "091978a8d28d11a06ed24350df7596a9dde23098",
+    "short_sha": "091978a",
+    "message": "rework(SDLActivity): Move initialization to SDLActivity, mSingleton now generic Activity\n\nThis is for LWJGL3ify. They swapped over GLFW with SDL. That includes\nwindow setup. We have to implement that.",
+    "created_at": "2026-04-23T14:36:03Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24841471760"
   },
   {
-    "id": 33673329031,
-    "sha": "34b9903c935eefad2497b9c24629aa4605377893",
-    "short_sha": "34b9903",
-    "message": "REVERTME: MobileGL as a submodule",
-    "created_at": "2026-09-02T19:26:27Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33673329031"
+    "id": 24833934432,
+    "sha": "a3caac05c8b5f88c69843bcfae5e20842047566e",
+    "short_sha": "a3caac0",
+    "message": "rework(SDLActivity): Manual surface init, mSingleton now generic Activity\n\nThis is for LWJGL3ify. They swapped over GLFW with SDL. That includes\nwindow setup. We have to implement that.",
+    "created_at": "2026-04-23T11:58:45Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24833934432"
   },
   {
-    "id": 33664144268,
-    "sha": "f88af743e4127a265d1d36ed63ff39ef991c6966",
-    "short_sha": "f88af74",
-    "message": "Merge pull request #351 from AngelAuraMC/feat/sfpew_angle\n\nfeat(renderers): Add global ANGLE switch, Add Simple FPE Wrapper, Remove Krypton Wrapper",
-    "created_at": "2026-09-02T17:56:16Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33664144268"
+    "id": 24824000218,
+    "sha": "6c661ff8cf337050979709a76baa09eb4de5c984",
+    "short_sha": "6c661ff",
+    "message": "mitigation(lwjgl/3.3.3): Workaround lwjgl-core being overridden, not loading pojavexec\n\nLWJGL3ify overrides Sys, rendering our load call there useless.",
+    "created_at": "2026-04-23T08:00:36Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24824000218"
   },
   {
-    "id": 33637084481,
-    "sha": "b04dfa2ce03036bce93c66fa4b473526ba9f1a06",
-    "short_sha": "b04dfa2",
-    "message": "fix(kopper_zink): Remove libcutils.so from AAR\n\nWe now use nsbypass so it will use the system provided library instead,\njust as mesa intended.",
-    "created_at": "2026-09-02T13:39:32Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33637084481"
+    "id": 24800897576,
+    "sha": "d180ead570e0feaa45f1e1f3d79a26626ba4e1b8",
+    "short_sha": "d180ead",
+    "message": "mitigation(lwjgl/3.3.3): Workaround lwjgl-core being overridden, not loading pojavexec",
+    "created_at": "2026-04-22T20:26:26Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24800897576"
   },
   {
-    "id": 33599084772,
-    "sha": "b343e76846f3e26b578a1743374e00ac300e8c4a",
-    "short_sha": "b343e76",
-    "message": "regression: load_turnip_vulkan returning incorrect when VULKAN_PTR set",
-    "created_at": "2026-09-02T06:29:32Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33599084772"
+    "id": 24796758244,
+    "sha": "b28ce5f3226f6b4af66790323461414e1881844f",
+    "short_sha": "b28ce5f",
+    "message": "bump(SDL): 3.2.22 to 3.4.4\n\nUses\nhttps://github.com/AngelAuraMC/amethyst-prebuilt-libraries/actions/runs/24794713156/\nhttps://github.com/AngelAuraMC/amethyst-prebuilt-libraries/commit/4765f4a95bec7f9daaa7d2a3f4430a6708b17da2\n\nLWJGL3.4.1 SDL binding needs them\n\nHad to modify SDLSurface to be public so we could use it.",
+    "created_at": "2026-04-22T18:52:48Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24796758244"
   },
   {
-    "id": 33591172936,
-    "sha": "6b7bedeb48d371cafbf0de3cbbd42bddc8b3f959",
-    "short_sha": "6b7bede",
-    "message": "remove(Settings/MobileGlues): Multidraw emulation option\n\nI cannot be bothered to add in the benchmarker the plugin has nor the\noptions for it. We're deprecating this soon anyway for MobileGL",
-    "created_at": "2026-09-02T04:32:02Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33591172936"
+    "id": 24785192903,
+    "sha": "8e166a94d4c86705f5f6f25b3edb0a090f7f0c5d",
+    "short_sha": "8e166a9",
+    "message": "fix(lwjgl): Load pojavexec earlier\n\nFixes 26.2-snapshot-4 crash\n\nWe put System.loadLibrary(\"pojavexec\") in Library.java and Sys.java and\nseperate out GLFW pojavexec init to GLFW static block initializer.\n\nUses\n(3.4.1)\nhttps://github.com/AngelAuraMC/lwjgl3/commit/b84bec48c80f41249ecd0c07cf40f27b71506bd1\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24783965974\n(3.3.3)\nhttps://github.com/AngelAuraMC/lwjgl3/commit/b0ee05e8947598ecc269476401cb1f4e615c4ccc\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24783304994",
+    "created_at": "2026-04-22T14:50:54Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24785192903"
   },
   {
-    "id": 33590167478,
-    "sha": "780a53d84dd37eec8e0c9f0e6696d396c490af5e",
-    "short_sha": "780a53d",
-    "message": "remove: FSR setting in MobileGlues\n\nIt does next to nothing visually and has some graphical bugs on some\nadrenos",
-    "created_at": "2026-09-02T04:15:59Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33590167478"
+    "id": 24785086196,
+    "sha": "ec5f0e223afe9b0f8359f866e227803826d97a9d",
+    "short_sha": "ec5f0e2",
+    "message": "fix(lwjgl): Load pojavexec earlier\n\nFixes 26.2-snapshot-4 crash\n\nWe put System.loadLibrary(\"pojavexec\") in Library.java and Sys.java and\nseperate out GLFW pojavexec init to GLFW static block initializer.\n\nUses\n(3.4.1)\nhttps://github.com/AngelAuraMC/lwjgl3/commit/b84bec48c80f41249ecd0c07cf40f27b71506bd1\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24783965974\n(3.3.3)\nhttps://github.com/AngelAuraMC/lwjgl3/commit/b0ee05e8947598ecc269476401cb1f4e615c4ccc\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24783304994",
+    "created_at": "2026-04-22T14:48:50Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24785086196"
   },
   {
-    "id": 33589766441,
-    "sha": "cc4fc5c74dc9730b55fcc52a85705de7fad7be41",
-    "short_sha": "cc4fc5c",
-    "message": "rework: Rewrite Turnip loading to use something more flexible\n\nIn the future, we want to shrink this to one codepath for all renderers.\nNo more using janky renderers.",
-    "created_at": "2026-09-02T04:10:01Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33589766441"
+    "id": 24577820893,
+    "sha": "84761a95a454f482d4df25213fc94982b1247196",
+    "short_sha": "84761a9",
+    "message": "update: LWJGL modules\n\nUses https://github.com/AngelAuraMC/lwjgl3/actions/runs/24576036363 and\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24575981434 for 3.4.1\nand 3.3.3 respectively\n\nLiterally changes nothing for 3.4.1, adds some fixes for 3.3.3\n\n* https://github.com/AngelAuraMC/lwjgl3/pull/2\n* 3.3.3 is now multi-release. This means its more in sync with official\nmojang lwjgl.",
+    "created_at": "2026-04-17T17:20:00Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24577820893"
   },
   {
-    "id": 33589701298,
-    "sha": "aa2927bd335b7eeb4530c34e08bfbe3e7a121855",
-    "short_sha": "aa2927b",
-    "message": "rework: Rewrite Turnip loading to use something more flexible\n\nIn the future, we want to shrink this to one codepath for all renderers.\nNo more using janky renderers.",
-    "created_at": "2026-09-02T04:09:03Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33589701298"
+    "id": 24577800470,
+    "sha": "84761a95a454f482d4df25213fc94982b1247196",
+    "short_sha": "84761a9",
+    "message": "update: LWJGL modules\n\nUses https://github.com/AngelAuraMC/lwjgl3/actions/runs/24576036363 and\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24575981434 for 3.4.1\nand 3.3.3 respectively\n\nLiterally changes nothing for 3.4.1, adds some fixes for 3.3.3\n\n* https://github.com/AngelAuraMC/lwjgl3/pull/2\n* 3.3.3 is now multi-release. This means its more in sync with official\nmojang lwjgl.",
+    "created_at": "2026-04-17T17:20:00Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24577800470"
   },
   {
-    "id": 33588791287,
-    "sha": "92613940f78c0b54b14d507748ece9142481701b",
-    "short_sha": "9261394",
-    "message": "rework: Rewrite Turnip loading to use something more flexible\n\nIn the future, we want to shrink this to one codepath for all renderers.\nNo more using janky renderers.",
-    "created_at": "2026-09-02T03:54:09Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33588791287"
+    "id": 24577700976,
+    "sha": "8f46865bd0b49545744c938aeca65e9d880ba0c4",
+    "short_sha": "8f46865",
+    "message": "update: LWJGL modules\n\nUses https://github.com/AngelAuraMC/lwjgl3/actions/runs/24576036363 and\nhttps://github.com/AngelAuraMC/lwjgl3/actions/runs/24575981434 for 3.4.1\nand 3.3.3 respectively\n\nLiterally changes nothing for 3.4.1, adds some fixes for 3.3.3\n\n* https://github.com/AngelAuraMC/lwjgl3/pull/2\n* 3.3.3 is now multi-release. This means its more in sync with official\nmojang lwjgl.",
+    "created_at": "2026-04-17T17:17:33Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24577700976"
   },
   {
-    "id": 33545505949,
-    "sha": "8ad33bb726eb6b34832c024fe17574de21091cd6",
-    "short_sha": "8ad33bb",
-    "message": "rework: Rewrite Turnip loading to use something more flexible\n\nIn the future, we want to shrink this to one codepath for all renderers.\nNo more using janky renderers.",
-    "created_at": "2026-09-01T18:45:03Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33545505949"
+    "id": 23916569140,
+    "sha": "78465913723d10b1bc3bf1321dcf0a830078e0b6",
+    "short_sha": "7846591",
+    "message": "feat: Download JREs from github\n\nThis should help reduce apk size.\nWe still maintain Java 8 due to reasons.\n\nAll old legacy code for having internal runtimes were not removed\nbecause we have no reason to.",
+    "created_at": "2026-04-02T18:49:51Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23916569140"
   },
   {
-    "id": 33545298243,
-    "sha": "51a47a2c6286e2706f4537cbe99ef8785dfff59f",
-    "short_sha": "51a47a2",
-    "message": "rework: Rewrite Turnip loading to use something more flexible\n\nIn the future, we want to shrink this to one codepath for all renderers.\nNo more using janky renderers.",
-    "created_at": "2026-09-01T18:42:34Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33545298243"
+    "id": 23906355025,
+    "sha": "32d987c1b0f29990477ebc13b172e6ccc2bdd1f1",
+    "short_sha": "32d987c",
+    "message": "feat: Add common sodium fixes\n\nPeople keep asking and asking in the discord and am going insane. Fine,\nhave it.",
+    "created_at": "2026-04-02T14:46:52Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23906355025"
   },
   {
-    "id": 33541280287,
-    "sha": "446bd11feba5e976eb5e5e47b145f04e9063bf45",
-    "short_sha": "446bd11",
-    "message": "rework: Rewrite Turnip loading to use something more flexible\n\nIn the future, we want to shrink this to one codepath for all renderers.\nNo more using janky renderers.",
-    "created_at": "2026-09-01T18:02:07Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33541280287"
+    "id": 23899306428,
+    "sha": "e94a4c89f1584923c8f5f639042bc2bc6f6b4297",
+    "short_sha": "e94a4c8",
+    "message": "feat: Add common sodium fixes\n\nPeople keep asking and asking in the discord and am going insane. Fine,\nhave it.",
+    "created_at": "2026-04-02T11:59:50Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23899306428"
   },
   {
-    "id": 33263235045,
-    "sha": "247d25bd760f7d88fd8dc9ca6370ba1bab9d0025",
-    "short_sha": "247d25b",
-    "message": "more refactoring",
-    "created_at": "2026-08-29T16:31:50Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33263235045"
+    "id": 23893481735,
+    "sha": "055d2989cbce9d812fdd7bf6abb03135d414cb9b",
+    "short_sha": "055d298",
+    "message": "fix(GLFW): Crash when early loading screens are used\n\nOversight on my part and a regression.",
+    "created_at": "2026-04-02T09:20:49Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23893481735"
   },
   {
-    "id": 33245998694,
-    "sha": "6783e4b33a6d9ff423f1995100c50f10bf244ef3",
-    "short_sha": "6783e4b",
-    "message": "glxshim",
-    "created_at": "2026-08-29T09:39:08Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33245998694"
+    "id": 23893471372,
+    "sha": "4f16cc173397c72ac829c6ca806521ede34dd451",
+    "short_sha": "4f16cc1",
+    "message": "fix(GLFW): Crash when early loading screens are used\n\nOversight on my part and a regression.",
+    "created_at": "2026-04-01T16:26:08Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23893471372"
   },
   {
-    "id": 33245990903,
-    "sha": "def0cb4a8064c66e7daf4080114ce1e91bc8e85e",
-    "short_sha": "def0cb4",
-    "message": "glxshim",
-    "created_at": "2026-08-29T09:38:43Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/33245990903"
+    "id": 23859205850,
+    "sha": "4f16cc173397c72ac829c6ca806521ede34dd451",
+    "short_sha": "4f16cc1",
+    "message": "fix(GLFW): Crash when early loading screens are used\n\nOversight on my part and a regression.",
+    "created_at": "2026-04-01T16:26:08Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23859205850"
   },
   {
-    "id": 32975612886,
-    "sha": "e6902399383ed9f10f500ec6e636eb4b8a16d913",
-    "short_sha": "e690239",
-    "message": "fix the rnderer select",
-    "created_at": "2026-08-26T13:40:27Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/32975612886"
+    "id": 23839095661,
+    "sha": "c24f074e2e3d25fcc3e44c2f58ded3e3925dd418",
+    "short_sha": "c24f074",
+    "message": "add(lwjgl): Add lmdb and zstd bindings\n\nVoxy wants them\nUses https://github.com/AngelAuraMC/lwjgl3/actions/runs/23835975342",
+    "created_at": "2026-04-01T08:20:27Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23839095661"
   },
   {
-    "id": 32962290447,
-    "sha": "d643212ee69ab7ced2c24fc9962bf154ac22d49e",
-    "short_sha": "d643212",
-    "message": "i was passing the args in the wrong order am so smart",
-    "created_at": "2026-08-26T11:13:57Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/32962290447"
+    "id": 23839027960,
+    "sha": "6d88860c9423e9ec57214e2252348e78650d00c4",
+    "short_sha": "6d88860",
+    "message": "add(lwjgl): Add lmdb and zstd bindings\n\nVoxy wants them",
+    "created_at": "2026-04-01T08:18:51Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23839027960"
   },
   {
-    "id": 32851309812,
-    "sha": "3b778462103efca3142b0c0b90aed6dc05e18915",
-    "short_sha": "3b77846",
-    "message": "turnip works omgmasodmas",
-    "created_at": "2026-08-25T13:05:33Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/32851309812"
+    "id": 23838959914,
+    "sha": "8c922b0018ee00e67d011fca62096b9dc1b69ca8",
+    "short_sha": "8c922b0",
+    "message": "fix(app): Shortname for app typo!\n\nAccidentally forgot to remove while copy pasting, oops",
+    "created_at": "2026-04-01T06:59:43Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23838959914"
   },
   {
-    "id": 32651382884,
-    "sha": "5d71d89fa382d84af72018fddfdf6e7dadaa903d",
-    "short_sha": "5d71d89",
-    "message": "fix(nsbypass): Add /system_ext/ to permitted_when_isolated_path\n\nSome xiaomi phones load a libmivk.so from there which seem to use a hook\nlike libadrenotools. No clue what its for but the symbols contain\nYuanshen(CN GenshinImpact), Star Rail, ZZZ, and thats all I saw. Found\nVRS in there too. Found this dump that contains those files\nhttps://babadook.keenetic.link/dumps/redmi/mist/-/tree/missi-user-16-BP2A.250605.031.A3-OS3.0.305.0.WPUCNXM-release-keys\n\nGuess its for the screen enhancements stuff in their game ready driver\nstuff.",
-    "created_at": "2026-08-23T16:20:45Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/32651382884"
+    "id": 23838929190,
+    "sha": "89a405e148d3e8f1196bb6d4591259ee496f1549",
+    "short_sha": "89a405e",
+    "message": "add(lwjgl): Add lmdb and zstd bindings\n\nVoxy wants them",
+    "created_at": "2026-04-01T08:14:25Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23838929190"
   },
   {
-    "id": 32645879255,
-    "sha": "37eced30239115c7b464b51359001bf06e3d0d21",
-    "short_sha": "37eced3",
-    "message": "fix: Add gamemode API config",
-    "created_at": "2026-08-23T14:35:00Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/32645879255"
+    "id": 23838869541,
+    "sha": "89a405e148d3e8f1196bb6d4591259ee496f1549",
+    "short_sha": "89a405e",
+    "message": "add(lwjgl): Add lmdb and zstd bindings\n\nVoxy wants them",
+    "created_at": "2026-04-01T08:14:25Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23838869541"
   },
   {
-    "id": 32591212635,
-    "sha": "91e097bcaa16ef83ad5bad6c096e2486b578bee3",
-    "short_sha": "91e097b",
-    "message": "Merge pull request #353 from AngelAuraMC/feat/misc\n\nbump(MioLibPatcher): Fix regression in ASMTransformer",
-    "created_at": "2026-08-22T18:35:57Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/32591212635"
+    "id": 23837749076,
+    "sha": "c5c2ace87e76cfc8c566e423b0f3fe4c1cfb62c4",
+    "short_sha": "c5c2ace",
+    "message": "fix(app): Shortname for app typo!\n\nAccidentally forgot to remove while copy pasting, oops",
+    "created_at": "2026-04-01T07:43:44Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23837749076"
   },
   {
-    "id": 32591197177,
-    "sha": "5a40434ebe252f7c517ce08157d011b35e571c5a",
-    "short_sha": "5a40434",
-    "message": "bump(MioLibPatcher): Fix regression in ASMTransformer",
-    "created_at": "2026-08-22T18:35:04Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/32591197177"
+    "id": 23837729137,
+    "sha": "8c922b0018ee00e67d011fca62096b9dc1b69ca8",
+    "short_sha": "8c922b0",
+    "message": "fix(app): Shortname for app typo!\n\nAccidentally forgot to remove while copy pasting, oops",
+    "created_at": "2026-04-01T06:59:43Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23837729137"
   },
   {
-    "id": 32591174747,
-    "sha": "5a40434ebe252f7c517ce08157d011b35e571c5a",
-    "short_sha": "5a40434",
-    "message": "bump(MioLibPatcher): Fix regression in ASMTransformer",
-    "created_at": "2026-08-22T18:35:04Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/32591174747"
+    "id": 23836116570,
+    "sha": "683cfd8230e309ab9b18b0d5afd9b516807e890e",
+    "short_sha": "683cfd8",
+    "message": "Merge branch 'v3_openjdk' into feat/app_display_name\n\nSigned-off-by: tomikun <60690056+alexytomi@users.noreply.github.com>",
+    "created_at": "2026-04-01T06:56:36Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23836116570"
   },
   {
-    "id": 32567282266,
-    "sha": "70ecf2c0df8b9eec9a0da3c9baf659ec33aac6d7",
-    "short_sha": "70ecf2c",
-    "message": "pain",
-    "created_at": "2026-08-22T10:18:39Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/32567282266"
+    "id": 23836089468,
+    "sha": "287e25b9ba44707e042a794a8c18a134b8744699",
+    "short_sha": "287e25b",
+    "message": "change(app): Add `(Debug)` to app display name if debug build",
+    "created_at": "2026-04-01T06:55:42Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23836089468"
   },
   {
-    "id": 32155235854,
-    "sha": "c1ae6b829f4ce862b95e6127594ec278811a8973",
-    "short_sha": "c1ae6b8",
-    "message": "remove(renderer): Remove SFPEW/System GLES Driver\n\nThe use of SFPEW on System GLES on androids is not well supported.\nUse with MobileGlues always.\n\nMaintain the already made logic just in case it can be used",
-    "created_at": "2026-08-18T15:33:55Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/32155235854"
+    "id": 23831193366,
+    "sha": "34bcb3474bb0ec8a5b15e35f4b02677e8eb865fc",
+    "short_sha": "34bcb34",
+    "message": "fix(gl4es): Remove unused holygl4es libs",
+    "created_at": "2026-04-01T03:57:42Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23831193366"
   },
   {
-    "id": 31927506982,
-    "sha": "e0daa42b4039dfbc5d3bfb9ae767803b2c78a2f8",
-    "short_sha": "e0daa42",
-    "message": "remove(renderer): Krypton Wrapper\n\nSince we have SFPEW now, we can drop gl4es, yayy\n\nReplaces all the old fallback logic to gl4es to instead\nSFPEW/MobileGlues",
-    "created_at": "2026-08-16T04:48:26Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31927506982"
+    "id": 23831190745,
+    "sha": "f9482747756c0c9c53c59671c16c1b02cd99b9ee",
+    "short_sha": "f948274",
+    "message": "fix(gl4es): Remove unused holygl4es libs",
+    "created_at": "2026-04-01T03:57:17Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23831190745"
   },
   {
-    "id": 31926805288,
-    "sha": "96f7f2abc56fcd478febdb59783efb70f2d233ed",
-    "short_sha": "96f7f2a",
-    "message": "remove(renderer): Krypton Wrapper\n\nSince we have SFPEW now, we can drop gl4es, yayy\n\nReplaces all the old fallback logic to gl4es to instead\nSFPEW/MobileGlues",
-    "created_at": "2026-08-16T04:30:12Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31926805288"
+    "id": 23831186943,
+    "sha": "f9482747756c0c9c53c59671c16c1b02cd99b9ee",
+    "short_sha": "f948274",
+    "message": "fix(gl4es): Remove unused holygl4es libs",
+    "created_at": "2026-04-01T03:57:17Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/23831186943"
   }
 ]

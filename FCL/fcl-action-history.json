@@ -1,5 +1,13 @@
 [
   {
+    "id": 36512261623,
+    "sha": "41c1b97990d92be41f62170e30861b4175724acf",
+    "short_sha": "41c1b97",
+    "message": "docs: 优化 ISSUE_TEMPLATE——修正标签引用为实际存在的 bug/错误 与 enhancement/增强（原标签不存在打不上标签）、修 bata 拼写、版本占位符 1.0.1→1.3.3.5；bug 模板新增必填问题类型下拉（含联机/控件等领域）、设备信息补 CPU 架构示例、Java 说明改为内置 Java 8/17/21/25、渲染器字段列内置渲染器及版本上限、游戏崩溃报告引导至 FCL/log 的 latest_game.log 及崩溃界面分享/上传日志；feature 模板补搜索重复勾选与可选设想方案字段",
+    "created_at": "2026-09-29T02:21:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36512261623"
+  },
+  {
     "id": 36379750931,
     "sha": "ad8fc5624e386ba7e608d657c127fbdeb1e981c8",
     "short_sha": "ad8fc56",
@@ -390,13 +398,5 @@
     "message": "fix: 外置鼠标视角链路改浮点游标，消除整数截断导致的过慢/顿挫\n\n捕获事件的相对位移常为亚像素值，(int) 截断把小位移整批吞成 0，表现为部分设备视角过慢、有顿挫延迟感；缩放（scaleFactor<1）与 FORCE_RESOLUTION 路径二次截断进一步放大。现以亚像素余数累积器 + 浮点游标直推 native（sendCursorPos 本为 float），int 仅用于 menu 指针状态同步",
     "created_at": "2026-09-27T06:09:26Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36299389731"
-  },
-  {
-    "id": 36294690362,
-    "sha": "39ab34999a070067b782c3b148812b9eedadc07e",
-    "short_sha": "39ab349",
-    "message": "fix: 启动进度恢复为任务列表阶段展示，修复检查弹窗取消后启动弹窗卡住\n\n- TaskListPane 新增纯展示模式：按传入阶段列表预生成阶段行，\n  attachExecutor 转发桥接执行器事件；任务名映射链抽为 applyTaskName 共享\n- TaskDialog 新增 setStages/beginStage/succeedStage/failStage；\n  setExecutor 检测到展示模式列表时转发而非重建，安装器流程行为不变\n- LauncherHelper 以与原 withStagesHint 一致的六个阶段 key 驱动阶段行，\n  进入下一阶段时前一阶段打勾，成功收尾与失败分别标记\n- launch() 的 CancellationException 分支幂等关闭启动弹窗：经检查弹窗\n  取消时 Job 未真正 cancel，原实现无人关闭弹窗导致其卡在屏幕上\n- 设备实测：阶段列表随协程推进打勾；模组不兼容弹窗点取消后全部弹窗\n  关闭且启动中止，点无视风险则正常启动",
-    "created_at": "2026-09-27T04:24:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36294690362"
   }
 ]
