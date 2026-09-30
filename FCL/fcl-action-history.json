@@ -1,402 +1,402 @@
 [
   {
-    "id": 36655673923,
-    "sha": "b162aaac005332a3bfe1ddce88eda532dc444381",
-    "short_sha": "b162aaa",
-    "message": "1.3.3.6",
-    "created_at": "2026-09-30T01:32:59Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36655673923"
+    "id": 33972746203,
+    "sha": "c05ef56b790bf2beb4e0802436b95abff2a9ec7f",
+    "short_sha": "c05ef56",
+    "message": "refactor: 皮肤 3D 预览重构：GLTF 模型 + 烘焙动画 + 体素化第二层\n\n- 新增 GltfModel/GltfPlayerModel/Quat：加载玩家 GLTF 模型（无蒙皮刚体层级），预缩放为像素单位、居中，烘焙 clip LINEAR 采样驱动动画\n- 新增 SolidSkinLayer 体素化第二层（3D Skin Layers 式逐像素立方体 + 方向光照），SkinViewer 以 TextureView + EGL 独立线程渲染\n- 动画选择弹窗与 DataStore 持久化恢复，SkinAnimations 条目即模型内 clip 名，未知 id 回退待机\n- 模型资产来自 Modrinth App (modrinth/code packages/assets/models，GPL-3.0)",
+    "created_at": "2026-09-05T14:21:19Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33972746203"
   },
   {
-    "id": 36655674038,
-    "sha": "b162aaac005332a3bfe1ddce88eda532dc444381",
-    "short_sha": "b162aaa",
-    "message": "1.3.3.6",
-    "created_at": "2026-09-30T01:32:59Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36655674038"
+    "id": 33963483108,
+    "sha": "a5c5b88a51d136ea9e28fff05beef217ccb8cd27",
+    "short_sha": "a5c5b88",
+    "message": "fix: SDL_OPENGL_LIBRARY 改用渲染器 GL 库 so 绝对路径（renderer.getGlName），替换无效的渲染器 id",
+    "created_at": "2026-09-05T11:22:43Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33963483108"
   },
   {
-    "id": 36655674216,
-    "sha": "b162aaac005332a3bfe1ddce88eda532dc444381",
-    "short_sha": "b162aaa",
-    "message": "1.3.3.6",
-    "created_at": "2026-09-30T01:32:59Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36655674216"
+    "id": 33963431584,
+    "sha": "a5c5b88a51d136ea9e28fff05beef217ccb8cd27",
+    "short_sha": "a5c5b88",
+    "message": "fix: SDL_OPENGL_LIBRARY 改用渲染器 GL 库 so 绝对路径（renderer.getGlName），替换无效的渲染器 id",
+    "created_at": "2026-09-05T11:22:43Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33963431584"
   },
   {
-    "id": 36512261623,
-    "sha": "41c1b97990d92be41f62170e30861b4175724acf",
-    "short_sha": "41c1b97",
-    "message": "docs: 优化 ISSUE_TEMPLATE——修正标签引用为实际存在的 bug/错误 与 enhancement/增强（原标签不存在打不上标签）、修 bata 拼写、版本占位符 1.0.1→1.3.3.5；bug 模板新增必填问题类型下拉（含联机/控件等领域）、设备信息补 CPU 架构示例、Java 说明改为内置 Java 8/17/21/25、渲染器字段列内置渲染器及版本上限、游戏崩溃报告引导至 FCL/log 的 latest_game.log 及崩溃界面分享/上传日志；feature 模板补搜索重复勾选与可选设想方案字段",
-    "created_at": "2026-09-29T02:21:54Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36512261623"
+    "id": 33961540098,
+    "sha": "84e002b3c6ce4255a28111ab4104420b7607bc76",
+    "short_sha": "84e002b",
+    "message": "feat: 桥接 SDL 原生消息框到 JVMActivity（实现 Zalith 133a1e52）\n\nSDL 原生层 Android_JNI_ShowMessageBox 会在宿主对象的运行时类上按名查找\nmessageboxShowMessageBox；JVMActivity 非 SDLActivity 子类，查找失败后带着\npending 异常继续 CallIntMethod 触发 JniAbort 崩溃。以 @Keep 标注同名同签名\n实例方法桥接到 SDLActivity 的静态 MD3 对话框实现，阻塞游戏线程直至用户选择",
+    "created_at": "2026-09-05T09:04:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33961540098"
   },
   {
-    "id": 36379750931,
-    "sha": "ad8fc5624e386ba7e608d657c127fbdeb1e981c8",
-    "short_sha": "ad8fc56",
-    "message": "fix: 控件组绑定对话框补取消按钮，合并按钮按入口能力显示\n\n- 按键绑定控件组对话框原先只有“确定”一个出口，打开后无法反悔，只能把当前选择写入绑定；\n  补取消按钮\n- 合并按钮对未实现 onMergeToGroup 的入口（新建控件组）点击后无任何效果：Callback 新增\n  supportsMerge 能力声明，对话框据此显示或隐藏合并按钮；编辑已有组时仍提供合并",
-    "created_at": "2026-09-28T04:55:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379750931"
+    "id": 33949848919,
+    "sha": "5e2a474d7859724dc53b20e22620a1df37c1d2a6",
+    "short_sha": "5e2a474",
+    "message": "feat: 新增飞行/潜行/游泳动画（skinview3d 公式移植）\n\n- Flying：玩家绕 X 轴俯身至水平并展开双臂（PlayerModel 新增 rootRotationX，\n  resetJoints 同步重置）；鞘翅网格未移植，姿态部分完整\n- Crouch：身体前倾下蹲、头部下移、手臂前伸、双腿后移、披风压低，\n  位置公式换算到玩家根坐标系；保留 showProgress/runOnce 参数\n- Swim：手臂四元数关键帧 slerp 插值（内置 Quat：轴角构造/Hamilton 乘法/\n  短路径 slerp/Rx·Ry·Rz 欧拉提取），入水下潜与双腿打水公式逐行移植\n- 动画切换弹窗新增飞行/游泳/潜行三项，字符串同步 10 个语言目录",
+    "created_at": "2026-09-05T06:25:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33949848919"
   },
   {
-    "id": 36379750947,
-    "sha": "ad8fc5624e386ba7e608d657c127fbdeb1e981c8",
-    "short_sha": "ad8fc56",
-    "message": "fix: 控件组绑定对话框补取消按钮，合并按钮按入口能力显示\n\n- 按键绑定控件组对话框原先只有“确定”一个出口，打开后无法反悔，只能把当前选择写入绑定；\n  补取消按钮\n- 合并按钮对未实现 onMergeToGroup 的入口（新建控件组）点击后无任何效果：Callback 新增\n  supportsMerge 能力声明，对话框据此显示或隐藏合并按钮；编辑已有组时仍提供合并",
-    "created_at": "2026-09-28T04:55:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379750947"
+    "id": 33948898927,
+    "sha": "89163ab5327f536f3e16261962b815608fe1bf94",
+    "short_sha": "89163ab",
+    "message": "皮肤 3D 预览重构：TextureView + Kotlin + GLES 2.0，新增动画系统与第二层轮廓挤出 (#1803)\n\n* fix: 修复右菜单隐藏时切回主页皮肤预览宽度归零而消失\n\n* refactor: 皮肤模型渲染重构为 TextureView + GLES 2.0（skinview3d 蓝本）\n\n- 新增 com.mio.skin：SkinViewer（TextureView+EGL14+Choreographer 渲染线程）、\n  SkinRenderer（ES2 shader）、PlayerModel/BoxMesh（部件几何与标准盒式 UV）、\n  WalkingAnimation（腿臂摆动/头部摆动/披风摆动）\n- 删除旧 fcllibrary.skin 包（GLSurfaceView + ES1 固定管线，23 个 Java 文件）\n- MainUI 的 fakefx textureProperty 绑定改为 ObjectBinding + InvalidationListener，\n  addListener 后主动 get() 同步当前值；updateTexture 同步 texture 字段，\n  避免页面重进时皮肤退回默认\n- EGL context 重建时归零 VBO/纹理 id 强制重传，修复切页后模型消失\n- 第二层（overlay）几何与 UV 尺寸分离，修复第二层采到其他部位色块\n\n* feat: 皮肤预览支持多个 skinview3d 动画，双击模型弹出窗口切换\n\n- 新增 PlayerAnimation 基类（update(player, dt) 无状态语义，与 skinview3d 一致）\n  及待机/奔跑/挥手/挥击动画，Walking 重构到基类；公式逐行对照 animation.ts\n- PlayerModel 增加可复位部件位置与整体变换（root 平移/倾斜，奔跑的跳跃躲闪），\n  新增 resetJoints() 供切换动画时恢复姿态\n- SkinRenderer.playAnimation() 切换动画并重置姿态与进度\n- SkinViewer 新增双击检测（300ms + touch slop），AnimationDialog 卡片式列表\n  标记当前动画（主题色高亮 + 对勾），亮暗模式自适应（文字默认色、卡片背景\n  以 dialog_background 为基准混合）\n- 动画名与标题字符串同步 10 个语言目录\n\n* feat: 第二层皮肤轮廓挤出，增强 3D 立体效果（参考 3d-Skin-Layers）\n\n- 新增 OverlayExtrusion：遍历第二层 UV 区像素，为边缘不透明像素（四邻透明）\n  生成从第二层表面到第一层表面的正交直壁侧壁，UV 指向像素中心取临近色块\n- 挤出网格挂到所属部件，在第二层网格同矩阵下绘制（独立绘制会错位到原点）\n- 皮肤更新与 slim 切换时用缓存的皮肤像素重建；context 重建随 resetGpuResources 失效重传\n- 片元着色器新增 uShade 亮度系数，挤出侧壁以 0.8 背光渲染，模拟方向光照增强立体感\n\n* fix: 修复启动时主界面皮肤显示为默认的覆盖竞态\n\n皮肤异步加载的完成回调在后台线程执行 updateTexture，而页面 attach 的重喂\n在主线程读 texture 字段后发兜底任务；attach 的读旧值→post 插入后台回调的\n写→post 之间时，默认皮肤兜底任务会排在真皮肤任务之后执行，终态被覆盖。\n渲染线程 onSurfaceCreated 本就从 texture 字段重建纹理，彻底移除 attach 重喂。\n\n* optimize: 皮肤预览渲染帧率上限锁定 60fps\n\nChoreographer 帧回调加 16ms 帧间隔节流，高刷新率屏幕（90/120Hz）下不再\n随 vsync 满帧渲染；动画时长按实际渲染帧间隔计算，节流不影响动画速度\n\n* style: 皮肤渲染相关代码 IDE 格式化\n\n长行拆分、import 排序、catch 参数改用未命名占位、XML 属性排序、\nOverlayExtrusion 构造参数直接声明为属性，无行为变更",
+    "created_at": "2026-09-05T06:05:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33948898927"
   },
   {
-    "id": 36379746989,
-    "sha": "ad8fc5624e386ba7e608d657c127fbdeb1e981c8",
-    "short_sha": "ad8fc56",
-    "message": "fix: 控件组绑定对话框补取消按钮，合并按钮按入口能力显示\n\n- 按键绑定控件组对话框原先只有“确定”一个出口，打开后无法反悔，只能把当前选择写入绑定；\n  补取消按钮\n- 合并按钮对未实现 onMergeToGroup 的入口（新建控件组）点击后无任何效果：Callback 新增\n  supportsMerge 能力声明，对话框据此显示或隐藏合并按钮；编辑已有组时仍提供合并",
-    "created_at": "2026-09-28T04:55:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379746989"
+    "id": 33948843491,
+    "sha": "4e975e638843b8df4ba2af66104ebc7a2636e70c",
+    "short_sha": "4e975e6",
+    "message": "style: 皮肤渲染相关代码 IDE 格式化\n\n长行拆分、import 排序、catch 参数改用未命名占位、XML 属性排序、\nOverlayExtrusion 构造参数直接声明为属性，无行为变更",
+    "created_at": "2026-09-05T06:03:09Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33948843491"
   },
   {
-    "id": 36379746994,
-    "sha": "ad8fc5624e386ba7e608d657c127fbdeb1e981c8",
-    "short_sha": "ad8fc56",
-    "message": "fix: 控件组绑定对话框补取消按钮，合并按钮按入口能力显示\n\n- 按键绑定控件组对话框原先只有“确定”一个出口，打开后无法反悔，只能把当前选择写入绑定；\n  补取消按钮\n- 合并按钮对未实现 onMergeToGroup 的入口（新建控件组）点击后无任何效果：Callback 新增\n  supportsMerge 能力声明，对话框据此显示或隐藏合并按钮；编辑已有组时仍提供合并",
-    "created_at": "2026-09-28T04:55:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379746994"
+    "id": 33948841140,
+    "sha": "4e975e638843b8df4ba2af66104ebc7a2636e70c",
+    "short_sha": "4e975e6",
+    "message": "style: 皮肤渲染相关代码 IDE 格式化\n\n长行拆分、import 排序、catch 参数改用未命名占位、XML 属性排序、\nOverlayExtrusion 构造参数直接声明为属性，无行为变更",
+    "created_at": "2026-09-05T06:03:09Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33948841140"
   },
   {
-    "id": 36379675752,
-    "sha": "d96f1f2da1bd9dc3d647644895d9f9ffdc8e248e",
-    "short_sha": "d96f1f2",
-    "message": "fix: 单选的文件选择模式不再提供批量操作入口\n\n批量菜单的“全选”会把当前目录全部文件塞进选择结果，确认后向调用方返回多个路径，\n而 launchSingleSelection 的调用方按单选契约只取首个路径。改为单选的文件选择模式下\n不显示批量入口，多选模式与浏览模式不受影响",
-    "created_at": "2026-09-28T04:54:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379675752"
+    "id": 33948420474,
+    "sha": "2ebd084dcf0ef41ec71e38bbb58e51e17278f8e3",
+    "short_sha": "2ebd084",
+    "message": "optimize: 皮肤预览渲染帧率上限锁定 60fps\n\nChoreographer 帧回调加 16ms 帧间隔节流，高刷新率屏幕（90/120Hz）下不再\n随 vsync 满帧渲染；动画时长按实际渲染帧间隔计算，节流不影响动画速度",
+    "created_at": "2026-09-05T05:50:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33948420474"
   },
   {
-    "id": 36379675780,
-    "sha": "d96f1f2da1bd9dc3d647644895d9f9ffdc8e248e",
-    "short_sha": "d96f1f2",
-    "message": "fix: 单选的文件选择模式不再提供批量操作入口\n\n批量菜单的“全选”会把当前目录全部文件塞进选择结果，确认后向调用方返回多个路径，\n而 launchSingleSelection 的调用方按单选契约只取首个路径。改为单选的文件选择模式下\n不显示批量入口，多选模式与浏览模式不受影响",
-    "created_at": "2026-09-28T04:54:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379675780"
+    "id": 33948406525,
+    "sha": "2ebd084dcf0ef41ec71e38bbb58e51e17278f8e3",
+    "short_sha": "2ebd084",
+    "message": "optimize: 皮肤预览渲染帧率上限锁定 60fps\n\nChoreographer 帧回调加 16ms 帧间隔节流，高刷新率屏幕（90/120Hz）下不再\n随 vsync 满帧渲染；动画时长按实际渲染帧间隔计算，节流不影响动画速度",
+    "created_at": "2026-09-05T05:50:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33948406525"
   },
   {
-    "id": 36379671660,
-    "sha": "d96f1f2da1bd9dc3d647644895d9f9ffdc8e248e",
-    "short_sha": "d96f1f2",
-    "message": "fix: 单选的文件选择模式不再提供批量操作入口\n\n批量菜单的“全选”会把当前目录全部文件塞进选择结果，确认后向调用方返回多个路径，\n而 launchSingleSelection 的调用方按单选契约只取首个路径。改为单选的文件选择模式下\n不显示批量入口，多选模式与浏览模式不受影响",
-    "created_at": "2026-09-28T04:54:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379671660"
+    "id": 33938185643,
+    "sha": "80ee021d7b5b07246caf59d59c5b3abbb24b7f48",
+    "short_sha": "80ee021",
+    "message": "feat: 控件转换器改用纯 Kotlin 实现并支持导入 ZL2 布局 (#1795)\n\n* feat: 控件转换器改用纯 Kotlin 实现并支持导入 ZL2 布局\n\n以 control-converter 项目的 cc.py 为语义基准，用纯 Kotlin 重写\nFCL 与 ZalithLauncher2 控件布局的双向转换，替代原 libcc.so (Go) JNI\n方案：不再依赖 arm64 ABI，APK 减小约 4.2MB。\n\n- 新增 com.mio.controlconverter 引擎（保序 JSON 树、银行家舍入、\n  Python repr 浮点格式、键码映射、样式/事件/几何/方向控件转换、\n  图层开关状态机、lossless 往返元数据），门面 com.mio.util.LayoutConverter\n  保持旧 JNI 签名（成功返回 null，失败返回错误串）\n- 默认参数与旧 Go JNI 一致（lossless=true，方向控件转 ZL2 摇杆）\n- 布局导入自动识别 ZalithLauncher2 格式并转换后导入（5 语言文案）\n- 删除 jniLibs/arm64-v8a/libcc.so 与 JNI 版 LayoutConverter.java\n- 新增 JVM 单测：与 Go 金样字节级对拍（还原 HTML 转义后）、\n  无损往返、真实布局（仿原神键位 4bf3d919，2.2MB）结构校验与压测\n\n* fix: 布局导入移至后台线程并添加进度提示，避免大文件 ANR\n\n文件选择回调在主线程执行，原实现在主线程做文件拷贝、整文件读入、\nZL2 识别转换与 Gson 完整解析，大布局导入会阻塞主线程引发 ANR。\n改用 Task 任务链在后台完成全部耗时步骤，UI 提示经 thenAcceptAsync/\nwhenComplete 回主线程；导入选完文件后弹 ProgressDialog，结束时关闭。\nZL2 转换失败改用私有异常沿任务链传递，错误文案区分保持不变。\n\n* fix: 金样测试资源禁止换行符转换，修复 Windows 检出后字节级对拍失败\n\n仓库 * text=auto 叠加本机 core.autocrlf=true 时，controlconverter\n金样 JSON 检出为 CRLF，goldenFclToZlByteMatch 字节级对拍失败。\n为该目录添加 -text 规则并重新检出恢复 LF。\n\n* docs: README 同步控件转换器改动\n\n- 功能亮点新增 FCL/ZL2 控制布局互转与 ZL2 布局自动转换导入\n- 依赖区 control-converter 更新为内置纯 Kotlin 实现（cc.py 语义基准），\n  不再打包 libcc.so，转换方向修正为 FCL↔ZL2 双向\n- 中文/英文/俄文三个版本同步",
+    "created_at": "2026-09-05T02:07:40Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33938185643"
   },
   {
-    "id": 36379671709,
-    "sha": "d96f1f2da1bd9dc3d647644895d9f9ffdc8e248e",
-    "short_sha": "d96f1f2",
-    "message": "fix: 单选的文件选择模式不再提供批量操作入口\n\n批量菜单的“全选”会把当前目录全部文件塞进选择结果，确认后向调用方返回多个路径，\n而 launchSingleSelection 的调用方按单选契约只取首个路径。改为单选的文件选择模式下\n不显示批量入口，多选模式与浏览模式不受影响",
-    "created_at": "2026-09-28T04:54:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379671709"
+    "id": 33884233845,
+    "sha": "a768c8eff92f3f0d8e9242cdab63d1227ed74bed",
+    "short_sha": "a768c8e",
+    "message": "test: 新增控制数据序列化回归测试\n\n覆盖手写 JSON 序列化改造：Event/BaseInfo/DirectionEvent/按钮/完整\n控制器往返一致；列表字段保持 JSON 数组、percentage 保持 reference/size\n结构（防回退 TypeToken 解析模式）；assets 默认控制器样例可被手写\nSerializer 完整解析（既有文件格式兼容）；并发 saveToDisk 50 线程\n合并保存不丢数据不崩溃。192.168.2.8 真机 8 用例全部通过。",
+    "created_at": "2026-09-04T14:30:01Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33884233845"
   },
   {
-    "id": 36379620478,
-    "sha": "79beffc1872b0c112bc6680cf0caac350b60b172",
-    "short_sha": "79beffc",
-    "message": "fix: 快捷键按下同样拦截，按键监听态随界面收起退出\n\n- 自定义快捷键此前只在抬起时匹配：按下被转发给游戏而抬起被吞，游戏侧收不到释放会持续\n  按住（F8 等非 ENTER 快捷键即可触发）；改为匹配后按下与抬起一律不再下发\n- 按键监听态原先只有成功捕获按键才清除：点开设置行后不按键、直接收回右菜单或切到后台，\n  监听会一直吞掉所有按键（含菜单视图隐藏后用于唤回菜单的音量键），并把下一个按下的键\n  误绑定为快捷键；改为右菜单收起、菜单视图隐藏、页面暂停三处统一放弃监听",
-    "created_at": "2026-09-28T04:54:01Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379620478"
+    "id": 33882256223,
+    "sha": "4a841cac3c0cc25c080468bd5db36c61dc64d875",
+    "short_sha": "4a841ca",
+    "message": "optimize: Schedulers.io() 线程数 4 调整为 8\n\nIO 线程池被控制布局保存等任务占满时，交互请求排队无反馈，\n增大并发容量降低排队概率。",
+    "created_at": "2026-09-04T14:10:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33882256223"
   },
   {
-    "id": 36379620507,
-    "sha": "79beffc1872b0c112bc6680cf0caac350b60b172",
-    "short_sha": "79beffc",
-    "message": "fix: 快捷键按下同样拦截，按键监听态随界面收起退出\n\n- 自定义快捷键此前只在抬起时匹配：按下被转发给游戏而抬起被吞，游戏侧收不到释放会持续\n  按住（F8 等非 ENTER 快捷键即可触发）；改为匹配后按下与抬起一律不再下发\n- 按键监听态原先只有成功捕获按键才清除：点开设置行后不按键、直接收回右菜单或切到后台，\n  监听会一直吞掉所有按键（含菜单视图隐藏后用于唤回菜单的音量键），并把下一个按下的键\n  误绑定为快捷键；改为右菜单收起、菜单视图隐藏、页面暂停三处统一放弃监听",
-    "created_at": "2026-09-28T04:54:01Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379620507"
+    "id": 33846459863,
+    "sha": "64bbfb4f6d1ff00ca9fd72be9385a64966f25989",
+    "short_sha": "64bbfb4",
+    "message": "fix: RendererEnvDialog 的 FCLSpinner 深色模式文字与对话框背景同色，补充 ALC10 说明\n\n- FCLSpinner 构造时已按 autoTint 着色，setAutoTextTint(false) 不恢复文字色，\n  深色模式下白色对比色与恒浅灰对话框背景（dialog_background）同色看不清；\n  显式使用固定深色 primary_text\n- ALC10 说明改为：修复 1.6.4 Mite 没有声音的问题，同步 9 个语言目录",
+    "created_at": "2026-09-04T06:50:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33846459863"
   },
   {
-    "id": 36379470586,
-    "sha": "45f903d4e0977a22ed74e1a321e1deaa4bdb9da7",
-    "short_sha": "45f903d",
-    "message": "fix: modloader 安装引导改在主线程跳转\n\nawaitChoice 在主线程执行，但返回后调用方恢复在 IO 上下文，跳转版本管理页的界面操作\n（选中 manage 页、切到“游戏”标签页）在后台线程执行会抛 CalledFromWrongThreadException，\n该异常随即被同一函数的兜底 catch 吞掉——用户选择“安装”却照常启动游戏。改为显式切回主\n线程执行跳转，跳转失败同样取消本次启动，不再退化为继续启动",
-    "created_at": "2026-09-28T04:51:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379470586"
+    "id": 33843767727,
+    "sha": "15895e003c4a80d3df00092f9c521714acbbc215",
+    "short_sha": "15895e0",
+    "message": "feat: 渲染器选择对话框改用 RecyclerView 自定义卡片 item，统一行高并新增来源显示（内置/插件名），无版本范围时显示未知",
+    "created_at": "2026-09-04T06:17:24Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33843767727"
   },
   {
-    "id": 36379470575,
-    "sha": "45f903d4e0977a22ed74e1a321e1deaa4bdb9da7",
-    "short_sha": "45f903d",
-    "message": "fix: modloader 安装引导改在主线程跳转\n\nawaitChoice 在主线程执行，但返回后调用方恢复在 IO 上下文，跳转版本管理页的界面操作\n（选中 manage 页、切到“游戏”标签页）在后台线程执行会抛 CalledFromWrongThreadException，\n该异常随即被同一函数的兜底 catch 吞掉——用户选择“安装”却照常启动游戏。改为显式切回主\n线程执行跳转，跳转失败同样取消本次启动，不再退化为继续启动",
-    "created_at": "2026-09-28T04:51:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379470575"
+    "id": 33704920238,
+    "sha": "69107b866afd01f3da237ff78a2940420c4d1ff7",
+    "short_sha": "69107b8",
+    "message": "fix: 检查更新时间戳比较统一秒级精度，修复缓存序列化截断亚秒导致的首次误报",
+    "created_at": "2026-09-03T01:37:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33704920238"
   },
   {
-    "id": 36379402285,
-    "sha": "9374b3c1609528a3333fc7a7a92e73426b82e9a4",
-    "short_sha": "9374b3c",
-    "message": "fix: 深度删除校验待删路径位于共享目录内\n\n库路径、资产 hash 与 assetId 均取自版本 json 与资产索引，属外部数据：携带 .. 或指向\n外部目录时原实现会直接删除共享目录之外的文件或目录。改为删除前对规范路径做目录内断言\n（libraries / assets/indexes / assets/objects / assets/virtual 各自判定），越界一律\n跳过并记日志；清理后收缩空目录同样改按规范路径比较，不越过各自根目录",
-    "created_at": "2026-09-28T04:50:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379402285"
+    "id": 33700369533,
+    "sha": "0f9d117ea50a4bec1307e6edffd3e0328dcafa17",
+    "short_sha": "0f9d117",
+    "message": "Merge branch 'main' into weblate-foldcraftlauncher-fcl",
+    "created_at": "2026-09-03T00:38:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33700369533"
   },
   {
-    "id": 36379402279,
-    "sha": "9374b3c1609528a3333fc7a7a92e73426b82e9a4",
-    "short_sha": "9374b3c",
-    "message": "fix: 深度删除校验待删路径位于共享目录内\n\n库路径、资产 hash 与 assetId 均取自版本 json 与资产索引，属外部数据：携带 .. 或指向\n外部目录时原实现会直接删除共享目录之外的文件或目录。改为删除前对规范路径做目录内断言\n（libraries / assets/indexes / assets/objects / assets/virtual 各自判定），越界一律\n跳过并记日志；清理后收缩空目录同样改按规范路径比较，不越过各自根目录",
-    "created_at": "2026-09-28T04:50:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379402279"
+    "id": 33698990397,
+    "sha": "01575c9dc13888a8730f58e6353a63cf39fe1dfe",
+    "short_sha": "01575c9",
+    "message": "chore(l10n): update Chinese (Traditional Han script) translation\n\nchore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nProgress: 5.0% (66 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-03T00:18:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33698990397"
   },
   {
-    "id": 36379399835,
-    "sha": "9374b3c1609528a3333fc7a7a92e73426b82e9a4",
-    "short_sha": "9374b3c",
-    "message": "fix: 深度删除校验待删路径位于共享目录内\n\n库路径、资产 hash 与 assetId 均取自版本 json 与资产索引，属外部数据：携带 .. 或指向\n外部目录时原实现会直接删除共享目录之外的文件或目录。改为删除前对规范路径做目录内断言\n（libraries / assets/indexes / assets/objects / assets/virtual 各自判定），越界一律\n跳过并记日志；清理后收缩空目录同样改按规范路径比较，不越过各自根目录",
-    "created_at": "2026-09-28T04:50:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379399835"
+    "id": 33698987756,
+    "sha": "01575c9dc13888a8730f58e6353a63cf39fe1dfe",
+    "short_sha": "01575c9",
+    "message": "chore(l10n): update Chinese (Traditional Han script) translation\n\nchore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nProgress: 5.0% (66 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-03T00:18:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33698987756"
   },
   {
-    "id": 36379399702,
-    "sha": "9374b3c1609528a3333fc7a7a92e73426b82e9a4",
-    "short_sha": "9374b3c",
-    "message": "fix: 深度删除校验待删路径位于共享目录内\n\n库路径、资产 hash 与 assetId 均取自版本 json 与资产索引，属外部数据：携带 .. 或指向\n外部目录时原实现会直接删除共享目录之外的文件或目录。改为删除前对规范路径做目录内断言\n（libraries / assets/indexes / assets/objects / assets/virtual 各自判定），越界一律\n跳过并记日志；清理后收缩空目录同样改按规范路径比较，不越过各自根目录",
-    "created_at": "2026-09-28T04:50:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379399702"
+    "id": 33698973670,
+    "sha": "62dfa68b3d9e5e12dccf6a27936081471d8177df",
+    "short_sha": "62dfa68",
+    "message": "1.3.3.0",
+    "created_at": "2026-09-03T00:18:20Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33698973670"
   },
   {
-    "id": 36379344805,
-    "sha": "ea7c18e903042af1873d88d4e0e4d2a4fc595572",
-    "short_sha": "ea7c18e",
-    "message": "fix: Vulkan 检测补建补丁目录，vkshim divisor 特性位按驱动报告值置位\n\n- 检测用的 cacheDir 未经创建即传给 native：驱动补丁文件在该目录生成，目录缺失时\n  打开输出文件直接失败，Turnip 驱动加载必然回落到系统加载器，检测结论与 vkshim\n  门控随之失真\n- vkshim 补写的 divisor features 节点原先把两个特性位无条件置位，而启用驱动不支持的\n  位会让 vkCreateDevice 返回 VK_ERROR_FEATURE_NOT_PRESENT；改为先经\n  vkGetPhysicalDeviceFeatures2 查询驱动报告的支持情况，应用自带节点时同样把不支持的\n  位临时置回（调用后恢复）",
-    "created_at": "2026-09-28T04:49:49Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379344805"
+    "id": 33698973606,
+    "sha": "62dfa68b3d9e5e12dccf6a27936081471d8177df",
+    "short_sha": "62dfa68",
+    "message": "1.3.3.0",
+    "created_at": "2026-09-03T00:18:20Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33698973606"
   },
   {
-    "id": 36379344799,
-    "sha": "ea7c18e903042af1873d88d4e0e4d2a4fc595572",
-    "short_sha": "ea7c18e",
-    "message": "fix: Vulkan 检测补建补丁目录，vkshim divisor 特性位按驱动报告值置位\n\n- 检测用的 cacheDir 未经创建即传给 native：驱动补丁文件在该目录生成，目录缺失时\n  打开输出文件直接失败，Turnip 驱动加载必然回落到系统加载器，检测结论与 vkshim\n  门控随之失真\n- vkshim 补写的 divisor features 节点原先把两个特性位无条件置位，而启用驱动不支持的\n  位会让 vkCreateDevice 返回 VK_ERROR_FEATURE_NOT_PRESENT；改为先经\n  vkGetPhysicalDeviceFeatures2 查询驱动报告的支持情况，应用自带节点时同样把不支持的\n  位临时置回（调用后恢复）",
-    "created_at": "2026-09-28T04:49:49Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379344799"
+    "id": 33637065422,
+    "sha": "c5036dfd92382e624ca739ad5985587d4415ce57",
+    "short_sha": "c5036df",
+    "message": "chore(l10n): update Chinese (Traditional Han script) translation\n\nchore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nProgress: 5.0% (66 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-02T13:39:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33637065422"
   },
   {
-    "id": 36379340799,
-    "sha": "ea7c18e903042af1873d88d4e0e4d2a4fc595572",
-    "short_sha": "ea7c18e",
-    "message": "fix: Vulkan 检测补建补丁目录，vkshim divisor 特性位按驱动报告值置位\n\n- 检测用的 cacheDir 未经创建即传给 native：驱动补丁文件在该目录生成，目录缺失时\n  打开输出文件直接失败，Turnip 驱动加载必然回落到系统加载器，检测结论与 vkshim\n  门控随之失真\n- vkshim 补写的 divisor features 节点原先把两个特性位无条件置位，而启用驱动不支持的\n  位会让 vkCreateDevice 返回 VK_ERROR_FEATURE_NOT_PRESENT；改为先经\n  vkGetPhysicalDeviceFeatures2 查询驱动报告的支持情况，应用自带节点时同样把不支持的\n  位临时置回（调用后恢复）",
-    "created_at": "2026-09-28T04:49:49Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379340799"
+    "id": 33637058856,
+    "sha": "c5036dfd92382e624ca739ad5985587d4415ce57",
+    "short_sha": "c5036df",
+    "message": "chore(l10n): update Chinese (Traditional Han script) translation\n\nchore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nProgress: 5.0% (66 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-02T13:39:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33637058856"
   },
   {
-    "id": 36379340828,
-    "sha": "ea7c18e903042af1873d88d4e0e4d2a4fc595572",
-    "short_sha": "ea7c18e",
-    "message": "fix: Vulkan 检测补建补丁目录，vkshim divisor 特性位按驱动报告值置位\n\n- 检测用的 cacheDir 未经创建即传给 native：驱动补丁文件在该目录生成，目录缺失时\n  打开输出文件直接失败，Turnip 驱动加载必然回落到系统加载器，检测结论与 vkshim\n  门控随之失真\n- vkshim 补写的 divisor features 节点原先把两个特性位无条件置位，而启用驱动不支持的\n  位会让 vkCreateDevice 返回 VK_ERROR_FEATURE_NOT_PRESENT；改为先经\n  vkGetPhysicalDeviceFeatures2 查询驱动报告的支持情况，应用自带节点时同样把不支持的\n  位临时置回（调用后恢复）",
-    "created_at": "2026-09-28T04:49:49Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379340828"
+    "id": 33637030036,
+    "sha": "01f225a91d147154961a64bb4db68df8c8ebaf1f",
+    "short_sha": "01f225a",
+    "message": "fix: 修复下载通知在某些设备上不显示的问题\n\nAndroid 13+ 未授予 POST_NOTIFICATIONS 权限时通知被系统静默丢弃，\n而启动时的授权引导仅提示一次，拒绝后无补救入口；\n现下载开始时检测权限缺失就地发起一次授权请求（每次运行至多一次）。\n通知渠道由 IMPORTANCE_LOW 升级为 DEFAULT（下载开始弹横幅提醒），\n并更换渠道 id、清理旧低重要性渠道。",
+    "created_at": "2026-09-02T13:39:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33637030036"
   },
   {
-    "id": 36327621258,
-    "sha": "ed44953c94eb54b060e9a5e28c4c5f60ecd376f4",
-    "short_sha": "ed44953",
-    "message": "fix: 修复 Modrinth 整合包更新读旧配置 TypeToken 误用 CurseManifest 致 CCE 必然回滚；GameOption 键值表与文件观察者改实例级防跨游戏目录串数据，观察者随监听注册启动，修监听移除比较失效；修 ControlDirectionData.equals 参数类型笔误、InstantTypeAdapter catch 误引外层变量；EventBus 事件日志降 FINE；删 rebaseArgs 孤立死代码；同步源码通读报告遗留项状态",
-    "created_at": "2026-09-27T14:53:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36327621258"
+    "id": 33636920300,
+    "sha": "a81a3bef97238864f46a044aca0aaf0d9381fe34",
+    "short_sha": "a81a3be",
+    "message": "chore(l10n): update Chinese (Traditional Han script) translation\n\nchore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nProgress: 5.0% (66 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-02T13:37:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33636920300"
   },
   {
-    "id": 36327621244,
-    "sha": "ed44953c94eb54b060e9a5e28c4c5f60ecd376f4",
-    "short_sha": "ed44953",
-    "message": "fix: 修复 Modrinth 整合包更新读旧配置 TypeToken 误用 CurseManifest 致 CCE 必然回滚；GameOption 键值表与文件观察者改实例级防跨游戏目录串数据，观察者随监听注册启动，修监听移除比较失效；修 ControlDirectionData.equals 参数类型笔误、InstantTypeAdapter catch 误引外层变量；EventBus 事件日志降 FINE；删 rebaseArgs 孤立死代码；同步源码通读报告遗留项状态",
-    "created_at": "2026-09-27T14:53:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36327621244"
+    "id": 33636914995,
+    "sha": "a81a3bef97238864f46a044aca0aaf0d9381fe34",
+    "short_sha": "a81a3be",
+    "message": "chore(l10n): update Chinese (Traditional Han script) translation\n\nchore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nProgress: 5.0% (66 of 1311 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-02T13:37:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33636914995"
   },
   {
-    "id": 36325825607,
-    "sha": "0ac88547affbc9cf1068e17971d32d0bcbfe55b9",
-    "short_sha": "0ac8854",
-    "message": "refactor: 删除 fakefx 包不可达死代码（113/322 类）\n\n字节码常量池可达性分析：收集全部 Utf8 引用（描述符/签名/注解/Kotlin @Metadata），\n从外部引用根与 androidTest 根做闭包，event、beans/property/adapter、property/adapter、\nutil/converter 四个子包整体不可达，另删 ReadOnlyXxxWrapper、Duration、Pair、FxGson 等散类。\n已排除同名类歧义（util.Pair/fclcore.event.Event/ButtonEventData.Event）、\ncom.sun.javafx.* 反射目标（类不存在且异常被吞）、产物 stale（GameMenu 未重编译）误判。\n\n验证：Zulu17 下 debug/fordebug 主源集与单元测试编译通过；MuMu 模拟器实测\n冷启动、皮肤渲染、1.20.1-Forge 完整启动到主菜单，全程无 ClassNotFoundError。",
-    "created_at": "2026-09-27T14:24:36Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36325825607"
+    "id": 33636885884,
+    "sha": "a24f1e33548d3d70445eef092f36276a83072bc4",
+    "short_sha": "a24f1e3",
+    "message": "fix: 修复下载通知在某些设备上不显示的问题\n\nAndroid 13+ 未授予 POST_NOTIFICATIONS 权限时通知被系统静默丢弃，\n而启动时的授权引导仅提示一次，拒绝后无补救入口；\n现下载开始时检测权限缺失就地发起一次授权请求（每次运行至多一次）。\n通知渠道由 IMPORTANCE_LOW 升级为 DEFAULT（下载开始弹横幅提醒），\n并更换渠道 id、清理旧低重要性渠道。",
+    "created_at": "2026-09-02T13:37:27Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33636885884"
   },
   {
-    "id": 36325825535,
-    "sha": "0ac88547affbc9cf1068e17971d32d0bcbfe55b9",
-    "short_sha": "0ac8854",
-    "message": "refactor: 删除 fakefx 包不可达死代码（113/322 类）\n\n字节码常量池可达性分析：收集全部 Utf8 引用（描述符/签名/注解/Kotlin @Metadata），\n从外部引用根与 androidTest 根做闭包，event、beans/property/adapter、property/adapter、\nutil/converter 四个子包整体不可达，另删 ReadOnlyXxxWrapper、Duration、Pair、FxGson 等散类。\n已排除同名类歧义（util.Pair/fclcore.event.Event/ButtonEventData.Event）、\ncom.sun.javafx.* 反射目标（类不存在且异常被吞）、产物 stale（GameMenu 未重编译）误判。\n\n验证：Zulu17 下 debug/fordebug 主源集与单元测试编译通过；MuMu 模拟器实测\n冷启动、皮肤渲染、1.20.1-Forge 完整启动到主菜单，全程无 ClassNotFoundError。",
-    "created_at": "2026-09-27T14:24:36Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36325825535"
+    "id": 33611984789,
+    "sha": "82a59cafa1c6b3394586289208c35d2a865c3f1b",
+    "short_sha": "82a59ca",
+    "message": "chore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-02T09:02:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33611984789"
   },
   {
-    "id": 36321976701,
-    "sha": "6e993f4e1148255056ce9c0aed892ca544edd4b7",
-    "short_sha": "6e993f4",
-    "message": "fix: 补全 Classic 账户密码重登弹窗修复重登线程永久阻塞；收藏库补 v1→v2 正式迁移替代破坏式重建；修光标 Y 偏移笔误、OAuth 取消标志跨线程可见性、缓存 Storage 并发竞态；删除未使用的帮助文档组件与孤儿布局",
-    "created_at": "2026-09-27T13:15:16Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36321976701"
+    "id": 33611980673,
+    "sha": "82a59cafa1c6b3394586289208c35d2a865c3f1b",
+    "short_sha": "82a59ca",
+    "message": "chore(l10n): add Chinese (Traditional Han script) translation\n\nCo-authored-by: Wu <allen920726@gmail.com>\nLanguage: Chinese (Traditional Han script)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hant/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-09-02T09:02:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33611980673"
   },
   {
-    "id": 36321976691,
-    "sha": "6e993f4e1148255056ce9c0aed892ca544edd4b7",
-    "short_sha": "6e993f4",
-    "message": "fix: 补全 Classic 账户密码重登弹窗修复重登线程永久阻塞；收藏库补 v1→v2 正式迁移替代破坏式重建；修光标 Y 偏移笔误、OAuth 取消标志跨线程可见性、缓存 Storage 并发竞态；删除未使用的帮助文档组件与孤儿布局",
-    "created_at": "2026-09-27T13:15:16Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36321976691"
+    "id": 33591635497,
+    "sha": "9bb215af307e4032afa0604a88d23b25e134b9bd",
+    "short_sha": "9bb215a",
+    "message": "docs: README 同步控件转换器改动\n\n- 功能亮点新增 FCL/ZL2 控制布局互转与 ZL2 布局自动转换导入\n- 依赖区 control-converter 更新为内置纯 Kotlin 实现（cc.py 语义基准），\n  不再打包 libcc.so，转换方向修正为 FCL↔ZL2 双向\n- 中文/英文/俄文三个版本同步",
+    "created_at": "2026-09-02T04:39:18Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33591635497"
   },
   {
-    "id": 36318392183,
-    "sha": "e8e909cb78d728ac2d222fdb6c00da3d7b3cf9b5",
-    "short_sha": "e8e909c",
-    "message": "refactor: lwjgl3ify 补丁改为启动时内存合并，不再改写版本 JSON",
-    "created_at": "2026-09-27T12:04:09Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36318392183"
+    "id": 33591183295,
+    "sha": "7303617a1862b33696efeb8986f20dad331746c8",
+    "short_sha": "7303617",
+    "message": "fix: 金样测试资源禁止换行符转换，修复 Windows 检出后字节级对拍失败\n\n仓库 * text=auto 叠加本机 core.autocrlf=true 时，controlconverter\n金样 JSON 检出为 CRLF，goldenFclToZlByteMatch 字节级对拍失败。\n为该目录添加 -text 规则并重新检出恢复 LF。",
+    "created_at": "2026-09-02T04:31:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33591183295"
   },
   {
-    "id": 36318392200,
-    "sha": "e8e909cb78d728ac2d222fdb6c00da3d7b3cf9b5",
-    "short_sha": "e8e909c",
-    "message": "refactor: lwjgl3ify 补丁改为启动时内存合并，不再改写版本 JSON",
-    "created_at": "2026-09-27T12:04:09Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36318392200"
+    "id": 33591005065,
+    "sha": "c20412629e21b5deb5c6638a1c1e2a609aaad299",
+    "short_sha": "c204126",
+    "message": "fix: 布局导入移至后台线程并添加进度提示，避免大文件 ANR\n\n文件选择回调在主线程执行，原实现在主线程做文件拷贝、整文件读入、\nZL2 识别转换与 Gson 完整解析，大布局导入会阻塞主线程引发 ANR。\n改用 Task 任务链在后台完成全部耗时步骤，UI 提示经 thenAcceptAsync/\nwhenComplete 回主线程；导入选完文件后弹 ProgressDialog，结束时关闭。\nZL2 转换失败改用私有异常沿任务链传递，错误文案区分保持不变。",
+    "created_at": "2026-09-02T04:27:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33591005065"
   },
   {
-    "id": 36317188576,
-    "sha": "0013cd947a3cc9f0a7e1afa481446a7cdb624761",
-    "short_sha": "0013cd9",
-    "message": "fix: 仅吸附相邻按键时同边对齐只对另一轴相邻目标开放（不重叠且间隔≤2×阈值），修复无法与同一按钮横纵两轴同时对齐；对角/远离/掠过行为不变",
-    "created_at": "2026-09-27T11:35:56Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36317188576"
+    "id": 33525432899,
+    "sha": "0bd9db994c6e0e647cd4e9a557e1bb67204be336",
+    "short_sha": "0bd9db9",
+    "message": "Update MioLibPatcher.jar",
+    "created_at": "2026-09-01T15:22:45Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33525432899"
   },
   {
-    "id": 36317188587,
-    "sha": "0013cd947a3cc9f0a7e1afa481446a7cdb624761",
-    "short_sha": "0013cd9",
-    "message": "fix: 仅吸附相邻按键时同边对齐只对另一轴相邻目标开放（不重叠且间隔≤2×阈值），修复无法与同一按钮横纵两轴同时对齐；对角/远离/掠过行为不变",
-    "created_at": "2026-09-27T11:35:56Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36317188587"
+    "id": 33513539125,
+    "sha": "4369ac66cd7e383cdf2e7c858f091193ac18e276",
+    "short_sha": "4369ac6",
+    "message": "optimize: 下载连接超时从 8 秒调整为 10 秒",
+    "created_at": "2026-09-01T13:17:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/33513539125"
   },
   {
-    "id": 36315834614,
-    "sha": "0a06e7f85f62891804f71a925b4c22c6a8fea136",
-    "short_sha": "0a06e7f",
-    "message": "style: 修复 selectViewGroup/openEditDialog 方法签名后缺少换行导致的 checkstyle 违规",
-    "created_at": "2026-09-27T11:28:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315834614"
+    "id": 30886670011,
+    "sha": "a83767f8e84d60950679d533ae21565c99fa8002",
+    "short_sha": "a83767f",
+    "message": "refactor: 迁移自动清理缓存逻辑至启动页并优化代码实现\n\n1. 将自动清理缓存的逻辑从 `LauncherSettingPage` 迁移至 `SplashActivity`，确保应用启动时自动触发检查\n2. 移除 `LauncherSettingPage` 中冗余的缓存时间管理方法及 `ONE_DAY` 常量\n3. 在 `SplashActivity` 中使用 Kotlin KTX 简化 SharedPreferences 的数据更新操作\n4. 统一优化了 `SplashActivity` 内部分方法的代码格式与换行逻辑，提升可读性",
+    "created_at": "2026-08-04T07:08:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30886670011"
   },
   {
-    "id": 36315834583,
-    "sha": "0a06e7f85f62891804f71a925b4c22c6a8fea136",
-    "short_sha": "0a06e7f",
-    "message": "style: 修复 selectViewGroup/openEditDialog 方法签名后缺少换行导致的 checkstyle 违规",
-    "created_at": "2026-09-27T11:28:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315834583"
+    "id": 30885322686,
+    "sha": "4f490dbd230cde8bf1724b48211a6d4e66946257",
+    "short_sha": "4f490db",
+    "message": "feat: 允许添加-Dmiolibpatcher.alc10=true参数修复低版本没有声音的问题",
+    "created_at": "2026-08-04T06:48:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30885322686"
   },
   {
-    "id": 36315832488,
-    "sha": "0a06e7f85f62891804f71a925b4c22c6a8fea136",
-    "short_sha": "0a06e7f",
-    "message": "style: 修复 selectViewGroup/openEditDialog 方法签名后缺少换行导致的 checkstyle 违规",
-    "created_at": "2026-09-27T11:28:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315832488"
+    "id": 30883249526,
+    "sha": "04474f67e5bfdf0d90052c166f15f385e0448fcb",
+    "short_sha": "04474f6",
+    "message": "fix: 修复26.2+退出游戏卡住的问题",
+    "created_at": "2026-08-04T06:13:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30883249526"
   },
   {
-    "id": 36315832594,
-    "sha": "0a06e7f85f62891804f71a925b4c22c6a8fea136",
-    "short_sha": "0a06e7f",
-    "message": "style: 修复 selectViewGroup/openEditDialog 方法签名后缺少换行导致的 checkstyle 违规",
-    "created_at": "2026-09-27T11:28:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315832594"
+    "id": 30873894828,
+    "sha": "8f6a07b6099d5a085b870e99cc4e061e4547efb7",
+    "short_sha": "8f6a07b",
+    "message": "Update MioLaunchWrapper.jar",
+    "created_at": "2026-08-04T03:08:32Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30873894828"
   },
   {
-    "id": 36315139785,
-    "sha": "feb51a55e80711873866631b10dfe5113c959589",
-    "short_sha": "feb51a5",
-    "message": "feat: 启动器设置新增\"更新内容\"入口，可重复查看当前版本更新说明 (#1856)；检查更新与更新内容拉取改同步 CAS 防抖，修复快速连点重复触发",
-    "created_at": "2026-09-27T10:27:56Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315139785"
+    "id": 30836763922,
+    "sha": "5206b2c23f4d16cb722c8df02254493f042a006a",
+    "short_sha": "5206b2c",
+    "message": "feat(review): 下载域还原批3 视觉对齐\n\n- 间距全面回 10dp 网格（逐页对齐旧版 XML 实测值，含方案两处笔误更正）\n- 按压反馈统一 Sink；整合包 Tab 按钮顺序还原；website 图标换 jump_24\n- date/state 字号 11→12sp；Spacer width/height 笔误修复\n- 方案附录 A 核销表全部打勾，下载域还原完成",
+    "created_at": "2026-08-03T17:26:25Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30836763922"
   },
   {
-    "id": 36315066723,
-    "sha": "a575ea0bcfc478c432da1247a56759e7be370105",
-    "short_sha": "a575ea0",
-    "message": "feat: 控件编辑跨组能力——参考组控件可直接编辑(归属组解析)、编辑栏新增跨组复制/移动、控件组可合并到其他组、绑定控件组支持按下显示/隐藏而非仅切换 (#1763)",
-    "created_at": "2026-09-27T11:06:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315066723"
+    "id": 30834560290,
+    "sha": "d4063895adfd1ad8410d4308a3739fd6c66ac4a6",
+    "short_sha": "d406389",
+    "message": "feat(review): 下载域还原批2 交互还原\n\n- FCLCollapsingBar 折叠顶栏（scroll|enterAlways|snap 等价物），搜索页分页栏/游戏版本页过滤栏接入\n- IME 搜索键 + 中英文 hint + 名称 label 还原；下载确认页四按钮一行/依赖区单容器\n- 游戏版本页顶栏单行；save 按钮移入卡片",
+    "created_at": "2026-08-03T16:57:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30834560290"
   },
   {
-    "id": 36315037440,
-    "sha": "a575ea0bcfc478c432da1247a56759e7be370105",
-    "short_sha": "a575ea0",
-    "message": "feat: 控件编辑跨组能力——参考组控件可直接编辑(归属组解析)、编辑栏新增跨组复制/移动、控件组可合并到其他组、绑定控件组支持按下显示/隐藏而非仅切换 (#1763)",
-    "created_at": "2026-09-27T11:06:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315037440"
+    "id": 30825922465,
+    "sha": "3768c6857b6e711eb31f7da0711a77533075432b",
+    "short_sha": "3768c68",
+    "message": "fix(review): 维护者 review 意见整改（PR #1714）\n\n- 账户页移除 3D 皮肤预览，布局还原旧版（预览保留在皮肤弹窗）\n- 下载详情页删除截图阅览（旧版本不存在）\n- 版本列表搜索框移至右侧，布局对齐旧版\n- 圆角全局收敛：卡片 5dp/弹窗 8dp（FCLCard），对齐旧版 bg_container_white/dialog_background\n- 滑动条缩小至 20dp 并常显数值（FCLSliderPreference/FCLSlider）\n- 修复 remember/LocalContext 反模式 13 处（含 RemoteModSearchScreen 切 Tab 持旧 holder 的真实 bug）\n- ViewModel 统一 AndroidViewModel 范式；编译警告与未使用 import/死代码/死资源清零",
+    "created_at": "2026-08-03T15:06:20Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30825922465"
   },
   {
-    "id": 36312698381,
-    "sha": "feb51a55e80711873866631b10dfe5113c959589",
-    "short_sha": "feb51a5",
-    "message": "feat: 启动器设置新增\"更新内容\"入口，可重复查看当前版本更新说明 (#1856)；检查更新与更新内容拉取改同步 CAS 防抖，修复快速连点重复触发",
-    "created_at": "2026-09-27T10:27:56Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36312698381"
+    "id": 30819586264,
+    "sha": "d11dc9506d5de84a5f057805974ffb8b3cb45a0d",
+    "short_sha": "d11dc95",
+    "message": "OpenAL-Soft: 默认OpenSL作为后端 (#1699)\n\n* Add files via upload\n\n* OpenAL-Soft: 默认OpenSL ES",
+    "created_at": "2026-08-03T13:47:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30819586264"
   },
   {
-    "id": 36312698326,
-    "sha": "feb51a55e80711873866631b10dfe5113c959589",
-    "short_sha": "feb51a5",
-    "message": "feat: 启动器设置新增\"更新内容\"入口，可重复查看当前版本更新说明 (#1856)；检查更新与更新内容拉取改同步 CAS 防抖，修复快速连点重复触发",
-    "created_at": "2026-09-27T10:27:56Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36312698326"
+    "id": 30819048542,
+    "sha": "75f4146c61dd71f5a5b80881850bdb2817f8a5fe",
+    "short_sha": "75f4146",
+    "message": "merge: 合并 upstream/main 1.3.2.2（AccountListItem Kotlin 化 + 文件选择 null 安全）\n\n冲突处置：\n- 9 个被 Miuix/Compose 替代的旧页面/弹窗保持删除（JavaManageDialog、OpenFolderDialog、\n  AccountListAdapter、OfflineAccountSkinDialog、ControllerUploadDialog、\n  RemoteModVersionPage、VersionSettingPage、LauncherSettingPage、AddProfileDialog）；\n  上游的文件选择 null 校验逐一移植到对应 Miuix 实现与 AccountScreen/VersionSettingHost/\n  LauncherSettingHost/RemoteModActions。\n- AccountListItem：采用上游 .kt 形态，状态层保持本分支 StateFlow 契约\n  （revisionFlow/avatarFlow/textureFlow 订阅、refreshSkinBinding 跨 UI 联动），\n  uploadSkin 按上游方向改为 fileLauncher 回调 + null 安全，移除 CountDownLatch 阻塞。\n- DatapackListPage/ModpackInfoPage/WorldListItem：保留 Flow 化结构，并入上游 null 校验。\n- FCLBridge.java / MioLaunchWrapper.jar 取上游版本。",
+    "created_at": "2026-08-03T13:32:39Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30819048542"
   },
   {
-    "id": 36310966530,
-    "sha": "56be088d550e4ba7d7a744e1d914ff0350c89cfa",
-    "short_sha": "56be088",
-    "message": "fix: 控件编辑器修复与增强——新建/克隆控件默认屏幕中心并对齐组 z 序，修复添加控件被菜单遮挡看似消失 (#1865)；编辑吸附新增仅吸附相邻按键开关 (#646)；配置文件原子写入与布局按键数据按 id 去重，避免崩溃后键位重复 (#624)",
-    "created_at": "2026-09-27T09:01:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36310966530"
+    "id": 30813604121,
+    "sha": "8496f7a75a0168efaf751926fc5586fee88a20f0",
+    "short_sha": "8496f7a",
+    "message": "Update MioLaunchWrapper.jar",
+    "created_at": "2026-08-03T12:26:40Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30813604121"
   },
   {
-    "id": 36310966525,
-    "sha": "56be088d550e4ba7d7a744e1d914ff0350c89cfa",
-    "short_sha": "56be088",
-    "message": "fix: 控件编辑器修复与增强——新建/克隆控件默认屏幕中心并对齐组 z 序，修复添加控件被菜单遮挡看似消失 (#1865)；编辑吸附新增仅吸附相邻按键开关 (#646)；配置文件原子写入与布局按键数据按 id 去重，避免崩溃后键位重复 (#624)",
-    "created_at": "2026-09-27T09:01:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36310966525"
+    "id": 30812656053,
+    "sha": "722b3d6edf65c597bd75092013679ee6d0f498c8",
+    "short_sha": "722b3d6",
+    "message": "cleanup: 移除多国语言资源中冗余的皮肤设置相关字符串\n\n从多个语言包（de, fa, pt-rBR, ru, uk, vi, zh-rHK）中移除以下已弃用的字符串定义：\n1. `account_skin_type_csl_api_location_hint`\n2. `account_skin_type_csl_api_hint`\n3. `account_skin_type_local_file`\n4. `account_skin_type_csl_api` (主要涉及越南语版本)",
+    "created_at": "2026-08-03T12:12:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30812656053"
   },
   {
-    "id": 36300509192,
-    "sha": "fb8156e08fc97d8fadd9ed8d55b94abcc07277f1",
-    "short_sha": "fb8156e",
-    "message": "fix: 输入坐标链 int→float 迁移，消除触摸转视角慢移丢步顿挫",
-    "created_at": "2026-09-27T06:34:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36300509192"
+    "id": 30812652038,
+    "sha": "722b3d6edf65c597bd75092013679ee6d0f498c8",
+    "short_sha": "722b3d6",
+    "message": "cleanup: 移除多国语言资源中冗余的皮肤设置相关字符串\n\n从多个语言包（de, fa, pt-rBR, ru, uk, vi, zh-rHK）中移除以下已弃用的字符串定义：\n1. `account_skin_type_csl_api_location_hint`\n2. `account_skin_type_csl_api_hint`\n3. `account_skin_type_local_file`\n4. `account_skin_type_csl_api` (主要涉及越南语版本)",
+    "created_at": "2026-08-03T12:12:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30812652038"
   },
   {
-    "id": 36300509189,
-    "sha": "fb8156e08fc97d8fadd9ed8d55b94abcc07277f1",
-    "short_sha": "fb8156e",
-    "message": "fix: 输入坐标链 int→float 迁移，消除触摸转视角慢移丢步顿挫",
-    "created_at": "2026-09-27T06:34:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36300509189"
+    "id": 30811791787,
+    "sha": "4b5cee4781a53e1109bd46ee8e03f97ddee96f67",
+    "short_sha": "4b5cee4",
+    "message": "ui: 优化离线账户皮肤对话框布局对齐\n\n1. 为 ScrollView 添加 `android:fillViewport=\"true\"` 以允许子布局填充视口高度\n2. 将内部 LinearLayoutCompat 高度改为 `match_parent` 并新增 `gravity=\"center_vertical\"`，实现内容在滚动区域内垂直居中显示",
+    "created_at": "2026-08-03T12:00:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30811791787"
   },
   {
-    "id": 36300507370,
-    "sha": "fb8156e08fc97d8fadd9ed8d55b94abcc07277f1",
-    "short_sha": "fb8156e",
-    "message": "fix: 输入坐标链 int→float 迁移，消除触摸转视角慢移丢步顿挫",
-    "created_at": "2026-09-27T06:34:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36300507370"
+    "id": 30811459057,
+    "sha": "496c1614a381ade22466eb253ce6f17695e5ee4e",
+    "short_sha": "496c161",
+    "message": "Update MainActivity.kt",
+    "created_at": "2026-08-03T11:55:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30811459057"
   },
   {
-    "id": 36300507344,
-    "sha": "fb8156e08fc97d8fadd9ed8d55b94abcc07277f1",
-    "short_sha": "fb8156e",
-    "message": "fix: 输入坐标链 int→float 迁移，消除触摸转视角慢移丢步顿挫",
-    "created_at": "2026-09-27T06:34:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36300507344"
+    "id": 30807238641,
+    "sha": "310146447cf89aec3f038ae66fe51d92f1abc9c1",
+    "short_sha": "3101464",
+    "message": "refactor(account): 优化 MicrosoftAccountSkinDialog 代码实现与引用\n\n1.  引入 `NormalizedSkin`、`InvalidSkinException`、`FCLTextView` 和 `URL` 等类，移除代码中冗余的全限定类名。\n2.  移除冗余的 `getSelectedModel()` 私有方法，简化皮肤上传逻辑。\n3.  优化皮肤模型检测代码，提升代码整洁度与可读性。",
+    "created_at": "2026-08-03T10:51:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30807238641"
   },
   {
-    "id": 36299410037,
-    "sha": "11c2a85154a26a31ade7ba199c6a1555d47dfa43",
-    "short_sha": "11c2a85",
-    "message": "fix: 外置鼠标视角链路改浮点游标，消除整数截断导致的过慢/顿挫\n\n捕获事件的相对位移常为亚像素值，(int) 截断把小位移整批吞成 0，表现为部分设备视角过慢、有顿挫延迟感；缩放（scaleFactor<1）与 FORCE_RESOLUTION 路径二次截断进一步放大。现以亚像素余数累积器 + 浮点游标直推 native（sendCursorPos 本为 float），int 仅用于 menu 指针状态同步",
-    "created_at": "2026-09-27T06:09:26Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36299410037"
+    "id": 30807234224,
+    "sha": "310146447cf89aec3f038ae66fe51d92f1abc9c1",
+    "short_sha": "3101464",
+    "message": "refactor(account): 优化 MicrosoftAccountSkinDialog 代码实现与引用\n\n1.  引入 `NormalizedSkin`、`InvalidSkinException`、`FCLTextView` 和 `URL` 等类，移除代码中冗余的全限定类名。\n2.  移除冗余的 `getSelectedModel()` 私有方法，简化皮肤上传逻辑。\n3.  优化皮肤模型检测代码，提升代码整洁度与可读性。",
+    "created_at": "2026-08-03T10:51:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/30807234224"
   }
 ]
