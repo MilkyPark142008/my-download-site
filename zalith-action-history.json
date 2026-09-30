@@ -1,5 +1,21 @@
 [
   {
+    "id": 36786401843,
+    "sha": "9b5123c931f1e361505cf953af0e4170868a253d",
+    "short_sha": "9b5123c",
+    "message": "fix: 修复修改版本页加载器预选竞态与提示缺失\n\n- 预选按主加载器优先级依次执行，高优先级列表未加载完成时低优先级等待，消除列表加载顺序导致的竞态\n- OptiFine 与 Forge 的兼容性检查升级为按已选版本成对校验，与列表条目过滤规则一致，不兼容时次要加载器为主加载器让位并提示\n- 切换 Minecraft 版本后，无法匹配的已安装加载器按移除判断，不再保留原样，同时抑制保留原样提示",
+    "created_at": "2026-09-30T22:34:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36786401843"
+  },
+  {
+    "id": 36780389179,
+    "sha": "47efb26eb36061001d915362c53b2c44fb5d09ec",
+    "short_sha": "47efb26",
+    "message": "feat: 多加载器识别与修改版本适配",
+    "created_at": "2026-09-30T21:35:07Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36780389179"
+  },
+  {
     "id": 36727150566,
     "sha": "9296f29dd142a03a35dc68920327ce9a42b1797f",
     "short_sha": "9296f29",
@@ -382,21 +398,5 @@
     "message": "Merge pull request #1957 from ZalithLauncher/feat/lwjgl3ify-support\n\nfeat: 兼容 lwjgl3ify & 使用 MioLauncherWrapper",
     "created_at": "2026-09-27T08:42:51Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36307066434"
-  },
-  {
-    "id": 36272740378,
-    "sha": "b6f0e68966821445607a8819e61ba981f2a55bbb",
-    "short_sha": "b6f0e68",
-    "message": "Merge pull request #1958 from ZalithLauncher/feature/guide-library\n\nfeat: 新增下一步提示机制",
-    "created_at": "2026-09-26T21:23:01Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36272740378"
-  },
-  {
-    "id": 36272707496,
-    "sha": "de073dbb48adcf28cb61b046a70d952731d0d90b",
-    "short_sha": "de073db",
-    "message": "chore: 调整自动滚动为末尾项的键",
-    "created_at": "2026-09-26T21:22:19Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36272707496"
   }
 ]
