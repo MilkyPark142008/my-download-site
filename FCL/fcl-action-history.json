@@ -1,5 +1,125 @@
 [
   {
+    "id": 36815213071,
+    "sha": "3f6c06f2cb8a80ccdbe28a8a15f4e59f6cdc38f3",
+    "short_sha": "3f6c06f",
+    "message": "feat: 版本列表新增深度删除，清理仅被该版本引用的库与资源 (#1873)\n\n* feat: 版本列表删除弹窗新增深度删除，清理仅被该版本引用的库与资源\n\n* fix: 深度删除按钮文案缩短为深度删除并在弹窗中补充功能说明\n\n* fix: 深度删除校验待删路径位于共享目录内\n\n库路径、资产 hash 与 assetId 均取自版本 json 与资产索引，属外部数据：携带 .. 或指向\n外部目录时原实现会直接删除共享目录之外的文件或目录。改为删除前对规范路径做目录内断言\n（libraries / assets/indexes / assets/objects / assets/virtual 各自判定），越界一律\n跳过并记日志；清理后收缩空目录同样改按规范路径比较，不越过各自根目录",
+    "created_at": "2026-10-01T04:27:32Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36815213071"
+  },
+  {
+    "id": 36815213043,
+    "sha": "3f6c06f2cb8a80ccdbe28a8a15f4e59f6cdc38f3",
+    "short_sha": "3f6c06f",
+    "message": "feat: 版本列表新增深度删除，清理仅被该版本引用的库与资源 (#1873)\n\n* feat: 版本列表删除弹窗新增深度删除，清理仅被该版本引用的库与资源\n\n* fix: 深度删除按钮文案缩短为深度删除并在弹窗中补充功能说明\n\n* fix: 深度删除校验待删路径位于共享目录内\n\n库路径、资产 hash 与 assetId 均取自版本 json 与资产索引，属外部数据：携带 .. 或指向\n外部目录时原实现会直接删除共享目录之外的文件或目录。改为删除前对规范路径做目录内断言\n（libraries / assets/indexes / assets/objects / assets/virtual 各自判定），越界一律\n跳过并记日志；清理后收缩空目录同样改按规范路径比较，不越过各自根目录",
+    "created_at": "2026-10-01T04:27:32Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36815213043"
+  },
+  {
+    "id": 36814752932,
+    "sha": "9f1d83e3bc95999379d6fba960ad9666c6896a62",
+    "short_sha": "9f1d83e",
+    "message": "build: 签名统一启用 v2+v3 方案、关闭 v1（minSdk 26 下 v1 已无必要）",
+    "created_at": "2026-10-01T04:20:37Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36814752932"
+  },
+  {
+    "id": 36814742867,
+    "sha": "47f00d2e482c29273a09721be52f8108723971f9",
+    "short_sha": "47f00d2",
+    "message": "feat: Vulkan 设备检测与 vkshim 驱动能力补齐 (#1866)\n\n* feat: 迁移 Vulkan 设备检测功能，支持 26.2+ 版本启动前校验\n\n- 新增 native 模块 vulkan_check：dlopen 系统 libvulkan 或经 liblinkerhook\n  加载 Turnip 驱动，枚举物理设备读取 apiVersion/扩展/特性\n- 移植 MC 版本与 Vulkan 依赖关系表（26.2 起各版本所需的扩展与特性）\n- 检测结果经 DataStore 缓存，驱动状态或检测规则变更时自动失效\n- 版本设置页新增「检测 Vulkan」入口与结果对话框（总体结论、\n  版本区间支持情况、逐项扩展/特性依赖标注）\n- 启动 26.2+ 版本前自动校验：缓存命中直接判定，无缓存询问检测；\n  26.3+（强制 Vulkan）不支持时阻止启动，其余版本警告后允许继续\n\n* fix: Vulkan 检测对话框标题改用主题默认文字色\n\nauto_text_tint 是与主色对比的黑/白，主色为深色时标题呈白色，\n在浅色对话框背景上不可见；改为与 FCLAlertDialog 标题一致的\n默认 textColorPrimary，跟随亮暗模式\n\n* refactor: 对话框屏幕尺寸获取统一改用 AndroidUtil\n\nVulkanCheckDialog、RendererSelectDialog、RendererEnvDialog、\nMioLibPatcherDialog、SelectControllerDialog、UpdateDialog 改用\ngetScreenWidth()/getScreenHeight()，移除废弃的\ndefaultDisplay.getSize(Point) 方式\n\n* feat: vkshim 包装系统 Vulkan 加载器，缺失 VK_EXT_vertex_attribute_divisor 时用 KHR/核心功能合成\n\n* feat: vkshim 启用接入设备检测门控\n\n- 检测判定设备缺失 VK_EXT_vertex_attribute_divisor 且提供\n  VK_KHR_vertex_attribute_divisor 时记录 needsDivisorShim（仅系统\n  驱动路径，Turnip 不经过包装层），依赖评估按补报 EXT 后的状态进行\n- 检测结果对话框与启动校验使用补报后的能力，shim 设备可正常通过\n  26.2+ 启动校验\n- 启动组装环境变量时按门控标志注入 VKSHIM_ENABLE，游戏进程\n  egl_bridge 仅在该标志下经 vkshim 包装加载，其余设备直连系统加载器\n- vkshim 移除 Vulkan 1.3 核心回退，仅合成 KHR 扩展声明的设备\n\n* adjust: Vulkan 检测不满足时改为警告，允许继续启动\n\n移除 26.3+ 版本的启动硬阻止：检测不满足依赖时统一弹警告\n（列出缺失项），用户确认后仍可启动；随之删除无调用者的\nisVulkanMandatory 与 vulkan_check_launch_unsupported 文案\n\n* fix: vkshim 判定改用检测时实际生效的驱动\n\n此前 needsDivisorShim 以版本设置是否为 Turnip 判定，但非 Adreno\n设备请求 Turnip 时检测与游戏运行时都会加载失败回落系统加载器，\nshim 本应生效却被排除导致无效。检测器现返回 usedCustomDriver\n（实际是否经 Turnip 加载），判定与对话框驱动展示均改用实际状态；\n旧缓存会在启动校验判定不支持时触发重新检测自愈\n\n* feat: vkshim 新增 fillModeNonSolid 降级模拟\n\n对齐 VulkanFix-Renderer 的 fill_mode_non_solid 模块策略，补齐\n26.2 依赖表中另一常见缺口（线框/点填充能力位）：\n- vkGetPhysicalDeviceFeatures(2/KHR) 谎报 fillModeNonSolid 开启\n- vkCreateDevice 时剥除应用启用的该能力位（副本替换 + pNext 链\n  原位改写并恢复原值），避免真驱动拒绝设备创建\n- vkCreateGraphicsPipelines 对模拟设备的非 FILL 光栅化状态降级\n  为 FILL（gipa 与 gdpa 两条解析路径均拦截），线框视觉让位可运行性\n- 每物理设备独立探测原生支持，原生支持则全链路直通；检测侧同步\n  判定 needsFillModeEmulation 并在依赖评估中按补齐状态计算\n\n* fix: Vulkan 检测补建补丁目录，vkshim divisor 特性位按驱动报告值置位\n\n- 检测用的 cacheDir 未经创建即传给 native：驱动补丁文件在该目录生成，目录缺失时\n  打开输出文件直接失败，Turnip 驱动加载必然回落到系统加载器，检测结论与 vkshim\n  门控随之失真\n- vkshim 补写的 divisor features 节点原先把两个特性位无条件置位，而启用驱动不支持的\n  位会让 vkCreateDevice 返回 VK_ERROR_FEATURE_NOT_PRESENT；改为先经\n  vkGetPhysicalDeviceFeatures2 查询驱动报告的支持情况，应用自带节点时同样把不支持的\n  位临时置回（调用后恢复）",
+    "created_at": "2026-10-01T04:21:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36814742867"
+  },
+  {
+    "id": 36814742830,
+    "sha": "47f00d2e482c29273a09721be52f8108723971f9",
+    "short_sha": "47f00d2",
+    "message": "feat: Vulkan 设备检测与 vkshim 驱动能力补齐 (#1866)\n\n* feat: 迁移 Vulkan 设备检测功能，支持 26.2+ 版本启动前校验\n\n- 新增 native 模块 vulkan_check：dlopen 系统 libvulkan 或经 liblinkerhook\n  加载 Turnip 驱动，枚举物理设备读取 apiVersion/扩展/特性\n- 移植 MC 版本与 Vulkan 依赖关系表（26.2 起各版本所需的扩展与特性）\n- 检测结果经 DataStore 缓存，驱动状态或检测规则变更时自动失效\n- 版本设置页新增「检测 Vulkan」入口与结果对话框（总体结论、\n  版本区间支持情况、逐项扩展/特性依赖标注）\n- 启动 26.2+ 版本前自动校验：缓存命中直接判定，无缓存询问检测；\n  26.3+（强制 Vulkan）不支持时阻止启动，其余版本警告后允许继续\n\n* fix: Vulkan 检测对话框标题改用主题默认文字色\n\nauto_text_tint 是与主色对比的黑/白，主色为深色时标题呈白色，\n在浅色对话框背景上不可见；改为与 FCLAlertDialog 标题一致的\n默认 textColorPrimary，跟随亮暗模式\n\n* refactor: 对话框屏幕尺寸获取统一改用 AndroidUtil\n\nVulkanCheckDialog、RendererSelectDialog、RendererEnvDialog、\nMioLibPatcherDialog、SelectControllerDialog、UpdateDialog 改用\ngetScreenWidth()/getScreenHeight()，移除废弃的\ndefaultDisplay.getSize(Point) 方式\n\n* feat: vkshim 包装系统 Vulkan 加载器，缺失 VK_EXT_vertex_attribute_divisor 时用 KHR/核心功能合成\n\n* feat: vkshim 启用接入设备检测门控\n\n- 检测判定设备缺失 VK_EXT_vertex_attribute_divisor 且提供\n  VK_KHR_vertex_attribute_divisor 时记录 needsDivisorShim（仅系统\n  驱动路径，Turnip 不经过包装层），依赖评估按补报 EXT 后的状态进行\n- 检测结果对话框与启动校验使用补报后的能力，shim 设备可正常通过\n  26.2+ 启动校验\n- 启动组装环境变量时按门控标志注入 VKSHIM_ENABLE，游戏进程\n  egl_bridge 仅在该标志下经 vkshim 包装加载，其余设备直连系统加载器\n- vkshim 移除 Vulkan 1.3 核心回退，仅合成 KHR 扩展声明的设备\n\n* adjust: Vulkan 检测不满足时改为警告，允许继续启动\n\n移除 26.3+ 版本的启动硬阻止：检测不满足依赖时统一弹警告\n（列出缺失项），用户确认后仍可启动；随之删除无调用者的\nisVulkanMandatory 与 vulkan_check_launch_unsupported 文案\n\n* fix: vkshim 判定改用检测时实际生效的驱动\n\n此前 needsDivisorShim 以版本设置是否为 Turnip 判定，但非 Adreno\n设备请求 Turnip 时检测与游戏运行时都会加载失败回落系统加载器，\nshim 本应生效却被排除导致无效。检测器现返回 usedCustomDriver\n（实际是否经 Turnip 加载），判定与对话框驱动展示均改用实际状态；\n旧缓存会在启动校验判定不支持时触发重新检测自愈\n\n* feat: vkshim 新增 fillModeNonSolid 降级模拟\n\n对齐 VulkanFix-Renderer 的 fill_mode_non_solid 模块策略，补齐\n26.2 依赖表中另一常见缺口（线框/点填充能力位）：\n- vkGetPhysicalDeviceFeatures(2/KHR) 谎报 fillModeNonSolid 开启\n- vkCreateDevice 时剥除应用启用的该能力位（副本替换 + pNext 链\n  原位改写并恢复原值），避免真驱动拒绝设备创建\n- vkCreateGraphicsPipelines 对模拟设备的非 FILL 光栅化状态降级\n  为 FILL（gipa 与 gdpa 两条解析路径均拦截），线框视觉让位可运行性\n- 每物理设备独立探测原生支持，原生支持则全链路直通；检测侧同步\n  判定 needsFillModeEmulation 并在依赖评估中按补齐状态计算\n\n* fix: Vulkan 检测补建补丁目录，vkshim divisor 特性位按驱动报告值置位\n\n- 检测用的 cacheDir 未经创建即传给 native：驱动补丁文件在该目录生成，目录缺失时\n  打开输出文件直接失败，Turnip 驱动加载必然回落到系统加载器，检测结论与 vkshim\n  门控随之失真\n- vkshim 补写的 divisor features 节点原先把两个特性位无条件置位，而启用驱动不支持的\n  位会让 vkCreateDevice 返回 VK_ERROR_FEATURE_NOT_PRESENT；改为先经\n  vkGetPhysicalDeviceFeatures2 查询驱动报告的支持情况，应用自带节点时同样把不支持的\n  位临时置回（调用后恢复）",
+    "created_at": "2026-10-01T04:21:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36814742830"
+  },
+  {
+    "id": 36814143291,
+    "sha": "f013e0fe91ae39413a73cd0f6702fd4df852ed77",
+    "short_sha": "f013e0f",
+    "message": "fix: 修复首页皮肤模型手势视角跨页面残留致返回后显示背面被误认为渲染错误（#1891），并修双指捏合结束后首个 MOVE 位移跳变致模型猛转",
+    "created_at": "2026-10-01T04:13:51Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36814143291"
+  },
+  {
+    "id": 36814143321,
+    "sha": "f013e0fe91ae39413a73cd0f6702fd4df852ed77",
+    "short_sha": "f013e0f",
+    "message": "fix: 修复首页皮肤模型手势视角跨页面残留致返回后显示背面被误认为渲染错误（#1891），并修双指捏合结束后首个 MOVE 位移跳变致模型猛转",
+    "created_at": "2026-10-01T04:13:51Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36814143321"
+  },
+  {
+    "id": 36808687275,
+    "sha": "567c9186296fa5b03aa70a5e3806420bbd6b117a",
+    "short_sha": "567c918",
+    "message": "fix: 修复 Quilt meta 缺少 intermediary 字段时安装崩溃",
+    "created_at": "2026-10-01T03:01:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36808687275"
+  },
+  {
+    "id": 36808687274,
+    "sha": "567c9186296fa5b03aa70a5e3806420bbd6b117a",
+    "short_sha": "567c918",
+    "message": "fix: 修复 Quilt meta 缺少 intermediary 字段时安装崩溃",
+    "created_at": "2026-10-01T03:01:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36808687274"
+  },
+  {
+    "id": 36806740895,
+    "sha": "1a5fa2655299b01b673a9ce50d31499474bb27f5",
+    "short_sha": "1a5fa26",
+    "message": "fix: SDL 消息框 message 误设为标题导致错误信息显示不全",
+    "created_at": "2026-10-01T02:37:41Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36806740895"
+  },
+  {
+    "id": 36806740843,
+    "sha": "1a5fa2655299b01b673a9ce50d31499474bb27f5",
+    "short_sha": "1a5fa26",
+    "message": "fix: SDL 消息框 message 误设为标题导致错误信息显示不全",
+    "created_at": "2026-10-01T02:37:41Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36806740843"
+  },
+  {
+    "id": 36805046028,
+    "sha": "702229c99683fb2a7a3db055e5162eafcf35bb1f",
+    "short_sha": "702229c",
+    "message": "feat: FCLNumberSeekBar 左右新增加减按钮——主题色圆底贴轨道布置（按压亮主题色、禁用半透明），Material 加减图标随主题染色；点按步进一个显示单位、长按连发、滑出热区取消，触控热区以轨道端点为界与文本点按/拖动互不干扰；最小水平内边距保证按钮、轨道、数值文本不重叠",
+    "created_at": "2026-10-01T02:16:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36805046028"
+  },
+  {
+    "id": 36805046034,
+    "sha": "702229c99683fb2a7a3db055e5162eafcf35bb1f",
+    "short_sha": "702229c",
+    "message": "feat: FCLNumberSeekBar 左右新增加减按钮——主题色圆底贴轨道布置（按压亮主题色、禁用半透明），Material 加减图标随主题染色；点按步进一个显示单位、长按连发、滑出热区取消，触控热区以轨道端点为界与文本点按/拖动互不干扰；最小水平内边距保证按钮、轨道、数值文本不重叠",
+    "created_at": "2026-10-01T02:16:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36805046034"
+  },
+  {
+    "id": 36804398917,
+    "sha": "047805227715e4a833fd4c661bc440297afe298d",
+    "short_sha": "0478052",
+    "message": "fix(manage): 模组列表重进不再无条件重扫——tick 与最近一次扫描比对\n\n用户反馈：重进模组管理页时列表会无条件刷新。原因是 PageFlows.observe 每次 attach 都会重放\ntick 流当前值，回调未做'值是否变化'判断，于是每次重进都触发一次全量重扫（解析上百个模组很贵，\n正是 loadVersion 同版本守卫要避免的开销）。\n\n- loadMods 记录本次扫描对应的 tick（loadedTick）并累加扫描计数；回调改为 tick != loadedTick 才重扫\n- 离开期间确有落盘（tick 前进）时，重进仍会补一次重扫；扫描进行中的变化由下次 attach 兜底\n- 新增 ModListPageRefreshTest（自给自足临时 profile，不依赖设备数据）：断言重进不重扫、\n  有变化时恰好补一次重扫（实测两条均通过，skipped=0）",
+    "created_at": "2026-10-01T02:07:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36804398917"
+  },
+  {
+    "id": 36804398957,
+    "sha": "047805227715e4a833fd4c661bc440297afe298d",
+    "short_sha": "0478052",
+    "message": "fix(manage): 模组列表重进不再无条件重扫——tick 与最近一次扫描比对\n\n用户反馈：重进模组管理页时列表会无条件刷新。原因是 PageFlows.observe 每次 attach 都会重放\ntick 流当前值，回调未做'值是否变化'判断，于是每次重进都触发一次全量重扫（解析上百个模组很贵，\n正是 loadVersion 同版本守卫要避免的开销）。\n\n- loadMods 记录本次扫描对应的 tick（loadedTick）并累加扫描计数；回调改为 tick != loadedTick 才重扫\n- 离开期间确有落盘（tick 前进）时，重进仍会补一次重扫；扫描进行中的变化由下次 attach 兜底\n- 新增 ModListPageRefreshTest（自给自足临时 profile，不依赖设备数据）：断言重进不重扫、\n  有变化时恰好补一次重扫（实测两条均通过，skipped=0）",
+    "created_at": "2026-10-01T02:07:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36804398957"
+  },
+  {
     "id": 36802487468,
     "sha": "098d3cedc9a0c5546fd759a7568e144bafb31968",
     "short_sha": "098d3ce",
@@ -278,125 +398,5 @@
     "message": "fix: 仅吸附相邻按键时同边对齐只对另一轴相邻目标开放（不重叠且间隔≤2×阈值），修复无法与同一按钮横纵两轴同时对齐；对角/远离/掠过行为不变",
     "created_at": "2026-09-27T11:35:56Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36317188576"
-  },
-  {
-    "id": 36317188587,
-    "sha": "0013cd947a3cc9f0a7e1afa481446a7cdb624761",
-    "short_sha": "0013cd9",
-    "message": "fix: 仅吸附相邻按键时同边对齐只对另一轴相邻目标开放（不重叠且间隔≤2×阈值），修复无法与同一按钮横纵两轴同时对齐；对角/远离/掠过行为不变",
-    "created_at": "2026-09-27T11:35:56Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36317188587"
-  },
-  {
-    "id": 36315834614,
-    "sha": "0a06e7f85f62891804f71a925b4c22c6a8fea136",
-    "short_sha": "0a06e7f",
-    "message": "style: 修复 selectViewGroup/openEditDialog 方法签名后缺少换行导致的 checkstyle 违规",
-    "created_at": "2026-09-27T11:28:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315834614"
-  },
-  {
-    "id": 36315834583,
-    "sha": "0a06e7f85f62891804f71a925b4c22c6a8fea136",
-    "short_sha": "0a06e7f",
-    "message": "style: 修复 selectViewGroup/openEditDialog 方法签名后缺少换行导致的 checkstyle 违规",
-    "created_at": "2026-09-27T11:28:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315834583"
-  },
-  {
-    "id": 36315832488,
-    "sha": "0a06e7f85f62891804f71a925b4c22c6a8fea136",
-    "short_sha": "0a06e7f",
-    "message": "style: 修复 selectViewGroup/openEditDialog 方法签名后缺少换行导致的 checkstyle 违规",
-    "created_at": "2026-09-27T11:28:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315832488"
-  },
-  {
-    "id": 36315832594,
-    "sha": "0a06e7f85f62891804f71a925b4c22c6a8fea136",
-    "short_sha": "0a06e7f",
-    "message": "style: 修复 selectViewGroup/openEditDialog 方法签名后缺少换行导致的 checkstyle 违规",
-    "created_at": "2026-09-27T11:28:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315832594"
-  },
-  {
-    "id": 36315139785,
-    "sha": "feb51a55e80711873866631b10dfe5113c959589",
-    "short_sha": "feb51a5",
-    "message": "feat: 启动器设置新增\"更新内容\"入口，可重复查看当前版本更新说明 (#1856)；检查更新与更新内容拉取改同步 CAS 防抖，修复快速连点重复触发",
-    "created_at": "2026-09-27T10:27:56Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315139785"
-  },
-  {
-    "id": 36315066723,
-    "sha": "a575ea0bcfc478c432da1247a56759e7be370105",
-    "short_sha": "a575ea0",
-    "message": "feat: 控件编辑跨组能力——参考组控件可直接编辑(归属组解析)、编辑栏新增跨组复制/移动、控件组可合并到其他组、绑定控件组支持按下显示/隐藏而非仅切换 (#1763)",
-    "created_at": "2026-09-27T11:06:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315066723"
-  },
-  {
-    "id": 36315037440,
-    "sha": "a575ea0bcfc478c432da1247a56759e7be370105",
-    "short_sha": "a575ea0",
-    "message": "feat: 控件编辑跨组能力——参考组控件可直接编辑(归属组解析)、编辑栏新增跨组复制/移动、控件组可合并到其他组、绑定控件组支持按下显示/隐藏而非仅切换 (#1763)",
-    "created_at": "2026-09-27T11:06:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36315037440"
-  },
-  {
-    "id": 36312698381,
-    "sha": "feb51a55e80711873866631b10dfe5113c959589",
-    "short_sha": "feb51a5",
-    "message": "feat: 启动器设置新增\"更新内容\"入口，可重复查看当前版本更新说明 (#1856)；检查更新与更新内容拉取改同步 CAS 防抖，修复快速连点重复触发",
-    "created_at": "2026-09-27T10:27:56Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36312698381"
-  },
-  {
-    "id": 36312698326,
-    "sha": "feb51a55e80711873866631b10dfe5113c959589",
-    "short_sha": "feb51a5",
-    "message": "feat: 启动器设置新增\"更新内容\"入口，可重复查看当前版本更新说明 (#1856)；检查更新与更新内容拉取改同步 CAS 防抖，修复快速连点重复触发",
-    "created_at": "2026-09-27T10:27:56Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36312698326"
-  },
-  {
-    "id": 36310966530,
-    "sha": "56be088d550e4ba7d7a744e1d914ff0350c89cfa",
-    "short_sha": "56be088",
-    "message": "fix: 控件编辑器修复与增强——新建/克隆控件默认屏幕中心并对齐组 z 序，修复添加控件被菜单遮挡看似消失 (#1865)；编辑吸附新增仅吸附相邻按键开关 (#646)；配置文件原子写入与布局按键数据按 id 去重，避免崩溃后键位重复 (#624)",
-    "created_at": "2026-09-27T09:01:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36310966530"
-  },
-  {
-    "id": 36310966525,
-    "sha": "56be088d550e4ba7d7a744e1d914ff0350c89cfa",
-    "short_sha": "56be088",
-    "message": "fix: 控件编辑器修复与增强——新建/克隆控件默认屏幕中心并对齐组 z 序，修复添加控件被菜单遮挡看似消失 (#1865)；编辑吸附新增仅吸附相邻按键开关 (#646)；配置文件原子写入与布局按键数据按 id 去重，避免崩溃后键位重复 (#624)",
-    "created_at": "2026-09-27T09:01:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36310966525"
-  },
-  {
-    "id": 36300509192,
-    "sha": "fb8156e08fc97d8fadd9ed8d55b94abcc07277f1",
-    "short_sha": "fb8156e",
-    "message": "fix: 输入坐标链 int→float 迁移，消除触摸转视角慢移丢步顿挫",
-    "created_at": "2026-09-27T06:34:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36300509192"
-  },
-  {
-    "id": 36300509189,
-    "sha": "fb8156e08fc97d8fadd9ed8d55b94abcc07277f1",
-    "short_sha": "fb8156e",
-    "message": "fix: 输入坐标链 int→float 迁移，消除触摸转视角慢移丢步顿挫",
-    "created_at": "2026-09-27T06:34:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36300509189"
-  },
-  {
-    "id": 36300507370,
-    "sha": "fb8156e08fc97d8fadd9ed8d55b94abcc07277f1",
-    "short_sha": "fb8156e",
-    "message": "fix: 输入坐标链 int→float 迁移，消除触摸转视角慢移丢步顿挫",
-    "created_at": "2026-09-27T06:34:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36300507370"
   }
 ]

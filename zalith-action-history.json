@@ -1,5 +1,13 @@
 [
   {
+    "id": 36807800650,
+    "sha": "38f0e558619a394a64a910f34cc135c467684c5a",
+    "short_sha": "38f0e55",
+    "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1457 of 1457 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
+    "created_at": "2026-10-01T02:51:22Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36807800650"
+  },
+  {
     "id": 36786401843,
     "sha": "9b5123c931f1e361505cf953af0e4170868a253d",
     "short_sha": "9b5123c",
@@ -390,13 +398,5 @@
     "message": "feat: 卡片网格支持自由摆放，允许卡片间纵向留空\n\n移除垂直压实不变量：拖动/缩放松手落在吸附预览的精确位置，\n删除卡片留下空洞，加载校验保留持久化布局的纵向空隙；\n添加卡片维持最上最左优先填洞，列数变化重排维持贪心打包。\n\nGridEngine.compact 无剩余调用方随之删除；validate 输出\n恢复按阅读顺序返回的契约，保证幂等。",
     "created_at": "2026-09-27T09:52:08Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36310746134"
-  },
-  {
-    "id": 36307066434,
-    "sha": "e43c8a11a6e1103f8a11023158999116d2db5f0f",
-    "short_sha": "e43c8a1",
-    "message": "Merge pull request #1957 from ZalithLauncher/feat/lwjgl3ify-support\n\nfeat: 兼容 lwjgl3ify & 使用 MioLauncherWrapper",
-    "created_at": "2026-09-27T08:42:51Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36307066434"
   }
 ]
