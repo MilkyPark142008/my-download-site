@@ -1,5 +1,21 @@
 [
   {
+    "id": 36921590068,
+    "sha": "aef787b2fc2fd451a4cd7a05c7a4605a474325a4",
+    "short_sha": "aef787b",
+    "message": "Merge branch 'weblate_main'",
+    "created_at": "2026-10-01T20:26:21Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36921590068"
+  },
+  {
+    "id": 36921355634,
+    "sha": "e67cb5866cc5b86a072dce2617b0290a4d8d20ca",
+    "short_sha": "e67cb58",
+    "message": "Merge pull request #1990 from ZalithLauncher/feat/modify-version\n\nfeat: 移除更新加载器/安装加载器、覆盖安装功能 & 加入修改版本功能",
+    "created_at": "2026-10-01T20:24:36Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36921355634"
+  },
+  {
     "id": 36807800650,
     "sha": "38f0e558619a394a64a910f34cc135c467684c5a",
     "short_sha": "38f0e55",
@@ -382,21 +398,5 @@
     "message": "fix: SDL 消息框 message 误设为标题导致错误信息显示不全",
     "created_at": "2026-09-27T10:38:31Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36313191626"
-  },
-  {
-    "id": 36310815417,
-    "sha": "6383d9b92c9493be3fb323b05f85f762a9ec12e5",
-    "short_sha": "6383d9b",
-    "message": "Merge pull request #1963 from ZalithLauncher/feat/card-grid-free-placement\n\nfeat: 卡片网格支持自由摆放，允许卡片间纵向留空",
-    "created_at": "2026-09-27T09:53:44Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36310815417"
-  },
-  {
-    "id": 36310746134,
-    "sha": "bd90ed99d59c4ae4da6495149b479abb3386bcb0",
-    "short_sha": "bd90ed9",
-    "message": "feat: 卡片网格支持自由摆放，允许卡片间纵向留空\n\n移除垂直压实不变量：拖动/缩放松手落在吸附预览的精确位置，\n删除卡片留下空洞，加载校验保留持久化布局的纵向空隙；\n添加卡片维持最上最左优先填洞，列数变化重排维持贪心打包。\n\nGridEngine.compact 无剩余调用方随之删除；validate 输出\n恢复按阅读顺序返回的契约，保证幂等。",
-    "created_at": "2026-09-27T09:52:08Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36310746134"
   }
 ]
