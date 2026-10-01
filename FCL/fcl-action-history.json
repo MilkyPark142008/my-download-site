@@ -1,5 +1,21 @@
 [
   {
+    "id": 36802487468,
+    "sha": "098d3cedc9a0c5546fd759a7568e144bafb31968",
+    "short_sha": "098d3ce",
+    "message": "feat: 账户皮肤对话框预览应用 3D 皮肤层与身体腿部分离开关状态 (#1884)\n\n新增 restoreSkinSwitches 从 DataStore 恢复两个开关（不含动画选择），\n离线/微软账户皮肤对话框的 3D 预览与主界面保持一致显示效果",
+    "created_at": "2026-10-01T01:43:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36802487468"
+  },
+  {
+    "id": 36802487270,
+    "sha": "098d3cedc9a0c5546fd759a7568e144bafb31968",
+    "short_sha": "098d3ce",
+    "message": "feat: 账户皮肤对话框预览应用 3D 皮肤层与身体腿部分离开关状态 (#1884)\n\n新增 restoreSkinSwitches 从 DataStore 恢复两个开关（不含动画选择），\n离线/微软账户皮肤对话框的 3D 预览与主界面保持一致显示效果",
+    "created_at": "2026-10-01T01:43:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36802487270"
+  },
+  {
     "id": 36655674038,
     "sha": "b162aaac005332a3bfe1ddce88eda532dc444381",
     "short_sha": "b162aaa",
@@ -382,21 +398,5 @@
     "message": "fix: 输入坐标链 int→float 迁移，消除触摸转视角慢移丢步顿挫",
     "created_at": "2026-09-27T06:34:34Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36300507370"
-  },
-  {
-    "id": 36300507344,
-    "sha": "fb8156e08fc97d8fadd9ed8d55b94abcc07277f1",
-    "short_sha": "fb8156e",
-    "message": "fix: 输入坐标链 int→float 迁移，消除触摸转视角慢移丢步顿挫",
-    "created_at": "2026-09-27T06:34:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36300507344"
-  },
-  {
-    "id": 36299410037,
-    "sha": "11c2a85154a26a31ade7ba199c6a1555d47dfa43",
-    "short_sha": "11c2a85",
-    "message": "fix: 外置鼠标视角链路改浮点游标，消除整数截断导致的过慢/顿挫\n\n捕获事件的相对位移常为亚像素值，(int) 截断把小位移整批吞成 0，表现为部分设备视角过慢、有顿挫延迟感；缩放（scaleFactor<1）与 FORCE_RESOLUTION 路径二次截断进一步放大。现以亚像素余数累积器 + 浮点游标直推 native（sendCursorPos 本为 float），int 仅用于 menu 指针状态同步",
-    "created_at": "2026-09-27T06:09:26Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36299410037"
   }
 ]
