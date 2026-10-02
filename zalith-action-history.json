@@ -1,5 +1,13 @@
 [
   {
+    "id": 36934019673,
+    "sha": "82d52cf111736911c0c4acb77f4910dd5832ca73",
+    "short_sha": "82d52cf",
+    "message": "feat: 新增游戏内帧率图表显示模式\n\n- 帧率捕获记录最近15个时间节点及窗口内最高/最低帧，最高/最低帧离开窗口后延迟重算\n- 图表纵轴向外取整为好数后分5段标注刻度，最后一个点旁标注当前帧率\n- 悬浮球图标在图表模式或显示内存时隐藏\n- 补充简体、繁体中文翻译",
+    "created_at": "2026-10-01T22:15:40Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36934019673"
+  },
+  {
     "id": 36921590068,
     "sha": "aef787b2fc2fd451a4cd7a05c7a4605a474325a4",
     "short_sha": "aef787b",
@@ -390,13 +398,5 @@
     "message": "Merge pull request #1964 from ZalithLauncher/fix/sdl-messagebox-message\n\nfix: SDL 消息框 message 误设为标题导致错误信息显示不全",
     "created_at": "2026-09-27T10:39:29Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36313237023"
-  },
-  {
-    "id": 36313191626,
-    "sha": "be68425f6defa5453853b9d91c073cfc14f2570f",
-    "short_sha": "be68425",
-    "message": "fix: SDL 消息框 message 误设为标题导致错误信息显示不全",
-    "created_at": "2026-09-27T10:38:31Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36313191626"
   }
 ]
