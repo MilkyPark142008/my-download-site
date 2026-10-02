@@ -1,5 +1,21 @@
 [
   {
+    "id": 36953693149,
+    "sha": "6fe3806dd07ebeb20d403b1f4a003ce83d194942",
+    "short_sha": "6fe3806",
+    "message": "fix: 修复旧格式（64x32）皮肤切页面后渲染错乱：renderer.texture 保存归一化后位图，surface 重建重上传不再按原始布局被 64x64 UV 采样错位（#1891）",
+    "created_at": "2026-10-02T02:01:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36953693149"
+  },
+  {
+    "id": 36953693067,
+    "sha": "6fe3806dd07ebeb20d403b1f4a003ce83d194942",
+    "short_sha": "6fe3806",
+    "message": "fix: 修复旧格式（64x32）皮肤切页面后渲染错乱：renderer.texture 保存归一化后位图，surface 重建重上传不再按原始布局被 64x64 UV 采样错位（#1891）",
+    "created_at": "2026-10-02T02:01:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36953693067"
+  },
+  {
     "id": 36865874444,
     "sha": "21e0f7e321f8504734a8ab8bc88628307a2f0c36",
     "short_sha": "21e0f7e",
@@ -382,21 +398,5 @@
     "message": "fix: 修复 Modrinth 整合包更新读旧配置 TypeToken 误用 CurseManifest 致 CCE 必然回滚；GameOption 键值表与文件观察者改实例级防跨游戏目录串数据，观察者随监听注册启动，修监听移除比较失效；修 ControlDirectionData.equals 参数类型笔误、InstantTypeAdapter catch 误引外层变量；EventBus 事件日志降 FINE；删 rebaseArgs 孤立死代码；同步源码通读报告遗留项状态",
     "created_at": "2026-09-27T14:53:47Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36327621244"
-  },
-  {
-    "id": 36325825607,
-    "sha": "0ac88547affbc9cf1068e17971d32d0bcbfe55b9",
-    "short_sha": "0ac8854",
-    "message": "refactor: 删除 fakefx 包不可达死代码（113/322 类）\n\n字节码常量池可达性分析：收集全部 Utf8 引用（描述符/签名/注解/Kotlin @Metadata），\n从外部引用根与 androidTest 根做闭包，event、beans/property/adapter、property/adapter、\nutil/converter 四个子包整体不可达，另删 ReadOnlyXxxWrapper、Duration、Pair、FxGson 等散类。\n已排除同名类歧义（util.Pair/fclcore.event.Event/ButtonEventData.Event）、\ncom.sun.javafx.* 反射目标（类不存在且异常被吞）、产物 stale（GameMenu 未重编译）误判。\n\n验证：Zulu17 下 debug/fordebug 主源集与单元测试编译通过；MuMu 模拟器实测\n冷启动、皮肤渲染、1.20.1-Forge 完整启动到主菜单，全程无 ClassNotFoundError。",
-    "created_at": "2026-09-27T14:24:36Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36325825607"
-  },
-  {
-    "id": 36325825535,
-    "sha": "0ac88547affbc9cf1068e17971d32d0bcbfe55b9",
-    "short_sha": "0ac8854",
-    "message": "refactor: 删除 fakefx 包不可达死代码（113/322 类）\n\n字节码常量池可达性分析：收集全部 Utf8 引用（描述符/签名/注解/Kotlin @Metadata），\n从外部引用根与 androidTest 根做闭包，event、beans/property/adapter、property/adapter、\nutil/converter 四个子包整体不可达，另删 ReadOnlyXxxWrapper、Duration、Pair、FxGson 等散类。\n已排除同名类歧义（util.Pair/fclcore.event.Event/ButtonEventData.Event）、\ncom.sun.javafx.* 反射目标（类不存在且异常被吞）、产物 stale（GameMenu 未重编译）误判。\n\n验证：Zulu17 下 debug/fordebug 主源集与单元测试编译通过；MuMu 模拟器实测\n冷启动、皮肤渲染、1.20.1-Forge 完整启动到主菜单，全程无 ClassNotFoundError。",
-    "created_at": "2026-09-27T14:24:36Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36325825535"
   }
 ]
