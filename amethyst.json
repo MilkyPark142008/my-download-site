@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 168391097,
         "digest": "sha256:8c6b438ea2a3319adaf673d639adfb779dfb15d694d940814cd1c6b099d323a2",
-        "download_count": 14223,
+        "download_count": 14300,
         "created_at": "2026-07-31T02:59:21Z",
         "updated_at": "2026-07-31T03:03:42Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.7/Amethyst-Debug.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 156535672,
         "digest": "sha256:6b5579e93f50a62f4d96279683bb447325e5a4de9015deae787eee56c248211f",
-        "download_count": 56189,
+        "download_count": 56623,
         "created_at": "2026-07-31T02:59:28Z",
         "updated_at": "2026-07-31T03:03:42Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.7/Amethyst.apk"
@@ -128,25 +128,25 @@
   },
   "action": {
     "run": {
-      "id": 31539476613,
+      "id": 24796758244,
       "name": "Android CI",
-      "node_id": "WFR_kwLOOrUn6c8AAAAHV-Y4hQ",
-      "head_branch": "fix/forge-installer-i18n",
-      "head_sha": "186af896ad93a5fd82f2e70f90b0a575d399dafb",
+      "node_id": "WFR_kwLOOrUn6c8AAAAFxgCA5A",
+      "head_branch": "feat/misc",
+      "head_sha": "b28ce5f3226f6b4af66790323461414e1881844f",
       "path": ".github/workflows/android.yml",
-      "display_title": "[TESTME] fix(forge_installer): Fail to find OK button on install if l…",
-      "run_number": 933,
+      "display_title": "bump(SDL): 3.2.22 to 3.4.4",
+      "run_number": 752,
       "event": "push",
       "status": "completed",
       "conclusion": "success",
       "workflow_id": 162757109,
-      "check_suite_id": 85556539139,
-      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAT65EvAw",
-      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31539476613",
-      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31539476613",
+      "check_suite_id": 65759605905,
+      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAPT5P0kQ",
+      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24796758244",
+      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/24796758244",
       "pull_requests": [],
-      "created_at": "2026-08-11T21:46:57Z",
-      "updated_at": "2026-08-11T21:51:03Z",
+      "created_at": "2026-04-22T18:55:13Z",
+      "updated_at": "2026-04-22T18:58:13Z",
       "actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -170,7 +170,7 @@
       },
       "run_attempt": 1,
       "referenced_workflows": [],
-      "run_started_at": "2026-08-11T21:46:57Z",
+      "run_started_at": "2026-04-22T18:55:13Z",
       "triggering_actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -192,19 +192,19 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31539476613/jobs",
-      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31539476613/logs",
-      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/85556539139",
-      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31539476613/artifacts",
-      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31539476613/cancel",
-      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/31539476613/rerun",
+      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24796758244/jobs",
+      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24796758244/logs",
+      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/65759605905",
+      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24796758244/artifacts",
+      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24796758244/cancel",
+      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/24796758244/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/workflows/162757109",
       "head_commit": {
-        "id": "186af896ad93a5fd82f2e70f90b0a575d399dafb",
-        "tree_id": "eb14b04968b6d68b8024c9308c7287359e7d403b",
-        "message": "[TESTME] fix(forge_installer): Fail to find OK button on install if localized",
-        "timestamp": "2026-08-11T21:46:14Z",
+        "id": "b28ce5f3226f6b4af66790323461414e1881844f",
+        "tree_id": "8b5cafccd3498de2d3a9c94f54f17e3ceb5b6b4a",
+        "message": "bump(SDL): 3.2.22 to 3.4.4\n\nUses\nhttps://github.com/AngelAuraMC/amethyst-prebuilt-libraries/actions/runs/24794713156/\nhttps://github.com/AngelAuraMC/amethyst-prebuilt-libraries/commit/4765f4a95bec7f9daaa7d2a3f4430a6708b17da2\n\nLWJGL3.4.1 SDL binding needs them\n\nHad to modify SDLSurface to be public so we could use it.",
+        "timestamp": "2026-04-22T18:52:48Z",
         "author": {
           "name": "tomikun",
           "email": "60690056+alexytomi@users.noreply.github.com"
@@ -351,47 +351,6 @@
         "deployments_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/deployments"
       }
     },
-    "artifacts": [
-      {
-        "id": 9120201511,
-        "node_id": "MDg6QXJ0aWZhY3Q5MTIwMjAxNTEx",
-        "name": "app-release",
-        "size_in_bytes": 154647114,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9120201511",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9120201511/zip",
-        "expired": false,
-        "digest": "sha256:cfbb9df3eb5e186215ff570559a3f35d58ab3f025f35dbf71be224ba6d1ffb1f",
-        "created_at": "2026-08-11T21:51:00Z",
-        "updated_at": "2026-08-11T21:51:00Z",
-        "expires_at": "2026-11-09T21:46:57Z",
-        "workflow_run": {
-          "id": 31539476613,
-          "repository_id": 984950761,
-          "head_repository_id": 984950761,
-          "head_branch": "fix/forge-installer-i18n",
-          "head_sha": "186af896ad93a5fd82f2e70f90b0a575d399dafb"
-        }
-      },
-      {
-        "id": 9120198623,
-        "node_id": "MDg6QXJ0aWZhY3Q5MTIwMTk4NjIz",
-        "name": "app-debug (recommended)",
-        "size_in_bytes": 166365311,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9120198623",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/9120198623/zip",
-        "expired": false,
-        "digest": "sha256:2ac643346460af9d74561056c75dfb349b1234a95d54a3e441e920f93525e9ea",
-        "created_at": "2026-08-11T21:50:54Z",
-        "updated_at": "2026-08-11T21:50:54Z",
-        "expires_at": "2026-11-09T21:46:57Z",
-        "workflow_run": {
-          "id": 31539476613,
-          "repository_id": 984950761,
-          "head_repository_id": 984950761,
-          "head_branch": "fix/forge-installer-i18n",
-          "head_sha": "186af896ad93a5fd82f2e70f90b0a575d399dafb"
-        }
-      }
-    ]
+    "artifacts": []
   }
 }

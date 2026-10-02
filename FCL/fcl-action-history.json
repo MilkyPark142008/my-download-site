@@ -1,5 +1,37 @@
 [
   {
+    "id": 37001447752,
+    "sha": "ecd4e60a8913bf4d82f909925c3d23699cb34db4",
+    "short_sha": "ecd4e60",
+    "message": "fix(manage): null 版本分发不再崩页面——三处 loadVersion 补 null 守卫\n\nManageUI.profileListener 在选中 Profile 未选版本时把 null 分发到全部\n已创建页面（loadVersion 的合法输入，VersionSettingPage 全局设置模式\n即依赖它），但三个页面按\"必有版本\"假设实现，收到 null 即崩：\n- ModListPage：getResolvedPreservingPatchesVersion(null) →\n  resolvedVersionCache.computeIfAbsent(null) NPE\n- ManagePage：Kotlin 非空参数内在 null 检查 NPE\n- InstallerListPage：getVersion(null) 抛 VersionNotFoundException\n改为 null 时保持现状（内容依赖具体版本，等下一个真实版本分发再加载）；\nWorldList/资源包/光影页本就走全局目录回退、VersionSettingPage 有全局\n模式，不动。回归测试 distributingNullVersionDoesNotCrashCreatedPages：\n创建三个页面后做 null 分发，断言不崩、不重扫、真实版本分发恢复可用。",
+    "created_at": "2026-10-02T11:31:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37001447752"
+  },
+  {
+    "id": 37001447609,
+    "sha": "ecd4e60a8913bf4d82f909925c3d23699cb34db4",
+    "short_sha": "ecd4e60",
+    "message": "fix(manage): null 版本分发不再崩页面——三处 loadVersion 补 null 守卫\n\nManageUI.profileListener 在选中 Profile 未选版本时把 null 分发到全部\n已创建页面（loadVersion 的合法输入，VersionSettingPage 全局设置模式\n即依赖它），但三个页面按\"必有版本\"假设实现，收到 null 即崩：\n- ModListPage：getResolvedPreservingPatchesVersion(null) →\n  resolvedVersionCache.computeIfAbsent(null) NPE\n- ManagePage：Kotlin 非空参数内在 null 检查 NPE\n- InstallerListPage：getVersion(null) 抛 VersionNotFoundException\n改为 null 时保持现状（内容依赖具体版本，等下一个真实版本分发再加载）；\nWorldList/资源包/光影页本就走全局目录回退、VersionSettingPage 有全局\n模式，不动。回归测试 distributingNullVersionDoesNotCrashCreatedPages：\n创建三个页面后做 null 分发，断言不崩、不重扫、真实版本分发恢复可用。",
+    "created_at": "2026-10-02T11:31:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37001447609"
+  },
+  {
+    "id": 36999713964,
+    "sha": "301544116b3165951b00adb9ca25b674d11dd5d0",
+    "short_sha": "3015441",
+    "message": "fix(manage): 扫描进行中错过的模组变化信号在扫描完成后补扫\n\nModsChanged 的重载被 refreshButton 禁用挡下时（扫描中），该 tick 不会\n再投递（debounce 已消费），新下载/更新的模组要等重进页面才出现。\n扫描完成回调里比对 tick，前进过则补一次重扫（串行于当前扫描，不会重叠）。",
+    "created_at": "2026-10-02T02:51:50Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36999713964"
+  },
+  {
+    "id": 36999713719,
+    "sha": "301544116b3165951b00adb9ca25b674d11dd5d0",
+    "short_sha": "3015441",
+    "message": "fix(manage): 扫描进行中错过的模组变化信号在扫描完成后补扫\n\nModsChanged 的重载被 refreshButton 禁用挡下时（扫描中），该 tick 不会\n再投递（debounce 已消费），新下载/更新的模组要等重进页面才出现。\n扫描完成回调里比对 tick，前进过则补一次重扫（串行于当前扫描，不会重叠）。",
+    "created_at": "2026-10-02T02:51:50Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36999713719"
+  },
+  {
     "id": 36953693149,
     "sha": "6fe3806dd07ebeb20d403b1f4a003ce83d194942",
     "short_sha": "6fe3806",
@@ -366,37 +398,5 @@
     "message": "fix: Vulkan 检测补建补丁目录，vkshim divisor 特性位按驱动报告值置位\n\n- 检测用的 cacheDir 未经创建即传给 native：驱动补丁文件在该目录生成，目录缺失时\n  打开输出文件直接失败，Turnip 驱动加载必然回落到系统加载器，检测结论与 vkshim\n  门控随之失真\n- vkshim 补写的 divisor features 节点原先把两个特性位无条件置位，而启用驱动不支持的\n  位会让 vkCreateDevice 返回 VK_ERROR_FEATURE_NOT_PRESENT；改为先经\n  vkGetPhysicalDeviceFeatures2 查询驱动报告的支持情况，应用自带节点时同样把不支持的\n  位临时置回（调用后恢复）",
     "created_at": "2026-09-28T04:49:49Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379344799"
-  },
-  {
-    "id": 36379340799,
-    "sha": "ea7c18e903042af1873d88d4e0e4d2a4fc595572",
-    "short_sha": "ea7c18e",
-    "message": "fix: Vulkan 检测补建补丁目录，vkshim divisor 特性位按驱动报告值置位\n\n- 检测用的 cacheDir 未经创建即传给 native：驱动补丁文件在该目录生成，目录缺失时\n  打开输出文件直接失败，Turnip 驱动加载必然回落到系统加载器，检测结论与 vkshim\n  门控随之失真\n- vkshim 补写的 divisor features 节点原先把两个特性位无条件置位，而启用驱动不支持的\n  位会让 vkCreateDevice 返回 VK_ERROR_FEATURE_NOT_PRESENT；改为先经\n  vkGetPhysicalDeviceFeatures2 查询驱动报告的支持情况，应用自带节点时同样把不支持的\n  位临时置回（调用后恢复）",
-    "created_at": "2026-09-28T04:49:49Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379340799"
-  },
-  {
-    "id": 36379340828,
-    "sha": "ea7c18e903042af1873d88d4e0e4d2a4fc595572",
-    "short_sha": "ea7c18e",
-    "message": "fix: Vulkan 检测补建补丁目录，vkshim divisor 特性位按驱动报告值置位\n\n- 检测用的 cacheDir 未经创建即传给 native：驱动补丁文件在该目录生成，目录缺失时\n  打开输出文件直接失败，Turnip 驱动加载必然回落到系统加载器，检测结论与 vkshim\n  门控随之失真\n- vkshim 补写的 divisor features 节点原先把两个特性位无条件置位，而启用驱动不支持的\n  位会让 vkCreateDevice 返回 VK_ERROR_FEATURE_NOT_PRESENT；改为先经\n  vkGetPhysicalDeviceFeatures2 查询驱动报告的支持情况，应用自带节点时同样把不支持的\n  位临时置回（调用后恢复）",
-    "created_at": "2026-09-28T04:49:49Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379340828"
-  },
-  {
-    "id": 36327621258,
-    "sha": "ed44953c94eb54b060e9a5e28c4c5f60ecd376f4",
-    "short_sha": "ed44953",
-    "message": "fix: 修复 Modrinth 整合包更新读旧配置 TypeToken 误用 CurseManifest 致 CCE 必然回滚；GameOption 键值表与文件观察者改实例级防跨游戏目录串数据，观察者随监听注册启动，修监听移除比较失效；修 ControlDirectionData.equals 参数类型笔误、InstantTypeAdapter catch 误引外层变量；EventBus 事件日志降 FINE；删 rebaseArgs 孤立死代码；同步源码通读报告遗留项状态",
-    "created_at": "2026-09-27T14:53:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36327621258"
-  },
-  {
-    "id": 36327621244,
-    "sha": "ed44953c94eb54b060e9a5e28c4c5f60ecd376f4",
-    "short_sha": "ed44953",
-    "message": "fix: 修复 Modrinth 整合包更新读旧配置 TypeToken 误用 CurseManifest 致 CCE 必然回滚；GameOption 键值表与文件观察者改实例级防跨游戏目录串数据，观察者随监听注册启动，修监听移除比较失效；修 ControlDirectionData.equals 参数类型笔误、InstantTypeAdapter catch 误引外层变量；EventBus 事件日志降 FINE；删 rebaseArgs 孤立死代码；同步源码通读报告遗留项状态",
-    "created_at": "2026-09-27T14:53:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36327621244"
   }
 ]

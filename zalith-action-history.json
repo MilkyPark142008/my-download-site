@@ -1,133 +1,5 @@
 [
   {
-    "id": 36934019673,
-    "sha": "82d52cf111736911c0c4acb77f4910dd5832ca73",
-    "short_sha": "82d52cf",
-    "message": "feat: 新增游戏内帧率图表显示模式\n\n- 帧率捕获记录最近15个时间节点及窗口内最高/最低帧，最高/最低帧离开窗口后延迟重算\n- 图表纵轴向外取整为好数后分5段标注刻度，最后一个点旁标注当前帧率\n- 悬浮球图标在图表模式或显示内存时隐藏\n- 补充简体、繁体中文翻译",
-    "created_at": "2026-10-01T22:15:40Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36934019673"
-  },
-  {
-    "id": 36921590068,
-    "sha": "aef787b2fc2fd451a4cd7a05c7a4605a474325a4",
-    "short_sha": "aef787b",
-    "message": "Merge branch 'weblate_main'",
-    "created_at": "2026-10-01T20:26:21Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36921590068"
-  },
-  {
-    "id": 36921355634,
-    "sha": "e67cb5866cc5b86a072dce2617b0290a4d8d20ca",
-    "short_sha": "e67cb58",
-    "message": "Merge pull request #1990 from ZalithLauncher/feat/modify-version\n\nfeat: 移除更新加载器/安装加载器、覆盖安装功能 & 加入修改版本功能",
-    "created_at": "2026-10-01T20:24:36Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36921355634"
-  },
-  {
-    "id": 36807800650,
-    "sha": "38f0e558619a394a64a910f34cc135c467684c5a",
-    "short_sha": "38f0e55",
-    "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1457 of 1457 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
-    "created_at": "2026-10-01T02:51:22Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36807800650"
-  },
-  {
-    "id": 36786401843,
-    "sha": "9b5123c931f1e361505cf953af0e4170868a253d",
-    "short_sha": "9b5123c",
-    "message": "fix: 修复修改版本页加载器预选竞态与提示缺失\n\n- 预选按主加载器优先级依次执行，高优先级列表未加载完成时低优先级等待，消除列表加载顺序导致的竞态\n- OptiFine 与 Forge 的兼容性检查升级为按已选版本成对校验，与列表条目过滤规则一致，不兼容时次要加载器为主加载器让位并提示\n- 切换 Minecraft 版本后，无法匹配的已安装加载器按移除判断，不再保留原样，同时抑制保留原样提示",
-    "created_at": "2026-09-30T22:34:26Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36786401843"
-  },
-  {
-    "id": 36780389179,
-    "sha": "47efb26eb36061001d915362c53b2c44fb5d09ec",
-    "short_sha": "47efb26",
-    "message": "feat: 多加载器识别与修改版本适配",
-    "created_at": "2026-09-30T21:35:07Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36780389179"
-  },
-  {
-    "id": 36727150566,
-    "sha": "9296f29dd142a03a35dc68920327ce9a42b1797f",
-    "short_sha": "9296f29",
-    "message": "Merge branch 'main' into feat/modify-version",
-    "created_at": "2026-09-30T14:10:37Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36727150566"
-  },
-  {
-    "id": 36727115920,
-    "sha": "3f1f126c65da7871c858d71da4fa68be4848de4b",
-    "short_sha": "3f1f126",
-    "message": "chore: 调整主界面平板布局下玩家头像的 padding 值",
-    "created_at": "2026-09-30T14:10:23Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36727115920"
-  },
-  {
-    "id": 36726454950,
-    "sha": "e594c5533ab0129724a02176a6797e79e5025ad5",
-    "short_sha": "e594c55",
-    "message": "fix: 预选加载器时校验兼容性，修改版本始终完整下载原版文件\n- 预选已安装加载器前检查其与用户已选择加载器的兼容性，冲突时放弃预选（用户选择优先）\n- 修改版本时无条件执行 Minecraft 本体下载，保证原版 Jar 干净可用并补齐缺失的 libraries/assets",
-    "created_at": "2026-09-30T14:04:14Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36726454950"
-  },
-  {
-    "id": 36711066782,
-    "sha": "ea3e90657fa42bec9633c63ae45f797ae3892c05",
-    "short_sha": "ea3e906",
-    "message": "Merge branch 'main' into feat/modify-version",
-    "created_at": "2026-09-30T11:50:50Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36711066782"
-  },
-  {
-    "id": 36710969847,
-    "sha": "8bc107c14e8fafd0990777cfed686c30313a7bc9",
-    "short_sha": "8bc107c",
-    "message": "Merge pull request #1991 from ZalithLauncher/feat/installer_log_display\n\nfeat: 改良模组加载器安装的日志显示",
-    "created_at": "2026-09-30T11:50:07Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36710969847"
-  },
-  {
-    "id": 36710913518,
-    "sha": "28e373c91cd19f4b6ea6cb6fe666bdff41f4f348",
-    "short_sha": "28e373c",
-    "message": "feat: 改良模组加载器安装的日志显示\n\n- 日志布局改为首行日志写入时才拉起，由任务控制；OptiFine 不再创建日志会话\n- 任务流与日志输出等宽 1:1，取消按钮移至对话框底部\n- 安装日志输出限制在 256 行",
-    "created_at": "2026-09-30T11:47:57Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36710913518"
-  },
-  {
-    "id": 36705921060,
-    "sha": "53b0c8d8f5ce4de76dd360fb2a4bf06e00b4d8c2",
-    "short_sha": "53b0c8d",
-    "message": "fix: 修改版本名称后出现已损坏的旧版本",
-    "created_at": "2026-09-30T11:00:47Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36705921060"
-  },
-  {
-    "id": 36696609981,
-    "sha": "70e8eea01662b7d8c9d9fb1736a614b55ba5502a",
-    "short_sha": "70e8eea",
-    "message": "feat: 为繁体中文添加翻译",
-    "created_at": "2026-09-30T09:30:47Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36696609981"
-  },
-  {
-    "id": 36695518078,
-    "sha": "2d0f7983db7c93e166bfd62249d405352e574665",
-    "short_sha": "2d0f798",
-    "message": "chore: 直接展示当前的 Minecraft，移除“未变更”文本",
-    "created_at": "2026-09-30T09:20:34Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36695518078"
-  },
-  {
-    "id": 36694214723,
-    "sha": "9f87f01e0804542e8c750f923e3e9ea9c454fd2e",
-    "short_sha": "9f87f01",
-    "message": "feat: 新增修改版本屏幕与安装流程\n\n- 管理版本屏幕新增\"修改版本\"入口，单屏对照当前安装与目标修改的 Minecraft 版本、模组加载器版本\n- 支持变更 Minecraft 本体版本，加载器的更换、升级与移除，互斥关系沿用下载屏的判断逻辑\n- 安装流程由 MainActivity 持有的 ModifyVersionViewModel 驱动，确认、进度与结果对话框不依赖版本设置屏幕的存活，任务开始后立即返回主界面\n- 修改完成后支持版本重命名，并同步主界面版本卡片记录\n- 复用 SelectGameVersionScreen 供选择目标 Minecraft 版本\n- 新增 TextTransition 公共组件展示\"旧值 → 新值\"过渡",
-    "created_at": "2026-09-29T23:39:09Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36694214723"
-  },
-  {
     "id": 36578265116,
     "sha": "05697fbbe293e822f542cafa53d2d7ea3556611c",
     "short_sha": "05697fb",
@@ -160,52 +32,12 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36578008221"
   },
   {
-    "id": 36575230002,
-    "sha": "2d0c2a9c3db5e07f91ab994e895cc62a04faee80",
-    "short_sha": "2d0c2a9",
-    "message": "Merge pull request #1985 from ZalithLauncher/chore/version_card_content\n\nchore: 调整版本卡片内容布局",
-    "created_at": "2026-09-29T13:27:26Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36575230002"
-  },
-  {
-    "id": 36575165823,
-    "sha": "9ff6054fbb739f69062b25ae3bc50b0526c449f0",
-    "short_sha": "9ff6054",
-    "message": "chore: 调整版本卡片内容布局",
-    "created_at": "2026-09-29T13:26:49Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36575165823"
-  },
-  {
     "id": 36570960475,
     "sha": "fb34329c8ccdb683829a04bb277379f30ccc77f5",
     "short_sha": "fb34329",
     "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1454 of 1454 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
     "created_at": "2026-09-29T12:51:29Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36570960475"
-  },
-  {
-    "id": 36570865154,
-    "sha": "c2c608971d24784c445914bbd739c41aeb92424e",
-    "short_sha": "c2c6089",
-    "message": "upload .zcodeignore",
-    "created_at": "2026-09-29T12:50:35Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36570865154"
-  },
-  {
-    "id": 36560810161,
-    "sha": "b1ac3b58bf27a0206821563a6c96a75e0e1959fc",
-    "short_sha": "b1ac3b5",
-    "message": "Merge pull request #1984 from ZalithLauncher/refactor/background-glass-node\n\nrefactor: 使用 Modifier.Node 重写背景玻璃模糊并移除 Haze 依赖",
-    "created_at": "2026-09-29T11:17:19Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36560810161"
-  },
-  {
-    "id": 36560388939,
-    "sha": "e832e5ec22d5b5c7d95401c2ca87e02b76c144e9",
-    "short_sha": "e832e5e",
-    "message": "fix: 切换页面导致 GIF 背景停止播放\n\nGIF 动画依赖 MovieDrawable 的「绘制 → invalidateSelf → 再绘制」自续失效循环，\n任何一帧失效丢失都会让动画永久冻结；由帧时钟显式逐帧驱动重绘，保证循环自愈。\n背景文件不保留原始扩展名，复用 Coil 的 DecodeUtils.isGif 按文件头魔数识别 GIF。\n\nFixes #1966",
-    "created_at": "2026-09-29T11:10:20Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36560388939"
   },
   {
     "id": 36554828919,
@@ -264,139 +96,307 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36392640847"
   },
   {
-    "id": 36358294497,
-    "sha": "971dc83f19f3b4f6de782e3c37ce52e918c3e21b",
-    "short_sha": "971dc83",
-    "message": "Merge pull request #1974 from ZalithLauncher/refactor/main_screen\n\nrefactor: 重构平板主界面布局",
-    "created_at": "2026-09-27T23:19:15Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36358294497"
-  },
-  {
-    "id": 36358275965,
-    "sha": "b4ff2f5dc3384395d08e26e805d421e4211979a7",
-    "short_sha": "b4ff2f5",
-    "message": "refactor: 重构平板主界面布局",
-    "created_at": "2026-09-27T23:18:46Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36358275965"
-  },
-  {
-    "id": 36354493011,
-    "sha": "9a8d2516a3a026704c25db0e3df534a56ca646a4",
-    "short_sha": "9a8d251",
-    "message": "Merge pull request #1973 from ZalithLauncher/chore/upgrade_dialog\n\nchore: 调整启动器更新对话框的样式",
-    "created_at": "2026-09-27T22:12:47Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36354493011"
-  },
-  {
-    "id": 36354466953,
-    "sha": "ecdd7cfa8be317e75d09928482aa5b26dd0fd759",
-    "short_sha": "ecdd7cf",
-    "message": "chore: 调整启动器更新对话框的样式",
-    "created_at": "2026-09-27T22:12:16Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36354466953"
-  },
-  {
-    "id": 36353398442,
-    "sha": "35196207ab0d4c846b6dc3e93a1f3b1c811def88",
-    "short_sha": "3519620",
-    "message": "Merge pull request #1972 from ZalithLauncher/feat/card-grid-chain-displacement\n\nfeat: 优化主界面卡片换位逻辑，卡片拖动让位改为链式开门语义",
-    "created_at": "2026-09-27T21:54:15Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36353398442"
-  },
-  {
-    "id": 36353330779,
-    "sha": "6cd1aa00c3e74aff2228717dc397ecbd6df3f094",
-    "short_sha": "6cd1aa0",
-    "message": "feat: 卡片拖动让位改为链式开门语义\n\n- GridEngine 新增 slideChain：被压卡片沿让位方向逐格推动，路径上的卡片级联随动，汇入沿途空洞或网格尾部\n- 让位方向依次尝试指针反方向、反向与垂直轴正反向，纵向向下开门必定成功\n- 让位方向偏移按卡片自身跨度归一化，修复宽卡片上横向绝对偏移天然占优导致的让位死路\n- 卡片持续被压期间锁定让位方向，避免指针扫过卡片中心时来回翻转\n- 会话卡拖动/缩放期间幽灵化显示，落点以空槽浅填充与描边表达\n- 修复未结算的被压卡片对链条不可见导致的结算重叠问题",
-    "created_at": "2026-09-27T21:52:33Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36353330779"
-  },
-  {
-    "id": 36334788827,
-    "sha": "f34ef9c3afe8e79eb46e58c025e7962e49db4106",
-    "short_sha": "f34ef9c",
-    "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1451 of 1451 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
-    "created_at": "2026-09-27T16:51:28Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36334788827"
-  },
-  {
-    "id": 36334432540,
-    "sha": "b8529d3ea8859aa754c48226fbd25ea873362029",
-    "short_sha": "b8529d3",
-    "message": "Merge pull request #1971 from ZalithLauncher/fix/cleanroom-ime-key-events\n\nfix: 修复 Cleanroom 输入法输入被误判为按键",
-    "created_at": "2026-09-27T16:45:44Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36334432540"
-  },
-  {
-    "id": 36334406276,
-    "sha": "058d98c9c00e6255a42f66077587927fb47c5a33",
-    "short_sha": "058d98c",
-    "message": "Merge branch 'main' into fix/cleanroom-ime-key-events",
-    "created_at": "2026-09-27T16:30:20Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36334406276"
-  },
-  {
-    "id": 36333472282,
-    "sha": "99d68b29ae313831e8b328e830244eb2db5d0c18",
-    "short_sha": "99d68b2",
-    "message": "fix: MioLibPatcher 注册位置错误导致安装器无法解析参数",
-    "created_at": "2026-09-27T16:30:00Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36333472282"
-  },
-  {
-    "id": 36331256409,
-    "sha": "692f79e7770e7a2e628bce7f73792a448a67d3c6",
-    "short_sha": "692f79e",
-    "message": "Merge branch 'main' into fix/cleanroom-ime-key-events",
-    "created_at": "2026-09-27T15:52:15Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36331256409"
-  },
-  {
-    "id": 36331115614,
-    "sha": "5fde4e89443417e90fc3f06140d465e5f7257549",
-    "short_sha": "5fde4e8",
-    "message": "Merge pull request #1969 from ZalithLauncher/feat/festival-effects\n\nchore: 调整 FestivalTapObserver 为事件订阅形式",
-    "created_at": "2026-09-27T15:51:55Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36331115614"
-  },
-  {
-    "id": 36331078411,
-    "sha": "2f92764dc876be3f797cef94c3a7d1324a71ad7b",
-    "short_sha": "2f92764",
-    "message": "chore: 调整 FestivalTapObserver 为事件订阅形式",
-    "created_at": "2026-09-27T15:51:10Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36331078411"
-  },
-  {
-    "id": 36330442747,
-    "sha": "83a4876a436d1618c45d4c4fd7933b23ac47605c",
-    "short_sha": "83a4876",
-    "message": "fix: Cleanroom 库加载顺序修复，原版旧库遮蔽新库导致启动崩溃",
-    "created_at": "2026-09-27T15:40:35Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36330442747"
-  },
-  {
-    "id": 36328243661,
-    "sha": "7b24ce83f8a825999f6899aa4d040d486fb32014",
-    "short_sha": "7b24ce8",
-    "message": "fix: 检查 Rule 时避免 null 对象 equals 调用",
-    "created_at": "2026-09-27T15:04:54Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36328243661"
-  },
-  {
-    "id": 36328211261,
-    "sha": "e6ac4df7c2f40a21d696c01a71e9c4a6c4280430",
-    "short_sha": "e6ac4df",
-    "message": "fix: 输入法字符类按键事件不再以游戏按键形式转发",
-    "created_at": "2026-09-27T15:04:13Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36328211261"
-  },
-  {
     "id": 36313237023,
     "sha": "6e89c9b6d07874cd08d41c1c867d26daa387a442",
     "short_sha": "6e89c9b",
     "message": "Merge pull request #1964 from ZalithLauncher/fix/sdl-messagebox-message\n\nfix: SDL 消息框 message 误设为标题导致错误信息显示不全",
     "created_at": "2026-09-27T10:39:29Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36313237023"
+  },
+  {
+    "id": 36313191626,
+    "sha": "be68425f6defa5453853b9d91c073cfc14f2570f",
+    "short_sha": "be68425",
+    "message": "fix: SDL 消息框 message 误设为标题导致错误信息显示不全",
+    "created_at": "2026-09-27T10:38:31Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36313191626"
+  },
+  {
+    "id": 36310815417,
+    "sha": "6383d9b92c9493be3fb323b05f85f762a9ec12e5",
+    "short_sha": "6383d9b",
+    "message": "Merge pull request #1963 from ZalithLauncher/feat/card-grid-free-placement\n\nfeat: 卡片网格支持自由摆放，允许卡片间纵向留空",
+    "created_at": "2026-09-27T09:53:44Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36310815417"
+  },
+  {
+    "id": 36310746134,
+    "sha": "bd90ed99d59c4ae4da6495149b479abb3386bcb0",
+    "short_sha": "bd90ed9",
+    "message": "feat: 卡片网格支持自由摆放，允许卡片间纵向留空\n\n移除垂直压实不变量：拖动/缩放松手落在吸附预览的精确位置，\n删除卡片留下空洞，加载校验保留持久化布局的纵向空隙；\n添加卡片维持最上最左优先填洞，列数变化重排维持贪心打包。\n\nGridEngine.compact 无剩余调用方随之删除；validate 输出\n恢复按阅读顺序返回的契约，保证幂等。",
+    "created_at": "2026-09-27T09:52:08Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36310746134"
+  },
+  {
+    "id": 36307066434,
+    "sha": "e43c8a11a6e1103f8a11023158999116d2db5f0f",
+    "short_sha": "e43c8a1",
+    "message": "Merge pull request #1957 from ZalithLauncher/feat/lwjgl3ify-support\n\nfeat: 兼容 lwjgl3ify & 使用 MioLauncherWrapper",
+    "created_at": "2026-09-27T08:42:51Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36307066434"
+  },
+  {
+    "id": 36257972285,
+    "sha": "47a1a556a40647ead039f0cdcde29f6ee0fef982",
+    "short_sha": "47a1a55",
+    "message": "feat: 兼容 lwjgl3ify\n\n支持开箱即玩 GT New Horizons（MC 1.7.10 + lwjgl3ify/RFB，Java 17+），\n参考 FCL 的 Lwjgl3ifyPatcher（https://github.com/FCL-Team/FoldCraftLauncher/blob/main/FCL/src/main/java/com/tungsten/fcl/game/Lwjgl3ifyPatcher.java）：\n\n- 新增 Lwjgl3ifyPatcher：检测 mods 中的 lwjgl3ify，提取其内嵌的\n  RetroFuturaBootstrap 启动清单（RFB 主类、--add-opens JVM 参数、\n  1.7.10-Forge 全量依赖闭包）在内存中合并进当前版本清单，\n  版本 JSON 不落盘；幂等可重复，兼容其他启动器已写入补丁的版本 JSON，\n  lwjgl3ify 升级后自动重新合并\n- 从 jar 内嵌的 forgePatches.zip 离线还原该构件（GTNH Maven 无国内\n  镜像），写临时文件后原子替换；旧版缺下载地址的库按 groupId\n  兜底改写 Maven 源\n- 启动流程新增\"检查模组\"任务（checkEnableTouchProxy 扩展为\n  checkMods），置于游戏文件校验之前，一次模组扫描同时驱动\n  touchcontroller 代理与 lwjgl3ify 补丁；补丁命中时经\n  GameLibDownloader 下载补丁引入的支持库（已存在文件自动跳过）\n- lwjgl3ify 实例自动补写 config/lwjgl3ify.cfg 关闭桌面快捷方式\n  写入，并注入 XDG_DATA_HOME 指向实例可写目录，修复 Android 上\n  游戏静默退出\n- caciocavallo17 资产更新至 jdk25 修复版构建，version 1→7 触发\n  设备重解压，修复 jre25 下 AWT 回退 headless",
+    "created_at": "2026-09-26T17:08:17Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36257972285"
+  },
+  {
+    "id": 36252865222,
+    "sha": "718b699e1d4553857bc636e6a66abf8d71039547",
+    "short_sha": "718b699",
+    "message": "Merge pull request #1956 from ZalithLauncher/feat/festival-effects\n\nfeat: 为多个节日添加彩蛋效果",
+    "created_at": "2026-09-26T15:41:11Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36252865222"
+  },
+  {
+    "id": 36252801589,
+    "sha": "718b699e1d4553857bc636e6a66abf8d71039547",
+    "short_sha": "718b699",
+    "message": "Merge pull request #1956 from ZalithLauncher/feat/festival-effects\n\nfeat: 为多个节日添加彩蛋效果",
+    "created_at": "2026-09-26T15:41:11Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36252801589"
+  },
+  {
+    "id": 36252687343,
+    "sha": "453d1a7728cb7d683a7791bd2b5423139fa9e68f",
+    "short_sha": "453d1a7",
+    "message": "feat: 优化雪花粒子性能",
+    "created_at": "2026-09-26T15:39:08Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36252687343"
+  },
+  {
+    "id": 36248275112,
+    "sha": "ca912f6bb44d82ec8178ee60991605744a4443dd",
+    "short_sha": "ca912f6",
+    "message": "feat: 新增万圣节、情人节与七夕彩蛋效果",
+    "created_at": "2026-09-26T14:21:46Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36248275112"
+  },
+  {
+    "id": 36239855565,
+    "sha": "c86dc8809325a6f2f025898b46184e0234d7dd4d",
+    "short_sha": "c86dc88",
+    "message": "Merge branch 'main' into feat/festival-effects",
+    "created_at": "2026-09-26T11:46:07Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36239855565"
+  },
+  {
+    "id": 36239816460,
+    "sha": "1a01c58a9f9bca1b007939c069a43d9011b19e9e",
+    "short_sha": "1a01c58",
+    "message": "Merge remote-tracking branch 'origin/weblate_main'\n\n# Conflicts:\n#\tZalithLauncher/src/main/res/values-in/strings.xml\n#\tZalithLauncher/src/main/res/values-pt-rBR/strings.xml",
+    "created_at": "2026-09-26T11:44:55Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36239816460"
+  },
+  {
+    "id": 36239793638,
+    "sha": "1a01c58a9f9bca1b007939c069a43d9011b19e9e",
+    "short_sha": "1a01c58",
+    "message": "Merge remote-tracking branch 'origin/weblate_main'\n\n# Conflicts:\n#\tZalithLauncher/src/main/res/values-in/strings.xml\n#\tZalithLauncher/src/main/res/values-pt-rBR/strings.xml",
+    "created_at": "2026-09-26T11:44:55Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36239793638"
+  },
+  {
+    "id": 36239620736,
+    "sha": "22fa793eae89eb4f87ea254db0a2c62e42710c02",
+    "short_sha": "22fa793",
+    "message": "Merge pull request #1950 from ZalithLauncher/feature/guide-library\n\nfeat: 主界面 & 控制布局编辑器加入新手引导",
+    "created_at": "2026-09-26T11:41:37Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36239620736"
+  },
+  {
+    "id": 36239257706,
+    "sha": "be4428e4fae778b1dc63b3f65d9069bea11912ec",
+    "short_sha": "be4428e",
+    "message": "feat: 新增控制布局引导",
+    "created_at": "2026-09-26T11:34:31Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36239257706"
+  },
+  {
+    "id": 36236224634,
+    "sha": "fd05f1bd405bdba04696d7ac3ae7329a82907036",
+    "short_sha": "fd05f1b",
+    "message": "fix: 悬浮球手势尊重消费状态，引导拦截时不再误触发点击与保存",
+    "created_at": "2026-09-26T10:33:22Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36236224634"
+  },
+  {
+    "id": 36207340729,
+    "sha": "16e28a7779b05887f80ca7381bfd1fd9ea64dd9b",
+    "short_sha": "16e28a7",
+    "message": "feat: Guide 库镂空出现与移除时自锚点中心弹性缩放过渡",
+    "created_at": "2026-09-26T01:06:42Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36207340729"
+  },
+  {
+    "id": 36204968326,
+    "sha": "ffc7d1c55847050a420d81567da03e29af743b6a",
+    "short_sha": "ffc7d1c",
+    "message": "feat: Guide 库镂空样式支持按节点声明并随步骤过渡平滑变化",
+    "created_at": "2026-09-26T00:27:34Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36204968326"
+  },
+  {
+    "id": 36201579201,
+    "sha": "ba8d313be3510978dbefbaf60b28cac80e1ae939",
+    "short_sha": "ba8d313",
+    "message": "feat: Guide 库新增滚动布局适配",
+    "created_at": "2026-09-25T23:34:51Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36201579201"
+  },
+  {
+    "id": 36173492800,
+    "sha": "de843971c435b3300f0677d3d3cda768d9163ac2",
+    "short_sha": "de84397",
+    "message": "fix: 日志输出内 key 输出的是经混淆的类名",
+    "created_at": "2026-09-25T18:26:50Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36173492800"
+  },
+  {
+    "id": 36171508691,
+    "sha": "73a73a438ea888fc1ddbfb2e0baac485d2433cb3",
+    "short_sha": "73a73a4",
+    "message": "feat: 主界面新手引导",
+    "created_at": "2026-09-25T18:08:10Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36171508691"
+  },
+  {
+    "id": 36164349310,
+    "sha": "a688aa8a2028184f949d242507c5ed4568212364",
+    "short_sha": "a688aa8",
+    "message": "feat: 新增 Guide 引导库",
+    "created_at": "2026-09-25T15:09:41Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36164349310"
+  },
+  {
+    "id": 36163451176,
+    "sha": "a88fa3d460a18c9b1845ed404455a27d5801ac05",
+    "short_sha": "a88fa3d",
+    "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1427 of 1427 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
+    "created_at": "2026-09-25T16:51:37Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36163451176"
+  },
+  {
+    "id": 36107434502,
+    "sha": "e383ab72c4aaeda71579b50e06981888e8a336bd",
+    "short_sha": "e383ab7",
+    "message": "feat: 重构节日彩蛋效果层",
+    "created_at": "2026-09-25T07:16:56Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36107434502"
+  },
+  {
+    "id": 36013123407,
+    "sha": "044a60a3ab49ab108b387a5cd439a752b6d918ef",
+    "short_sha": "044a60a",
+    "message": "bump version to 2.6_hotfix",
+    "created_at": "2026-09-24T14:25:44Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36013123407"
+  },
+  {
+    "id": 36012752300,
+    "sha": "044a60a3ab49ab108b387a5cd439a752b6d918ef",
+    "short_sha": "044a60a",
+    "message": "bump version to 2.6_hotfix",
+    "created_at": "2026-09-24T14:25:44Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36012752300"
+  },
+  {
+    "id": 36012676318,
+    "sha": "8ac6918dfbf2434ac97030e673cf441371a442b0",
+    "short_sha": "8ac6918",
+    "message": "fix: 关闭页面全屏化后触摸坐标偏移",
+    "created_at": "2026-09-24T14:25:06Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36012676318"
+  },
+  {
+    "id": 36007610288,
+    "sha": "b80f96bd2a6c619b8623a48608f0e417b5594971",
+    "short_sha": "b80f96b",
+    "message": "fix: 超宽窗口下主界面卡片宽度停滞",
+    "created_at": "2026-09-24T13:43:08Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36007610288"
+  },
+  {
+    "id": 35996656783,
+    "sha": "781e5b3e9aca3ae8bac215b0154696e216899fe1",
+    "short_sha": "781e5b3",
+    "message": "bump version to 2.6",
+    "created_at": "2026-09-24T11:53:57Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35996656783"
+  },
+  {
+    "id": 35995744138,
+    "sha": "781e5b3e9aca3ae8bac215b0154696e216899fe1",
+    "short_sha": "781e5b3",
+    "message": "bump version to 2.6",
+    "created_at": "2026-09-24T11:53:57Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35995744138"
+  },
+  {
+    "id": 35995626308,
+    "sha": "9c3208592fc08136f0260f115489afdd5f17d3f2",
+    "short_sha": "9c32085",
+    "message": "fix: 提起动画未取消导致快速松手后 ActionMenu 卡在放大态",
+    "created_at": "2026-09-24T11:52:22Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35995626308"
+  },
+  {
+    "id": 35993000265,
+    "sha": "d277751b8338832bd0beeb67aba64135d7f4064a",
+    "short_sha": "d277751",
+    "message": "Merge pull request #1937 from ZalithLauncher/weblate_main\n\nWeblate main",
+    "created_at": "2026-09-24T11:26:08Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35993000265"
+  },
+  {
+    "id": 35992833779,
+    "sha": "6b2f5f54b13c6caeb65af4293b5c9bd580a400e5",
+    "short_sha": "6b2f5f5",
+    "message": "Merge pull request #1936 from ZalithLauncher/feat/main-action-menu\n\nfix: 主界面操作菜单栏长按与版本列表入口长按冲突",
+    "created_at": "2026-09-24T11:24:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35992833779"
+  },
+  {
+    "id": 35992786510,
+    "sha": "5d7ec1b0496f7b4c529f93f3cb9b9f75363b357c",
+    "short_sha": "5d7ec1b",
+    "message": "refactor: 重构 ActionMenu 布局",
+    "created_at": "2026-09-24T11:23:50Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35992786510"
+  },
+  {
+    "id": 35984230187,
+    "sha": "6cf6e739ed2e54c1d9f1fd9a26d76012c883a4de",
+    "short_sha": "6cf6e73",
+    "message": "fix: 主界面操作菜单栏长按与版本列表入口长按冲突",
+    "created_at": "2026-09-24T09:54:46Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35984230187"
+  },
+  {
+    "id": 35977136630,
+    "sha": "713051c57b625295f19fbb30a9c6fa328398e4ff",
+    "short_sha": "713051c",
+    "message": "Merge pull request #1934 from ZalithLauncher/feat/main-action-menu\n\nfeat: 主界面操作菜单栏支持长按提起拖拽换边",
+    "created_at": "2026-09-24T08:45:36Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35977136630"
+  },
+  {
+    "id": 35977024434,
+    "sha": "dc23cffe568723a040702a38ee595eeb5fee171c",
+    "short_sha": "dc23cff",
+    "message": "fix: 卡片网格播种与几何测量竞态导致卡片概率性消失及布局损坏",
+    "created_at": "2026-09-24T08:42:36Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35977024434"
+  },
+  {
+    "id": 35971650234,
+    "sha": "73552688f4f21276a3370469bcc112121f502031",
+    "short_sha": "7355268",
+    "message": "feat: 主界面操作菜单栏支持长按提起拖拽换边",
+    "created_at": "2026-09-24T07:48:30Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35971650234"
   }
 ]

@@ -1,23 +1,47 @@
 {"run": {
-  "id": 36953693149,
+  "id": 37001447752,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAImpyb3Q",
-  "head_branch": "fix/issue-1891-skin-view-reset",
-  "head_sha": "6fe3806dd07ebeb20d403b1f4a003ce83d194942",
+  "node_id": "WFR_kwLOIQeFGs8AAAAInXVJSA",
+  "head_branch": "refactor/ui-viewmodel-loading",
+  "head_sha": "ecd4e60a8913bf4d82f909925c3d23699cb34db4",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "fix: 修复旧格式（64x32）皮肤切页面后渲染错乱：renderer.texture 保存归一化后位图，surface 重建重上传不再…",
-  "run_number": 199,
+  "display_title": "fix(manage): null 版本分发不再崩页面——三处 loadVersion 补 null 守卫",
+  "run_number": 201,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 100096742891,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAXTjsV6w",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36953693149",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36953693149",
-  "pull_requests": [],
-  "created_at": "2026-10-02T02:01:37Z",
-  "updated_at": "2026-10-02T02:03:45Z",
+  "check_suite_id": 100222734169,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAXVb2PWQ",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37001447752",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37001447752",
+  "pull_requests": [
+    {
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/pulls/1896",
+      "id": 4715941997,
+      "number": 1896,
+      "head": {
+        "ref": "refactor/ui-viewmodel-loading",
+        "sha": "ecd4e60a8913bf4d82f909925c3d23699cb34db4",
+        "repo": {
+          "id": 554140954,
+          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      },
+      "base": {
+        "ref": "main",
+        "sha": "21e0f7e321f8504734a8ab8bc88628307a2f0c36",
+        "repo": {
+          "id": 554140954,
+          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      }
+    }
+  ],
+  "created_at": "2026-10-02T11:31:10Z",
+  "updated_at": "2026-10-02T11:32:22Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -41,7 +65,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-10-02T02:01:37Z",
+  "run_started_at": "2026-10-02T11:31:10Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -63,19 +87,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36953693149/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36953693149/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/100096742891",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36953693149/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36953693149/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/36953693149/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37001447752/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37001447752/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/100222734169",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37001447752/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37001447752/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37001447752/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "6fe3806dd07ebeb20d403b1f4a003ce83d194942",
-    "tree_id": "0bd03ef90500460f677ecbaa0ab77bb8e4c59c95",
-    "message": "fix: 修复旧格式（64x32）皮肤切页面后渲染错乱：renderer.texture 保存归一化后位图，surface 重建重上传不再按原始布局被 64x64 UV 采样错位（#1891）",
-    "timestamp": "2026-10-02T02:01:33Z",
+    "id": "ecd4e60a8913bf4d82f909925c3d23699cb34db4",
+    "tree_id": "4f9acdad94cdcaa6053584dddaeddd5dcc070255",
+    "message": "fix(manage): null 版本分发不再崩页面——三处 loadVersion 补 null 守卫\n\nManageUI.profileListener 在选中 Profile 未选版本时把 null 分发到全部\n已创建页面（loadVersion 的合法输入，VersionSettingPage 全局设置模式\n即依赖它），但三个页面按\"必有版本\"假设实现，收到 null 即崩：\n- ModListPage：getResolvedPreservingPatchesVersion(null) →\n  resolvedVersionCache.computeIfAbsent(null) NPE\n- ManagePage：Kotlin 非空参数内在 null 检查 NPE\n- InstallerListPage：getVersion(null) 抛 VersionNotFoundException\n改为 null 时保持现状（内容依赖具体版本，等下一个真实版本分发再加载）；\nWorldList/资源包/光影页本就走全局目录回退、VersionSettingPage 有全局\n模式，不动。回归测试 distributingNullVersionDoesNotCrashCreatedPages：\n创建三个页面后做 null 分发，断言不崩、不重扫、真实版本分发恢复可用。",
+    "timestamp": "2026-10-02T11:31:06Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
