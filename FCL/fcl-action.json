@@ -1,28 +1,28 @@
 {"run": {
-  "id": 37100049493,
+  "id": 37122032955,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAIo1XUVQ",
-  "head_branch": "fix/installer-process-cancel",
-  "head_sha": "0d0d3d43b84ca87e04cc81f1285ca8080231f9c5",
+  "node_id": "WFR_kwLOIQeFGs8AAAAIpKVFOw",
+  "head_branch": "main",
+  "head_sha": "1e828501f1c8eaea3ef0e44a66ad0640475a413a",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "fix: 安装器进程运行器协程化，修复 Forge/NeoForge/OptiFine 安装卡死且无法取消",
-  "run_number": 209,
-  "event": "pull_request",
+  "display_title": "Update ClassicAccountLoginDialog.kt",
+  "run_number": 210,
+  "event": "push",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 100493599892,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAXZeKklA",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37100049493",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37100049493",
+  "check_suite_id": 100551647965,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAXaVhi3Q",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37122032955",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37122032955",
   "pull_requests": [
     {
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/pulls/1903",
-      "id": 4723597971,
-      "number": 1903,
+      "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
+      "id": 4452442002,
+      "number": 364,
       "head": {
-        "ref": "fix/installer-process-cancel",
-        "sha": "0d0d3d43b84ca87e04cc81f1285ca8080231f9c5",
+        "ref": "main",
+        "sha": "1e828501f1c8eaea3ef0e44a66ad0640475a413a",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -31,17 +31,63 @@
       },
       "base": {
         "ref": "main",
-        "sha": "21e0f7e321f8504734a8ab8bc88628307a2f0c36",
+        "sha": "97dc0f6c4a5f5fada8b86aa68e1e9d4b189d1b25",
+        "repo": {
+          "id": 1026321990,
+          "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher/pulls/37",
+      "id": 4452270030,
+      "number": 37,
+      "head": {
+        "ref": "main",
+        "sha": "1e828501f1c8eaea3ef0e44a66ad0640475a413a",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
           "name": "FoldCraftLauncher"
         }
+      },
+      "base": {
+        "ref": "main",
+        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
+        "repo": {
+          "id": 1335592322,
+          "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher/pulls/400",
+      "id": 4451484148,
+      "number": 400,
+      "head": {
+        "ref": "main",
+        "sha": "1e828501f1c8eaea3ef0e44a66ad0640475a413a",
+        "repo": {
+          "id": 554140954,
+          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      },
+      "base": {
+        "ref": "main",
+        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
+        "repo": {
+          "id": 835628097,
+          "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
       }
     }
   ],
-  "created_at": "2026-10-03T05:30:38Z",
-  "updated_at": "2026-10-03T05:31:54Z",
+  "created_at": "2026-10-03T12:10:52Z",
+  "updated_at": "2026-10-03T12:12:10Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -65,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-10-03T05:30:38Z",
+  "run_started_at": "2026-10-03T12:10:52Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -87,19 +133,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37100049493/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37100049493/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/100493599892",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37100049493/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37100049493/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37100049493/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37122032955/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37122032955/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/100551647965",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37122032955/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37122032955/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37122032955/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "0d0d3d43b84ca87e04cc81f1285ca8080231f9c5",
-    "tree_id": "66e53c6447a2c6b4009022bef1f7f8f8312f8525",
-    "message": "fix: 安装器单次尝试绝对时限收紧至 10 分钟\n\n无进展判定 3 分钟已覆盖挂死场景，绝对上限仅兜底 CPU 持续增长但\n永不结束的病态场景；用户长时间无反馈时多半会自行取消，10 分钟足够。",
-    "timestamp": "2026-10-03T05:30:31Z",
+    "id": "1e828501f1c8eaea3ef0e44a66ad0640475a413a",
+    "tree_id": "ec199cbad90e5d0088fa543be5700d1a71a29f7e",
+    "message": "Update ClassicAccountLoginDialog.kt",
+    "timestamp": "2026-10-03T12:10:31Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"

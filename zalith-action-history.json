@@ -1,5 +1,13 @@
 [
   {
+    "id": 37108930704,
+    "sha": "d1034d4391ad50bc0890864f9defa6a863fef466",
+    "short_sha": "d1034d4",
+    "message": "fix: 触控板双指手势兜底，双指拖动折算滚轮、双指点按折算右键 (#1997)\n\n固件已合成原生手势事件（ACTION_SCROLL、BUTTON_SECONDARY）时仍按原样\n转发，不做干预；未合成时从原始双指触摸流兜底识别：双指拖动按质心位移\n折算滚轮格数，双指点按合成右键单击。判定阈值按板面尺寸自适应，双指\n期间抑制视角通道，触摸流式触控板的板面接触左键按下/抬起在双指手势\n期间做补偿与吞并，避免残留多余单击。",
+    "created_at": "2026-10-03T08:12:30Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37108930704"
+  },
+  {
     "id": 37087815642,
     "sha": "bca175cd7fe50229a98ac3e268b155fea66b83af",
     "short_sha": "bca175c",
@@ -390,13 +398,5 @@
     "message": "feat: 卡片拖动让位改为链式开门语义\n\n- GridEngine 新增 slideChain：被压卡片沿让位方向逐格推动，路径上的卡片级联随动，汇入沿途空洞或网格尾部\n- 让位方向依次尝试指针反方向、反向与垂直轴正反向，纵向向下开门必定成功\n- 让位方向偏移按卡片自身跨度归一化，修复宽卡片上横向绝对偏移天然占优导致的让位死路\n- 卡片持续被压期间锁定让位方向，避免指针扫过卡片中心时来回翻转\n- 会话卡拖动/缩放期间幽灵化显示，落点以空槽浅填充与描边表达\n- 修复未结算的被压卡片对链条不可见导致的结算重叠问题",
     "created_at": "2026-09-27T21:52:33Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36353330779"
-  },
-  {
-    "id": 36334788827,
-    "sha": "f34ef9c3afe8e79eb46e58c025e7962e49db4106",
-    "short_sha": "f34ef9c",
-    "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1451 of 1451 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
-    "created_at": "2026-09-27T16:51:28Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36334788827"
   }
 ]
