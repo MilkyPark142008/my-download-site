@@ -1,5 +1,37 @@
 [
   {
+    "id": 37135036687,
+    "sha": "e6cb4f415930c78ce1ecc10062b2bc1026802d4d",
+    "short_sha": "e6cb4f4",
+    "message": "Merge pull request #2010 from ZalithLauncher/fix/lwjgl-glfw-get-window-pos\n\nfix(LWJGL): 补齐缺失的 glfwGetWindowPos(long, IntBuffer, IntBuffer)",
+    "created_at": "2026-10-03T15:56:42Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37135036687"
+  },
+  {
+    "id": 37134972100,
+    "sha": "83ff168633afec14c5b17daf6a4eb3ad9bb5fa39",
+    "short_sha": "83ff168",
+    "message": "fix(LWJGL): 补齐缺失的 glfwGetWindowPos(long, IntBuffer, IntBuffer)\n\n移植版此前只保留 int[] 数组版本,现补回 IntBuffer 重载,返回窗口属性\n中跟踪的位置,3.3.3 与 3.4.1 双端同步,并重新生成 assets 内预构建产物",
+    "created_at": "2026-10-03T15:55:19Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37134972100"
+  },
+  {
+    "id": 37128895293,
+    "sha": "50359aafa1ae43282eea3444d497c2aafd4da603",
+    "short_sha": "50359aa",
+    "message": "Merge pull request #2006 from ZalithLauncher/fix/issue-2001-modpack-mods\n\nfix: 整合包下载失败不再误报成功，恢复失败文件整批重试 (#2001)",
+    "created_at": "2026-10-03T14:13:43Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37128895293"
+  },
+  {
+    "id": 37128868300,
+    "sha": "12ebe033c6e6650ce4b90c9f9c44007571a22797",
+    "short_sha": "12ebe03",
+    "message": "Merge pull request #2007 from ZalithLauncher/fix/issue-1997-touchpad\n\nfix: 修复触控板把板面绝对坐标当作位移导致游戏内视角乱转 (#1997)",
+    "created_at": "2026-10-03T14:13:14Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37128868300"
+  },
+  {
     "id": 37108930704,
     "sha": "d1034d4391ad50bc0890864f9defa6a863fef466",
     "short_sha": "d1034d4",
@@ -366,37 +398,5 @@
     "message": "refactor: 重构平板主界面布局",
     "created_at": "2026-09-27T23:18:46Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36358275965"
-  },
-  {
-    "id": 36354493011,
-    "sha": "9a8d2516a3a026704c25db0e3df534a56ca646a4",
-    "short_sha": "9a8d251",
-    "message": "Merge pull request #1973 from ZalithLauncher/chore/upgrade_dialog\n\nchore: 调整启动器更新对话框的样式",
-    "created_at": "2026-09-27T22:12:47Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36354493011"
-  },
-  {
-    "id": 36354466953,
-    "sha": "ecdd7cfa8be317e75d09928482aa5b26dd0fd759",
-    "short_sha": "ecdd7cf",
-    "message": "chore: 调整启动器更新对话框的样式",
-    "created_at": "2026-09-27T22:12:16Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36354466953"
-  },
-  {
-    "id": 36353398442,
-    "sha": "35196207ab0d4c846b6dc3e93a1f3b1c811def88",
-    "short_sha": "3519620",
-    "message": "Merge pull request #1972 from ZalithLauncher/feat/card-grid-chain-displacement\n\nfeat: 优化主界面卡片换位逻辑，卡片拖动让位改为链式开门语义",
-    "created_at": "2026-09-27T21:54:15Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36353398442"
-  },
-  {
-    "id": 36353330779,
-    "sha": "6cd1aa00c3e74aff2228717dc397ecbd6df3f094",
-    "short_sha": "6cd1aa0",
-    "message": "feat: 卡片拖动让位改为链式开门语义\n\n- GridEngine 新增 slideChain：被压卡片沿让位方向逐格推动，路径上的卡片级联随动，汇入沿途空洞或网格尾部\n- 让位方向依次尝试指针反方向、反向与垂直轴正反向，纵向向下开门必定成功\n- 让位方向偏移按卡片自身跨度归一化，修复宽卡片上横向绝对偏移天然占优导致的让位死路\n- 卡片持续被压期间锁定让位方向，避免指针扫过卡片中心时来回翻转\n- 会话卡拖动/缩放期间幽灵化显示，落点以空槽浅填充与描边表达\n- 修复未结算的被压卡片对链条不可见导致的结算重叠问题",
-    "created_at": "2026-09-27T21:52:33Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36353330779"
   }
 ]
