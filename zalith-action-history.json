@@ -1,5 +1,21 @@
 [
   {
+    "id": 37087815642,
+    "sha": "bca175cd7fe50229a98ac3e268b155fea66b83af",
+    "short_sha": "bca175c",
+    "message": "fix: 修复触控板把板面绝对坐标当作位移导致游戏内视角乱转 (#1997)\n\n游戏内捕获模式下相对位移轴缺失时，旧逻辑把触控板板面绝对坐标当作\n每帧位移输出，导致视角天旋地转。现触控板优先取相对轴，缺失时改用\n相邻两次位置的差值，并在手指按下/抬起时重建差值基准；SDL 渲染路径\n的同类缺陷一并修复，真实鼠标路径保持不变。",
+    "created_at": "2026-10-03T01:53:35Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37087815642"
+  },
+  {
+    "id": 37084823902,
+    "sha": "7ba0f4e2cf489af32bdb8c668081ee8ca6c7d2bc",
+    "short_sha": "7ba0f4e",
+    "message": "fix(整合包): 下载失败不再误报成功，恢复失败文件整批重试 #2001\n\n- 批量下载失败异常不再被吞掉：重试一轮后仍有失败即中断安装并报错\n- 恢复旧版的整批延迟重试与「重试下载所有模组」提示（下载体系重构时遗失）\n- 404 跳过计数按目标文件跨轮判重，避免重试轮重复计数",
+    "created_at": "2026-10-03T01:06:34Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37084823902"
+  },
+  {
     "id": 37076953873,
     "sha": "43f2280b1ba617621c560b9707f152e86a736bbf",
     "short_sha": "43f2280",
@@ -382,21 +398,5 @@
     "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1451 of 1451 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
     "created_at": "2026-09-27T16:51:28Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36334788827"
-  },
-  {
-    "id": 36334432540,
-    "sha": "b8529d3ea8859aa754c48226fbd25ea873362029",
-    "short_sha": "b8529d3",
-    "message": "Merge pull request #1971 from ZalithLauncher/fix/cleanroom-ime-key-events\n\nfix: 修复 Cleanroom 输入法输入被误判为按键",
-    "created_at": "2026-09-27T16:45:44Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36334432540"
-  },
-  {
-    "id": 36334406276,
-    "sha": "058d98c9c00e6255a42f66077587927fb47c5a33",
-    "short_sha": "058d98c",
-    "message": "Merge branch 'main' into fix/cleanroom-ime-key-events",
-    "created_at": "2026-09-27T16:30:20Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36334406276"
   }
 ]

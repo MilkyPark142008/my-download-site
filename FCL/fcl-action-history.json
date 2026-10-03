@@ -1,5 +1,141 @@
 [
   {
+    "id": 37100049493,
+    "sha": "0d0d3d43b84ca87e04cc81f1285ca8080231f9c5",
+    "short_sha": "0d0d3d4",
+    "message": "fix: 安装器单次尝试绝对时限收紧至 10 分钟\n\n无进展判定 3 分钟已覆盖挂死场景，绝对上限仅兜底 CPU 持续增长但\n永不结束的病态场景；用户长时间无反馈时多半会自行取消，10 分钟足够。",
+    "created_at": "2026-10-03T05:30:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37100049493"
+  },
+  {
+    "id": 37100049494,
+    "sha": "0d0d3d43b84ca87e04cc81f1285ca8080231f9c5",
+    "short_sha": "0d0d3d4",
+    "message": "fix: 安装器单次尝试绝对时限收紧至 10 分钟\n\n无进展判定 3 分钟已覆盖挂死场景，绝对上限仅兜底 CPU 持续增长但\n永不结束的病态场景；用户长时间无反馈时多半会自行取消，10 分钟足够。",
+    "created_at": "2026-10-03T05:30:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37100049494"
+  },
+  {
+    "id": 37100047155,
+    "sha": "0d0d3d43b84ca87e04cc81f1285ca8080231f9c5",
+    "short_sha": "0d0d3d4",
+    "message": "fix: 安装器单次尝试绝对时限收紧至 10 分钟\n\n无进展判定 3 分钟已覆盖挂死场景，绝对上限仅兜底 CPU 持续增长但\n永不结束的病态场景；用户长时间无反馈时多半会自行取消，10 分钟足够。",
+    "created_at": "2026-10-03T05:30:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37100047155"
+  },
+  {
+    "id": 37100047076,
+    "sha": "0d0d3d43b84ca87e04cc81f1285ca8080231f9c5",
+    "short_sha": "0d0d3d4",
+    "message": "fix: 安装器单次尝试绝对时限收紧至 10 分钟\n\n无进展判定 3 分钟已覆盖挂死场景，绝对上限仅兜底 CPU 持续增长但\n永不结束的病态场景；用户长时间无反馈时多半会自行取消，10 分钟足够。",
+    "created_at": "2026-10-03T05:30:31Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37100047076"
+  },
+  {
+    "id": 37099977199,
+    "sha": "edd1faf55b8b5e160df5df02a0e128c973cc1c11",
+    "short_sha": "edd1faf",
+    "message": "fix: 安装器超时判定引入 CPU 进度检测，无进展 3 分钟 + 绝对 15 分钟\n\n日志空闲判据对 FART 等全程静默的处理器只能保守取 10 分钟（真机上\n单次重命名可达数分钟），无法再收紧。改为以 /proc/<pid>/stat 的\nutime+stime 判定进程是否仍在推进（pid 取自 :jvm 启动标记文件）：\n\n- CPU 时间与日志长度任一变化即视为活跃，无进展 3 分钟判挂起\n- 被系统 SIGKILL 而未回写退出码的进程同样在该判定下快速收敛\n- procfs 不可用（个别 ROM 限制）时退化为日志空闲 10 分钟\n- 绝对时限 25 分钟收紧至 15 分钟\n\nMuMu 实测：4 个处理器全部退出码 0（pid 日志确认 CPU 判定激活），无误杀。",
+    "created_at": "2026-10-03T05:29:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37099977199"
+  },
+  {
+    "id": 37099977172,
+    "sha": "edd1faf55b8b5e160df5df02a0e128c973cc1c11",
+    "short_sha": "edd1faf",
+    "message": "fix: 安装器超时判定引入 CPU 进度检测，无进展 3 分钟 + 绝对 15 分钟\n\n日志空闲判据对 FART 等全程静默的处理器只能保守取 10 分钟（真机上\n单次重命名可达数分钟），无法再收紧。改为以 /proc/<pid>/stat 的\nutime+stime 判定进程是否仍在推进（pid 取自 :jvm 启动标记文件）：\n\n- CPU 时间与日志长度任一变化即视为活跃，无进展 3 分钟判挂起\n- 被系统 SIGKILL 而未回写退出码的进程同样在该判定下快速收敛\n- procfs 不可用（个别 ROM 限制）时退化为日志空闲 10 分钟\n- 绝对时限 25 分钟收紧至 15 分钟\n\nMuMu 实测：4 个处理器全部退出码 0（pid 日志确认 CPU 判定激活），无误杀。",
+    "created_at": "2026-10-03T05:29:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37099977172"
+  },
+  {
+    "id": 37099974659,
+    "sha": "edd1faf55b8b5e160df5df02a0e128c973cc1c11",
+    "short_sha": "edd1faf",
+    "message": "fix: 安装器超时判定引入 CPU 进度检测，无进展 3 分钟 + 绝对 15 分钟\n\n日志空闲判据对 FART 等全程静默的处理器只能保守取 10 分钟（真机上\n单次重命名可达数分钟），无法再收紧。改为以 /proc/<pid>/stat 的\nutime+stime 判定进程是否仍在推进（pid 取自 :jvm 启动标记文件）：\n\n- CPU 时间与日志长度任一变化即视为活跃，无进展 3 分钟判挂起\n- 被系统 SIGKILL 而未回写退出码的进程同样在该判定下快速收敛\n- procfs 不可用（个别 ROM 限制）时退化为日志空闲 10 分钟\n- 绝对时限 25 分钟收紧至 15 分钟\n\nMuMu 实测：4 个处理器全部退出码 0（pid 日志确认 CPU 判定激活），无误杀。",
+    "created_at": "2026-10-03T05:29:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37099974659"
+  },
+  {
+    "id": 37099974658,
+    "sha": "edd1faf55b8b5e160df5df02a0e128c973cc1c11",
+    "short_sha": "edd1faf",
+    "message": "fix: 安装器超时判定引入 CPU 进度检测，无进展 3 分钟 + 绝对 15 分钟\n\n日志空闲判据对 FART 等全程静默的处理器只能保守取 10 分钟（真机上\n单次重命名可达数分钟），无法再收紧。改为以 /proc/<pid>/stat 的\nutime+stime 判定进程是否仍在推进（pid 取自 :jvm 启动标记文件）：\n\n- CPU 时间与日志长度任一变化即视为活跃，无进展 3 分钟判挂起\n- 被系统 SIGKILL 而未回写退出码的进程同样在该判定下快速收敛\n- procfs 不可用（个别 ROM 限制）时退化为日志空闲 10 分钟\n- 绝对时限 25 分钟收紧至 15 分钟\n\nMuMu 实测：4 个处理器全部退出码 0（pid 日志确认 CPU 判定激活），无误杀。",
+    "created_at": "2026-10-03T05:29:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37099974658"
+  },
+  {
+    "id": 37098976726,
+    "sha": "e88d3f975a9b2041037600fd83338f761bc80f64",
+    "short_sha": "e88d3f9",
+    "message": "Update ModListPage.java",
+    "created_at": "2026-10-03T05:10:29Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37098976726"
+  },
+  {
+    "id": 37098976716,
+    "sha": "e88d3f975a9b2041037600fd83338f761bc80f64",
+    "short_sha": "e88d3f9",
+    "message": "Update ModListPage.java",
+    "created_at": "2026-10-03T05:10:29Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37098976716"
+  },
+  {
+    "id": 37096101048,
+    "sha": "c7ce6db756a00c76a65cb80a9aedebd53e9ec91c",
+    "short_sha": "c7ce6db",
+    "message": "fix: 修复控制器初始化竞态导致的保存报错与用户布局丢失",
+    "created_at": "2026-10-03T04:17:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37096101048"
+  },
+  {
+    "id": 37096101047,
+    "sha": "c7ce6db756a00c76a65cb80a9aedebd53e9ec91c",
+    "short_sha": "c7ce6db",
+    "message": "fix: 修复控制器初始化竞态导致的保存报错与用户布局丢失",
+    "created_at": "2026-10-03T04:17:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37096101047"
+  },
+  {
+    "id": 37093028417,
+    "sha": "82353342a59c76c8238b5d16f117a7ba5b1e426b",
+    "short_sha": "8235334",
+    "message": "fix: oshi 5.x initProcessorCounts 返回 List，误包成 Pair 致构造遍历时抛 IncompatibleClassChangeError",
+    "created_at": "2026-10-03T03:23:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37093028417"
+  },
+  {
+    "id": 37091400440,
+    "sha": "943df772fa4cfb49cb3d3c49ba9d36804d73227c",
+    "short_sha": "943df77",
+    "message": "fix: 安装器进程运行器协程化，修复 Forge/NeoForge/OptiFine 安装卡死且无法取消 (#1898)\n\n- InstallerProcessRunner 等待循环协程化（runSuspending + Java runBlocking 桥接），\n  轮询间隔检查任务取消供应商，取消即杀 :jvm 进程并中止任务，\n  修复安装卡在处理器阶段时取消按钮无效的问题\n- 退出码/启动标记文件名带会话 ID（EXTRA_SESSION 下发 ProcessService），\n  取消后立即重试不再共用固定名文件，杜绝读到陈旧退出码\n- 固定 5 分钟超时改为日志空闲 10 分钟 + 绝对 25 分钟：\n  慢设备上静默运行的重命名/拆分处理器不再被误杀，挂起必然以可见错误收敛\n- 处理器消息显示步骤 i/N、jar 名、JRE 版本与已运行时长，\n  静默处理器阶段任务消息持续走动，不再表现为假死\n\nCloses #1898",
+    "created_at": "2026-10-03T02:42:45Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37091400440"
+  },
+  {
+    "id": 37091400433,
+    "sha": "943df772fa4cfb49cb3d3c49ba9d36804d73227c",
+    "short_sha": "943df77",
+    "message": "fix: 安装器进程运行器协程化，修复 Forge/NeoForge/OptiFine 安装卡死且无法取消 (#1898)\n\n- InstallerProcessRunner 等待循环协程化（runSuspending + Java runBlocking 桥接），\n  轮询间隔检查任务取消供应商，取消即杀 :jvm 进程并中止任务，\n  修复安装卡在处理器阶段时取消按钮无效的问题\n- 退出码/启动标记文件名带会话 ID（EXTRA_SESSION 下发 ProcessService），\n  取消后立即重试不再共用固定名文件，杜绝读到陈旧退出码\n- 固定 5 分钟超时改为日志空闲 10 分钟 + 绝对 25 分钟：\n  慢设备上静默运行的重命名/拆分处理器不再被误杀，挂起必然以可见错误收敛\n- 处理器消息显示步骤 i/N、jar 名、JRE 版本与已运行时长，\n  静默处理器阶段任务消息持续走动，不再表现为假死\n\nCloses #1898",
+    "created_at": "2026-10-03T02:42:45Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37091400433"
+  },
+  {
+    "id": 37090764366,
+    "sha": "943df772fa4cfb49cb3d3c49ba9d36804d73227c",
+    "short_sha": "943df77",
+    "message": "fix: 安装器进程运行器协程化，修复 Forge/NeoForge/OptiFine 安装卡死且无法取消 (#1898)\n\n- InstallerProcessRunner 等待循环协程化（runSuspending + Java runBlocking 桥接），\n  轮询间隔检查任务取消供应商，取消即杀 :jvm 进程并中止任务，\n  修复安装卡在处理器阶段时取消按钮无效的问题\n- 退出码/启动标记文件名带会话 ID（EXTRA_SESSION 下发 ProcessService），\n  取消后立即重试不再共用固定名文件，杜绝读到陈旧退出码\n- 固定 5 分钟超时改为日志空闲 10 分钟 + 绝对 25 分钟：\n  慢设备上静默运行的重命名/拆分处理器不再被误杀，挂起必然以可见错误收敛\n- 处理器消息显示步骤 i/N、jar 名、JRE 版本与已运行时长，\n  静默处理器阶段任务消息持续走动，不再表现为假死\n\nCloses #1898",
+    "created_at": "2026-10-03T02:42:45Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37090764366"
+  },
+  {
+    "id": 37090764452,
+    "sha": "943df772fa4cfb49cb3d3c49ba9d36804d73227c",
+    "short_sha": "943df77",
+    "message": "fix: 安装器进程运行器协程化，修复 Forge/NeoForge/OptiFine 安装卡死且无法取消 (#1898)\n\n- InstallerProcessRunner 等待循环协程化（runSuspending + Java runBlocking 桥接），\n  轮询间隔检查任务取消供应商，取消即杀 :jvm 进程并中止任务，\n  修复安装卡在处理器阶段时取消按钮无效的问题\n- 退出码/启动标记文件名带会话 ID（EXTRA_SESSION 下发 ProcessService），\n  取消后立即重试不再共用固定名文件，杜绝读到陈旧退出码\n- 固定 5 分钟超时改为日志空闲 10 分钟 + 绝对 25 分钟：\n  慢设备上静默运行的重命名/拆分处理器不再被误杀，挂起必然以可见错误收敛\n- 处理器消息显示步骤 i/N、jar 名、JRE 版本与已运行时长，\n  静默处理器阶段任务消息持续走动，不再表现为假死\n\nCloses #1898",
+    "created_at": "2026-10-03T02:42:45Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37090764452"
+  },
+  {
     "id": 37001447752,
     "sha": "ecd4e60a8913bf4d82f909925c3d23699cb34db4",
     "short_sha": "ecd4e60",
@@ -262,141 +398,5 @@
     "message": "fix: 控件组绑定对话框补取消按钮，合并按钮按入口能力显示\n\n- 按键绑定控件组对话框原先只有“确定”一个出口，打开后无法反悔，只能把当前选择写入绑定；\n  补取消按钮\n- 合并按钮对未实现 onMergeToGroup 的入口（新建控件组）点击后无任何效果：Callback 新增\n  supportsMerge 能力声明，对话框据此显示或隐藏合并按钮；编辑已有组时仍提供合并",
     "created_at": "2026-09-28T04:55:53Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379750931"
-  },
-  {
-    "id": 36379750947,
-    "sha": "ad8fc5624e386ba7e608d657c127fbdeb1e981c8",
-    "short_sha": "ad8fc56",
-    "message": "fix: 控件组绑定对话框补取消按钮，合并按钮按入口能力显示\n\n- 按键绑定控件组对话框原先只有“确定”一个出口，打开后无法反悔，只能把当前选择写入绑定；\n  补取消按钮\n- 合并按钮对未实现 onMergeToGroup 的入口（新建控件组）点击后无任何效果：Callback 新增\n  supportsMerge 能力声明，对话框据此显示或隐藏合并按钮；编辑已有组时仍提供合并",
-    "created_at": "2026-09-28T04:55:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379750947"
-  },
-  {
-    "id": 36379746989,
-    "sha": "ad8fc5624e386ba7e608d657c127fbdeb1e981c8",
-    "short_sha": "ad8fc56",
-    "message": "fix: 控件组绑定对话框补取消按钮，合并按钮按入口能力显示\n\n- 按键绑定控件组对话框原先只有“确定”一个出口，打开后无法反悔，只能把当前选择写入绑定；\n  补取消按钮\n- 合并按钮对未实现 onMergeToGroup 的入口（新建控件组）点击后无任何效果：Callback 新增\n  supportsMerge 能力声明，对话框据此显示或隐藏合并按钮；编辑已有组时仍提供合并",
-    "created_at": "2026-09-28T04:55:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379746989"
-  },
-  {
-    "id": 36379746994,
-    "sha": "ad8fc5624e386ba7e608d657c127fbdeb1e981c8",
-    "short_sha": "ad8fc56",
-    "message": "fix: 控件组绑定对话框补取消按钮，合并按钮按入口能力显示\n\n- 按键绑定控件组对话框原先只有“确定”一个出口，打开后无法反悔，只能把当前选择写入绑定；\n  补取消按钮\n- 合并按钮对未实现 onMergeToGroup 的入口（新建控件组）点击后无任何效果：Callback 新增\n  supportsMerge 能力声明，对话框据此显示或隐藏合并按钮；编辑已有组时仍提供合并",
-    "created_at": "2026-09-28T04:55:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379746994"
-  },
-  {
-    "id": 36379675752,
-    "sha": "d96f1f2da1bd9dc3d647644895d9f9ffdc8e248e",
-    "short_sha": "d96f1f2",
-    "message": "fix: 单选的文件选择模式不再提供批量操作入口\n\n批量菜单的“全选”会把当前目录全部文件塞进选择结果，确认后向调用方返回多个路径，\n而 launchSingleSelection 的调用方按单选契约只取首个路径。改为单选的文件选择模式下\n不显示批量入口，多选模式与浏览模式不受影响",
-    "created_at": "2026-09-28T04:54:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379675752"
-  },
-  {
-    "id": 36379675780,
-    "sha": "d96f1f2da1bd9dc3d647644895d9f9ffdc8e248e",
-    "short_sha": "d96f1f2",
-    "message": "fix: 单选的文件选择模式不再提供批量操作入口\n\n批量菜单的“全选”会把当前目录全部文件塞进选择结果，确认后向调用方返回多个路径，\n而 launchSingleSelection 的调用方按单选契约只取首个路径。改为单选的文件选择模式下\n不显示批量入口，多选模式与浏览模式不受影响",
-    "created_at": "2026-09-28T04:54:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379675780"
-  },
-  {
-    "id": 36379671660,
-    "sha": "d96f1f2da1bd9dc3d647644895d9f9ffdc8e248e",
-    "short_sha": "d96f1f2",
-    "message": "fix: 单选的文件选择模式不再提供批量操作入口\n\n批量菜单的“全选”会把当前目录全部文件塞进选择结果，确认后向调用方返回多个路径，\n而 launchSingleSelection 的调用方按单选契约只取首个路径。改为单选的文件选择模式下\n不显示批量入口，多选模式与浏览模式不受影响",
-    "created_at": "2026-09-28T04:54:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379671660"
-  },
-  {
-    "id": 36379671709,
-    "sha": "d96f1f2da1bd9dc3d647644895d9f9ffdc8e248e",
-    "short_sha": "d96f1f2",
-    "message": "fix: 单选的文件选择模式不再提供批量操作入口\n\n批量菜单的“全选”会把当前目录全部文件塞进选择结果，确认后向调用方返回多个路径，\n而 launchSingleSelection 的调用方按单选契约只取首个路径。改为单选的文件选择模式下\n不显示批量入口，多选模式与浏览模式不受影响",
-    "created_at": "2026-09-28T04:54:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379671709"
-  },
-  {
-    "id": 36379620478,
-    "sha": "79beffc1872b0c112bc6680cf0caac350b60b172",
-    "short_sha": "79beffc",
-    "message": "fix: 快捷键按下同样拦截，按键监听态随界面收起退出\n\n- 自定义快捷键此前只在抬起时匹配：按下被转发给游戏而抬起被吞，游戏侧收不到释放会持续\n  按住（F8 等非 ENTER 快捷键即可触发）；改为匹配后按下与抬起一律不再下发\n- 按键监听态原先只有成功捕获按键才清除：点开设置行后不按键、直接收回右菜单或切到后台，\n  监听会一直吞掉所有按键（含菜单视图隐藏后用于唤回菜单的音量键），并把下一个按下的键\n  误绑定为快捷键；改为右菜单收起、菜单视图隐藏、页面暂停三处统一放弃监听",
-    "created_at": "2026-09-28T04:54:01Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379620478"
-  },
-  {
-    "id": 36379620507,
-    "sha": "79beffc1872b0c112bc6680cf0caac350b60b172",
-    "short_sha": "79beffc",
-    "message": "fix: 快捷键按下同样拦截，按键监听态随界面收起退出\n\n- 自定义快捷键此前只在抬起时匹配：按下被转发给游戏而抬起被吞，游戏侧收不到释放会持续\n  按住（F8 等非 ENTER 快捷键即可触发）；改为匹配后按下与抬起一律不再下发\n- 按键监听态原先只有成功捕获按键才清除：点开设置行后不按键、直接收回右菜单或切到后台，\n  监听会一直吞掉所有按键（含菜单视图隐藏后用于唤回菜单的音量键），并把下一个按下的键\n  误绑定为快捷键；改为右菜单收起、菜单视图隐藏、页面暂停三处统一放弃监听",
-    "created_at": "2026-09-28T04:54:01Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379620507"
-  },
-  {
-    "id": 36379470586,
-    "sha": "45f903d4e0977a22ed74e1a321e1deaa4bdb9da7",
-    "short_sha": "45f903d",
-    "message": "fix: modloader 安装引导改在主线程跳转\n\nawaitChoice 在主线程执行，但返回后调用方恢复在 IO 上下文，跳转版本管理页的界面操作\n（选中 manage 页、切到“游戏”标签页）在后台线程执行会抛 CalledFromWrongThreadException，\n该异常随即被同一函数的兜底 catch 吞掉——用户选择“安装”却照常启动游戏。改为显式切回主\n线程执行跳转，跳转失败同样取消本次启动，不再退化为继续启动",
-    "created_at": "2026-09-28T04:51:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379470586"
-  },
-  {
-    "id": 36379470575,
-    "sha": "45f903d4e0977a22ed74e1a321e1deaa4bdb9da7",
-    "short_sha": "45f903d",
-    "message": "fix: modloader 安装引导改在主线程跳转\n\nawaitChoice 在主线程执行，但返回后调用方恢复在 IO 上下文，跳转版本管理页的界面操作\n（选中 manage 页、切到“游戏”标签页）在后台线程执行会抛 CalledFromWrongThreadException，\n该异常随即被同一函数的兜底 catch 吞掉——用户选择“安装”却照常启动游戏。改为显式切回主\n线程执行跳转，跳转失败同样取消本次启动，不再退化为继续启动",
-    "created_at": "2026-09-28T04:51:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379470575"
-  },
-  {
-    "id": 36379402285,
-    "sha": "9374b3c1609528a3333fc7a7a92e73426b82e9a4",
-    "short_sha": "9374b3c",
-    "message": "fix: 深度删除校验待删路径位于共享目录内\n\n库路径、资产 hash 与 assetId 均取自版本 json 与资产索引，属外部数据：携带 .. 或指向\n外部目录时原实现会直接删除共享目录之外的文件或目录。改为删除前对规范路径做目录内断言\n（libraries / assets/indexes / assets/objects / assets/virtual 各自判定），越界一律\n跳过并记日志；清理后收缩空目录同样改按规范路径比较，不越过各自根目录",
-    "created_at": "2026-09-28T04:50:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379402285"
-  },
-  {
-    "id": 36379402279,
-    "sha": "9374b3c1609528a3333fc7a7a92e73426b82e9a4",
-    "short_sha": "9374b3c",
-    "message": "fix: 深度删除校验待删路径位于共享目录内\n\n库路径、资产 hash 与 assetId 均取自版本 json 与资产索引，属外部数据：携带 .. 或指向\n外部目录时原实现会直接删除共享目录之外的文件或目录。改为删除前对规范路径做目录内断言\n（libraries / assets/indexes / assets/objects / assets/virtual 各自判定），越界一律\n跳过并记日志；清理后收缩空目录同样改按规范路径比较，不越过各自根目录",
-    "created_at": "2026-09-28T04:50:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379402279"
-  },
-  {
-    "id": 36379399835,
-    "sha": "9374b3c1609528a3333fc7a7a92e73426b82e9a4",
-    "short_sha": "9374b3c",
-    "message": "fix: 深度删除校验待删路径位于共享目录内\n\n库路径、资产 hash 与 assetId 均取自版本 json 与资产索引，属外部数据：携带 .. 或指向\n外部目录时原实现会直接删除共享目录之外的文件或目录。改为删除前对规范路径做目录内断言\n（libraries / assets/indexes / assets/objects / assets/virtual 各自判定），越界一律\n跳过并记日志；清理后收缩空目录同样改按规范路径比较，不越过各自根目录",
-    "created_at": "2026-09-28T04:50:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379399835"
-  },
-  {
-    "id": 36379399702,
-    "sha": "9374b3c1609528a3333fc7a7a92e73426b82e9a4",
-    "short_sha": "9374b3c",
-    "message": "fix: 深度删除校验待删路径位于共享目录内\n\n库路径、资产 hash 与 assetId 均取自版本 json 与资产索引，属外部数据：携带 .. 或指向\n外部目录时原实现会直接删除共享目录之外的文件或目录。改为删除前对规范路径做目录内断言\n（libraries / assets/indexes / assets/objects / assets/virtual 各自判定），越界一律\n跳过并记日志；清理后收缩空目录同样改按规范路径比较，不越过各自根目录",
-    "created_at": "2026-09-28T04:50:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379399702"
-  },
-  {
-    "id": 36379344805,
-    "sha": "ea7c18e903042af1873d88d4e0e4d2a4fc595572",
-    "short_sha": "ea7c18e",
-    "message": "fix: Vulkan 检测补建补丁目录，vkshim divisor 特性位按驱动报告值置位\n\n- 检测用的 cacheDir 未经创建即传给 native：驱动补丁文件在该目录生成，目录缺失时\n  打开输出文件直接失败，Turnip 驱动加载必然回落到系统加载器，检测结论与 vkshim\n  门控随之失真\n- vkshim 补写的 divisor features 节点原先把两个特性位无条件置位，而启用驱动不支持的\n  位会让 vkCreateDevice 返回 VK_ERROR_FEATURE_NOT_PRESENT；改为先经\n  vkGetPhysicalDeviceFeatures2 查询驱动报告的支持情况，应用自带节点时同样把不支持的\n  位临时置回（调用后恢复）",
-    "created_at": "2026-09-28T04:49:49Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379344805"
-  },
-  {
-    "id": 36379344799,
-    "sha": "ea7c18e903042af1873d88d4e0e4d2a4fc595572",
-    "short_sha": "ea7c18e",
-    "message": "fix: Vulkan 检测补建补丁目录，vkshim divisor 特性位按驱动报告值置位\n\n- 检测用的 cacheDir 未经创建即传给 native：驱动补丁文件在该目录生成，目录缺失时\n  打开输出文件直接失败，Turnip 驱动加载必然回落到系统加载器，检测结论与 vkshim\n  门控随之失真\n- vkshim 补写的 divisor features 节点原先把两个特性位无条件置位，而启用驱动不支持的\n  位会让 vkCreateDevice 返回 VK_ERROR_FEATURE_NOT_PRESENT；改为先经\n  vkGetPhysicalDeviceFeatures2 查询驱动报告的支持情况，应用自带节点时同样把不支持的\n  位临时置回（调用后恢复）",
-    "created_at": "2026-09-28T04:49:49Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36379344799"
   }
 ]

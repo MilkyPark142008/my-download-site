@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 181469527,
         "digest": "sha256:54fb234b7c8edd112f8da9e5d566ab3ea5ac0f33cc32cfdf00448d97462cf55b",
-        "download_count": 38104,
+        "download_count": 40131,
         "created_at": "2026-09-28T08:01:53Z",
         "updated_at": "2026-09-28T08:02:03Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.6.1/ZalithLauncher-2.6.1-arm64-v8a.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 173388198,
         "digest": "sha256:0d8b9dd3242c37b8cb34a5645d7ac45392039e32442f8c722f040da96df3b8bb",
-        "download_count": 959,
+        "download_count": 1015,
         "created_at": "2026-09-28T08:01:53Z",
         "updated_at": "2026-09-28T08:02:02Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.6.1/ZalithLauncher-2.6.1-armeabi-v7a.apk"
@@ -140,7 +140,7 @@
         "state": "uploaded",
         "size": 161926048,
         "digest": "sha256:abcb2e58a5f909c11e987e9ffbd2bc138e4d7b07a504b10f3531a6c6fc18182e",
-        "download_count": 468,
+        "download_count": 489,
         "created_at": "2026-09-28T08:01:53Z",
         "updated_at": "2026-09-28T08:02:01Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.6.1/ZalithLauncher-2.6.1-x86.apk"
@@ -176,7 +176,7 @@
         "state": "uploaded",
         "size": 187298808,
         "digest": "sha256:58dbf9b2334f129548e98736468bc6a230ef65ad2cffdd46a668a33626156184",
-        "download_count": 493,
+        "download_count": 517,
         "created_at": "2026-09-28T08:01:53Z",
         "updated_at": "2026-09-28T08:02:02Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.6.1/ZalithLauncher-2.6.1-x86_64.apk"
@@ -212,7 +212,7 @@
         "state": "uploaded",
         "size": 354552390,
         "digest": "sha256:9877594734887ec60f8d87cf8bfc125a637098c23d07341957ce6748007f3422",
-        "download_count": 10118,
+        "download_count": 10672,
         "created_at": "2026-09-28T08:01:53Z",
         "updated_at": "2026-09-28T08:02:08Z",
         "browser_download_url": "https://github.com/ZalithLauncher/ZalithLauncher2/releases/download/2.6.1/ZalithLauncher-2.6.1.apk"
@@ -237,25 +237,49 @@
   },
   "action": {
     "run": {
-      "id": 35374406312,
+      "id": 37087815642,
       "name": "Build CI",
-      "node_id": "WFR_kwLOON0GPs8AAAAIPHqaqA",
-      "head_branch": "feat/new_main_page",
-      "head_sha": "28ea087233434dcf909309299cb710a6750a69ec",
+      "node_id": "WFR_kwLOON0GPs8AAAAIopsn2g",
+      "head_branch": "fix/issue-1997-touchpad",
+      "head_sha": "bca175cd7fe50229a98ac3e268b155fea66b83af",
       "path": ".github/workflows/push_ci.yml",
-      "display_title": "Merge remote-tracking branch 'origin/main' into feat/new_main_page",
-      "run_number": 1072,
+      "display_title": "fix: 修复触控板把板面绝对坐标当作位移导致游戏内视角乱转 (#1997)",
+      "run_number": 1206,
       "event": "push",
       "status": "completed",
       "conclusion": "success",
       "workflow_id": 253303842,
-      "check_suite_id": 95805579200,
-      "check_suite_node_id": "CS_kwDOON0GPs8AAAAWTnUfwA",
-      "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/35374406312",
-      "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/35374406312",
-      "pull_requests": [],
-      "created_at": "2026-09-18T17:27:03Z",
-      "updated_at": "2026-09-18T17:32:16Z",
+      "check_suite_id": 100461198947,
+      "check_suite_node_id": "CS_kwDOON0GPs8AAAAXY_Q-Yw",
+      "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/37087815642",
+      "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37087815642",
+      "pull_requests": [
+        {
+          "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/pulls/2007",
+          "id": 4723301844,
+          "number": 2007,
+          "head": {
+            "ref": "fix/issue-1997-touchpad",
+            "sha": "bca175cd7fe50229a98ac3e268b155fea66b83af",
+            "repo": {
+              "id": 954009150,
+              "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2",
+              "name": "ZalithLauncher2"
+            }
+          },
+          "base": {
+            "ref": "main",
+            "sha": "43f2280b1ba617621c560b9707f152e86a736bbf",
+            "repo": {
+              "id": 954009150,
+              "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2",
+              "name": "ZalithLauncher2"
+            }
+          }
+        }
+      ],
+      "created_at": "2026-10-03T01:53:41Z",
+      "updated_at": "2026-10-03T01:58:51Z",
       "actor": {
         "login": "MovTery",
         "id": 123115192,
@@ -280,12 +304,12 @@
       "run_attempt": 1,
       "referenced_workflows": [
         {
-          "path": "ZalithLauncher/ZalithLauncher2/.github/workflows/build.yml@28ea087233434dcf909309299cb710a6750a69ec",
-          "sha": "28ea087233434dcf909309299cb710a6750a69ec",
-          "ref": "refs/heads/feat/new_main_page"
+          "path": "ZalithLauncher/ZalithLauncher2/.github/workflows/build.yml@bca175cd7fe50229a98ac3e268b155fea66b83af",
+          "sha": "bca175cd7fe50229a98ac3e268b155fea66b83af",
+          "ref": "refs/heads/fix/issue-1997-touchpad"
         }
       ],
-      "run_started_at": "2026-09-18T17:27:03Z",
+      "run_started_at": "2026-10-03T01:53:41Z",
       "triggering_actor": {
         "login": "MovTery",
         "id": 123115192,
@@ -307,19 +331,19 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/35374406312/jobs",
-      "logs_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/35374406312/logs",
-      "check_suite_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/check-suites/95805579200",
-      "artifacts_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/35374406312/artifacts",
-      "cancel_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/35374406312/cancel",
-      "rerun_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/35374406312/rerun",
+      "jobs_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/37087815642/jobs",
+      "logs_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/37087815642/logs",
+      "check_suite_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/check-suites/100461198947",
+      "artifacts_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/37087815642/artifacts",
+      "cancel_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/37087815642/cancel",
+      "rerun_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/runs/37087815642/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/workflows/253303842",
       "head_commit": {
-        "id": "28ea087233434dcf909309299cb710a6750a69ec",
-        "tree_id": "e5b1317cd936c090ddb70821b73efbd5ba85fca8",
-        "message": "Merge remote-tracking branch 'origin/main' into feat/new_main_page\n\n# Conflicts:\n#\tZalithLauncher/src/main/java/com/movtery/zalithlauncher/ui/activities/MainActivity.kt",
-        "timestamp": "2026-09-18T17:25:13Z",
+        "id": "bca175cd7fe50229a98ac3e268b155fea66b83af",
+        "tree_id": "bb7f59990f33849f552533a64a544d436c9a3991",
+        "message": "fix: 修复触控板把板面绝对坐标当作位移导致游戏内视角乱转 (#1997)\n\n游戏内捕获模式下相对位移轴缺失时，旧逻辑把触控板板面绝对坐标当作\n每帧位移输出，导致视角天旋地转。现触控板优先取相对轴，缺失时改用\n相邻两次位置的差值，并在手指按下/抬起时重建差值基准；SDL 渲染路径\n的同类缺陷一并修复，真实鼠标路径保持不变。",
+        "timestamp": "2026-10-03T01:53:35Z",
         "author": {
           "name": "movte",
           "email": "movtery228@qq.com"
@@ -466,6 +490,107 @@
         "deployments_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/deployments"
       }
     },
-    "artifacts": []
+    "artifacts": [
+      {
+        "id": 11261750379,
+        "node_id": "MDg6QXJ0aWZhY3QxMTI2MTc1MDM3OQ==",
+        "name": "debug apk (arm64)",
+        "size_in_bytes": 211476920,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/11261750379",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/11261750379/zip",
+        "expired": false,
+        "digest": "sha256:aa4284488766244f6a359f236a57ac69bbff18241761db8b79fa9b5ed20d84e6",
+        "created_at": "2026-10-03T01:58:29Z",
+        "updated_at": "2026-10-03T01:58:29Z",
+        "expires_at": "2026-10-10T01:53:42Z",
+        "workflow_run": {
+          "id": 37087815642,
+          "repository_id": 954009150,
+          "head_repository_id": 954009150,
+          "head_branch": "fix/issue-1997-touchpad",
+          "head_sha": "bca175cd7fe50229a98ac3e268b155fea66b83af"
+        }
+      },
+      {
+        "id": 11261660568,
+        "node_id": "MDg6QXJ0aWZhY3QxMTI2MTY2MDU2OA==",
+        "name": "debug apk (arm)",
+        "size_in_bytes": 202544733,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/11261660568",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/11261660568/zip",
+        "expired": false,
+        "digest": "sha256:73920d05de5f4f0c014047dcde4b307b058e4fd841aaeb803ba16173e638b621",
+        "created_at": "2026-10-03T01:58:26Z",
+        "updated_at": "2026-10-03T01:58:26Z",
+        "expires_at": "2026-10-10T01:53:42Z",
+        "workflow_run": {
+          "id": 37087815642,
+          "repository_id": 954009150,
+          "head_repository_id": 954009150,
+          "head_branch": "fix/issue-1997-touchpad",
+          "head_sha": "bca175cd7fe50229a98ac3e268b155fea66b83af"
+        }
+      },
+      {
+        "id": 11261213142,
+        "node_id": "MDg6QXJ0aWZhY3QxMTI2MTIxMzE0Mg==",
+        "name": "debug apk (x86)",
+        "size_in_bytes": 191090210,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/11261213142",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/11261213142/zip",
+        "expired": false,
+        "digest": "sha256:d86a64457cababfaa8803c7bc9613361b3bf91f389b91cd0df3db86a0b1e2c3d",
+        "created_at": "2026-10-03T01:58:36Z",
+        "updated_at": "2026-10-03T01:58:36Z",
+        "expires_at": "2026-10-10T01:53:42Z",
+        "workflow_run": {
+          "id": 37087815642,
+          "repository_id": 954009150,
+          "head_repository_id": 954009150,
+          "head_branch": "fix/issue-1997-touchpad",
+          "head_sha": "bca175cd7fe50229a98ac3e268b155fea66b83af"
+        }
+      },
+      {
+        "id": 11260788644,
+        "node_id": "MDg6QXJ0aWZhY3QxMTI2MDc4ODY0NA==",
+        "name": "debug apk (x86_64)",
+        "size_in_bytes": 217770290,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/11260788644",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/11260788644/zip",
+        "expired": false,
+        "digest": "sha256:63b8b853ad6448a3122482918157e729c82bf790b1fcd2250e46a09582df2de7",
+        "created_at": "2026-10-03T01:57:09Z",
+        "updated_at": "2026-10-03T01:57:09Z",
+        "expires_at": "2026-10-10T01:53:42Z",
+        "workflow_run": {
+          "id": 37087815642,
+          "repository_id": 954009150,
+          "head_repository_id": 954009150,
+          "head_branch": "fix/issue-1997-touchpad",
+          "head_sha": "bca175cd7fe50229a98ac3e268b155fea66b83af"
+        }
+      },
+      {
+        "id": 11260704048,
+        "node_id": "MDg6QXJ0aWZhY3QxMTI2MDcwNDA0OA==",
+        "name": "debug apk (all)",
+        "size_in_bytes": 394945864,
+        "url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/11260704048",
+        "archive_download_url": "https://api.github.com/repos/ZalithLauncher/ZalithLauncher2/actions/artifacts/11260704048/zip",
+        "expired": false,
+        "digest": "sha256:eb7d7cc452f9ac0318fc377903779400e8c2df7c2524f83bd5f949fec4080a0b",
+        "created_at": "2026-10-03T01:58:46Z",
+        "updated_at": "2026-10-03T01:58:46Z",
+        "expires_at": "2026-10-10T01:53:42Z",
+        "workflow_run": {
+          "id": 37087815642,
+          "repository_id": 954009150,
+          "head_repository_id": 954009150,
+          "head_branch": "fix/issue-1997-touchpad",
+          "head_sha": "bca175cd7fe50229a98ac3e268b155fea66b83af"
+        }
+      }
+    ]
   }
 }
