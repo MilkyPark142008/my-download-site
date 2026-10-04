@@ -1,5 +1,45 @@
 [
   {
+    "id": 37181229607,
+    "sha": "e5e53a53ead9badac3c5a395043cf8708318e4b2",
+    "short_sha": "e5e53a5",
+    "message": "style(ui): Profiles registerWeak 块缩进还原；RemoteVersionListAdapter 补末行换行",
+    "created_at": "2026-10-04T05:53:04Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37181229607"
+  },
+  {
+    "id": 37181229611,
+    "sha": "e5e53a53ead9badac3c5a395043cf8708318e4b2",
+    "short_sha": "e5e53a5",
+    "message": "style(ui): Profiles registerWeak 块缩进还原；RemoteVersionListAdapter 补末行换行",
+    "created_at": "2026-10-04T05:53:04Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37181229611"
+  },
+  {
+    "id": 37181227216,
+    "sha": "e5e53a53ead9badac3c5a395043cf8708318e4b2",
+    "short_sha": "e5e53a5",
+    "message": "style(ui): Profiles registerWeak 块缩进还原；RemoteVersionListAdapter 补末行换行",
+    "created_at": "2026-10-04T05:53:04Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37181227216"
+  },
+  {
+    "id": 37181227237,
+    "sha": "e5e53a53ead9badac3c5a395043cf8708318e4b2",
+    "short_sha": "e5e53a5",
+    "message": "style(ui): Profiles registerWeak 块缩进还原；RemoteVersionListAdapter 补末行换行",
+    "created_at": "2026-10-04T05:53:04Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37181227237"
+  },
+  {
+    "id": 37178346438,
+    "sha": "bb1308a3f37a8ce98c9e40614bfc8985f63b937f",
+    "short_sha": "bb1308a",
+    "message": "optimize: ModManager 按版本缓存共享实例并增加目录快照校验,避免重复全量扫描;模组下载完成后事件通知管理页增量刷新",
+    "created_at": "2026-10-04T04:54:03Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37178346438"
+  },
+  {
     "id": 37178346302,
     "sha": "bb1308a3f37a8ce98c9e40614bfc8985f63b937f",
     "short_sha": "bb1308a",
@@ -358,45 +398,5 @@
     "message": "fix: 修复 Quilt meta 缺少 intermediary 字段时安装崩溃",
     "created_at": "2026-10-01T03:01:48Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36808687274"
-  },
-  {
-    "id": 36806740895,
-    "sha": "1a5fa2655299b01b673a9ce50d31499474bb27f5",
-    "short_sha": "1a5fa26",
-    "message": "fix: SDL 消息框 message 误设为标题导致错误信息显示不全",
-    "created_at": "2026-10-01T02:37:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36806740895"
-  },
-  {
-    "id": 36806740843,
-    "sha": "1a5fa2655299b01b673a9ce50d31499474bb27f5",
-    "short_sha": "1a5fa26",
-    "message": "fix: SDL 消息框 message 误设为标题导致错误信息显示不全",
-    "created_at": "2026-10-01T02:37:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36806740843"
-  },
-  {
-    "id": 36805046028,
-    "sha": "702229c99683fb2a7a3db055e5162eafcf35bb1f",
-    "short_sha": "702229c",
-    "message": "feat: FCLNumberSeekBar 左右新增加减按钮——主题色圆底贴轨道布置（按压亮主题色、禁用半透明），Material 加减图标随主题染色；点按步进一个显示单位、长按连发、滑出热区取消，触控热区以轨道端点为界与文本点按/拖动互不干扰；最小水平内边距保证按钮、轨道、数值文本不重叠",
-    "created_at": "2026-10-01T02:16:14Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36805046028"
-  },
-  {
-    "id": 36805046034,
-    "sha": "702229c99683fb2a7a3db055e5162eafcf35bb1f",
-    "short_sha": "702229c",
-    "message": "feat: FCLNumberSeekBar 左右新增加减按钮——主题色圆底贴轨道布置（按压亮主题色、禁用半透明），Material 加减图标随主题染色；点按步进一个显示单位、长按连发、滑出热区取消，触控热区以轨道端点为界与文本点按/拖动互不干扰；最小水平内边距保证按钮、轨道、数值文本不重叠",
-    "created_at": "2026-10-01T02:16:14Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36805046034"
-  },
-  {
-    "id": 36804398917,
-    "sha": "047805227715e4a833fd4c661bc440297afe298d",
-    "short_sha": "0478052",
-    "message": "fix(manage): 模组列表重进不再无条件重扫——tick 与最近一次扫描比对\n\n用户反馈：重进模组管理页时列表会无条件刷新。原因是 PageFlows.observe 每次 attach 都会重放\ntick 流当前值，回调未做'值是否变化'判断，于是每次重进都触发一次全量重扫（解析上百个模组很贵，\n正是 loadVersion 同版本守卫要避免的开销）。\n\n- loadMods 记录本次扫描对应的 tick（loadedTick）并累加扫描计数；回调改为 tick != loadedTick 才重扫\n- 离开期间确有落盘（tick 前进）时，重进仍会补一次重扫；扫描进行中的变化由下次 attach 兜底\n- 新增 ModListPageRefreshTest（自给自足临时 profile，不依赖设备数据）：断言重进不重扫、\n  有变化时恰好补一次重扫（实测两条均通过，skipped=0）",
-    "created_at": "2026-10-01T02:07:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36804398917"
   }
 ]
