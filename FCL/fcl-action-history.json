@@ -1,5 +1,45 @@
 [
   {
+    "id": 37178346302,
+    "sha": "bb1308a3f37a8ce98c9e40614bfc8985f63b937f",
+    "short_sha": "bb1308a",
+    "message": "optimize: ModManager 按版本缓存共享实例并增加目录快照校验,避免重复全量扫描;模组下载完成后事件通知管理页增量刷新",
+    "created_at": "2026-10-04T04:54:03Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37178346302"
+  },
+  {
+    "id": 37177394764,
+    "sha": "b9a5613b6a67e326cd50061413df5ae0fd0a17af",
+    "short_sha": "b9a5613",
+    "message": "refactor(ui): 引入 lifecycle-viewmodel-ktx，VersionListViewModel 改用 viewModelScope\n\n删除手写的 CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)\n与 onCleared 取消——viewModelScope 语义与之完全一致且随 ViewModel 清理\n自动取消，少维护一份等价基建。",
+    "created_at": "2026-10-04T04:34:19Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37177394764"
+  },
+  {
+    "id": 37177394774,
+    "sha": "b9a5613b6a67e326cd50061413df5ae0fd0a17af",
+    "short_sha": "b9a5613",
+    "message": "refactor(ui): 引入 lifecycle-viewmodel-ktx，VersionListViewModel 改用 viewModelScope\n\n删除手写的 CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)\n与 onCleared 取消——viewModelScope 语义与之完全一致且随 ViewModel 清理\n自动取消，少维护一份等价基建。",
+    "created_at": "2026-10-04T04:34:19Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37177394774"
+  },
+  {
+    "id": 37166064808,
+    "sha": "5e5c034710a0e93a20e0a28624748aa87397ef55",
+    "short_sha": "5e5c034",
+    "message": "fix: 安装器进程运行器协程化，修复 Forge/NeoForge/OptiFine 安装卡死且无法取消 (#1903)\n\n* fix: 安装器进程运行器协程化，修复 Forge/NeoForge/OptiFine 安装卡死且无法取消 (#1898)\n\n- InstallerProcessRunner 等待循环协程化（runSuspending + Java runBlocking 桥接），\n  轮询间隔检查任务取消供应商，取消即杀 :jvm 进程并中止任务，\n  修复安装卡在处理器阶段时取消按钮无效的问题\n- 退出码/启动标记文件名带会话 ID（EXTRA_SESSION 下发 ProcessService），\n  取消后立即重试不再共用固定名文件，杜绝读到陈旧退出码\n- 固定 5 分钟超时改为日志空闲 10 分钟 + 绝对 25 分钟：\n  慢设备上静默运行的重命名/拆分处理器不再被误杀，挂起必然以可见错误收敛\n- 处理器消息显示步骤 i/N、jar 名、JRE 版本与已运行时长，\n  静默处理器阶段任务消息持续走动，不再表现为假死\n\nCloses #1898\n\n* fix: 安装器超时判定引入 CPU 进度检测，无进展 3 分钟 + 绝对 15 分钟\n\n日志空闲判据对 FART 等全程静默的处理器只能保守取 10 分钟（真机上\n单次重命名可达数分钟），无法再收紧。改为以 /proc/<pid>/stat 的\nutime+stime 判定进程是否仍在推进（pid 取自 :jvm 启动标记文件）：\n\n- CPU 时间与日志长度任一变化即视为活跃，无进展 3 分钟判挂起\n- 被系统 SIGKILL 而未回写退出码的进程同样在该判定下快速收敛\n- procfs 不可用（个别 ROM 限制）时退化为日志空闲 10 分钟\n- 绝对时限 25 分钟收紧至 15 分钟\n\nMuMu 实测：4 个处理器全部退出码 0（pid 日志确认 CPU 判定激活），无误杀。\n\n* fix: 安装器单次尝试绝对时限收紧至 10 分钟\n\n无进展判定 3 分钟已覆盖挂死场景，绝对上限仅兜底 CPU 持续增长但\n永不结束的病态场景；用户长时间无反馈时多半会自行取消，10 分钟足够。",
+    "created_at": "2026-10-04T00:48:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37166064808"
+  },
+  {
+    "id": 37166064752,
+    "sha": "5e5c034710a0e93a20e0a28624748aa87397ef55",
+    "short_sha": "5e5c034",
+    "message": "fix: 安装器进程运行器协程化，修复 Forge/NeoForge/OptiFine 安装卡死且无法取消 (#1903)\n\n* fix: 安装器进程运行器协程化，修复 Forge/NeoForge/OptiFine 安装卡死且无法取消 (#1898)\n\n- InstallerProcessRunner 等待循环协程化（runSuspending + Java runBlocking 桥接），\n  轮询间隔检查任务取消供应商，取消即杀 :jvm 进程并中止任务，\n  修复安装卡在处理器阶段时取消按钮无效的问题\n- 退出码/启动标记文件名带会话 ID（EXTRA_SESSION 下发 ProcessService），\n  取消后立即重试不再共用固定名文件，杜绝读到陈旧退出码\n- 固定 5 分钟超时改为日志空闲 10 分钟 + 绝对 25 分钟：\n  慢设备上静默运行的重命名/拆分处理器不再被误杀，挂起必然以可见错误收敛\n- 处理器消息显示步骤 i/N、jar 名、JRE 版本与已运行时长，\n  静默处理器阶段任务消息持续走动，不再表现为假死\n\nCloses #1898\n\n* fix: 安装器超时判定引入 CPU 进度检测，无进展 3 分钟 + 绝对 15 分钟\n\n日志空闲判据对 FART 等全程静默的处理器只能保守取 10 分钟（真机上\n单次重命名可达数分钟），无法再收紧。改为以 /proc/<pid>/stat 的\nutime+stime 判定进程是否仍在推进（pid 取自 :jvm 启动标记文件）：\n\n- CPU 时间与日志长度任一变化即视为活跃，无进展 3 分钟判挂起\n- 被系统 SIGKILL 而未回写退出码的进程同样在该判定下快速收敛\n- procfs 不可用（个别 ROM 限制）时退化为日志空闲 10 分钟\n- 绝对时限 25 分钟收紧至 15 分钟\n\nMuMu 实测：4 个处理器全部退出码 0（pid 日志确认 CPU 判定激活），无误杀。\n\n* fix: 安装器单次尝试绝对时限收紧至 10 分钟\n\n无进展判定 3 分钟已覆盖挂死场景，绝对上限仅兜底 CPU 持续增长但\n永不结束的病态场景；用户长时间无反馈时多半会自行取消，10 分钟足够。",
+    "created_at": "2026-10-04T00:48:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37166064752"
+  },
+  {
     "id": 37122728146,
     "sha": "81fac37c1a39a1871f33e172d86f7cca90ef8fb2",
     "short_sha": "81fac37",
@@ -358,45 +398,5 @@
     "message": "fix(manage): 模组列表重进不再无条件重扫——tick 与最近一次扫描比对\n\n用户反馈：重进模组管理页时列表会无条件刷新。原因是 PageFlows.observe 每次 attach 都会重放\ntick 流当前值，回调未做'值是否变化'判断，于是每次重进都触发一次全量重扫（解析上百个模组很贵，\n正是 loadVersion 同版本守卫要避免的开销）。\n\n- loadMods 记录本次扫描对应的 tick（loadedTick）并累加扫描计数；回调改为 tick != loadedTick 才重扫\n- 离开期间确有落盘（tick 前进）时，重进仍会补一次重扫；扫描进行中的变化由下次 attach 兜底\n- 新增 ModListPageRefreshTest（自给自足临时 profile，不依赖设备数据）：断言重进不重扫、\n  有变化时恰好补一次重扫（实测两条均通过，skipped=0）",
     "created_at": "2026-10-01T02:07:55Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36804398917"
-  },
-  {
-    "id": 36804398957,
-    "sha": "047805227715e4a833fd4c661bc440297afe298d",
-    "short_sha": "0478052",
-    "message": "fix(manage): 模组列表重进不再无条件重扫——tick 与最近一次扫描比对\n\n用户反馈：重进模组管理页时列表会无条件刷新。原因是 PageFlows.observe 每次 attach 都会重放\ntick 流当前值，回调未做'值是否变化'判断，于是每次重进都触发一次全量重扫（解析上百个模组很贵，\n正是 loadVersion 同版本守卫要避免的开销）。\n\n- loadMods 记录本次扫描对应的 tick（loadedTick）并累加扫描计数；回调改为 tick != loadedTick 才重扫\n- 离开期间确有落盘（tick 前进）时，重进仍会补一次重扫；扫描进行中的变化由下次 attach 兜底\n- 新增 ModListPageRefreshTest（自给自足临时 profile，不依赖设备数据）：断言重进不重扫、\n  有变化时恰好补一次重扫（实测两条均通过，skipped=0）",
-    "created_at": "2026-10-01T02:07:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36804398957"
-  },
-  {
-    "id": 36802487468,
-    "sha": "098d3cedc9a0c5546fd759a7568e144bafb31968",
-    "short_sha": "098d3ce",
-    "message": "feat: 账户皮肤对话框预览应用 3D 皮肤层与身体腿部分离开关状态 (#1884)\n\n新增 restoreSkinSwitches 从 DataStore 恢复两个开关（不含动画选择），\n离线/微软账户皮肤对话框的 3D 预览与主界面保持一致显示效果",
-    "created_at": "2026-10-01T01:43:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36802487468"
-  },
-  {
-    "id": 36802487270,
-    "sha": "098d3cedc9a0c5546fd759a7568e144bafb31968",
-    "short_sha": "098d3ce",
-    "message": "feat: 账户皮肤对话框预览应用 3D 皮肤层与身体腿部分离开关状态 (#1884)\n\n新增 restoreSkinSwitches 从 DataStore 恢复两个开关（不含动画选择），\n离线/微软账户皮肤对话框的 3D 预览与主界面保持一致显示效果",
-    "created_at": "2026-10-01T01:43:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36802487270"
-  },
-  {
-    "id": 36655674038,
-    "sha": "b162aaac005332a3bfe1ddce88eda532dc444381",
-    "short_sha": "b162aaa",
-    "message": "1.3.3.6",
-    "created_at": "2026-09-30T01:32:59Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36655674038"
-  },
-  {
-    "id": 36655674216,
-    "sha": "b162aaac005332a3bfe1ddce88eda532dc444381",
-    "short_sha": "b162aaa",
-    "message": "1.3.3.6",
-    "created_at": "2026-09-30T01:32:59Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36655674216"
   }
 ]
