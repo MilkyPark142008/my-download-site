@@ -1,5 +1,101 @@
 [
   {
+    "id": 37349336203,
+    "sha": "c097f8df899f7afd4cd803381bf780a4570a6c5d",
+    "short_sha": "c097f8d",
+    "message": "fix: 整合包导出页作者改用账户游戏名、自动填充文件名，描述框改为自适应高度",
+    "created_at": "2026-10-05T17:01:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37349336203"
+  },
+  {
+    "id": 37349336020,
+    "sha": "c097f8df899f7afd4cd803381bf780a4570a6c5d",
+    "short_sha": "c097f8d",
+    "message": "fix: 整合包导出页作者改用账户游戏名、自动填充文件名，描述框改为自适应高度",
+    "created_at": "2026-10-05T17:01:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37349336020"
+  },
+  {
+    "id": 37314832257,
+    "sha": "c4fd17f1e147f28c332551acdd63b69dab48588a",
+    "short_sha": "c4fd17f",
+    "message": "fix: 快捷输入文本改经 SDL 文本输入通道提交，修复 26.3 下无法输入 (#1909)",
+    "created_at": "2026-10-05T13:10:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37314832257"
+  },
+  {
+    "id": 37314832522,
+    "sha": "c4fd17f1e147f28c332551acdd63b69dab48588a",
+    "short_sha": "c4fd17f",
+    "message": "fix: 快捷输入文本改经 SDL 文本输入通道提交，修复 26.3 下无法输入 (#1909)",
+    "created_at": "2026-10-05T13:10:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37314832522"
+  },
+  {
+    "id": 37312607315,
+    "sha": "83c0abd0082b5f73975a552deb91d0e2f2f5fd01",
+    "short_sha": "83c0abd",
+    "message": "fix: 模组列表搜索/筛选刷新后远程信息查询丢失，布局完成后主动补发可见条目查询 (#1912)",
+    "created_at": "2026-10-05T12:48:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37312607315"
+  },
+  {
+    "id": 37312607314,
+    "sha": "83c0abd0082b5f73975a552deb91d0e2f2f5fd01",
+    "short_sha": "83c0abd",
+    "message": "fix: 模组列表搜索/筛选刷新后远程信息查询丢失，布局完成后主动补发可见条目查询 (#1912)",
+    "created_at": "2026-10-05T12:48:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37312607314"
+  },
+  {
+    "id": 37308831284,
+    "sha": "9f2b4641ff0ff2c126d09b8bfd58b517cadbf2b9",
+    "short_sha": "9f2b464",
+    "message": "fix: 收藏页跳转前先确保下载页模式已初始化，修复冷启动点击模组收藏无法进入详情 (#1910)\n\nDownloadPage 新建实例的 pageId 字段默认值恰为 MOD 模式，但 switchType 从未执行时\nrepository/聚合仓库/回调均为 null。收藏页原守卫仅比较 pageId，冷启动点击模组收藏\n会跳过 switchType，openModDetail 构造 RemoteModInfoPage 时 repository.getType()\nNPE 被 Task 框架吞掉，表现为点击静默无跳转。\n\n改为新增 typeInitialized 标志（switchType 末尾置位）与 isTypeReady(pageId) 判断，\n收藏页跳转前据此决定是否先初始化；已初始化的同模式行为不变。",
+    "created_at": "2026-10-05T12:19:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37308831284"
+  },
+  {
+    "id": 37308831323,
+    "sha": "9f2b4641ff0ff2c126d09b8bfd58b517cadbf2b9",
+    "short_sha": "9f2b464",
+    "message": "fix: 收藏页跳转前先确保下载页模式已初始化，修复冷启动点击模组收藏无法进入详情 (#1910)\n\nDownloadPage 新建实例的 pageId 字段默认值恰为 MOD 模式，但 switchType 从未执行时\nrepository/聚合仓库/回调均为 null。收藏页原守卫仅比较 pageId，冷启动点击模组收藏\n会跳过 switchType，openModDetail 构造 RemoteModInfoPage 时 repository.getType()\nNPE 被 Task 框架吞掉，表现为点击静默无跳转。\n\n改为新增 typeInitialized 标志（switchType 末尾置位）与 isTypeReady(pageId) 判断，\n收藏页跳转前据此决定是否先初始化；已初始化的同模式行为不变。",
+    "created_at": "2026-10-05T12:19:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37308831323"
+  },
+  {
+    "id": 37308189542,
+    "sha": "72f9c23646b02cc00d4fa8331664eedd6ff8bbc5",
+    "short_sha": "72f9c23",
+    "message": "fix: 按键与字符成对补发改为仅对 Cleanroom 生效",
+    "created_at": "2026-10-05T12:13:50Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37308189542"
+  },
+  {
+    "id": 37308189529,
+    "sha": "72f9c23646b02cc00d4fa8331664eedd6ff8bbc5",
+    "short_sha": "72f9c23",
+    "message": "fix: 按键与字符成对补发改为仅对 Cleanroom 生效",
+    "created_at": "2026-10-05T12:13:50Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37308189529"
+  },
+  {
+    "id": 37306004780,
+    "sha": "c649ffe10bfee9d4194ddf0483907a407f915e78",
+    "short_sha": "c649ffe",
+    "message": "feat: 为 Vulkan 兼容性检测添加禁用开关\n\nCloses #1911",
+    "created_at": "2026-10-05T11:53:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37306004780"
+  },
+  {
+    "id": 37306004689,
+    "sha": "c649ffe10bfee9d4194ddf0483907a407f915e78",
+    "short_sha": "c649ffe",
+    "message": "feat: 为 Vulkan 兼容性检测添加禁用开关\n\nCloses #1911",
+    "created_at": "2026-10-05T11:53:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37306004689"
+  },
+  {
     "id": 37258512886,
     "sha": "34344b9b637839c73f2856615021f7a8ee7ba9d8",
     "short_sha": "34344b9",
@@ -302,101 +398,5 @@
     "message": "fix: 修复旧格式（64x32）皮肤切页面后渲染错乱：renderer.texture 保存归一化后位图，surface 重建重上传不再按原始布局被 64x64 UV 采样错位（#1891）",
     "created_at": "2026-10-02T02:01:33Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36953693149"
-  },
-  {
-    "id": 36953693067,
-    "sha": "6fe3806dd07ebeb20d403b1f4a003ce83d194942",
-    "short_sha": "6fe3806",
-    "message": "fix: 修复旧格式（64x32）皮肤切页面后渲染错乱：renderer.texture 保存归一化后位图，surface 重建重上传不再按原始布局被 64x64 UV 采样错位（#1891）",
-    "created_at": "2026-10-02T02:01:33Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36953693067"
-  },
-  {
-    "id": 36865874444,
-    "sha": "21e0f7e321f8504734a8ab8bc88628307a2f0c36",
-    "short_sha": "21e0f7e",
-    "message": "feat: 模组列表新增排序，排序模式下取消增量加载改为全量排序后显示 (#1892)\n\n- 支持名称/文件名/大小/修改时间四个维度，重复选择同一维度切换升降序\n- 排序选择经 DataStore 全局持久化，重启后保持\n- 排序模式下扫描完成后在后台排序再一次性显示；allMods 始终保持加载顺序，切回默认无需重扫\n- 大小/修改时间排序先批量读取文件属性再比较，避免比较器内反复 IO",
-    "created_at": "2026-10-01T13:00:16Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36865874444"
-  },
-  {
-    "id": 36865874467,
-    "sha": "21e0f7e321f8504734a8ab8bc88628307a2f0c36",
-    "short_sha": "21e0f7e",
-    "message": "feat: 模组列表新增排序，排序模式下取消增量加载改为全量排序后显示 (#1892)\n\n- 支持名称/文件名/大小/修改时间四个维度，重复选择同一维度切换升降序\n- 排序选择经 DataStore 全局持久化，重启后保持\n- 排序模式下扫描完成后在后台排序再一次性显示；allMods 始终保持加载顺序，切回默认无需重扫\n- 大小/修改时间排序先批量读取文件属性再比较，避免比较器内反复 IO",
-    "created_at": "2026-10-01T13:00:16Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36865874467"
-  },
-  {
-    "id": 36861275832,
-    "sha": "fbfdc689adb26fa983fd9f8624134c3fcbd46850",
-    "short_sha": "fbfdc68",
-    "message": "fix: Vulkan 检测在 Turnip 驱动下失败，DRIVER_PATH 改为覆盖整个检测过程\n\n加载器在首次 vkCreateInstance 时才枚举硬件驱动，linkerhook 那一刻才\n读取 DRIVER_PATH；原先仅在 dlopen 系统加载器期间设置并随即恢复，实例\n创建时变量已消失，Turnip 命名空间无搜索路径导致驱动加载失败。现把\n设置/恢复上移到 JNI 入口，包住整个检测体，语义与游戏侧进程级常驻对齐",
-    "created_at": "2026-10-01T12:21:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36861275832"
-  },
-  {
-    "id": 36860000544,
-    "sha": "d2f5b8049883afcaac0df1ca8df30ca0615e01d2",
-    "short_sha": "d2f5b80",
-    "message": "feat: 删除/深度删除版本显示实时进度，结果提示改用对话框\n\n删除与深度删除不再只用转圈进度框：新增 DeleteProgressDialog（滚动日志区），\n深度删除逐条上报解析版本 json、统计引用、删除版本文件夹与每个库/资产文件的\n进度；完成后统计与失败原因改由对话框展示，避免 Toast 过长看不全",
-    "created_at": "2026-10-01T12:09:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36860000544"
-  },
-  {
-    "id": 36860000537,
-    "sha": "d2f5b8049883afcaac0df1ca8df30ca0615e01d2",
-    "short_sha": "d2f5b80",
-    "message": "feat: 删除/深度删除版本显示实时进度，结果提示改用对话框\n\n删除与深度删除不再只用转圈进度框：新增 DeleteProgressDialog（滚动日志区），\n深度删除逐条上报解析版本 json、统计引用、删除版本文件夹与每个库/资产文件的\n进度；完成后统计与失败原因改由对话框展示，避免 Toast 过长看不全",
-    "created_at": "2026-10-01T12:09:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36860000537"
-  },
-  {
-    "id": 36815213071,
-    "sha": "3f6c06f2cb8a80ccdbe28a8a15f4e59f6cdc38f3",
-    "short_sha": "3f6c06f",
-    "message": "feat: 版本列表新增深度删除，清理仅被该版本引用的库与资源 (#1873)\n\n* feat: 版本列表删除弹窗新增深度删除，清理仅被该版本引用的库与资源\n\n* fix: 深度删除按钮文案缩短为深度删除并在弹窗中补充功能说明\n\n* fix: 深度删除校验待删路径位于共享目录内\n\n库路径、资产 hash 与 assetId 均取自版本 json 与资产索引，属外部数据：携带 .. 或指向\n外部目录时原实现会直接删除共享目录之外的文件或目录。改为删除前对规范路径做目录内断言\n（libraries / assets/indexes / assets/objects / assets/virtual 各自判定），越界一律\n跳过并记日志；清理后收缩空目录同样改按规范路径比较，不越过各自根目录",
-    "created_at": "2026-10-01T04:27:32Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36815213071"
-  },
-  {
-    "id": 36815213043,
-    "sha": "3f6c06f2cb8a80ccdbe28a8a15f4e59f6cdc38f3",
-    "short_sha": "3f6c06f",
-    "message": "feat: 版本列表新增深度删除，清理仅被该版本引用的库与资源 (#1873)\n\n* feat: 版本列表删除弹窗新增深度删除，清理仅被该版本引用的库与资源\n\n* fix: 深度删除按钮文案缩短为深度删除并在弹窗中补充功能说明\n\n* fix: 深度删除校验待删路径位于共享目录内\n\n库路径、资产 hash 与 assetId 均取自版本 json 与资产索引，属外部数据：携带 .. 或指向\n外部目录时原实现会直接删除共享目录之外的文件或目录。改为删除前对规范路径做目录内断言\n（libraries / assets/indexes / assets/objects / assets/virtual 各自判定），越界一律\n跳过并记日志；清理后收缩空目录同样改按规范路径比较，不越过各自根目录",
-    "created_at": "2026-10-01T04:27:32Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36815213043"
-  },
-  {
-    "id": 36814752932,
-    "sha": "9f1d83e3bc95999379d6fba960ad9666c6896a62",
-    "short_sha": "9f1d83e",
-    "message": "build: 签名统一启用 v2+v3 方案、关闭 v1（minSdk 26 下 v1 已无必要）",
-    "created_at": "2026-10-01T04:20:37Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36814752932"
-  },
-  {
-    "id": 36814742867,
-    "sha": "47f00d2e482c29273a09721be52f8108723971f9",
-    "short_sha": "47f00d2",
-    "message": "feat: Vulkan 设备检测与 vkshim 驱动能力补齐 (#1866)\n\n* feat: 迁移 Vulkan 设备检测功能，支持 26.2+ 版本启动前校验\n\n- 新增 native 模块 vulkan_check：dlopen 系统 libvulkan 或经 liblinkerhook\n  加载 Turnip 驱动，枚举物理设备读取 apiVersion/扩展/特性\n- 移植 MC 版本与 Vulkan 依赖关系表（26.2 起各版本所需的扩展与特性）\n- 检测结果经 DataStore 缓存，驱动状态或检测规则变更时自动失效\n- 版本设置页新增「检测 Vulkan」入口与结果对话框（总体结论、\n  版本区间支持情况、逐项扩展/特性依赖标注）\n- 启动 26.2+ 版本前自动校验：缓存命中直接判定，无缓存询问检测；\n  26.3+（强制 Vulkan）不支持时阻止启动，其余版本警告后允许继续\n\n* fix: Vulkan 检测对话框标题改用主题默认文字色\n\nauto_text_tint 是与主色对比的黑/白，主色为深色时标题呈白色，\n在浅色对话框背景上不可见；改为与 FCLAlertDialog 标题一致的\n默认 textColorPrimary，跟随亮暗模式\n\n* refactor: 对话框屏幕尺寸获取统一改用 AndroidUtil\n\nVulkanCheckDialog、RendererSelectDialog、RendererEnvDialog、\nMioLibPatcherDialog、SelectControllerDialog、UpdateDialog 改用\ngetScreenWidth()/getScreenHeight()，移除废弃的\ndefaultDisplay.getSize(Point) 方式\n\n* feat: vkshim 包装系统 Vulkan 加载器，缺失 VK_EXT_vertex_attribute_divisor 时用 KHR/核心功能合成\n\n* feat: vkshim 启用接入设备检测门控\n\n- 检测判定设备缺失 VK_EXT_vertex_attribute_divisor 且提供\n  VK_KHR_vertex_attribute_divisor 时记录 needsDivisorShim（仅系统\n  驱动路径，Turnip 不经过包装层），依赖评估按补报 EXT 后的状态进行\n- 检测结果对话框与启动校验使用补报后的能力，shim 设备可正常通过\n  26.2+ 启动校验\n- 启动组装环境变量时按门控标志注入 VKSHIM_ENABLE，游戏进程\n  egl_bridge 仅在该标志下经 vkshim 包装加载，其余设备直连系统加载器\n- vkshim 移除 Vulkan 1.3 核心回退，仅合成 KHR 扩展声明的设备\n\n* adjust: Vulkan 检测不满足时改为警告，允许继续启动\n\n移除 26.3+ 版本的启动硬阻止：检测不满足依赖时统一弹警告\n（列出缺失项），用户确认后仍可启动；随之删除无调用者的\nisVulkanMandatory 与 vulkan_check_launch_unsupported 文案\n\n* fix: vkshim 判定改用检测时实际生效的驱动\n\n此前 needsDivisorShim 以版本设置是否为 Turnip 判定，但非 Adreno\n设备请求 Turnip 时检测与游戏运行时都会加载失败回落系统加载器，\nshim 本应生效却被排除导致无效。检测器现返回 usedCustomDriver\n（实际是否经 Turnip 加载），判定与对话框驱动展示均改用实际状态；\n旧缓存会在启动校验判定不支持时触发重新检测自愈\n\n* feat: vkshim 新增 fillModeNonSolid 降级模拟\n\n对齐 VulkanFix-Renderer 的 fill_mode_non_solid 模块策略，补齐\n26.2 依赖表中另一常见缺口（线框/点填充能力位）：\n- vkGetPhysicalDeviceFeatures(2/KHR) 谎报 fillModeNonSolid 开启\n- vkCreateDevice 时剥除应用启用的该能力位（副本替换 + pNext 链\n  原位改写并恢复原值），避免真驱动拒绝设备创建\n- vkCreateGraphicsPipelines 对模拟设备的非 FILL 光栅化状态降级\n  为 FILL（gipa 与 gdpa 两条解析路径均拦截），线框视觉让位可运行性\n- 每物理设备独立探测原生支持，原生支持则全链路直通；检测侧同步\n  判定 needsFillModeEmulation 并在依赖评估中按补齐状态计算\n\n* fix: Vulkan 检测补建补丁目录，vkshim divisor 特性位按驱动报告值置位\n\n- 检测用的 cacheDir 未经创建即传给 native：驱动补丁文件在该目录生成，目录缺失时\n  打开输出文件直接失败，Turnip 驱动加载必然回落到系统加载器，检测结论与 vkshim\n  门控随之失真\n- vkshim 补写的 divisor features 节点原先把两个特性位无条件置位，而启用驱动不支持的\n  位会让 vkCreateDevice 返回 VK_ERROR_FEATURE_NOT_PRESENT；改为先经\n  vkGetPhysicalDeviceFeatures2 查询驱动报告的支持情况，应用自带节点时同样把不支持的\n  位临时置回（调用后恢复）",
-    "created_at": "2026-10-01T04:21:30Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36814742867"
-  },
-  {
-    "id": 36814742830,
-    "sha": "47f00d2e482c29273a09721be52f8108723971f9",
-    "short_sha": "47f00d2",
-    "message": "feat: Vulkan 设备检测与 vkshim 驱动能力补齐 (#1866)\n\n* feat: 迁移 Vulkan 设备检测功能，支持 26.2+ 版本启动前校验\n\n- 新增 native 模块 vulkan_check：dlopen 系统 libvulkan 或经 liblinkerhook\n  加载 Turnip 驱动，枚举物理设备读取 apiVersion/扩展/特性\n- 移植 MC 版本与 Vulkan 依赖关系表（26.2 起各版本所需的扩展与特性）\n- 检测结果经 DataStore 缓存，驱动状态或检测规则变更时自动失效\n- 版本设置页新增「检测 Vulkan」入口与结果对话框（总体结论、\n  版本区间支持情况、逐项扩展/特性依赖标注）\n- 启动 26.2+ 版本前自动校验：缓存命中直接判定，无缓存询问检测；\n  26.3+（强制 Vulkan）不支持时阻止启动，其余版本警告后允许继续\n\n* fix: Vulkan 检测对话框标题改用主题默认文字色\n\nauto_text_tint 是与主色对比的黑/白，主色为深色时标题呈白色，\n在浅色对话框背景上不可见；改为与 FCLAlertDialog 标题一致的\n默认 textColorPrimary，跟随亮暗模式\n\n* refactor: 对话框屏幕尺寸获取统一改用 AndroidUtil\n\nVulkanCheckDialog、RendererSelectDialog、RendererEnvDialog、\nMioLibPatcherDialog、SelectControllerDialog、UpdateDialog 改用\ngetScreenWidth()/getScreenHeight()，移除废弃的\ndefaultDisplay.getSize(Point) 方式\n\n* feat: vkshim 包装系统 Vulkan 加载器，缺失 VK_EXT_vertex_attribute_divisor 时用 KHR/核心功能合成\n\n* feat: vkshim 启用接入设备检测门控\n\n- 检测判定设备缺失 VK_EXT_vertex_attribute_divisor 且提供\n  VK_KHR_vertex_attribute_divisor 时记录 needsDivisorShim（仅系统\n  驱动路径，Turnip 不经过包装层），依赖评估按补报 EXT 后的状态进行\n- 检测结果对话框与启动校验使用补报后的能力，shim 设备可正常通过\n  26.2+ 启动校验\n- 启动组装环境变量时按门控标志注入 VKSHIM_ENABLE，游戏进程\n  egl_bridge 仅在该标志下经 vkshim 包装加载，其余设备直连系统加载器\n- vkshim 移除 Vulkan 1.3 核心回退，仅合成 KHR 扩展声明的设备\n\n* adjust: Vulkan 检测不满足时改为警告，允许继续启动\n\n移除 26.3+ 版本的启动硬阻止：检测不满足依赖时统一弹警告\n（列出缺失项），用户确认后仍可启动；随之删除无调用者的\nisVulkanMandatory 与 vulkan_check_launch_unsupported 文案\n\n* fix: vkshim 判定改用检测时实际生效的驱动\n\n此前 needsDivisorShim 以版本设置是否为 Turnip 判定，但非 Adreno\n设备请求 Turnip 时检测与游戏运行时都会加载失败回落系统加载器，\nshim 本应生效却被排除导致无效。检测器现返回 usedCustomDriver\n（实际是否经 Turnip 加载），判定与对话框驱动展示均改用实际状态；\n旧缓存会在启动校验判定不支持时触发重新检测自愈\n\n* feat: vkshim 新增 fillModeNonSolid 降级模拟\n\n对齐 VulkanFix-Renderer 的 fill_mode_non_solid 模块策略，补齐\n26.2 依赖表中另一常见缺口（线框/点填充能力位）：\n- vkGetPhysicalDeviceFeatures(2/KHR) 谎报 fillModeNonSolid 开启\n- vkCreateDevice 时剥除应用启用的该能力位（副本替换 + pNext 链\n  原位改写并恢复原值），避免真驱动拒绝设备创建\n- vkCreateGraphicsPipelines 对模拟设备的非 FILL 光栅化状态降级\n  为 FILL（gipa 与 gdpa 两条解析路径均拦截），线框视觉让位可运行性\n- 每物理设备独立探测原生支持，原生支持则全链路直通；检测侧同步\n  判定 needsFillModeEmulation 并在依赖评估中按补齐状态计算\n\n* fix: Vulkan 检测补建补丁目录，vkshim divisor 特性位按驱动报告值置位\n\n- 检测用的 cacheDir 未经创建即传给 native：驱动补丁文件在该目录生成，目录缺失时\n  打开输出文件直接失败，Turnip 驱动加载必然回落到系统加载器，检测结论与 vkshim\n  门控随之失真\n- vkshim 补写的 divisor features 节点原先把两个特性位无条件置位，而启用驱动不支持的\n  位会让 vkCreateDevice 返回 VK_ERROR_FEATURE_NOT_PRESENT；改为先经\n  vkGetPhysicalDeviceFeatures2 查询驱动报告的支持情况，应用自带节点时同样把不支持的\n  位临时置回（调用后恢复）",
-    "created_at": "2026-10-01T04:21:30Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36814742830"
-  },
-  {
-    "id": 36814143291,
-    "sha": "f013e0fe91ae39413a73cd0f6702fd4df852ed77",
-    "short_sha": "f013e0f",
-    "message": "fix: 修复首页皮肤模型手势视角跨页面残留致返回后显示背面被误认为渲染错误（#1891），并修双指捏合结束后首个 MOVE 位移跳变致模型猛转",
-    "created_at": "2026-10-01T04:13:51Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36814143291"
   }
 ]
