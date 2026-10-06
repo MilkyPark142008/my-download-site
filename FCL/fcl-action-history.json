@@ -1,5 +1,181 @@
 [
   {
+    "id": 37416554451,
+    "sha": "5e76d7485d6ca34fe2adf86b31156f2714f5ccd9",
+    "short_sha": "5e76d74",
+    "message": "optimize: 外置键鼠链路健壮性重构 + 视角浮点游标 + 指针捕获/输入法自定义快捷键 (#1878)\n\n* optimize: 外置键鼠链路健壮性重构，新增指针捕获/输入法自定义快捷键\n\n- 指针捕获看门狗：静默丢失自动重试；实体鼠标模式仅游戏内维持捕获，菜单态用系统指针\n- 捕获持续失败时降级为悬停差值转视角，未捕获鼠标的 touch 点击补投按键\n- 鼠标键状态机去重，根治右键/中键经系统转换 BACK/HOME 与原始事件双触发的问题；BACK 按设备能力回查鼠标来源\n- 右菜单鼠标页新增指针捕获切换键与输入法切换键设置（主键绑定+修饰键选择），默认 F8 与 Shift+Enter，随 MenuSetting 持久化\n\n* fix: 快捷键按下同样拦截，按键监听态随界面收起退出\n\n- 自定义快捷键此前只在抬起时匹配：按下被转发给游戏而抬起被吞，游戏侧收不到释放会持续\n  按住（F8 等非 ENTER 快捷键即可触发）；改为匹配后按下与抬起一律不再下发\n- 按键监听态原先只有成功捕获按键才清除：点开设置行后不按键、直接收回右菜单或切到后台，\n  监听会一直吞掉所有按键（含菜单视图隐藏后用于唤回菜单的音量键），并把下一个按下的键\n  误绑定为快捷键；改为右菜单收起、菜单视图隐藏、页面暂停三处统一放弃监听\n\n* fix: 实体鼠标切换即时生效捕获，快捷键组合冲突拒绝绑定",
+    "created_at": "2026-10-06T05:02:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37416554451"
+  },
+  {
+    "id": 37416554509,
+    "sha": "5e76d7485d6ca34fe2adf86b31156f2714f5ccd9",
+    "short_sha": "5e76d74",
+    "message": "optimize: 外置键鼠链路健壮性重构 + 视角浮点游标 + 指针捕获/输入法自定义快捷键 (#1878)\n\n* optimize: 外置键鼠链路健壮性重构，新增指针捕获/输入法自定义快捷键\n\n- 指针捕获看门狗：静默丢失自动重试；实体鼠标模式仅游戏内维持捕获，菜单态用系统指针\n- 捕获持续失败时降级为悬停差值转视角，未捕获鼠标的 touch 点击补投按键\n- 鼠标键状态机去重，根治右键/中键经系统转换 BACK/HOME 与原始事件双触发的问题；BACK 按设备能力回查鼠标来源\n- 右菜单鼠标页新增指针捕获切换键与输入法切换键设置（主键绑定+修饰键选择），默认 F8 与 Shift+Enter，随 MenuSetting 持久化\n\n* fix: 快捷键按下同样拦截，按键监听态随界面收起退出\n\n- 自定义快捷键此前只在抬起时匹配：按下被转发给游戏而抬起被吞，游戏侧收不到释放会持续\n  按住（F8 等非 ENTER 快捷键即可触发）；改为匹配后按下与抬起一律不再下发\n- 按键监听态原先只有成功捕获按键才清除：点开设置行后不按键、直接收回右菜单或切到后台，\n  监听会一直吞掉所有按键（含菜单视图隐藏后用于唤回菜单的音量键），并把下一个按下的键\n  误绑定为快捷键；改为右菜单收起、菜单视图隐藏、页面暂停三处统一放弃监听\n\n* fix: 实体鼠标切换即时生效捕获，快捷键组合冲突拒绝绑定",
+    "created_at": "2026-10-06T05:02:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37416554509"
+  },
+  {
+    "id": 37414324105,
+    "sha": "4b0bc8108144a779e45a3a239d86d4b12bab5a70",
+    "short_sha": "4b0bc81",
+    "message": "fix: 实体鼠标切换即时生效捕获，快捷键组合冲突拒绝绑定",
+    "created_at": "2026-10-06T04:33:59Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37414324105"
+  },
+  {
+    "id": 37414324131,
+    "sha": "4b0bc8108144a779e45a3a239d86d4b12bab5a70",
+    "short_sha": "4b0bc81",
+    "message": "fix: 实体鼠标切换即时生效捕获，快捷键组合冲突拒绝绑定",
+    "created_at": "2026-10-06T04:33:59Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37414324131"
+  },
+  {
+    "id": 37414318980,
+    "sha": "4b0bc8108144a779e45a3a239d86d4b12bab5a70",
+    "short_sha": "4b0bc81",
+    "message": "fix: 实体鼠标切换即时生效捕获，快捷键组合冲突拒绝绑定",
+    "created_at": "2026-10-06T04:33:59Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37414318980"
+  },
+  {
+    "id": 37414319052,
+    "sha": "4b0bc8108144a779e45a3a239d86d4b12bab5a70",
+    "short_sha": "4b0bc81",
+    "message": "fix: 实体鼠标切换即时生效捕获，快捷键组合冲突拒绝绑定",
+    "created_at": "2026-10-06T04:33:59Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37414319052"
+  },
+  {
+    "id": 37412394170,
+    "sha": "19849d76cc9e4184e3f8f7f434b9730d701856a4",
+    "short_sha": "19849d7",
+    "message": "optimize: 陀螺仪旋转缓存化改由 DisplayListener 推送，时间系数改名并补触摸标定注释",
+    "created_at": "2026-10-06T04:04:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37412394170"
+  },
+  {
+    "id": 37412394217,
+    "sha": "19849d76cc9e4184e3f8f7f434b9730d701856a4",
+    "short_sha": "19849d7",
+    "message": "optimize: 陀螺仪旋转缓存化改由 DisplayListener 推送，时间系数改名并补触摸标定注释",
+    "created_at": "2026-10-06T04:04:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37412394217"
+  },
+  {
+    "id": 37411534228,
+    "sha": "0753596d96fed74d77d6056babca5014e7ee4f39",
+    "short_sha": "0753596",
+    "message": "feat: 陀螺仪改为相对增量流并新增分轴灵敏度与触控加速 (#1876)",
+    "created_at": "2026-10-06T03:58:59Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37411534228"
+  },
+  {
+    "id": 37411533942,
+    "sha": "0753596d96fed74d77d6056babca5014e7ee4f39",
+    "short_sha": "0753596",
+    "message": "feat: 陀螺仪改为相对增量流并新增分轴灵敏度与触控加速 (#1876)",
+    "created_at": "2026-10-06T03:58:59Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37411533942"
+  },
+  {
+    "id": 37410979444,
+    "sha": "69e543e1384438b2b5dbbdf2e51f631ccc2e64c8",
+    "short_sha": "69e543e",
+    "message": "fix: 整合包导出页全屏输入改完成动作，修复选路径返回后键盘自动弹出",
+    "created_at": "2026-10-06T03:51:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37410979444"
+  },
+  {
+    "id": 37410979448,
+    "sha": "69e543e1384438b2b5dbbdf2e51f631ccc2e64c8",
+    "short_sha": "69e543e",
+    "message": "fix: 整合包导出页全屏输入改完成动作，修复选路径返回后键盘自动弹出",
+    "created_at": "2026-10-06T03:51:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37410979448"
+  },
+  {
+    "id": 37403133384,
+    "sha": "6ae0051bee4dadbeb0ce566f205b5e404dd6f8cb",
+    "short_sha": "6ae0051",
+    "message": "fix: 整合包导出页作者改用账户游戏名、自动填充文件名，描述框改为自适应高度 (#1916)",
+    "created_at": "2026-10-06T02:14:04Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37403133384"
+  },
+  {
+    "id": 37403133450,
+    "sha": "6ae0051bee4dadbeb0ce566f205b5e404dd6f8cb",
+    "short_sha": "6ae0051",
+    "message": "fix: 整合包导出页作者改用账户游戏名、自动填充文件名，描述框改为自适应高度 (#1916)",
+    "created_at": "2026-10-06T02:14:04Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37403133450"
+  },
+  {
+    "id": 37401756446,
+    "sha": "56906a5771fa0b880f9a63c69a9d9bd4c2fdacfc",
+    "short_sha": "56906a5",
+    "message": "feat: 文件浏览器新增常规文件管理功能 (#1875)\n\n* feat: 文件浏览器新增常规文件管理功能\n\n- 新建文件夹/文件、重命名、删除（确认）、复制/剪切/粘贴（会话级剪贴板，重名自动追加序号）\n- 排序方式切换（名称/大小/修改时间）与显示隐藏文件开关，SharedPreferences 持久化\n- 长按条目操作菜单：详情/重命名/删除/复制/剪切/分享\n- 批量操作菜单：全选/复制/剪切/删除选中，浏览模式下文件支持勾选\n- 文件操作走 IO 线程，目录大小后台计算，失败提示并记录日志\n\n* fix: 文件列表按名称/大小/时间排序时丢失目录优先分组\n\n最后一次 sort 决定最终顺序，改为先按所选方式排序、再稳定地目录前置，\n保证目录分组在任何排序方式下不被覆盖（192.168.2.8 真机测试发现）\n\n* fix: 单选的文件选择模式不再提供批量操作入口\n\n批量菜单的“全选”会把当前目录全部文件塞进选择结果，确认后向调用方返回多个路径，\n而 launchSingleSelection 的调用方按单选契约只取首个路径。改为单选的文件选择模式下\n不显示批量入口，多选模式与浏览模式不受影响",
+    "created_at": "2026-10-06T01:57:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37401756446"
+  },
+  {
+    "id": 37401756480,
+    "sha": "56906a5771fa0b880f9a63c69a9d9bd4c2fdacfc",
+    "short_sha": "56906a5",
+    "message": "feat: 文件浏览器新增常规文件管理功能 (#1875)\n\n* feat: 文件浏览器新增常规文件管理功能\n\n- 新建文件夹/文件、重命名、删除（确认）、复制/剪切/粘贴（会话级剪贴板，重名自动追加序号）\n- 排序方式切换（名称/大小/修改时间）与显示隐藏文件开关，SharedPreferences 持久化\n- 长按条目操作菜单：详情/重命名/删除/复制/剪切/分享\n- 批量操作菜单：全选/复制/剪切/删除选中，浏览模式下文件支持勾选\n- 文件操作走 IO 线程，目录大小后台计算，失败提示并记录日志\n\n* fix: 文件列表按名称/大小/时间排序时丢失目录优先分组\n\n最后一次 sort 决定最终顺序，改为先按所选方式排序、再稳定地目录前置，\n保证目录分组在任何排序方式下不被覆盖（192.168.2.8 真机测试发现）\n\n* fix: 单选的文件选择模式不再提供批量操作入口\n\n批量菜单的“全选”会把当前目录全部文件塞进选择结果，确认后向调用方返回多个路径，\n而 launchSingleSelection 的调用方按单选契约只取首个路径。改为单选的文件选择模式下\n不显示批量入口，多选模式与浏览模式不受影响",
+    "created_at": "2026-10-06T01:57:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37401756480"
+  },
+  {
+    "id": 37401729872,
+    "sha": "9e2deda787c2741572dfa392b850a308f530d8e5",
+    "short_sha": "9e2deda",
+    "message": "fix: make gamepad input mode dialog dismissable on short screens (#1894)\n\nThe first-gamepad-input dialog is non-cancelable and uses a wrap_content\nlayout with the confirm button at the bottom. On short landscape screens\nthe button was clipped off-screen, and since all gamepad input is swallowed\nwhile the dialog is showing, there was no way to dismiss it.\n\n- Put the dialog content in a ScrollView and pin the confirm button below it\n- Let the gamepad operate the dialog: D-pad up/down selects a mode,\n  A/Cross or Start confirms\n\n\nClaude-Session: https://claude.ai/code/session_01Eh5CBhkyde4wzvmj2zwe6u\n\nCo-authored-by: Claude Sonnet 5.5 <noreply@anthropic.com>",
+    "created_at": "2026-10-06T01:56:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37401729872"
+  },
+  {
+    "id": 37401729842,
+    "sha": "9e2deda787c2741572dfa392b850a308f530d8e5",
+    "short_sha": "9e2deda",
+    "message": "fix: make gamepad input mode dialog dismissable on short screens (#1894)\n\nThe first-gamepad-input dialog is non-cancelable and uses a wrap_content\nlayout with the confirm button at the bottom. On short landscape screens\nthe button was clipped off-screen, and since all gamepad input is swallowed\nwhile the dialog is showing, there was no way to dismiss it.\n\n- Put the dialog content in a ScrollView and pin the confirm button below it\n- Let the gamepad operate the dialog: D-pad up/down selects a mode,\n  A/Cross or Start confirms\n\n\nClaude-Session: https://claude.ai/code/session_01Eh5CBhkyde4wzvmj2zwe6u\n\nCo-authored-by: Claude Sonnet 5.5 <noreply@anthropic.com>",
+    "created_at": "2026-10-06T01:56:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37401729842"
+  },
+  {
+    "id": 37399728636,
+    "sha": "7a9517424d327f63550170eeb3e94d23e4667e42",
+    "short_sha": "7a95174",
+    "message": "feat(LWJGL): 补全&优化 glfwGetWindowPos相关实现(#1915)\n\n* feat(LWJGL): glfwGetWindowPos(long, IntBuffer, IntBuffer)\n\n* fix(LWJGL): glfwGetWindowPos 数组版返回真实坐标，IntBuffer 重载对齐官方签名\n\n---------\n\nCo-authored-by: ShirosakiMio <852468399@qq.com>",
+    "created_at": "2026-10-06T01:32:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37399728636"
+  },
+  {
+    "id": 37399728563,
+    "sha": "7a9517424d327f63550170eeb3e94d23e4667e42",
+    "short_sha": "7a95174",
+    "message": "feat(LWJGL): 补全&优化 glfwGetWindowPos相关实现(#1915)\n\n* feat(LWJGL): glfwGetWindowPos(long, IntBuffer, IntBuffer)\n\n* fix(LWJGL): glfwGetWindowPos 数组版返回真实坐标，IntBuffer 重载对齐官方签名\n\n---------\n\nCo-authored-by: ShirosakiMio <852468399@qq.com>",
+    "created_at": "2026-10-06T01:32:56Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37399728563"
+  },
+  {
+    "id": 37399260064,
+    "sha": "06cba38be80d29bd233b69247c755100443737eb",
+    "short_sha": "06cba38",
+    "message": "fix(LWJGL): glfwGetWindowPos 数组版返回真实坐标，IntBuffer 重载对齐官方签名",
+    "created_at": "2026-10-06T01:27:20Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37399260064"
+  },
+  {
+    "id": 37397367032,
+    "sha": "1bf838ef7fa7e7843691254807f0dcbb258e1dec",
+    "short_sha": "1bf838e",
+    "message": "更新模组数据 (2026-10-04) (#1917)",
+    "created_at": "2026-10-06T01:05:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37397367032"
+  },
+  {
     "id": 37349336203,
     "sha": "c097f8df899f7afd4cd803381bf780a4570a6c5d",
     "short_sha": "c097f8d",
@@ -222,181 +398,5 @@
     "message": "Update ClassicAccountLoginDialog.kt",
     "created_at": "2026-10-03T12:10:31Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37122032955"
-  },
-  {
-    "id": 37100049494,
-    "sha": "0d0d3d43b84ca87e04cc81f1285ca8080231f9c5",
-    "short_sha": "0d0d3d4",
-    "message": "fix: 安装器单次尝试绝对时限收紧至 10 分钟\n\n无进展判定 3 分钟已覆盖挂死场景，绝对上限仅兜底 CPU 持续增长但\n永不结束的病态场景；用户长时间无反馈时多半会自行取消，10 分钟足够。",
-    "created_at": "2026-10-03T05:30:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37100049494"
-  },
-  {
-    "id": 37100049493,
-    "sha": "0d0d3d43b84ca87e04cc81f1285ca8080231f9c5",
-    "short_sha": "0d0d3d4",
-    "message": "fix: 安装器单次尝试绝对时限收紧至 10 分钟\n\n无进展判定 3 分钟已覆盖挂死场景，绝对上限仅兜底 CPU 持续增长但\n永不结束的病态场景；用户长时间无反馈时多半会自行取消，10 分钟足够。",
-    "created_at": "2026-10-03T05:30:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37100049493"
-  },
-  {
-    "id": 37100047076,
-    "sha": "0d0d3d43b84ca87e04cc81f1285ca8080231f9c5",
-    "short_sha": "0d0d3d4",
-    "message": "fix: 安装器单次尝试绝对时限收紧至 10 分钟\n\n无进展判定 3 分钟已覆盖挂死场景，绝对上限仅兜底 CPU 持续增长但\n永不结束的病态场景；用户长时间无反馈时多半会自行取消，10 分钟足够。",
-    "created_at": "2026-10-03T05:30:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37100047076"
-  },
-  {
-    "id": 37100047155,
-    "sha": "0d0d3d43b84ca87e04cc81f1285ca8080231f9c5",
-    "short_sha": "0d0d3d4",
-    "message": "fix: 安装器单次尝试绝对时限收紧至 10 分钟\n\n无进展判定 3 分钟已覆盖挂死场景，绝对上限仅兜底 CPU 持续增长但\n永不结束的病态场景；用户长时间无反馈时多半会自行取消，10 分钟足够。",
-    "created_at": "2026-10-03T05:30:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37100047155"
-  },
-  {
-    "id": 37099977172,
-    "sha": "edd1faf55b8b5e160df5df02a0e128c973cc1c11",
-    "short_sha": "edd1faf",
-    "message": "fix: 安装器超时判定引入 CPU 进度检测，无进展 3 分钟 + 绝对 15 分钟\n\n日志空闲判据对 FART 等全程静默的处理器只能保守取 10 分钟（真机上\n单次重命名可达数分钟），无法再收紧。改为以 /proc/<pid>/stat 的\nutime+stime 判定进程是否仍在推进（pid 取自 :jvm 启动标记文件）：\n\n- CPU 时间与日志长度任一变化即视为活跃，无进展 3 分钟判挂起\n- 被系统 SIGKILL 而未回写退出码的进程同样在该判定下快速收敛\n- procfs 不可用（个别 ROM 限制）时退化为日志空闲 10 分钟\n- 绝对时限 25 分钟收紧至 15 分钟\n\nMuMu 实测：4 个处理器全部退出码 0（pid 日志确认 CPU 判定激活），无误杀。",
-    "created_at": "2026-10-03T05:29:14Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37099977172"
-  },
-  {
-    "id": 37099977199,
-    "sha": "edd1faf55b8b5e160df5df02a0e128c973cc1c11",
-    "short_sha": "edd1faf",
-    "message": "fix: 安装器超时判定引入 CPU 进度检测，无进展 3 分钟 + 绝对 15 分钟\n\n日志空闲判据对 FART 等全程静默的处理器只能保守取 10 分钟（真机上\n单次重命名可达数分钟），无法再收紧。改为以 /proc/<pid>/stat 的\nutime+stime 判定进程是否仍在推进（pid 取自 :jvm 启动标记文件）：\n\n- CPU 时间与日志长度任一变化即视为活跃，无进展 3 分钟判挂起\n- 被系统 SIGKILL 而未回写退出码的进程同样在该判定下快速收敛\n- procfs 不可用（个别 ROM 限制）时退化为日志空闲 10 分钟\n- 绝对时限 25 分钟收紧至 15 分钟\n\nMuMu 实测：4 个处理器全部退出码 0（pid 日志确认 CPU 判定激活），无误杀。",
-    "created_at": "2026-10-03T05:29:14Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37099977199"
-  },
-  {
-    "id": 37099974658,
-    "sha": "edd1faf55b8b5e160df5df02a0e128c973cc1c11",
-    "short_sha": "edd1faf",
-    "message": "fix: 安装器超时判定引入 CPU 进度检测，无进展 3 分钟 + 绝对 15 分钟\n\n日志空闲判据对 FART 等全程静默的处理器只能保守取 10 分钟（真机上\n单次重命名可达数分钟），无法再收紧。改为以 /proc/<pid>/stat 的\nutime+stime 判定进程是否仍在推进（pid 取自 :jvm 启动标记文件）：\n\n- CPU 时间与日志长度任一变化即视为活跃，无进展 3 分钟判挂起\n- 被系统 SIGKILL 而未回写退出码的进程同样在该判定下快速收敛\n- procfs 不可用（个别 ROM 限制）时退化为日志空闲 10 分钟\n- 绝对时限 25 分钟收紧至 15 分钟\n\nMuMu 实测：4 个处理器全部退出码 0（pid 日志确认 CPU 判定激活），无误杀。",
-    "created_at": "2026-10-03T05:29:14Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37099974658"
-  },
-  {
-    "id": 37099974659,
-    "sha": "edd1faf55b8b5e160df5df02a0e128c973cc1c11",
-    "short_sha": "edd1faf",
-    "message": "fix: 安装器超时判定引入 CPU 进度检测，无进展 3 分钟 + 绝对 15 分钟\n\n日志空闲判据对 FART 等全程静默的处理器只能保守取 10 分钟（真机上\n单次重命名可达数分钟），无法再收紧。改为以 /proc/<pid>/stat 的\nutime+stime 判定进程是否仍在推进（pid 取自 :jvm 启动标记文件）：\n\n- CPU 时间与日志长度任一变化即视为活跃，无进展 3 分钟判挂起\n- 被系统 SIGKILL 而未回写退出码的进程同样在该判定下快速收敛\n- procfs 不可用（个别 ROM 限制）时退化为日志空闲 10 分钟\n- 绝对时限 25 分钟收紧至 15 分钟\n\nMuMu 实测：4 个处理器全部退出码 0（pid 日志确认 CPU 判定激活），无误杀。",
-    "created_at": "2026-10-03T05:29:14Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37099974659"
-  },
-  {
-    "id": 37098976716,
-    "sha": "e88d3f975a9b2041037600fd83338f761bc80f64",
-    "short_sha": "e88d3f9",
-    "message": "Update ModListPage.java",
-    "created_at": "2026-10-03T05:10:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37098976716"
-  },
-  {
-    "id": 37098976726,
-    "sha": "e88d3f975a9b2041037600fd83338f761bc80f64",
-    "short_sha": "e88d3f9",
-    "message": "Update ModListPage.java",
-    "created_at": "2026-10-03T05:10:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37098976726"
-  },
-  {
-    "id": 37096101048,
-    "sha": "c7ce6db756a00c76a65cb80a9aedebd53e9ec91c",
-    "short_sha": "c7ce6db",
-    "message": "fix: 修复控制器初始化竞态导致的保存报错与用户布局丢失",
-    "created_at": "2026-10-03T04:17:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37096101048"
-  },
-  {
-    "id": 37096101047,
-    "sha": "c7ce6db756a00c76a65cb80a9aedebd53e9ec91c",
-    "short_sha": "c7ce6db",
-    "message": "fix: 修复控制器初始化竞态导致的保存报错与用户布局丢失",
-    "created_at": "2026-10-03T04:17:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37096101047"
-  },
-  {
-    "id": 37093028417,
-    "sha": "82353342a59c76c8238b5d16f117a7ba5b1e426b",
-    "short_sha": "8235334",
-    "message": "fix: oshi 5.x initProcessorCounts 返回 List，误包成 Pair 致构造遍历时抛 IncompatibleClassChangeError",
-    "created_at": "2026-10-03T03:23:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37093028417"
-  },
-  {
-    "id": 37091400440,
-    "sha": "943df772fa4cfb49cb3d3c49ba9d36804d73227c",
-    "short_sha": "943df77",
-    "message": "fix: 安装器进程运行器协程化，修复 Forge/NeoForge/OptiFine 安装卡死且无法取消 (#1898)\n\n- InstallerProcessRunner 等待循环协程化（runSuspending + Java runBlocking 桥接），\n  轮询间隔检查任务取消供应商，取消即杀 :jvm 进程并中止任务，\n  修复安装卡在处理器阶段时取消按钮无效的问题\n- 退出码/启动标记文件名带会话 ID（EXTRA_SESSION 下发 ProcessService），\n  取消后立即重试不再共用固定名文件，杜绝读到陈旧退出码\n- 固定 5 分钟超时改为日志空闲 10 分钟 + 绝对 25 分钟：\n  慢设备上静默运行的重命名/拆分处理器不再被误杀，挂起必然以可见错误收敛\n- 处理器消息显示步骤 i/N、jar 名、JRE 版本与已运行时长，\n  静默处理器阶段任务消息持续走动，不再表现为假死\n\nCloses #1898",
-    "created_at": "2026-10-03T02:42:45Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37091400440"
-  },
-  {
-    "id": 37091400433,
-    "sha": "943df772fa4cfb49cb3d3c49ba9d36804d73227c",
-    "short_sha": "943df77",
-    "message": "fix: 安装器进程运行器协程化，修复 Forge/NeoForge/OptiFine 安装卡死且无法取消 (#1898)\n\n- InstallerProcessRunner 等待循环协程化（runSuspending + Java runBlocking 桥接），\n  轮询间隔检查任务取消供应商，取消即杀 :jvm 进程并中止任务，\n  修复安装卡在处理器阶段时取消按钮无效的问题\n- 退出码/启动标记文件名带会话 ID（EXTRA_SESSION 下发 ProcessService），\n  取消后立即重试不再共用固定名文件，杜绝读到陈旧退出码\n- 固定 5 分钟超时改为日志空闲 10 分钟 + 绝对 25 分钟：\n  慢设备上静默运行的重命名/拆分处理器不再被误杀，挂起必然以可见错误收敛\n- 处理器消息显示步骤 i/N、jar 名、JRE 版本与已运行时长，\n  静默处理器阶段任务消息持续走动，不再表现为假死\n\nCloses #1898",
-    "created_at": "2026-10-03T02:42:45Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37091400433"
-  },
-  {
-    "id": 37090764366,
-    "sha": "943df772fa4cfb49cb3d3c49ba9d36804d73227c",
-    "short_sha": "943df77",
-    "message": "fix: 安装器进程运行器协程化，修复 Forge/NeoForge/OptiFine 安装卡死且无法取消 (#1898)\n\n- InstallerProcessRunner 等待循环协程化（runSuspending + Java runBlocking 桥接），\n  轮询间隔检查任务取消供应商，取消即杀 :jvm 进程并中止任务，\n  修复安装卡在处理器阶段时取消按钮无效的问题\n- 退出码/启动标记文件名带会话 ID（EXTRA_SESSION 下发 ProcessService），\n  取消后立即重试不再共用固定名文件，杜绝读到陈旧退出码\n- 固定 5 分钟超时改为日志空闲 10 分钟 + 绝对 25 分钟：\n  慢设备上静默运行的重命名/拆分处理器不再被误杀，挂起必然以可见错误收敛\n- 处理器消息显示步骤 i/N、jar 名、JRE 版本与已运行时长，\n  静默处理器阶段任务消息持续走动，不再表现为假死\n\nCloses #1898",
-    "created_at": "2026-10-03T02:42:45Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37090764366"
-  },
-  {
-    "id": 37090764452,
-    "sha": "943df772fa4cfb49cb3d3c49ba9d36804d73227c",
-    "short_sha": "943df77",
-    "message": "fix: 安装器进程运行器协程化，修复 Forge/NeoForge/OptiFine 安装卡死且无法取消 (#1898)\n\n- InstallerProcessRunner 等待循环协程化（runSuspending + Java runBlocking 桥接），\n  轮询间隔检查任务取消供应商，取消即杀 :jvm 进程并中止任务，\n  修复安装卡在处理器阶段时取消按钮无效的问题\n- 退出码/启动标记文件名带会话 ID（EXTRA_SESSION 下发 ProcessService），\n  取消后立即重试不再共用固定名文件，杜绝读到陈旧退出码\n- 固定 5 分钟超时改为日志空闲 10 分钟 + 绝对 25 分钟：\n  慢设备上静默运行的重命名/拆分处理器不再被误杀，挂起必然以可见错误收敛\n- 处理器消息显示步骤 i/N、jar 名、JRE 版本与已运行时长，\n  静默处理器阶段任务消息持续走动，不再表现为假死\n\nCloses #1898",
-    "created_at": "2026-10-03T02:42:45Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37090764452"
-  },
-  {
-    "id": 37001447752,
-    "sha": "ecd4e60a8913bf4d82f909925c3d23699cb34db4",
-    "short_sha": "ecd4e60",
-    "message": "fix(manage): null 版本分发不再崩页面——三处 loadVersion 补 null 守卫\n\nManageUI.profileListener 在选中 Profile 未选版本时把 null 分发到全部\n已创建页面（loadVersion 的合法输入，VersionSettingPage 全局设置模式\n即依赖它），但三个页面按\"必有版本\"假设实现，收到 null 即崩：\n- ModListPage：getResolvedPreservingPatchesVersion(null) →\n  resolvedVersionCache.computeIfAbsent(null) NPE\n- ManagePage：Kotlin 非空参数内在 null 检查 NPE\n- InstallerListPage：getVersion(null) 抛 VersionNotFoundException\n改为 null 时保持现状（内容依赖具体版本，等下一个真实版本分发再加载）；\nWorldList/资源包/光影页本就走全局目录回退、VersionSettingPage 有全局\n模式，不动。回归测试 distributingNullVersionDoesNotCrashCreatedPages：\n创建三个页面后做 null 分发，断言不崩、不重扫、真实版本分发恢复可用。",
-    "created_at": "2026-10-02T11:31:06Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37001447752"
-  },
-  {
-    "id": 37001447609,
-    "sha": "ecd4e60a8913bf4d82f909925c3d23699cb34db4",
-    "short_sha": "ecd4e60",
-    "message": "fix(manage): null 版本分发不再崩页面——三处 loadVersion 补 null 守卫\n\nManageUI.profileListener 在选中 Profile 未选版本时把 null 分发到全部\n已创建页面（loadVersion 的合法输入，VersionSettingPage 全局设置模式\n即依赖它），但三个页面按\"必有版本\"假设实现，收到 null 即崩：\n- ModListPage：getResolvedPreservingPatchesVersion(null) →\n  resolvedVersionCache.computeIfAbsent(null) NPE\n- ManagePage：Kotlin 非空参数内在 null 检查 NPE\n- InstallerListPage：getVersion(null) 抛 VersionNotFoundException\n改为 null 时保持现状（内容依赖具体版本，等下一个真实版本分发再加载）；\nWorldList/资源包/光影页本就走全局目录回退、VersionSettingPage 有全局\n模式，不动。回归测试 distributingNullVersionDoesNotCrashCreatedPages：\n创建三个页面后做 null 分发，断言不崩、不重扫、真实版本分发恢复可用。",
-    "created_at": "2026-10-02T11:31:06Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37001447609"
-  },
-  {
-    "id": 36999713964,
-    "sha": "301544116b3165951b00adb9ca25b674d11dd5d0",
-    "short_sha": "3015441",
-    "message": "fix(manage): 扫描进行中错过的模组变化信号在扫描完成后补扫\n\nModsChanged 的重载被 refreshButton 禁用挡下时（扫描中），该 tick 不会\n再投递（debounce 已消费），新下载/更新的模组要等重进页面才出现。\n扫描完成回调里比对 tick，前进过则补一次重扫（串行于当前扫描，不会重叠）。",
-    "created_at": "2026-10-02T02:51:50Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36999713964"
-  },
-  {
-    "id": 36999713719,
-    "sha": "301544116b3165951b00adb9ca25b674d11dd5d0",
-    "short_sha": "3015441",
-    "message": "fix(manage): 扫描进行中错过的模组变化信号在扫描完成后补扫\n\nModsChanged 的重载被 refreshButton 禁用挡下时（扫描中），该 tick 不会\n再投递（debounce 已消费），新下载/更新的模组要等重进页面才出现。\n扫描完成回调里比对 tick，前进过则补一次重扫（串行于当前扫描，不会重叠）。",
-    "created_at": "2026-10-02T02:51:50Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36999713719"
-  },
-  {
-    "id": 36953693149,
-    "sha": "6fe3806dd07ebeb20d403b1f4a003ce83d194942",
-    "short_sha": "6fe3806",
-    "message": "fix: 修复旧格式（64x32）皮肤切页面后渲染错乱：renderer.texture 保存归一化后位图，surface 重建重上传不再按原始布局被 64x64 UV 采样错位（#1891）",
-    "created_at": "2026-10-02T02:01:33Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/36953693149"
   }
 ]

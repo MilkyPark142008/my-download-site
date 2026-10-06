@@ -1,20 +1,20 @@
 {"run": {
-  "id": 34333050487,
+  "id": 37416554451,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAH_mjGdw",
+  "node_id": "WFR_kwLOIQeFGs8AAAAItjNP0w",
   "head_branch": "main",
-  "head_sha": "656a30d247b4fee794f1319af1962ea8b756f0d0",
+  "head_sha": "5e76d7485d6ca34fe2adf86b31156f2714f5ccd9",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "fix: 主题色带透明度时 ltColor/dkColor 透明度跟随",
-  "run_number": 28,
+  "display_title": "optimize: 外置键鼠链路健壮性重构 + 视角浮点游标 + 指针捕获/输入法自定义快捷键 (#1878)",
+  "run_number": 234,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 93004328408,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAVp31t2A",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34333050487",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/34333050487",
+  "check_suite_id": 101348675681,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAXmNoQYQ",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37416554451",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37416554451",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
@@ -22,7 +22,7 @@
       "number": 364,
       "head": {
         "ref": "main",
-        "sha": "c4fd17f1e147f28c332551acdd63b69dab48588a",
+        "sha": "5e76d7485d6ca34fe2adf86b31156f2714f5ccd9",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -45,7 +45,7 @@
       "number": 37,
       "head": {
         "ref": "main",
-        "sha": "c4fd17f1e147f28c332551acdd63b69dab48588a",
+        "sha": "5e76d7485d6ca34fe2adf86b31156f2714f5ccd9",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -68,7 +68,7 @@
       "number": 400,
       "head": {
         "ref": "main",
-        "sha": "c4fd17f1e147f28c332551acdd63b69dab48588a",
+        "sha": "5e76d7485d6ca34fe2adf86b31156f2714f5ccd9",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -86,8 +86,8 @@
       }
     }
   ],
-  "created_at": "2026-09-09T09:08:46Z",
-  "updated_at": "2026-09-09T09:10:11Z",
+  "created_at": "2026-10-06T05:02:18Z",
+  "updated_at": "2026-10-06T05:03:42Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-09-09T09:08:46Z",
+  "run_started_at": "2026-10-06T05:02:18Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,26 +133,26 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34333050487/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34333050487/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/93004328408",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34333050487/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34333050487/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/34333050487/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37416554451/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37416554451/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/101348675681",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37416554451/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37416554451/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/37416554451/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "656a30d247b4fee794f1319af1962ea8b756f0d0",
-    "tree_id": "fb4985d4a43e5053ae08e82c3ff24b74c49b17ca",
-    "message": "fix: 主题色带透明度时 ltColor/dkColor 透明度跟随",
-    "timestamp": "2026-09-09T08:45:18Z",
+    "id": "5e76d7485d6ca34fe2adf86b31156f2714f5ccd9",
+    "tree_id": "be88e7a3b93e63318da5a42fb4e8ffda99b6f3bc",
+    "message": "optimize: 外置键鼠链路健壮性重构 + 视角浮点游标 + 指针捕获/输入法自定义快捷键 (#1878)\n\n* optimize: 外置键鼠链路健壮性重构，新增指针捕获/输入法自定义快捷键\n\n- 指针捕获看门狗：静默丢失自动重试；实体鼠标模式仅游戏内维持捕获，菜单态用系统指针\n- 捕获持续失败时降级为悬停差值转视角，未捕获鼠标的 touch 点击补投按键\n- 鼠标键状态机去重，根治右键/中键经系统转换 BACK/HOME 与原始事件双触发的问题；BACK 按设备能力回查鼠标来源\n- 右菜单鼠标页新增指针捕获切换键与输入法切换键设置（主键绑定+修饰键选择），默认 F8 与 Shift+Enter，随 MenuSetting 持久化\n\n* fix: 快捷键按下同样拦截，按键监听态随界面收起退出\n\n- 自定义快捷键此前只在抬起时匹配：按下被转发给游戏而抬起被吞，游戏侧收不到释放会持续\n  按住（F8 等非 ENTER 快捷键即可触发）；改为匹配后按下与抬起一律不再下发\n- 按键监听态原先只有成功捕获按键才清除：点开设置行后不按键、直接收回右菜单或切到后台，\n  监听会一直吞掉所有按键（含菜单视图隐藏后用于唤回菜单的音量键），并把下一个按下的键\n  误绑定为快捷键；改为右菜单收起、菜单视图隐藏、页面暂停三处统一放弃监听\n\n* fix: 实体鼠标切换即时生效捕获，快捷键组合冲突拒绝绑定",
+    "timestamp": "2026-10-06T05:02:15Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
     },
     "committer": {
-      "name": "ShirosakiMio",
-      "email": "852468399@qq.com"
+      "name": "GitHub",
+      "email": "noreply@github.com"
     }
   },
   "repository": {
