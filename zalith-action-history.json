@@ -1,5 +1,69 @@
 [
   {
+    "id": 37392185403,
+    "sha": "7f7eaad95dc61414e8c65046fe0eb1bfb5c28db7",
+    "short_sha": "7f7eaad",
+    "message": "Merge branch 'main' into feat/account+server",
+    "created_at": "2026-10-06T00:05:57Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37392185403"
+  },
+  {
+    "id": 37392130389,
+    "sha": "6219534e75cfeae267cb6382570ff9f79d7630a3",
+    "short_sha": "6219534",
+    "message": "fix: 服务器卡片无效图标时不应使用 Icon",
+    "created_at": "2026-10-06T00:05:24Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37392130389"
+  },
+  {
+    "id": 37388371057,
+    "sha": "0f821414849a428dea1a4506987e5c0c78b5deeb",
+    "short_sha": "0f82141",
+    "message": "Merge pull request #2020 from TNTyep520/bump/miolibpatcher\n\nfix: oshi 5.x initProcessorCounts 返回 List，误包成 Pair 致构造遍历时抛 IncompatibleClassChangeError",
+    "created_at": "2026-10-05T23:25:03Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37388371057"
+  },
+  {
+    "id": 37388282807,
+    "sha": "43f0d609725cbfb0e19b1365c491c6e8281e4964",
+    "short_sha": "43f0d60",
+    "message": "Merge pull request #2021 from TNTyep520/update-mod-data\n\n更新模组数据 (2026-10-04)",
+    "created_at": "2026-10-05T23:24:10Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37388282807"
+  },
+  {
+    "id": 37386829385,
+    "sha": "1721d65d08f13477ed95619d4aeb0cd85e79115a",
+    "short_sha": "1721d65",
+    "message": "fix: 服务器卡片未验证版本可用性",
+    "created_at": "2026-10-05T23:09:03Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37386829385"
+  },
+  {
+    "id": 37385948184,
+    "sha": "6ea14e9ca59d4295471d3053ce804450310a9da2",
+    "short_sha": "6ea14e9",
+    "message": "chore: 调整服务器卡片设置对话框的布局",
+    "created_at": "2026-10-05T23:00:08Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37385948184"
+  },
+  {
+    "id": 37384235027,
+    "sha": "5e6c97d735947fc31d2d02cb51e2c9e142868285",
+    "short_sha": "5e6c97d",
+    "message": "fix: 关闭快速启动按钮时，未禁用游戏版本入口",
+    "created_at": "2026-10-05T22:43:02Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37384235027"
+  },
+  {
+    "id": 37383820796,
+    "sha": "762f6926ef9457c4d3f4c99edeca5668e9d6c85e",
+    "short_sha": "762f692",
+    "message": "chore: 修缮卡片的布局",
+    "created_at": "2026-10-05T22:38:55Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37383820796"
+  },
+  {
     "id": 37312818020,
     "sha": "80876994b2b6f4f3558decf1ace57adbc3e3318d",
     "short_sha": "8087699",
@@ -334,69 +398,5 @@
     "message": "chore: 调整版本卡片内容布局",
     "created_at": "2026-09-29T13:26:49Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36575165823"
-  },
-  {
-    "id": 36570960475,
-    "sha": "fb34329c8ccdb683829a04bb277379f30ccc77f5",
-    "short_sha": "fb34329",
-    "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1454 of 1454 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
-    "created_at": "2026-09-29T12:51:29Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36570960475"
-  },
-  {
-    "id": 36570865154,
-    "sha": "c2c608971d24784c445914bbd739c41aeb92424e",
-    "short_sha": "c2c6089",
-    "message": "upload .zcodeignore",
-    "created_at": "2026-09-29T12:50:35Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36570865154"
-  },
-  {
-    "id": 36560810161,
-    "sha": "b1ac3b58bf27a0206821563a6c96a75e0e1959fc",
-    "short_sha": "b1ac3b5",
-    "message": "Merge pull request #1984 from ZalithLauncher/refactor/background-glass-node\n\nrefactor: 使用 Modifier.Node 重写背景玻璃模糊并移除 Haze 依赖",
-    "created_at": "2026-09-29T11:17:19Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36560810161"
-  },
-  {
-    "id": 36560388939,
-    "sha": "e832e5ec22d5b5c7d95401c2ca87e02b76c144e9",
-    "short_sha": "e832e5e",
-    "message": "fix: 切换页面导致 GIF 背景停止播放\n\nGIF 动画依赖 MovieDrawable 的「绘制 → invalidateSelf → 再绘制」自续失效循环，\n任何一帧失效丢失都会让动画永久冻结；由帧时钟显式逐帧驱动重绘，保证循环自愈。\n背景文件不保留原始扩展名，复用 Coil 的 DecodeUtils.isGif 按文件头魔数识别 GIF。\n\nFixes #1966",
-    "created_at": "2026-09-29T11:10:20Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36560388939"
-  },
-  {
-    "id": 36554828919,
-    "sha": "eb7c8d7ba542b82d50c1063127906e637fd9fddf",
-    "short_sha": "eb7c8d7",
-    "message": "Merge branch 'main' into refactor/background-glass-node",
-    "created_at": "2026-09-29T10:19:01Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36554828919"
-  },
-  {
-    "id": 36554807112,
-    "sha": "6715a9aa2f4ab0e5cceab0c41ebe2fc5b0f7368f",
-    "short_sha": "6715a9a",
-    "message": "refactor: 使用 Modifier.Node 重写背景玻璃模糊并移除 Haze 依赖\n\n- 移除 dev.chrisbanes.haze 依赖\n- 新增 BackgroundGlassBlur 模糊管线：降采样 + 软件盒式模糊，静态背景位图按需生成\n- 新增 BackgroundGlass 节点：GlassNode 对齐绘制毛玻璃（绘制期零重组），BackgroundCaptureNode 管理共享模糊层与背景 bounds\n- Android 12- 前景帧捕获循环迁入节点 coroutineScope，随 Background 生命周期启停",
-    "created_at": "2026-09-29T10:17:10Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36554807112"
-  },
-  {
-    "id": 36554772997,
-    "sha": "fa4103be9b69ab81d49b459b9477d38af397f038",
-    "short_sha": "fa4103b",
-    "message": "fix: jre 25 的版本文件存在换行符，导致部分 build 行分隔符不一致时误判",
-    "created_at": "2026-09-29T10:18:35Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36554772997"
-  },
-  {
-    "id": 36393839729,
-    "sha": "ed872ebf53ef21800584ac435aa900c3220750c7",
-    "short_sha": "ed872eb",
-    "message": "Merge branch 'main' into weblate_main\n\n# Conflicts:\n#\tZalithLauncher/src/main/res/values-ar/strings.xml\n#\tZalithLauncher/src/main/res/values-in/strings.xml\n#\tZalithLauncher/src/main/res/values-pt-rBR/strings.xml",
-    "created_at": "2026-09-28T07:42:00Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36393839729"
   }
 ]
