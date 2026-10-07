@@ -1,5 +1,21 @@
 [
   {
+    "id": 37569391825,
+    "sha": "25fb237d48dfa19ba27d7d74d43ba380ec94fa71",
+    "short_sha": "25fb237",
+    "message": "fix: 游戏请求同分辨率最高刷新率档位，解除部分设备 60fps 锁定\n\n- 窗口级 preferredDisplayModeId 硬请求同分辨率下最高刷新率档（API 23+ 覆盖旧系统；只比同分辨率，避免选中低分辨率高刷档）\n- surface 投票目标改由 supportedModes 计算不再硬编码 120，兼容标志改 CHANGE_FRAME_RATE_ALWAYS，非无缝切档机型也生效\n- DisplayListener 监听系统中途降档（智能刷新率/省电）自动重发请求，1s 冷却防 ROM 回调风暴\n- 右菜单调试分类新增\"请求最高刷新率\"开关（默认开，旧配置回落为开），关闭即清除两类请求回落系统自适应刷新，随 MenuSetting 持久化并补 6 语言文案",
+    "created_at": "2026-10-07T03:58:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37569391825"
+  },
+  {
+    "id": 37569391829,
+    "sha": "25fb237d48dfa19ba27d7d74d43ba380ec94fa71",
+    "short_sha": "25fb237",
+    "message": "fix: 游戏请求同分辨率最高刷新率档位，解除部分设备 60fps 锁定\n\n- 窗口级 preferredDisplayModeId 硬请求同分辨率下最高刷新率档（API 23+ 覆盖旧系统；只比同分辨率，避免选中低分辨率高刷档）\n- surface 投票目标改由 supportedModes 计算不再硬编码 120，兼容标志改 CHANGE_FRAME_RATE_ALWAYS，非无缝切档机型也生效\n- DisplayListener 监听系统中途降档（智能刷新率/省电）自动重发请求，1s 冷却防 ROM 回调风暴\n- 右菜单调试分类新增\"请求最高刷新率\"开关（默认开，旧配置回落为开），关闭即清除两类请求回落系统自适应刷新，随 MenuSetting 持久化并补 6 语言文案",
+    "created_at": "2026-10-07T03:58:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37569391829"
+  },
+  {
     "id": 37416554451,
     "sha": "5e76d7485d6ca34fe2adf86b31156f2714f5ccd9",
     "short_sha": "5e76d74",
@@ -382,21 +398,5 @@
     "message": "Update dialog_relogin_password.xml",
     "created_at": "2026-10-03T12:21:26Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37122728146"
-  },
-  {
-    "id": 37122032892,
-    "sha": "1e828501f1c8eaea3ef0e44a66ad0640475a413a",
-    "short_sha": "1e82850",
-    "message": "Update ClassicAccountLoginDialog.kt",
-    "created_at": "2026-10-03T12:10:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37122032892"
-  },
-  {
-    "id": 37122032955,
-    "sha": "1e828501f1c8eaea3ef0e44a66ad0640475a413a",
-    "short_sha": "1e82850",
-    "message": "Update ClassicAccountLoginDialog.kt",
-    "created_at": "2026-10-03T12:10:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37122032955"
   }
 ]
