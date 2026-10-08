@@ -32,14 +32,6 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37597501787"
   },
   {
-    "id": 37569391825,
-    "sha": "25fb237d48dfa19ba27d7d74d43ba380ec94fa71",
-    "short_sha": "25fb237",
-    "message": "fix: 游戏请求同分辨率最高刷新率档位，解除部分设备 60fps 锁定\n\n- 窗口级 preferredDisplayModeId 硬请求同分辨率下最高刷新率档（API 23+ 覆盖旧系统；只比同分辨率，避免选中低分辨率高刷档）\n- surface 投票目标改由 supportedModes 计算不再硬编码 120，兼容标志改 CHANGE_FRAME_RATE_ALWAYS，非无缝切档机型也生效\n- DisplayListener 监听系统中途降档（智能刷新率/省电）自动重发请求，1s 冷却防 ROM 回调风暴\n- 右菜单调试分类新增\"请求最高刷新率\"开关（默认开，旧配置回落为开），关闭即清除两类请求回落系统自适应刷新，随 MenuSetting 持久化并补 6 语言文案",
-    "created_at": "2026-10-07T03:58:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37569391825"
-  },
-  {
     "id": 37569391829,
     "sha": "25fb237d48dfa19ba27d7d74d43ba380ec94fa71",
     "short_sha": "25fb237",
@@ -48,12 +40,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37569391829"
   },
   {
-    "id": 37416554451,
-    "sha": "5e76d7485d6ca34fe2adf86b31156f2714f5ccd9",
-    "short_sha": "5e76d74",
-    "message": "optimize: 外置键鼠链路健壮性重构 + 视角浮点游标 + 指针捕获/输入法自定义快捷键 (#1878)\n\n* optimize: 外置键鼠链路健壮性重构，新增指针捕获/输入法自定义快捷键\n\n- 指针捕获看门狗：静默丢失自动重试；实体鼠标模式仅游戏内维持捕获，菜单态用系统指针\n- 捕获持续失败时降级为悬停差值转视角，未捕获鼠标的 touch 点击补投按键\n- 鼠标键状态机去重，根治右键/中键经系统转换 BACK/HOME 与原始事件双触发的问题；BACK 按设备能力回查鼠标来源\n- 右菜单鼠标页新增指针捕获切换键与输入法切换键设置（主键绑定+修饰键选择），默认 F8 与 Shift+Enter，随 MenuSetting 持久化\n\n* fix: 快捷键按下同样拦截，按键监听态随界面收起退出\n\n- 自定义快捷键此前只在抬起时匹配：按下被转发给游戏而抬起被吞，游戏侧收不到释放会持续\n  按住（F8 等非 ENTER 快捷键即可触发）；改为匹配后按下与抬起一律不再下发\n- 按键监听态原先只有成功捕获按键才清除：点开设置行后不按键、直接收回右菜单或切到后台，\n  监听会一直吞掉所有按键（含菜单视图隐藏后用于唤回菜单的音量键），并把下一个按下的键\n  误绑定为快捷键；改为右菜单收起、菜单视图隐藏、页面暂停三处统一放弃监听\n\n* fix: 实体鼠标切换即时生效捕获，快捷键组合冲突拒绝绑定",
-    "created_at": "2026-10-06T05:02:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37416554451"
+    "id": 37569391825,
+    "sha": "25fb237d48dfa19ba27d7d74d43ba380ec94fa71",
+    "short_sha": "25fb237",
+    "message": "fix: 游戏请求同分辨率最高刷新率档位，解除部分设备 60fps 锁定\n\n- 窗口级 preferredDisplayModeId 硬请求同分辨率下最高刷新率档（API 23+ 覆盖旧系统；只比同分辨率，避免选中低分辨率高刷档）\n- surface 投票目标改由 supportedModes 计算不再硬编码 120，兼容标志改 CHANGE_FRAME_RATE_ALWAYS，非无缝切档机型也生效\n- DisplayListener 监听系统中途降档（智能刷新率/省电）自动重发请求，1s 冷却防 ROM 回调风暴\n- 右菜单调试分类新增\"请求最高刷新率\"开关（默认开，旧配置回落为开），关闭即清除两类请求回落系统自适应刷新，随 MenuSetting 持久化并补 6 语言文案",
+    "created_at": "2026-10-07T03:58:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37569391825"
   },
   {
     "id": 37416554509,
@@ -62,6 +54,14 @@
     "message": "optimize: 外置键鼠链路健壮性重构 + 视角浮点游标 + 指针捕获/输入法自定义快捷键 (#1878)\n\n* optimize: 外置键鼠链路健壮性重构，新增指针捕获/输入法自定义快捷键\n\n- 指针捕获看门狗：静默丢失自动重试；实体鼠标模式仅游戏内维持捕获，菜单态用系统指针\n- 捕获持续失败时降级为悬停差值转视角，未捕获鼠标的 touch 点击补投按键\n- 鼠标键状态机去重，根治右键/中键经系统转换 BACK/HOME 与原始事件双触发的问题；BACK 按设备能力回查鼠标来源\n- 右菜单鼠标页新增指针捕获切换键与输入法切换键设置（主键绑定+修饰键选择），默认 F8 与 Shift+Enter，随 MenuSetting 持久化\n\n* fix: 快捷键按下同样拦截，按键监听态随界面收起退出\n\n- 自定义快捷键此前只在抬起时匹配：按下被转发给游戏而抬起被吞，游戏侧收不到释放会持续\n  按住（F8 等非 ENTER 快捷键即可触发）；改为匹配后按下与抬起一律不再下发\n- 按键监听态原先只有成功捕获按键才清除：点开设置行后不按键、直接收回右菜单或切到后台，\n  监听会一直吞掉所有按键（含菜单视图隐藏后用于唤回菜单的音量键），并把下一个按下的键\n  误绑定为快捷键；改为右菜单收起、菜单视图隐藏、页面暂停三处统一放弃监听\n\n* fix: 实体鼠标切换即时生效捕获，快捷键组合冲突拒绝绑定",
     "created_at": "2026-10-06T05:02:15Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37416554509"
+  },
+  {
+    "id": 37416554451,
+    "sha": "5e76d7485d6ca34fe2adf86b31156f2714f5ccd9",
+    "short_sha": "5e76d74",
+    "message": "optimize: 外置键鼠链路健壮性重构 + 视角浮点游标 + 指针捕获/输入法自定义快捷键 (#1878)\n\n* optimize: 外置键鼠链路健壮性重构，新增指针捕获/输入法自定义快捷键\n\n- 指针捕获看门狗：静默丢失自动重试；实体鼠标模式仅游戏内维持捕获，菜单态用系统指针\n- 捕获持续失败时降级为悬停差值转视角，未捕获鼠标的 touch 点击补投按键\n- 鼠标键状态机去重，根治右键/中键经系统转换 BACK/HOME 与原始事件双触发的问题；BACK 按设备能力回查鼠标来源\n- 右菜单鼠标页新增指针捕获切换键与输入法切换键设置（主键绑定+修饰键选择），默认 F8 与 Shift+Enter，随 MenuSetting 持久化\n\n* fix: 快捷键按下同样拦截，按键监听态随界面收起退出\n\n- 自定义快捷键此前只在抬起时匹配：按下被转发给游戏而抬起被吞，游戏侧收不到释放会持续\n  按住（F8 等非 ENTER 快捷键即可触发）；改为匹配后按下与抬起一律不再下发\n- 按键监听态原先只有成功捕获按键才清除：点开设置行后不按键、直接收回右菜单或切到后台，\n  监听会一直吞掉所有按键（含菜单视图隐藏后用于唤回菜单的音量键），并把下一个按下的键\n  误绑定为快捷键；改为右菜单收起、菜单视图隐藏、页面暂停三处统一放弃监听\n\n* fix: 实体鼠标切换即时生效捕获，快捷键组合冲突拒绝绑定",
+    "created_at": "2026-10-06T05:02:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37416554451"
   },
   {
     "id": 37414324105,
@@ -128,20 +128,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37411533942"
   },
   {
-    "id": 37410979448,
-    "sha": "69e543e1384438b2b5dbbdf2e51f631ccc2e64c8",
-    "short_sha": "69e543e",
-    "message": "fix: 整合包导出页全屏输入改完成动作，修复选路径返回后键盘自动弹出",
-    "created_at": "2026-10-06T03:51:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37410979448"
-  },
-  {
     "id": 37410979444,
     "sha": "69e543e1384438b2b5dbbdf2e51f631ccc2e64c8",
     "short_sha": "69e543e",
     "message": "fix: 整合包导出页全屏输入改完成动作，修复选路径返回后键盘自动弹出",
     "created_at": "2026-10-06T03:51:12Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37410979444"
+  },
+  {
+    "id": 37410979448,
+    "sha": "69e543e1384438b2b5dbbdf2e51f631ccc2e64c8",
+    "short_sha": "69e543e",
+    "message": "fix: 整合包导出页全屏输入改完成动作，修复选路径返回后键盘自动弹出",
+    "created_at": "2026-10-06T03:51:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37410979448"
   },
   {
     "id": 37403133384,
@@ -344,20 +344,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37258512392"
   },
   {
-    "id": 37181229607,
-    "sha": "e5e53a53ead9badac3c5a395043cf8708318e4b2",
-    "short_sha": "e5e53a5",
-    "message": "style(ui): Profiles registerWeak 块缩进还原；RemoteVersionListAdapter 补末行换行",
-    "created_at": "2026-10-04T05:53:04Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37181229607"
-  },
-  {
     "id": 37181229611,
     "sha": "e5e53a53ead9badac3c5a395043cf8708318e4b2",
     "short_sha": "e5e53a5",
     "message": "style(ui): Profiles registerWeak 块缩进还原；RemoteVersionListAdapter 补末行换行",
     "created_at": "2026-10-04T05:53:04Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37181229611"
+  },
+  {
+    "id": 37181229607,
+    "sha": "e5e53a53ead9badac3c5a395043cf8708318e4b2",
+    "short_sha": "e5e53a5",
+    "message": "style(ui): Profiles registerWeak 块缩进还原；RemoteVersionListAdapter 补末行换行",
+    "created_at": "2026-10-04T05:53:04Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37181229607"
   },
   {
     "id": 37181227216,
