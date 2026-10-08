@@ -1,5 +1,21 @@
 [
   {
+    "id": 37715103522,
+    "sha": "e1125044919deff87ba7c294d4329bebc26b4272",
+    "short_sha": "e112504",
+    "message": "optimize: Xms 与 Xmx 解耦，堆按需增长避免物理内存全量预提交",
+    "created_at": "2026-10-07T14:13:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37715103522"
+  },
+  {
+    "id": 37715103555,
+    "sha": "e1125044919deff87ba7c294d4329bebc26b4272",
+    "short_sha": "e112504",
+    "message": "optimize: Xms 与 Xmx 解耦，堆按需增长避免物理内存全量预提交",
+    "created_at": "2026-10-07T14:13:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37715103555"
+  },
+  {
     "id": 37633229752,
     "sha": "7de9a7742ea384dd0998ec004da41361ae6596f8",
     "short_sha": "7de9a77",
@@ -382,21 +398,5 @@
     "message": "optimize: ModManager 按版本缓存共享实例并增加目录快照校验,避免重复全量扫描;模组下载完成后事件通知管理页增量刷新",
     "created_at": "2026-10-04T04:54:03Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37178346438"
-  },
-  {
-    "id": 37178346302,
-    "sha": "bb1308a3f37a8ce98c9e40614bfc8985f63b937f",
-    "short_sha": "bb1308a",
-    "message": "optimize: ModManager 按版本缓存共享实例并增加目录快照校验,避免重复全量扫描;模组下载完成后事件通知管理页增量刷新",
-    "created_at": "2026-10-04T04:54:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37178346302"
-  },
-  {
-    "id": 37177394764,
-    "sha": "b9a5613b6a67e326cd50061413df5ae0fd0a17af",
-    "short_sha": "b9a5613",
-    "message": "refactor(ui): 引入 lifecycle-viewmodel-ktx，VersionListViewModel 改用 viewModelScope\n\n删除手写的 CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)\n与 onCleared 取消——viewModelScope 语义与之完全一致且随 ViewModel 清理\n自动取消，少维护一份等价基建。",
-    "created_at": "2026-10-04T04:34:19Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37177394764"
   }
 ]

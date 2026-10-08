@@ -1,5 +1,29 @@
 [
   {
+    "id": 37726651079,
+    "sha": "45bd609b24b4882f6e76cc0986611008b6321e07",
+    "short_sha": "45bd609",
+    "message": "Merge pull request #2038 from ZalithLauncher/fix/version_scoped_viewmodels\n\nfix: 使版本管理相关 ViewModel 的生命周期跟随版本对象",
+    "created_at": "2026-10-08T04:15:51Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37726651079"
+  },
+  {
+    "id": 37726264966,
+    "sha": "8240f821261c6925b1938b40257259acdba48891",
+    "short_sha": "8240f82",
+    "message": "fix: 使版本管理相关 ViewModel 的生命周期跟随版本对象\n\n版本管理类屏幕（模组、资源包、光影、存档、截图、服务器列表、整合包导出）\n的 ViewModel 以 Version.toString()（对象身份哈希）为 key，宿主为 Activity\n级别的 ViewModelStore：版本列表每次刷新都会重建 Version 对象，导致 key 失\n配，重进屏幕时不断创建新实例，旧实例滞留内存直至 Activity 销毁。\n\n新增版本作用域的 ViewModelStore 注册表（VersionViewModelStores）与\nCompositionLocal 包装（VersionViewModelStoreScope），并在版本设置、整合包\n导出两个承载页接入：ViewModel 生命周期跟随 Version 对象——退出承载页后保\n留、重进复用；版本列表刷新、旧 Version 失效后统一销毁。清理前会校验持有\n计数，避免误杀仍在使用中的 ViewModel。\n\n附带：版本刷新监听器的遍历增加异常保护，单个监听器异常不再中断其余监听\n器与刷新收尾流程。",
+    "created_at": "2026-10-08T04:10:59Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37726264966"
+  },
+  {
+    "id": 37717603858,
+    "sha": "d08caf7db584721bcccbc9a4ca5cb9e9118dc970",
+    "short_sha": "d08caf7",
+    "message": "Merge pull request #2036 from youfeng11/chore/setting\n\n渲染器配置交换环境变量与标题文本的位置",
+    "created_at": "2026-10-08T02:23:06Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37717603858"
+  },
+  {
     "id": 37631770385,
     "sha": "562131ac7f32ffd2f4deb45465583ce8ffb7b43a",
     "short_sha": "562131a",
@@ -374,29 +398,5 @@
     "message": "[Do not use!] Translated using Weblate (Indonesian)\n\nCurrently translated at 41.3% (36 of 87 strings)\n\nTranslation: ZalithLauncher2/Terracota\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/terracota/id/",
     "created_at": "2026-10-02T11:51:20Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37003317558"
-  },
-  {
-    "id": 36997858350,
-    "sha": "860d0282c79d1848e3228ea5a542cd1769c27782",
-    "short_sha": "860d028",
-    "message": "[Do not use!] Translated using Weblate (Indonesian)\n\nCurrently translated at 99.9% (1456 of 1457 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/id/",
-    "created_at": "2026-10-02T10:52:07Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36997858350"
-  },
-  {
-    "id": 36934019673,
-    "sha": "82d52cf111736911c0c4acb77f4910dd5832ca73",
-    "short_sha": "82d52cf",
-    "message": "feat: 新增游戏内帧率图表显示模式\n\n- 帧率捕获记录最近15个时间节点及窗口内最高/最低帧，最高/最低帧离开窗口后延迟重算\n- 图表纵轴向外取整为好数后分5段标注刻度，最后一个点旁标注当前帧率\n- 悬浮球图标在图表模式或显示内存时隐藏\n- 补充简体、繁体中文翻译",
-    "created_at": "2026-10-01T22:15:40Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36934019673"
-  },
-  {
-    "id": 36921590068,
-    "sha": "aef787b2fc2fd451a4cd7a05c7a4605a474325a4",
-    "short_sha": "aef787b",
-    "message": "Merge branch 'weblate_main'",
-    "created_at": "2026-10-01T20:26:21Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36921590068"
   }
 ]
