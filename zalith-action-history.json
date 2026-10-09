@@ -1,5 +1,21 @@
 [
   {
+    "id": 37933923603,
+    "sha": "09e4832a3d0eb569a2212f68c55e6ec7a22acfde",
+    "short_sha": "09e4832",
+    "message": "Merge pull request #2041 from ZalithLauncher/fix/touch-controller-stuck-pointer\n\nfix: 修复 TouchController 代理指针无法释放的问题",
+    "created_at": "2026-10-09T13:01:15Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37933923603"
+  },
+  {
+    "id": 37933837131,
+    "sha": "a7f0e8a6e5bf96d2af022b6e98b0a238dc026192",
+    "short_sha": "a7f0e8a",
+    "message": "fix: 修复 TouchController 代理指针无法释放的问题\n\n手势被系统取消（命中路径变化、ACTION_CANCEL 等）时，Compose 会合成\nisConsumed 为 true 的抬起事件，被原 isConsumed 守卫直接跳过；\n监听随子树销毁而取消时，已发送的指针也不会有任何释放消息。\n\n将抬起判断移到消费守卫之前，并在监听销毁时通过 clearPointer\n主动清除模组侧的残留指针。",
+    "created_at": "2026-10-09T13:00:01Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37933837131"
+  },
+  {
     "id": 37870946663,
     "sha": "d93722e95c319891ea3f8689d1ceef5d34234d96",
     "short_sha": "d93722e",
@@ -382,21 +398,5 @@
     "message": "fix: 为 Cleanroom 的 LWJGLXX 桥补发控制按键的配对字符事件\n\nCleanroom 的 LWJGLXX 会暂存可打印按键（字母/数字/标点，不含空格）的\n按下事件，等待字符事件合并后才投给游戏（桌面 GLFW 语义假设）。启动器\n的控制布局按键只发 keycode、无字符事件，暂存永不完成，导致 WASD 等\n字母键全部失灵，而空格/Esc/F键等非可打印键正常。\n\n为 Cleanroom 实例启用配对：无字符的按键事件补发 (keycode & 0x1f)\nASCII 控制码的字符事件，暂存即时补全、按键即时交付。控制码不通过\nChatAllowedCharacters 校验，控制布局按键不会向文本框注入字符；物理\n键盘与输入法路径不受影响。",
     "created_at": "2026-10-02T22:20:52Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37072275827"
-  },
-  {
-    "id": 37067952778,
-    "sha": "74aa09b501316b98814d5486f660efcd0ebed616",
-    "short_sha": "74aa09b",
-    "message": "fix: 输入法字符事件不再以游戏按键形式转发\n\n严格分离输入来源：输入法（软键盘）产生的字符只以文本形式进入游戏，\n不再触发按键绑定；HUD 控制布局与物理键盘行为不受影响。\n\nSDL 后端（MC 26.3+）的根因：输入法字符经 SDLDummyEdit 的\nSDLInputConnection 提交时，SDL 为每个可打印 ASCII 字符合成\nKEYDOWN/KEYUP 扫描码（补偿软键盘不发按键事件的机制），游戏进行中\n这些合成按键直接触发键位绑定。文本实际经 nativeCommitText 以\nSDL_EVENT_TEXT_INPUT 进入游戏，合成扫描码对文本输入无贡献，故移除；\n退格扫描码保留（TEXT_INPUT 无法表达删除，是聊天栏删字的唯一通道）。\n\n- SDLInputConnection：移除输入法文本的扫描码合成；sendKeyEvent\n  吞掉软键盘可打印字符事件\n- SDLActivity.handleKeyEvent：软键盘可打印字符事件在 SDL 边界拦截，\n  仅在文本通道可接收时转为文本提交\n- CallbackBridge.sendChar：SDL 后端不再为字符合成 KEYDOWN/UP，改为\n  仅在文本输入激活时发送 SDL_EVENT_TEXT_INPUT\n- GameHandler/VMActivity/TouchController：软键盘字符类按键事件不再\n  经 execKey/sendOther 转发为游戏按键（重放 e6ac4df7 的三处守卫）",
-    "created_at": "2026-10-02T21:17:54Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37067952778"
-  },
-  {
-    "id": 37048556388,
-    "sha": "68a441b0e4525ce6730efb9868befc69324d1d70",
-    "short_sha": "68a441b",
-    "message": "Merge pull request #1994 from ZalithLauncher/feat/fps-chart\n\nfeat: 新增游戏内帧率图表显示模式",
-    "created_at": "2026-10-02T18:36:14Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37048556388"
   }
 ]
