@@ -1,5 +1,13 @@
 [
   {
+    "id": 37870946663,
+    "sha": "d93722e95c319891ea3f8689d1ceef5d34234d96",
+    "short_sha": "d93722e",
+    "message": "fix: 修复版本作用域 ViewModel 的两处崩溃\n\n- 版本作用域 owner 补全 HasDefaultViewModelProviderFactory 实现，\n  ViewModel 的创建参数（CreationExtras）委托给宿主 Activity，修复\n  截图管理屏 hiltViewModel 创建 SavedStateHandle 时缺失\n  SAVED_STATE_REGISTRY_OWNER_KEY 导致的崩溃\n- 失效 ViewModelStore 的兜底清理改为调度到主线程执行，onCleared\n  回调要求主线程，修复切换游戏目录时在 IO 协程清理导致的崩溃",
+    "created_at": "2026-10-09T01:40:19Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37870946663"
+  },
+  {
     "id": 37726651079,
     "sha": "45bd609b24b4882f6e76cc0986611008b6321e07",
     "short_sha": "45bd609",
@@ -390,13 +398,5 @@
     "message": "Merge pull request #1994 from ZalithLauncher/feat/fps-chart\n\nfeat: 新增游戏内帧率图表显示模式",
     "created_at": "2026-10-02T18:36:14Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37048556388"
-  },
-  {
-    "id": 37003317558,
-    "sha": "8a2055b9c98492ff82bb0956b54f8f4517707ee9",
-    "short_sha": "8a2055b",
-    "message": "[Do not use!] Translated using Weblate (Indonesian)\n\nCurrently translated at 41.3% (36 of 87 strings)\n\nTranslation: ZalithLauncher2/Terracota\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/terracota/id/",
-    "created_at": "2026-10-02T11:51:20Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37003317558"
   }
 ]
