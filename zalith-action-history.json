@@ -384,19 +384,19 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37128868300"
   },
   {
-    "id": 37108930704,
-    "sha": "d1034d4391ad50bc0890864f9defa6a863fef466",
-    "short_sha": "d1034d4",
-    "message": "fix: 触控板双指手势兜底，双指拖动折算滚轮、双指点按折算右键 (#1997)\n\n固件已合成原生手势事件（ACTION_SCROLL、BUTTON_SECONDARY）时仍按原样\n转发，不做干预；未合成时从原始双指触摸流兜底识别：双指拖动按质心位移\n折算滚轮格数，双指点按合成右键单击。判定阈值按板面尺寸自适应，双指\n期间抑制视角通道，触摸流式触控板的板面接触左键按下/抬起在双指手势\n期间做补偿与吞并，避免残留多余单击。",
-    "created_at": "2026-10-03T08:12:30Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37108930704"
-  },
-  {
     "id": 36807800650,
     "sha": "38f0e558619a394a64a910f34cc135c467684c5a",
     "short_sha": "38f0e55",
     "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1457 of 1457 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
     "created_at": "2026-10-01T02:51:22Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36807800650"
+  },
+  {
+    "id": 36786401843,
+    "sha": "9b5123c931f1e361505cf953af0e4170868a253d",
+    "short_sha": "9b5123c",
+    "message": "fix: 修复修改版本页加载器预选竞态与提示缺失\n\n- 预选按主加载器优先级依次执行，高优先级列表未加载完成时低优先级等待，消除列表加载顺序导致的竞态\n- OptiFine 与 Forge 的兼容性检查升级为按已选版本成对校验，与列表条目过滤规则一致，不兼容时次要加载器为主加载器让位并提示\n- 切换 Minecraft 版本后，无法匹配的已安装加载器按移除判断，不再保留原样，同时抑制保留原样提示",
+    "created_at": "2026-09-30T22:34:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36786401843"
   }
 ]
