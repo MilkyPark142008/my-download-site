@@ -1,5 +1,45 @@
 [
   {
+    "id": 38020272625,
+    "sha": "38adf8efdc7e8955cd80bf2de8cd0072b4fca7fc",
+    "short_sha": "38adf8e",
+    "message": "bump version to 2.7",
+    "created_at": "2026-10-10T03:20:59Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38020272625"
+  },
+  {
+    "id": 38018640292,
+    "sha": "e80220468708ea40f5c20cc02808b753be38028e",
+    "short_sha": "e802204",
+    "message": "chore: 移除未使用的语言文本",
+    "created_at": "2026-10-10T02:53:33Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38018640292"
+  },
+  {
+    "id": 38018623560,
+    "sha": "e80220468708ea40f5c20cc02808b753be38028e",
+    "short_sha": "e802204",
+    "message": "chore: 移除未使用的语言文本",
+    "created_at": "2026-10-10T02:53:33Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38018623560"
+  },
+  {
+    "id": 38018273199,
+    "sha": "e7561354f4abd0603fbcdfa4c2121978e71a78cf",
+    "short_sha": "e756135",
+    "message": "chore: 调整游戏菜单内信息显示与游戏分辨率之间的间距",
+    "created_at": "2026-10-10T02:47:43Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38018273199"
+  },
+  {
+    "id": 38017872897,
+    "sha": "d5621439e48901bdb61c9b75a2ac9110ee4920ad",
+    "short_sha": "d562143",
+    "message": "chore: 调整帧率图标大小",
+    "created_at": "2026-10-10T02:41:08Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38017872897"
+  },
+  {
     "id": 37933923603,
     "sha": "09e4832a3d0eb569a2212f68c55e6ec7a22acfde",
     "short_sha": "09e4832",
@@ -352,51 +392,11 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37108930704"
   },
   {
-    "id": 37087815642,
-    "sha": "bca175cd7fe50229a98ac3e268b155fea66b83af",
-    "short_sha": "bca175c",
-    "message": "fix: 修复触控板把板面绝对坐标当作位移导致游戏内视角乱转 (#1997)\n\n游戏内捕获模式下相对位移轴缺失时，旧逻辑把触控板板面绝对坐标当作\n每帧位移输出，导致视角天旋地转。现触控板优先取相对轴，缺失时改用\n相邻两次位置的差值，并在手指按下/抬起时重建差值基准；SDL 渲染路径\n的同类缺陷一并修复，真实鼠标路径保持不变。",
-    "created_at": "2026-10-03T01:53:35Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37087815642"
-  },
-  {
-    "id": 37084823902,
-    "sha": "7ba0f4e2cf489af32bdb8c668081ee8ca6c7d2bc",
-    "short_sha": "7ba0f4e",
-    "message": "fix(整合包): 下载失败不再误报成功，恢复失败文件整批重试 #2001\n\n- 批量下载失败异常不再被吞掉：重试一轮后仍有失败即中断安装并报错\n- 恢复旧版的整批延迟重试与「重试下载所有模组」提示（下载体系重构时遗失）\n- 404 跳过计数按目标文件跨轮判重，避免重试轮重复计数",
-    "created_at": "2026-10-03T01:06:34Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37084823902"
-  },
-  {
     "id": 36807800650,
     "sha": "38f0e558619a394a64a910f34cc135c467684c5a",
     "short_sha": "38f0e55",
     "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1457 of 1457 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
     "created_at": "2026-10-01T02:51:22Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36807800650"
-  },
-  {
-    "id": 36786401843,
-    "sha": "9b5123c931f1e361505cf953af0e4170868a253d",
-    "short_sha": "9b5123c",
-    "message": "fix: 修复修改版本页加载器预选竞态与提示缺失\n\n- 预选按主加载器优先级依次执行，高优先级列表未加载完成时低优先级等待，消除列表加载顺序导致的竞态\n- OptiFine 与 Forge 的兼容性检查升级为按已选版本成对校验，与列表条目过滤规则一致，不兼容时次要加载器为主加载器让位并提示\n- 切换 Minecraft 版本后，无法匹配的已安装加载器按移除判断，不再保留原样，同时抑制保留原样提示",
-    "created_at": "2026-09-30T22:34:26Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36786401843"
-  },
-  {
-    "id": 36780389179,
-    "sha": "47efb26eb36061001d915362c53b2c44fb5d09ec",
-    "short_sha": "47efb26",
-    "message": "feat: 多加载器识别与修改版本适配",
-    "created_at": "2026-09-30T21:35:07Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36780389179"
-  },
-  {
-    "id": 36727150566,
-    "sha": "9296f29dd142a03a35dc68920327ce9a42b1797f",
-    "short_sha": "9296f29",
-    "message": "Merge branch 'main' into feat/modify-version",
-    "created_at": "2026-09-30T14:10:37Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36727150566"
   }
 ]
