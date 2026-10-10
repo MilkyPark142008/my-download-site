@@ -352,38 +352,6 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37166247775"
   },
   {
-    "id": 37135036687,
-    "sha": "e6cb4f415930c78ce1ecc10062b2bc1026802d4d",
-    "short_sha": "e6cb4f4",
-    "message": "Merge pull request #2010 from ZalithLauncher/fix/lwjgl-glfw-get-window-pos\n\nfix(LWJGL): 补齐缺失的 glfwGetWindowPos(long, IntBuffer, IntBuffer)",
-    "created_at": "2026-10-03T15:56:42Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37135036687"
-  },
-  {
-    "id": 37134972100,
-    "sha": "83ff168633afec14c5b17daf6a4eb3ad9bb5fa39",
-    "short_sha": "83ff168",
-    "message": "fix(LWJGL): 补齐缺失的 glfwGetWindowPos(long, IntBuffer, IntBuffer)\n\n移植版此前只保留 int[] 数组版本,现补回 IntBuffer 重载,返回窗口属性\n中跟踪的位置,3.3.3 与 3.4.1 双端同步,并重新生成 assets 内预构建产物",
-    "created_at": "2026-10-03T15:55:19Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37134972100"
-  },
-  {
-    "id": 37128895293,
-    "sha": "50359aafa1ae43282eea3444d497c2aafd4da603",
-    "short_sha": "50359aa",
-    "message": "Merge pull request #2006 from ZalithLauncher/fix/issue-2001-modpack-mods\n\nfix: 整合包下载失败不再误报成功，恢复失败文件整批重试 (#2001)",
-    "created_at": "2026-10-03T14:13:43Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37128895293"
-  },
-  {
-    "id": 37128868300,
-    "sha": "12ebe033c6e6650ce4b90c9f9c44007571a22797",
-    "short_sha": "12ebe03",
-    "message": "Merge pull request #2007 from ZalithLauncher/fix/issue-1997-touchpad\n\nfix: 修复触控板把板面绝对坐标当作位移导致游戏内视角乱转 (#1997)",
-    "created_at": "2026-10-03T14:13:14Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37128868300"
-  },
-  {
     "id": 36807800650,
     "sha": "38f0e558619a394a64a910f34cc135c467684c5a",
     "short_sha": "38f0e55",
@@ -398,5 +366,37 @@
     "message": "fix: 修复修改版本页加载器预选竞态与提示缺失\n\n- 预选按主加载器优先级依次执行，高优先级列表未加载完成时低优先级等待，消除列表加载顺序导致的竞态\n- OptiFine 与 Forge 的兼容性检查升级为按已选版本成对校验，与列表条目过滤规则一致，不兼容时次要加载器为主加载器让位并提示\n- 切换 Minecraft 版本后，无法匹配的已安装加载器按移除判断，不再保留原样，同时抑制保留原样提示",
     "created_at": "2026-09-30T22:34:26Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36786401843"
+  },
+  {
+    "id": 36780389179,
+    "sha": "47efb26eb36061001d915362c53b2c44fb5d09ec",
+    "short_sha": "47efb26",
+    "message": "feat: 多加载器识别与修改版本适配",
+    "created_at": "2026-09-30T21:35:07Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36780389179"
+  },
+  {
+    "id": 36727150566,
+    "sha": "9296f29dd142a03a35dc68920327ce9a42b1797f",
+    "short_sha": "9296f29",
+    "message": "Merge branch 'main' into feat/modify-version",
+    "created_at": "2026-09-30T14:10:37Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36727150566"
+  },
+  {
+    "id": 36727115920,
+    "sha": "3f1f126c65da7871c858d71da4fa68be4848de4b",
+    "short_sha": "3f1f126",
+    "message": "chore: 调整主界面平板布局下玩家头像的 padding 值",
+    "created_at": "2026-09-30T14:10:23Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36727115920"
+  },
+  {
+    "id": 36726454950,
+    "sha": "e594c5533ab0129724a02176a6797e79e5025ad5",
+    "short_sha": "e594c55",
+    "message": "fix: 预选加载器时校验兼容性，修改版本始终完整下载原版文件\n- 预选已安装加载器前检查其与用户已选择加载器的兼容性，冲突时放弃预选（用户选择优先）\n- 修改版本时无条件执行 Minecraft 本体下载，保证原版 Jar 干净可用并补齐缺失的 libraries/assets",
+    "created_at": "2026-09-30T14:04:14Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36726454950"
   }
 ]
