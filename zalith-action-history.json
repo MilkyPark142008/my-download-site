@@ -368,35 +368,35 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37084823902"
   },
   {
-    "id": 37076953873,
-    "sha": "43f2280b1ba617621c560b9707f152e86a736bbf",
-    "short_sha": "43f2280",
-    "message": "Merge pull request #2005 from ZalithLauncher/fix/adjusting-bar-click\n\nfix: 卡片工具条提为独立悬浮层，修复按钮无法点击",
-    "created_at": "2026-10-02T23:18:35Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37076953873"
+    "id": 36807800650,
+    "sha": "38f0e558619a394a64a910f34cc135c467684c5a",
+    "short_sha": "38f0e55",
+    "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1457 of 1457 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
+    "created_at": "2026-10-01T02:51:22Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36807800650"
   },
   {
-    "id": 37076901174,
-    "sha": "1adf223aec6a4c59fa90187b7af69c14dc490b56",
-    "short_sha": "1adf223",
-    "message": "fix: 调整态工具条提为独立悬浮层，修复按钮无法点击",
-    "created_at": "2026-10-02T23:17:51Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37076901174"
+    "id": 36786401843,
+    "sha": "9b5123c931f1e361505cf953af0e4170868a253d",
+    "short_sha": "9b5123c",
+    "message": "fix: 修复修改版本页加载器预选竞态与提示缺失\n\n- 预选按主加载器优先级依次执行，高优先级列表未加载完成时低优先级等待，消除列表加载顺序导致的竞态\n- OptiFine 与 Forge 的兼容性检查升级为按已选版本成对校验，与列表条目过滤规则一致，不兼容时次要加载器为主加载器让位并提示\n- 切换 Minecraft 版本后，无法匹配的已安装加载器按移除判断，不再保留原样，同时抑制保留原样提示",
+    "created_at": "2026-09-30T22:34:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36786401843"
   },
   {
-    "id": 37072382105,
-    "sha": "72596b0b5db825d5d0693a98ac3fa7fae8c920f7",
-    "short_sha": "72596b0",
-    "message": "Merge pull request #2003 from ZalithLauncher/fix/issue-1998-input\n\nfix: 修复控制布局按键与输入法字符事件的游戏输入问题 (#1998)",
-    "created_at": "2026-10-02T22:25:07Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37072382105"
+    "id": 36780389179,
+    "sha": "47efb26eb36061001d915362c53b2c44fb5d09ec",
+    "short_sha": "47efb26",
+    "message": "feat: 多加载器识别与修改版本适配",
+    "created_at": "2026-09-30T21:35:07Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36780389179"
   },
   {
-    "id": 37072275827,
-    "sha": "1294644a97deba406cedb23a0bccdfc0b5224119",
-    "short_sha": "1294644",
-    "message": "fix: 为 Cleanroom 的 LWJGLXX 桥补发控制按键的配对字符事件\n\nCleanroom 的 LWJGLXX 会暂存可打印按键（字母/数字/标点，不含空格）的\n按下事件，等待字符事件合并后才投给游戏（桌面 GLFW 语义假设）。启动器\n的控制布局按键只发 keycode、无字符事件，暂存永不完成，导致 WASD 等\n字母键全部失灵，而空格/Esc/F键等非可打印键正常。\n\n为 Cleanroom 实例启用配对：无字符的按键事件补发 (keycode & 0x1f)\nASCII 控制码的字符事件，暂存即时补全、按键即时交付。控制码不通过\nChatAllowedCharacters 校验，控制布局按键不会向文本框注入字符；物理\n键盘与输入法路径不受影响。",
-    "created_at": "2026-10-02T22:20:52Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37072275827"
+    "id": 36727150566,
+    "sha": "9296f29dd142a03a35dc68920327ce9a42b1797f",
+    "short_sha": "9296f29",
+    "message": "Merge branch 'main' into feat/modify-version",
+    "created_at": "2026-09-30T14:10:37Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36727150566"
   }
 ]
