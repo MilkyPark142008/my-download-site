@@ -1,5 +1,29 @@
 [
   {
+    "id": 38112047711,
+    "sha": "76d7eb5ebe23876eb39acbeca69d1bb8e35d97bc",
+    "short_sha": "76d7eb5",
+    "message": "Merge pull request #2045 from ZalithLauncher/feat/max-refresh-rate\n\nfeat: 游戏请求同分辨率最高刷新率档位，解除部分设备 60fps 锁定",
+    "created_at": "2026-10-11T04:32:14Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38112047711"
+  },
+  {
+    "id": 38111899956,
+    "sha": "76d7eb5ebe23876eb39acbeca69d1bb8e35d97bc",
+    "short_sha": "76d7eb5",
+    "message": "Merge pull request #2045 from ZalithLauncher/feat/max-refresh-rate\n\nfeat: 游戏请求同分辨率最高刷新率档位，解除部分设备 60fps 锁定",
+    "created_at": "2026-10-11T04:32:14Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38111899956"
+  },
+  {
+    "id": 38111783414,
+    "sha": "3f1fa2f817fa87b58f2135e39b1e14ea8b3d30a3",
+    "short_sha": "3f1fa2f",
+    "message": "feat: 游戏请求同分辨率最高刷新率档位，解除部分设备 60fps 锁定\n\n- 窗口级 preferredDisplayModeId 硬请求同分辨率下最高刷新率档，surface 级 setFrameRate 投票目标改由 supportedModes 计算并使用 CHANGE_FRAME_RATE_ALWAYS，非无缝切档机型也生效\n- DisplayListener 监听系统中途降档（智能刷新率/省电）自动重发请求，1s 冷却防 ROM 回调风暴\n- 渲染器设置页与游戏内菜单新增\"请求最高刷新率\"开关（默认开），关闭即清除两类请求回落系统自适应刷新\n- clearFrameRate 按 API 34 守卫，避免低版本设备误调用崩溃；补简体、繁体中文翻译",
+    "created_at": "2026-10-11T04:28:28Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38111783414"
+  },
+  {
     "id": 38020272625,
     "sha": "38adf8efdc7e8955cd80bf2de8cd0072b4fca7fc",
     "short_sha": "38adf8e",
@@ -374,29 +398,5 @@
     "message": "chore: 调整主界面平板布局下玩家头像的 padding 值",
     "created_at": "2026-09-30T14:10:23Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36727115920"
-  },
-  {
-    "id": 36726454950,
-    "sha": "e594c5533ab0129724a02176a6797e79e5025ad5",
-    "short_sha": "e594c55",
-    "message": "fix: 预选加载器时校验兼容性，修改版本始终完整下载原版文件\n- 预选已安装加载器前检查其与用户已选择加载器的兼容性，冲突时放弃预选（用户选择优先）\n- 修改版本时无条件执行 Minecraft 本体下载，保证原版 Jar 干净可用并补齐缺失的 libraries/assets",
-    "created_at": "2026-09-30T14:04:14Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36726454950"
-  },
-  {
-    "id": 36711066782,
-    "sha": "ea3e90657fa42bec9633c63ae45f797ae3892c05",
-    "short_sha": "ea3e906",
-    "message": "Merge branch 'main' into feat/modify-version",
-    "created_at": "2026-09-30T11:50:50Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36711066782"
-  },
-  {
-    "id": 36710969847,
-    "sha": "8bc107c14e8fafd0990777cfed686c30313a7bc9",
-    "short_sha": "8bc107c",
-    "message": "Merge pull request #1991 from ZalithLauncher/feat/installer_log_display\n\nfeat: 改良模组加载器安装的日志显示",
-    "created_at": "2026-09-30T11:50:07Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36710969847"
   }
 ]
