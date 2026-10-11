@@ -1,5 +1,29 @@
 [
   {
+    "id": 38146690702,
+    "sha": "be8843457114b52e3b84a59327df49cef141c7da",
+    "short_sha": "be88434",
+    "message": "Merge pull request #2049 from DryFishOrg/fix/unchecked_stuff\n\nfix(grid): validate displacement direction vectors in resolveDisplacements",
+    "created_at": "2026-10-11T14:19:09Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38146690702"
+  },
+  {
+    "id": 38144072158,
+    "sha": "be540ada1f1b9b47f22772a52b4afb5635c3214b",
+    "short_sha": "be540ad",
+    "message": "Merge pull request #2053 from ZalithLauncher/fix/curseforge-url-encoding\n\nfix: CurseForge 下载链接对文件名进行百分号编码",
+    "created_at": "2026-10-11T13:39:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38144072158"
+  },
+  {
+    "id": 38144017058,
+    "sha": "e2b8ba170cee6ad658e3c76eaa4c5c7fe4fe11bd",
+    "short_sha": "e2b8ba1",
+    "message": "fix: CurseForge 下载链接对文件名进行百分号编码\n\n自行拼接 CDN 链接时原始文件名未编码，文件名含空格等字符时\n会生成无效 URL，导致整合包及模组下载失败。\n\nFixes #2052",
+    "created_at": "2026-10-11T13:38:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38144017058"
+  },
+  {
     "id": 38112047711,
     "sha": "76d7eb5ebe23876eb39acbeca69d1bb8e35d97bc",
     "short_sha": "76d7eb5",
@@ -352,14 +376,6 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37261091335"
   },
   {
-    "id": 37203556904,
-    "sha": "c73c4900f9afc633411f45cba94521e6d99b1443",
-    "short_sha": "c73c490",
-    "message": "[Do not use!] Translated using Weblate (Indonesian)\n\nCurrently translated at 56.3% (49 of 87 strings)\n\nTranslation: ZalithLauncher2/Terracota\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/terracota/id/",
-    "created_at": "2026-10-04T12:51:22Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37203556904"
-  },
-  {
     "id": 36807800650,
     "sha": "38f0e558619a394a64a910f34cc135c467684c5a",
     "short_sha": "38f0e55",
@@ -382,21 +398,5 @@
     "message": "feat: 多加载器识别与修改版本适配",
     "created_at": "2026-09-30T21:35:07Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36780389179"
-  },
-  {
-    "id": 36727150566,
-    "sha": "9296f29dd142a03a35dc68920327ce9a42b1797f",
-    "short_sha": "9296f29",
-    "message": "Merge branch 'main' into feat/modify-version",
-    "created_at": "2026-09-30T14:10:37Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36727150566"
-  },
-  {
-    "id": 36727115920,
-    "sha": "3f1f126c65da7871c858d71da4fa68be4848de4b",
-    "short_sha": "3f1f126",
-    "message": "chore: 调整主界面平板布局下玩家头像的 padding 值",
-    "created_at": "2026-09-30T14:10:23Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36727115920"
   }
 ]
