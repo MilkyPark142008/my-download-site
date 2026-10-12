@@ -1,5 +1,21 @@
 [
   {
+    "id": 38201609348,
+    "sha": "d651759bde604282809418b43d35d01859693b1a",
+    "short_sha": "d651759",
+    "message": "fix: 修复 androidTest 编译错误并校正过期断言\n\n- VersionSettingTest 移除已迁至 MenuSetting 的 isForceResolution 引用（setter 通知计数 19→18）\n- ThemeDataTest 补 ThemeData 新增参数 colorAlpha\n- usesGlobal 缺省值断言改为 true，对齐 73706117c\n- ProfileTest 序列化用例补建版本目录，避免仓库异步刷新清空选中版本",
+    "created_at": "2026-10-12T01:50:01Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38201609348"
+  },
+  {
+    "id": 38201609360,
+    "sha": "d651759bde604282809418b43d35d01859693b1a",
+    "short_sha": "d651759",
+    "message": "fix: 修复 androidTest 编译错误并校正过期断言\n\n- VersionSettingTest 移除已迁至 MenuSetting 的 isForceResolution 引用（setter 通知计数 19→18）\n- ThemeDataTest 补 ThemeData 新增参数 colorAlpha\n- usesGlobal 缺省值断言改为 true，对齐 73706117c\n- ProfileTest 序列化用例补建版本目录，避免仓库异步刷新清空选中版本",
+    "created_at": "2026-10-12T01:50:01Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38201609360"
+  },
+  {
     "id": 38114401936,
     "sha": "efe4dcc5dbc78c55be177c330239e12845ae7ccf",
     "short_sha": "efe4dcc",
@@ -382,21 +398,5 @@
     "message": "1.3.3.8",
     "created_at": "2026-10-10T01:48:15Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38014586097"
-  },
-  {
-    "id": 37901436142,
-    "sha": "55564bfbe96b29a27b5027dac0702afc64ebf968",
-    "short_sha": "55564bf",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): add Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktogunawan353@gmail.com>\nLanguage: Indonesian\nProgress: 10.4% (162 of 1546 strings)\nProgress: 11.3% (176 of 1546 strings)\nProgress: 5.7% (88 of 1543 strings)\nProgress: 9.2% (142 of 1543 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-09T07:51:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37901436142"
-  },
-  {
-    "id": 37901430517,
-    "sha": "55564bfbe96b29a27b5027dac0702afc64ebf968",
-    "short_sha": "55564bf",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): add Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktogunawan353@gmail.com>\nLanguage: Indonesian\nProgress: 10.4% (162 of 1546 strings)\nProgress: 11.3% (176 of 1546 strings)\nProgress: 5.7% (88 of 1543 strings)\nProgress: 9.2% (142 of 1543 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-09T07:51:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/37901430517"
   }
 ]

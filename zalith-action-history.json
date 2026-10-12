@@ -376,14 +376,6 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37312818020"
   },
   {
-    "id": 37261091335,
-    "sha": "1a856b1aeb1541d7e48e6a33bcdab3a2d8613d19",
-    "short_sha": "1a856b1",
-    "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1462 of 1462 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
-    "created_at": "2026-10-05T03:51:21Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37261091335"
-  },
-  {
     "id": 36807800650,
     "sha": "38f0e558619a394a64a910f34cc135c467684c5a",
     "short_sha": "38f0e55",
@@ -398,5 +390,13 @@
     "message": "fix: 修复修改版本页加载器预选竞态与提示缺失\n\n- 预选按主加载器优先级依次执行，高优先级列表未加载完成时低优先级等待，消除列表加载顺序导致的竞态\n- OptiFine 与 Forge 的兼容性检查升级为按已选版本成对校验，与列表条目过滤规则一致，不兼容时次要加载器为主加载器让位并提示\n- 切换 Minecraft 版本后，无法匹配的已安装加载器按移除判断，不再保留原样，同时抑制保留原样提示",
     "created_at": "2026-09-30T22:34:26Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36786401843"
+  },
+  {
+    "id": 36780389179,
+    "sha": "47efb26eb36061001d915362c53b2c44fb5d09ec",
+    "short_sha": "47efb26",
+    "message": "feat: 多加载器识别与修改版本适配",
+    "created_at": "2026-09-30T21:35:07Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36780389179"
   }
 ]
