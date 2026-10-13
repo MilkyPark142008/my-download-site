@@ -328,22 +328,6 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37555249258"
   },
   {
-    "id": 37491604222,
-    "sha": "5a5a4f2f6c090f771a9f56bcf9f90cbd1b6f8fab",
-    "short_sha": "5a5a4f2",
-    "message": "Merge pull request #2025 from ZalithLauncher/fix/ime-insets-dispatch-crash\n\nfix: 延迟移除 SDL 输入法编辑框，修复 insets 分发期间的 NPE 崩溃",
-    "created_at": "2026-10-06T15:55:45Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37491604222"
-  },
-  {
-    "id": 37491513903,
-    "sha": "9b80b27ce028b814790fa20671c6a8f60c6ab282",
-    "short_sha": "9b80b27",
-    "message": "fix: 延迟移除 SDL 输入法编辑框，修复 insets 分发期间的 NPE 崩溃\n\nIME 可见性回调发生在 insets 分发遍历过程中，同步 removeView 会使\n正在遍历的 ViewGroup 读到已被移位清空的子 View 数组导致 NPE。\n改为 post 到主 Looper 在遍历结束后执行；reset() 同样经 post 分发。",
-    "created_at": "2026-10-06T15:54:12Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37491513903"
-  },
-  {
     "id": 36807800650,
     "sha": "38f0e558619a394a64a910f34cc135c467684c5a",
     "short_sha": "38f0e55",
@@ -398,5 +382,21 @@
     "message": "Merge branch 'main' into feat/modify-version",
     "created_at": "2026-09-30T11:50:50Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36711066782"
+  },
+  {
+    "id": 36710969847,
+    "sha": "8bc107c14e8fafd0990777cfed686c30313a7bc9",
+    "short_sha": "8bc107c",
+    "message": "Merge pull request #1991 from ZalithLauncher/feat/installer_log_display\n\nfeat: 改良模组加载器安装的日志显示",
+    "created_at": "2026-09-30T11:50:07Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36710969847"
+  },
+  {
+    "id": 36710913518,
+    "sha": "28e373c91cd19f4b6ea6cb6fe666bdff41f4f348",
+    "short_sha": "28e373c",
+    "message": "feat: 改良模组加载器安装的日志显示\n\n- 日志布局改为首行日志写入时才拉起，由任务控制；OptiFine 不再创建日志会话\n- 任务流与日志输出等宽 1:1，取消按钮移至对话框底部\n- 安装日志输出限制在 256 行",
+    "created_at": "2026-09-30T11:47:57Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36710913518"
   }
 ]
