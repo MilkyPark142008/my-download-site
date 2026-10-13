@@ -304,70 +304,6 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37487235534"
   },
   {
-    "id": 37392185403,
-    "sha": "7f7eaad95dc61414e8c65046fe0eb1bfb5c28db7",
-    "short_sha": "7f7eaad",
-    "message": "Merge branch 'main' into feat/account+server",
-    "created_at": "2026-10-06T00:05:57Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37392185403"
-  },
-  {
-    "id": 37392130389,
-    "sha": "6219534e75cfeae267cb6382570ff9f79d7630a3",
-    "short_sha": "6219534",
-    "message": "fix: 服务器卡片无效图标时不应使用 Icon",
-    "created_at": "2026-10-06T00:05:24Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37392130389"
-  },
-  {
-    "id": 37388371057,
-    "sha": "0f821414849a428dea1a4506987e5c0c78b5deeb",
-    "short_sha": "0f82141",
-    "message": "Merge pull request #2020 from TNTyep520/bump/miolibpatcher\n\nfix: oshi 5.x initProcessorCounts 返回 List，误包成 Pair 致构造遍历时抛 IncompatibleClassChangeError",
-    "created_at": "2026-10-05T23:25:03Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37388371057"
-  },
-  {
-    "id": 37388282807,
-    "sha": "43f0d609725cbfb0e19b1365c491c6e8281e4964",
-    "short_sha": "43f0d60",
-    "message": "Merge pull request #2021 from TNTyep520/update-mod-data\n\n更新模组数据 (2026-10-04)",
-    "created_at": "2026-10-05T23:24:10Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37388282807"
-  },
-  {
-    "id": 37386829385,
-    "sha": "1721d65d08f13477ed95619d4aeb0cd85e79115a",
-    "short_sha": "1721d65",
-    "message": "fix: 服务器卡片未验证版本可用性",
-    "created_at": "2026-10-05T23:09:03Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37386829385"
-  },
-  {
-    "id": 37385948184,
-    "sha": "6ea14e9ca59d4295471d3053ce804450310a9da2",
-    "short_sha": "6ea14e9",
-    "message": "chore: 调整服务器卡片设置对话框的布局",
-    "created_at": "2026-10-05T23:00:08Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37385948184"
-  },
-  {
-    "id": 37384235027,
-    "sha": "5e6c97d735947fc31d2d02cb51e2c9e142868285",
-    "short_sha": "5e6c97d",
-    "message": "fix: 关闭快速启动按钮时，未禁用游戏版本入口",
-    "created_at": "2026-10-05T22:43:02Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37384235027"
-  },
-  {
-    "id": 37383820796,
-    "sha": "762f6926ef9457c4d3f4c99edeca5668e9d6c85e",
-    "short_sha": "762f692",
-    "message": "chore: 修缮卡片的布局",
-    "created_at": "2026-10-05T22:38:55Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37383820796"
-  },
-  {
     "id": 36807800650,
     "sha": "38f0e558619a394a64a910f34cc135c467684c5a",
     "short_sha": "38f0e55",
@@ -398,5 +334,69 @@
     "message": "Merge branch 'main' into feat/modify-version",
     "created_at": "2026-09-30T14:10:37Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36727150566"
+  },
+  {
+    "id": 36727115920,
+    "sha": "3f1f126c65da7871c858d71da4fa68be4848de4b",
+    "short_sha": "3f1f126",
+    "message": "chore: 调整主界面平板布局下玩家头像的 padding 值",
+    "created_at": "2026-09-30T14:10:23Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36727115920"
+  },
+  {
+    "id": 36726454950,
+    "sha": "e594c5533ab0129724a02176a6797e79e5025ad5",
+    "short_sha": "e594c55",
+    "message": "fix: 预选加载器时校验兼容性，修改版本始终完整下载原版文件\n- 预选已安装加载器前检查其与用户已选择加载器的兼容性，冲突时放弃预选（用户选择优先）\n- 修改版本时无条件执行 Minecraft 本体下载，保证原版 Jar 干净可用并补齐缺失的 libraries/assets",
+    "created_at": "2026-09-30T14:04:14Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36726454950"
+  },
+  {
+    "id": 36711066782,
+    "sha": "ea3e90657fa42bec9633c63ae45f797ae3892c05",
+    "short_sha": "ea3e906",
+    "message": "Merge branch 'main' into feat/modify-version",
+    "created_at": "2026-09-30T11:50:50Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36711066782"
+  },
+  {
+    "id": 36710969847,
+    "sha": "8bc107c14e8fafd0990777cfed686c30313a7bc9",
+    "short_sha": "8bc107c",
+    "message": "Merge pull request #1991 from ZalithLauncher/feat/installer_log_display\n\nfeat: 改良模组加载器安装的日志显示",
+    "created_at": "2026-09-30T11:50:07Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36710969847"
+  },
+  {
+    "id": 36710913518,
+    "sha": "28e373c91cd19f4b6ea6cb6fe666bdff41f4f348",
+    "short_sha": "28e373c",
+    "message": "feat: 改良模组加载器安装的日志显示\n\n- 日志布局改为首行日志写入时才拉起，由任务控制；OptiFine 不再创建日志会话\n- 任务流与日志输出等宽 1:1，取消按钮移至对话框底部\n- 安装日志输出限制在 256 行",
+    "created_at": "2026-09-30T11:47:57Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36710913518"
+  },
+  {
+    "id": 36705921060,
+    "sha": "53b0c8d8f5ce4de76dd360fb2a4bf06e00b4d8c2",
+    "short_sha": "53b0c8d",
+    "message": "fix: 修改版本名称后出现已损坏的旧版本",
+    "created_at": "2026-09-30T11:00:47Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36705921060"
+  },
+  {
+    "id": 36696609981,
+    "sha": "70e8eea01662b7d8c9d9fb1736a614b55ba5502a",
+    "short_sha": "70e8eea",
+    "message": "feat: 为繁体中文添加翻译",
+    "created_at": "2026-09-30T09:30:47Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36696609981"
+  },
+  {
+    "id": 36695518078,
+    "sha": "2d0f7983db7c93e166bfd62249d405352e574665",
+    "short_sha": "2d0f798",
+    "message": "chore: 直接展示当前的 Minecraft，移除“未变更”文本",
+    "created_at": "2026-09-30T09:20:34Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36695518078"
   }
 ]
