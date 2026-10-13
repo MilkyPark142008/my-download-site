@@ -1,5 +1,21 @@
 [
   {
+    "id": 38343663463,
+    "sha": "dda3199abd3a4f080621f0a9cfe2badd2d1700d9",
+    "short_sha": "dda3199",
+    "message": "feat: 版本列表支持收藏置顶与置顶项拖拽排序\n\n- 版本 item 新增星标收藏按钮（复用 ic_star_filled/outline，auto_tint 跟随主题），置顶项按收藏顺序前置，其余按真实版本降序\n- 置顶数据按 Profile 隔离，并入 AppSettings 总集（VersionPinManager）\n- 置顶项长按拖拽排序，仅限置顶区间内移动，松手合并回完整置顶列表持久化\n- 主界面长按版本卡快速切换弹窗同步置顶顺序\n- 列表改用 DiffUtil 局部刷新：星标/勾选以 payload 局部重绑，收藏与选中切换不再整列重播动画\n- diff 分发前后锚定视口（首可见项被 move 时由后一条顶替），收藏/取消收藏时视口纹丝不动；仅数据集变化时才滚动定位选中项\n- 修复 DiffCallback 共用可变列表引用在冷加载快照→重算发射时越界崩溃",
+    "created_at": "2026-10-13T03:44:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38343663463"
+  },
+  {
+    "id": 38343663328,
+    "sha": "dda3199abd3a4f080621f0a9cfe2badd2d1700d9",
+    "short_sha": "dda3199",
+    "message": "feat: 版本列表支持收藏置顶与置顶项拖拽排序\n\n- 版本 item 新增星标收藏按钮（复用 ic_star_filled/outline，auto_tint 跟随主题），置顶项按收藏顺序前置，其余按真实版本降序\n- 置顶数据按 Profile 隔离，并入 AppSettings 总集（VersionPinManager）\n- 置顶项长按拖拽排序，仅限置顶区间内移动，松手合并回完整置顶列表持久化\n- 主界面长按版本卡快速切换弹窗同步置顶顺序\n- 列表改用 DiffUtil 局部刷新：星标/勾选以 payload 局部重绑，收藏与选中切换不再整列重播动画\n- diff 分发前后锚定视口（首可见项被 move 时由后一条顶替），收藏/取消收藏时视口纹丝不动；仅数据集变化时才滚动定位选中项\n- 修复 DiffCallback 共用可变列表引用在冷加载快照→重算发射时越界崩溃",
+    "created_at": "2026-10-13T03:44:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38343663328"
+  },
+  {
     "id": 38258157968,
     "sha": "bfb304fc8b4b3b1bd276f82f22fb4a9bcb2a5f72",
     "short_sha": "bfb304f",
@@ -382,21 +398,5 @@
     "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): add Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktogunawan353@gmail.com>\nLanguage: Indonesian\nProgress: 10.4% (162 of 1546 strings)\nProgress: 11.3% (176 of 1546 strings)\nProgress: 14.0% (218 of 1547 strings)\nProgress: 5.7% (88 of 1543 strings)\nProgress: 9.2% (142 of 1543 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
     "created_at": "2026-10-10T06:51:28Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38032391990"
-  },
-  {
-    "id": 38032390106,
-    "sha": "03088a5d7f8dcdc379c4d6700c1aff7b172731bc",
-    "short_sha": "03088a5",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): add Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktogunawan353@gmail.com>\nLanguage: Indonesian\nProgress: 10.4% (162 of 1546 strings)\nProgress: 11.3% (176 of 1546 strings)\nProgress: 14.0% (218 of 1547 strings)\nProgress: 5.7% (88 of 1543 strings)\nProgress: 9.2% (142 of 1543 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-10T06:51:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38032390106"
-  },
-  {
-    "id": 38023933045,
-    "sha": "16cd94ec564b2d228a4351b138b01c4877b0b843",
-    "short_sha": "16cd94e",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): add Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktogunawan353@gmail.com>\nLanguage: Indonesian\nProgress: 10.4% (162 of 1546 strings)\nProgress: 11.3% (176 of 1546 strings)\nProgress: 5.7% (88 of 1543 strings)\nProgress: 9.2% (142 of 1543 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-10T04:23:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38023933045"
   }
 ]
