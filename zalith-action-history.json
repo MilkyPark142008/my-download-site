@@ -1,5 +1,37 @@
 [
   {
+    "id": 38407591053,
+    "sha": "b2fd2734d5377f03fb2e34d5dbfdc47842b5ab6c",
+    "short_sha": "b2fd273",
+    "message": "fix: 模组更新检查因基准日期过期导致同版本反复提示更新的问题",
+    "created_at": "2026-10-13T13:45:23Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38407591053"
+  },
+  {
+    "id": 38364186004,
+    "sha": "017acb57cac059b13927b30490ca108a2a6ccc76",
+    "short_sha": "017acb5",
+    "message": "Merge branch 'main' into weblate_terracotta",
+    "created_at": "2026-10-13T07:40:21Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38364186004"
+  },
+  {
+    "id": 38364131395,
+    "sha": "c689a9318462bce1ef7040785747e7591735c16d",
+    "short_sha": "c689a93",
+    "message": "Merge branch 'main' into weblate_main",
+    "created_at": "2026-10-13T07:39:57Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38364131395"
+  },
+  {
+    "id": 38363966424,
+    "sha": "0101ab2469aa972921bfa3b791c4df3b2e27c7d2",
+    "short_sha": "0101ab2",
+    "message": "Merge pull request #2064 from youfeng11/fix/wardrobe-skin-preview\n\nFix/wardrobe skin preview",
+    "created_at": "2026-10-13T07:38:39Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38363966424"
+  },
+  {
     "id": 38360948115,
     "sha": "e17e59aa786269c89e92b07fdc1773368073df14",
     "short_sha": "e17e59a",
@@ -312,30 +344,6 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37491513903"
   },
   {
-    "id": 37487474755,
-    "sha": "9c9110b594f496c308b272884db505a667e647ec",
-    "short_sha": "9c9110b",
-    "message": "Merge branch 'main' into weblate_main",
-    "created_at": "2026-10-06T15:25:55Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37487474755"
-  },
-  {
-    "id": 37487283682,
-    "sha": "809ce405b877aa9e434ce0afa221960fcab63fa0",
-    "short_sha": "809ce40",
-    "message": "Merge pull request #2024 from ZalithLauncher/fix/launchwrapper-missing\n\nfix: OptiFine 安装时补全组件类库，修复 launchwrapper 缺失导致无法启动",
-    "created_at": "2026-10-06T15:24:46Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37487283682"
-  },
-  {
-    "id": 37487235534,
-    "sha": "ac2620efa134cafd4ecc44e595b08c5fb06d769f",
-    "short_sha": "ac2620e",
-    "message": "fix: OptiFine 安装时补全组件类库，修复 launchwrapper 缺失导致无法启动\n\n- 旧版 OptiFine 安装器不自带 launchwrapper，组件 Json 声明的 net.minecraft:launchwrapper 坐标此前无任何环节下载\n- 安装任务末尾通过 GameLibDownloader 补全组件依赖的类库（已存在的直接复用），随安装迁移进游戏目录\n- 不再依赖启动时的完整性检查设置，类库下载失败时安装显式失败",
-    "created_at": "2026-10-06T15:22:56Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37487235534"
-  },
-  {
     "id": 36807800650,
     "sha": "38f0e558619a394a64a910f34cc135c467684c5a",
     "short_sha": "38f0e55",
@@ -390,13 +398,5 @@
     "message": "Merge branch 'main' into feat/modify-version",
     "created_at": "2026-09-30T11:50:50Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36711066782"
-  },
-  {
-    "id": 36710969847,
-    "sha": "8bc107c14e8fafd0990777cfed686c30313a7bc9",
-    "short_sha": "8bc107c",
-    "message": "Merge pull request #1991 from ZalithLauncher/feat/installer_log_display\n\nfeat: 改良模组加载器安装的日志显示",
-    "created_at": "2026-09-30T11:50:07Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36710969847"
   }
 ]

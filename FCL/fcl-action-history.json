@@ -1,5 +1,37 @@
 [
   {
+    "id": 38386032287,
+    "sha": "9f08a0e45b0ecbdeeb863a578a34ac06b7f1ff55",
+    "short_sha": "9f08a0e",
+    "message": "fix: SDL_OPENGL_LIBRARY 按插件路径约定拼接并校验存在性\n\nv1 插件约定 glName/eglName 以 / 开头表示相对插件 nativeLibraryDir，\naddRendererEnv 的 SDL GL 分支却当作绝对路径透传，产出 /libX.so 坏路径，\n此前仅靠 SDL dlopen 失败后按 soname 走 LD_LIBRARY_PATH 回落才能工作。\n现按约定拼接插件目录，并镜像 EGL 分支增加存在性检查：路径不存在时\n不设置该环境变量，交给 SDL 按自身默认解析。",
+    "created_at": "2026-10-13T10:46:42Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38386032287"
+  },
+  {
+    "id": 38386032038,
+    "sha": "9f08a0e45b0ecbdeeb863a578a34ac06b7f1ff55",
+    "short_sha": "9f08a0e",
+    "message": "fix: SDL_OPENGL_LIBRARY 按插件路径约定拼接并校验存在性\n\nv1 插件约定 glName/eglName 以 / 开头表示相对插件 nativeLibraryDir，\naddRendererEnv 的 SDL GL 分支却当作绝对路径透传，产出 /libX.so 坏路径，\n此前仅靠 SDL dlopen 失败后按 soname 走 LD_LIBRARY_PATH 回落才能工作。\n现按约定拼接插件目录，并镜像 EGL 分支增加存在性检查：路径不存在时\n不设置该环境变量，交给 SDL 按自身默认解析。",
+    "created_at": "2026-10-13T10:46:42Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38386032038"
+  },
+  {
+    "id": 38384561499,
+    "sha": "51a0264d7e935b09e8025095f83e28584db0ae81",
+    "short_sha": "51a0264",
+    "message": "fix: 关闭 FML 早期加载屏修复 26.3+ 模组启动时 UI 冻死\n\nNeoForge 12 移除了 -Dfml.earlyprogresswindow 属性通道（FMLConfig 只读\nconfig/fml.toml），旧旗子失效。早期加载屏的 ANGLE/Vulkan 渲染线程在\n启动扫描期反复分配 gralloc 缓冲，与启动器 UI 的 present 在 vendor\ngralloc 进程共享锁上互堵，RenderThread 出不了帧导致整个 UI 冻结直至\nANR。与 splash.properties 同款处理：generateOptionsTxt 无条件行级合并\nfml.toml 写入 earlyWindowControl = false（键置文件头部避免落表作用域，\n其余用户配置保留）。",
+    "created_at": "2026-10-13T10:35:34Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38384561499"
+  },
+  {
+    "id": 38384561519,
+    "sha": "51a0264d7e935b09e8025095f83e28584db0ae81",
+    "short_sha": "51a0264",
+    "message": "fix: 关闭 FML 早期加载屏修复 26.3+ 模组启动时 UI 冻死\n\nNeoForge 12 移除了 -Dfml.earlyprogresswindow 属性通道（FMLConfig 只读\nconfig/fml.toml），旧旗子失效。早期加载屏的 ANGLE/Vulkan 渲染线程在\n启动扫描期反复分配 gralloc 缓冲，与启动器 UI 的 present 在 vendor\ngralloc 进程共享锁上互堵，RenderThread 出不了帧导致整个 UI 冻结直至\nANR。与 splash.properties 同款处理：generateOptionsTxt 无条件行级合并\nfml.toml 写入 earlyWindowControl = false（键置文件头部避免落表作用域，\n其余用户配置保留）。",
+    "created_at": "2026-10-13T10:35:34Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38384561519"
+  },
+  {
     "id": 38343663463,
     "sha": "dda3199abd3a4f080621f0a9cfe2badd2d1700d9",
     "short_sha": "dda3199",
@@ -366,37 +398,5 @@
     "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): add Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktogunawan353@gmail.com>\nLanguage: Indonesian\nProgress: 10.4% (162 of 1546 strings)\nProgress: 11.3% (176 of 1546 strings)\nProgress: 14.0% (218 of 1547 strings)\nProgress: 5.7% (88 of 1543 strings)\nProgress: 9.2% (142 of 1543 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
     "created_at": "2026-10-10T12:12:03Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38051094876"
-  },
-  {
-    "id": 38051094867,
-    "sha": "62c592e1b85f6c111d55757b80b46e1e4c3c9a7a",
-    "short_sha": "62c592e",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): add Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktogunawan353@gmail.com>\nLanguage: Indonesian\nProgress: 10.4% (162 of 1546 strings)\nProgress: 11.3% (176 of 1546 strings)\nProgress: 14.0% (218 of 1547 strings)\nProgress: 5.7% (88 of 1543 strings)\nProgress: 9.2% (142 of 1543 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-10T12:12:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38051094867"
-  },
-  {
-    "id": 38051087404,
-    "sha": "dbb608644cd39e47b1cb8cc0a8cd3eb404029579",
-    "short_sha": "dbb6086",
-    "message": "fix: SDL openURL 转交启动器 openLink，修复 26.3 打开文件夹/链接失效 #1921",
-    "created_at": "2026-10-10T12:11:49Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38051087404"
-  },
-  {
-    "id": 38051087419,
-    "sha": "dbb608644cd39e47b1cb8cc0a8cd3eb404029579",
-    "short_sha": "dbb6086",
-    "message": "fix: SDL openURL 转交启动器 openLink，修复 26.3 打开文件夹/链接失效 #1921",
-    "created_at": "2026-10-10T12:11:49Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38051087419"
-  },
-  {
-    "id": 38032391990,
-    "sha": "03088a5d7f8dcdc379c4d6700c1aff7b172731bc",
-    "short_sha": "03088a5",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): add Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktogunawan353@gmail.com>\nLanguage: Indonesian\nProgress: 10.4% (162 of 1546 strings)\nProgress: 11.3% (176 of 1546 strings)\nProgress: 14.0% (218 of 1547 strings)\nProgress: 5.7% (88 of 1543 strings)\nProgress: 9.2% (142 of 1543 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-10T06:51:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38032391990"
   }
 ]
