@@ -1,5 +1,21 @@
 [
   {
+    "id": 38514112970,
+    "sha": "0a481996d373197e5f0090f2662c7c07432bb42e",
+    "short_sha": "0a48199",
+    "message": "Merge pull request #2068 from ZalithLauncher/fix/mod-update-stale-date\n\nfix: 模组更新检查因基准日期过期导致同版本反复提示更新的问题",
+    "created_at": "2026-10-14T04:57:47Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38514112970"
+  },
+  {
+    "id": 38513955096,
+    "sha": "7e369b2a27aca4b87b64a19c3ad3dbdc9bba7881",
+    "short_sha": "7e369b2",
+    "message": "fix: 修复输入法弹出内部对话框后被启动器误关闭的问题",
+    "created_at": "2026-10-14T04:55:48Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38513955096"
+  },
+  {
     "id": 38407591053,
     "sha": "b2fd2734d5377f03fb2e34d5dbfdc47842b5ab6c",
     "short_sha": "b2fd273",
@@ -232,102 +248,6 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37626831353"
   },
   {
-    "id": 37572764758,
-    "sha": "bc005c57ad50ae8f7106fe1f22f7e8555ae1e766",
-    "short_sha": "bc005c5",
-    "message": "chore: 调整服务器卡片设置入口",
-    "created_at": "2026-10-07T04:42:35Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37572764758"
-  },
-  {
-    "id": 37571047079,
-    "sha": "28b26dfca9dea0f042af424eef6e7fbc105afcbe",
-    "short_sha": "28b26df",
-    "message": "update: 更新项目依赖库版本",
-    "created_at": "2026-10-07T04:21:03Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37571047079"
-  },
-  {
-    "id": 37562929372,
-    "sha": "f9ea8369e4da0c9dc784e844e4e13c64b4e9dba5",
-    "short_sha": "f9ea836",
-    "message": "Merge pull request #2029 from ZalithLauncher/fix/quick-input-sdl-text-channel\n\nfix: 快捷输入文本按 SDL 渲染路径分流并等待输入通道激活",
-    "created_at": "2026-10-07T02:38:16Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37562929372"
-  },
-  {
-    "id": 37562814161,
-    "sha": "362d7322e6a1f62e690ce0ffa4a2b3e8aa028075",
-    "short_sha": "362d732",
-    "message": "fix: 快捷输入文本按 SDL 渲染路径分流并等待输入通道激活\n\n- 路由条件补齐 isSdlRenderActive：仅手柄子系统初始化 SDL（如 MC 26.2 挂\n  Controlify）时游戏输入仍走 GLFW 桥，不应委托给 SDL 通道\n- 新增 isNativeTextInputActive 查询 SDL_TextInputActive：Java 侧激活镜像\n  经 showTextInput 回调同步，受 SDL_ENABLE_SCREEN_KEYBOARD hint 支配而可能\n  缺失，判定须以 native 真实状态为准\n- SDL 分支发送前轮询等待通道激活（16ms 步进、1s 超时），未激活则放弃本次\n  文本提交；通道未激活时提交的文本会被 SDL 丢弃",
-    "created_at": "2026-10-07T02:35:10Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37562814161"
-  },
-  {
-    "id": 37560700701,
-    "sha": "2c28d339c135bad01562c22f381c1ce54123bfc9",
-    "short_sha": "2c28d33",
-    "message": "fix(LWJGL): 优化 glfwGetWindowPos 实现，数组版返回真实窗口坐标\n\n数组版不再硬编码返回 0,0，改为返回窗口属性中跟踪的位置；IntBuffer 重载\n补充 CHECKS 容量校验并对齐官方注解签名，3.3.3 与 3.4.1 双端同步，并重新\n生成 assets 内预构建产物",
-    "created_at": "2026-10-07T02:09:37Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37560700701"
-  },
-  {
-    "id": 37559274930,
-    "sha": "c501bcfa5b900c7a8f4eb8085bf8def5d78cdc79",
-    "short_sha": "c501bcf",
-    "message": "Merge pull request #2028 from ZalithLauncher/fix/vm-window-size-thread-crash\n\nfix: 游戏启动时窗口尺寸初始刷新位于后台线程导致崩溃",
-    "created_at": "2026-10-07T01:52:54Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37559274930"
-  },
-  {
-    "id": 37559237675,
-    "sha": "828cf3e2e153aab684d8ab14a6064c6cb452cdfd",
-    "short_sha": "828cf3e",
-    "message": "fix: 游戏启动时窗口尺寸初始刷新位于后台线程导致崩溃",
-    "created_at": "2026-10-07T01:51:50Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37559237675"
-  },
-  {
-    "id": 37559182630,
-    "sha": "fd4bd3af7054f28b759c9083049b93c22353b73c",
-    "short_sha": "fd4bd3a",
-    "message": "ci: Release 上传混淆映射文件，重命名使其排序位于 APK 之后",
-    "created_at": "2026-10-07T01:51:42Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37559182630"
-  },
-  {
-    "id": 37555617541,
-    "sha": "6553adbd9a52a051ff18ff28622bfb8428abee66",
-    "short_sha": "6553adb",
-    "message": "Merge pull request #2027 from ZalithLauncher/feat/account+server\n\nfeat: 主界面支持新增服务器卡片 & 移除离线账号限制",
-    "created_at": "2026-10-07T01:08:39Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37555617541"
-  },
-  {
-    "id": 37555551703,
-    "sha": "dc12870acd5c22418b1b0b0bf9289f4fc01e23f9",
-    "short_sha": "dc12870",
-    "message": "Merge branch 'main' into feat/account+server",
-    "created_at": "2026-10-07T01:05:56Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37555551703"
-  },
-  {
-    "id": 37555355012,
-    "sha": "351bdbd5e8ac145c0f633a6a0987d1a46a9ef599",
-    "short_sha": "351bdbd",
-    "message": "Merge pull request #2026 from ZalithLauncher/fix/download-progress-rollback\n\nfix: 下载器失败重试回滚重复字节统计，修复进度超额完成任务",
-    "created_at": "2026-10-07T01:05:31Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37555355012"
-  },
-  {
-    "id": 37555249258,
-    "sha": "7a481b100519d43b960eb8d6851b7378363f95d0",
-    "short_sha": "7a481b1",
-    "message": "fix: 下载器失败重试回滚重复字节统计，修复进度超额完成任务\n\n进度分子统计线路上流过的全部字节且失败不回滚，分母是静态注册的期望大小，\n校验失败重下、换源重传、续传失效重启、批级重试都会重复计入同一批字节，\n导致已下载大小超过统计总大小。\n\nFetcher 在丢弃临时文件的各路径（416、续传被拒、写盘损坏、校验失败、换源）\n对已计入字节做负增量回滚，成功提交后清零；transfer 改按写入 sink 的字节\n计数，统一 gzip 下的分子分母口径。未知大小的文件完成后把实际大小补进分母；\n下载引擎增量回调改为带符号，速率采样钳制非负。整批成功时\ndownloaded == totalBytes，超额在结构上不再可能。",
-    "created_at": "2026-10-07T01:03:40Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37555249258"
-  },
-  {
     "id": 36807800650,
     "sha": "38f0e558619a394a64a910f34cc135c467684c5a",
     "short_sha": "38f0e55",
@@ -398,5 +318,85 @@
     "message": "feat: 改良模组加载器安装的日志显示\n\n- 日志布局改为首行日志写入时才拉起，由任务控制；OptiFine 不再创建日志会话\n- 任务流与日志输出等宽 1:1，取消按钮移至对话框底部\n- 安装日志输出限制在 256 行",
     "created_at": "2026-09-30T11:47:57Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36710913518"
+  },
+  {
+    "id": 36705921060,
+    "sha": "53b0c8d8f5ce4de76dd360fb2a4bf06e00b4d8c2",
+    "short_sha": "53b0c8d",
+    "message": "fix: 修改版本名称后出现已损坏的旧版本",
+    "created_at": "2026-09-30T11:00:47Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36705921060"
+  },
+  {
+    "id": 36696609981,
+    "sha": "70e8eea01662b7d8c9d9fb1736a614b55ba5502a",
+    "short_sha": "70e8eea",
+    "message": "feat: 为繁体中文添加翻译",
+    "created_at": "2026-09-30T09:30:47Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36696609981"
+  },
+  {
+    "id": 36695518078,
+    "sha": "2d0f7983db7c93e166bfd62249d405352e574665",
+    "short_sha": "2d0f798",
+    "message": "chore: 直接展示当前的 Minecraft，移除“未变更”文本",
+    "created_at": "2026-09-30T09:20:34Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36695518078"
+  },
+  {
+    "id": 36694214723,
+    "sha": "9f87f01e0804542e8c750f923e3e9ea9c454fd2e",
+    "short_sha": "9f87f01",
+    "message": "feat: 新增修改版本屏幕与安装流程\n\n- 管理版本屏幕新增\"修改版本\"入口，单屏对照当前安装与目标修改的 Minecraft 版本、模组加载器版本\n- 支持变更 Minecraft 本体版本，加载器的更换、升级与移除，互斥关系沿用下载屏的判断逻辑\n- 安装流程由 MainActivity 持有的 ModifyVersionViewModel 驱动，确认、进度与结果对话框不依赖版本设置屏幕的存活，任务开始后立即返回主界面\n- 修改完成后支持版本重命名，并同步主界面版本卡片记录\n- 复用 SelectGameVersionScreen 供选择目标 Minecraft 版本\n- 新增 TextTransition 公共组件展示\"旧值 → 新值\"过渡",
+    "created_at": "2026-09-29T23:39:09Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36694214723"
+  },
+  {
+    "id": 36578265116,
+    "sha": "05697fbbe293e822f542cafa53d2d7ea3556611c",
+    "short_sha": "05697fb",
+    "message": "Merge branch 'main' into weblate_main",
+    "created_at": "2026-09-29T13:51:16Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36578265116"
+  },
+  {
+    "id": 36578228567,
+    "sha": "05697fbbe293e822f542cafa53d2d7ea3556611c",
+    "short_sha": "05697fb",
+    "message": "Merge branch 'main' into weblate_main",
+    "created_at": "2026-09-29T13:51:16Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36578228567"
+  },
+  {
+    "id": 36578096058,
+    "sha": "01ba647872095b576cf3902a59599d516c91e7cf",
+    "short_sha": "01ba647",
+    "message": "Merge pull request #1986 from ZalithLauncher/feat/cape_localization\n\nfeat: 添加扭曲披风、英雄披风、极光披风的本地化翻译",
+    "created_at": "2026-09-29T13:50:25Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36578096058"
+  },
+  {
+    "id": 36578008221,
+    "sha": "6997822b930e5a973da25cd3c324bad9b42df5fb",
+    "short_sha": "6997822",
+    "message": "feat: 添加扭曲披风、英雄披风、极光披风的本地化翻译",
+    "created_at": "2026-09-29T13:49:38Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36578008221"
+  },
+  {
+    "id": 36575230002,
+    "sha": "2d0c2a9c3db5e07f91ab994e895cc62a04faee80",
+    "short_sha": "2d0c2a9",
+    "message": "Merge pull request #1985 from ZalithLauncher/chore/version_card_content\n\nchore: 调整版本卡片内容布局",
+    "created_at": "2026-09-29T13:27:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36575230002"
+  },
+  {
+    "id": 36575165823,
+    "sha": "9ff6054fbb739f69062b25ae3bc50b0526c449f0",
+    "short_sha": "9ff6054",
+    "message": "chore: 调整版本卡片内容布局",
+    "created_at": "2026-09-29T13:26:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36575165823"
   }
 ]
