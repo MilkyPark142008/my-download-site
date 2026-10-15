@@ -1,20 +1,20 @@
 {"run": {
-  "id": 38676191377,
-  "name": "Sync version map",
-  "node_id": "WFR_kwLOIQeFGs8AAAAJAUfYkQ",
+  "id": 38687030952,
+  "name": "Check Codes",
+  "node_id": "WFR_kwLOIQeFGs8AAAAJAe0-qA",
   "head_branch": "main",
-  "head_sha": "92a8cfbaed4731010a1c24246e4985d4facc5406",
-  "path": ".github/workflows/sync-version-map.yml",
-  "display_title": "Update version_map.json",
-  "run_number": 1,
+  "head_sha": "d8e793e2e44cb112bfd7193b61a468b4a14b1b26",
+  "path": ".github/workflows/check-codes.yml",
+  "display_title": "feat: 游戏内菜单添加全屏显示开关",
+  "run_number": 270,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
-  "workflow_id": 383183163,
-  "check_suite_id": 104805944269,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAYZuvLzQ",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38676191377",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38676191377",
+  "workflow_id": 351611475,
+  "check_suite_id": 104834951776,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAYaKZqYA",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38687030952",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38687030952",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
@@ -22,7 +22,7 @@
       "number": 364,
       "head": {
         "ref": "main",
-        "sha": "92a8cfbaed4731010a1c24246e4985d4facc5406",
+        "sha": "d8e793e2e44cb112bfd7193b61a468b4a14b1b26",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -45,7 +45,7 @@
       "number": 37,
       "head": {
         "ref": "main",
-        "sha": "92a8cfbaed4731010a1c24246e4985d4facc5406",
+        "sha": "d8e793e2e44cb112bfd7193b61a468b4a14b1b26",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -68,7 +68,7 @@
       "number": 400,
       "head": {
         "ref": "main",
-        "sha": "92a8cfbaed4731010a1c24246e4985d4facc5406",
+        "sha": "d8e793e2e44cb112bfd7193b61a468b4a14b1b26",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -86,8 +86,8 @@
       }
     }
   ],
-  "created_at": "2026-10-15T03:25:28Z",
-  "updated_at": "2026-10-15T03:25:44Z",
+  "created_at": "2026-10-15T05:29:12Z",
+  "updated_at": "2026-10-15T05:30:34Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-10-15T03:25:28Z",
+  "run_started_at": "2026-10-15T05:29:12Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,19 +133,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38676191377/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38676191377/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/104805944269",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38676191377/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38676191377/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38676191377/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38687030952/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38687030952/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/104834951776",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38687030952/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38687030952/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38687030952/rerun",
   "previous_attempt_url": null,
-  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/383183163",
+  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "92a8cfbaed4731010a1c24246e4985d4facc5406",
-    "tree_id": "11e3b7cf43502dbeaa04815599c5e72a55dfb0fd",
-    "message": "Update version_map.json",
-    "timestamp": "2026-10-15T03:25:19Z",
+    "id": "d8e793e2e44cb112bfd7193b61a468b4a14b1b26",
+    "tree_id": "2736f316782c5ef80f4f8c2cb6c87547f3c08bf5",
+    "message": "feat: 游戏内菜单添加全屏显示开关",
+    "timestamp": "2026-10-15T05:28:55Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"

@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 168391097,
         "digest": "sha256:8c6b438ea2a3319adaf673d639adfb779dfb15d694d940814cd1c6b099d323a2",
-        "download_count": 16854,
+        "download_count": 16886,
         "created_at": "2026-07-31T02:59:21Z",
         "updated_at": "2026-07-31T03:03:42Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.7/Amethyst-Debug.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 156535672,
         "digest": "sha256:6b5579e93f50a62f4d96279683bb447325e5a4de9015deae787eee56c248211f",
-        "download_count": 68794,
+        "download_count": 68974,
         "created_at": "2026-07-31T02:59:28Z",
         "updated_at": "2026-07-31T03:03:42Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.7/Amethyst.apk"
@@ -128,22 +128,22 @@
   },
   "action": {
     "run": {
-      "id": 38677789177,
+      "id": 38683447179,
       "name": "Android CI",
-      "node_id": "WFR_kwLOOrUn6c8AAAAJAWA5-Q",
+      "node_id": "WFR_kwLOOrUn6c8AAAAJAbaPiw",
       "head_branch": "judge/storage_root_fix",
-      "head_sha": "f240e8b0dc88d539ce8988bc5b732185752f3715",
+      "head_sha": "0fadf220428deb0ed7a5eeefee4f6aa9c4f6f428",
       "path": ".github/workflows/android.yml",
-      "display_title": "Fix getPojavStorageRoot handling",
-      "run_number": 1018,
-      "event": "pull_request",
+      "display_title": "Use a constant for the marker file name",
+      "run_number": 1020,
+      "event": "push",
       "status": "completed",
       "conclusion": "success",
       "workflow_id": 162757109,
-      "check_suite_id": 104810222626,
-      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAYZy0UIg",
-      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/38677789177",
-      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/38677789177",
+      "check_suite_id": 104825410734,
+      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAYaBTUrg",
+      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/38683447179",
+      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/38683447179",
       "pull_requests": [
         {
           "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/pulls/390",
@@ -151,7 +151,7 @@
           "number": 390,
           "head": {
             "ref": "judge/storage_root_fix",
-            "sha": "f240e8b0dc88d539ce8988bc5b732185752f3715",
+            "sha": "0fadf220428deb0ed7a5eeefee4f6aa9c4f6f428",
             "repo": {
               "id": 984950761,
               "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
@@ -169,8 +169,8 @@
           }
         }
       ],
-      "created_at": "2026-10-15T03:44:01Z",
-      "updated_at": "2026-10-15T03:48:10Z",
+      "created_at": "2026-10-15T04:49:01Z",
+      "updated_at": "2026-10-15T04:54:11Z",
       "actor": {
         "login": "thejudge156",
         "id": 53906078,
@@ -194,7 +194,7 @@
       },
       "run_attempt": 1,
       "referenced_workflows": [],
-      "run_started_at": "2026-10-15T03:44:01Z",
+      "run_started_at": "2026-10-15T04:49:01Z",
       "triggering_actor": {
         "login": "thejudge156",
         "id": 53906078,
@@ -216,19 +216,19 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/38677789177/jobs",
-      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/38677789177/logs",
-      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/104810222626",
-      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/38677789177/artifacts",
-      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/38677789177/cancel",
-      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/38677789177/rerun",
+      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/38683447179/jobs",
+      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/38683447179/logs",
+      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/104825410734",
+      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/38683447179/artifacts",
+      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/38683447179/cancel",
+      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/38683447179/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/workflows/162757109",
       "head_commit": {
-        "id": "f240e8b0dc88d539ce8988bc5b732185752f3715",
-        "tree_id": "f5fa03d98edc6a175b8e647a17908384b944f71f",
-        "message": "Fix getPojavStorageRoot handling.",
-        "timestamp": "2026-10-15T03:39:42Z",
+        "id": "0fadf220428deb0ed7a5eeefee4f6aa9c4f6f428",
+        "tree_id": "ee5ed9b51e859fcca70b3d1258cb376ee62d4c35",
+        "message": "Use a constant for the marker file name",
+        "timestamp": "2026-10-15T04:48:48Z",
         "author": {
           "name": "TheJudge156",
           "email": "colepatrickroberts@gmail.com"
@@ -377,43 +377,43 @@
     },
     "artifacts": [
       {
-        "id": 11947060922,
-        "node_id": "MDg6QXJ0aWZhY3QxMTk0NzA2MDkyMg==",
-        "name": "app-release",
-        "size_in_bytes": 154665010,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/11947060922",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/11947060922/zip",
+        "id": 11949791044,
+        "node_id": "MDg6QXJ0aWZhY3QxMTk0OTc5MTA0NA==",
+        "name": "app-debug (recommended)",
+        "size_in_bytes": 166243514,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/11949791044",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/11949791044/zip",
         "expired": false,
-        "digest": "sha256:d6201310ab83b4c2ea194bf96070a1573023d609be7912ae17d1569354c14680",
-        "created_at": "2026-10-15T03:48:07Z",
-        "updated_at": "2026-10-15T03:48:07Z",
-        "expires_at": "2027-01-13T03:44:01Z",
+        "digest": "sha256:376c4ef046f165b50f01e2c9d84a1888cf4dc8bf2a1707df8d3abcebf47d7c6a",
+        "created_at": "2026-10-15T04:54:00Z",
+        "updated_at": "2026-10-15T04:54:00Z",
+        "expires_at": "2027-01-13T04:49:02Z",
         "workflow_run": {
-          "id": 38677789177,
+          "id": 38683447179,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
           "head_branch": "judge/storage_root_fix",
-          "head_sha": "f240e8b0dc88d539ce8988bc5b732185752f3715"
+          "head_sha": "0fadf220428deb0ed7a5eeefee4f6aa9c4f6f428"
         }
       },
       {
-        "id": 11946801086,
-        "node_id": "MDg6QXJ0aWZhY3QxMTk0NjgwMTA4Ng==",
-        "name": "app-debug (recommended)",
-        "size_in_bytes": 166243438,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/11946801086",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/11946801086/zip",
+        "id": 11949746146,
+        "node_id": "MDg6QXJ0aWZhY3QxMTk0OTc0NjE0Ng==",
+        "name": "app-release",
+        "size_in_bytes": 154665088,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/11949746146",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/11949746146/zip",
         "expired": false,
-        "digest": "sha256:658b5e21ad7250de83efca211546b0385cba98e1a900f4d9fa1ffdd54a30654f",
-        "created_at": "2026-10-15T03:48:02Z",
-        "updated_at": "2026-10-15T03:48:02Z",
-        "expires_at": "2027-01-13T03:44:01Z",
+        "digest": "sha256:2be3e423458fd4bf932f030d290567518800bd3c9101ccd440b0513f8a88b4f2",
+        "created_at": "2026-10-15T04:54:07Z",
+        "updated_at": "2026-10-15T04:54:07Z",
+        "expires_at": "2027-01-13T04:49:02Z",
         "workflow_run": {
-          "id": 38677789177,
+          "id": 38683447179,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
           "head_branch": "judge/storage_root_fix",
-          "head_sha": "f240e8b0dc88d539ce8988bc5b732185752f3715"
+          "head_sha": "0fadf220428deb0ed7a5eeefee4f6aa9c4f6f428"
         }
       }
     ]
