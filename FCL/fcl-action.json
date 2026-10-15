@@ -1,20 +1,20 @@
 {"run": {
-  "id": 38386032287,
-  "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAI7_xenw",
+  "id": 38676191377,
+  "name": "Sync version map",
+  "node_id": "WFR_kwLOIQeFGs8AAAAJAUfYkQ",
   "head_branch": "main",
-  "head_sha": "9f08a0e45b0ecbdeeb863a578a34ac06b7f1ff55",
-  "path": ".github/workflows/check-codes.yml",
-  "display_title": "fix: SDL_OPENGL_LIBRARY 按插件路径约定拼接并校验存在性",
-  "run_number": 267,
+  "head_sha": "92a8cfbaed4731010a1c24246e4985d4facc5406",
+  "path": ".github/workflows/sync-version-map.yml",
+  "display_title": "Update version_map.json",
+  "run_number": 1,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
-  "workflow_id": 351611475,
-  "check_suite_id": 104003751022,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAYNxtMbg",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38386032287",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38386032287",
+  "workflow_id": 383183163,
+  "check_suite_id": 104805944269,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAYZuvLzQ",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38676191377",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38676191377",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
@@ -22,7 +22,7 @@
       "number": 364,
       "head": {
         "ref": "main",
-        "sha": "c78c8328a0141ef6c490a100a6ba642287712ff9",
+        "sha": "92a8cfbaed4731010a1c24246e4985d4facc5406",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -45,7 +45,7 @@
       "number": 37,
       "head": {
         "ref": "main",
-        "sha": "c78c8328a0141ef6c490a100a6ba642287712ff9",
+        "sha": "92a8cfbaed4731010a1c24246e4985d4facc5406",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -68,7 +68,7 @@
       "number": 400,
       "head": {
         "ref": "main",
-        "sha": "c78c8328a0141ef6c490a100a6ba642287712ff9",
+        "sha": "92a8cfbaed4731010a1c24246e4985d4facc5406",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -86,8 +86,8 @@
       }
     }
   ],
-  "created_at": "2026-10-13T10:49:53Z",
-  "updated_at": "2026-10-13T10:51:11Z",
+  "created_at": "2026-10-15T03:25:28Z",
+  "updated_at": "2026-10-15T03:25:44Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-10-13T10:49:53Z",
+  "run_started_at": "2026-10-15T03:25:28Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,19 +133,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38386032287/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38386032287/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/104003751022",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38386032287/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38386032287/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38386032287/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38676191377/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38676191377/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/104805944269",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38676191377/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38676191377/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38676191377/rerun",
   "previous_attempt_url": null,
-  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
+  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/383183163",
   "head_commit": {
-    "id": "9f08a0e45b0ecbdeeb863a578a34ac06b7f1ff55",
-    "tree_id": "5ead71bdf8355e72509ebb0a022cf52e531b6467",
-    "message": "fix: SDL_OPENGL_LIBRARY 按插件路径约定拼接并校验存在性\n\nv1 插件约定 glName/eglName 以 / 开头表示相对插件 nativeLibraryDir，\naddRendererEnv 的 SDL GL 分支却当作绝对路径透传，产出 /libX.so 坏路径，\n此前仅靠 SDL dlopen 失败后按 soname 走 LD_LIBRARY_PATH 回落才能工作。\n现按约定拼接插件目录，并镜像 EGL 分支增加存在性检查：路径不存在时\n不设置该环境变量，交给 SDL 按自身默认解析。",
-    "timestamp": "2026-10-13T10:46:42Z",
+    "id": "92a8cfbaed4731010a1c24246e4985d4facc5406",
+    "tree_id": "11e3b7cf43502dbeaa04815599c5e72a55dfb0fd",
+    "message": "Update version_map.json",
+    "timestamp": "2026-10-15T03:25:19Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"

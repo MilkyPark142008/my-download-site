@@ -1,5 +1,21 @@
 [
   {
+    "id": 38677789177,
+    "sha": "f240e8b0dc88d539ce8988bc5b732185752f3715",
+    "short_sha": "f240e8b",
+    "message": "Fix getPojavStorageRoot handling.",
+    "created_at": "2026-10-15T03:39:42Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/38677789177"
+  },
+  {
+    "id": 38677446080,
+    "sha": "f240e8b0dc88d539ce8988bc5b732185752f3715",
+    "short_sha": "f240e8b",
+    "message": "Fix getPojavStorageRoot handling.",
+    "created_at": "2026-10-15T03:39:42Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/38677446080"
+  },
+  {
     "id": 35652840331,
     "sha": "330c6eae3164df64bdc4828e946a9e62cc5169e4",
     "short_sha": "330c6ea",
@@ -382,21 +398,5 @@
     "message": "remove(renderer): Remove SFPEW/System GLES Driver\n\nThe use of SFPEW on System GLES on androids is not well supported.\nUse with MobileGlues always.\n\nMaintain the already made logic just in case it can be used",
     "created_at": "2026-08-18T15:33:55Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/32155235854"
-  },
-  {
-    "id": 31927506982,
-    "sha": "e0daa42b4039dfbc5d3bfb9ae767803b2c78a2f8",
-    "short_sha": "e0daa42",
-    "message": "remove(renderer): Krypton Wrapper\n\nSince we have SFPEW now, we can drop gl4es, yayy\n\nReplaces all the old fallback logic to gl4es to instead\nSFPEW/MobileGlues",
-    "created_at": "2026-08-16T04:48:26Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31927506982"
-  },
-  {
-    "id": 31926805288,
-    "sha": "96f7f2abc56fcd478febdb59783efb70f2d233ed",
-    "short_sha": "96f7f2a",
-    "message": "remove(renderer): Krypton Wrapper\n\nSince we have SFPEW now, we can drop gl4es, yayy\n\nReplaces all the old fallback logic to gl4es to instead\nSFPEW/MobileGlues",
-    "created_at": "2026-08-16T04:30:12Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/31926805288"
   }
 ]
