@@ -1,5 +1,37 @@
 [
   {
+    "id": 38907531491,
+    "sha": "d2ee80a146d2370774c11a7cde38f54c46770dbe",
+    "short_sha": "d2ee80a",
+    "message": "fix: 内置文件管理器移除隐藏文件过滤，始终显示全部文件\n\n「.」开头的目录（如 .minecraft）在添加游戏路径时不可见，\n直接删除\"显示隐藏文件\"开关与过滤逻辑。\n\nFixes #1935",
+    "created_at": "2026-10-16T13:17:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38907531491"
+  },
+  {
+    "id": 38907531119,
+    "sha": "d2ee80a146d2370774c11a7cde38f54c46770dbe",
+    "short_sha": "d2ee80a",
+    "message": "fix: 内置文件管理器移除隐藏文件过滤，始终显示全部文件\n\n「.」开头的目录（如 .minecraft）在添加游戏路径时不可见，\n直接删除\"显示隐藏文件\"开关与过滤逻辑。\n\nFixes #1935",
+    "created_at": "2026-10-16T13:17:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38907531119"
+  },
+  {
+    "id": 38902656693,
+    "sha": "1d72a88b60b6b25e1d3da23d12147bd4c42127dc",
+    "short_sha": "1d72a88",
+    "message": "fix: 手柄瞬断后残留事件 device 为 null 导致 NPE 崩溃 (#1936)",
+    "created_at": "2026-10-16T12:40:01Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38902656693"
+  },
+  {
+    "id": 38902656661,
+    "sha": "1d72a88b60b6b25e1d3da23d12147bd4c42127dc",
+    "short_sha": "1d72a88",
+    "message": "fix: 手柄瞬断后残留事件 device 为 null 导致 NPE 崩溃 (#1936)",
+    "created_at": "2026-10-16T12:40:01Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38902656661"
+  },
+  {
     "id": 38687030960,
     "sha": "d8e793e2e44cb112bfd7193b61a468b4a14b1b26",
     "short_sha": "d8e793e",
@@ -366,37 +398,5 @@
     "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): add Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktogunawan353@gmail.com>\nLanguage: Indonesian\nProgress: 10.4% (162 of 1546 strings)\nProgress: 11.3% (176 of 1546 strings)\nProgress: 14.0% (218 of 1547 strings)\nProgress: 5.7% (88 of 1543 strings)\nProgress: 9.2% (142 of 1543 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
     "created_at": "2026-10-10T13:38:25Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38056499759"
-  },
-  {
-    "id": 38056495560,
-    "sha": "e637fe5873aad0cdf5bcc3fb3fd7c2939a61516e",
-    "short_sha": "e637fe5",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): add Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktogunawan353@gmail.com>\nLanguage: Indonesian\nProgress: 10.4% (162 of 1546 strings)\nProgress: 11.3% (176 of 1546 strings)\nProgress: 14.0% (218 of 1547 strings)\nProgress: 5.7% (88 of 1543 strings)\nProgress: 9.2% (142 of 1543 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-10T13:38:25Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38056495560"
-  },
-  {
-    "id": 38055690321,
-    "sha": "819f4dd58fd625a61124b571c500c36f32b22f18",
-    "short_sha": "819f4dd",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): add Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktogunawan353@gmail.com>\nLanguage: Indonesian\nProgress: 10.4% (162 of 1546 strings)\nProgress: 11.3% (176 of 1546 strings)\nProgress: 14.0% (218 of 1547 strings)\nProgress: 5.7% (88 of 1543 strings)\nProgress: 9.2% (142 of 1543 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-10T13:25:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38055690321"
-  },
-  {
-    "id": 38055687131,
-    "sha": "819f4dd58fd625a61124b571c500c36f32b22f18",
-    "short_sha": "819f4dd",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): add Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktogunawan353@gmail.com>\nLanguage: Indonesian\nProgress: 10.4% (162 of 1546 strings)\nProgress: 11.3% (176 of 1546 strings)\nProgress: 14.0% (218 of 1547 strings)\nProgress: 5.7% (88 of 1543 strings)\nProgress: 9.2% (142 of 1543 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-10T13:25:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38055687131"
-  },
-  {
-    "id": 38055675839,
-    "sha": "07b3eb4d8beb6b259cf93aee8afe5e1061a73996",
-    "short_sha": "07b3eb4",
-    "message": "1.3.3.9",
-    "created_at": "2026-10-10T13:25:32Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38055675839"
   }
 ]
