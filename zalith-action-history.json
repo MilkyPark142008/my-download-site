@@ -328,46 +328,6 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37870946663"
   },
   {
-    "id": 37726651079,
-    "sha": "45bd609b24b4882f6e76cc0986611008b6321e07",
-    "short_sha": "45bd609",
-    "message": "Merge pull request #2038 from ZalithLauncher/fix/version_scoped_viewmodels\n\nfix: 使版本管理相关 ViewModel 的生命周期跟随版本对象",
-    "created_at": "2026-10-08T04:15:51Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37726651079"
-  },
-  {
-    "id": 37726264966,
-    "sha": "8240f821261c6925b1938b40257259acdba48891",
-    "short_sha": "8240f82",
-    "message": "fix: 使版本管理相关 ViewModel 的生命周期跟随版本对象\n\n版本管理类屏幕（模组、资源包、光影、存档、截图、服务器列表、整合包导出）\n的 ViewModel 以 Version.toString()（对象身份哈希）为 key，宿主为 Activity\n级别的 ViewModelStore：版本列表每次刷新都会重建 Version 对象，导致 key 失\n配，重进屏幕时不断创建新实例，旧实例滞留内存直至 Activity 销毁。\n\n新增版本作用域的 ViewModelStore 注册表（VersionViewModelStores）与\nCompositionLocal 包装（VersionViewModelStoreScope），并在版本设置、整合包\n导出两个承载页接入：ViewModel 生命周期跟随 Version 对象——退出承载页后保\n留、重进复用；版本列表刷新、旧 Version 失效后统一销毁。清理前会校验持有\n计数，避免误杀仍在使用中的 ViewModel。\n\n附带：版本刷新监听器的遍历增加异常保护，单个监听器异常不再中断其余监听\n器与刷新收尾流程。",
-    "created_at": "2026-10-08T04:10:59Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37726264966"
-  },
-  {
-    "id": 37717603858,
-    "sha": "d08caf7db584721bcccbc9a4ca5cb9e9118dc970",
-    "short_sha": "d08caf7",
-    "message": "Merge pull request #2036 from youfeng11/chore/setting\n\n渲染器配置交换环境变量与标题文本的位置",
-    "created_at": "2026-10-08T02:23:06Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37717603858"
-  },
-  {
-    "id": 37631770385,
-    "sha": "562131ac7f32ffd2f4deb45465583ce8ffb7b43a",
-    "short_sha": "562131a",
-    "message": "Merge pull request #2035 from ZalithLauncher/chore/disable_mod_style\n\nchore: 调整模组管理列表内已禁用的模组的样式",
-    "created_at": "2026-10-07T13:50:45Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37631770385"
-  },
-  {
-    "id": 37631694220,
-    "sha": "c6113111199f935dab0a7a7859b1c7723b918391",
-    "short_sha": "c611311",
-    "message": "chore: 调整模组管理列表内已禁用的模组的样式",
-    "created_at": "2026-10-07T13:49:20Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37631694220"
-  },
-  {
     "id": 36807800650,
     "sha": "38f0e558619a394a64a910f34cc135c467684c5a",
     "short_sha": "38f0e55",
@@ -398,5 +358,45 @@
     "message": "Merge branch 'main' into feat/modify-version",
     "created_at": "2026-09-30T14:10:37Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36727150566"
+  },
+  {
+    "id": 36727115920,
+    "sha": "3f1f126c65da7871c858d71da4fa68be4848de4b",
+    "short_sha": "3f1f126",
+    "message": "chore: 调整主界面平板布局下玩家头像的 padding 值",
+    "created_at": "2026-09-30T14:10:23Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36727115920"
+  },
+  {
+    "id": 36726454950,
+    "sha": "e594c5533ab0129724a02176a6797e79e5025ad5",
+    "short_sha": "e594c55",
+    "message": "fix: 预选加载器时校验兼容性，修改版本始终完整下载原版文件\n- 预选已安装加载器前检查其与用户已选择加载器的兼容性，冲突时放弃预选（用户选择优先）\n- 修改版本时无条件执行 Minecraft 本体下载，保证原版 Jar 干净可用并补齐缺失的 libraries/assets",
+    "created_at": "2026-09-30T14:04:14Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36726454950"
+  },
+  {
+    "id": 36711066782,
+    "sha": "ea3e90657fa42bec9633c63ae45f797ae3892c05",
+    "short_sha": "ea3e906",
+    "message": "Merge branch 'main' into feat/modify-version",
+    "created_at": "2026-09-30T11:50:50Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36711066782"
+  },
+  {
+    "id": 36710969847,
+    "sha": "8bc107c14e8fafd0990777cfed686c30313a7bc9",
+    "short_sha": "8bc107c",
+    "message": "Merge pull request #1991 from ZalithLauncher/feat/installer_log_display\n\nfeat: 改良模组加载器安装的日志显示",
+    "created_at": "2026-09-30T11:50:07Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36710969847"
+  },
+  {
+    "id": 36710913518,
+    "sha": "28e373c91cd19f4b6ea6cb6fe666bdff41f4f348",
+    "short_sha": "28e373c",
+    "message": "feat: 改良模组加载器安装的日志显示\n\n- 日志布局改为首行日志写入时才拉起，由任务控制；OptiFine 不再创建日志会话\n- 任务流与日志输出等宽 1:1，取消按钮移至对话框底部\n- 安装日志输出限制在 256 行",
+    "created_at": "2026-09-30T11:47:57Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36710913518"
   }
 ]
