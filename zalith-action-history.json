@@ -264,70 +264,6 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38111783414"
   },
   {
-    "id": 38020272625,
-    "sha": "38adf8efdc7e8955cd80bf2de8cd0072b4fca7fc",
-    "short_sha": "38adf8e",
-    "message": "bump version to 2.7",
-    "created_at": "2026-10-10T03:20:59Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38020272625"
-  },
-  {
-    "id": 38018640292,
-    "sha": "e80220468708ea40f5c20cc02808b753be38028e",
-    "short_sha": "e802204",
-    "message": "chore: 移除未使用的语言文本",
-    "created_at": "2026-10-10T02:53:33Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38018640292"
-  },
-  {
-    "id": 38018623560,
-    "sha": "e80220468708ea40f5c20cc02808b753be38028e",
-    "short_sha": "e802204",
-    "message": "chore: 移除未使用的语言文本",
-    "created_at": "2026-10-10T02:53:33Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38018623560"
-  },
-  {
-    "id": 38018273199,
-    "sha": "e7561354f4abd0603fbcdfa4c2121978e71a78cf",
-    "short_sha": "e756135",
-    "message": "chore: 调整游戏菜单内信息显示与游戏分辨率之间的间距",
-    "created_at": "2026-10-10T02:47:43Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38018273199"
-  },
-  {
-    "id": 38017872897,
-    "sha": "d5621439e48901bdb61c9b75a2ac9110ee4920ad",
-    "short_sha": "d562143",
-    "message": "chore: 调整帧率图标大小",
-    "created_at": "2026-10-10T02:41:08Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38017872897"
-  },
-  {
-    "id": 37933923603,
-    "sha": "09e4832a3d0eb569a2212f68c55e6ec7a22acfde",
-    "short_sha": "09e4832",
-    "message": "Merge pull request #2041 from ZalithLauncher/fix/touch-controller-stuck-pointer\n\nfix: 修复 TouchController 代理指针无法释放的问题",
-    "created_at": "2026-10-09T13:01:15Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37933923603"
-  },
-  {
-    "id": 37933837131,
-    "sha": "a7f0e8a6e5bf96d2af022b6e98b0a238dc026192",
-    "short_sha": "a7f0e8a",
-    "message": "fix: 修复 TouchController 代理指针无法释放的问题\n\n手势被系统取消（命中路径变化、ACTION_CANCEL 等）时，Compose 会合成\nisConsumed 为 true 的抬起事件，被原 isConsumed 守卫直接跳过；\n监听随子树销毁而取消时，已发送的指针也不会有任何释放消息。\n\n将抬起判断移到消费守卫之前，并在监听销毁时通过 clearPointer\n主动清除模组侧的残留指针。",
-    "created_at": "2026-10-09T13:00:01Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37933837131"
-  },
-  {
-    "id": 37870946663,
-    "sha": "d93722e95c319891ea3f8689d1ceef5d34234d96",
-    "short_sha": "d93722e",
-    "message": "fix: 修复版本作用域 ViewModel 的两处崩溃\n\n- 版本作用域 owner 补全 HasDefaultViewModelProviderFactory 实现，\n  ViewModel 的创建参数（CreationExtras）委托给宿主 Activity，修复\n  截图管理屏 hiltViewModel 创建 SavedStateHandle 时缺失\n  SAVED_STATE_REGISTRY_OWNER_KEY 导致的崩溃\n- 失效 ViewModelStore 的兜底清理改为调度到主线程执行，onCleared\n  回调要求主线程，修复切换游戏目录时在 IO 协程清理导致的崩溃",
-    "created_at": "2026-10-09T01:40:19Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/37870946663"
-  },
-  {
     "id": 36807800650,
     "sha": "38f0e558619a394a64a910f34cc135c467684c5a",
     "short_sha": "38f0e55",
@@ -398,5 +334,69 @@
     "message": "feat: 改良模组加载器安装的日志显示\n\n- 日志布局改为首行日志写入时才拉起，由任务控制；OptiFine 不再创建日志会话\n- 任务流与日志输出等宽 1:1，取消按钮移至对话框底部\n- 安装日志输出限制在 256 行",
     "created_at": "2026-09-30T11:47:57Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36710913518"
+  },
+  {
+    "id": 36705921060,
+    "sha": "53b0c8d8f5ce4de76dd360fb2a4bf06e00b4d8c2",
+    "short_sha": "53b0c8d",
+    "message": "fix: 修改版本名称后出现已损坏的旧版本",
+    "created_at": "2026-09-30T11:00:47Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36705921060"
+  },
+  {
+    "id": 36696609981,
+    "sha": "70e8eea01662b7d8c9d9fb1736a614b55ba5502a",
+    "short_sha": "70e8eea",
+    "message": "feat: 为繁体中文添加翻译",
+    "created_at": "2026-09-30T09:30:47Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36696609981"
+  },
+  {
+    "id": 36695518078,
+    "sha": "2d0f7983db7c93e166bfd62249d405352e574665",
+    "short_sha": "2d0f798",
+    "message": "chore: 直接展示当前的 Minecraft，移除“未变更”文本",
+    "created_at": "2026-09-30T09:20:34Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36695518078"
+  },
+  {
+    "id": 36694214723,
+    "sha": "9f87f01e0804542e8c750f923e3e9ea9c454fd2e",
+    "short_sha": "9f87f01",
+    "message": "feat: 新增修改版本屏幕与安装流程\n\n- 管理版本屏幕新增\"修改版本\"入口，单屏对照当前安装与目标修改的 Minecraft 版本、模组加载器版本\n- 支持变更 Minecraft 本体版本，加载器的更换、升级与移除，互斥关系沿用下载屏的判断逻辑\n- 安装流程由 MainActivity 持有的 ModifyVersionViewModel 驱动，确认、进度与结果对话框不依赖版本设置屏幕的存活，任务开始后立即返回主界面\n- 修改完成后支持版本重命名，并同步主界面版本卡片记录\n- 复用 SelectGameVersionScreen 供选择目标 Minecraft 版本\n- 新增 TextTransition 公共组件展示\"旧值 → 新值\"过渡",
+    "created_at": "2026-09-29T23:39:09Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36694214723"
+  },
+  {
+    "id": 36578265116,
+    "sha": "05697fbbe293e822f542cafa53d2d7ea3556611c",
+    "short_sha": "05697fb",
+    "message": "Merge branch 'main' into weblate_main",
+    "created_at": "2026-09-29T13:51:16Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36578265116"
+  },
+  {
+    "id": 36578228567,
+    "sha": "05697fbbe293e822f542cafa53d2d7ea3556611c",
+    "short_sha": "05697fb",
+    "message": "Merge branch 'main' into weblate_main",
+    "created_at": "2026-09-29T13:51:16Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36578228567"
+  },
+  {
+    "id": 36578096058,
+    "sha": "01ba647872095b576cf3902a59599d516c91e7cf",
+    "short_sha": "01ba647",
+    "message": "Merge pull request #1986 from ZalithLauncher/feat/cape_localization\n\nfeat: 添加扭曲披风、英雄披风、极光披风的本地化翻译",
+    "created_at": "2026-09-29T13:50:25Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36578096058"
+  },
+  {
+    "id": 36578008221,
+    "sha": "6997822b930e5a973da25cd3c324bad9b42df5fb",
+    "short_sha": "6997822",
+    "message": "feat: 添加扭曲披风、英雄披风、极光披风的本地化翻译",
+    "created_at": "2026-09-29T13:49:38Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36578008221"
   }
 ]

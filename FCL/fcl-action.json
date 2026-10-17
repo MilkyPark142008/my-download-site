@@ -1,20 +1,20 @@
 {"run": {
-  "id": 38907531491,
+  "id": 38994537293,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAJDxHQ4w",
+  "node_id": "WFR_kwLOIQeFGs8AAAAJFEFrTQ",
   "head_branch": "main",
-  "head_sha": "d2ee80a146d2370774c11a7cde38f54c46770dbe",
+  "head_sha": "3c433ddc177d047c73ab926d58bda06bbbaf9089",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "fix: 内置文件管理器移除隐藏文件过滤，始终显示全部文件",
-  "run_number": 272,
+  "display_title": "fix: fml.toml 关闭早期加载屏限定 MC 26.3+，老版本恢复模组加载动画",
+  "run_number": 273,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 105440845072,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAYjMOdEA",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38907531491",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38907531491",
+  "check_suite_id": 105680320641,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAYmwm4gQ",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38994537293",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38994537293",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
@@ -22,7 +22,7 @@
       "number": 364,
       "head": {
         "ref": "main",
-        "sha": "d2ee80a146d2370774c11a7cde38f54c46770dbe",
+        "sha": "3c433ddc177d047c73ab926d58bda06bbbaf9089",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -45,7 +45,7 @@
       "number": 37,
       "head": {
         "ref": "main",
-        "sha": "d2ee80a146d2370774c11a7cde38f54c46770dbe",
+        "sha": "3c433ddc177d047c73ab926d58bda06bbbaf9089",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -68,7 +68,7 @@
       "number": 400,
       "head": {
         "ref": "main",
-        "sha": "d2ee80a146d2370774c11a7cde38f54c46770dbe",
+        "sha": "3c433ddc177d047c73ab926d58bda06bbbaf9089",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -86,8 +86,8 @@
       }
     }
   ],
-  "created_at": "2026-10-16T13:23:55Z",
-  "updated_at": "2026-10-16T13:25:15Z",
+  "created_at": "2026-10-17T02:20:30Z",
+  "updated_at": "2026-10-17T02:21:45Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-10-16T13:23:55Z",
+  "run_started_at": "2026-10-17T02:20:30Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,19 +133,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38907531491/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38907531491/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/105440845072",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38907531491/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38907531491/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38907531491/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38994537293/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38994537293/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/105680320641",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38994537293/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38994537293/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/38994537293/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "d2ee80a146d2370774c11a7cde38f54c46770dbe",
-    "tree_id": "b4604402e82ad858d361f8cf670f5c70646fe1ad",
-    "message": "fix: 内置文件管理器移除隐藏文件过滤，始终显示全部文件\n\n「.」开头的目录（如 .minecraft）在添加游戏路径时不可见，\n直接删除\"显示隐藏文件\"开关与过滤逻辑。\n\nFixes #1935",
-    "timestamp": "2026-10-16T13:17:06Z",
+    "id": "3c433ddc177d047c73ab926d58bda06bbbaf9089",
+    "tree_id": "103b0558af58ed1099d90928d474df05e7143a3f",
+    "message": "fix: fml.toml 关闭早期加载屏限定 MC 26.3+，老版本恢复模组加载动画\n\n51a0264d 无条件写入 earlyWindowControl = false，该键在 26.3 以下\nForge 同样生效，导致模组加载进度动画被关。现按游戏版本分流：\n26.3+ 维持写入（规避 gralloc 互堵 UI 冻死）；更早版本不创建\nfml.toml，并对已存在文件清除残留的关闭键，恢复早期加载屏。",
+    "timestamp": "2026-10-17T02:20:16Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"

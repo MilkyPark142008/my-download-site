@@ -1,5 +1,21 @@
 [
   {
+    "id": 38994537293,
+    "sha": "3c433ddc177d047c73ab926d58bda06bbbaf9089",
+    "short_sha": "3c433dd",
+    "message": "fix: fml.toml 关闭早期加载屏限定 MC 26.3+，老版本恢复模组加载动画\n\n51a0264d 无条件写入 earlyWindowControl = false，该键在 26.3 以下\nForge 同样生效，导致模组加载进度动画被关。现按游戏版本分流：\n26.3+ 维持写入（规避 gralloc 互堵 UI 冻死）；更早版本不创建\nfml.toml，并对已存在文件清除残留的关闭键，恢复早期加载屏。",
+    "created_at": "2026-10-17T02:20:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38994537293"
+  },
+  {
+    "id": 38994537278,
+    "sha": "3c433ddc177d047c73ab926d58bda06bbbaf9089",
+    "short_sha": "3c433dd",
+    "message": "fix: fml.toml 关闭早期加载屏限定 MC 26.3+，老版本恢复模组加载动画\n\n51a0264d 无条件写入 earlyWindowControl = false，该键在 26.3 以下\nForge 同样生效，导致模组加载进度动画被关。现按游戏版本分流：\n26.3+ 维持写入（规避 gralloc 互堵 UI 冻死）；更早版本不创建\nfml.toml，并对已存在文件清除残留的关闭键，恢复早期加载屏。",
+    "created_at": "2026-10-17T02:20:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38994537278"
+  },
+  {
     "id": 38907531491,
     "sha": "d2ee80a146d2370774c11a7cde38f54c46770dbe",
     "short_sha": "d2ee80a",
@@ -382,21 +398,5 @@
     "message": "chore(l10n): update Chinese (Simplified Han script) translation\n\nCo-authored-by: reducedradius <137701630+flytothehighest@users.noreply.github.com>\nLanguage: Chinese (Simplified Han script)\nProgress: 99.6% (1541 of 1547 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hans/\nTranslation: FoldCraftLauncher/FCL",
     "created_at": "2026-10-10T14:51:26Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38061282416"
-  },
-  {
-    "id": 38061278820,
-    "sha": "1a65aa592b19c0b746405bf4f0d4b8040cd0cbaf",
-    "short_sha": "1a65aa5",
-    "message": "chore(l10n): update Chinese (Simplified Han script) translation\n\nCo-authored-by: reducedradius <137701630+flytothehighest@users.noreply.github.com>\nLanguage: Chinese (Simplified Han script)\nProgress: 99.6% (1541 of 1547 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hans/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-10T14:51:26Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38061278820"
-  },
-  {
-    "id": 38056499759,
-    "sha": "e637fe5873aad0cdf5bcc3fb3fd7c2939a61516e",
-    "short_sha": "e637fe5",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): add Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktogunawan353@gmail.com>\nLanguage: Indonesian\nProgress: 10.4% (162 of 1546 strings)\nProgress: 11.3% (176 of 1546 strings)\nProgress: 14.0% (218 of 1547 strings)\nProgress: 5.7% (88 of 1543 strings)\nProgress: 9.2% (142 of 1543 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-10T13:38:25Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38056499759"
   }
 ]
