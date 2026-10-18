@@ -32,20 +32,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39091559593"
   },
   {
-    "id": 39091237012,
-    "sha": "18e9e094c507e18b08db46d82b0d1eab7dffb7e2",
-    "short_sha": "18e9e09",
-    "message": "feat: 自定义 Vulkan 驱动加载泛化，插件可声明库名与目标 GPU 家族（支持 Mali panvk）\n\n- 驱动插件新增可选 metaData：driver_lib（驱动库文件名，缺省 libvulkan_freedreno.so）、\n  driver_gpu（adreno/mali/any，缺省 adreno），旧 Turnip 插件不受影响\n- linkerhook 按 DRIVER_LIB 环境变量加载驱动库，GPU 门控经 DRIVER_GPU 判定家族，\n  Adreno 专属路径改为 checkDriverGpuFamily，宏 ADRENO_POSSIBLE 更名 CUSTOM_VKDRIVER_POSSIBLE\n- 检测链路 useTurnip 更名 useCustomDriver 并传递完整 Driver（path/lib/gpu），\n  VulkanCheckRecord 记录 driverLib/driverGpu 参与缓存身份；字符串键 vulkan_check_turnip\n  更名 vulkan_check_driver（旧检测缓存随键改名自动重检一次）\n- hook.c 移至 internal_android_dlopen_hook/driver/，panvk 库名为 libvulkan_panfrost.so",
-    "created_at": "2026-10-18T02:45:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39091237012"
-  },
-  {
     "id": 39091236947,
     "sha": "18e9e094c507e18b08db46d82b0d1eab7dffb7e2",
     "short_sha": "18e9e09",
     "message": "feat: 自定义 Vulkan 驱动加载泛化，插件可声明库名与目标 GPU 家族（支持 Mali panvk）\n\n- 驱动插件新增可选 metaData：driver_lib（驱动库文件名，缺省 libvulkan_freedreno.so）、\n  driver_gpu（adreno/mali/any，缺省 adreno），旧 Turnip 插件不受影响\n- linkerhook 按 DRIVER_LIB 环境变量加载驱动库，GPU 门控经 DRIVER_GPU 判定家族，\n  Adreno 专属路径改为 checkDriverGpuFamily，宏 ADRENO_POSSIBLE 更名 CUSTOM_VKDRIVER_POSSIBLE\n- 检测链路 useTurnip 更名 useCustomDriver 并传递完整 Driver（path/lib/gpu），\n  VulkanCheckRecord 记录 driverLib/driverGpu 参与缓存身份；字符串键 vulkan_check_turnip\n  更名 vulkan_check_driver（旧检测缓存随键改名自动重检一次）\n- hook.c 移至 internal_android_dlopen_hook/driver/，panvk 库名为 libvulkan_panfrost.so",
     "created_at": "2026-10-18T02:45:13Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39091236947"
+  },
+  {
+    "id": 39091237012,
+    "sha": "18e9e094c507e18b08db46d82b0d1eab7dffb7e2",
+    "short_sha": "18e9e09",
+    "message": "feat: 自定义 Vulkan 驱动加载泛化，插件可声明库名与目标 GPU 家族（支持 Mali panvk）\n\n- 驱动插件新增可选 metaData：driver_lib（驱动库文件名，缺省 libvulkan_freedreno.so）、\n  driver_gpu（adreno/mali/any，缺省 adreno），旧 Turnip 插件不受影响\n- linkerhook 按 DRIVER_LIB 环境变量加载驱动库，GPU 门控经 DRIVER_GPU 判定家族，\n  Adreno 专属路径改为 checkDriverGpuFamily，宏 ADRENO_POSSIBLE 更名 CUSTOM_VKDRIVER_POSSIBLE\n- 检测链路 useTurnip 更名 useCustomDriver 并传递完整 Driver（path/lib/gpu），\n  VulkanCheckRecord 记录 driverLib/driverGpu 参与缓存身份；字符串键 vulkan_check_turnip\n  更名 vulkan_check_driver（旧检测缓存随键改名自动重检一次）\n- hook.c 移至 internal_android_dlopen_hook/driver/，panvk 库名为 libvulkan_panfrost.so",
+    "created_at": "2026-10-18T02:45:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39091237012"
   },
   {
     "id": 39087988502,
