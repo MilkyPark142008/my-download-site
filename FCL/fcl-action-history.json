@@ -1,5 +1,69 @@
 [
   {
+    "id": 39095087051,
+    "sha": "4e67493124b0c562f9f93428512b6a12cf9168f7",
+    "short_sha": "4e67493",
+    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-10-18T03:51:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39095087051"
+  },
+  {
+    "id": 39095084935,
+    "sha": "4e67493124b0c562f9f93428512b6a12cf9168f7",
+    "short_sha": "4e67493",
+    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-10-18T03:51:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39095084935"
+  },
+  {
+    "id": 39091562323,
+    "sha": "200bcba4fd90087540dcd54d39b3493cf738f2fa",
+    "short_sha": "200bcba",
+    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-10-18T02:51:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39091562323"
+  },
+  {
+    "id": 39091559593,
+    "sha": "200bcba4fd90087540dcd54d39b3493cf738f2fa",
+    "short_sha": "200bcba",
+    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-10-18T02:51:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39091559593"
+  },
+  {
+    "id": 39091237012,
+    "sha": "18e9e094c507e18b08db46d82b0d1eab7dffb7e2",
+    "short_sha": "18e9e09",
+    "message": "feat: 自定义 Vulkan 驱动加载泛化，插件可声明库名与目标 GPU 家族（支持 Mali panvk）\n\n- 驱动插件新增可选 metaData：driver_lib（驱动库文件名，缺省 libvulkan_freedreno.so）、\n  driver_gpu（adreno/mali/any，缺省 adreno），旧 Turnip 插件不受影响\n- linkerhook 按 DRIVER_LIB 环境变量加载驱动库，GPU 门控经 DRIVER_GPU 判定家族，\n  Adreno 专属路径改为 checkDriverGpuFamily，宏 ADRENO_POSSIBLE 更名 CUSTOM_VKDRIVER_POSSIBLE\n- 检测链路 useTurnip 更名 useCustomDriver 并传递完整 Driver（path/lib/gpu），\n  VulkanCheckRecord 记录 driverLib/driverGpu 参与缓存身份；字符串键 vulkan_check_turnip\n  更名 vulkan_check_driver（旧检测缓存随键改名自动重检一次）\n- hook.c 移至 internal_android_dlopen_hook/driver/，panvk 库名为 libvulkan_panfrost.so",
+    "created_at": "2026-10-18T02:45:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39091237012"
+  },
+  {
+    "id": 39091236947,
+    "sha": "18e9e094c507e18b08db46d82b0d1eab7dffb7e2",
+    "short_sha": "18e9e09",
+    "message": "feat: 自定义 Vulkan 驱动加载泛化，插件可声明库名与目标 GPU 家族（支持 Mali panvk）\n\n- 驱动插件新增可选 metaData：driver_lib（驱动库文件名，缺省 libvulkan_freedreno.so）、\n  driver_gpu（adreno/mali/any，缺省 adreno），旧 Turnip 插件不受影响\n- linkerhook 按 DRIVER_LIB 环境变量加载驱动库，GPU 门控经 DRIVER_GPU 判定家族，\n  Adreno 专属路径改为 checkDriverGpuFamily，宏 ADRENO_POSSIBLE 更名 CUSTOM_VKDRIVER_POSSIBLE\n- 检测链路 useTurnip 更名 useCustomDriver 并传递完整 Driver（path/lib/gpu），\n  VulkanCheckRecord 记录 driverLib/driverGpu 参与缓存身份；字符串键 vulkan_check_turnip\n  更名 vulkan_check_driver（旧检测缓存随键改名自动重检一次）\n- hook.c 移至 internal_android_dlopen_hook/driver/，panvk 库名为 libvulkan_panfrost.so",
+    "created_at": "2026-10-18T02:45:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39091236947"
+  },
+  {
+    "id": 39087988502,
+    "sha": "9ff1cf9092048c4f66a79643185a7f8f6cee34e7",
+    "short_sha": "9ff1cf9",
+    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-10-18T01:51:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39087988502"
+  },
+  {
+    "id": 39087985849,
+    "sha": "9ff1cf9092048c4f66a79643185a7f8f6cee34e7",
+    "short_sha": "9ff1cf9",
+    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-10-18T01:51:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39087985849"
+  },
+  {
     "id": 39080618865,
     "sha": "9b096da0a690550b19ff2fe4390cb11a42cce410",
     "short_sha": "9b096da",
@@ -334,69 +398,5 @@
     "message": "refactor: UI 数据加载 ViewModel 化——PageFlows 基座 + 版本/下载清单状态机 + 模组管理自动刷新 (#1896)\n\n将各页面的数据加载从\"监听器 + 手动补偿刷新\"收敛为 ViewModel 驱动的响应式状态机。\n\n- PageFlows 基座：数据流收集按 FCLPage attach 启停、detach 取消，StateFlow attach 重放使页面重建自动恢复最新状态；删除全部手动补偿刷新与 FCLPage/FCLBaseUI/FCLCommonUI/FCLMultiPageUI 的 refresh() 契约及 31 处空实现\n- VersionListViewModel：selectedProfile × versionsRefreshed tick 驱动，快照先发即时渲染 + 后台全量重算 + 条目级去重；版本列表页与主界面快速切换弹窗共享同一状态；VersionCache 加 per-profile Mutex 合并并发刷新、按指纹（json/图标/mods 目录 mtime）增量复用未变化条目\n- DownloadListViewModel：游戏/组件远端清单状态机（Idle/Loading/Loaded/Failed），按 libraryId 取 key 跨页面回收存活，重进不再重拉 manifest；Failed 仅保留同版本旧列表，跨版本失败回退空列表\n- 搜索状态机补全：State 增加 loading/failed 相位并接入 switchType 恢复链路——失败态直接恢复（重试入口）不自动重搜，在途搜索等回调落地；销毁后重建的实例不再等待已销毁实例的在途搜索（改为重搜）\n- 模组管理自动刷新：ModsChanged tick 流 + 300ms debounce，下载落盘/模组更新后管理页自动重载；扫描期间的 tick 在完成回调比对补扫；ModListPage 重进不再无条件重扫（tick 与最近一次扫描比对）\n- 临时页修复：详情页 pinnedPageId 固定所属模式（修复模组被下到光影包目录），dismissCurrentTempPage 立即移除视图（不留可误触的淡出期）\n- 其余修复：全部 VersionLoadable 页面补 null 版本分发守卫；VersionInstallPage 搜索过滤 NPE；世界列表删除/复制后刷新；冷加载仓库未加载时读 displayVersions 崩进程",
     "created_at": "2026-10-12T12:32:53Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38249715548"
-  },
-  {
-    "id": 38249317147,
-    "sha": "2be510066f3e5ae86c44ecab7007e894dfa453ee",
-    "short_sha": "2be5100",
-    "message": "fix(download): Modrinth 无图标项目 icon_url 为 null 崩溃收藏页——toMod 兜底空串",
-    "created_at": "2026-10-12T12:27:06Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38249317147"
-  },
-  {
-    "id": 38249316536,
-    "sha": "2be510066f3e5ae86c44ecab7007e894dfa453ee",
-    "short_sha": "2be5100",
-    "message": "fix(download): Modrinth 无图标项目 icon_url 为 null 崩溃收藏页——toMod 兜底空串",
-    "created_at": "2026-10-12T12:27:06Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38249316536"
-  },
-  {
-    "id": 38248775294,
-    "sha": "988411ef3e93dc1a9854e9f94e4a05c60d6c9357",
-    "short_sha": "988411e",
-    "message": "style: 消除 VersionInstallPage 与 VersionCacheTest 的全限定名",
-    "created_at": "2026-10-12T12:21:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38248775294"
-  },
-  {
-    "id": 38248775290,
-    "sha": "988411ef3e93dc1a9854e9f94e4a05c60d6c9357",
-    "short_sha": "988411e",
-    "message": "style: 消除 VersionInstallPage 与 VersionCacheTest 的全限定名",
-    "created_at": "2026-10-12T12:21:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38248775290"
-  },
-  {
-    "id": 38248771416,
-    "sha": "988411ef3e93dc1a9854e9f94e4a05c60d6c9357",
-    "short_sha": "988411e",
-    "message": "style: 消除 VersionInstallPage 与 VersionCacheTest 的全限定名",
-    "created_at": "2026-10-12T12:21:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38248771416"
-  },
-  {
-    "id": 38248771418,
-    "sha": "988411ef3e93dc1a9854e9f94e4a05c60d6c9357",
-    "short_sha": "988411e",
-    "message": "style: 消除 VersionInstallPage 与 VersionCacheTest 的全限定名",
-    "created_at": "2026-10-12T12:21:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38248771418"
-  },
-  {
-    "id": 38201609348,
-    "sha": "d651759bde604282809418b43d35d01859693b1a",
-    "short_sha": "d651759",
-    "message": "fix: 修复 androidTest 编译错误并校正过期断言\n\n- VersionSettingTest 移除已迁至 MenuSetting 的 isForceResolution 引用（setter 通知计数 19→18）\n- ThemeDataTest 补 ThemeData 新增参数 colorAlpha\n- usesGlobal 缺省值断言改为 true，对齐 73706117c\n- ProfileTest 序列化用例补建版本目录，避免仓库异步刷新清空选中版本",
-    "created_at": "2026-10-12T01:50:01Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38201609348"
-  },
-  {
-    "id": 38201609360,
-    "sha": "d651759bde604282809418b43d35d01859693b1a",
-    "short_sha": "d651759",
-    "message": "fix: 修复 androidTest 编译错误并校正过期断言\n\n- VersionSettingTest 移除已迁至 MenuSetting 的 isForceResolution 引用（setter 通知计数 19→18）\n- ThemeDataTest 补 ThemeData 新增参数 colorAlpha\n- usesGlobal 缺省值断言改为 true，对齐 73706117c\n- ProfileTest 序列化用例补建版本目录，避免仓库异步刷新清空选中版本",
-    "created_at": "2026-10-12T01:50:01Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/38201609360"
   }
 ]
