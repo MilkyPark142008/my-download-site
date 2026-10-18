@@ -248,30 +248,6 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38165662518"
   },
   {
-    "id": 38146690702,
-    "sha": "be8843457114b52e3b84a59327df49cef141c7da",
-    "short_sha": "be88434",
-    "message": "Merge pull request #2049 from DryFishOrg/fix/unchecked_stuff\n\nfix(grid): validate displacement direction vectors in resolveDisplacements",
-    "created_at": "2026-10-11T14:19:09Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38146690702"
-  },
-  {
-    "id": 38144072158,
-    "sha": "be540ada1f1b9b47f22772a52b4afb5635c3214b",
-    "short_sha": "be540ad",
-    "message": "Merge pull request #2053 from ZalithLauncher/fix/curseforge-url-encoding\n\nfix: CurseForge 下载链接对文件名进行百分号编码",
-    "created_at": "2026-10-11T13:39:49Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38144072158"
-  },
-  {
-    "id": 38144017058,
-    "sha": "e2b8ba170cee6ad658e3c76eaa4c5c7fe4fe11bd",
-    "short_sha": "e2b8ba1",
-    "message": "fix: CurseForge 下载链接对文件名进行百分号编码\n\n自行拼接 CDN 链接时原始文件名未编码，文件名含空格等字符时\n会生成无效 URL，导致整合包及模组下载失败。\n\nFixes #2052",
-    "created_at": "2026-10-11T13:38:49Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38144017058"
-  },
-  {
     "id": 36807800650,
     "sha": "38f0e558619a394a64a910f34cc135c467684c5a",
     "short_sha": "38f0e55",
@@ -398,5 +374,29 @@
     "message": "Merge pull request #1986 from ZalithLauncher/feat/cape_localization\n\nfeat: 添加扭曲披风、英雄披风、极光披风的本地化翻译",
     "created_at": "2026-09-29T13:50:25Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36578096058"
+  },
+  {
+    "id": 36578008221,
+    "sha": "6997822b930e5a973da25cd3c324bad9b42df5fb",
+    "short_sha": "6997822",
+    "message": "feat: 添加扭曲披风、英雄披风、极光披风的本地化翻译",
+    "created_at": "2026-09-29T13:49:38Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36578008221"
+  },
+  {
+    "id": 36575230002,
+    "sha": "2d0c2a9c3db5e07f91ab994e895cc62a04faee80",
+    "short_sha": "2d0c2a9",
+    "message": "Merge pull request #1985 from ZalithLauncher/chore/version_card_content\n\nchore: 调整版本卡片内容布局",
+    "created_at": "2026-09-29T13:27:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36575230002"
+  },
+  {
+    "id": 36575165823,
+    "sha": "9ff6054fbb739f69062b25ae3bc50b0526c449f0",
+    "short_sha": "9ff6054",
+    "message": "chore: 调整版本卡片内容布局",
+    "created_at": "2026-09-29T13:26:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36575165823"
   }
 ]
