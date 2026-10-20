@@ -1,5 +1,13 @@
 [
   {
+    "id": 39495538302,
+    "sha": "70bb9cda56c63d67bce6afc1af1110362fee0d02",
+    "short_sha": "70bb9cd",
+    "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1474 of 1474 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
+    "created_at": "2026-10-20T20:51:20Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39495538302"
+  },
+  {
     "id": 39452159017,
     "sha": "38962740267b776bc4929f7d15dec26ac17be5fe",
     "short_sha": "3896274",
@@ -390,13 +398,5 @@
     "message": "chore: 直接展示当前的 Minecraft，移除“未变更”文本",
     "created_at": "2026-09-30T09:20:34Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36695518078"
-  },
-  {
-    "id": 36694214723,
-    "sha": "9f87f01e0804542e8c750f923e3e9ea9c454fd2e",
-    "short_sha": "9f87f01",
-    "message": "feat: 新增修改版本屏幕与安装流程\n\n- 管理版本屏幕新增\"修改版本\"入口，单屏对照当前安装与目标修改的 Minecraft 版本、模组加载器版本\n- 支持变更 Minecraft 本体版本，加载器的更换、升级与移除，互斥关系沿用下载屏的判断逻辑\n- 安装流程由 MainActivity 持有的 ModifyVersionViewModel 驱动，确认、进度与结果对话框不依赖版本设置屏幕的存活，任务开始后立即返回主界面\n- 修改完成后支持版本重命名，并同步主界面版本卡片记录\n- 复用 SelectGameVersionScreen 供选择目标 Minecraft 版本\n- 新增 TextTransition 公共组件展示\"旧值 → 新值\"过渡",
-    "created_at": "2026-09-29T23:39:09Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36694214723"
   }
 ]
