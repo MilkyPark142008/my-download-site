@@ -1,5 +1,293 @@
 [
   {
+    "id": 39731236625,
+    "sha": "6e135282b1f328771498e7f02f2a74ca38cc069e",
+    "short_sha": "6e13528",
+    "message": "fix: 移植 GLTF 方案时代的两个皮肤修复，补齐回归遗漏\n\n- 64x32 旧格式皮肤切页后渲染错乱：texture 改为归一化完成后回写（surface 重建重上传\n  按 64x64 布局 UV 采样，存原始位图会错乱），updateTexture 不再同步写入原始位图\n- 初始默认皮肤 alex 为 slim 布局，模型初始须 setSlim(true)，否则手臂贴图采样到透明区域",
+    "created_at": "2026-10-22T05:59:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39731236625"
+  },
+  {
+    "id": 39731236605,
+    "sha": "6e135282b1f328771498e7f02f2a74ca38cc069e",
+    "short_sha": "6e13528",
+    "message": "fix: 移植 GLTF 方案时代的两个皮肤修复，补齐回归遗漏\n\n- 64x32 旧格式皮肤切页后渲染错乱：texture 改为归一化完成后回写（surface 重建重上传\n  按 64x64 布局 UV 采样，存原始位图会错乱），updateTexture 不再同步写入原始位图\n- 初始默认皮肤 alex 为 slim 布局，模型初始须 setSlim(true)，否则手臂贴图采样到透明区域",
+    "created_at": "2026-10-22T05:59:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39731236605"
+  },
+  {
+    "id": 39731231005,
+    "sha": "6e135282b1f328771498e7f02f2a74ca38cc069e",
+    "short_sha": "6e13528",
+    "message": "fix: 移植 GLTF 方案时代的两个皮肤修复，补齐回归遗漏\n\n- 64x32 旧格式皮肤切页后渲染错乱：texture 改为归一化完成后回写（surface 重建重上传\n  按 64x64 布局 UV 采样，存原始位图会错乱），updateTexture 不再同步写入原始位图\n- 初始默认皮肤 alex 为 slim 布局，模型初始须 setSlim(true)，否则手臂贴图采样到透明区域",
+    "created_at": "2026-10-22T05:59:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39731231005"
+  },
+  {
+    "id": 39731230993,
+    "sha": "6e135282b1f328771498e7f02f2a74ca38cc069e",
+    "short_sha": "6e13528",
+    "message": "fix: 移植 GLTF 方案时代的两个皮肤修复，补齐回归遗漏\n\n- 64x32 旧格式皮肤切页后渲染错乱：texture 改为归一化完成后回写（surface 重建重上传\n  按 64x64 布局 UV 采样，存原始位图会错乱），updateTexture 不再同步写入原始位图\n- 初始默认皮肤 alex 为 slim 布局，模型初始须 setSlim(true)，否则手臂贴图采样到透明区域",
+    "created_at": "2026-10-22T05:59:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39731230993"
+  },
+  {
+    "id": 39730761196,
+    "sha": "0816d6eba988ea0f1e84ea1b07a794e19c3bf3b0",
+    "short_sha": "0816d6e",
+    "message": "fix: 修复切换页面回来后披风纹理未重建而消失\n\nsurface 重建时 onSurfaceCreated 只从 texture[0] 恢复了皮肤纹理，漏了 texture[1] 的披风，\nEGL context 更新后披风纹理 id 失效归零便不再绘制",
+    "created_at": "2026-10-22T05:54:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39730761196"
+  },
+  {
+    "id": 39730761228,
+    "sha": "0816d6eba988ea0f1e84ea1b07a794e19c3bf3b0",
+    "short_sha": "0816d6e",
+    "message": "fix: 修复切换页面回来后披风纹理未重建而消失\n\nsurface 重建时 onSurfaceCreated 只从 texture[0] 恢复了皮肤纹理，漏了 texture[1] 的披风，\nEGL context 更新后披风纹理 id 失效归零便不再绘制",
+    "created_at": "2026-10-22T05:54:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39730761228"
+  },
+  {
+    "id": 39730755765,
+    "sha": "0816d6eba988ea0f1e84ea1b07a794e19c3bf3b0",
+    "short_sha": "0816d6e",
+    "message": "fix: 修复切换页面回来后披风纹理未重建而消失\n\nsurface 重建时 onSurfaceCreated 只从 texture[0] 恢复了皮肤纹理，漏了 texture[1] 的披风，\nEGL context 更新后披风纹理 id 失效归零便不再绘制",
+    "created_at": "2026-10-22T05:54:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39730755765"
+  },
+  {
+    "id": 39730755974,
+    "sha": "0816d6eba988ea0f1e84ea1b07a794e19c3bf3b0",
+    "short_sha": "0816d6e",
+    "message": "fix: 修复切换页面回来后披风纹理未重建而消失\n\nsurface 重建时 onSurfaceCreated 只从 texture[0] 恢复了皮肤纹理，漏了 texture[1] 的披风，\nEGL context 更新后披风纹理 id 失效归零便不再绘制",
+    "created_at": "2026-10-22T05:54:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39730755974"
+  },
+  {
+    "id": 39730403707,
+    "sha": "8cbe21489af00da7b7c9f6870703e57bf32b21c7",
+    "short_sha": "8cbe214",
+    "message": "revert: 移除皮肤预览头部注视跟随功能",
+    "created_at": "2026-10-22T05:51:11Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39730403707"
+  },
+  {
+    "id": 39730403730,
+    "sha": "8cbe21489af00da7b7c9f6870703e57bf32b21c7",
+    "short_sha": "8cbe214",
+    "message": "revert: 移除皮肤预览头部注视跟随功能",
+    "created_at": "2026-10-22T05:51:11Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39730403730"
+  },
+  {
+    "id": 39730398902,
+    "sha": "8cbe21489af00da7b7c9f6870703e57bf32b21c7",
+    "short_sha": "8cbe214",
+    "message": "revert: 移除皮肤预览头部注视跟随功能",
+    "created_at": "2026-10-22T05:51:11Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39730398902"
+  },
+  {
+    "id": 39730398985,
+    "sha": "8cbe21489af00da7b7c9f6870703e57bf32b21c7",
+    "short_sha": "8cbe214",
+    "message": "revert: 移除皮肤预览头部注视跟随功能",
+    "created_at": "2026-10-22T05:51:11Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39730398985"
+  },
+  {
+    "id": 39729301277,
+    "sha": "84df002e1c4fbb729f38396df21370e914d22f45",
+    "short_sha": "84df002",
+    "message": "fix: 注视跟随在回正期间挂起并增加鼠标断流超时回正\n\n- 拖拽松手后的回正过程与拖拽期间同样挂起注视，消除回正中头部随视图偏航持续反向拧动的转圈现象\n- 鼠标事件断流（如 hover exit 丢失、快速甩出视图）10 秒后头部自动回正，不再僵在偏转位",
+    "created_at": "2026-10-22T05:39:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39729301277"
+  },
+  {
+    "id": 39729301297,
+    "sha": "84df002e1c4fbb729f38396df21370e914d22f45",
+    "short_sha": "84df002",
+    "message": "fix: 注视跟随在回正期间挂起并增加鼠标断流超时回正\n\n- 拖拽松手后的回正过程与拖拽期间同样挂起注视，消除回正中头部随视图偏航持续反向拧动的转圈现象\n- 鼠标事件断流（如 hover exit 丢失、快速甩出视图）10 秒后头部自动回正，不再僵在偏转位",
+    "created_at": "2026-10-22T05:39:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39729301297"
+  },
+  {
+    "id": 39729297836,
+    "sha": "84df002e1c4fbb729f38396df21370e914d22f45",
+    "short_sha": "84df002",
+    "message": "fix: 注视跟随在回正期间挂起并增加鼠标断流超时回正\n\n- 拖拽松手后的回正过程与拖拽期间同样挂起注视，消除回正中头部随视图偏航持续反向拧动的转圈现象\n- 鼠标事件断流（如 hover exit 丢失、快速甩出视图）10 秒后头部自动回正，不再僵在偏转位",
+    "created_at": "2026-10-22T05:39:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39729297836"
+  },
+  {
+    "id": 39729297841,
+    "sha": "84df002e1c4fbb729f38396df21370e914d22f45",
+    "short_sha": "84df002",
+    "message": "fix: 注视跟随在回正期间挂起并增加鼠标断流超时回正\n\n- 拖拽松手后的回正过程与拖拽期间同样挂起注视，消除回正中头部随视图偏航持续反向拧动的转圈现象\n- 鼠标事件断流（如 hover exit 丢失、快速甩出视图）10 秒后头部自动回正，不再僵在偏转位",
+    "created_at": "2026-10-22T05:39:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39729297841"
+  },
+  {
+    "id": 39728710251,
+    "sha": "121b923c2493a19a6f944163621093f5630c06f3",
+    "short_sha": "121b923",
+    "message": "Merge pull request #1942 from FCL-Team/weblate-foldcraftlauncher-fcl\n\nchore(l10n): update translations",
+    "created_at": "2026-10-22T05:33:27Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39728710251"
+  },
+  {
+    "id": 39728498248,
+    "sha": "2c75666a21a602a1e7c0ccdfdc75b18b0afbf6a3",
+    "short_sha": "2c75666",
+    "message": "Update strings.xml",
+    "created_at": "2026-10-22T05:31:09Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39728498248"
+  },
+  {
+    "id": 39728498280,
+    "sha": "2c75666a21a602a1e7c0ccdfdc75b18b0afbf6a3",
+    "short_sha": "2c75666",
+    "message": "Update strings.xml",
+    "created_at": "2026-10-22T05:31:09Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39728498280"
+  },
+  {
+    "id": 39728493643,
+    "sha": "2c75666a21a602a1e7c0ccdfdc75b18b0afbf6a3",
+    "short_sha": "2c75666",
+    "message": "Update strings.xml",
+    "created_at": "2026-10-22T05:31:09Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39728493643"
+  },
+  {
+    "id": 39727761336,
+    "sha": "28686178e44082fea88e5804d09b013a444a5d86",
+    "short_sha": "2868617",
+    "message": "optimize: 旋转弹跳去掉手臂展开动作，自转降速至 0.75 圈/秒",
+    "created_at": "2026-10-22T05:23:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39727761336"
+  },
+  {
+    "id": 39727761228,
+    "sha": "28686178e44082fea88e5804d09b013a444a5d86",
+    "short_sha": "2868617",
+    "message": "optimize: 旋转弹跳去掉手臂展开动作，自转降速至 0.75 圈/秒",
+    "created_at": "2026-10-22T05:23:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39727761228"
+  },
+  {
+    "id": 39727756454,
+    "sha": "28686178e44082fea88e5804d09b013a444a5d86",
+    "short_sha": "2868617",
+    "message": "optimize: 旋转弹跳去掉手臂展开动作，自转降速至 0.75 圈/秒",
+    "created_at": "2026-10-22T05:23:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39727756454"
+  },
+  {
+    "id": 39727756415,
+    "sha": "28686178e44082fea88e5804d09b013a444a5d86",
+    "short_sha": "2868617",
+    "message": "optimize: 旋转弹跳去掉手臂展开动作，自转降速至 0.75 圈/秒",
+    "created_at": "2026-10-22T05:23:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39727756415"
+  },
+  {
+    "id": 39727432695,
+    "sha": "be0c762a41bfe81d7bea778bf2a399d3ecea9e64",
+    "short_sha": "be0c762",
+    "message": "fix: 单击恢复点按压扁，旋转弹跳改为 Q 弹形变且仅保留为手动动画\n\n- 单击模型恢复原压扁效果（弹簧脉冲），移除点击触发旋转弹跳的临时效果机制\n- SpinJumpAnimation 重做：去掉跳跃位移，改为果冻式 Q 弹——触地相位整体压扁（Y 压 XZ 鼓）、\n  弹起相位拉伸回弹，保留匀速自转与双臂展开扇动；PlayerModel 新增 rootScaleY/rootScaleXZ\n  整体形变通道（以脚底为支点），供动画驱动压扁拉伸",
+    "created_at": "2026-10-22T05:19:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39727432695"
+  },
+  {
+    "id": 39727432739,
+    "sha": "be0c762a41bfe81d7bea778bf2a399d3ecea9e64",
+    "short_sha": "be0c762",
+    "message": "fix: 单击恢复点按压扁，旋转弹跳改为 Q 弹形变且仅保留为手动动画\n\n- 单击模型恢复原压扁效果（弹簧脉冲），移除点击触发旋转弹跳的临时效果机制\n- SpinJumpAnimation 重做：去掉跳跃位移，改为果冻式 Q 弹——触地相位整体压扁（Y 压 XZ 鼓）、\n  弹起相位拉伸回弹，保留匀速自转与双臂展开扇动；PlayerModel 新增 rootScaleY/rootScaleXZ\n  整体形变通道（以脚底为支点），供动画驱动压扁拉伸",
+    "created_at": "2026-10-22T05:19:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39727432739"
+  },
+  {
+    "id": 39727425870,
+    "sha": "be0c762a41bfe81d7bea778bf2a399d3ecea9e64",
+    "short_sha": "be0c762",
+    "message": "fix: 单击恢复点按压扁，旋转弹跳改为 Q 弹形变且仅保留为手动动画\n\n- 单击模型恢复原压扁效果（弹簧脉冲），移除点击触发旋转弹跳的临时效果机制\n- SpinJumpAnimation 重做：去掉跳跃位移，改为果冻式 Q 弹——触地相位整体压扁（Y 压 XZ 鼓）、\n  弹起相位拉伸回弹，保留匀速自转与双臂展开扇动；PlayerModel 新增 rootScaleY/rootScaleXZ\n  整体形变通道（以脚底为支点），供动画驱动压扁拉伸",
+    "created_at": "2026-10-22T05:19:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39727425870"
+  },
+  {
+    "id": 39727425866,
+    "sha": "be0c762a41bfe81d7bea778bf2a399d3ecea9e64",
+    "short_sha": "be0c762",
+    "message": "fix: 单击恢复点按压扁，旋转弹跳改为 Q 弹形变且仅保留为手动动画\n\n- 单击模型恢复原压扁效果（弹簧脉冲），移除点击触发旋转弹跳的临时效果机制\n- SpinJumpAnimation 重做：去掉跳跃位移，改为果冻式 Q 弹——触地相位整体压扁（Y 压 XZ 鼓）、\n  弹起相位拉伸回弹，保留匀速自转与双臂展开扇动；PlayerModel 新增 rootScaleY/rootScaleXZ\n  整体形变通道（以脚底为支点），供动画驱动压扁拉伸",
+    "created_at": "2026-10-22T05:19:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39727425866"
+  },
+  {
+    "id": 39726878695,
+    "sha": "de9f12acb41a5bf2e213af4972fe6fcd2fe68970",
+    "short_sha": "de9f12a",
+    "message": "feat: 皮肤预览单击触发旋转弹跳效果（邦友的酒），新增同名可持久化动画\n\n- 单击模型播放 3 秒旋转弹跳：整体 1 圈/秒匀速自转 + 0.45s 一跳的上下蹦跳，双臂水平展开随节奏扇动；\n  自转与时长配好转整 3 圈，效果结束复位无角度跳变，原动画从暂停进度继续\n- 效果可从动画切换弹窗选为常驻动画（spin_jump），PlayerModel 新增 rootRotationY 整体自转轴\n- 点击效果替代原点按压扁（单击行为不叠加），相关弹簧逻辑移除",
+    "created_at": "2026-10-22T05:10:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39726878695"
+  },
+  {
+    "id": 39726878773,
+    "sha": "de9f12acb41a5bf2e213af4972fe6fcd2fe68970",
+    "short_sha": "de9f12a",
+    "message": "feat: 皮肤预览单击触发旋转弹跳效果（邦友的酒），新增同名可持久化动画\n\n- 单击模型播放 3 秒旋转弹跳：整体 1 圈/秒匀速自转 + 0.45s 一跳的上下蹦跳，双臂水平展开随节奏扇动；\n  自转与时长配好转整 3 圈，效果结束复位无角度跳变，原动画从暂停进度继续\n- 效果可从动画切换弹窗选为常驻动画（spin_jump），PlayerModel 新增 rootRotationY 整体自转轴\n- 点击效果替代原点按压扁（单击行为不叠加），相关弹簧逻辑移除",
+    "created_at": "2026-10-22T05:10:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39726878773"
+  },
+  {
+    "id": 39726873895,
+    "sha": "de9f12acb41a5bf2e213af4972fe6fcd2fe68970",
+    "short_sha": "de9f12a",
+    "message": "feat: 皮肤预览单击触发旋转弹跳效果（邦友的酒），新增同名可持久化动画\n\n- 单击模型播放 3 秒旋转弹跳：整体 1 圈/秒匀速自转 + 0.45s 一跳的上下蹦跳，双臂水平展开随节奏扇动；\n  自转与时长配好转整 3 圈，效果结束复位无角度跳变，原动画从暂停进度继续\n- 效果可从动画切换弹窗选为常驻动画（spin_jump），PlayerModel 新增 rootRotationY 整体自转轴\n- 点击效果替代原点按压扁（单击行为不叠加），相关弹簧逻辑移除",
+    "created_at": "2026-10-22T05:10:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39726873895"
+  },
+  {
+    "id": 39726874128,
+    "sha": "de9f12acb41a5bf2e213af4972fe6fcd2fe68970",
+    "short_sha": "de9f12a",
+    "message": "feat: 皮肤预览单击触发旋转弹跳效果（邦友的酒），新增同名可持久化动画\n\n- 单击模型播放 3 秒旋转弹跳：整体 1 圈/秒匀速自转 + 0.45s 一跳的上下蹦跳，双臂水平展开随节奏扇动；\n  自转与时长配好转整 3 圈，效果结束复位无角度跳变，原动画从暂停进度继续\n- 效果可从动画切换弹窗选为常驻动画（spin_jump），PlayerModel 新增 rootRotationY 整体自转轴\n- 点击效果替代原点按压扁（单击行为不叠加），相关弹簧逻辑移除",
+    "created_at": "2026-10-22T05:10:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39726874128"
+  },
+  {
+    "id": 39725274005,
+    "sha": "6cbdee802f94879d42c66ce0cbffed229cb899ac",
+    "short_sha": "6cbdee8",
+    "message": "fix: 皮肤预览上下拖拽（俯仰）也参与松手自动回正",
+    "created_at": "2026-10-21T04:10:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39725274005"
+  },
+  {
+    "id": 39725274153,
+    "sha": "6cbdee802f94879d42c66ce0cbffed229cb899ac",
+    "short_sha": "6cbdee8",
+    "message": "fix: 皮肤预览上下拖拽（俯仰）也参与松手自动回正",
+    "created_at": "2026-10-21T04:10:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39725274153"
+  },
+  {
+    "id": 39725237963,
+    "sha": "6cbdee802f94879d42c66ce0cbffed229cb899ac",
+    "short_sha": "6cbdee8",
+    "message": "fix: 皮肤预览上下拖拽（俯仰）也参与松手自动回正",
+    "created_at": "2026-10-21T04:10:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39725237963"
+  },
+  {
+    "id": 39725238010,
+    "sha": "6cbdee802f94879d42c66ce0cbffed229cb899ac",
+    "short_sha": "6cbdee8",
+    "message": "fix: 皮肤预览上下拖拽（俯仰）也参与松手自动回正",
+    "created_at": "2026-10-21T04:10:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39725238010"
+  },
+  {
     "id": 39414263406,
     "sha": "c669963fa68c39ddc91842f807e1a2d727a57b14",
     "short_sha": "c669963",
@@ -110,293 +398,5 @@
     "message": "1.3.4.1",
     "created_at": "2026-10-20T01:36:32Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39354513269"
-  },
-  {
-    "id": 39354513154,
-    "sha": "d27aa26bf0a26ec296c8a32efc79a67e4f3470f7",
-    "short_sha": "d27aa26",
-    "message": "1.3.4.1",
-    "created_at": "2026-10-20T01:36:32Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39354513154"
-  },
-  {
-    "id": 39330745430,
-    "sha": "d32b41c316681fe2728b427039d45cf92465896f",
-    "short_sha": "d32b41c",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nProgress: 23.8% (372 of 1562 strings)\nProgress: 25.2% (394 of 1562 strings)\nProgress: 28.5% (446 of 1562 strings)\nProgress: 29.1% (455 of 1562 strings)\nProgress: 30.2% (472 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-19T21:51:27Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39330745430"
-  },
-  {
-    "id": 39330738584,
-    "sha": "d32b41c316681fe2728b427039d45cf92465896f",
-    "short_sha": "d32b41c",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nProgress: 23.8% (372 of 1562 strings)\nProgress: 25.2% (394 of 1562 strings)\nProgress: 28.5% (446 of 1562 strings)\nProgress: 29.1% (455 of 1562 strings)\nProgress: 30.2% (472 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-19T21:51:27Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39330738584"
-  },
-  {
-    "id": 39232993853,
-    "sha": "9e8af9984d6ac1dd3a6b1c876ec93145a8890601",
-    "short_sha": "9e8af99",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nProgress: 23.8% (372 of 1562 strings)\nProgress: 25.2% (394 of 1562 strings)\nProgress: 28.5% (446 of 1562 strings)\nProgress: 29.1% (455 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-19T09:49:39Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39232993853"
-  },
-  {
-    "id": 39232988081,
-    "sha": "9e8af9984d6ac1dd3a6b1c876ec93145a8890601",
-    "short_sha": "9e8af99",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nProgress: 23.8% (372 of 1562 strings)\nProgress: 25.2% (394 of 1562 strings)\nProgress: 28.5% (446 of 1562 strings)\nProgress: 29.1% (455 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-19T09:49:39Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39232988081"
-  },
-  {
-    "id": 39232988333,
-    "sha": "9e8af9984d6ac1dd3a6b1c876ec93145a8890601",
-    "short_sha": "9e8af99",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nProgress: 23.8% (372 of 1562 strings)\nProgress: 25.2% (394 of 1562 strings)\nProgress: 28.5% (446 of 1562 strings)\nProgress: 29.1% (455 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-19T09:49:39Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39232988333"
-  },
-  {
-    "id": 39232944575,
-    "sha": "6f9166d361810e770c5244ca941922e96a5139aa",
-    "short_sha": "6f9166d",
-    "message": "fix: 设置 DataStore 忽略未知 key 并补 Vulkan 记录默认值，修复 useTurnip 改名后旧数据解码失败重置全部设置",
-    "created_at": "2026-10-19T09:48:43Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39232944575"
-  },
-  {
-    "id": 39232944513,
-    "sha": "6f9166d361810e770c5244ca941922e96a5139aa",
-    "short_sha": "6f9166d",
-    "message": "fix: 设置 DataStore 忽略未知 key 并补 Vulkan 记录默认值，修复 useTurnip 改名后旧数据解码失败重置全部设置",
-    "created_at": "2026-10-19T09:48:43Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39232944513"
-  },
-  {
-    "id": 39225813249,
-    "sha": "c2fc28b297b2d056570f385e1d7b4554e0105c13",
-    "short_sha": "c2fc28b",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nProgress: 23.8% (372 of 1562 strings)\nProgress: 25.2% (394 of 1562 strings)\nProgress: 28.5% (446 of 1562 strings)\nProgress: 29.1% (455 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-19T08:51:36Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39225813249"
-  },
-  {
-    "id": 39225804377,
-    "sha": "c2fc28b297b2d056570f385e1d7b4554e0105c13",
-    "short_sha": "c2fc28b",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nProgress: 23.8% (372 of 1562 strings)\nProgress: 25.2% (394 of 1562 strings)\nProgress: 28.5% (446 of 1562 strings)\nProgress: 29.1% (455 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-19T08:51:36Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39225804377"
-  },
-  {
-    "id": 39220577141,
-    "sha": "52f0041f391066b429a3f08b99ec510cb56056d8",
-    "short_sha": "52f0041",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nProgress: 23.8% (372 of 1562 strings)\nProgress: 25.2% (394 of 1562 strings)\nProgress: 28.5% (446 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-19T08:05:51Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39220577141"
-  },
-  {
-    "id": 39220572268,
-    "sha": "52f0041f391066b429a3f08b99ec510cb56056d8",
-    "short_sha": "52f0041",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nProgress: 23.8% (372 of 1562 strings)\nProgress: 25.2% (394 of 1562 strings)\nProgress: 28.5% (446 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-19T08:05:51Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39220572268"
-  },
-  {
-    "id": 39133405001,
-    "sha": "14c54d767011b37f3dec87721f72df7eaa669df0",
-    "short_sha": "14c54d7",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nProgress: 23.8% (372 of 1562 strings)\nProgress: 25.2% (394 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-18T13:51:25Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39133405001"
-  },
-  {
-    "id": 39133401716,
-    "sha": "14c54d767011b37f3dec87721f72df7eaa669df0",
-    "short_sha": "14c54d7",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nProgress: 23.8% (372 of 1562 strings)\nProgress: 25.2% (394 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-18T13:51:25Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39133401716"
-  },
-  {
-    "id": 39129046695,
-    "sha": "e74c1c89ad610cf1dba408035ba424964ac47aba",
-    "short_sha": "e74c1c8",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nProgress: 23.8% (372 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-18T12:51:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39129046695"
-  },
-  {
-    "id": 39129044356,
-    "sha": "e74c1c89ad610cf1dba408035ba424964ac47aba",
-    "short_sha": "e74c1c8",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nProgress: 23.8% (372 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-18T12:51:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39129044356"
-  },
-  {
-    "id": 39120913063,
-    "sha": "f84be23df4cd5b534290da5bd751b2840c562d4f",
-    "short_sha": "f84be23",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-18T10:51:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39120913063"
-  },
-  {
-    "id": 39120909515,
-    "sha": "f84be23df4cd5b534290da5bd751b2840c562d4f",
-    "short_sha": "f84be23",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-18T10:51:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39120909515"
-  },
-  {
-    "id": 39095087051,
-    "sha": "4e67493124b0c562f9f93428512b6a12cf9168f7",
-    "short_sha": "4e67493",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-18T03:51:26Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39095087051"
-  },
-  {
-    "id": 39095084935,
-    "sha": "4e67493124b0c562f9f93428512b6a12cf9168f7",
-    "short_sha": "4e67493",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nProgress: 20.4% (320 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-18T03:51:26Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39095084935"
-  },
-  {
-    "id": 39091562323,
-    "sha": "200bcba4fd90087540dcd54d39b3493cf738f2fa",
-    "short_sha": "200bcba",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-18T02:51:21Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39091562323"
-  },
-  {
-    "id": 39091559593,
-    "sha": "200bcba4fd90087540dcd54d39b3493cf738f2fa",
-    "short_sha": "200bcba",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nProgress: 20.3% (318 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-18T02:51:21Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39091559593"
-  },
-  {
-    "id": 39091236947,
-    "sha": "18e9e094c507e18b08db46d82b0d1eab7dffb7e2",
-    "short_sha": "18e9e09",
-    "message": "feat: 自定义 Vulkan 驱动加载泛化，插件可声明库名与目标 GPU 家族（支持 Mali panvk）\n\n- 驱动插件新增可选 metaData：driver_lib（驱动库文件名，缺省 libvulkan_freedreno.so）、\n  driver_gpu（adreno/mali/any，缺省 adreno），旧 Turnip 插件不受影响\n- linkerhook 按 DRIVER_LIB 环境变量加载驱动库，GPU 门控经 DRIVER_GPU 判定家族，\n  Adreno 专属路径改为 checkDriverGpuFamily，宏 ADRENO_POSSIBLE 更名 CUSTOM_VKDRIVER_POSSIBLE\n- 检测链路 useTurnip 更名 useCustomDriver 并传递完整 Driver（path/lib/gpu），\n  VulkanCheckRecord 记录 driverLib/driverGpu 参与缓存身份；字符串键 vulkan_check_turnip\n  更名 vulkan_check_driver（旧检测缓存随键改名自动重检一次）\n- hook.c 移至 internal_android_dlopen_hook/driver/，panvk 库名为 libvulkan_panfrost.so",
-    "created_at": "2026-10-18T02:45:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39091236947"
-  },
-  {
-    "id": 39091237012,
-    "sha": "18e9e094c507e18b08db46d82b0d1eab7dffb7e2",
-    "short_sha": "18e9e09",
-    "message": "feat: 自定义 Vulkan 驱动加载泛化，插件可声明库名与目标 GPU 家族（支持 Mali panvk）\n\n- 驱动插件新增可选 metaData：driver_lib（驱动库文件名，缺省 libvulkan_freedreno.so）、\n  driver_gpu（adreno/mali/any，缺省 adreno），旧 Turnip 插件不受影响\n- linkerhook 按 DRIVER_LIB 环境变量加载驱动库，GPU 门控经 DRIVER_GPU 判定家族，\n  Adreno 专属路径改为 checkDriverGpuFamily，宏 ADRENO_POSSIBLE 更名 CUSTOM_VKDRIVER_POSSIBLE\n- 检测链路 useTurnip 更名 useCustomDriver 并传递完整 Driver（path/lib/gpu），\n  VulkanCheckRecord 记录 driverLib/driverGpu 参与缓存身份；字符串键 vulkan_check_turnip\n  更名 vulkan_check_driver（旧检测缓存随键改名自动重检一次）\n- hook.c 移至 internal_android_dlopen_hook/driver/，panvk 库名为 libvulkan_panfrost.so",
-    "created_at": "2026-10-18T02:45:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39091237012"
-  },
-  {
-    "id": 39087988502,
-    "sha": "9ff1cf9092048c4f66a79643185a7f8f6cee34e7",
-    "short_sha": "9ff1cf9",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-18T01:51:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39087988502"
-  },
-  {
-    "id": 39087985849,
-    "sha": "9ff1cf9092048c4f66a79643185a7f8f6cee34e7",
-    "short_sha": "9ff1cf9",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nProgress: 16.5% (258 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-18T01:51:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39087985849"
-  },
-  {
-    "id": 39080618865,
-    "sha": "9b096da0a690550b19ff2fe4390cb11a42cce410",
-    "short_sha": "9b096da",
-    "message": "chore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-17T23:51:32Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39080618865"
-  },
-  {
-    "id": 39080617043,
-    "sha": "9b096da0a690550b19ff2fe4390cb11a42cce410",
-    "short_sha": "9b096da",
-    "message": "chore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-17T23:51:32Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39080617043"
-  },
-  {
-    "id": 39080617046,
-    "sha": "9b096da0a690550b19ff2fe4390cb11a42cce410",
-    "short_sha": "9b096da",
-    "message": "chore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 15.8% (248 of 1562 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-17T23:51:32Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39080617046"
-  },
-  {
-    "id": 39042292835,
-    "sha": "466cb6f6d73056c0f992172bef5de76c66b403ed",
-    "short_sha": "466cb6f",
-    "message": "fix: 绑定控件组对话框容器改为 LinearLayoutCompat 修复强转崩溃，补充绑定格式/序列化往返/合并语义 androidTest",
-    "created_at": "2026-10-17T14:46:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39042292835"
-  },
-  {
-    "id": 39042292818,
-    "sha": "466cb6f6d73056c0f992172bef5de76c66b403ed",
-    "short_sha": "466cb6f",
-    "message": "fix: 绑定控件组对话框容器改为 LinearLayoutCompat 修复强转崩溃，补充绑定格式/序列化往返/合并语义 androidTest",
-    "created_at": "2026-10-17T14:46:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39042292818"
-  },
-  {
-    "id": 39042290123,
-    "sha": "466cb6f6d73056c0f992172bef5de76c66b403ed",
-    "short_sha": "466cb6f",
-    "message": "fix: 绑定控件组对话框容器改为 LinearLayoutCompat 修复强转崩溃，补充绑定格式/序列化往返/合并语义 androidTest",
-    "created_at": "2026-10-17T14:46:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39042290123"
-  },
-  {
-    "id": 39042290049,
-    "sha": "466cb6f6d73056c0f992172bef5de76c66b403ed",
-    "short_sha": "466cb6f",
-    "message": "fix: 绑定控件组对话框容器改为 LinearLayoutCompat 修复强转崩溃，补充绑定格式/序列化往返/合并语义 androidTest",
-    "created_at": "2026-10-17T14:46:55Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39042290049"
-  },
-  {
-    "id": 39037479658,
-    "sha": "96035bc7a740ecb5014e47ddf7ea8857710d828a",
-    "short_sha": "96035bc",
-    "message": "feat: 左侧菜单新增跨组编辑开关（默认关闭），开启后参考组控件可跨组编辑",
-    "created_at": "2026-10-17T13:38:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39037479658"
-  },
-  {
-    "id": 39037479647,
-    "sha": "96035bc7a740ecb5014e47ddf7ea8857710d828a",
-    "short_sha": "96035bc",
-    "message": "feat: 左侧菜单新增跨组编辑开关（默认关闭），开启后参考组控件可跨组编辑",
-    "created_at": "2026-10-17T13:38:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39037479647"
-  },
-  {
-    "id": 39037476229,
-    "sha": "96035bc7a740ecb5014e47ddf7ea8857710d828a",
-    "short_sha": "96035bc",
-    "message": "feat: 左侧菜单新增跨组编辑开关（默认关闭），开启后参考组控件可跨组编辑",
-    "created_at": "2026-10-17T13:38:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39037476229"
   }
 ]
