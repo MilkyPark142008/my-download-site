@@ -1,23 +1,93 @@
 {"run": {
-  "id": 39896696140,
+  "id": 39925995290,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAJSgdFTA",
-  "head_branch": "fix/1954-physical-keyboard",
-  "head_sha": "253c0e70d2a3b994aac1981e812273589ee5cd08",
+  "node_id": "WFR_kwLOIQeFGs8AAAAJS8ZXGg",
+  "head_branch": "main",
+  "head_sha": "4745a9b137427d61fea448f0544960a104aa9946",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "fix: 修复实体键盘多处键码与修饰键缺陷（#1954）",
-  "run_number": 308,
+  "display_title": "fix: BMCLAPI 下载慢速节点主动切换——10s 窗口速度观测、预计剩余超一个窗口才切换且最多两次、x-bmclapi-hash …",
+  "run_number": 313,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 108135436377,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAZLV_QWQ",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39896696140",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39896696140",
-  "pull_requests": [],
-  "created_at": "2026-10-23T03:45:23Z",
-  "updated_at": "2026-10-23T03:46:38Z",
+  "check_suite_id": 108214507795,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAZMhZZEw",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39925995290",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39925995290",
+  "pull_requests": [
+    {
+      "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
+      "id": 4452442002,
+      "number": 364,
+      "head": {
+        "ref": "main",
+        "sha": "4745a9b137427d61fea448f0544960a104aa9946",
+        "repo": {
+          "id": 554140954,
+          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      },
+      "base": {
+        "ref": "main",
+        "sha": "97dc0f6c4a5f5fada8b86aa68e1e9d4b189d1b25",
+        "repo": {
+          "id": 1026321990,
+          "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher/pulls/37",
+      "id": 4452270030,
+      "number": 37,
+      "head": {
+        "ref": "main",
+        "sha": "4745a9b137427d61fea448f0544960a104aa9946",
+        "repo": {
+          "id": 554140954,
+          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      },
+      "base": {
+        "ref": "main",
+        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
+        "repo": {
+          "id": 1335592322,
+          "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher/pulls/400",
+      "id": 4451484148,
+      "number": 400,
+      "head": {
+        "ref": "main",
+        "sha": "4745a9b137427d61fea448f0544960a104aa9946",
+        "repo": {
+          "id": 554140954,
+          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      },
+      "base": {
+        "ref": "main",
+        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
+        "repo": {
+          "id": 835628097,
+          "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      }
+    }
+  ],
+  "created_at": "2026-10-23T08:37:47Z",
+  "updated_at": "2026-10-23T08:39:03Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -41,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-10-23T03:45:23Z",
+  "run_started_at": "2026-10-23T08:37:47Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -63,19 +133,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39896696140/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39896696140/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/108135436377",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39896696140/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39896696140/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39896696140/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39925995290/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39925995290/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/108214507795",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39925995290/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39925995290/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39925995290/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "253c0e70d2a3b994aac1981e812273589ee5cd08",
-    "tree_id": "c1ae2ccb0849700d760834e5d4beae5cef3dc8c7",
-    "message": "fix: 修复实体键盘多处键码与修饰键缺陷（#1954）\n\n- 右 Shift/Ctrl/Alt 纳入 setModifiers，与左侧等价\n- Caps Lock/Num Lock 改为锁存语义：仅首次按下翻转，抬起与自动重复不改变\n- Enter 仅在软键盘输入框唤起时拦截提交，否则作为普通按键转发游戏\n- AndroidKeycodeMap 补齐 Delete/Home/小键盘四则/Win/PrintScreen/ScrollLock/菜单键等缺失映射，删除 @/#→数字 的 T9 残留\n- 两张键码表改用 HashMap，消除满载越界与插入顺序约束；EfficientAndroidLWJGLKeycode 反查改 O(1) 并移除未使用的旧索引 API\n- KEY_UNKNOWN 对齐 GLFW 语义改为 -1，统一两处未映射键判据；删除 LwjglKeycodeMap 中 KEY_ESCAPE 重复注册\n- GameMenu.onPause 兜底复位修饰键，防分屏/来电等场景切后台后修饰键残留\n- 控制布局转换表同步 GLFW_KEY_MENU 精确映射",
-    "timestamp": "2026-10-23T03:41:08Z",
+    "id": "4745a9b137427d61fea448f0544960a104aa9946",
+    "tree_id": "cb62f211d67f3e754a61857750521a61f9ca3379",
+    "message": "fix: BMCLAPI 下载慢速节点主动切换——10s 窗口速度观测、预计剩余超一个窗口才切换且最多两次、x-bmclapi-hash 全链收集做完整性校验与哈希缓存命中",
+    "timestamp": "2026-10-23T08:35:17Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
