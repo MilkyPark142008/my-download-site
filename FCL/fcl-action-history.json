@@ -1,5 +1,205 @@
 [
   {
+    "id": 39963846838,
+    "sha": "22a1d1dcef7d0045a69d315fa56ea683e9377ef5",
+    "short_sha": "22a1d1d",
+    "message": "feat: 文件下载并行续传——单连接持续低速时切换多连接分块拉取剩余区间，突破网盘直链按连接数限速（修复 Cleanroom alist 镜像 50KB/s 下载缓慢）\n\n- FetchTask 单流读循环加 downloadParallelRemainder 钩子：复用 BMCLAPIRetryPolicy 同款 10s 速度窗口，持续低于 128KB/s 且剩余量按当前速度还需超一个窗口时触发；触发前零额外请求，快服务器不受影响\n- FileDownloadTask 实现：1 字节 Range 探测（206+总大小核对，不支持则回退单流）→ 剩余区间按 ≥2MB/块均分最多 8 连接 → 按绝对偏移 FileChannel 写同一临时文件保留前缀 → 复用 Context.close() 原有落盘/ZIP 校验/缓存流程\n- 分块读超时放宽到 30s 且在 resolveConnection 之后设置：按连接限速的服务器数据间歇性滴流，常规 10s 会反复掐死正常工作的分块连接\n- 分块失败按轮次统一重试（retry 轮+轮间退避），续传请求从已写偏移发 Range 只补未完成区间；全局进度=前缀+Σ(分块已写偏移) 严格单调，修复分块重试重复计字节把进度顶破 100% 导致整轮报废、进度条反复跑满清零的问题\n- BMCLAPI 链路原慢速节点切换优先级不变；GetTask 不受影响\n- 新增 androidTest FileDownloadTaskTest：Content-Range 解析单测 + 真实限速链路端到端（MuMu 实测 145s/191s vs 单连接 ≥300s 下限，含 round-2 真实续传路径与进度单调性断言）",
+    "created_at": "2026-10-23T13:44:51Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39963846838"
+  },
+  {
+    "id": 39963846858,
+    "sha": "22a1d1dcef7d0045a69d315fa56ea683e9377ef5",
+    "short_sha": "22a1d1d",
+    "message": "feat: 文件下载并行续传——单连接持续低速时切换多连接分块拉取剩余区间，突破网盘直链按连接数限速（修复 Cleanroom alist 镜像 50KB/s 下载缓慢）\n\n- FetchTask 单流读循环加 downloadParallelRemainder 钩子：复用 BMCLAPIRetryPolicy 同款 10s 速度窗口，持续低于 128KB/s 且剩余量按当前速度还需超一个窗口时触发；触发前零额外请求，快服务器不受影响\n- FileDownloadTask 实现：1 字节 Range 探测（206+总大小核对，不支持则回退单流）→ 剩余区间按 ≥2MB/块均分最多 8 连接 → 按绝对偏移 FileChannel 写同一临时文件保留前缀 → 复用 Context.close() 原有落盘/ZIP 校验/缓存流程\n- 分块读超时放宽到 30s 且在 resolveConnection 之后设置：按连接限速的服务器数据间歇性滴流，常规 10s 会反复掐死正常工作的分块连接\n- 分块失败按轮次统一重试（retry 轮+轮间退避），续传请求从已写偏移发 Range 只补未完成区间；全局进度=前缀+Σ(分块已写偏移) 严格单调，修复分块重试重复计字节把进度顶破 100% 导致整轮报废、进度条反复跑满清零的问题\n- BMCLAPI 链路原慢速节点切换优先级不变；GetTask 不受影响\n- 新增 androidTest FileDownloadTaskTest：Content-Range 解析单测 + 真实限速链路端到端（MuMu 实测 145s/191s vs 单连接 ≥300s 下限，含 round-2 真实续传路径与进度单调性断言）",
+    "created_at": "2026-10-23T13:44:51Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39963846858"
+  },
+  {
+    "id": 39963788759,
+    "sha": "22a1d1dcef7d0045a69d315fa56ea683e9377ef5",
+    "short_sha": "22a1d1d",
+    "message": "feat: 文件下载并行续传——单连接持续低速时切换多连接分块拉取剩余区间，突破网盘直链按连接数限速（修复 Cleanroom alist 镜像 50KB/s 下载缓慢）\n\n- FetchTask 单流读循环加 downloadParallelRemainder 钩子：复用 BMCLAPIRetryPolicy 同款 10s 速度窗口，持续低于 128KB/s 且剩余量按当前速度还需超一个窗口时触发；触发前零额外请求，快服务器不受影响\n- FileDownloadTask 实现：1 字节 Range 探测（206+总大小核对，不支持则回退单流）→ 剩余区间按 ≥2MB/块均分最多 8 连接 → 按绝对偏移 FileChannel 写同一临时文件保留前缀 → 复用 Context.close() 原有落盘/ZIP 校验/缓存流程\n- 分块读超时放宽到 30s 且在 resolveConnection 之后设置：按连接限速的服务器数据间歇性滴流，常规 10s 会反复掐死正常工作的分块连接\n- 分块失败按轮次统一重试（retry 轮+轮间退避），续传请求从已写偏移发 Range 只补未完成区间；全局进度=前缀+Σ(分块已写偏移) 严格单调，修复分块重试重复计字节把进度顶破 100% 导致整轮报废、进度条反复跑满清零的问题\n- BMCLAPI 链路原慢速节点切换优先级不变；GetTask 不受影响\n- 新增 androidTest FileDownloadTaskTest：Content-Range 解析单测 + 真实限速链路端到端（MuMu 实测 145s/191s vs 单连接 ≥300s 下限，含 round-2 真实续传路径与进度单调性断言）",
+    "created_at": "2026-10-23T13:44:51Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39963788759"
+  },
+  {
+    "id": 39963788746,
+    "sha": "22a1d1dcef7d0045a69d315fa56ea683e9377ef5",
+    "short_sha": "22a1d1d",
+    "message": "feat: 文件下载并行续传——单连接持续低速时切换多连接分块拉取剩余区间，突破网盘直链按连接数限速（修复 Cleanroom alist 镜像 50KB/s 下载缓慢）\n\n- FetchTask 单流读循环加 downloadParallelRemainder 钩子：复用 BMCLAPIRetryPolicy 同款 10s 速度窗口，持续低于 128KB/s 且剩余量按当前速度还需超一个窗口时触发；触发前零额外请求，快服务器不受影响\n- FileDownloadTask 实现：1 字节 Range 探测（206+总大小核对，不支持则回退单流）→ 剩余区间按 ≥2MB/块均分最多 8 连接 → 按绝对偏移 FileChannel 写同一临时文件保留前缀 → 复用 Context.close() 原有落盘/ZIP 校验/缓存流程\n- 分块读超时放宽到 30s 且在 resolveConnection 之后设置：按连接限速的服务器数据间歇性滴流，常规 10s 会反复掐死正常工作的分块连接\n- 分块失败按轮次统一重试（retry 轮+轮间退避），续传请求从已写偏移发 Range 只补未完成区间；全局进度=前缀+Σ(分块已写偏移) 严格单调，修复分块重试重复计字节把进度顶破 100% 导致整轮报废、进度条反复跑满清零的问题\n- BMCLAPI 链路原慢速节点切换优先级不变；GetTask 不受影响\n- 新增 androidTest FileDownloadTaskTest：Content-Range 解析单测 + 真实限速链路端到端（MuMu 实测 145s/191s vs 单连接 ≥300s 下限，含 round-2 真实续传路径与进度单调性断言）",
+    "created_at": "2026-10-23T13:44:51Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39963788746"
+  },
+  {
+    "id": 39951002989,
+    "sha": "c335af99ab44ad75283144ebc429fe85c85bfca2",
+    "short_sha": "c335af9",
+    "message": "feat: 渲染器配置对话框选项添加说明——EnvSpec 增加可选 description 字段并在标题下渲染小字说明，MobileGlues 全部选项与 SFPEW 开关配上功能级中英文说明（值枚举挪入说明，标题精简为变量名）",
+    "created_at": "2026-10-23T12:07:37Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39951002989"
+  },
+  {
+    "id": 39951002848,
+    "sha": "c335af99ab44ad75283144ebc429fe85c85bfca2",
+    "short_sha": "c335af9",
+    "message": "feat: 渲染器配置对话框选项添加说明——EnvSpec 增加可选 description 字段并在标题下渲染小字说明，MobileGlues 全部选项与 SFPEW 开关配上功能级中英文说明（值枚举挪入说明，标题精简为变量名）",
+    "created_at": "2026-10-23T12:07:37Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39951002848"
+  },
+  {
+    "id": 39950793808,
+    "sha": "10ceb611db401adef54e9f8b4102e0921309e09a",
+    "short_sha": "10ceb61",
+    "message": "feat: 渲染器配置对话框选项添加说明——EnvSpec 增加可选 description 字段并在标题下渲染小字说明，MobileGlues 全部选项与 SFPEW 开关配上功能级中英文说明（值枚举挪入说明，标题精简为变量名）",
+    "created_at": "2026-10-23T12:05:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39950793808"
+  },
+  {
+    "id": 39950076776,
+    "sha": "0be793cafc785571a07fa2beb820ce20a0321d12",
+    "short_sha": "0be793c",
+    "message": "feat: 内置 MobileGlues 配置对齐官方 MGConfig——齿轮对话框暴露 enableANGLE/enableNoError/angleDepthClearFixMode/customGLVersion/maxGlslCacheSize/三个扩展开关/fsr1Setting；配置改写应用私有目录 files/mobileglues/config.json（合并保留未知键）并经 MG_DIR_PATH 指向，不再共用 /sdcard/MG",
+    "created_at": "2026-10-23T12:00:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39950076776"
+  },
+  {
+    "id": 39950076809,
+    "sha": "0be793cafc785571a07fa2beb820ce20a0321d12",
+    "short_sha": "0be793c",
+    "message": "feat: 内置 MobileGlues 配置对齐官方 MGConfig——齿轮对话框暴露 enableANGLE/enableNoError/angleDepthClearFixMode/customGLVersion/maxGlslCacheSize/三个扩展开关/fsr1Setting；配置改写应用私有目录 files/mobileglues/config.json（合并保留未知键）并经 MG_DIR_PATH 指向，不再共用 /sdcard/MG",
+    "created_at": "2026-10-23T12:00:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39950076809"
+  },
+  {
+    "id": 39949028905,
+    "sha": "b62b1d6ac9526305732a686c3c9aefd9db03940e",
+    "short_sha": "b62b1d6",
+    "message": "fix: SFPEW 渲染器补设 LIBGL_ES=3（backend 要求 GLES 3.0+），gl_bridge 对 LIBGL_ES 缺省做空值加固——真机上 strtol(getenv=NULL) 在 gl_init_context SEGV",
+    "created_at": "2026-10-23T11:51:19Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39949028905"
+  },
+  {
+    "id": 39949028961,
+    "sha": "b62b1d6ac9526305732a686c3c9aefd9db03940e",
+    "short_sha": "b62b1d6",
+    "message": "fix: SFPEW 渲染器补设 LIBGL_ES=3（backend 要求 GLES 3.0+），gl_bridge 对 LIBGL_ES 缺省做空值加固——真机上 strtol(getenv=NULL) 在 gl_init_context SEGV",
+    "created_at": "2026-10-23T11:51:19Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39949028961"
+  },
+  {
+    "id": 39947290830,
+    "sha": "b837cbdc5a5261bee02d2d7bd2f95d6ecc355839",
+    "short_sha": "b837cbd",
+    "message": "feat: 内置 MobileGlues 与 SimpleFPEWrapper 渲染器（同步上游 AAMC 预编译 AAR）——RendererManager 新增两个内置条目，FCLauncher 新增对应 env 分支（MG_COUNT_LAUNCH/MG_DIR_PATH/SFPEW_RELAXED_CONTEXT 可经渲染器列表齿轮入口的 RendererEnvDialog 配置，复用插件 envPrefs 存储），AAR 来自 AngelAuraMC/Amethyst-Android v3_openjdk libs（MobileGlues LGPL-2.1 / SFPEW LGPL-3.0，上游 MobileGL-Dev）",
+    "created_at": "2026-10-23T11:36:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39947290830"
+  },
+  {
+    "id": 39947290722,
+    "sha": "b837cbdc5a5261bee02d2d7bd2f95d6ecc355839",
+    "short_sha": "b837cbd",
+    "message": "feat: 内置 MobileGlues 与 SimpleFPEWrapper 渲染器（同步上游 AAMC 预编译 AAR）——RendererManager 新增两个内置条目，FCLauncher 新增对应 env 分支（MG_COUNT_LAUNCH/MG_DIR_PATH/SFPEW_RELAXED_CONTEXT 可经渲染器列表齿轮入口的 RendererEnvDialog 配置，复用插件 envPrefs 存储），AAR 来自 AngelAuraMC/Amethyst-Android v3_openjdk libs（MobileGlues LGPL-2.1 / SFPEW LGPL-3.0，上游 MobileGL-Dev）",
+    "created_at": "2026-10-23T11:36:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39947290722"
+  },
+  {
+    "id": 39941385614,
+    "sha": "443c01bcd10d9004729b077d4c73f50b0da7007e",
+    "short_sha": "443c01b",
+    "message": "fix: virglMakeCurrent 的 OSMesa 颜色缓冲误传 libc setbuffer 函数地址（bionic API23+ 声明），首帧 flush 写只读代码页 SIGSEGV；改为按保存的宽高分配真实缓冲区",
+    "created_at": "2026-10-23T10:41:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39941385614"
+  },
+  {
+    "id": 39941385489,
+    "sha": "443c01bcd10d9004729b077d4c73f50b0da7007e",
+    "short_sha": "443c01b",
+    "message": "fix: virglMakeCurrent 的 OSMesa 颜色缓冲误传 libc setbuffer 函数地址（bionic API23+ 声明），首帧 flush 写只读代码页 SIGSEGV；改为按保存的宽高分配真实缓冲区",
+    "created_at": "2026-10-23T10:41:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39941385489"
+  },
+  {
+    "id": 39940875411,
+    "sha": "443c01bcd10d9004729b077d4c73f50b0da7007e",
+    "short_sha": "443c01b",
+    "message": "fix: virglMakeCurrent 的 OSMesa 颜色缓冲误传 libc setbuffer 函数地址（bionic API23+ 声明），首帧 flush 写只读代码页 SIGSEGV；改为按保存的宽高分配真实缓冲区",
+    "created_at": "2026-10-23T10:41:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39940875411"
+  },
+  {
+    "id": 39940686820,
+    "sha": "e2f10d62a4f49901248cb67995f75b6842704889",
+    "short_sha": "e2f10d6",
+    "message": "feat: 邦友的酒横向拉宽与恢复——压扁相位 XZ 拉宽至 1.18，弹起相位恢复原宽不再收窄",
+    "created_at": "2026-10-23T10:34:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39940686820"
+  },
+  {
+    "id": 39940686804,
+    "sha": "e2f10d62a4f49901248cb67995f75b6842704889",
+    "short_sha": "e2f10d6",
+    "message": "feat: 邦友的酒横向拉宽与恢复——压扁相位 XZ 拉宽至 1.18，弹起相位恢复原宽不再收窄",
+    "created_at": "2026-10-23T10:34:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39940686804"
+  },
+  {
+    "id": 39939666927,
+    "sha": "586c4fbe921c204c02a93a3dcf388ed2d4b53f64",
+    "short_sha": "586c4fb",
+    "message": "fix: dlsym_OSMesa 优先读 LIB_MESA_NAME——VirGL 插件渲染器裸库名 dlopen 在类加载器命名空间下搜不到插件目录导致 SIGSEGV",
+    "created_at": "2026-10-23T10:31:01Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39939666927"
+  },
+  {
+    "id": 39938403104,
+    "sha": "5620ed7068eec388bd7452c7692354b06c7c1cb7",
+    "short_sha": "5620ed7",
+    "message": "refactor: OSMesa 从内置改为 FCLRendererPlugin 插件提供——移除打包的 libOSMesa_8/81、libvirgl_test_server、libvirglrenderer_1 与内置 Freedreno/VirGL 渲染器条目，保留全部原生加载通路并为插件渲染器补全 VIRGL_TEST_SERVER/VTEST_SOCKET_NAME/MESA_GLSL_CACHE_DIR 运行时路径",
+    "created_at": "2026-10-23T10:14:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39938403104"
+  },
+  {
+    "id": 39938403059,
+    "sha": "5620ed7068eec388bd7452c7692354b06c7c1cb7",
+    "short_sha": "5620ed7",
+    "message": "refactor: OSMesa 从内置改为 FCLRendererPlugin 插件提供——移除打包的 libOSMesa_8/81、libvirgl_test_server、libvirglrenderer_1 与内置 Freedreno/VirGL 渲染器条目，保留全部原生加载通路并为插件渲染器补全 VIRGL_TEST_SERVER/VTEST_SOCKET_NAME/MESA_GLSL_CACHE_DIR 运行时路径",
+    "created_at": "2026-10-23T10:14:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39938403059"
+  },
+  {
+    "id": 39938216029,
+    "sha": "880be32d35c33f4b3455ff690ad8af5595fbfce9",
+    "short_sha": "880be32",
+    "message": "feat: 邦友的酒动画添加坐姿——双腿前抬微开随节奏晃动，身体轻微下沉",
+    "created_at": "2026-10-23T10:18:50Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39938216029"
+  },
+  {
+    "id": 39938216020,
+    "sha": "880be32d35c33f4b3455ff690ad8af5595fbfce9",
+    "short_sha": "880be32",
+    "message": "feat: 邦友的酒动画添加坐姿——双腿前抬微开随节奏晃动，身体轻微下沉",
+    "created_at": "2026-10-23T10:18:50Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39938216020"
+  },
+  {
+    "id": 39937521261,
+    "sha": "1d087e6da61b6cf7cacddfded8c9fba85468fd75",
+    "short_sha": "1d087e6",
+    "message": "feat: 邦友的酒动画添加坐姿——双腿前抬微开随节奏晃动，身体轻微下沉",
+    "created_at": "2026-10-23T10:13:00Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39937521261"
+  },
+  {
+    "id": 39937521280,
+    "sha": "1d087e6da61b6cf7cacddfded8c9fba85468fd75",
+    "short_sha": "1d087e6",
+    "message": "feat: 邦友的酒动画添加坐姿——双腿前抬微开随节奏晃动，身体轻微下沉",
+    "created_at": "2026-10-23T10:13:00Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39937521280"
+  },
+  {
     "id": 39925995290,
     "sha": "4745a9b137427d61fea448f0544960a104aa9946",
     "short_sha": "4745a9b",
@@ -198,205 +398,5 @@
     "message": "fix: 移植 GLTF 方案时代的两个皮肤修复，补齐回归遗漏\n\n- 64x32 旧格式皮肤切页后渲染错乱：texture 改为归一化完成后回写（surface 重建重上传\n  按 64x64 布局 UV 采样，存原始位图会错乱），updateTexture 不再同步写入原始位图\n- 初始默认皮肤 alex 为 slim 布局，模型初始须 setSlim(true)，否则手臂贴图采样到透明区域",
     "created_at": "2026-10-22T05:59:54Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39731230993"
-  },
-  {
-    "id": 39730761196,
-    "sha": "0816d6eba988ea0f1e84ea1b07a794e19c3bf3b0",
-    "short_sha": "0816d6e",
-    "message": "fix: 修复切换页面回来后披风纹理未重建而消失\n\nsurface 重建时 onSurfaceCreated 只从 texture[0] 恢复了皮肤纹理，漏了 texture[1] 的披风，\nEGL context 更新后披风纹理 id 失效归零便不再绘制",
-    "created_at": "2026-10-22T05:54:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39730761196"
-  },
-  {
-    "id": 39730761228,
-    "sha": "0816d6eba988ea0f1e84ea1b07a794e19c3bf3b0",
-    "short_sha": "0816d6e",
-    "message": "fix: 修复切换页面回来后披风纹理未重建而消失\n\nsurface 重建时 onSurfaceCreated 只从 texture[0] 恢复了皮肤纹理，漏了 texture[1] 的披风，\nEGL context 更新后披风纹理 id 失效归零便不再绘制",
-    "created_at": "2026-10-22T05:54:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39730761228"
-  },
-  {
-    "id": 39730755765,
-    "sha": "0816d6eba988ea0f1e84ea1b07a794e19c3bf3b0",
-    "short_sha": "0816d6e",
-    "message": "fix: 修复切换页面回来后披风纹理未重建而消失\n\nsurface 重建时 onSurfaceCreated 只从 texture[0] 恢复了皮肤纹理，漏了 texture[1] 的披风，\nEGL context 更新后披风纹理 id 失效归零便不再绘制",
-    "created_at": "2026-10-22T05:54:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39730755765"
-  },
-  {
-    "id": 39730755974,
-    "sha": "0816d6eba988ea0f1e84ea1b07a794e19c3bf3b0",
-    "short_sha": "0816d6e",
-    "message": "fix: 修复切换页面回来后披风纹理未重建而消失\n\nsurface 重建时 onSurfaceCreated 只从 texture[0] 恢复了皮肤纹理，漏了 texture[1] 的披风，\nEGL context 更新后披风纹理 id 失效归零便不再绘制",
-    "created_at": "2026-10-22T05:54:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39730755974"
-  },
-  {
-    "id": 39730403707,
-    "sha": "8cbe21489af00da7b7c9f6870703e57bf32b21c7",
-    "short_sha": "8cbe214",
-    "message": "revert: 移除皮肤预览头部注视跟随功能",
-    "created_at": "2026-10-22T05:51:11Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39730403707"
-  },
-  {
-    "id": 39730403730,
-    "sha": "8cbe21489af00da7b7c9f6870703e57bf32b21c7",
-    "short_sha": "8cbe214",
-    "message": "revert: 移除皮肤预览头部注视跟随功能",
-    "created_at": "2026-10-22T05:51:11Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39730403730"
-  },
-  {
-    "id": 39730398902,
-    "sha": "8cbe21489af00da7b7c9f6870703e57bf32b21c7",
-    "short_sha": "8cbe214",
-    "message": "revert: 移除皮肤预览头部注视跟随功能",
-    "created_at": "2026-10-22T05:51:11Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39730398902"
-  },
-  {
-    "id": 39730398985,
-    "sha": "8cbe21489af00da7b7c9f6870703e57bf32b21c7",
-    "short_sha": "8cbe214",
-    "message": "revert: 移除皮肤预览头部注视跟随功能",
-    "created_at": "2026-10-22T05:51:11Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39730398985"
-  },
-  {
-    "id": 39729301277,
-    "sha": "84df002e1c4fbb729f38396df21370e914d22f45",
-    "short_sha": "84df002",
-    "message": "fix: 注视跟随在回正期间挂起并增加鼠标断流超时回正\n\n- 拖拽松手后的回正过程与拖拽期间同样挂起注视，消除回正中头部随视图偏航持续反向拧动的转圈现象\n- 鼠标事件断流（如 hover exit 丢失、快速甩出视图）10 秒后头部自动回正，不再僵在偏转位",
-    "created_at": "2026-10-22T05:39:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39729301277"
-  },
-  {
-    "id": 39729301297,
-    "sha": "84df002e1c4fbb729f38396df21370e914d22f45",
-    "short_sha": "84df002",
-    "message": "fix: 注视跟随在回正期间挂起并增加鼠标断流超时回正\n\n- 拖拽松手后的回正过程与拖拽期间同样挂起注视，消除回正中头部随视图偏航持续反向拧动的转圈现象\n- 鼠标事件断流（如 hover exit 丢失、快速甩出视图）10 秒后头部自动回正，不再僵在偏转位",
-    "created_at": "2026-10-22T05:39:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39729301297"
-  },
-  {
-    "id": 39729297836,
-    "sha": "84df002e1c4fbb729f38396df21370e914d22f45",
-    "short_sha": "84df002",
-    "message": "fix: 注视跟随在回正期间挂起并增加鼠标断流超时回正\n\n- 拖拽松手后的回正过程与拖拽期间同样挂起注视，消除回正中头部随视图偏航持续反向拧动的转圈现象\n- 鼠标事件断流（如 hover exit 丢失、快速甩出视图）10 秒后头部自动回正，不再僵在偏转位",
-    "created_at": "2026-10-22T05:39:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39729297836"
-  },
-  {
-    "id": 39729297841,
-    "sha": "84df002e1c4fbb729f38396df21370e914d22f45",
-    "short_sha": "84df002",
-    "message": "fix: 注视跟随在回正期间挂起并增加鼠标断流超时回正\n\n- 拖拽松手后的回正过程与拖拽期间同样挂起注视，消除回正中头部随视图偏航持续反向拧动的转圈现象\n- 鼠标事件断流（如 hover exit 丢失、快速甩出视图）10 秒后头部自动回正，不再僵在偏转位",
-    "created_at": "2026-10-22T05:39:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39729297841"
-  },
-  {
-    "id": 39728710251,
-    "sha": "121b923c2493a19a6f944163621093f5630c06f3",
-    "short_sha": "121b923",
-    "message": "Merge pull request #1942 from FCL-Team/weblate-foldcraftlauncher-fcl\n\nchore(l10n): update translations",
-    "created_at": "2026-10-22T05:33:27Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39728710251"
-  },
-  {
-    "id": 39728498248,
-    "sha": "2c75666a21a602a1e7c0ccdfdc75b18b0afbf6a3",
-    "short_sha": "2c75666",
-    "message": "Update strings.xml",
-    "created_at": "2026-10-22T05:31:09Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39728498248"
-  },
-  {
-    "id": 39728498280,
-    "sha": "2c75666a21a602a1e7c0ccdfdc75b18b0afbf6a3",
-    "short_sha": "2c75666",
-    "message": "Update strings.xml",
-    "created_at": "2026-10-22T05:31:09Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39728498280"
-  },
-  {
-    "id": 39728493643,
-    "sha": "2c75666a21a602a1e7c0ccdfdc75b18b0afbf6a3",
-    "short_sha": "2c75666",
-    "message": "Update strings.xml",
-    "created_at": "2026-10-22T05:31:09Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39728493643"
-  },
-  {
-    "id": 39727761336,
-    "sha": "28686178e44082fea88e5804d09b013a444a5d86",
-    "short_sha": "2868617",
-    "message": "optimize: 旋转弹跳去掉手臂展开动作，自转降速至 0.75 圈/秒",
-    "created_at": "2026-10-22T05:23:26Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39727761336"
-  },
-  {
-    "id": 39727761228,
-    "sha": "28686178e44082fea88e5804d09b013a444a5d86",
-    "short_sha": "2868617",
-    "message": "optimize: 旋转弹跳去掉手臂展开动作，自转降速至 0.75 圈/秒",
-    "created_at": "2026-10-22T05:23:26Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39727761228"
-  },
-  {
-    "id": 39727756454,
-    "sha": "28686178e44082fea88e5804d09b013a444a5d86",
-    "short_sha": "2868617",
-    "message": "optimize: 旋转弹跳去掉手臂展开动作，自转降速至 0.75 圈/秒",
-    "created_at": "2026-10-22T05:23:26Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39727756454"
-  },
-  {
-    "id": 39727756415,
-    "sha": "28686178e44082fea88e5804d09b013a444a5d86",
-    "short_sha": "2868617",
-    "message": "optimize: 旋转弹跳去掉手臂展开动作，自转降速至 0.75 圈/秒",
-    "created_at": "2026-10-22T05:23:26Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39727756415"
-  },
-  {
-    "id": 39727432695,
-    "sha": "be0c762a41bfe81d7bea778bf2a399d3ecea9e64",
-    "short_sha": "be0c762",
-    "message": "fix: 单击恢复点按压扁，旋转弹跳改为 Q 弹形变且仅保留为手动动画\n\n- 单击模型恢复原压扁效果（弹簧脉冲），移除点击触发旋转弹跳的临时效果机制\n- SpinJumpAnimation 重做：去掉跳跃位移，改为果冻式 Q 弹——触地相位整体压扁（Y 压 XZ 鼓）、\n  弹起相位拉伸回弹，保留匀速自转与双臂展开扇动；PlayerModel 新增 rootScaleY/rootScaleXZ\n  整体形变通道（以脚底为支点），供动画驱动压扁拉伸",
-    "created_at": "2026-10-22T05:19:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39727432695"
-  },
-  {
-    "id": 39727432739,
-    "sha": "be0c762a41bfe81d7bea778bf2a399d3ecea9e64",
-    "short_sha": "be0c762",
-    "message": "fix: 单击恢复点按压扁，旋转弹跳改为 Q 弹形变且仅保留为手动动画\n\n- 单击模型恢复原压扁效果（弹簧脉冲），移除点击触发旋转弹跳的临时效果机制\n- SpinJumpAnimation 重做：去掉跳跃位移，改为果冻式 Q 弹——触地相位整体压扁（Y 压 XZ 鼓）、\n  弹起相位拉伸回弹，保留匀速自转与双臂展开扇动；PlayerModel 新增 rootScaleY/rootScaleXZ\n  整体形变通道（以脚底为支点），供动画驱动压扁拉伸",
-    "created_at": "2026-10-22T05:19:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39727432739"
-  },
-  {
-    "id": 39727425870,
-    "sha": "be0c762a41bfe81d7bea778bf2a399d3ecea9e64",
-    "short_sha": "be0c762",
-    "message": "fix: 单击恢复点按压扁，旋转弹跳改为 Q 弹形变且仅保留为手动动画\n\n- 单击模型恢复原压扁效果（弹簧脉冲），移除点击触发旋转弹跳的临时效果机制\n- SpinJumpAnimation 重做：去掉跳跃位移，改为果冻式 Q 弹——触地相位整体压扁（Y 压 XZ 鼓）、\n  弹起相位拉伸回弹，保留匀速自转与双臂展开扇动；PlayerModel 新增 rootScaleY/rootScaleXZ\n  整体形变通道（以脚底为支点），供动画驱动压扁拉伸",
-    "created_at": "2026-10-22T05:19:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39727425870"
-  },
-  {
-    "id": 39727425866,
-    "sha": "be0c762a41bfe81d7bea778bf2a399d3ecea9e64",
-    "short_sha": "be0c762",
-    "message": "fix: 单击恢复点按压扁，旋转弹跳改为 Q 弹形变且仅保留为手动动画\n\n- 单击模型恢复原压扁效果（弹簧脉冲），移除点击触发旋转弹跳的临时效果机制\n- SpinJumpAnimation 重做：去掉跳跃位移，改为果冻式 Q 弹——触地相位整体压扁（Y 压 XZ 鼓）、\n  弹起相位拉伸回弹，保留匀速自转与双臂展开扇动；PlayerModel 新增 rootScaleY/rootScaleXZ\n  整体形变通道（以脚底为支点），供动画驱动压扁拉伸",
-    "created_at": "2026-10-22T05:19:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39727425866"
-  },
-  {
-    "id": 39726878695,
-    "sha": "de9f12acb41a5bf2e213af4972fe6fcd2fe68970",
-    "short_sha": "de9f12a",
-    "message": "feat: 皮肤预览单击触发旋转弹跳效果（邦友的酒），新增同名可持久化动画\n\n- 单击模型播放 3 秒旋转弹跳：整体 1 圈/秒匀速自转 + 0.45s 一跳的上下蹦跳，双臂水平展开随节奏扇动；\n  自转与时长配好转整 3 圈，效果结束复位无角度跳变，原动画从暂停进度继续\n- 效果可从动画切换弹窗选为常驻动画（spin_jump），PlayerModel 新增 rootRotationY 整体自转轴\n- 点击效果替代原点按压扁（单击行为不叠加），相关弹簧逻辑移除",
-    "created_at": "2026-10-22T05:10:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39726878695"
   }
 ]

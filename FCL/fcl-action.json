@@ -1,28 +1,28 @@
 {"run": {
-  "id": 39925995290,
+  "id": 39963846838,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAJS8ZXGg",
-  "head_branch": "main",
-  "head_sha": "4745a9b137427d61fea448f0544960a104aa9946",
+  "node_id": "WFR_kwLOIQeFGs8AAAAJTgfotg",
+  "head_branch": "feature/parallel-chunk-download",
+  "head_sha": "22a1d1dcef7d0045a69d315fa56ea683e9377ef5",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "fix: BMCLAPI 下载慢速节点主动切换——10s 窗口速度观测、预计剩余超一个窗口才切换且最多两次、x-bmclapi-hash …",
-  "run_number": 313,
-  "event": "push",
+  "display_title": "feat: 文件下载并行续传——多连接分块突破按连接限速的慢速源（修复 Cleanroom 镜像下载缓慢）",
+  "run_number": 325,
+  "event": "pull_request",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 108214507795,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAZMhZZEw",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39925995290",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39925995290",
+  "check_suite_id": 108319797853,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAZOFzyXQ",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39963846838",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39963846838",
   "pull_requests": [
     {
-      "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
-      "id": 4452442002,
-      "number": 364,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/pulls/1960",
+      "id": 4983712747,
+      "number": 1960,
       "head": {
-        "ref": "main",
-        "sha": "4745a9b137427d61fea448f0544960a104aa9946",
+        "ref": "feature/parallel-chunk-download",
+        "sha": "22a1d1dcef7d0045a69d315fa56ea683e9377ef5",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -31,63 +31,17 @@
       },
       "base": {
         "ref": "main",
-        "sha": "97dc0f6c4a5f5fada8b86aa68e1e9d4b189d1b25",
-        "repo": {
-          "id": 1026321990,
-          "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      }
-    },
-    {
-      "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher/pulls/37",
-      "id": 4452270030,
-      "number": 37,
-      "head": {
-        "ref": "main",
-        "sha": "4745a9b137427d61fea448f0544960a104aa9946",
+        "sha": "e2f10d62a4f49901248cb67995f75b6842704889",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
-        "repo": {
-          "id": 1335592322,
-          "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      }
-    },
-    {
-      "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher/pulls/400",
-      "id": 4451484148,
-      "number": 400,
-      "head": {
-        "ref": "main",
-        "sha": "4745a9b137427d61fea448f0544960a104aa9946",
-        "repo": {
-          "id": 554140954,
-          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
-        "repo": {
-          "id": 835628097,
-          "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher",
           "name": "FoldCraftLauncher"
         }
       }
     }
   ],
-  "created_at": "2026-10-23T08:37:47Z",
-  "updated_at": "2026-10-23T08:39:03Z",
+  "created_at": "2026-10-23T13:45:23Z",
+  "updated_at": "2026-10-23T13:46:45Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +65,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-10-23T08:37:47Z",
+  "run_started_at": "2026-10-23T13:45:23Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,19 +87,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39925995290/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39925995290/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/108214507795",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39925995290/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39925995290/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39925995290/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39963846838/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39963846838/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/108319797853",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39963846838/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39963846838/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/39963846838/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "4745a9b137427d61fea448f0544960a104aa9946",
-    "tree_id": "cb62f211d67f3e754a61857750521a61f9ca3379",
-    "message": "fix: BMCLAPI 下载慢速节点主动切换——10s 窗口速度观测、预计剩余超一个窗口才切换且最多两次、x-bmclapi-hash 全链收集做完整性校验与哈希缓存命中",
-    "timestamp": "2026-10-23T08:35:17Z",
+    "id": "22a1d1dcef7d0045a69d315fa56ea683e9377ef5",
+    "tree_id": "5fda6484b136d36dac89b26db3de3d576fbf66f9",
+    "message": "feat: 文件下载并行续传——单连接持续低速时切换多连接分块拉取剩余区间，突破网盘直链按连接数限速（修复 Cleanroom alist 镜像 50KB/s 下载缓慢）\n\n- FetchTask 单流读循环加 downloadParallelRemainder 钩子：复用 BMCLAPIRetryPolicy 同款 10s 速度窗口，持续低于 128KB/s 且剩余量按当前速度还需超一个窗口时触发；触发前零额外请求，快服务器不受影响\n- FileDownloadTask 实现：1 字节 Range 探测（206+总大小核对，不支持则回退单流）→ 剩余区间按 ≥2MB/块均分最多 8 连接 → 按绝对偏移 FileChannel 写同一临时文件保留前缀 → 复用 Context.close() 原有落盘/ZIP 校验/缓存流程\n- 分块读超时放宽到 30s 且在 resolveConnection 之后设置：按连接限速的服务器数据间歇性滴流，常规 10s 会反复掐死正常工作的分块连接\n- 分块失败按轮次统一重试（retry 轮+轮间退避），续传请求从已写偏移发 Range 只补未完成区间；全局进度=前缀+Σ(分块已写偏移) 严格单调，修复分块重试重复计字节把进度顶破 100% 导致整轮报废、进度条反复跑满清零的问题\n- BMCLAPI 链路原慢速节点切换优先级不变；GetTask 不受影响\n- 新增 androidTest FileDownloadTaskTest：Content-Range 解析单测 + 真实限速链路端到端（MuMu 实测 145s/191s vs 单连接 ≥300s 下限，含 round-2 真实续传路径与进度单调性断言）",
+    "timestamp": "2026-10-23T13:44:51Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"

@@ -1,5 +1,69 @@
 [
   {
+    "id": 39961229160,
+    "sha": "cdddf7869a8c156aa1573aaa6aa1758d9596e64b",
+    "short_sha": "cdddf78",
+    "message": "fix: 封锁已泄露的 eMudhra CA 公钥，加固进程级 TLS 校验\n\n参照 HMCL 的同类修复（HMCL-dev/HMCL@0d20910e），启动时安装进程级\nTLS 校验：从系统默认信任库剔除已泄露的 eMudhra CA 信任锚，并在证书\n链校验时按公钥（DER 编码 SPKI）精确拦截，覆盖 OkHttp/Ktor API 请求、\n下载客户端、HttpURLConnection 下载引擎、DoH 回退解析与 Coil 图片加\n载等全部网络栈；TLS 配置失败时降级为拒绝一切连接。\n\n单元测试固化 8 把被泄露公钥指纹，并移植 we-have-a-problem.com 的\n12 条真实攻击链证书验证整链拒绝。\n\n同时升级 okhttp 5.5.1、minidns-hla 1.1.3。",
+    "created_at": "2026-10-23T13:25:59Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39961229160"
+  },
+  {
+    "id": 39947524770,
+    "sha": "edd39b033fe0ffcf73b5d30e9e475b21bbcc50ff",
+    "short_sha": "edd39b0",
+    "message": "Merge pull request #2107 from AfrobamaYT/feat/modpack-preset-renderer\n\nfeat: 整合包可通过 overrides 预置渲染器、驱动与图形 API",
+    "created_at": "2026-10-23T11:38:41Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39947524770"
+  },
+  {
+    "id": 39947452821,
+    "sha": "85bc2ae0c217801ab4148401d5706f20fdec78fe",
+    "short_sha": "85bc2ae",
+    "message": "Merge pull request #2109 from ZalithLauncher/fix/classic-skin-model-selection\n\nfix: 旧版单层皮肤禁止选择皮肤模型",
+    "created_at": "2026-10-23T11:38:04Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39947452821"
+  },
+  {
+    "id": 39947382454,
+    "sha": "ca3f9e1fa4317c164f7b85d2b8df41bbc36feeb3",
+    "short_sha": "ca3f9e1",
+    "message": "Merge pull request #2110 from ZalithLauncher/fix/mod-list-sort\n\nfix: 模组管理列表文件名排序忽略大小写",
+    "created_at": "2026-10-23T11:37:27Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39947382454"
+  },
+  {
+    "id": 39944664833,
+    "sha": "66cfc4fccd36f872ca1d0c25481722d420ab2921",
+    "short_sha": "66cfc4f",
+    "message": "fix: 模组管理列表文件名排序忽略大小写\nFixes #2073",
+    "created_at": "2026-10-23T11:14:02Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39944664833"
+  },
+  {
+    "id": 39941189067,
+    "sha": "cba1ba28fbc826425cd1c6239c34d22f44cde0ef",
+    "short_sha": "cba1ba2",
+    "message": "fix: 旧版单层皮肤禁止选择皮肤模型",
+    "created_at": "2026-10-23T10:44:02Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39941189067"
+  },
+  {
+    "id": 39931222511,
+    "sha": "b8ff258bae8b2124e1d22dedb811b56db6b99ba1",
+    "short_sha": "b8ff258",
+    "message": "Merge pull request #2108 from ZalithLauncher/refactor/petlib-anim\n\nrefactor: 重写 PetLib 玩家模型骨骼与动画系统 & 优化性能",
+    "created_at": "2026-10-23T09:21:03Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39931222511"
+  },
+  {
+    "id": 39931081175,
+    "sha": "1f5e3fe156d304e4336b89bc1d7a2418a73b1e43",
+    "short_sha": "1f5e3fe",
+    "message": "chore: 迁移资产到合适的路径",
+    "created_at": "2026-10-23T09:19:04Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39931081175"
+  },
+  {
     "id": 39928598072,
     "sha": "597c3578f7d6092e19dfda04c3f789305c07ddbd",
     "short_sha": "597c357",
@@ -334,69 +398,5 @@
     "message": "Merge pull request #2062 from youfeng11/main\n\nfeat: 支持在版本设置中独立配置渲染器环境变量",
     "created_at": "2026-10-14T15:37:20Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38590956816"
-  },
-  {
-    "id": 38514112970,
-    "sha": "0a481996d373197e5f0090f2662c7c07432bb42e",
-    "short_sha": "0a48199",
-    "message": "Merge pull request #2068 from ZalithLauncher/fix/mod-update-stale-date\n\nfix: 模组更新检查因基准日期过期导致同版本反复提示更新的问题",
-    "created_at": "2026-10-14T04:57:47Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38514112970"
-  },
-  {
-    "id": 38513955096,
-    "sha": "7e369b2a27aca4b87b64a19c3ad3dbdc9bba7881",
-    "short_sha": "7e369b2",
-    "message": "fix: 修复输入法弹出内部对话框后被启动器误关闭的问题",
-    "created_at": "2026-10-14T04:55:48Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38513955096"
-  },
-  {
-    "id": 38407591053,
-    "sha": "b2fd2734d5377f03fb2e34d5dbfdc47842b5ab6c",
-    "short_sha": "b2fd273",
-    "message": "fix: 模组更新检查因基准日期过期导致同版本反复提示更新的问题",
-    "created_at": "2026-10-13T13:45:23Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38407591053"
-  },
-  {
-    "id": 38364186004,
-    "sha": "017acb57cac059b13927b30490ca108a2a6ccc76",
-    "short_sha": "017acb5",
-    "message": "Merge branch 'main' into weblate_terracotta",
-    "created_at": "2026-10-13T07:40:21Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38364186004"
-  },
-  {
-    "id": 38364131395,
-    "sha": "c689a9318462bce1ef7040785747e7591735c16d",
-    "short_sha": "c689a93",
-    "message": "Merge branch 'main' into weblate_main",
-    "created_at": "2026-10-13T07:39:57Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38364131395"
-  },
-  {
-    "id": 38363966424,
-    "sha": "0101ab2469aa972921bfa3b791c4df3b2e27c7d2",
-    "short_sha": "0101ab2",
-    "message": "Merge pull request #2064 from youfeng11/fix/wardrobe-skin-preview\n\nFix/wardrobe skin preview",
-    "created_at": "2026-10-13T07:38:39Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38363966424"
-  },
-  {
-    "id": 38360948115,
-    "sha": "e17e59aa786269c89e92b07fdc1773368073df14",
-    "short_sha": "e17e59a",
-    "message": "Merge pull request #2065 from ZalithLauncher/feat/save-compress-share\n\nfeat: 存档管理新增压缩存档并分享功能",
-    "created_at": "2026-10-13T07:09:48Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38360948115"
-  },
-  {
-    "id": 38360877083,
-    "sha": "891e8abf429afd20e3dbf75d57868719bebd1845",
-    "short_sha": "891e8ab",
-    "message": "Merge pull request #2066 from ZalithLauncher/refactor/card_adjusting_bar\n\nrefactor: 使主界面卡片的工具栏固定屏幕底部",
-    "created_at": "2026-10-13T07:09:05Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/38360877083"
   }
 ]
