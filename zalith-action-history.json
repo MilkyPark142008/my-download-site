@@ -1,5 +1,13 @@
 [
   {
+    "id": 39872790977,
+    "sha": "5dd134cc716c548ad46005d0e02d6e462a81e481",
+    "short_sha": "5dd134c",
+    "message": "refactor: 重写 PetLib 玩家模型骨骼与动画系统",
+    "created_at": "2026-10-22T23:34:53Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39872790977"
+  },
+  {
     "id": 39817608777,
     "sha": "d578f01533c936d683d1e2b2438cff1eb6985fa4",
     "short_sha": "d578f01",
@@ -390,13 +398,5 @@
     "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1457 of 1457 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
     "created_at": "2026-10-01T02:51:22Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36807800650"
-  },
-  {
-    "id": 36786401843,
-    "sha": "9b5123c931f1e361505cf953af0e4170868a253d",
-    "short_sha": "9b5123c",
-    "message": "fix: 修复修改版本页加载器预选竞态与提示缺失\n\n- 预选按主加载器优先级依次执行，高优先级列表未加载完成时低优先级等待，消除列表加载顺序导致的竞态\n- OptiFine 与 Forge 的兼容性检查升级为按已选版本成对校验，与列表条目过滤规则一致，不兼容时次要加载器为主加载器让位并提示\n- 切换 Minecraft 版本后，无法匹配的已安装加载器按移除判断，不再保留原样，同时抑制保留原样提示",
-    "created_at": "2026-09-30T22:34:26Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/36786401843"
   }
 ]
