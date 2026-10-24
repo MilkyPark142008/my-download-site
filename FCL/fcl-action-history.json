@@ -1,5 +1,21 @@
 [
   {
+    "id": 40093301184,
+    "sha": "e6a23307eecf5622daa73665623977992fbf2922",
+    "short_sha": "e6a2330",
+    "message": "重构模组数据加载并同步上游数据 (2026-10-22)——移植 HMCL #6987 重构：ModTranslations→AddonProjectInfoRegistry（软引用缓存），mod_data.txt→addon/mod.csv 新格式（含 modrinthId），中文搜索/下载页/模组列表/翻译弹窗全链适配",
+    "created_at": "2026-10-24T12:12:00Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40093301184"
+  },
+  {
+    "id": 40093301168,
+    "sha": "e6a23307eecf5622daa73665623977992fbf2922",
+    "short_sha": "e6a2330",
+    "message": "重构模组数据加载并同步上游数据 (2026-10-22)——移植 HMCL #6987 重构：ModTranslations→AddonProjectInfoRegistry（软引用缓存），mod_data.txt→addon/mod.csv 新格式（含 modrinthId），中文搜索/下载页/模组列表/翻译弹窗全链适配",
+    "created_at": "2026-10-24T12:12:00Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40093301168"
+  },
+  {
     "id": 40053383013,
     "sha": "42f515b0deed018dc6752b0f801302aaa611c9f6",
     "short_sha": "42f515b",
@@ -382,21 +398,5 @@
     "message": "fix: 修复实体键盘多处键码与修饰键缺陷（#1954）\n\n- 右 Shift/Ctrl/Alt 纳入 setModifiers，与左侧等价\n- Caps Lock/Num Lock 改为锁存语义：仅首次按下翻转，抬起与自动重复不改变\n- Enter 仅在软键盘输入框唤起时拦截提交，否则作为普通按键转发游戏\n- AndroidKeycodeMap 补齐 Delete/Home/小键盘四则/Win/PrintScreen/ScrollLock/菜单键等缺失映射，删除 @/#→数字 的 T9 残留\n- 两张键码表改用 HashMap，消除满载越界与插入顺序约束；EfficientAndroidLWJGLKeycode 反查改 O(1) 并移除未使用的旧索引 API\n- KEY_UNKNOWN 对齐 GLFW 语义改为 -1，统一两处未映射键判据；删除 LwjglKeycodeMap 中 KEY_ESCAPE 重复注册\n- GameMenu.onPause 兜底复位修饰键，防分屏/来电等场景切后台后修饰键残留\n- 控制布局转换表同步 GLFW_KEY_MENU 精确映射",
     "created_at": "2026-10-23T03:41:08Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39896696140"
-  },
-  {
-    "id": 39896696141,
-    "sha": "253c0e70d2a3b994aac1981e812273589ee5cd08",
-    "short_sha": "253c0e7",
-    "message": "fix: 修复实体键盘多处键码与修饰键缺陷（#1954）\n\n- 右 Shift/Ctrl/Alt 纳入 setModifiers，与左侧等价\n- Caps Lock/Num Lock 改为锁存语义：仅首次按下翻转，抬起与自动重复不改变\n- Enter 仅在软键盘输入框唤起时拦截提交，否则作为普通按键转发游戏\n- AndroidKeycodeMap 补齐 Delete/Home/小键盘四则/Win/PrintScreen/ScrollLock/菜单键等缺失映射，删除 @/#→数字 的 T9 残留\n- 两张键码表改用 HashMap，消除满载越界与插入顺序约束；EfficientAndroidLWJGLKeycode 反查改 O(1) 并移除未使用的旧索引 API\n- KEY_UNKNOWN 对齐 GLFW 语义改为 -1，统一两处未映射键判据；删除 LwjglKeycodeMap 中 KEY_ESCAPE 重复注册\n- GameMenu.onPause 兜底复位修饰键，防分屏/来电等场景切后台后修饰键残留\n- 控制布局转换表同步 GLFW_KEY_MENU 精确映射",
-    "created_at": "2026-10-23T03:41:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39896696141"
-  },
-  {
-    "id": 39894070666,
-    "sha": "8a39ffc224aceb3c3c93fe8a050f8eff4823f6cb",
-    "short_sha": "8a39ffc",
-    "message": "refactor: 移除中国大陆地区限制功能与网络归属地查询，协议文本同步更新（#1955）",
-    "created_at": "2026-10-23T03:14:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39894070666"
   }
 ]
