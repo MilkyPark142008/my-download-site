@@ -1,5 +1,45 @@
 [
   {
+    "id": 40188885202,
+    "sha": "d3bc11b28047307c56a01bacc1b8f84f939514d8",
+    "short_sha": "d3bc11b",
+    "message": "update: 更新项目依赖库版本",
+    "created_at": "2026-10-25T11:18:55Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40188885202"
+  },
+  {
+    "id": 40183254448,
+    "sha": "62372b06c92de33ea210757f0b023e677b54fc05",
+    "short_sha": "62372b0",
+    "message": "Merge branch 'main' into weblate_terracotta",
+    "created_at": "2026-10-25T10:04:00Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40183254448"
+  },
+  {
+    "id": 40183217524,
+    "sha": "10b38c8d78726ed9dd5e84ec1749bda5c90685e3",
+    "short_sha": "10b38c8",
+    "message": "update: 更新版权协议头的时间范围",
+    "created_at": "2026-10-25T10:01:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40183217524"
+  },
+  {
+    "id": 40183124159,
+    "sha": "10b38c8d78726ed9dd5e84ec1749bda5c90685e3",
+    "short_sha": "10b38c8",
+    "message": "update: 更新版权协议头的时间范围",
+    "created_at": "2026-10-25T10:01:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40183124159"
+  },
+  {
+    "id": 40179354021,
+    "sha": "79779660d2c59002de0db7571d23effc63df3ebb",
+    "short_sha": "7977966",
+    "message": "chore: 为英文本地化提供上下文",
+    "created_at": "2026-10-25T09:05:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40179354021"
+  },
+  {
     "id": 40171496301,
     "sha": "b190a959c90fc60655c9320fe21fa6acb1ac5a89",
     "short_sha": "b190a95",
@@ -358,45 +398,5 @@
     "message": "update: 中国大陆地区暂不支持游戏下载、陶瓦联机功能",
     "created_at": "2026-10-20T10:18:31Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39407279447"
-  },
-  {
-    "id": 39230375356,
-    "sha": "0b1ac132543dee52ed86a9a0bd1ea325d55bbb49",
-    "short_sha": "0b1ac13",
-    "message": "refactor: 重写 SDL 端文本输入为差量转发模型\nFixes #2087",
-    "created_at": "2026-10-19T09:28:43Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39230375356"
-  },
-  {
-    "id": 39176335911,
-    "sha": "9efa02edf090f7f0c99674d40b6342174c029d78",
-    "short_sha": "9efa02e",
-    "message": "fix(LWJGL): 修复 GL20 的 LWJGL2 兼容重载破坏缓冲区状态导致 Angelica 崩溃\n\n移植版在 GL20 添加的 LWJGL2 签名重载 glGetActiveUniform/glGetActiveAttrib\n把 sizeType 同时用作 size 输出缓冲区，再以相对 put 写回 type：每次调用都会\n覆盖已写入的 size 并将 position 前移，第三次调用时 remaining 归零，触发\nLWJGL3 参数校验异常（Angelica 构建着色器程序时崩溃，#2092）。\n\n以官方 3.3.3/3.4.1 生成的 GL20 为基座整类覆盖（原文件零删改），仅在末尾\n附加 LWJGL2 兼容区块：两个查询重载按官方 LWJGL2 语义将 size/type 绝对写入\nsizeType 的 .position() 与 .position()+1 且不改变缓冲区 position，并补足\nremaining>=2 校验，其余兼容方法保持原语义；3.3.3 与 3.4.1 双端同步，并\n重新生成 assets 内预构建产物。",
-    "created_at": "2026-10-18T23:20:03Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39176335911"
-  },
-  {
-    "id": 39106080456,
-    "sha": "d2b65457a1fb94641f2ca488b1af5265ccb4c552",
-    "short_sha": "d2b6545",
-    "message": "Merge pull request #2089 from ZalithLauncher/fix/ime-dialog-focus-loss\n\nfix: 修复输入法弹出内部对话框后被启动器误关闭的问题",
-    "created_at": "2026-10-18T06:55:56Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39106080456"
-  },
-  {
-    "id": 39105792747,
-    "sha": "d2b65457a1fb94641f2ca488b1af5265ccb4c552",
-    "short_sha": "d2b6545",
-    "message": "Merge pull request #2089 from ZalithLauncher/fix/ime-dialog-focus-loss\n\nfix: 修复输入法弹出内部对话框后被启动器误关闭的问题",
-    "created_at": "2026-10-18T06:55:56Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39105792747"
-  },
-  {
-    "id": 39104935481,
-    "sha": "cb479fd857e06e2192bfb7688fa6493d9d7e85b5",
-    "short_sha": "cb479fd",
-    "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1474 of 1474 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
-    "created_at": "2026-10-18T01:51:23Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39104935481"
   }
 ]
