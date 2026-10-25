@@ -1,5 +1,117 @@
 [
   {
+    "id": 40213044827,
+    "sha": "b33d88d0f5b7cf682a5d83f04bdc93780399e614",
+    "short_sha": "b33d88d",
+    "message": "fix: 修复任务状态未随任务列表更新导致任务入口不显示",
+    "created_at": "2026-10-25T16:43:22Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40213044827"
+  },
+  {
+    "id": 40210007591,
+    "sha": "687b7fa296acb5234f6d765ea071a7a75f174348",
+    "short_sha": "687b7fa",
+    "message": "perf: 版本/收藏页滚动联动效果改为绘制阶段驱动",
+    "created_at": "2026-10-25T16:05:16Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40210007591"
+  },
+  {
+    "id": 40208853746,
+    "sha": "da38b4e2ee918afddc03dd03ac7ebe1397d481a9",
+    "short_sha": "da38b4e",
+    "message": "perf: 收窄任务列表的订阅范围并为任务条目补 key",
+    "created_at": "2026-10-25T15:50:11Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40208853746"
+  },
+  {
+    "id": 40208436792,
+    "sha": "f4d08e1e1c218d20a345b71a41c4a6951bbfb6d6",
+    "short_sha": "f4d08e1",
+    "message": "perf: 版本配置改为页面退出时按需异步保存",
+    "created_at": "2026-10-25T15:42:10Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40208436792"
+  },
+  {
+    "id": 40206160839,
+    "sha": "16438dffcc2e7568c75d696c1007deffaa30aa1f",
+    "short_sha": "16438df",
+    "message": "perf: 管理页搜索过滤移至后台线程执行",
+    "created_at": "2026-10-25T15:16:24Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40206160839"
+  },
+  {
+    "id": 40205131926,
+    "sha": "3bfc17a9c181a00fae3722a0edb67dde9bd35410",
+    "short_sha": "3bfc17a",
+    "message": "perf: 拆分文件管理器任务进度为独立状态流",
+    "created_at": "2026-10-25T15:03:27Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40205131926"
+  },
+  {
+    "id": 40204507657,
+    "sha": "9a6a015153fff1aaa90f321412eadeda06f296db",
+    "short_sha": "9a6a015",
+    "message": "perf: 复用毛玻璃绘制中的矩阵临时对象",
+    "created_at": "2026-10-25T14:55:24Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40204507657"
+  },
+  {
+    "id": 40203956010,
+    "sha": "5d5bedb5cd2d690d25786d1d2b146393f4cbd7ff",
+    "short_sha": "5d5bedb",
+    "message": "perf: 缓存滑条组件的 DecimalFormat 实例",
+    "created_at": "2026-10-25T14:48:18Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40203956010"
+  },
+  {
+    "id": 40203246589,
+    "sha": "d3f00f3e9e8001ca92aaa027a82e06664b3a1e5e",
+    "short_sha": "d3f00f3",
+    "message": "perf: 控件布局透明度改为延迟读取，拖动滑杆不再整屏重组",
+    "created_at": "2026-10-25T14:39:07Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40203246589"
+  },
+  {
+    "id": 40202427319,
+    "sha": "29ba84f5f0ac953f371e918a54776df2df7c6faf",
+    "short_sha": "29ba84f",
+    "message": "perf: 将 FPS 数据读取下沉到悬浮球内部，避免每秒整屏重组",
+    "created_at": "2026-10-25T14:28:44Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40202427319"
+  },
+  {
+    "id": 40201237859,
+    "sha": "13f45e0eb1fcce4c25aca2af0a7387149873562e",
+    "short_sha": "13f45e0",
+    "message": "perf: 悬浮球拖拽期间改为内部状态驱动，结束时一次性提交位置",
+    "created_at": "2026-10-25T14:13:28Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40201237859"
+  },
+  {
+    "id": 40200434574,
+    "sha": "bca63c6adb8a2956a51956366f956e181d8f8baf",
+    "short_sha": "bca63c6",
+    "message": "perf: 将按钮按压状态的重组范围收敛到单颗按钮",
+    "created_at": "2026-10-25T14:03:09Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40200434574"
+  },
+  {
+    "id": 40198749501,
+    "sha": "02205ccad80b5aafdb8eb80b52e4998c8052f5c1",
+    "short_sha": "02205cc",
+    "message": "perf: 消除触控处理路径的冗余分配",
+    "created_at": "2026-10-25T13:41:12Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40198749501"
+  },
+  {
+    "id": 40197974549,
+    "sha": "1b3554516b71592bb503602fbf2c456069081600",
+    "short_sha": "1b35545",
+    "message": "perf: 缓存摇杆绘制的轮廓与路径对象",
+    "created_at": "2026-10-25T13:31:02Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40197974549"
+  },
+  {
     "id": 40188885202,
     "sha": "d3bc11b28047307c56a01bacc1b8f84f939514d8",
     "short_sha": "d3bc11b",
@@ -286,117 +398,5 @@
     "message": "refactor: 模组/整合包翻译数据迁移至 HMCL 的 AddonProjectInfo 体系",
     "created_at": "2026-10-22T14:56:07Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39800230638"
-  },
-  {
-    "id": 39784058824,
-    "sha": "a816dd8f331bcfb4ac09bd01578f9ab27ebe28f3",
-    "short_sha": "a816dd8",
-    "message": "Merge pull request #2103 from ZalithLauncher/remove/surfaceview\n\nremove: 移除 SurfaceView 渲染游戏画面的功能",
-    "created_at": "2026-10-22T13:07:04Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39784058824"
-  },
-  {
-    "id": 39783919353,
-    "sha": "f6c6777e2b0c659d235e9df8147e2db7e6479b0f",
-    "short_sha": "f6c6777",
-    "message": "remove: 移除 SurfaceView 渲染游戏画面的功能",
-    "created_at": "2026-10-22T13:06:00Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39783919353"
-  },
-  {
-    "id": 39779406968,
-    "sha": "3e2be4322fceac104fa93b4bcf91fa59fee42b8e",
-    "short_sha": "3e2be43",
-    "message": "Merge pull request #2099 from ZalithLauncher/feat/petlib\n\nfeat: 重构玩家模型渲染，并引入部分交互",
-    "created_at": "2026-10-22T12:34:01Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39779406968"
-  },
-  {
-    "id": 39778283801,
-    "sha": "9148c5254d4815bae0526be272b35826bad7aaea",
-    "short_sha": "9148c52",
-    "message": "Merge pull request #2102 from ZalithLauncher/remove/cleanroom-loader\n\nremove: 移除 Cleanroom 加载器支持",
-    "created_at": "2026-10-22T12:25:53Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39778283801"
-  },
-  {
-    "id": 39754776902,
-    "sha": "3433cf0469407de49b407715ed368b3b4b878300",
-    "short_sha": "3433cf0",
-    "message": "remove: 移除 Cleanroom 加载器支持",
-    "created_at": "2026-10-22T09:21:16Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39754776902"
-  },
-  {
-    "id": 39648135143,
-    "sha": "640125fd300a63a4de937d9dfd2b15fb2b666fd4",
-    "short_sha": "640125f",
-    "message": "feat: 鸣谢板块添加 Modrinth 并随 PetLib 打包其 GPL-3 协议",
-    "created_at": "2026-10-21T17:52:21Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39648135143"
-  },
-  {
-    "id": 39646081423,
-    "sha": "c0ae49b5f3e094bf403698937ec6a4b7f1bd0bb9",
-    "short_sha": "c0ae49b",
-    "message": "feat: PetLib 移植 Modrinth 关键帧待机动画与点击反应系统",
-    "created_at": "2026-10-21T17:41:11Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39646081423"
-  },
-  {
-    "id": 39611688879,
-    "sha": "bb0f5fa13e26b0d0b21730c9795ae5fa08398dba",
-    "short_sha": "bb0f5fa",
-    "message": "[Do not use!] Translated using Weblate (Indonesian)\n\nCurrently translated at 98.8% (86 of 87 strings)\n\nTranslation: ZalithLauncher2/Terracota\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/terracota/id/",
-    "created_at": "2026-10-21T13:51:28Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39611688879"
-  },
-  {
-    "id": 39495538302,
-    "sha": "70bb9cda56c63d67bce6afc1af1110362fee0d02",
-    "short_sha": "70bb9cd",
-    "message": "[Do not use!] Translated using Weblate (Portuguese (Brazil))\n\nCurrently translated at 100.0% (1474 of 1474 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/pt_BR/",
-    "created_at": "2026-10-20T20:51:20Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39495538302"
-  },
-  {
-    "id": 39452159017,
-    "sha": "38962740267b776bc4929f7d15dec26ac17be5fe",
-    "short_sha": "3896274",
-    "message": "ci: 修正 cargo-ndk 解压层级",
-    "created_at": "2026-10-20T15:50:02Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39452159017"
-  },
-  {
-    "id": 39413154504,
-    "sha": "3554dff68a974bb39ad15a880a5b0a658cf367e7",
-    "short_sha": "3554dff",
-    "message": "Revert \"update: 中国大陆地区暂不支持游戏下载、陶瓦联机功能\"\n\nThis reverts commit e40eb703215225df7bf8847c4c4d30289d4d287f.",
-    "created_at": "2026-10-20T11:10:55Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39413154504"
-  },
-  {
-    "id": 39407906861,
-    "sha": "da53e5f06d2a205d44ec28d050f97864b85ca0a8",
-    "short_sha": "da53e5f",
-    "message": "bump version to 2.7.2",
-    "created_at": "2026-10-20T10:21:08Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39407906861"
-  },
-  {
-    "id": 39407338781,
-    "sha": "da53e5f06d2a205d44ec28d050f97864b85ca0a8",
-    "short_sha": "da53e5f",
-    "message": "bump version to 2.7.2",
-    "created_at": "2026-10-20T10:21:08Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39407338781"
-  },
-  {
-    "id": 39407279447,
-    "sha": "e40eb703215225df7bf8847c4c4d30289d4d287f",
-    "short_sha": "e40eb70",
-    "message": "update: 中国大陆地区暂不支持游戏下载、陶瓦联机功能",
-    "created_at": "2026-10-20T10:18:31Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39407279447"
   }
 ]
