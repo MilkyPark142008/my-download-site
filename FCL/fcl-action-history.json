@@ -1,5 +1,29 @@
 [
   {
+    "id": 40148331933,
+    "sha": "5580252b511fe8966cc63be8faf129113e589887",
+    "short_sha": "5580252",
+    "message": "chore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 32.4% (509 of 1569 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-10-25T00:51:28Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40148331933"
+  },
+  {
+    "id": 40148329970,
+    "sha": "5580252b511fe8966cc63be8faf129113e589887",
+    "short_sha": "5580252",
+    "message": "chore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 32.4% (509 of 1569 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-10-25T00:51:28Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40148329970"
+  },
+  {
+    "id": 40148329974,
+    "sha": "5580252b511fe8966cc63be8faf129113e589887",
+    "short_sha": "5580252",
+    "message": "chore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 32.4% (509 of 1569 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-10-25T00:51:28Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40148329974"
+  },
+  {
     "id": 40093301184,
     "sha": "e6a23307eecf5622daa73665623977992fbf2922",
     "short_sha": "e6a2330",
@@ -374,29 +398,5 @@
     "message": "fix: 样式编辑改为就地更新并让按键数据监听样式属性，修复首次进编辑页改字号不实时刷新 (#1957)\n\n旧链路：样式编辑 remove+add 替换注册表对象，靠仅覆盖当前控件组、\n依赖 menu 非空的 re-point 循环补偿，管理入口（menu 为 null）或\n其他控件组的引用按钮不会实时刷新；且 Data 层不监听样式对象属性，\n样式值就地变化从不触发重渲染。\n\n现改为：编辑确认直接 setAll 就地更新注册表对象（保留对象身份与\n列表位置，重命名自动跟随），ControlButtonData/ControlDirectionData\nsetStyle 时挂样式失效监听，样式属性变化即时传播到所有引用按钮并\n经 extractor 之外的显式 saveStyles 落盘；删除补丁式 re-point 循环\n与样式对话框的 menu 依赖。",
     "created_at": "2026-10-23T04:29:36Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39900701417"
-  },
-  {
-    "id": 39898042161,
-    "sha": "759c75393393437b64ff69eea6be77ea9ece98c4",
-    "short_sha": "759c753",
-    "message": "fix: 控制器样式同名注册改为就地更新，修复重载布局后 textSize 等属性修改不生效 (#1957)\n\nButtonStyles/DirectionStyles.addStyle 遇同名样式时原先直接丢弃新样式，\n旧值经 saveStyles() 固化到 button_styles.json，重启也无法恢复。现改为\n对已注册样式 setAll 就地更新并显式持久化（列表 extractor 对元素属性\n变更不触发失效），保留对象身份使已引用该样式的按键同步感知新值；\n样式类的 clone() 重构为复用 setAll。顺带补 style 为 null 的守卫。",
-    "created_at": "2026-10-23T03:58:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39898042161"
-  },
-  {
-    "id": 39898042172,
-    "sha": "759c75393393437b64ff69eea6be77ea9ece98c4",
-    "short_sha": "759c753",
-    "message": "fix: 控制器样式同名注册改为就地更新，修复重载布局后 textSize 等属性修改不生效 (#1957)\n\nButtonStyles/DirectionStyles.addStyle 遇同名样式时原先直接丢弃新样式，\n旧值经 saveStyles() 固化到 button_styles.json，重启也无法恢复。现改为\n对已注册样式 setAll 就地更新并显式持久化（列表 extractor 对元素属性\n变更不触发失效），保留对象身份使已引用该样式的按键同步感知新值；\n样式类的 clone() 重构为复用 setAll。顺带补 style 为 null 的守卫。",
-    "created_at": "2026-10-23T03:58:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39898042172"
-  },
-  {
-    "id": 39896696140,
-    "sha": "253c0e70d2a3b994aac1981e812273589ee5cd08",
-    "short_sha": "253c0e7",
-    "message": "fix: 修复实体键盘多处键码与修饰键缺陷（#1954）\n\n- 右 Shift/Ctrl/Alt 纳入 setModifiers，与左侧等价\n- Caps Lock/Num Lock 改为锁存语义：仅首次按下翻转，抬起与自动重复不改变\n- Enter 仅在软键盘输入框唤起时拦截提交，否则作为普通按键转发游戏\n- AndroidKeycodeMap 补齐 Delete/Home/小键盘四则/Win/PrintScreen/ScrollLock/菜单键等缺失映射，删除 @/#→数字 的 T9 残留\n- 两张键码表改用 HashMap，消除满载越界与插入顺序约束；EfficientAndroidLWJGLKeycode 反查改 O(1) 并移除未使用的旧索引 API\n- KEY_UNKNOWN 对齐 GLFW 语义改为 -1，统一两处未映射键判据；删除 LwjglKeycodeMap 中 KEY_ESCAPE 重复注册\n- GameMenu.onPause 兜底复位修饰键，防分屏/来电等场景切后台后修饰键残留\n- 控制布局转换表同步 GLFW_KEY_MENU 精确映射",
-    "created_at": "2026-10-23T03:41:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39896696140"
   }
 ]
