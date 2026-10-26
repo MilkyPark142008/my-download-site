@@ -1,5 +1,21 @@
 [
   {
+    "id": 40363132054,
+    "sha": "6ce71f1ebda7ac89151ac08d3cb5beb24a7e1f9d",
+    "short_sha": "6ce71f1",
+    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 32.4% (509 of 1569 strings)\nProgress: 33.5% (527 of 1569 strings)\nProgress: 34.0% (534 of 1569 strings)\nProgress: 34.1% (536 of 1569 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-10-26T16:51:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40363132054"
+  },
+  {
+    "id": 40363122969,
+    "sha": "6ce71f1ebda7ac89151ac08d3cb5beb24a7e1f9d",
+    "short_sha": "6ce71f1",
+    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 32.4% (509 of 1569 strings)\nProgress: 33.5% (527 of 1569 strings)\nProgress: 34.0% (534 of 1569 strings)\nProgress: 34.1% (536 of 1569 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-10-26T16:51:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40363122969"
+  },
+  {
     "id": 40288417030,
     "sha": "3410930a3eacadef653debbf428c3ef1d7f42d40",
     "short_sha": "3410930",
@@ -382,21 +398,5 @@
     "message": "fix: SFPEW 渲染器补设 LIBGL_ES=3（backend 要求 GLES 3.0+），gl_bridge 对 LIBGL_ES 缺省做空值加固——真机上 strtol(getenv=NULL) 在 gl_init_context SEGV",
     "created_at": "2026-10-23T11:51:19Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39949028905"
-  },
-  {
-    "id": 39949028961,
-    "sha": "b62b1d6ac9526305732a686c3c9aefd9db03940e",
-    "short_sha": "b62b1d6",
-    "message": "fix: SFPEW 渲染器补设 LIBGL_ES=3（backend 要求 GLES 3.0+），gl_bridge 对 LIBGL_ES 缺省做空值加固——真机上 strtol(getenv=NULL) 在 gl_init_context SEGV",
-    "created_at": "2026-10-23T11:51:19Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39949028961"
-  },
-  {
-    "id": 39947290830,
-    "sha": "b837cbdc5a5261bee02d2d7bd2f95d6ecc355839",
-    "short_sha": "b837cbd",
-    "message": "feat: 内置 MobileGlues 与 SimpleFPEWrapper 渲染器（同步上游 AAMC 预编译 AAR）——RendererManager 新增两个内置条目，FCLauncher 新增对应 env 分支（MG_COUNT_LAUNCH/MG_DIR_PATH/SFPEW_RELAXED_CONTEXT 可经渲染器列表齿轮入口的 RendererEnvDialog 配置，复用插件 envPrefs 存储），AAR 来自 AngelAuraMC/Amethyst-Android v3_openjdk libs（MobileGlues LGPL-2.1 / SFPEW LGPL-3.0，上游 MobileGL-Dev）",
-    "created_at": "2026-10-23T11:36:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39947290830"
   }
 ]
