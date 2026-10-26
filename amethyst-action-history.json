@@ -1,5 +1,13 @@
 [
   {
+    "id": 40359022785,
+    "sha": "28d6e12d68121b7dd75f2e841058a6b7cdfe4a29",
+    "short_sha": "28d6e12",
+    "message": "Fix gamepad relative mouse motion for captured SDL input\n\nPublish final per-tick X and inverted Y deltas before cursor dispatch, matching position changes and the touchscreen/physical-mouse convention. Assign both components on every movement event so SDL does not reuse stale input. Preserve existing scaling, joystick choice and menu clamping.\n\nCherry-picked change from Russianranger/amethyst_cursorfix commit 4ca84b97c41a4bf7f1c534c933958c536ebfaa94. The debug APK containing this change built successfully, and the reporter confirmed the GTNH 2.9 right-stick fix on AYN Thor (Android 13, ARM64).",
+    "created_at": "2026-10-26T16:25:41Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/40359022785"
+  },
+  {
     "id": 39717863927,
     "sha": "5d21444ecee0b15e48e4c282cc218af4b9213ba4",
     "short_sha": "5d21444",
@@ -390,13 +398,5 @@
     "message": "bump(MioLibPatcher): Fix regression in ASMTransformer",
     "created_at": "2026-08-22T18:35:04Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/32591197177"
-  },
-  {
-    "id": 32591174747,
-    "sha": "5a40434ebe252f7c517ce08157d011b35e571c5a",
-    "short_sha": "5a40434",
-    "message": "bump(MioLibPatcher): Fix regression in ASMTransformer",
-    "created_at": "2026-08-22T18:35:04Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/32591174747"
   }
 ]
