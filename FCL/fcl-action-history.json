@@ -1,5 +1,13 @@
 [
   {
+    "id": 40465666671,
+    "sha": "6581449311a6091d7c4391a4be47750bd539a6d3",
+    "short_sha": "6581449",
+    "message": "Merge pull request #1966 from FCL-Team/weblate-foldcraftlauncher-fcl\n\nchore(l10n): update translations",
+    "created_at": "2026-10-27T07:11:51Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40465666671"
+  },
+  {
     "id": 40363132054,
     "sha": "6ce71f1ebda7ac89151ac08d3cb5beb24a7e1f9d",
     "short_sha": "6ce71f1",
@@ -390,13 +398,5 @@
     "message": "feat: 内置 MobileGlues 配置对齐官方 MGConfig——齿轮对话框暴露 enableANGLE/enableNoError/angleDepthClearFixMode/customGLVersion/maxGlslCacheSize/三个扩展开关/fsr1Setting；配置改写应用私有目录 files/mobileglues/config.json（合并保留未知键）并经 MG_DIR_PATH 指向，不再共用 /sdcard/MG",
     "created_at": "2026-10-23T12:00:06Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39950076809"
-  },
-  {
-    "id": 39949028905,
-    "sha": "b62b1d6ac9526305732a686c3c9aefd9db03940e",
-    "short_sha": "b62b1d6",
-    "message": "fix: SFPEW 渲染器补设 LIBGL_ES=3（backend 要求 GLES 3.0+），gl_bridge 对 LIBGL_ES 缺省做空值加固——真机上 strtol(getenv=NULL) 在 gl_init_context SEGV",
-    "created_at": "2026-10-23T11:51:19Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39949028905"
   }
 ]
