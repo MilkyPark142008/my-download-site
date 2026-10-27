@@ -1,5 +1,21 @@
 [
   {
+    "id": 40538839199,
+    "sha": "b533b938368c5755935156e63be7e5afaab5f979",
+    "short_sha": "b533b93",
+    "message": "Merge pull request #2136 from ZalithLauncher/refactor/animation-system\n\nrefactor: 重构页面切换动画体系，统一进出场动画 API 并重设动画设置",
+    "created_at": "2026-10-27T16:13:44Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40538839199"
+  },
+  {
+    "id": 40538747580,
+    "sha": "8f201e1adc6fab107f917cd3e176d6b6568922c2",
+    "short_sha": "8f201e1",
+    "message": "refactor: 重构页面切换动画体系，统一进出场动画 API 并重设动画设置",
+    "created_at": "2026-10-27T16:12:38Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40538747580"
+  },
+  {
     "id": 40499276792,
     "sha": "1e43dfa529f4dd9aab068242dd592ba4b5fcbdd1",
     "short_sha": "1e43dfa",
@@ -382,21 +398,5 @@
     "message": "fix: 封锁已泄露的 eMudhra CA 公钥，加固进程级 TLS 校验\n\n参照 HMCL 的同类修复（HMCL-dev/HMCL@0d20910e），启动时安装进程级\nTLS 校验：从系统默认信任库剔除已泄露的 eMudhra CA 信任锚，并在证书\n链校验时按公钥（DER 编码 SPKI）精确拦截，覆盖 OkHttp/Ktor API 请求、\n下载客户端、HttpURLConnection 下载引擎、DoH 回退解析与 Coil 图片加\n载等全部网络栈；TLS 配置失败时降级为拒绝一切连接。\n\n单元测试固化 8 把被泄露公钥指纹，并移植 we-have-a-problem.com 的\n12 条真实攻击链证书验证整链拒绝。\n\n同时升级 okhttp 5.5.1、minidns-hla 1.1.3。",
     "created_at": "2026-10-23T13:25:59Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39961229160"
-  },
-  {
-    "id": 39947524770,
-    "sha": "edd39b033fe0ffcf73b5d30e9e475b21bbcc50ff",
-    "short_sha": "edd39b0",
-    "message": "Merge pull request #2107 from AfrobamaYT/feat/modpack-preset-renderer\n\nfeat: 整合包可通过 overrides 预置渲染器、驱动与图形 API",
-    "created_at": "2026-10-23T11:38:41Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39947524770"
-  },
-  {
-    "id": 39947452821,
-    "sha": "85bc2ae0c217801ab4148401d5706f20fdec78fe",
-    "short_sha": "85bc2ae",
-    "message": "Merge pull request #2109 from ZalithLauncher/fix/classic-skin-model-selection\n\nfix: 旧版单层皮肤禁止选择皮肤模型",
-    "created_at": "2026-10-23T11:38:04Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/39947452821"
   }
 ]
