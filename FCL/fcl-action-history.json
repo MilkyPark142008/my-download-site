@@ -1,5 +1,173 @@
 [
   {
+    "id": 40510834983,
+    "sha": "708a6110bc60ba405e8b43cc74c16f9bb1cfddf6",
+    "short_sha": "708a611",
+    "message": "feat: 渲染器配置对话框选项添加说明——EnvSpec 增加可选 description 字段并在标题下渲染小字说明，MobileGlues 全部选项与 SFPEW 开关配上功能级中英文说明（值枚举挪入说明，标题精简为变量名）",
+    "created_at": "2026-10-27T13:16:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40510834983"
+  },
+  {
+    "id": 40510834953,
+    "sha": "708a6110bc60ba405e8b43cc74c16f9bb1cfddf6",
+    "short_sha": "708a611",
+    "message": "feat: 渲染器配置对话框选项添加说明——EnvSpec 增加可选 description 字段并在标题下渲染小字说明，MobileGlues 全部选项与 SFPEW 开关配上功能级中英文说明（值枚举挪入说明，标题精简为变量名）",
+    "created_at": "2026-10-27T13:16:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40510834953"
+  },
+  {
+    "id": 40510775795,
+    "sha": "708a6110bc60ba405e8b43cc74c16f9bb1cfddf6",
+    "short_sha": "708a611",
+    "message": "feat: 渲染器配置对话框选项添加说明——EnvSpec 增加可选 description 字段并在标题下渲染小字说明，MobileGlues 全部选项与 SFPEW 开关配上功能级中英文说明（值枚举挪入说明，标题精简为变量名）",
+    "created_at": "2026-10-27T13:16:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40510775795"
+  },
+  {
+    "id": 40510775828,
+    "sha": "708a6110bc60ba405e8b43cc74c16f9bb1cfddf6",
+    "short_sha": "708a611",
+    "message": "feat: 渲染器配置对话框选项添加说明——EnvSpec 增加可选 description 字段并在标题下渲染小字说明，MobileGlues 全部选项与 SFPEW 开关配上功能级中英文说明（值枚举挪入说明，标题精简为变量名）",
+    "created_at": "2026-10-27T13:16:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40510775828"
+  },
+  {
+    "id": 40504834893,
+    "sha": "8a1b8fac6a1a069afd1d121f0fec05e99b16fa85",
+    "short_sha": "8a1b8fa",
+    "message": "refactor: OSMesa 从内置剥离为 FCLRendererPlugin 插件，保留原生加载通路 (#1959)\n\n* refactor: OSMesa 从内置改为 FCLRendererPlugin 插件提供——移除打包的 libOSMesa_8/81、libvirgl_test_server、libvirglrenderer_1 与内置 Freedreno/VirGL 渲染器条目，保留全部原生加载通路并为插件渲染器补全 VIRGL_TEST_SERVER/VTEST_SOCKET_NAME/MESA_GLSL_CACHE_DIR 运行时路径\n* fix: dlsym_OSMesa 优先读 LIB_MESA_NAME——VirGL 插件渲染器裸库名 dlopen 在类加载器命名空间下搜不到插件目录导致 SIGSEGV\n* fix: virglMakeCurrent 的 OSMesa 颜色缓冲误传 libc setbuffer 函数地址（bionic API23+ 声明），首帧 flush 写只读代码页 SIGSEGV；改为按保存的宽高分配真实缓冲区\n* fix: virgl_ensure_framebuffer 先分配后释放——calloc 失败时保留旧缓冲并返回 NULL，virglMakeCurrent 守卫跳过本次绑定，避免 OOM 时向 OSMesaMakeCurrent 传 NULL\n* refactor: 清理 OSMesa 插件化后的死代码——FCLauncher 内置 else 分支仅剩 ZINK（删 ID_VIRGL/ID_FREEDRENO 分支与无关 VTEST_SOCKET_NAME），删除未引用的 VirGL/Freedreno 字符串资源",
+    "created_at": "2026-10-27T12:34:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40504834893"
+  },
+  {
+    "id": 40504834909,
+    "sha": "8a1b8fac6a1a069afd1d121f0fec05e99b16fa85",
+    "short_sha": "8a1b8fa",
+    "message": "refactor: OSMesa 从内置剥离为 FCLRendererPlugin 插件，保留原生加载通路 (#1959)\n\n* refactor: OSMesa 从内置改为 FCLRendererPlugin 插件提供——移除打包的 libOSMesa_8/81、libvirgl_test_server、libvirglrenderer_1 与内置 Freedreno/VirGL 渲染器条目，保留全部原生加载通路并为插件渲染器补全 VIRGL_TEST_SERVER/VTEST_SOCKET_NAME/MESA_GLSL_CACHE_DIR 运行时路径\n* fix: dlsym_OSMesa 优先读 LIB_MESA_NAME——VirGL 插件渲染器裸库名 dlopen 在类加载器命名空间下搜不到插件目录导致 SIGSEGV\n* fix: virglMakeCurrent 的 OSMesa 颜色缓冲误传 libc setbuffer 函数地址（bionic API23+ 声明），首帧 flush 写只读代码页 SIGSEGV；改为按保存的宽高分配真实缓冲区\n* fix: virgl_ensure_framebuffer 先分配后释放——calloc 失败时保留旧缓冲并返回 NULL，virglMakeCurrent 守卫跳过本次绑定，避免 OOM 时向 OSMesaMakeCurrent 传 NULL\n* refactor: 清理 OSMesa 插件化后的死代码——FCLauncher 内置 else 分支仅剩 ZINK（删 ID_VIRGL/ID_FREEDRENO 分支与无关 VTEST_SOCKET_NAME），删除未引用的 VirGL/Freedreno 字符串资源",
+    "created_at": "2026-10-27T12:34:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40504834909"
+  },
+  {
+    "id": 40504591475,
+    "sha": "23eb1995726a9134a0f8d3506a276c93c077be1d",
+    "short_sha": "23eb199",
+    "message": "refactor: 清理 OSMesa 插件化后的死代码——FCLauncher 内置 else 分支仅剩 ZINK（删 ID_VIRGL/ID_FREEDRENO 分支与无关 VTEST_SOCKET_NAME），删除未引用的 VirGL/Freedreno 字符串资源",
+    "created_at": "2026-10-27T12:27:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40504591475"
+  },
+  {
+    "id": 40504591419,
+    "sha": "23eb1995726a9134a0f8d3506a276c93c077be1d",
+    "short_sha": "23eb199",
+    "message": "refactor: 清理 OSMesa 插件化后的死代码——FCLauncher 内置 else 分支仅剩 ZINK（删 ID_VIRGL/ID_FREEDRENO 分支与无关 VTEST_SOCKET_NAME），删除未引用的 VirGL/Freedreno 字符串资源",
+    "created_at": "2026-10-27T12:27:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40504591419"
+  },
+  {
+    "id": 40504582805,
+    "sha": "23eb1995726a9134a0f8d3506a276c93c077be1d",
+    "short_sha": "23eb199",
+    "message": "refactor: 清理 OSMesa 插件化后的死代码——FCLauncher 内置 else 分支仅剩 ZINK（删 ID_VIRGL/ID_FREEDRENO 分支与无关 VTEST_SOCKET_NAME），删除未引用的 VirGL/Freedreno 字符串资源",
+    "created_at": "2026-10-27T12:27:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40504582805"
+  },
+  {
+    "id": 40504582831,
+    "sha": "23eb1995726a9134a0f8d3506a276c93c077be1d",
+    "short_sha": "23eb199",
+    "message": "refactor: 清理 OSMesa 插件化后的死代码——FCLauncher 内置 else 分支仅剩 ZINK（删 ID_VIRGL/ID_FREEDRENO 分支与无关 VTEST_SOCKET_NAME），删除未引用的 VirGL/Freedreno 字符串资源",
+    "created_at": "2026-10-27T12:27:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40504582831"
+  },
+  {
+    "id": 40502337100,
+    "sha": "9893cfb71a2480ced2a932c0f32ebc0ff6a5017e",
+    "short_sha": "9893cfb",
+    "message": "fix: jsound 桥接改走 alcSetThreadContext 线程局部 current，修复第二个 context 抢占全局致原版音效全失 (#1969) (#1970)\n\nalcMakeContextCurrent 会同时改写进程全局 current 并清空调用线程 TLS，\n桥接每次后端调用都抢占 current 后，paulscode 线程上的 AL 调用全部落进\n桥接 context（source ID 失效），其自身 context 孤立后被 OpenAL Soft\n1.25+ 的 alcCloseDevice 以 Releasing orphaned context 隐式销毁，\npaulscode 静默切换 No Sound。\n\n- 守卫式 enter/leave：进入保存调用线程旧 TLS current，退出还原，\n  兜底路径（无 alcSetThreadContext 扩展时）同样保存/还原全局 current\n- 初始化自检同样走受控激活，不在全局 current 留痕\n- 初始化失败清理改为先 alcDestroyContext 再 alcCloseDevice",
+    "created_at": "2026-10-27T12:15:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40502337100"
+  },
+  {
+    "id": 40500023664,
+    "sha": "76b91059e2eb3cb4435bfa650358752b402b8a2b",
+    "short_sha": "76b9105",
+    "message": "Merge fix/solid-skin-layer: 皮肤 3D 预览恢复体素化第二层（复刻 3D Skin Layers）",
+    "created_at": "2026-10-27T11:55:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40500023664"
+  },
+  {
+    "id": 40500023701,
+    "sha": "76b91059e2eb3cb4435bfa650358752b402b8a2b",
+    "short_sha": "76b9105",
+    "message": "Merge fix/solid-skin-layer: 皮肤 3D 预览恢复体素化第二层（复刻 3D Skin Layers）",
+    "created_at": "2026-10-27T11:55:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40500023701"
+  },
+  {
+    "id": 40488811144,
+    "sha": "53ae34e932b8be5a9a5e3341873ead99933ed60c",
+    "short_sha": "53ae34e",
+    "message": "feat: 控件编辑跨组能力——跨组复制/移动、组合并、参考组可编辑、绑定组显隐模式 #1880\n\nfeat: 控件编辑跨组能力——跨组复制/移动、组合并、参考组可编辑、绑定组显隐模式 #1880\n\n实现 #1763 四条诉求（第五条\"一个键不同方式不同效果\"现有事件系统已支持，未改动）：\n1. 单控件跨组复制/移动：编辑栏新增「跨组」按钮，先选复制/移动，再从目标控件组列表点选执行；复制生成新控件 id，移动保留 id 并先删后加避免同 id 双渲染。\n2. 控件组合并：控件组编辑对话框新增「把该组控件合并到其他组」，全部控件转移至目标组（保留控件 id），原组保留但清空；双方数据未加载时自动按需加载。\n3. 多组同看且同时编辑：左侧编辑菜单新增「跨组编辑」开关（默认关闭），参考组（ghost）控件开放选中/拖动/缩放/编辑——视图持有归属组真实数据对象引用，改动直接写入归属组。\n4. 绑定控件组显隐指定状态：绑定对话框逐组四态（不绑定/按下切换/按下显示/按下隐藏），绑定串以 id:show / id:hide 后缀扩展，旧配置向后兼容。\n\nCloses #1763\n\nMuMu 模拟器实测通过：编辑栏跨组入口与目标组选择、ghost 控件跨组移动（T: Default → B）、控件组合并（B 清空、Default 收回 T），配置 JSON 落盘校验一致；绑定格式解析/序列化往返/合并语义有 androidTest 覆盖。",
+    "created_at": "2026-10-27T10:28:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40488811144"
+  },
+  {
+    "id": 40488811259,
+    "sha": "53ae34e932b8be5a9a5e3341873ead99933ed60c",
+    "short_sha": "53ae34e",
+    "message": "feat: 控件编辑跨组能力——跨组复制/移动、组合并、参考组可编辑、绑定组显隐模式 #1880\n\nfeat: 控件编辑跨组能力——跨组复制/移动、组合并、参考组可编辑、绑定组显隐模式 #1880\n\n实现 #1763 四条诉求（第五条\"一个键不同方式不同效果\"现有事件系统已支持，未改动）：\n1. 单控件跨组复制/移动：编辑栏新增「跨组」按钮，先选复制/移动，再从目标控件组列表点选执行；复制生成新控件 id，移动保留 id 并先删后加避免同 id 双渲染。\n2. 控件组合并：控件组编辑对话框新增「把该组控件合并到其他组」，全部控件转移至目标组（保留控件 id），原组保留但清空；双方数据未加载时自动按需加载。\n3. 多组同看且同时编辑：左侧编辑菜单新增「跨组编辑」开关（默认关闭），参考组（ghost）控件开放选中/拖动/缩放/编辑——视图持有归属组真实数据对象引用，改动直接写入归属组。\n4. 绑定控件组显隐指定状态：绑定对话框逐组四态（不绑定/按下切换/按下显示/按下隐藏），绑定串以 id:show / id:hide 后缀扩展，旧配置向后兼容。\n\nCloses #1763\n\nMuMu 模拟器实测通过：编辑栏跨组入口与目标组选择、ghost 控件跨组移动（T: Default → B）、控件组合并（B 清空、Default 收回 T），配置 JSON 落盘校验一致；绑定格式解析/序列化往返/合并语义有 androidTest 覆盖。",
+    "created_at": "2026-10-27T10:28:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40488811259"
+  },
+  {
+    "id": 40470589567,
+    "sha": "9ed8341e5a0f9f907abd3386c3e50794db6a0624",
+    "short_sha": "9ed8341",
+    "message": "fix: rebase 吸收强制分辨率迁移并加固协程取消路径\n\n- launch0 吸收 10b27b13：cursorOffset 随 MenuSetting 读取，启动前 FCLBridge.initForceResolution，getLaunchOptions 改 5 参\n- launch() 异常兜底放宽到 Throwable，收尾弹窗/提示改 NonCancellable，防取消瞬间 withContext 抛出致 Error 路径失控\n- 启动协程结束时取消 mainScope，消除常驻 SupervisorJob 泄漏\n- awaitChoice/awaitLoginChoice 增加 invokeOnCancellation 关闭停留屏幕的弹窗\n- TaskListPane.attachExecutor 接入新执行器前解除上一个的监听\n- lwjgl3ify 注释对齐内存合并语义",
+    "created_at": "2026-10-27T07:52:05Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40470589567"
+  },
+  {
+    "id": 40470589544,
+    "sha": "9ed8341e5a0f9f907abd3386c3e50794db6a0624",
+    "short_sha": "9ed8341",
+    "message": "fix: rebase 吸收强制分辨率迁移并加固协程取消路径\n\n- launch0 吸收 10b27b13：cursorOffset 随 MenuSetting 读取，启动前 FCLBridge.initForceResolution，getLaunchOptions 改 5 参\n- launch() 异常兜底放宽到 Throwable，收尾弹窗/提示改 NonCancellable，防取消瞬间 withContext 抛出致 Error 路径失控\n- 启动协程结束时取消 mainScope，消除常驻 SupervisorJob 泄漏\n- awaitChoice/awaitLoginChoice 增加 invokeOnCancellation 关闭停留屏幕的弹窗\n- TaskListPane.attachExecutor 接入新执行器前解除上一个的监听\n- lwjgl3ify 注释对齐内存合并语义",
+    "created_at": "2026-10-27T07:52:05Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40470589544"
+  },
+  {
+    "id": 40470582381,
+    "sha": "9ed8341e5a0f9f907abd3386c3e50794db6a0624",
+    "short_sha": "9ed8341",
+    "message": "fix: rebase 吸收强制分辨率迁移并加固协程取消路径\n\n- launch0 吸收 10b27b13：cursorOffset 随 MenuSetting 读取，启动前 FCLBridge.initForceResolution，getLaunchOptions 改 5 参\n- launch() 异常兜底放宽到 Throwable，收尾弹窗/提示改 NonCancellable，防取消瞬间 withContext 抛出致 Error 路径失控\n- 启动协程结束时取消 mainScope，消除常驻 SupervisorJob 泄漏\n- awaitChoice/awaitLoginChoice 增加 invokeOnCancellation 关闭停留屏幕的弹窗\n- TaskListPane.attachExecutor 接入新执行器前解除上一个的监听\n- lwjgl3ify 注释对齐内存合并语义",
+    "created_at": "2026-10-27T07:52:05Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40470582381"
+  },
+  {
+    "id": 40470582480,
+    "sha": "9ed8341e5a0f9f907abd3386c3e50794db6a0624",
+    "short_sha": "9ed8341",
+    "message": "fix: rebase 吸收强制分辨率迁移并加固协程取消路径\n\n- launch0 吸收 10b27b13：cursorOffset 随 MenuSetting 读取，启动前 FCLBridge.initForceResolution，getLaunchOptions 改 5 参\n- launch() 异常兜底放宽到 Throwable，收尾弹窗/提示改 NonCancellable，防取消瞬间 withContext 抛出致 Error 路径失控\n- 启动协程结束时取消 mainScope，消除常驻 SupervisorJob 泄漏\n- awaitChoice/awaitLoginChoice 增加 invokeOnCancellation 关闭停留屏幕的弹窗\n- TaskListPane.attachExecutor 接入新执行器前解除上一个的监听\n- lwjgl3ify 注释对齐内存合并语义",
+    "created_at": "2026-10-27T07:52:05Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40470582480"
+  },
+  {
+    "id": 40467481009,
+    "sha": "2df44ba3f70fcd8abe0ee96f056988d4f17d70bc",
+    "short_sha": "2df44ba",
+    "message": "fix: jsound 桥接改走 alcSetThreadContext 线程局部 current，修复第二个 context 抢占全局致原版音效全失 (#1969)\n\nalcMakeContextCurrent 会同时改写进程全局 current 并清空调用线程 TLS，\n桥接每次后端调用都抢占 current 后，paulscode 线程上的 AL 调用全部落进\n桥接 context（source ID 失效），其自身 context 孤立后被 OpenAL Soft\n1.25+ 的 alcCloseDevice 以 Releasing orphaned context 隐式销毁，\npaulscode 静默切换 No Sound。\n\n- 守卫式 enter/leave：进入保存调用线程旧 TLS current，退出还原，\n  兜底路径（无 alcSetThreadContext 扩展时）同样保存/还原全局 current\n- 初始化自检同样走受控激活，不在全局 current 留痕\n- 初始化失败清理改为先 alcDestroyContext 再 alcCloseDevice",
+    "created_at": "2026-10-27T07:23:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40467481009"
+  },
+  {
+    "id": 40467434148,
+    "sha": "2df44ba3f70fcd8abe0ee96f056988d4f17d70bc",
+    "short_sha": "2df44ba",
+    "message": "fix: jsound 桥接改走 alcSetThreadContext 线程局部 current，修复第二个 context 抢占全局致原版音效全失 (#1969)\n\nalcMakeContextCurrent 会同时改写进程全局 current 并清空调用线程 TLS，\n桥接每次后端调用都抢占 current 后，paulscode 线程上的 AL 调用全部落进\n桥接 context（source ID 失效），其自身 context 孤立后被 OpenAL Soft\n1.25+ 的 alcCloseDevice 以 Releasing orphaned context 隐式销毁，\npaulscode 静默切换 No Sound。\n\n- 守卫式 enter/leave：进入保存调用线程旧 TLS current，退出还原，\n  兜底路径（无 alcSetThreadContext 扩展时）同样保存/还原全局 current\n- 初始化自检同样走受控激活，不在全局 current 留痕\n- 初始化失败清理改为先 alcDestroyContext 再 alcCloseDevice",
+    "created_at": "2026-10-27T07:23:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40467434148"
+  },
+  {
     "id": 40465666671,
     "sha": "6581449311a6091d7c4391a4be47750bd539a6d3",
     "short_sha": "6581449",
@@ -230,173 +398,5 @@
     "message": "重构模组数据加载并同步上游数据 (2026-10-22)——移植 HMCL #6987 重构：ModTranslations→AddonProjectInfoRegistry（软引用缓存），mod_data.txt→addon/mod.csv 新格式（含 modrinthId），中文搜索/下载页/模组列表/翻译弹窗全链适配",
     "created_at": "2026-10-24T12:12:00Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40093301168"
-  },
-  {
-    "id": 40053383013,
-    "sha": "42f515b0deed018dc6752b0f801302aaa611c9f6",
-    "short_sha": "42f515b",
-    "message": "fix: Cleanroom 启动崩溃两连修——SDL3 SetWindowSize 不支持双层拦截返回成功 + GLCapabilities 补 14 个 GL_APPLE_* 扩展布尔修复 lwjgly 遮蔽崩 #1962\n\n崩溃一：Cleanroom setInitialDisplayMode 硬调 window.size()，SDL3 Android 驱动无 SetWindowSize 回调返 Unsupported——sdl_hook.c 双层拦截（bytehook GOT + dlsym 出口）该调用直接返回成功，尺寸由注入 Surface 决定，调用方经 SDL_GetWindowSize 读回真实值。\n崩溃二：Cleanroom 自带 lwjgly（LWJGL2 API 层）按含 APPLE 扩展位的 LWJGL3 3.4.3 GLCapabilities 编译，被 FCL 排 classpath 最前的定制 3.4.1 lwjgl.jar 遮蔽致 NoSuchFieldError——对 lwjgly 全量 508 类 javap 枚举字段引用（313 个布尔）与现有字段差集恰好 14 个 GL_APPLE_*，按上游 ext.contains 惯用法补齐并重建 merged-modules.jar。\n详见 #1962。",
-    "created_at": "2026-10-24T02:15:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40053383013"
-  },
-  {
-    "id": 40053382995,
-    "sha": "42f515b0deed018dc6752b0f801302aaa611c9f6",
-    "short_sha": "42f515b",
-    "message": "fix: Cleanroom 启动崩溃两连修——SDL3 SetWindowSize 不支持双层拦截返回成功 + GLCapabilities 补 14 个 GL_APPLE_* 扩展布尔修复 lwjgly 遮蔽崩 #1962\n\n崩溃一：Cleanroom setInitialDisplayMode 硬调 window.size()，SDL3 Android 驱动无 SetWindowSize 回调返 Unsupported——sdl_hook.c 双层拦截（bytehook GOT + dlsym 出口）该调用直接返回成功，尺寸由注入 Surface 决定，调用方经 SDL_GetWindowSize 读回真实值。\n崩溃二：Cleanroom 自带 lwjgly（LWJGL2 API 层）按含 APPLE 扩展位的 LWJGL3 3.4.3 GLCapabilities 编译，被 FCL 排 classpath 最前的定制 3.4.1 lwjgl.jar 遮蔽致 NoSuchFieldError——对 lwjgly 全量 508 类 javap 枚举字段引用（313 个布尔）与现有字段差集恰好 14 个 GL_APPLE_*，按上游 ext.contains 惯用法补齐并重建 merged-modules.jar。\n详见 #1962。",
-    "created_at": "2026-10-24T02:15:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40053382995"
-  },
-  {
-    "id": 40053134712,
-    "sha": "bfc0990dceb0b70919b17cb0120720912b3b33d2",
-    "short_sha": "bfc0990",
-    "message": "Merge pull request #1963 from FCL-Team/weblate-foldcraftlauncher-fcl\n\nchore(l10n): update translations",
-    "created_at": "2026-10-24T02:11:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40053134712"
-  },
-  {
-    "id": 40053091520,
-    "sha": "608f95f8f3c205dbe1f1604e71ce36b1fdf1fdb2",
-    "short_sha": "608f95f",
-    "message": "chore(l10n): update translation files\n\nAdd-on: Cleanup translation files\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-24T02:10:21Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40053091520"
-  },
-  {
-    "id": 40053089501,
-    "sha": "608f95f8f3c205dbe1f1604e71ce36b1fdf1fdb2",
-    "short_sha": "608f95f",
-    "message": "chore(l10n): update translation files\n\nAdd-on: Cleanup translation files\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-24T02:10:21Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40053089501"
-  },
-  {
-    "id": 40053089453,
-    "sha": "608f95f8f3c205dbe1f1604e71ce36b1fdf1fdb2",
-    "short_sha": "608f95f",
-    "message": "chore(l10n): update translation files\n\nAdd-on: Cleanup translation files\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-24T02:10:21Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40053089453"
-  },
-  {
-    "id": 40053012182,
-    "sha": "4f5518f10f8941f38263be97ae0c55579eade2b1",
-    "short_sha": "4f5518f",
-    "message": "fix: Cleanroom 启动 NoSuchFieldError GL_APPLE_aux_depth_stencil——Cleanroom 自带 lwjgly(LWJGL2 API 层)按含 APPLE 扩展位的 LWJGL3 GLCapabilities 编译，其 ContextCapabilities 构造器直接 getfield 该类字段，而 FCL 注入的定制 3.4.1 lwjgl.jar 排 classpath 最前遮蔽了 Cleanroom 自带的 3.4.3；给 GLCapabilities.java 按上游惯用法补 14 个 GL_APPLE_* 扩展布尔(lwjgly 全量 508 类仅缺这 14 个)，重建 merged-modules.jar",
-    "created_at": "2026-10-24T02:09:18Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40053012182"
-  },
-  {
-    "id": 40053012200,
-    "sha": "4f5518f10f8941f38263be97ae0c55579eade2b1",
-    "short_sha": "4f5518f",
-    "message": "fix: Cleanroom 启动 NoSuchFieldError GL_APPLE_aux_depth_stencil——Cleanroom 自带 lwjgly(LWJGL2 API 层)按含 APPLE 扩展位的 LWJGL3 GLCapabilities 编译，其 ContextCapabilities 构造器直接 getfield 该类字段，而 FCL 注入的定制 3.4.1 lwjgl.jar 排 classpath 最前遮蔽了 Cleanroom 自带的 3.4.3；给 GLCapabilities.java 按上游惯用法补 14 个 GL_APPLE_* 扩展布尔(lwjgly 全量 508 类仅缺这 14 个)，重建 merged-modules.jar",
-    "created_at": "2026-10-24T02:09:18Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40053012200"
-  },
-  {
-    "id": 40052981568,
-    "sha": "4f5518f10f8941f38263be97ae0c55579eade2b1",
-    "short_sha": "4f5518f",
-    "message": "fix: Cleanroom 启动 NoSuchFieldError GL_APPLE_aux_depth_stencil——Cleanroom 自带 lwjgly(LWJGL2 API 层)按含 APPLE 扩展位的 LWJGL3 GLCapabilities 编译，其 ContextCapabilities 构造器直接 getfield 该类字段，而 FCL 注入的定制 3.4.1 lwjgl.jar 排 classpath 最前遮蔽了 Cleanroom 自带的 3.4.3；给 GLCapabilities.java 按上游惯用法补 14 个 GL_APPLE_* 扩展布尔(lwjgly 全量 508 类仅缺这 14 个)，重建 merged-modules.jar",
-    "created_at": "2026-10-24T02:09:18Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40052981568"
-  },
-  {
-    "id": 40052981593,
-    "sha": "4f5518f10f8941f38263be97ae0c55579eade2b1",
-    "short_sha": "4f5518f",
-    "message": "fix: Cleanroom 启动 NoSuchFieldError GL_APPLE_aux_depth_stencil——Cleanroom 自带 lwjgly(LWJGL2 API 层)按含 APPLE 扩展位的 LWJGL3 GLCapabilities 编译，其 ContextCapabilities 构造器直接 getfield 该类字段，而 FCL 注入的定制 3.4.1 lwjgl.jar 排 classpath 最前遮蔽了 Cleanroom 自带的 3.4.3；给 GLCapabilities.java 按上游惯用法补 14 个 GL_APPLE_* 扩展布尔(lwjgly 全量 508 类仅缺这 14 个)，重建 merged-modules.jar",
-    "created_at": "2026-10-24T02:09:18Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40052981593"
-  },
-  {
-    "id": 40052573537,
-    "sha": "2e4a1f5ee61164a7177aa39fba47221023dc192a",
-    "short_sha": "2e4a1f5",
-    "message": "fix: 文件多选导入资源包/光影/模组崩溃——SelectedFile.fileName 兜底未授权 uri 的 query 异常，导入循环单文件失败只计入失败列表 #1961",
-    "created_at": "2026-10-24T02:03:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40052573537"
-  },
-  {
-    "id": 40052573545,
-    "sha": "2e4a1f5ee61164a7177aa39fba47221023dc192a",
-    "short_sha": "2e4a1f5",
-    "message": "fix: 文件多选导入资源包/光影/模组崩溃——SelectedFile.fileName 兜底未授权 uri 的 query 异常，导入循环单文件失败只计入失败列表 #1961",
-    "created_at": "2026-10-24T02:03:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40052573545"
-  },
-  {
-    "id": 39963846838,
-    "sha": "22a1d1dcef7d0045a69d315fa56ea683e9377ef5",
-    "short_sha": "22a1d1d",
-    "message": "feat: 文件下载并行续传——单连接持续低速时切换多连接分块拉取剩余区间，突破网盘直链按连接数限速（修复 Cleanroom alist 镜像 50KB/s 下载缓慢）\n\n- FetchTask 单流读循环加 downloadParallelRemainder 钩子：复用 BMCLAPIRetryPolicy 同款 10s 速度窗口，持续低于 128KB/s 且剩余量按当前速度还需超一个窗口时触发；触发前零额外请求，快服务器不受影响\n- FileDownloadTask 实现：1 字节 Range 探测（206+总大小核对，不支持则回退单流）→ 剩余区间按 ≥2MB/块均分最多 8 连接 → 按绝对偏移 FileChannel 写同一临时文件保留前缀 → 复用 Context.close() 原有落盘/ZIP 校验/缓存流程\n- 分块读超时放宽到 30s 且在 resolveConnection 之后设置：按连接限速的服务器数据间歇性滴流，常规 10s 会反复掐死正常工作的分块连接\n- 分块失败按轮次统一重试（retry 轮+轮间退避），续传请求从已写偏移发 Range 只补未完成区间；全局进度=前缀+Σ(分块已写偏移) 严格单调，修复分块重试重复计字节把进度顶破 100% 导致整轮报废、进度条反复跑满清零的问题\n- BMCLAPI 链路原慢速节点切换优先级不变；GetTask 不受影响\n- 新增 androidTest FileDownloadTaskTest：Content-Range 解析单测 + 真实限速链路端到端（MuMu 实测 145s/191s vs 单连接 ≥300s 下限，含 round-2 真实续传路径与进度单调性断言）",
-    "created_at": "2026-10-23T13:44:51Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39963846838"
-  },
-  {
-    "id": 39963846858,
-    "sha": "22a1d1dcef7d0045a69d315fa56ea683e9377ef5",
-    "short_sha": "22a1d1d",
-    "message": "feat: 文件下载并行续传——单连接持续低速时切换多连接分块拉取剩余区间，突破网盘直链按连接数限速（修复 Cleanroom alist 镜像 50KB/s 下载缓慢）\n\n- FetchTask 单流读循环加 downloadParallelRemainder 钩子：复用 BMCLAPIRetryPolicy 同款 10s 速度窗口，持续低于 128KB/s 且剩余量按当前速度还需超一个窗口时触发；触发前零额外请求，快服务器不受影响\n- FileDownloadTask 实现：1 字节 Range 探测（206+总大小核对，不支持则回退单流）→ 剩余区间按 ≥2MB/块均分最多 8 连接 → 按绝对偏移 FileChannel 写同一临时文件保留前缀 → 复用 Context.close() 原有落盘/ZIP 校验/缓存流程\n- 分块读超时放宽到 30s 且在 resolveConnection 之后设置：按连接限速的服务器数据间歇性滴流，常规 10s 会反复掐死正常工作的分块连接\n- 分块失败按轮次统一重试（retry 轮+轮间退避），续传请求从已写偏移发 Range 只补未完成区间；全局进度=前缀+Σ(分块已写偏移) 严格单调，修复分块重试重复计字节把进度顶破 100% 导致整轮报废、进度条反复跑满清零的问题\n- BMCLAPI 链路原慢速节点切换优先级不变；GetTask 不受影响\n- 新增 androidTest FileDownloadTaskTest：Content-Range 解析单测 + 真实限速链路端到端（MuMu 实测 145s/191s vs 单连接 ≥300s 下限，含 round-2 真实续传路径与进度单调性断言）",
-    "created_at": "2026-10-23T13:44:51Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39963846858"
-  },
-  {
-    "id": 39963788759,
-    "sha": "22a1d1dcef7d0045a69d315fa56ea683e9377ef5",
-    "short_sha": "22a1d1d",
-    "message": "feat: 文件下载并行续传——单连接持续低速时切换多连接分块拉取剩余区间，突破网盘直链按连接数限速（修复 Cleanroom alist 镜像 50KB/s 下载缓慢）\n\n- FetchTask 单流读循环加 downloadParallelRemainder 钩子：复用 BMCLAPIRetryPolicy 同款 10s 速度窗口，持续低于 128KB/s 且剩余量按当前速度还需超一个窗口时触发；触发前零额外请求，快服务器不受影响\n- FileDownloadTask 实现：1 字节 Range 探测（206+总大小核对，不支持则回退单流）→ 剩余区间按 ≥2MB/块均分最多 8 连接 → 按绝对偏移 FileChannel 写同一临时文件保留前缀 → 复用 Context.close() 原有落盘/ZIP 校验/缓存流程\n- 分块读超时放宽到 30s 且在 resolveConnection 之后设置：按连接限速的服务器数据间歇性滴流，常规 10s 会反复掐死正常工作的分块连接\n- 分块失败按轮次统一重试（retry 轮+轮间退避），续传请求从已写偏移发 Range 只补未完成区间；全局进度=前缀+Σ(分块已写偏移) 严格单调，修复分块重试重复计字节把进度顶破 100% 导致整轮报废、进度条反复跑满清零的问题\n- BMCLAPI 链路原慢速节点切换优先级不变；GetTask 不受影响\n- 新增 androidTest FileDownloadTaskTest：Content-Range 解析单测 + 真实限速链路端到端（MuMu 实测 145s/191s vs 单连接 ≥300s 下限，含 round-2 真实续传路径与进度单调性断言）",
-    "created_at": "2026-10-23T13:44:51Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39963788759"
-  },
-  {
-    "id": 39963788746,
-    "sha": "22a1d1dcef7d0045a69d315fa56ea683e9377ef5",
-    "short_sha": "22a1d1d",
-    "message": "feat: 文件下载并行续传——单连接持续低速时切换多连接分块拉取剩余区间，突破网盘直链按连接数限速（修复 Cleanroom alist 镜像 50KB/s 下载缓慢）\n\n- FetchTask 单流读循环加 downloadParallelRemainder 钩子：复用 BMCLAPIRetryPolicy 同款 10s 速度窗口，持续低于 128KB/s 且剩余量按当前速度还需超一个窗口时触发；触发前零额外请求，快服务器不受影响\n- FileDownloadTask 实现：1 字节 Range 探测（206+总大小核对，不支持则回退单流）→ 剩余区间按 ≥2MB/块均分最多 8 连接 → 按绝对偏移 FileChannel 写同一临时文件保留前缀 → 复用 Context.close() 原有落盘/ZIP 校验/缓存流程\n- 分块读超时放宽到 30s 且在 resolveConnection 之后设置：按连接限速的服务器数据间歇性滴流，常规 10s 会反复掐死正常工作的分块连接\n- 分块失败按轮次统一重试（retry 轮+轮间退避），续传请求从已写偏移发 Range 只补未完成区间；全局进度=前缀+Σ(分块已写偏移) 严格单调，修复分块重试重复计字节把进度顶破 100% 导致整轮报废、进度条反复跑满清零的问题\n- BMCLAPI 链路原慢速节点切换优先级不变；GetTask 不受影响\n- 新增 androidTest FileDownloadTaskTest：Content-Range 解析单测 + 真实限速链路端到端（MuMu 实测 145s/191s vs 单连接 ≥300s 下限，含 round-2 真实续传路径与进度单调性断言）",
-    "created_at": "2026-10-23T13:44:51Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39963788746"
-  },
-  {
-    "id": 39951002989,
-    "sha": "c335af99ab44ad75283144ebc429fe85c85bfca2",
-    "short_sha": "c335af9",
-    "message": "feat: 渲染器配置对话框选项添加说明——EnvSpec 增加可选 description 字段并在标题下渲染小字说明，MobileGlues 全部选项与 SFPEW 开关配上功能级中英文说明（值枚举挪入说明，标题精简为变量名）",
-    "created_at": "2026-10-23T12:07:37Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39951002989"
-  },
-  {
-    "id": 39951002848,
-    "sha": "c335af99ab44ad75283144ebc429fe85c85bfca2",
-    "short_sha": "c335af9",
-    "message": "feat: 渲染器配置对话框选项添加说明——EnvSpec 增加可选 description 字段并在标题下渲染小字说明，MobileGlues 全部选项与 SFPEW 开关配上功能级中英文说明（值枚举挪入说明，标题精简为变量名）",
-    "created_at": "2026-10-23T12:07:37Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39951002848"
-  },
-  {
-    "id": 39950793808,
-    "sha": "10ceb611db401adef54e9f8b4102e0921309e09a",
-    "short_sha": "10ceb61",
-    "message": "feat: 渲染器配置对话框选项添加说明——EnvSpec 增加可选 description 字段并在标题下渲染小字说明，MobileGlues 全部选项与 SFPEW 开关配上功能级中英文说明（值枚举挪入说明，标题精简为变量名）",
-    "created_at": "2026-10-23T12:05:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39950793808"
-  },
-  {
-    "id": 39950076776,
-    "sha": "0be793cafc785571a07fa2beb820ce20a0321d12",
-    "short_sha": "0be793c",
-    "message": "feat: 内置 MobileGlues 配置对齐官方 MGConfig——齿轮对话框暴露 enableANGLE/enableNoError/angleDepthClearFixMode/customGLVersion/maxGlslCacheSize/三个扩展开关/fsr1Setting；配置改写应用私有目录 files/mobileglues/config.json（合并保留未知键）并经 MG_DIR_PATH 指向，不再共用 /sdcard/MG",
-    "created_at": "2026-10-23T12:00:06Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39950076776"
-  },
-  {
-    "id": 39950076809,
-    "sha": "0be793cafc785571a07fa2beb820ce20a0321d12",
-    "short_sha": "0be793c",
-    "message": "feat: 内置 MobileGlues 配置对齐官方 MGConfig——齿轮对话框暴露 enableANGLE/enableNoError/angleDepthClearFixMode/customGLVersion/maxGlslCacheSize/三个扩展开关/fsr1Setting；配置改写应用私有目录 files/mobileglues/config.json（合并保留未知键）并经 MG_DIR_PATH 指向，不再共用 /sdcard/MG",
-    "created_at": "2026-10-23T12:00:06Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/39950076809"
   }
 ]
