@@ -1,5 +1,37 @@
 [
   {
+    "id": 40683853448,
+    "sha": "9ebfae580ab5408d2801799950bc1a1860d63ede",
+    "short_sha": "9ebfae5",
+    "message": "fix: 版本列表切换版本时异常跳动（#1974）\n\n三处跳动源：\n\n1. 分类 Tab 栏 scrollFlags 含 enterAlways|snap，点按条目时的微小\n   纵向漂移即触发嵌套滚动，AppBarLayout 展开又 snap 回弹，整个列表\n   随之上下窜动。改为仅 scroll：上滑仍可收起 Tab，点按不再牵动列表。\n\n2. diff 内容变化返回 null payload → 整行重绑 + itemAnimator 交叉\n   淡出 + 入场动画（playTranslationX）重播，一次列表刷新可见条目\n   集体横滑/闪烁。改为 PAYLOAD_CONTENT 局部重绑：复用 ViewHolder\n   只刷新数据字段，无动画。\n\n3. render 的 scrollToPosition 定位选中项在选中项已在视口内时仍会\n   拽动视口，改为仅选中项不可见时才滚动。\n\nMuMu 实测：微手势/连续切换版本下列表位移消失，星标置顶、页面重进、\n选中联动正常。",
+    "created_at": "2026-10-28T11:56:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40683853448"
+  },
+  {
+    "id": 40683853532,
+    "sha": "9ebfae580ab5408d2801799950bc1a1860d63ede",
+    "short_sha": "9ebfae5",
+    "message": "fix: 版本列表切换版本时异常跳动（#1974）\n\n三处跳动源：\n\n1. 分类 Tab 栏 scrollFlags 含 enterAlways|snap，点按条目时的微小\n   纵向漂移即触发嵌套滚动，AppBarLayout 展开又 snap 回弹，整个列表\n   随之上下窜动。改为仅 scroll：上滑仍可收起 Tab，点按不再牵动列表。\n\n2. diff 内容变化返回 null payload → 整行重绑 + itemAnimator 交叉\n   淡出 + 入场动画（playTranslationX）重播，一次列表刷新可见条目\n   集体横滑/闪烁。改为 PAYLOAD_CONTENT 局部重绑：复用 ViewHolder\n   只刷新数据字段，无动画。\n\n3. render 的 scrollToPosition 定位选中项在选中项已在视口内时仍会\n   拽动视口，改为仅选中项不可见时才滚动。\n\nMuMu 实测：微手势/连续切换版本下列表位移消失，星标置顶、页面重进、\n选中联动正常。",
+    "created_at": "2026-10-28T11:56:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40683853532"
+  },
+  {
+    "id": 40683806444,
+    "sha": "9ebfae580ab5408d2801799950bc1a1860d63ede",
+    "short_sha": "9ebfae5",
+    "message": "fix: 版本列表切换版本时异常跳动（#1974）\n\n三处跳动源：\n\n1. 分类 Tab 栏 scrollFlags 含 enterAlways|snap，点按条目时的微小\n   纵向漂移即触发嵌套滚动，AppBarLayout 展开又 snap 回弹，整个列表\n   随之上下窜动。改为仅 scroll：上滑仍可收起 Tab，点按不再牵动列表。\n\n2. diff 内容变化返回 null payload → 整行重绑 + itemAnimator 交叉\n   淡出 + 入场动画（playTranslationX）重播，一次列表刷新可见条目\n   集体横滑/闪烁。改为 PAYLOAD_CONTENT 局部重绑：复用 ViewHolder\n   只刷新数据字段，无动画。\n\n3. render 的 scrollToPosition 定位选中项在选中项已在视口内时仍会\n   拽动视口，改为仅选中项不可见时才滚动。\n\nMuMu 实测：微手势/连续切换版本下列表位移消失，星标置顶、页面重进、\n选中联动正常。",
+    "created_at": "2026-10-28T11:56:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40683806444"
+  },
+  {
+    "id": 40683806359,
+    "sha": "9ebfae580ab5408d2801799950bc1a1860d63ede",
+    "short_sha": "9ebfae5",
+    "message": "fix: 版本列表切换版本时异常跳动（#1974）\n\n三处跳动源：\n\n1. 分类 Tab 栏 scrollFlags 含 enterAlways|snap，点按条目时的微小\n   纵向漂移即触发嵌套滚动，AppBarLayout 展开又 snap 回弹，整个列表\n   随之上下窜动。改为仅 scroll：上滑仍可收起 Tab，点按不再牵动列表。\n\n2. diff 内容变化返回 null payload → 整行重绑 + itemAnimator 交叉\n   淡出 + 入场动画（playTranslationX）重播，一次列表刷新可见条目\n   集体横滑/闪烁。改为 PAYLOAD_CONTENT 局部重绑：复用 ViewHolder\n   只刷新数据字段，无动画。\n\n3. render 的 scrollToPosition 定位选中项在选中项已在视口内时仍会\n   拽动视口，改为仅选中项不可见时才滚动。\n\nMuMu 实测：微手势/连续切换版本下列表位移消失，星标置顶、页面重进、\n选中联动正常。",
+    "created_at": "2026-10-28T11:56:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40683806359"
+  },
+  {
     "id": 40668324017,
     "sha": "fc843f175af40106e8d8c8de4b3f7cebc6a93795",
     "short_sha": "fc843f1",
@@ -366,37 +398,5 @@
     "message": "fix: 用户协议/隐私页链接与主题色背景同色隐形——链接改按背景亮度取主色暗/亮变体",
     "created_at": "2026-10-25T12:43:54Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40194440911"
-  },
-  {
-    "id": 40173750577,
-    "sha": "b5b609607f38b9dacfcf2ef52c36973bb8fee1db",
-    "short_sha": "b5b6096",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 32.4% (509 of 1569 strings)\nProgress: 33.5% (527 of 1569 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-25T07:41:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40173750577"
-  },
-  {
-    "id": 40173747557,
-    "sha": "b5b609607f38b9dacfcf2ef52c36973bb8fee1db",
-    "short_sha": "b5b6096",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 32.4% (509 of 1569 strings)\nProgress: 33.5% (527 of 1569 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-25T07:41:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40173747557"
-  },
-  {
-    "id": 40173747547,
-    "sha": "b5b609607f38b9dacfcf2ef52c36973bb8fee1db",
-    "short_sha": "b5b6096",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 32.4% (509 of 1569 strings)\nProgress: 33.5% (527 of 1569 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-25T07:41:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40173747547"
-  },
-  {
-    "id": 40173732269,
-    "sha": "db378b0e96cc5546c741d425697faf87351aa587",
-    "short_sha": "db378b0",
-    "message": "fix: GLFW 拦截非正尺寸窗口调用，修复 Actinium 标题界面把窗口设成 0×0\n\nLWJGLXX Display 的 savedX/Y/W/H 只在显式进入全屏/无边框时记录，\n而 isBorderless() 用纯几何启发式（窗口覆盖显示器）判断当前状态。\n安卓上游戏窗口生来铺满屏幕、从未走过进入转换，被误判为 borderless，\nActinium 首个 tick 同步窗口模式时走退出分支，把未初始化的 saved 值（0）\n喂给 glfwSetWindowSize / glfwSetWindowMonitor，窗口塌缩、标题界面分辨率损坏。\n\n非正尺寸不是任何调用方的合法意图：两方法前置守卫丢弃调用并打日志，\nglfwSetWindowMonitor 同时保持监视器状态不变，避免逐 tick 重试。\n3.3.3 / 3.4.1 同步修复，merged-modules.jar 与 version 已重建。",
-    "created_at": "2026-10-25T07:40:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40173732269"
   }
 ]

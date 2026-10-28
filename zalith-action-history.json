@@ -1,5 +1,77 @@
 [
   {
+    "id": 40722784373,
+    "sha": "a6b6fb6a63ce22c4e4fa91cc29a4d64286cd0924",
+    "short_sha": "a6b6fb6",
+    "message": "update: MioLibPatcher.jar",
+    "created_at": "2026-10-28T16:06:52Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40722784373"
+  },
+  {
+    "id": 40722297531,
+    "sha": "5795412b3889c8ca4df360e2d9e3b517dee5c66e",
+    "short_sha": "5795412",
+    "message": "Merge pull request #2147 from ZalithLauncher/feat/builtin-renderers-config\n\nfeat: 内置 MobileGlues 与 SimpleFPEWrapper 渲染器，新增渲染器配置体系并兼容 V2 插件",
+    "created_at": "2026-10-28T16:04:10Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40722297531"
+  },
+  {
+    "id": 40721915040,
+    "sha": "737252b21825cc1b0880cab485211f32102f89a1",
+    "short_sha": "737252b",
+    "message": "feat: 内置 MobileGlues 与 SimpleFPEWrapper 渲染器，新增渲染器配置体系并兼容 V2 插件",
+    "created_at": "2026-10-28T16:00:28Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40721915040"
+  },
+  {
+    "id": 40686817054,
+    "sha": "013b1b49824f8d18ce5c11c437a66b001014c511",
+    "short_sha": "013b1b4",
+    "message": "Merge pull request #2146 from ZalithLauncher/refactor/jna\n\nrefactor: 重构 JNA 解压任务 & 仅包含 5.13.0 - 5.19.1",
+    "created_at": "2026-10-28T12:19:06Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40686817054"
+  },
+  {
+    "id": 40686765119,
+    "sha": "a4e1bb9762c16725ca85218626540e2612ce8f4a",
+    "short_sha": "a4e1bb9",
+    "message": "refactor: 重构 JNA 解压任务 & 仅包含 5.13.0 - 5.19.1",
+    "created_at": "2026-10-28T12:18:35Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40686765119"
+  },
+  {
+    "id": 40683603818,
+    "sha": "61b25d828945c5bdb3216c5269139586f4c1220d",
+    "short_sha": "61b25d8",
+    "message": "Merge pull request #2145 from ZalithLauncher/fix/virgl-osmesa-framebuffer\n\nfix: VirGL 颜色缓冲改用真实分配的可写内存",
+    "created_at": "2026-10-28T11:54:45Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40683603818"
+  },
+  {
+    "id": 40683558220,
+    "sha": "0bb6ea84c8b82493f498cf8795bac0aaa00d8a0a",
+    "short_sha": "0bb6ea8",
+    "message": "fix: VirGL 颜色缓冲改用真实分配的可写内存",
+    "created_at": "2026-10-28T11:54:15Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40683558220"
+  },
+  {
+    "id": 40680671507,
+    "sha": "781c517846380bf906595bd963c782a0dd8e74bf",
+    "short_sha": "781c517",
+    "message": "Merge pull request #2144 from ZalithLauncher/fix/launch-inherited-json-error-flow\n\nfix: 修复继承清单缺失与启动异常处理",
+    "created_at": "2026-10-28T11:31:51Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40680671507"
+  },
+  {
+    "id": 40680406926,
+    "sha": "608af8615789f9b22461814f79a95175e20a4b0a",
+    "short_sha": "608af86",
+    "message": "fix: 修复继承清单缺失与启动异常处理",
+    "created_at": "2026-10-28T11:29:24Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40680406926"
+  },
+  {
     "id": 40675021854,
     "sha": "d05901e8c218ab3331f28ea2a884c9737d93ea88",
     "short_sha": "d05901e",
@@ -326,77 +398,5 @@
     "message": "perf: 缓存摇杆绘制的轮廓与路径对象",
     "created_at": "2026-10-25T13:31:02Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40197974549"
-  },
-  {
-    "id": 40188885202,
-    "sha": "d3bc11b28047307c56a01bacc1b8f84f939514d8",
-    "short_sha": "d3bc11b",
-    "message": "update: 更新项目依赖库版本",
-    "created_at": "2026-10-25T11:18:55Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40188885202"
-  },
-  {
-    "id": 40183254448,
-    "sha": "62372b06c92de33ea210757f0b023e677b54fc05",
-    "short_sha": "62372b0",
-    "message": "Merge branch 'main' into weblate_terracotta",
-    "created_at": "2026-10-25T10:04:00Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40183254448"
-  },
-  {
-    "id": 40183217524,
-    "sha": "10b38c8d78726ed9dd5e84ec1749bda5c90685e3",
-    "short_sha": "10b38c8",
-    "message": "update: 更新版权协议头的时间范围",
-    "created_at": "2026-10-25T10:01:26Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40183217524"
-  },
-  {
-    "id": 40183124159,
-    "sha": "10b38c8d78726ed9dd5e84ec1749bda5c90685e3",
-    "short_sha": "10b38c8",
-    "message": "update: 更新版权协议头的时间范围",
-    "created_at": "2026-10-25T10:01:26Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40183124159"
-  },
-  {
-    "id": 40179354021,
-    "sha": "79779660d2c59002de0db7571d23effc63df3ebb",
-    "short_sha": "7977966",
-    "message": "chore: 为英文本地化提供上下文",
-    "created_at": "2026-10-25T09:05:26Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40179354021"
-  },
-  {
-    "id": 40171496301,
-    "sha": "b190a959c90fc60655c9320fe21fa6acb1ac5a89",
-    "short_sha": "b190a95",
-    "message": "Merge pull request #2123 from ZalithLauncher/remove/multimc-export\n\nremove: 移除 MMC 整合包导出功能",
-    "created_at": "2026-10-25T07:05:46Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40171496301"
-  },
-  {
-    "id": 40171349338,
-    "sha": "4cc94b790ca3b681187af03c0422c737ecaebe41",
-    "short_sha": "4cc94b7",
-    "message": "Merge pull request #2120 from ZalithLauncher/feat/style_cabinet\n\nfeat: 样式收藏柜 & 编辑器状态管理重构",
-    "created_at": "2026-10-25T07:03:27Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40171349338"
-  },
-  {
-    "id": 40171299465,
-    "sha": "4837b2cda7d861aa69d2041c876aac41aa47c790",
-    "short_sha": "4837b2c",
-    "message": "Merge pull request #2113 from ZalithLauncher/feat/half-screen-touch-block\n\nfeat: 支持阻止半屏虚拟鼠标触摸输入，防止误触",
-    "created_at": "2026-10-25T07:02:39Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40171299465"
-  },
-  {
-    "id": 40125881557,
-    "sha": "683f5684a14a9e315f68f3121aac1b12baa5d35f",
-    "short_sha": "683f568",
-    "message": "Merge pull request #2124 from ZalithLauncher/feat/system-locale-language\n\nfeat: 语言设置标题与\"跟随系统\"选项固定按系统语言显示",
-    "created_at": "2026-10-24T19:34:01Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40125881557"
   }
 ]

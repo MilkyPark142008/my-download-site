@@ -1,28 +1,28 @@
 {"run": {
-  "id": 40668324017,
+  "id": 40683853448,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAJeAVgsQ",
-  "head_branch": "main",
-  "head_sha": "fc843f175af40106e8d8c8de4b3f7cebc6a93795",
+  "node_id": "WFR_kwLOIQeFGs8AAAAJePJWiA",
+  "head_branch": "fix/1974-version-switch-jump",
+  "head_sha": "9ebfae580ab5408d2801799950bc1a1860d63ede",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "fix: 主题色透明度<100% 时下载页 item 透出垫底侧滑收藏按钮，SwipeMenuLayout 关闭态隐藏菜单层（INVISI…",
-  "run_number": 354,
-  "event": "push",
+  "display_title": "fix: 版本列表切换版本时异常跳动（#1974）",
+  "run_number": 356,
+  "event": "pull_request",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 110229779814,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAZqjT1Zg",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/40668324017",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40668324017",
+  "check_suite_id": 110272479571,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAZrMCBUw",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/40683853448",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40683853448",
   "pull_requests": [
     {
-      "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
-      "id": 4452442002,
-      "number": 364,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/pulls/1976",
+      "id": 5050059565,
+      "number": 1976,
       "head": {
-        "ref": "main",
-        "sha": "fc843f175af40106e8d8c8de4b3f7cebc6a93795",
+        "ref": "fix/1974-version-switch-jump",
+        "sha": "9ebfae580ab5408d2801799950bc1a1860d63ede",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -31,63 +31,17 @@
       },
       "base": {
         "ref": "main",
-        "sha": "97dc0f6c4a5f5fada8b86aa68e1e9d4b189d1b25",
-        "repo": {
-          "id": 1026321990,
-          "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      }
-    },
-    {
-      "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher/pulls/37",
-      "id": 4452270030,
-      "number": 37,
-      "head": {
-        "ref": "main",
         "sha": "fc843f175af40106e8d8c8de4b3f7cebc6a93795",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
-        "repo": {
-          "id": 1335592322,
-          "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      }
-    },
-    {
-      "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher/pulls/400",
-      "id": 4451484148,
-      "number": 400,
-      "head": {
-        "ref": "main",
-        "sha": "fc843f175af40106e8d8c8de4b3f7cebc6a93795",
-        "repo": {
-          "id": 554140954,
-          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
-        "repo": {
-          "id": 835628097,
-          "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher",
           "name": "FoldCraftLauncher"
         }
       }
     }
   ],
-  "created_at": "2026-10-28T09:57:46Z",
-  "updated_at": "2026-10-28T09:59:29Z",
+  "created_at": "2026-10-28T11:56:46Z",
+  "updated_at": "2026-10-28T11:58:15Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +65,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-10-28T09:57:46Z",
+  "run_started_at": "2026-10-28T11:56:46Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,19 +87,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/40668324017/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/40668324017/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/110229779814",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/40668324017/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/40668324017/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/40668324017/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/40683853448/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/40683853448/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/110272479571",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/40683853448/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/40683853448/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/40683853448/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "fc843f175af40106e8d8c8de4b3f7cebc6a93795",
-    "tree_id": "b7bc3d75d1df845b44209511d6d499a506da5a55",
-    "message": "fix: 主题色透明度<100% 时下载页 item 透出垫底侧滑收藏按钮，SwipeMenuLayout 关闭态隐藏菜单层（INVISIBLE 保测量）",
-    "timestamp": "2026-10-28T09:53:39Z",
+    "id": "9ebfae580ab5408d2801799950bc1a1860d63ede",
+    "tree_id": "babb76104c094721d373142dfbbd9ab2f809706d",
+    "message": "fix: 版本列表切换版本时异常跳动（#1974）\n\n三处跳动源：\n\n1. 分类 Tab 栏 scrollFlags 含 enterAlways|snap，点按条目时的微小\n   纵向漂移即触发嵌套滚动，AppBarLayout 展开又 snap 回弹，整个列表\n   随之上下窜动。改为仅 scroll：上滑仍可收起 Tab，点按不再牵动列表。\n\n2. diff 内容变化返回 null payload → 整行重绑 + itemAnimator 交叉\n   淡出 + 入场动画（playTranslationX）重播，一次列表刷新可见条目\n   集体横滑/闪烁。改为 PAYLOAD_CONTENT 局部重绑：复用 ViewHolder\n   只刷新数据字段，无动画。\n\n3. render 的 scrollToPosition 定位选中项在选中项已在视口内时仍会\n   拽动视口，改为仅选中项不可见时才滚动。\n\nMuMu 实测：微手势/连续切换版本下列表位移消失，星标置顶、页面重进、\n选中联动正常。",
+    "timestamp": "2026-10-28T11:56:13Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
