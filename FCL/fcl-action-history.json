@@ -1,5 +1,21 @@
 [
   {
+    "id": 40629385177,
+    "sha": "638b49644eb87274cd617b0527867dcc787b8b27",
+    "short_sha": "638b496",
+    "message": "fix: 主题背景 Glide 加载后位图被池回收致绘制崩溃，loadInto 复制自持位图\n\nonResourceReady 直接把 centerCrop 产物设为 view.background，该 bitmap 归\nGlide 位图池所有：视图 detach、同视图再次加载或 trimMemory 池回收时被\nrecycle，而背景仍被视图持续绘制，主线程抛 Canvas: trying to use a\nrecycled bitmap。改为复制自持位图后再设背景，MainActivity/Splash/\nThemeEngine.applyBackground/GameMenu 四处调用点一并修复。",
+    "created_at": "2026-10-28T03:54:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40629385177"
+  },
+  {
+    "id": 40629385158,
+    "sha": "638b49644eb87274cd617b0527867dcc787b8b27",
+    "short_sha": "638b496",
+    "message": "fix: 主题背景 Glide 加载后位图被池回收致绘制崩溃，loadInto 复制自持位图\n\nonResourceReady 直接把 centerCrop 产物设为 view.background，该 bitmap 归\nGlide 位图池所有：视图 detach、同视图再次加载或 trimMemory 池回收时被\nrecycle，而背景仍被视图持续绘制，主线程抛 Canvas: trying to use a\nrecycled bitmap。改为复制自持位图后再设背景，MainActivity/Splash/\nThemeEngine.applyBackground/GameMenu 四处调用点一并修复。",
+    "created_at": "2026-10-28T03:54:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40629385158"
+  },
+  {
     "id": 40510834983,
     "sha": "708a6110bc60ba405e8b43cc74c16f9bb1cfddf6",
     "short_sha": "708a611",
@@ -382,21 +398,5 @@
     "message": "chore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 32.4% (509 of 1569 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
     "created_at": "2026-10-25T00:51:28Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40148329974"
-  },
-  {
-    "id": 40093301184,
-    "sha": "e6a23307eecf5622daa73665623977992fbf2922",
-    "short_sha": "e6a2330",
-    "message": "重构模组数据加载并同步上游数据 (2026-10-22)——移植 HMCL #6987 重构：ModTranslations→AddonProjectInfoRegistry（软引用缓存），mod_data.txt→addon/mod.csv 新格式（含 modrinthId），中文搜索/下载页/模组列表/翻译弹窗全链适配",
-    "created_at": "2026-10-24T12:12:00Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40093301184"
-  },
-  {
-    "id": 40093301168,
-    "sha": "e6a23307eecf5622daa73665623977992fbf2922",
-    "short_sha": "e6a2330",
-    "message": "重构模组数据加载并同步上游数据 (2026-10-22)——移植 HMCL #6987 重构：ModTranslations→AddonProjectInfoRegistry（软引用缓存），mod_data.txt→addon/mod.csv 新格式（含 modrinthId），中文搜索/下载页/模组列表/翻译弹窗全链适配",
-    "created_at": "2026-10-24T12:12:00Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40093301168"
   }
 ]
