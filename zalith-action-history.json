@@ -1,5 +1,61 @@
 [
   {
+    "id": 40675021854,
+    "sha": "d05901e8c218ab3331f28ea2a884c9737d93ea88",
+    "short_sha": "d05901e",
+    "message": "Merge pull request #2143 from ZalithLauncher/feat/jsound-native\n\nfeat: JSound 替换为原生 libjsound.so",
+    "created_at": "2026-10-28T10:48:25Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40675021854"
+  },
+  {
+    "id": 40674880204,
+    "sha": "c1726fed049a686297ac940f35436b9cc4c2ad39",
+    "short_sha": "c1726fe",
+    "message": "feat: JSound 替换为原生 libjsound.so",
+    "created_at": "2026-10-28T10:47:11Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40674880204"
+  },
+  {
+    "id": 40656035215,
+    "sha": "5e5c1a0700026bb07226a35bfd01326c1c1cfb75",
+    "short_sha": "5e5c1a0",
+    "message": "Merge pull request #2142 from ZalithLauncher/fix/lwjgl-window-monitor\n\nfix: LWJGL 未拦截非法窗口尺寸设置",
+    "created_at": "2026-10-28T08:20:04Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40656035215"
+  },
+  {
+    "id": 40655976300,
+    "sha": "210589b9b28836781704a7fa461dfeba254e0163",
+    "short_sha": "210589b",
+    "message": "Merge pull request #2141 from ZalithLauncher/fix/surface-clearframerate\n\nfix: Surface.clearFrameRate 守卫提升到 API 34，修复 Android 13 进游戏闪退",
+    "created_at": "2026-10-28T08:19:35Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40655976300"
+  },
+  {
+    "id": 40655922794,
+    "sha": "6367245db5ba4caaa898b688e7327d30a60d2d45",
+    "short_sha": "6367245",
+    "message": "fix: LWJGL 未拦截非法窗口尺寸设置",
+    "created_at": "2026-10-28T08:19:00Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40655922794"
+  },
+  {
+    "id": 40655059096,
+    "sha": "786222c864c016e3362a77b40669e5c214640521",
+    "short_sha": "786222c",
+    "message": "fix: Surface.clearFrameRate 守卫提升到 API 34，修复 Android 13 进游戏闪退",
+    "created_at": "2026-10-28T08:10:29Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40655059096"
+  },
+  {
+    "id": 40653687988,
+    "sha": "bf9a7c34626aa0b05e30db01a90955a0e88c1d6f",
+    "short_sha": "bf9a7c3",
+    "message": "fix: 页面切换动画不自然",
+    "created_at": "2026-10-28T07:59:12Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40653687988"
+  },
+  {
     "id": 40585486104,
     "sha": "d19c3c4027f685549f9f3c854212900368e244df",
     "short_sha": "d19c3c4",
@@ -342,61 +398,5 @@
     "message": "Merge pull request #2124 from ZalithLauncher/feat/system-locale-language\n\nfeat: 语言设置标题与\"跟随系统\"选项固定按系统语言显示",
     "created_at": "2026-10-24T19:34:01Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40125881557"
-  },
-  {
-    "id": 40125835229,
-    "sha": "aa6d55715fcd9fb937af0deca038d1811c8d2b95",
-    "short_sha": "aa6d557",
-    "message": "feat: 语言设置标题与\"跟随系统\"选项固定按系统语言显示",
-    "created_at": "2026-10-24T19:32:52Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40125835229"
-  },
-  {
-    "id": 40123956009,
-    "sha": "0bdcbea6af24a661bd4e591fa32cf8d67cab9271",
-    "short_sha": "0bdcbea",
-    "message": "remove: 移除 MMC 整合包导出功能",
-    "created_at": "2026-10-24T19:02:39Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40123956009"
-  },
-  {
-    "id": 40120372148,
-    "sha": "d78fe51578b22c777b3be7d1f968955fab9fecea",
-    "short_sha": "d78fe51",
-    "message": "chore: 更新启动器作者名称为 “墨北Mov”",
-    "created_at": "2026-10-24T18:21:49Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40120372148"
-  },
-  {
-    "id": 40119146534,
-    "sha": "94ade00b9a7ebb762a94845d9902c1c6490cf36c",
-    "short_sha": "94ade00",
-    "message": "chore: 更新控制布局编辑器的引导的版本号",
-    "created_at": "2026-10-24T18:05:50Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40119146534"
-  },
-  {
-    "id": 40116078312,
-    "sha": "b0d707ba5c9bc4591f971234d9fdc8ff3f4a6327",
-    "short_sha": "b0d707b",
-    "message": "Merge pull request #2121 from ZalithLauncher/feat/guide-version\n\nfeat: 引导存储引入版本号，引导更新后可再次播放",
-    "created_at": "2026-10-24T17:25:49Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40116078312"
-  },
-  {
-    "id": 40116043046,
-    "sha": "a427caaf0b3c48a9b4ecf707d8da9667a16a9619",
-    "short_sha": "a427caa",
-    "message": "feat: 引导存储引入版本号，引导更新后可再次播放",
-    "created_at": "2026-10-24T17:24:45Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40116043046"
-  },
-  {
-    "id": 40111103786,
-    "sha": "cd887839993cb4475acff3cff438a46d5c10b7ba",
-    "short_sha": "cd88783",
-    "message": "chore: 在菜单中加入样式收藏柜入口",
-    "created_at": "2026-10-24T16:16:52Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40111103786"
   }
 ]
