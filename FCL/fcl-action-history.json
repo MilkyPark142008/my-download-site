@@ -1,5 +1,21 @@
 [
   {
+    "id": 40864421785,
+    "sha": "c9d4712e6bf757734b3674f0d91ecc49d5f7e8d4",
+    "short_sha": "c9d4712",
+    "message": "fix: BMCLAPI 兜底哈希改为写入时增量 SHA-1，修复 OptiFine 等无显式校验值的下载报 NoSuchFileException\n\n7fd9ce2a 引入的 FileDownloadTask 兜底校验在 close() 里重读 temp 文件，\n但 FileUtils.moveFile（copy 后删除源文件）在校验前已把 temp 删除，\nBMCLAPI 链路且无显式 IntegrityCheck 的下载（如 OptiFine 安装）在文件\n成功落位后 100% 抛 NoSuchFileException，并随重试反复完整重下仍失败。\n现改为 getContext 创建增量 MessageDigest、write() 边写边喂、close()\n直接比对内存摘要，零额外 I/O 且与 integrityCheck 路径同构。",
+    "created_at": "2026-10-29T11:17:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40864421785"
+  },
+  {
+    "id": 40864421833,
+    "sha": "c9d4712e6bf757734b3674f0d91ecc49d5f7e8d4",
+    "short_sha": "c9d4712",
+    "message": "fix: BMCLAPI 兜底哈希改为写入时增量 SHA-1，修复 OptiFine 等无显式校验值的下载报 NoSuchFileException\n\n7fd9ce2a 引入的 FileDownloadTask 兜底校验在 close() 里重读 temp 文件，\n但 FileUtils.moveFile（copy 后删除源文件）在校验前已把 temp 删除，\nBMCLAPI 链路且无显式 IntegrityCheck 的下载（如 OptiFine 安装）在文件\n成功落位后 100% 抛 NoSuchFileException，并随重试反复完整重下仍失败。\n现改为 getContext 创建增量 MessageDigest、write() 边写边喂、close()\n直接比对内存摘要，零额外 I/O 且与 integrityCheck 路径同构。",
+    "created_at": "2026-10-29T11:17:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40864421833"
+  },
+  {
     "id": 40830732905,
     "sha": "13fee7621f6b438523d42007b8cd35bd620428d4",
     "short_sha": "13fee76",
@@ -382,21 +398,5 @@
     "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 32.4% (509 of 1569 strings)\nProgress: 33.5% (527 of 1569 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
     "created_at": "2026-10-25T12:44:23Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40194456016"
-  },
-  {
-    "id": 40194455974,
-    "sha": "ce1f834cf075db2a5f34b009d5a0b2d3324115c6",
-    "short_sha": "ce1f834",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 32.4% (509 of 1569 strings)\nProgress: 33.5% (527 of 1569 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-25T12:44:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40194455974"
-  },
-  {
-    "id": 40194440955,
-    "sha": "f86037980ea6763b4921e8d83a02b2102dfe74c1",
-    "short_sha": "f860379",
-    "message": "fix: 用户协议/隐私页链接与主题色背景同色隐形——链接改按背景亮度取主色暗/亮变体",
-    "created_at": "2026-10-25T12:43:54Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40194440955"
   }
 ]

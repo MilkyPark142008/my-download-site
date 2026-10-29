@@ -1,5 +1,37 @@
 [
   {
+    "id": 40883043780,
+    "sha": "dc6a2cb5fe45d0bf159f36c64a27aa383d44cfed",
+    "short_sha": "dc6a2cb",
+    "message": "Merge pull request #2149 from ZalithLauncher/feat/input-magnifier\n\nfeat: 切出输入法时，提供游戏画面放大镜功能",
+    "created_at": "2026-10-29T13:33:34Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40883043780"
+  },
+  {
+    "id": 40882963020,
+    "sha": "6d8ef144544377e75dac549b64440f3784fcb72b",
+    "short_sha": "6d8ef14",
+    "message": "fix: 放大镜在不合适的情况下弹出 & 物理键盘可能无法输入",
+    "created_at": "2026-10-29T13:32:58Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40882963020"
+  },
+  {
+    "id": 40879556783,
+    "sha": "6ac021f9dc2ac19a20f25a0b04132c5418306263",
+    "short_sha": "6ac021f",
+    "message": "fix: 放大镜唤起下拉菜单导致输入法被关闭",
+    "created_at": "2026-10-29T13:10:35Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40879556783"
+  },
+  {
+    "id": 40852591406,
+    "sha": "f58df00748d0fd25ab13814baf00b6dc78275494",
+    "short_sha": "f58df00",
+    "message": "feat: 输入时提供游戏画面放大镜",
+    "created_at": "2026-10-29T09:47:33Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40852591406"
+  },
+  {
     "id": 40833460630,
     "sha": "115cd7536299f3f482da5e6ffd0d439d363a24f7",
     "short_sha": "115cd75",
@@ -366,37 +398,5 @@
     "message": "perf: 管理页搜索过滤移至后台线程执行",
     "created_at": "2026-10-25T15:16:24Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40206160839"
-  },
-  {
-    "id": 40205131926,
-    "sha": "3bfc17a9c181a00fae3722a0edb67dde9bd35410",
-    "short_sha": "3bfc17a",
-    "message": "perf: 拆分文件管理器任务进度为独立状态流",
-    "created_at": "2026-10-25T15:03:27Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40205131926"
-  },
-  {
-    "id": 40204507657,
-    "sha": "9a6a015153fff1aaa90f321412eadeda06f296db",
-    "short_sha": "9a6a015",
-    "message": "perf: 复用毛玻璃绘制中的矩阵临时对象",
-    "created_at": "2026-10-25T14:55:24Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40204507657"
-  },
-  {
-    "id": 40203956010,
-    "sha": "5d5bedb5cd2d690d25786d1d2b146393f4cbd7ff",
-    "short_sha": "5d5bedb",
-    "message": "perf: 缓存滑条组件的 DecimalFormat 实例",
-    "created_at": "2026-10-25T14:48:18Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40203956010"
-  },
-  {
-    "id": 40203246589,
-    "sha": "d3f00f3e9e8001ca92aaa027a82e06664b3a1e5e",
-    "short_sha": "d3f00f3",
-    "message": "perf: 控件布局透明度改为延迟读取，拖动滑杆不再整屏重组",
-    "created_at": "2026-10-25T14:39:07Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40203246589"
   }
 ]
