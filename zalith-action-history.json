@@ -1,5 +1,37 @@
 [
   {
+    "id": 40833460630,
+    "sha": "115cd7536299f3f482da5e6ffd0d439d363a24f7",
+    "short_sha": "115cd75",
+    "message": "oops: 忘给调试代码去掉了，我是🐖",
+    "created_at": "2026-10-29T07:07:46Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40833460630"
+  },
+  {
+    "id": 40831209157,
+    "sha": "1c69578edf071da0390d29af76e7bd4707d3a52a",
+    "short_sha": "1c69578",
+    "message": "Merge pull request #2148 from ZalithLauncher/feat/splash-welcome\n\nfeat: 首次打开启动器时进入欢迎页面",
+    "created_at": "2026-10-29T06:46:02Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40831209157"
+  },
+  {
+    "id": 40831038856,
+    "sha": "ed2dbd0651d54f1b9196b3c264151ccb9fc67ae5",
+    "short_sha": "ed2dbd0",
+    "message": "Merge pull request #2115 from ZalithLauncher/fix/tls-compromised-ca-keys\n\nfix: 封锁已泄露的 eMudhra CA 公钥，加固进程级 TLS 校验",
+    "created_at": "2026-10-29T06:44:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40831038856"
+  },
+  {
+    "id": 40830965444,
+    "sha": "c8880ea99b87238d7f7fc7684d861f240e315ebe",
+    "short_sha": "c8880ea",
+    "message": "feat: 规范化屏幕动画 & 补充用户须知内容",
+    "created_at": "2026-10-29T06:43:35Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40830965444"
+  },
+  {
     "id": 40785315628,
     "sha": "a1498805286f699bc65dd0e4de1d2bd743c21fa4",
     "short_sha": "a149880",
@@ -366,37 +398,5 @@
     "message": "perf: 控件布局透明度改为延迟读取，拖动滑杆不再整屏重组",
     "created_at": "2026-10-25T14:39:07Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40203246589"
-  },
-  {
-    "id": 40202427319,
-    "sha": "29ba84f5f0ac953f371e918a54776df2df7c6faf",
-    "short_sha": "29ba84f",
-    "message": "perf: 将 FPS 数据读取下沉到悬浮球内部，避免每秒整屏重组",
-    "created_at": "2026-10-25T14:28:44Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40202427319"
-  },
-  {
-    "id": 40201237859,
-    "sha": "13f45e0eb1fcce4c25aca2af0a7387149873562e",
-    "short_sha": "13f45e0",
-    "message": "perf: 悬浮球拖拽期间改为内部状态驱动，结束时一次性提交位置",
-    "created_at": "2026-10-25T14:13:28Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40201237859"
-  },
-  {
-    "id": 40200434574,
-    "sha": "bca63c6adb8a2956a51956366f956e181d8f8baf",
-    "short_sha": "bca63c6",
-    "message": "perf: 将按钮按压状态的重组范围收敛到单颗按钮",
-    "created_at": "2026-10-25T14:03:09Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40200434574"
-  },
-  {
-    "id": 40198749501,
-    "sha": "02205ccad80b5aafdb8eb80b52e4998c8052f5c1",
-    "short_sha": "02205cc",
-    "message": "perf: 消除触控处理路径的冗余分配",
-    "created_at": "2026-10-25T13:41:12Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40198749501"
   }
 ]
