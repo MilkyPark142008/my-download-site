@@ -1,5 +1,53 @@
 [
   {
+    "id": 40987226830,
+    "sha": "cdba79fa53b92624cca2cb806f58934ac879445c",
+    "short_sha": "cdba79f",
+    "message": "Update version_map.json",
+    "created_at": "2026-10-30T01:40:20Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40987226830"
+  },
+  {
+    "id": 40985785078,
+    "sha": "d3078f3f9769420b168863990a71ff0cd0f28929",
+    "short_sha": "d3078f3",
+    "message": "1.3.4.3",
+    "created_at": "2026-10-30T01:25:24Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40985785078"
+  },
+  {
+    "id": 40985784832,
+    "sha": "d3078f3f9769420b168863990a71ff0cd0f28929",
+    "short_sha": "d3078f3",
+    "message": "1.3.4.3",
+    "created_at": "2026-10-30T01:25:24Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40985784832"
+  },
+  {
+    "id": 40985784908,
+    "sha": "d3078f3f9769420b168863990a71ff0cd0f28929",
+    "short_sha": "d3078f3",
+    "message": "1.3.4.3",
+    "created_at": "2026-10-30T01:25:24Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40985784908"
+  },
+  {
+    "id": 40984025757,
+    "sha": "e12e0615d4fcb75363c111f983dae83c0690cbf2",
+    "short_sha": "e12e061",
+    "message": "fix: 版本列表切换版本时异常跳动（#1974） (#1976)\n\n三处跳动源：\n\n1. 分类 Tab 栏 scrollFlags 含 enterAlways|snap，点按条目时的微小\n   纵向漂移即触发嵌套滚动，AppBarLayout 展开又 snap 回弹，整个列表\n   随之上下窜动。改为仅 scroll：上滑仍可收起 Tab，点按不再牵动列表。\n\n2. diff 内容变化返回 null payload → 整行重绑 + itemAnimator 交叉\n   淡出 + 入场动画（playTranslationX）重播，一次列表刷新可见条目\n   集体横滑/闪烁。改为 PAYLOAD_CONTENT 局部重绑：复用 ViewHolder\n   只刷新数据字段，无动画。\n\n3. render 的 scrollToPosition 定位选中项在选中项已在视口内时仍会\n   拽动视口，改为仅选中项不可见时才滚动。\n\nMuMu 实测：微手势/连续切换版本下列表位移消失，星标置顶、页面重进、\n选中联动正常。",
+    "created_at": "2026-10-30T01:08:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40984025757"
+  },
+  {
+    "id": 40984025729,
+    "sha": "e12e0615d4fcb75363c111f983dae83c0690cbf2",
+    "short_sha": "e12e061",
+    "message": "fix: 版本列表切换版本时异常跳动（#1974） (#1976)\n\n三处跳动源：\n\n1. 分类 Tab 栏 scrollFlags 含 enterAlways|snap，点按条目时的微小\n   纵向漂移即触发嵌套滚动，AppBarLayout 展开又 snap 回弹，整个列表\n   随之上下窜动。改为仅 scroll：上滑仍可收起 Tab，点按不再牵动列表。\n\n2. diff 内容变化返回 null payload → 整行重绑 + itemAnimator 交叉\n   淡出 + 入场动画（playTranslationX）重播，一次列表刷新可见条目\n   集体横滑/闪烁。改为 PAYLOAD_CONTENT 局部重绑：复用 ViewHolder\n   只刷新数据字段，无动画。\n\n3. render 的 scrollToPosition 定位选中项在选中项已在视口内时仍会\n   拽动视口，改为仅选中项不可见时才滚动。\n\nMuMu 实测：微手势/连续切换版本下列表位移消失，星标置顶、页面重进、\n选中联动正常。",
+    "created_at": "2026-10-30T01:08:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40984025729"
+  },
+  {
     "id": 40864421785,
     "sha": "c9d4712e6bf757734b3674f0d91ecc49d5f7e8d4",
     "short_sha": "c9d4712",
@@ -350,53 +398,5 @@
     "message": "fix: jsound 桥接改走 alcSetThreadContext 线程局部 current，修复第二个 context 抢占全局致原版音效全失 (#1969)\n\nalcMakeContextCurrent 会同时改写进程全局 current 并清空调用线程 TLS，\n桥接每次后端调用都抢占 current 后，paulscode 线程上的 AL 调用全部落进\n桥接 context（source ID 失效），其自身 context 孤立后被 OpenAL Soft\n1.25+ 的 alcCloseDevice 以 Releasing orphaned context 隐式销毁，\npaulscode 静默切换 No Sound。\n\n- 守卫式 enter/leave：进入保存调用线程旧 TLS current，退出还原，\n  兜底路径（无 alcSetThreadContext 扩展时）同样保存/还原全局 current\n- 初始化自检同样走受控激活，不在全局 current 留痕\n- 初始化失败清理改为先 alcDestroyContext 再 alcCloseDevice",
     "created_at": "2026-10-27T07:23:13Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40467434148"
-  },
-  {
-    "id": 40465666671,
-    "sha": "6581449311a6091d7c4391a4be47750bd539a6d3",
-    "short_sha": "6581449",
-    "message": "Merge pull request #1966 from FCL-Team/weblate-foldcraftlauncher-fcl\n\nchore(l10n): update translations",
-    "created_at": "2026-10-27T07:11:51Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40465666671"
-  },
-  {
-    "id": 40363132054,
-    "sha": "6ce71f1ebda7ac89151ac08d3cb5beb24a7e1f9d",
-    "short_sha": "6ce71f1",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 32.4% (509 of 1569 strings)\nProgress: 33.5% (527 of 1569 strings)\nProgress: 34.0% (534 of 1569 strings)\nProgress: 34.1% (536 of 1569 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-26T16:51:22Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40363132054"
-  },
-  {
-    "id": 40363122969,
-    "sha": "6ce71f1ebda7ac89151ac08d3cb5beb24a7e1f9d",
-    "short_sha": "6ce71f1",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 32.4% (509 of 1569 strings)\nProgress: 33.5% (527 of 1569 strings)\nProgress: 34.0% (534 of 1569 strings)\nProgress: 34.1% (536 of 1569 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-26T16:51:22Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40363122969"
-  },
-  {
-    "id": 40288417030,
-    "sha": "3410930a3eacadef653debbf428c3ef1d7f42d40",
-    "short_sha": "3410930",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 32.4% (509 of 1569 strings)\nProgress: 33.5% (527 of 1569 strings)\nProgress: 34.0% (534 of 1569 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-26T07:51:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40288417030"
-  },
-  {
-    "id": 40194459128,
-    "sha": "ce1f834cf075db2a5f34b009d5a0b2d3324115c6",
-    "short_sha": "ce1f834",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 32.4% (509 of 1569 strings)\nProgress: 33.5% (527 of 1569 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-25T12:44:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40194459128"
-  },
-  {
-    "id": 40194456016,
-    "sha": "ce1f834cf075db2a5f34b009d5a0b2d3324115c6",
-    "short_sha": "ce1f834",
-    "message": "chore(l10n): update Indonesian translation\n\nchore(l10n): update Indonesian translation\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: Hosted Weblate user 168407 <oktoslime@users.noreply.hosted.weblate.org>\nLanguage: Indonesian\nProgress: 32.4% (509 of 1569 strings)\nProgress: 33.5% (527 of 1569 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/id/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-10-25T12:44:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40194456016"
   }
 ]
