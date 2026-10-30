@@ -1,5 +1,69 @@
 [
   {
+    "id": 41082818872,
+    "sha": "5e4d584cc205655be77415820945bb7b712929c6",
+    "short_sha": "5e4d584",
+    "message": "fix: 键盘开关状态随输入法真实显隐自动同步，修复经输入法内按键收起后再次呼出需点两次\n\n- API 30+ 按系统 insets 真值判断键盘可见性；旧版本用可视区域高度估算（与 JVMActivity 平推同源同阈，adjustResize 下必然收缩）\n- 布局回调轮询同步：键盘真实出现过之后又消失且有焦点时，认定输入法自行收起，走统一清理（清空、隐藏、焦点与指针捕获还给游戏视图）\n- imeSeenVisible 闩锁防呼出动画期间误判，呼出请求时重置",
+    "created_at": "2026-10-30T15:38:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41082818872"
+  },
+  {
+    "id": 41073341163,
+    "sha": "20b79c9acbfb558fe7c763e2bf9d32c8760be1a0",
+    "short_sha": "20b79c9",
+    "message": "fix: 绑定控件组显隐对话框在小屏横屏下按钮被挤出屏幕、亮色模式下拉文字看不清（#1982）\n\n- 列表区由固定 320dp 改为 0dp + layout_weight，内容少时收紧、超出屏幕时由 LinearLayout 收缩列表区，确认/取消按钮始终可见\n- 允许返回键关闭对话框，避免被困\n- 条目 FCLSpinner 关闭 auto_text_tint，与同类 FCLDialog 一致继承默认文字色，修复亮色模式下文字与白底对比不足",
+    "created_at": "2026-10-30T14:36:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41073341163"
+  },
+  {
+    "id": 41072205125,
+    "sha": "d0488a25a383f095d017e1ad4a5add2a68f932f7",
+    "short_sha": "d0488a2",
+    "message": "refactor: 放大镜迁移至 Kotlin，修复平移死区与可见性细节\n\n- 按项目惯例将 InputMagnifierView 迁移为 Kotlin\n- 修复低分辨率帧下取样区域被钉死在整帧适配的死区：zoom=1 为整帧概览，\n  任何放大立即裁切且可平移（区域 = 视口 × fitScale ÷ zoom，等比不拉伸）\n- 平移加 0.5 阻尼，小窗口内更易定位\n- 放大镜画面回读按 33ms 节流，打开时强制捕获\n- 描边改走 foreground 绘制（background 描边会被 viewport 画面盖住），\n  白色 3dp 圆角边框提示当前为放大画面\n- 手动打开放大镜时重置 dismissedForInput，避免输入法动画抖动将其自动收回\n- 移除搜索图标被运行时覆盖的 tint",
+    "created_at": "2026-10-30T14:29:41Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41072205125"
+  },
+  {
+    "id": 41072205126,
+    "sha": "d0488a25a383f095d017e1ad4a5add2a68f932f7",
+    "short_sha": "d0488a2",
+    "message": "refactor: 放大镜迁移至 Kotlin，修复平移死区与可见性细节\n\n- 按项目惯例将 InputMagnifierView 迁移为 Kotlin\n- 修复低分辨率帧下取样区域被钉死在整帧适配的死区：zoom=1 为整帧概览，\n  任何放大立即裁切且可平移（区域 = 视口 × fitScale ÷ zoom，等比不拉伸）\n- 平移加 0.5 阻尼，小窗口内更易定位\n- 放大镜画面回读按 33ms 节流，打开时强制捕获\n- 描边改走 foreground 绘制（background 描边会被 viewport 画面盖住），\n  白色 3dp 圆角边框提示当前为放大画面\n- 手动打开放大镜时重置 dismissedForInput，避免输入法动画抖动将其自动收回\n- 移除搜索图标被运行时覆盖的 tint",
+    "created_at": "2026-10-30T14:29:41Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41072205126"
+  },
+  {
+    "id": 41049276141,
+    "sha": "0b0e1ac8ae53ef65767c8f7e781fcb2ce0302611",
+    "short_sha": "0b0e1ac",
+    "message": "fix: 游戏自定义分辨率过小时，放大镜画面被拉伸",
+    "created_at": "2026-10-30T11:33:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41049276141"
+  },
+  {
+    "id": 41049275858,
+    "sha": "0b0e1ac8ae53ef65767c8f7e781fcb2ce0302611",
+    "short_sha": "0b0e1ac",
+    "message": "fix: 游戏自定义分辨率过小时，放大镜画面被拉伸",
+    "created_at": "2026-10-30T11:33:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41049275858"
+  },
+  {
+    "id": 41040704640,
+    "sha": "d7af735a3077e62b7b0bb91c1ba35a7d6676381a",
+    "short_sha": "d7af735",
+    "message": "feat: 输入法遮挡画面时提供放大镜窗口",
+    "created_at": "2026-10-30T10:25:19Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41040704640"
+  },
+  {
+    "id": 41040704880,
+    "sha": "d7af735a3077e62b7b0bb91c1ba35a7d6676381a",
+    "short_sha": "d7af735",
+    "message": "feat: 输入法遮挡画面时提供放大镜窗口",
+    "created_at": "2026-10-30T10:25:19Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41040704880"
+  },
+  {
     "id": 40987226830,
     "sha": "cdba79fa53b92624cca2cb806f58934ac879445c",
     "short_sha": "cdba79f",
@@ -334,69 +398,5 @@
     "message": "Merge fix/solid-skin-layer: 皮肤 3D 预览恢复体素化第二层（复刻 3D Skin Layers）",
     "created_at": "2026-10-27T11:55:30Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40500023701"
-  },
-  {
-    "id": 40488811144,
-    "sha": "53ae34e932b8be5a9a5e3341873ead99933ed60c",
-    "short_sha": "53ae34e",
-    "message": "feat: 控件编辑跨组能力——跨组复制/移动、组合并、参考组可编辑、绑定组显隐模式 #1880\n\nfeat: 控件编辑跨组能力——跨组复制/移动、组合并、参考组可编辑、绑定组显隐模式 #1880\n\n实现 #1763 四条诉求（第五条\"一个键不同方式不同效果\"现有事件系统已支持，未改动）：\n1. 单控件跨组复制/移动：编辑栏新增「跨组」按钮，先选复制/移动，再从目标控件组列表点选执行；复制生成新控件 id，移动保留 id 并先删后加避免同 id 双渲染。\n2. 控件组合并：控件组编辑对话框新增「把该组控件合并到其他组」，全部控件转移至目标组（保留控件 id），原组保留但清空；双方数据未加载时自动按需加载。\n3. 多组同看且同时编辑：左侧编辑菜单新增「跨组编辑」开关（默认关闭），参考组（ghost）控件开放选中/拖动/缩放/编辑——视图持有归属组真实数据对象引用，改动直接写入归属组。\n4. 绑定控件组显隐指定状态：绑定对话框逐组四态（不绑定/按下切换/按下显示/按下隐藏），绑定串以 id:show / id:hide 后缀扩展，旧配置向后兼容。\n\nCloses #1763\n\nMuMu 模拟器实测通过：编辑栏跨组入口与目标组选择、ghost 控件跨组移动（T: Default → B）、控件组合并（B 清空、Default 收回 T），配置 JSON 落盘校验一致；绑定格式解析/序列化往返/合并语义有 androidTest 覆盖。",
-    "created_at": "2026-10-27T10:28:57Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40488811144"
-  },
-  {
-    "id": 40488811259,
-    "sha": "53ae34e932b8be5a9a5e3341873ead99933ed60c",
-    "short_sha": "53ae34e",
-    "message": "feat: 控件编辑跨组能力——跨组复制/移动、组合并、参考组可编辑、绑定组显隐模式 #1880\n\nfeat: 控件编辑跨组能力——跨组复制/移动、组合并、参考组可编辑、绑定组显隐模式 #1880\n\n实现 #1763 四条诉求（第五条\"一个键不同方式不同效果\"现有事件系统已支持，未改动）：\n1. 单控件跨组复制/移动：编辑栏新增「跨组」按钮，先选复制/移动，再从目标控件组列表点选执行；复制生成新控件 id，移动保留 id 并先删后加避免同 id 双渲染。\n2. 控件组合并：控件组编辑对话框新增「把该组控件合并到其他组」，全部控件转移至目标组（保留控件 id），原组保留但清空；双方数据未加载时自动按需加载。\n3. 多组同看且同时编辑：左侧编辑菜单新增「跨组编辑」开关（默认关闭），参考组（ghost）控件开放选中/拖动/缩放/编辑——视图持有归属组真实数据对象引用，改动直接写入归属组。\n4. 绑定控件组显隐指定状态：绑定对话框逐组四态（不绑定/按下切换/按下显示/按下隐藏），绑定串以 id:show / id:hide 后缀扩展，旧配置向后兼容。\n\nCloses #1763\n\nMuMu 模拟器实测通过：编辑栏跨组入口与目标组选择、ghost 控件跨组移动（T: Default → B）、控件组合并（B 清空、Default 收回 T），配置 JSON 落盘校验一致；绑定格式解析/序列化往返/合并语义有 androidTest 覆盖。",
-    "created_at": "2026-10-27T10:28:57Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40488811259"
-  },
-  {
-    "id": 40470589567,
-    "sha": "9ed8341e5a0f9f907abd3386c3e50794db6a0624",
-    "short_sha": "9ed8341",
-    "message": "fix: rebase 吸收强制分辨率迁移并加固协程取消路径\n\n- launch0 吸收 10b27b13：cursorOffset 随 MenuSetting 读取，启动前 FCLBridge.initForceResolution，getLaunchOptions 改 5 参\n- launch() 异常兜底放宽到 Throwable，收尾弹窗/提示改 NonCancellable，防取消瞬间 withContext 抛出致 Error 路径失控\n- 启动协程结束时取消 mainScope，消除常驻 SupervisorJob 泄漏\n- awaitChoice/awaitLoginChoice 增加 invokeOnCancellation 关闭停留屏幕的弹窗\n- TaskListPane.attachExecutor 接入新执行器前解除上一个的监听\n- lwjgl3ify 注释对齐内存合并语义",
-    "created_at": "2026-10-27T07:52:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40470589567"
-  },
-  {
-    "id": 40470589544,
-    "sha": "9ed8341e5a0f9f907abd3386c3e50794db6a0624",
-    "short_sha": "9ed8341",
-    "message": "fix: rebase 吸收强制分辨率迁移并加固协程取消路径\n\n- launch0 吸收 10b27b13：cursorOffset 随 MenuSetting 读取，启动前 FCLBridge.initForceResolution，getLaunchOptions 改 5 参\n- launch() 异常兜底放宽到 Throwable，收尾弹窗/提示改 NonCancellable，防取消瞬间 withContext 抛出致 Error 路径失控\n- 启动协程结束时取消 mainScope，消除常驻 SupervisorJob 泄漏\n- awaitChoice/awaitLoginChoice 增加 invokeOnCancellation 关闭停留屏幕的弹窗\n- TaskListPane.attachExecutor 接入新执行器前解除上一个的监听\n- lwjgl3ify 注释对齐内存合并语义",
-    "created_at": "2026-10-27T07:52:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40470589544"
-  },
-  {
-    "id": 40470582381,
-    "sha": "9ed8341e5a0f9f907abd3386c3e50794db6a0624",
-    "short_sha": "9ed8341",
-    "message": "fix: rebase 吸收强制分辨率迁移并加固协程取消路径\n\n- launch0 吸收 10b27b13：cursorOffset 随 MenuSetting 读取，启动前 FCLBridge.initForceResolution，getLaunchOptions 改 5 参\n- launch() 异常兜底放宽到 Throwable，收尾弹窗/提示改 NonCancellable，防取消瞬间 withContext 抛出致 Error 路径失控\n- 启动协程结束时取消 mainScope，消除常驻 SupervisorJob 泄漏\n- awaitChoice/awaitLoginChoice 增加 invokeOnCancellation 关闭停留屏幕的弹窗\n- TaskListPane.attachExecutor 接入新执行器前解除上一个的监听\n- lwjgl3ify 注释对齐内存合并语义",
-    "created_at": "2026-10-27T07:52:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40470582381"
-  },
-  {
-    "id": 40470582480,
-    "sha": "9ed8341e5a0f9f907abd3386c3e50794db6a0624",
-    "short_sha": "9ed8341",
-    "message": "fix: rebase 吸收强制分辨率迁移并加固协程取消路径\n\n- launch0 吸收 10b27b13：cursorOffset 随 MenuSetting 读取，启动前 FCLBridge.initForceResolution，getLaunchOptions 改 5 参\n- launch() 异常兜底放宽到 Throwable，收尾弹窗/提示改 NonCancellable，防取消瞬间 withContext 抛出致 Error 路径失控\n- 启动协程结束时取消 mainScope，消除常驻 SupervisorJob 泄漏\n- awaitChoice/awaitLoginChoice 增加 invokeOnCancellation 关闭停留屏幕的弹窗\n- TaskListPane.attachExecutor 接入新执行器前解除上一个的监听\n- lwjgl3ify 注释对齐内存合并语义",
-    "created_at": "2026-10-27T07:52:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40470582480"
-  },
-  {
-    "id": 40467481009,
-    "sha": "2df44ba3f70fcd8abe0ee96f056988d4f17d70bc",
-    "short_sha": "2df44ba",
-    "message": "fix: jsound 桥接改走 alcSetThreadContext 线程局部 current，修复第二个 context 抢占全局致原版音效全失 (#1969)\n\nalcMakeContextCurrent 会同时改写进程全局 current 并清空调用线程 TLS，\n桥接每次后端调用都抢占 current 后，paulscode 线程上的 AL 调用全部落进\n桥接 context（source ID 失效），其自身 context 孤立后被 OpenAL Soft\n1.25+ 的 alcCloseDevice 以 Releasing orphaned context 隐式销毁，\npaulscode 静默切换 No Sound。\n\n- 守卫式 enter/leave：进入保存调用线程旧 TLS current，退出还原，\n  兜底路径（无 alcSetThreadContext 扩展时）同样保存/还原全局 current\n- 初始化自检同样走受控激活，不在全局 current 留痕\n- 初始化失败清理改为先 alcDestroyContext 再 alcCloseDevice",
-    "created_at": "2026-10-27T07:23:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40467481009"
-  },
-  {
-    "id": 40467434148,
-    "sha": "2df44ba3f70fcd8abe0ee96f056988d4f17d70bc",
-    "short_sha": "2df44ba",
-    "message": "fix: jsound 桥接改走 alcSetThreadContext 线程局部 current，修复第二个 context 抢占全局致原版音效全失 (#1969)\n\nalcMakeContextCurrent 会同时改写进程全局 current 并清空调用线程 TLS，\n桥接每次后端调用都抢占 current 后，paulscode 线程上的 AL 调用全部落进\n桥接 context（source ID 失效），其自身 context 孤立后被 OpenAL Soft\n1.25+ 的 alcCloseDevice 以 Releasing orphaned context 隐式销毁，\npaulscode 静默切换 No Sound。\n\n- 守卫式 enter/leave：进入保存调用线程旧 TLS current，退出还原，\n  兜底路径（无 alcSetThreadContext 扩展时）同样保存/还原全局 current\n- 初始化自检同样走受控激活，不在全局 current 留痕\n- 初始化失败清理改为先 alcDestroyContext 再 alcCloseDevice",
-    "created_at": "2026-10-27T07:23:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40467434148"
   }
 ]

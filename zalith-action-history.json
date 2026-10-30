@@ -1,5 +1,69 @@
 [
   {
+    "id": 41060394940,
+    "sha": "ad23dc41da36e3338a75d86898d1016a83e0d100",
+    "short_sha": "ad23dc4",
+    "message": "Merge pull request #2154 from ZalithLauncher/feat/neoforge-cdn\n\nchore: 调整单次网络请求的超时时长为 10s",
+    "created_at": "2026-10-30T13:05:42Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41060394940"
+  },
+  {
+    "id": 41060301148,
+    "sha": "d07f3ad484fd629fd214f66b175445df2558001d",
+    "short_sha": "d07f3ad",
+    "message": "chore: 调整单次网络请求的超时时长为 10s",
+    "created_at": "2026-10-30T13:04:55Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41060301148"
+  },
+  {
+    "id": 41058440840,
+    "sha": "ce75f5e1f697a3bff4d73ce4dd1ea44599bc8024",
+    "short_sha": "ce75f5e",
+    "message": "Merge pull request #2153 from ZalithLauncher/feat/neoforge-cdn\n\nfeat: 支持使用 CurseForge CDN 访问 NeoForge 相关文件",
+    "created_at": "2026-10-30T12:50:43Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41058440840"
+  },
+  {
+    "id": 41058256894,
+    "sha": "f024465271100170c321b44c38b6a511cbcf65e0",
+    "short_sha": "f024465",
+    "message": "feat: 支持使用 CurseForge CDN 访问 NeoForge 相关文件",
+    "created_at": "2026-10-30T12:49:01Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41058256894"
+  },
+  {
+    "id": 41050017762,
+    "sha": "a09d9c195b0ebbb14b81938ab6447a0f74051047",
+    "short_sha": "a09d9c1",
+    "message": "fix: 过滤模组中文名中的 Emoji",
+    "created_at": "2026-10-30T11:42:21Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41050017762"
+  },
+  {
+    "id": 41047709602,
+    "sha": "99168f5e52ab0a678cea12d03a383df0469680ff",
+    "short_sha": "99168f5",
+    "message": "fix: 游戏自定义分辨率过小时，放大镜画面被拉伸",
+    "created_at": "2026-10-30T11:23:03Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41047709602"
+  },
+  {
+    "id": 41045026933,
+    "sha": "39b92c29e0d01f68317aa9c9cb9a98f10be7cac6",
+    "short_sha": "39b92c2",
+    "message": "Merge pull request #2152 from ZalithLauncher/fix/keyboard-input\n\nfix: 非SDL环境物理键盘数字键重复输入 & SDL环境下物理键盘按键不可用",
+    "created_at": "2026-10-30T11:01:24Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41045026933"
+  },
+  {
+    "id": 41044975561,
+    "sha": "158625ec8dc4a70d524d0b49933fa7adf63c01fb",
+    "short_sha": "158625e",
+    "message": "fix: 非SDL环境物理键盘数字键重复输入 & SDL环境下物理键盘按键不可用",
+    "created_at": "2026-10-30T11:00:55Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41044975561"
+  },
+  {
     "id": 40998714192,
     "sha": "144767e74d26a3fd9c378b8cb13a7a92684c8635",
     "short_sha": "144767e",
@@ -334,69 +398,5 @@
     "message": "refactor: 重构页面切换动画体系，统一进出场动画 API 并重设动画设置",
     "created_at": "2026-10-27T16:12:38Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40538747580"
-  },
-  {
-    "id": 40499276792,
-    "sha": "1e43dfa529f4dd9aab068242dd592ba4b5fcbdd1",
-    "short_sha": "1e43dfa",
-    "message": "[Do not use!] Translated using Weblate (Arabic)\n\nCurrently translated at 38.8% (579 of 1491 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/ar/",
-    "created_at": "2026-10-27T11:51:21Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40499276792"
-  },
-  {
-    "id": 40494073297,
-    "sha": "6db6a184facf5008927017be32433515932c0821",
-    "short_sha": "6db6a18",
-    "message": "Merge pull request #2135 from ZalithLauncher/feat/microsoft-login-method-select\n\nfeat: 微软登录支持选择系统浏览器或内置浏览器完成设备码验证",
-    "created_at": "2026-10-27T11:09:57Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40494073297"
-  },
-  {
-    "id": 40494020666,
-    "sha": "3bc57b1e320e6d0e49fe341dee9eaf3ae68e2996",
-    "short_sha": "3bc57b1",
-    "message": "feat: 微软登录支持选择系统浏览器或内置浏览器完成设备码验证",
-    "created_at": "2026-10-27T11:09:08Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40494020666"
-  },
-  {
-    "id": 40487148936,
-    "sha": "2f40ef3ad9bcee88594d9e37d6a74bcfdacf9b21",
-    "short_sha": "2f40ef3",
-    "message": "Merge pull request #2134 from ZalithLauncher/feat/pull_to_refresh\n\nfeat: 为大部分页面支持下拉刷新",
-    "created_at": "2026-10-27T10:14:09Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40487148936"
-  },
-  {
-    "id": 40486767899,
-    "sha": "80d2fdfc148067e8da98dfda7cda25096d2b1b60",
-    "short_sha": "80d2fdf",
-    "message": "feat: 为大部分页面支持下拉刷新",
-    "created_at": "2026-10-27T10:12:56Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40486767899"
-  },
-  {
-    "id": 40477396866,
-    "sha": "8ce2a080b3424b17ed66dbdf16b5493acfef337d",
-    "short_sha": "8ce2a08",
-    "message": "feat: 添加无赞助者状态",
-    "created_at": "2026-10-27T08:59:11Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40477396866"
-  },
-  {
-    "id": 40476148368,
-    "sha": "c6579f0553470e9db4ddc2c60159de4942c1a111",
-    "short_sha": "c6579f0",
-    "message": "feat: 远端结算时展示上个月的赞助者",
-    "created_at": "2026-10-27T08:48:34Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40476148368"
-  },
-  {
-    "id": 40469717516,
-    "sha": "f98bbaa1decbd20fc15ed25a62732f8969f76d8e",
-    "short_sha": "f98bbaa",
-    "message": "chore: 调整赞助者查看项到“鸣谢”板块",
-    "created_at": "2026-10-27T07:51:52Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40469717516"
   }
 ]
