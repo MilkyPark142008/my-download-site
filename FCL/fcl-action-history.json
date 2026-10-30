@@ -8,6 +8,14 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41082818872"
   },
   {
+    "id": 41082818889,
+    "sha": "5e4d584cc205655be77415820945bb7b712929c6",
+    "short_sha": "5e4d584",
+    "message": "fix: 键盘开关状态随输入法真实显隐自动同步，修复经输入法内按键收起后再次呼出需点两次\n\n- API 30+ 按系统 insets 真值判断键盘可见性；旧版本用可视区域高度估算（与 JVMActivity 平推同源同阈，adjustResize 下必然收缩）\n- 布局回调轮询同步：键盘真实出现过之后又消失且有焦点时，认定输入法自行收起，走统一清理（清空、隐藏、焦点与指针捕获还给游戏视图）\n- imeSeenVisible 闩锁防呼出动画期间误判，呼出请求时重置",
+    "created_at": "2026-10-30T15:38:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41082818889"
+  },
+  {
     "id": 41073341163,
     "sha": "20b79c9acbfb558fe7c763e2bf9d32c8760be1a0",
     "short_sha": "20b79c9",
@@ -390,13 +398,5 @@
     "message": "Merge fix/solid-skin-layer: 皮肤 3D 预览恢复体素化第二层（复刻 3D Skin Layers）",
     "created_at": "2026-10-27T11:55:30Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40500023664"
-  },
-  {
-    "id": 40500023701,
-    "sha": "76b91059e2eb3cb4435bfa650358752b402b8a2b",
-    "short_sha": "76b9105",
-    "message": "Merge fix/solid-skin-layer: 皮肤 3D 预览恢复体素化第二层（复刻 3D Skin Layers）",
-    "created_at": "2026-10-27T11:55:30Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40500023701"
   }
 ]
