@@ -1,5 +1,221 @@
 [
   {
+    "id": 41175414297,
+    "sha": "cc5ad097975138f1bdc8d6bc0714eab6ef66a850",
+    "short_sha": "cc5ad09",
+    "message": "feat: SFPEW 改造为兼容层组合模式，对齐上游 AAMC 使用模型 (#1983)\n\n* feat: SFPEW 改造为兼容层组合模式，对齐上游 AAMC 使用模型\n\nSFPEW 官方定位是 OpenGL FPE 兼容包装层而非完整驱动，此前作为独立渲染器\n与 gl4es/Zink/MobileGlues 并列可选属定位误用。本变更将其改为叠加在真实\n后端之上的兼容层：\n\n- 移除独立 SFPEW 渲染器条目（ID_SFPEW 常量保留作配置 key）\n- 内置渲染器按 AAMC 同款硬编码规则：默认叠加，仅自带 FPE/完整 GL 的\n  Krypton Wrapper/Holy GL4ES/VGPU/Kopper Zink 关闭\n- 外部插件渲染器由渲染器选择对话框左下角新增的\"高级设置\"页控制：\n  兼容层全局开关默认关闭 + SFPEW_RELAXED_CONTEXT 默认关闭（strict）\n- 启动链路：注入 SFPEW_LAYER=1 与 SFPEW_EGL=POJAVEXEC_EGL（后端与\n  底座 EGL 同源），${gl_lib_name}/SDL_OPENGL_LIBRARY 换为包装层路径，\n  游戏 GL 符号经 LWJGL libname 从 SFPEW 句柄解析\n- native 桥按 SFPEW 文档宿主集成指引将 eglMakeCurrent/eglSwapBuffers\n  路由进包装层（记录上下文切换、swap 前清空立即模式批次），解析失败\n  回落系统 EGL；进程退出先 drain 再销毁上下文\n- 修复高级设置页亮色模式说明文字与背景对比度过低\n\n* feat: SFPEW 兼容层启用时按组合后能力修正 MG 版本注册与启动门控\n\n内置 MobileGlues 的兼容层硬编码启用，组合后旧版固定管线由层补齐\n（1.8.9 实测可跑），注册信息与版本门控同步修正：\n\n- MG 注册信息去掉 minMCver=1.17 与名称中 \"1.17+\"：层恒开，无下界\n- 启动门控：层启用时跳过渲染器 minMCver 下界警告（插件渲染器层\n  开启时同样受益）；maxMCver 上界保留——层不扩展渲染器现代 GL 上限\n- 渲染器列表展示：内置渲染器无版本边界显示\"全部版本\"，\n  插件无声明仍显示\"未知\"\n\n* Update RendererManager.kt\n\n* feat: 装有自实现 FPE 模拟的模组（Angelica/Actinium）时自动跳过 SFPEW 兼容层\n\n对齐上游 AAMC 的模组检测（\"Angelica IS the FPE emulator\"）：这类模组\n接管旧版渲染链，把固定管线调用重写为 modern GL，叠加层只剩透传开销\n（strict 模式每入口上下文核查 + 影子维护对 shader-heavy 负载可感知），\n且层的能力探测差异（desktop 版本串、529 符号面外的 EXT 拼写）对深度\n接管渲染状态机的模组存在未经验证的边缘。\n\n- RendererPlugin：启动链扫描 mods 命中 angelica/actinium（仅活跃模组）\n  即整层跳过（含内置渲染器硬编码启用者），检测日志落 INFO\n- LauncherHelper：链首 mods 扫描后接线，命中状态仅进程内有效\n- 版本门控与启动注入共用 isSfpewLayerEnabled，判定自动一致\n\nMuMu 实测：1.8.9+MG 放置 modid=angelica 的假模组后 SFPEW_LAYER/SFPEW_EGL\n零注入并落检测日志；移除后恢复注入。",
+    "created_at": "2026-10-31T06:09:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41175414297"
+  },
+  {
+    "id": 41175414263,
+    "sha": "cc5ad097975138f1bdc8d6bc0714eab6ef66a850",
+    "short_sha": "cc5ad09",
+    "message": "feat: SFPEW 改造为兼容层组合模式，对齐上游 AAMC 使用模型 (#1983)\n\n* feat: SFPEW 改造为兼容层组合模式，对齐上游 AAMC 使用模型\n\nSFPEW 官方定位是 OpenGL FPE 兼容包装层而非完整驱动，此前作为独立渲染器\n与 gl4es/Zink/MobileGlues 并列可选属定位误用。本变更将其改为叠加在真实\n后端之上的兼容层：\n\n- 移除独立 SFPEW 渲染器条目（ID_SFPEW 常量保留作配置 key）\n- 内置渲染器按 AAMC 同款硬编码规则：默认叠加，仅自带 FPE/完整 GL 的\n  Krypton Wrapper/Holy GL4ES/VGPU/Kopper Zink 关闭\n- 外部插件渲染器由渲染器选择对话框左下角新增的\"高级设置\"页控制：\n  兼容层全局开关默认关闭 + SFPEW_RELAXED_CONTEXT 默认关闭（strict）\n- 启动链路：注入 SFPEW_LAYER=1 与 SFPEW_EGL=POJAVEXEC_EGL（后端与\n  底座 EGL 同源），${gl_lib_name}/SDL_OPENGL_LIBRARY 换为包装层路径，\n  游戏 GL 符号经 LWJGL libname 从 SFPEW 句柄解析\n- native 桥按 SFPEW 文档宿主集成指引将 eglMakeCurrent/eglSwapBuffers\n  路由进包装层（记录上下文切换、swap 前清空立即模式批次），解析失败\n  回落系统 EGL；进程退出先 drain 再销毁上下文\n- 修复高级设置页亮色模式说明文字与背景对比度过低\n\n* feat: SFPEW 兼容层启用时按组合后能力修正 MG 版本注册与启动门控\n\n内置 MobileGlues 的兼容层硬编码启用，组合后旧版固定管线由层补齐\n（1.8.9 实测可跑），注册信息与版本门控同步修正：\n\n- MG 注册信息去掉 minMCver=1.17 与名称中 \"1.17+\"：层恒开，无下界\n- 启动门控：层启用时跳过渲染器 minMCver 下界警告（插件渲染器层\n  开启时同样受益）；maxMCver 上界保留——层不扩展渲染器现代 GL 上限\n- 渲染器列表展示：内置渲染器无版本边界显示\"全部版本\"，\n  插件无声明仍显示\"未知\"\n\n* Update RendererManager.kt\n\n* feat: 装有自实现 FPE 模拟的模组（Angelica/Actinium）时自动跳过 SFPEW 兼容层\n\n对齐上游 AAMC 的模组检测（\"Angelica IS the FPE emulator\"）：这类模组\n接管旧版渲染链，把固定管线调用重写为 modern GL，叠加层只剩透传开销\n（strict 模式每入口上下文核查 + 影子维护对 shader-heavy 负载可感知），\n且层的能力探测差异（desktop 版本串、529 符号面外的 EXT 拼写）对深度\n接管渲染状态机的模组存在未经验证的边缘。\n\n- RendererPlugin：启动链扫描 mods 命中 angelica/actinium（仅活跃模组）\n  即整层跳过（含内置渲染器硬编码启用者），检测日志落 INFO\n- LauncherHelper：链首 mods 扫描后接线，命中状态仅进程内有效\n- 版本门控与启动注入共用 isSfpewLayerEnabled，判定自动一致\n\nMuMu 实测：1.8.9+MG 放置 modid=angelica 的假模组后 SFPEW_LAYER/SFPEW_EGL\n零注入并落检测日志；移除后恢复注入。",
+    "created_at": "2026-10-31T06:09:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41175414263"
+  },
+  {
+    "id": 41174996485,
+    "sha": "ff9c445e8af3327a09e87d00aa7ae1d726e69379",
+    "short_sha": "ff9c445",
+    "message": "feat: 装有自实现 FPE 模拟的模组（Angelica/Actinium）时自动跳过 SFPEW 兼容层\n\n对齐上游 AAMC 的模组检测（\"Angelica IS the FPE emulator\"）：这类模组\n接管旧版渲染链，把固定管线调用重写为 modern GL，叠加层只剩透传开销\n（strict 模式每入口上下文核查 + 影子维护对 shader-heavy 负载可感知），\n且层的能力探测差异（desktop 版本串、529 符号面外的 EXT 拼写）对深度\n接管渲染状态机的模组存在未经验证的边缘。\n\n- RendererPlugin：启动链扫描 mods 命中 angelica/actinium（仅活跃模组）\n  即整层跳过（含内置渲染器硬编码启用者），检测日志落 INFO\n- LauncherHelper：链首 mods 扫描后接线，命中状态仅进程内有效\n- 版本门控与启动注入共用 isSfpewLayerEnabled，判定自动一致\n\nMuMu 实测：1.8.9+MG 放置 modid=angelica 的假模组后 SFPEW_LAYER/SFPEW_EGL\n零注入并落检测日志；移除后恢复注入。",
+    "created_at": "2026-10-31T06:02:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41174996485"
+  },
+  {
+    "id": 41174996466,
+    "sha": "ff9c445e8af3327a09e87d00aa7ae1d726e69379",
+    "short_sha": "ff9c445",
+    "message": "feat: 装有自实现 FPE 模拟的模组（Angelica/Actinium）时自动跳过 SFPEW 兼容层\n\n对齐上游 AAMC 的模组检测（\"Angelica IS the FPE emulator\"）：这类模组\n接管旧版渲染链，把固定管线调用重写为 modern GL，叠加层只剩透传开销\n（strict 模式每入口上下文核查 + 影子维护对 shader-heavy 负载可感知），\n且层的能力探测差异（desktop 版本串、529 符号面外的 EXT 拼写）对深度\n接管渲染状态机的模组存在未经验证的边缘。\n\n- RendererPlugin：启动链扫描 mods 命中 angelica/actinium（仅活跃模组）\n  即整层跳过（含内置渲染器硬编码启用者），检测日志落 INFO\n- LauncherHelper：链首 mods 扫描后接线，命中状态仅进程内有效\n- 版本门控与启动注入共用 isSfpewLayerEnabled，判定自动一致\n\nMuMu 实测：1.8.9+MG 放置 modid=angelica 的假模组后 SFPEW_LAYER/SFPEW_EGL\n零注入并落检测日志；移除后恢复注入。",
+    "created_at": "2026-10-31T06:02:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41174996466"
+  },
+  {
+    "id": 41174992533,
+    "sha": "ff9c445e8af3327a09e87d00aa7ae1d726e69379",
+    "short_sha": "ff9c445",
+    "message": "feat: 装有自实现 FPE 模拟的模组（Angelica/Actinium）时自动跳过 SFPEW 兼容层\n\n对齐上游 AAMC 的模组检测（\"Angelica IS the FPE emulator\"）：这类模组\n接管旧版渲染链，把固定管线调用重写为 modern GL，叠加层只剩透传开销\n（strict 模式每入口上下文核查 + 影子维护对 shader-heavy 负载可感知），\n且层的能力探测差异（desktop 版本串、529 符号面外的 EXT 拼写）对深度\n接管渲染状态机的模组存在未经验证的边缘。\n\n- RendererPlugin：启动链扫描 mods 命中 angelica/actinium（仅活跃模组）\n  即整层跳过（含内置渲染器硬编码启用者），检测日志落 INFO\n- LauncherHelper：链首 mods 扫描后接线，命中状态仅进程内有效\n- 版本门控与启动注入共用 isSfpewLayerEnabled，判定自动一致\n\nMuMu 实测：1.8.9+MG 放置 modid=angelica 的假模组后 SFPEW_LAYER/SFPEW_EGL\n零注入并落检测日志；移除后恢复注入。",
+    "created_at": "2026-10-31T06:02:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41174992533"
+  },
+  {
+    "id": 41174992649,
+    "sha": "ff9c445e8af3327a09e87d00aa7ae1d726e69379",
+    "short_sha": "ff9c445",
+    "message": "feat: 装有自实现 FPE 模拟的模组（Angelica/Actinium）时自动跳过 SFPEW 兼容层\n\n对齐上游 AAMC 的模组检测（\"Angelica IS the FPE emulator\"）：这类模组\n接管旧版渲染链，把固定管线调用重写为 modern GL，叠加层只剩透传开销\n（strict 模式每入口上下文核查 + 影子维护对 shader-heavy 负载可感知），\n且层的能力探测差异（desktop 版本串、529 符号面外的 EXT 拼写）对深度\n接管渲染状态机的模组存在未经验证的边缘。\n\n- RendererPlugin：启动链扫描 mods 命中 angelica/actinium（仅活跃模组）\n  即整层跳过（含内置渲染器硬编码启用者），检测日志落 INFO\n- LauncherHelper：链首 mods 扫描后接线，命中状态仅进程内有效\n- 版本门控与启动注入共用 isSfpewLayerEnabled，判定自动一致\n\nMuMu 实测：1.8.9+MG 放置 modid=angelica 的假模组后 SFPEW_LAYER/SFPEW_EGL\n零注入并落检测日志；移除后恢复注入。",
+    "created_at": "2026-10-31T06:02:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41174992649"
+  },
+  {
+    "id": 41173893852,
+    "sha": "4b6be95f72833698a5a6ba9fa635aa6396bffdd2",
+    "short_sha": "4b6be95",
+    "message": "fix: MultiMC 整合包启动崩溃——游戏参数被两代格式重复拼接,ModLauncher 抛 MultipleArgumentsForOptionException\n\n根因:meta.multimc.org 对 net.neoforged 等加载器的 Json-Patch 以 legacy minecraftArguments\n承载全套标准参数与加载器附加项;导入合并后版本 json 同时存在 legacy 与新式 arguments.game,\nDefaultLauncher 把两代格式各拼一遍并再补一份默认分辨率参数,--gameDir/--username/--width\n等重复出现,ModLauncher 的 joptsimple 直接抛出 MultipleArgumentsForOptionException。\n\n修复两处:\n- DefaultLauncher:legacy minecraftArguments 与新式 arguments.game 互斥——legacy 非空时\n  只拼 legacy 并补 DEFAULT_GAME_ARGUMENTS(width/height 一次),否则走 arguments.game。\n  已导入的存量实例无需重新导入即可正常启动。\n- MultiMCInstancePatch.resolveArtifact:合成参数改以新式 game args 承载(对齐 HMCL main\n  的演进方向),extractExtraGameArguments 剥离官方标准占位参数对(flag + ${...} 占位值,\n  含 --clientId/--xuid/--userProperties),只保留加载器附加项;flag 带非占位符具体值时\n  视为有意覆盖原样保留。注意 FCL 保留原版 base patch 叠加且 Arguments.merge 为拼接语义,\n  与 HMCL main 的整体替换清单不同,不能直接照抄其 addGameArguments 全量承载的做法。\n\n测试:新增 MultiMCLaunchArgsTest(9 用例)——以修改前后拼接逻辑的参照实现驱动真实的\nresolveArtifact/addPatch/resolve/Arguments 解析:单一代际格式的版本修改前后输出完全一致;\n两条修复路径(存量 legacy 路径 / 新导入新式路径)输出精确断言;多重集余量恰为重复部分,\n证明修复只去重零丢失。已同步 HMCL #7077 之后的 main 上全量单测通过(仅 ControlConverterTest\n2 个预存失败)。",
+    "created_at": "2026-10-31T05:45:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41173893852"
+  },
+  {
+    "id": 41173893960,
+    "sha": "4b6be95f72833698a5a6ba9fa635aa6396bffdd2",
+    "short_sha": "4b6be95",
+    "message": "fix: MultiMC 整合包启动崩溃——游戏参数被两代格式重复拼接,ModLauncher 抛 MultipleArgumentsForOptionException\n\n根因:meta.multimc.org 对 net.neoforged 等加载器的 Json-Patch 以 legacy minecraftArguments\n承载全套标准参数与加载器附加项;导入合并后版本 json 同时存在 legacy 与新式 arguments.game,\nDefaultLauncher 把两代格式各拼一遍并再补一份默认分辨率参数,--gameDir/--username/--width\n等重复出现,ModLauncher 的 joptsimple 直接抛出 MultipleArgumentsForOptionException。\n\n修复两处:\n- DefaultLauncher:legacy minecraftArguments 与新式 arguments.game 互斥——legacy 非空时\n  只拼 legacy 并补 DEFAULT_GAME_ARGUMENTS(width/height 一次),否则走 arguments.game。\n  已导入的存量实例无需重新导入即可正常启动。\n- MultiMCInstancePatch.resolveArtifact:合成参数改以新式 game args 承载(对齐 HMCL main\n  的演进方向),extractExtraGameArguments 剥离官方标准占位参数对(flag + ${...} 占位值,\n  含 --clientId/--xuid/--userProperties),只保留加载器附加项;flag 带非占位符具体值时\n  视为有意覆盖原样保留。注意 FCL 保留原版 base patch 叠加且 Arguments.merge 为拼接语义,\n  与 HMCL main 的整体替换清单不同,不能直接照抄其 addGameArguments 全量承载的做法。\n\n测试:新增 MultiMCLaunchArgsTest(9 用例)——以修改前后拼接逻辑的参照实现驱动真实的\nresolveArtifact/addPatch/resolve/Arguments 解析:单一代际格式的版本修改前后输出完全一致;\n两条修复路径(存量 legacy 路径 / 新导入新式路径)输出精确断言;多重集余量恰为重复部分,\n证明修复只去重零丢失。已同步 HMCL #7077 之后的 main 上全量单测通过(仅 ControlConverterTest\n2 个预存失败)。",
+    "created_at": "2026-10-31T05:45:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41173893960"
+  },
+  {
+    "id": 41173867253,
+    "sha": "4b6be95f72833698a5a6ba9fa635aa6396bffdd2",
+    "short_sha": "4b6be95",
+    "message": "fix: MultiMC 整合包启动崩溃——游戏参数被两代格式重复拼接,ModLauncher 抛 MultipleArgumentsForOptionException\n\n根因:meta.multimc.org 对 net.neoforged 等加载器的 Json-Patch 以 legacy minecraftArguments\n承载全套标准参数与加载器附加项;导入合并后版本 json 同时存在 legacy 与新式 arguments.game,\nDefaultLauncher 把两代格式各拼一遍并再补一份默认分辨率参数,--gameDir/--username/--width\n等重复出现,ModLauncher 的 joptsimple 直接抛出 MultipleArgumentsForOptionException。\n\n修复两处:\n- DefaultLauncher:legacy minecraftArguments 与新式 arguments.game 互斥——legacy 非空时\n  只拼 legacy 并补 DEFAULT_GAME_ARGUMENTS(width/height 一次),否则走 arguments.game。\n  已导入的存量实例无需重新导入即可正常启动。\n- MultiMCInstancePatch.resolveArtifact:合成参数改以新式 game args 承载(对齐 HMCL main\n  的演进方向),extractExtraGameArguments 剥离官方标准占位参数对(flag + ${...} 占位值,\n  含 --clientId/--xuid/--userProperties),只保留加载器附加项;flag 带非占位符具体值时\n  视为有意覆盖原样保留。注意 FCL 保留原版 base patch 叠加且 Arguments.merge 为拼接语义,\n  与 HMCL main 的整体替换清单不同,不能直接照抄其 addGameArguments 全量承载的做法。\n\n测试:新增 MultiMCLaunchArgsTest(9 用例)——以修改前后拼接逻辑的参照实现驱动真实的\nresolveArtifact/addPatch/resolve/Arguments 解析:单一代际格式的版本修改前后输出完全一致;\n两条修复路径(存量 legacy 路径 / 新导入新式路径)输出精确断言;多重集余量恰为重复部分,\n证明修复只去重零丢失。已同步 HMCL #7077 之后的 main 上全量单测通过(仅 ControlConverterTest\n2 个预存失败)。",
+    "created_at": "2026-10-31T05:45:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41173867253"
+  },
+  {
+    "id": 41173867215,
+    "sha": "4b6be95f72833698a5a6ba9fa635aa6396bffdd2",
+    "short_sha": "4b6be95",
+    "message": "fix: MultiMC 整合包启动崩溃——游戏参数被两代格式重复拼接,ModLauncher 抛 MultipleArgumentsForOptionException\n\n根因:meta.multimc.org 对 net.neoforged 等加载器的 Json-Patch 以 legacy minecraftArguments\n承载全套标准参数与加载器附加项;导入合并后版本 json 同时存在 legacy 与新式 arguments.game,\nDefaultLauncher 把两代格式各拼一遍并再补一份默认分辨率参数,--gameDir/--username/--width\n等重复出现,ModLauncher 的 joptsimple 直接抛出 MultipleArgumentsForOptionException。\n\n修复两处:\n- DefaultLauncher:legacy minecraftArguments 与新式 arguments.game 互斥——legacy 非空时\n  只拼 legacy 并补 DEFAULT_GAME_ARGUMENTS(width/height 一次),否则走 arguments.game。\n  已导入的存量实例无需重新导入即可正常启动。\n- MultiMCInstancePatch.resolveArtifact:合成参数改以新式 game args 承载(对齐 HMCL main\n  的演进方向),extractExtraGameArguments 剥离官方标准占位参数对(flag + ${...} 占位值,\n  含 --clientId/--xuid/--userProperties),只保留加载器附加项;flag 带非占位符具体值时\n  视为有意覆盖原样保留。注意 FCL 保留原版 base patch 叠加且 Arguments.merge 为拼接语义,\n  与 HMCL main 的整体替换清单不同,不能直接照抄其 addGameArguments 全量承载的做法。\n\n测试:新增 MultiMCLaunchArgsTest(9 用例)——以修改前后拼接逻辑的参照实现驱动真实的\nresolveArtifact/addPatch/resolve/Arguments 解析:单一代际格式的版本修改前后输出完全一致;\n两条修复路径(存量 legacy 路径 / 新导入新式路径)输出精确断言;多重集余量恰为重复部分,\n证明修复只去重零丢失。已同步 HMCL #7077 之后的 main 上全量单测通过(仅 ControlConverterTest\n2 个预存失败)。",
+    "created_at": "2026-10-31T05:45:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41173867215"
+  },
+  {
+    "id": 41170049129,
+    "sha": "d554cc4fdb25be14662f352b9491dcee1f869715",
+    "short_sha": "d554cc4",
+    "message": "feat: 同步 HMCL #7077——过滤模组中文名中的 Emoji",
+    "created_at": "2026-10-31T04:46:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41170049129"
+  },
+  {
+    "id": 41169816988,
+    "sha": "6ca800f11297168e9ddedcca292b4e38490d38d5",
+    "short_sha": "6ca800f",
+    "message": "feat: 同步 HMCL #7092——NeoForged Maven 相关文件支持 CurseForge CDN 镜像候选\n\n- NeoForgeRemoteVersion：新增 neoforged.forgecdn.net 元数据镜像常量与\n  getMirrorCandidates(url, mirrorFirst) 规则（/releases/ 路径按 mirrorFirst\n  在官方源与 BMCLAPI 间排序，一律追加 forgecdn）\n- NeoForgeOfficialVersionList：元数据 GetTask 改用 [原URL, 镜像URL] 双候选\n- Mojang/BMCLAPI DownloadProvider：maven.neoforged.net 专用镜像规则拦截\n  （覆盖 installer.jar 与库文件下载候选）\n\n同步自 HMCL-dev/HMCL@5ad4880 (#7092)",
+    "created_at": "2026-10-31T04:43:46Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41169816988"
+  },
+  {
+    "id": 41169816795,
+    "sha": "6ca800f11297168e9ddedcca292b4e38490d38d5",
+    "short_sha": "6ca800f",
+    "message": "feat: 同步 HMCL #7092——NeoForged Maven 相关文件支持 CurseForge CDN 镜像候选\n\n- NeoForgeRemoteVersion：新增 neoforged.forgecdn.net 元数据镜像常量与\n  getMirrorCandidates(url, mirrorFirst) 规则（/releases/ 路径按 mirrorFirst\n  在官方源与 BMCLAPI 间排序，一律追加 forgecdn）\n- NeoForgeOfficialVersionList：元数据 GetTask 改用 [原URL, 镜像URL] 双候选\n- Mojang/BMCLAPI DownloadProvider：maven.neoforged.net 专用镜像规则拦截\n  （覆盖 installer.jar 与库文件下载候选）\n\n同步自 HMCL-dev/HMCL@5ad4880 (#7092)",
+    "created_at": "2026-10-31T04:43:46Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41169816795"
+  },
+  {
+    "id": 41168711304,
+    "sha": "6345b6d1ba81f370775ce8b6ec6d04f4f71129be",
+    "short_sha": "6345b6d",
+    "message": "feat: 输入法遮挡画面时提供放大镜窗口 (#1981)\n\n* feat: 输入法遮挡画面时提供放大镜窗口\n\n* fix: 游戏自定义分辨率过小时，放大镜画面被拉伸\n\n* refactor: 放大镜迁移至 Kotlin，修复平移死区与可见性细节\n\n- 按项目惯例将 InputMagnifierView 迁移为 Kotlin\n- 修复低分辨率帧下取样区域被钉死在整帧适配的死区：zoom=1 为整帧概览，\n  任何放大立即裁切且可平移（区域 = 视口 × fitScale ÷ zoom，等比不拉伸）\n- 平移加 0.5 阻尼，小窗口内更易定位\n- 放大镜画面回读按 33ms 节流，打开时强制捕获\n- 描边改走 foreground 绘制（background 描边会被 viewport 画面盖住），\n  白色 3dp 圆角边框提示当前为放大画面\n- 手动打开放大镜时重置 dismissedForInput，避免输入法动画抖动将其自动收回\n- 移除搜索图标被运行时覆盖的 tint\n\n---------\n\nCo-authored-by: ShirosakiMio <852468399@qq.com>",
+    "created_at": "2026-10-31T04:28:29Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41168711304"
+  },
+  {
+    "id": 41168711299,
+    "sha": "6345b6d1ba81f370775ce8b6ec6d04f4f71129be",
+    "short_sha": "6345b6d",
+    "message": "feat: 输入法遮挡画面时提供放大镜窗口 (#1981)\n\n* feat: 输入法遮挡画面时提供放大镜窗口\n\n* fix: 游戏自定义分辨率过小时，放大镜画面被拉伸\n\n* refactor: 放大镜迁移至 Kotlin，修复平移死区与可见性细节\n\n- 按项目惯例将 InputMagnifierView 迁移为 Kotlin\n- 修复低分辨率帧下取样区域被钉死在整帧适配的死区：zoom=1 为整帧概览，\n  任何放大立即裁切且可平移（区域 = 视口 × fitScale ÷ zoom，等比不拉伸）\n- 平移加 0.5 阻尼，小窗口内更易定位\n- 放大镜画面回读按 33ms 节流，打开时强制捕获\n- 描边改走 foreground 绘制（background 描边会被 viewport 画面盖住），\n  白色 3dp 圆角边框提示当前为放大画面\n- 手动打开放大镜时重置 dismissedForInput，避免输入法动画抖动将其自动收回\n- 移除搜索图标被运行时覆盖的 tint\n\n---------\n\nCo-authored-by: ShirosakiMio <852468399@qq.com>",
+    "created_at": "2026-10-31T04:28:29Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41168711299"
+  },
+  {
+    "id": 41166880227,
+    "sha": "2092e95df4c9c9ff76fd689e8701f277cbafbd81",
+    "short_sha": "2092e95",
+    "message": "Update RendererManager.kt",
+    "created_at": "2026-10-31T04:02:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166880227"
+  },
+  {
+    "id": 41166880191,
+    "sha": "2092e95df4c9c9ff76fd689e8701f277cbafbd81",
+    "short_sha": "2092e95",
+    "message": "Update RendererManager.kt",
+    "created_at": "2026-10-31T04:02:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166880191"
+  },
+  {
+    "id": 41166875985,
+    "sha": "2092e95df4c9c9ff76fd689e8701f277cbafbd81",
+    "short_sha": "2092e95",
+    "message": "Update RendererManager.kt",
+    "created_at": "2026-10-31T04:02:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166875985"
+  },
+  {
+    "id": 41166875988,
+    "sha": "2092e95df4c9c9ff76fd689e8701f277cbafbd81",
+    "short_sha": "2092e95",
+    "message": "Update RendererManager.kt",
+    "created_at": "2026-10-31T04:02:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166875988"
+  },
+  {
+    "id": 41166614244,
+    "sha": "cb93daf66fdd70ba0c481a563d8fa838920bfa2f",
+    "short_sha": "cb93daf",
+    "message": "feat: SFPEW 兼容层启用时按组合后能力修正 MG 版本注册与启动门控\n\n内置 MobileGlues 的兼容层硬编码启用，组合后旧版固定管线由层补齐\n（1.8.9 实测可跑），注册信息与版本门控同步修正：\n\n- MG 注册信息去掉 minMCver=1.17 与名称中 \"1.17+\"：层恒开，无下界\n- 启动门控：层启用时跳过渲染器 minMCver 下界警告（插件渲染器层\n  开启时同样受益）；maxMCver 上界保留——层不扩展渲染器现代 GL 上限\n- 渲染器列表展示：内置渲染器无版本边界显示\"全部版本\"，\n  插件无声明仍显示\"未知\"",
+    "created_at": "2026-10-31T03:58:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166614244"
+  },
+  {
+    "id": 41166614213,
+    "sha": "cb93daf66fdd70ba0c481a563d8fa838920bfa2f",
+    "short_sha": "cb93daf",
+    "message": "feat: SFPEW 兼容层启用时按组合后能力修正 MG 版本注册与启动门控\n\n内置 MobileGlues 的兼容层硬编码启用，组合后旧版固定管线由层补齐\n（1.8.9 实测可跑），注册信息与版本门控同步修正：\n\n- MG 注册信息去掉 minMCver=1.17 与名称中 \"1.17+\"：层恒开，无下界\n- 启动门控：层启用时跳过渲染器 minMCver 下界警告（插件渲染器层\n  开启时同样受益）；maxMCver 上界保留——层不扩展渲染器现代 GL 上限\n- 渲染器列表展示：内置渲染器无版本边界显示\"全部版本\"，\n  插件无声明仍显示\"未知\"",
+    "created_at": "2026-10-31T03:58:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166614213"
+  },
+  {
+    "id": 41166610334,
+    "sha": "cb93daf66fdd70ba0c481a563d8fa838920bfa2f",
+    "short_sha": "cb93daf",
+    "message": "feat: SFPEW 兼容层启用时按组合后能力修正 MG 版本注册与启动门控\n\n内置 MobileGlues 的兼容层硬编码启用，组合后旧版固定管线由层补齐\n（1.8.9 实测可跑），注册信息与版本门控同步修正：\n\n- MG 注册信息去掉 minMCver=1.17 与名称中 \"1.17+\"：层恒开，无下界\n- 启动门控：层启用时跳过渲染器 minMCver 下界警告（插件渲染器层\n  开启时同样受益）；maxMCver 上界保留——层不扩展渲染器现代 GL 上限\n- 渲染器列表展示：内置渲染器无版本边界显示\"全部版本\"，\n  插件无声明仍显示\"未知\"",
+    "created_at": "2026-10-31T03:58:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166610334"
+  },
+  {
+    "id": 41166610300,
+    "sha": "cb93daf66fdd70ba0c481a563d8fa838920bfa2f",
+    "short_sha": "cb93daf",
+    "message": "feat: SFPEW 兼容层启用时按组合后能力修正 MG 版本注册与启动门控\n\n内置 MobileGlues 的兼容层硬编码启用，组合后旧版固定管线由层补齐\n（1.8.9 实测可跑），注册信息与版本门控同步修正：\n\n- MG 注册信息去掉 minMCver=1.17 与名称中 \"1.17+\"：层恒开，无下界\n- 启动门控：层启用时跳过渲染器 minMCver 下界警告（插件渲染器层\n  开启时同样受益）；maxMCver 上界保留——层不扩展渲染器现代 GL 上限\n- 渲染器列表展示：内置渲染器无版本边界显示\"全部版本\"，\n  插件无声明仍显示\"未知\"",
+    "created_at": "2026-10-31T03:58:30Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166610300"
+  },
+  {
+    "id": 41165739968,
+    "sha": "7bbdc3c412a0964ff260feec409140884fbbd85d",
+    "short_sha": "7bbdc3c",
+    "message": "feat: SFPEW 改造为兼容层组合模式，对齐上游 AAMC 使用模型\n\nSFPEW 官方定位是 OpenGL FPE 兼容包装层而非完整驱动，此前作为独立渲染器\n与 gl4es/Zink/MobileGlues 并列可选属定位误用。本变更将其改为叠加在真实\n后端之上的兼容层：\n\n- 移除独立 SFPEW 渲染器条目（ID_SFPEW 常量保留作配置 key）\n- 内置渲染器按 AAMC 同款硬编码规则：默认叠加，仅自带 FPE/完整 GL 的\n  Krypton Wrapper/Holy GL4ES/VGPU/Kopper Zink 关闭\n- 外部插件渲染器由渲染器选择对话框左下角新增的\"高级设置\"页控制：\n  兼容层全局开关默认关闭 + SFPEW_RELAXED_CONTEXT 默认关闭（strict）\n- 启动链路：注入 SFPEW_LAYER=1 与 SFPEW_EGL=POJAVEXEC_EGL（后端与\n  底座 EGL 同源），${gl_lib_name}/SDL_OPENGL_LIBRARY 换为包装层路径，\n  游戏 GL 符号经 LWJGL libname 从 SFPEW 句柄解析\n- native 桥按 SFPEW 文档宿主集成指引将 eglMakeCurrent/eglSwapBuffers\n  路由进包装层（记录上下文切换、swap 前清空立即模式批次），解析失败\n  回落系统 EGL；进程退出先 drain 再销毁上下文\n- 修复高级设置页亮色模式说明文字与背景对比度过低",
+    "created_at": "2026-10-31T03:44:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41165739968"
+  },
+  {
+    "id": 41165739915,
+    "sha": "7bbdc3c412a0964ff260feec409140884fbbd85d",
+    "short_sha": "7bbdc3c",
+    "message": "feat: SFPEW 改造为兼容层组合模式，对齐上游 AAMC 使用模型\n\nSFPEW 官方定位是 OpenGL FPE 兼容包装层而非完整驱动，此前作为独立渲染器\n与 gl4es/Zink/MobileGlues 并列可选属定位误用。本变更将其改为叠加在真实\n后端之上的兼容层：\n\n- 移除独立 SFPEW 渲染器条目（ID_SFPEW 常量保留作配置 key）\n- 内置渲染器按 AAMC 同款硬编码规则：默认叠加，仅自带 FPE/完整 GL 的\n  Krypton Wrapper/Holy GL4ES/VGPU/Kopper Zink 关闭\n- 外部插件渲染器由渲染器选择对话框左下角新增的\"高级设置\"页控制：\n  兼容层全局开关默认关闭 + SFPEW_RELAXED_CONTEXT 默认关闭（strict）\n- 启动链路：注入 SFPEW_LAYER=1 与 SFPEW_EGL=POJAVEXEC_EGL（后端与\n  底座 EGL 同源），${gl_lib_name}/SDL_OPENGL_LIBRARY 换为包装层路径，\n  游戏 GL 符号经 LWJGL libname 从 SFPEW 句柄解析\n- native 桥按 SFPEW 文档宿主集成指引将 eglMakeCurrent/eglSwapBuffers\n  路由进包装层（记录上下文切换、swap 前清空立即模式批次），解析失败\n  回落系统 EGL；进程退出先 drain 再销毁上下文\n- 修复高级设置页亮色模式说明文字与背景对比度过低",
+    "created_at": "2026-10-31T03:44:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41165739915"
+  },
+  {
+    "id": 41165707843,
+    "sha": "7bbdc3c412a0964ff260feec409140884fbbd85d",
+    "short_sha": "7bbdc3c",
+    "message": "feat: SFPEW 改造为兼容层组合模式，对齐上游 AAMC 使用模型\n\nSFPEW 官方定位是 OpenGL FPE 兼容包装层而非完整驱动，此前作为独立渲染器\n与 gl4es/Zink/MobileGlues 并列可选属定位误用。本变更将其改为叠加在真实\n后端之上的兼容层：\n\n- 移除独立 SFPEW 渲染器条目（ID_SFPEW 常量保留作配置 key）\n- 内置渲染器按 AAMC 同款硬编码规则：默认叠加，仅自带 FPE/完整 GL 的\n  Krypton Wrapper/Holy GL4ES/VGPU/Kopper Zink 关闭\n- 外部插件渲染器由渲染器选择对话框左下角新增的\"高级设置\"页控制：\n  兼容层全局开关默认关闭 + SFPEW_RELAXED_CONTEXT 默认关闭（strict）\n- 启动链路：注入 SFPEW_LAYER=1 与 SFPEW_EGL=POJAVEXEC_EGL（后端与\n  底座 EGL 同源），${gl_lib_name}/SDL_OPENGL_LIBRARY 换为包装层路径，\n  游戏 GL 符号经 LWJGL libname 从 SFPEW 句柄解析\n- native 桥按 SFPEW 文档宿主集成指引将 eglMakeCurrent/eglSwapBuffers\n  路由进包装层（记录上下文切换、swap 前清空立即模式批次），解析失败\n  回落系统 EGL；进程退出先 drain 再销毁上下文\n- 修复高级设置页亮色模式说明文字与背景对比度过低",
+    "created_at": "2026-10-31T03:44:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41165707843"
+  },
+  {
+    "id": 41165707541,
+    "sha": "7bbdc3c412a0964ff260feec409140884fbbd85d",
+    "short_sha": "7bbdc3c",
+    "message": "feat: SFPEW 改造为兼容层组合模式，对齐上游 AAMC 使用模型\n\nSFPEW 官方定位是 OpenGL FPE 兼容包装层而非完整驱动，此前作为独立渲染器\n与 gl4es/Zink/MobileGlues 并列可选属定位误用。本变更将其改为叠加在真实\n后端之上的兼容层：\n\n- 移除独立 SFPEW 渲染器条目（ID_SFPEW 常量保留作配置 key）\n- 内置渲染器按 AAMC 同款硬编码规则：默认叠加，仅自带 FPE/完整 GL 的\n  Krypton Wrapper/Holy GL4ES/VGPU/Kopper Zink 关闭\n- 外部插件渲染器由渲染器选择对话框左下角新增的\"高级设置\"页控制：\n  兼容层全局开关默认关闭 + SFPEW_RELAXED_CONTEXT 默认关闭（strict）\n- 启动链路：注入 SFPEW_LAYER=1 与 SFPEW_EGL=POJAVEXEC_EGL（后端与\n  底座 EGL 同源），${gl_lib_name}/SDL_OPENGL_LIBRARY 换为包装层路径，\n  游戏 GL 符号经 LWJGL libname 从 SFPEW 句柄解析\n- native 桥按 SFPEW 文档宿主集成指引将 eglMakeCurrent/eglSwapBuffers\n  路由进包装层（记录上下文切换、swap 前清空立即模式批次），解析失败\n  回落系统 EGL；进程退出先 drain 再销毁上下文\n- 修复高级设置页亮色模式说明文字与背景对比度过低",
+    "created_at": "2026-10-31T03:44:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41165707541"
+  },
+  {
     "id": 41082818872,
     "sha": "5e4d584cc205655be77415820945bb7b712929c6",
     "short_sha": "5e4d584",
@@ -182,221 +398,5 @@
     "message": "fix: 主题色透明度<100% 时下载页 item 透出垫底侧滑收藏按钮，SwipeMenuLayout 关闭态隐藏菜单层（INVISIBLE 保测量）",
     "created_at": "2026-10-28T09:53:39Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40668324017"
-  },
-  {
-    "id": 40668323989,
-    "sha": "fc843f175af40106e8d8c8de4b3f7cebc6a93795",
-    "short_sha": "fc843f1",
-    "message": "fix: 主题色透明度<100% 时下载页 item 透出垫底侧滑收藏按钮，SwipeMenuLayout 关闭态隐藏菜单层（INVISIBLE 保测量）",
-    "created_at": "2026-10-28T09:53:39Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40668323989"
-  },
-  {
-    "id": 40665461175,
-    "sha": "dd149fab901df91371274565b13831a67ba4fb38",
-    "short_sha": "dd149fa",
-    "message": "feat: 每版本渲染器覆盖——版本列表入口、全版本 Spinner 设置对话框、渲染器修改遮蔽警告\n\n- Profile.rendererOverrides（版本 id → renderer id）随配置 JSON 持久化，独立于 usesGlobal；\n  启动解析单点接入 getLaunchOptions：覆盖 > 特定设置 > 全局\n- 版本列表页左下角新增静态渲染器入口，打开 RendererOverrideDialog：\n  列出当前配置全部版本逐行 FCLSpinner 指定渲染器，默认「跟随设置」（即不覆盖）\n- 覆盖存在时从别处修改渲染器会弹遮蔽提示并提供三选项：\n  更新覆盖（覆盖改为本次选择）/清除覆盖（版本回到跟随设置）/保留覆盖\n  - 全局设置页仅检测当前选中版本，与既有「独立设置版本」提示合并展示\n  - 长按启动被遮蔽时不自动启动，更新/清除覆盖后沿用本次选择继续启动\n- 特定游戏设置页/长按启动的渲染器选择回调改传 Renderer（id 供覆盖比对）",
-    "created_at": "2026-10-28T09:35:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40665461175"
-  },
-  {
-    "id": 40665461232,
-    "sha": "dd149fab901df91371274565b13831a67ba4fb38",
-    "short_sha": "dd149fa",
-    "message": "feat: 每版本渲染器覆盖——版本列表入口、全版本 Spinner 设置对话框、渲染器修改遮蔽警告\n\n- Profile.rendererOverrides（版本 id → renderer id）随配置 JSON 持久化，独立于 usesGlobal；\n  启动解析单点接入 getLaunchOptions：覆盖 > 特定设置 > 全局\n- 版本列表页左下角新增静态渲染器入口，打开 RendererOverrideDialog：\n  列出当前配置全部版本逐行 FCLSpinner 指定渲染器，默认「跟随设置」（即不覆盖）\n- 覆盖存在时从别处修改渲染器会弹遮蔽提示并提供三选项：\n  更新覆盖（覆盖改为本次选择）/清除覆盖（版本回到跟随设置）/保留覆盖\n  - 全局设置页仅检测当前选中版本，与既有「独立设置版本」提示合并展示\n  - 长按启动被遮蔽时不自动启动，更新/清除覆盖后沿用本次选择继续启动\n- 特定游戏设置页/长按启动的渲染器选择回调改传 Renderer（id 供覆盖比对）",
-    "created_at": "2026-10-28T09:35:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40665461232"
-  },
-  {
-    "id": 40665405985,
-    "sha": "dd149fab901df91371274565b13831a67ba4fb38",
-    "short_sha": "dd149fa",
-    "message": "feat: 每版本渲染器覆盖——版本列表入口、全版本 Spinner 设置对话框、渲染器修改遮蔽警告\n\n- Profile.rendererOverrides（版本 id → renderer id）随配置 JSON 持久化，独立于 usesGlobal；\n  启动解析单点接入 getLaunchOptions：覆盖 > 特定设置 > 全局\n- 版本列表页左下角新增静态渲染器入口，打开 RendererOverrideDialog：\n  列出当前配置全部版本逐行 FCLSpinner 指定渲染器，默认「跟随设置」（即不覆盖）\n- 覆盖存在时从别处修改渲染器会弹遮蔽提示并提供三选项：\n  更新覆盖（覆盖改为本次选择）/清除覆盖（版本回到跟随设置）/保留覆盖\n  - 全局设置页仅检测当前选中版本，与既有「独立设置版本」提示合并展示\n  - 长按启动被遮蔽时不自动启动，更新/清除覆盖后沿用本次选择继续启动\n- 特定游戏设置页/长按启动的渲染器选择回调改传 Renderer（id 供覆盖比对）",
-    "created_at": "2026-10-28T09:35:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40665405985"
-  },
-  {
-    "id": 40665406007,
-    "sha": "dd149fab901df91371274565b13831a67ba4fb38",
-    "short_sha": "dd149fa",
-    "message": "feat: 每版本渲染器覆盖——版本列表入口、全版本 Spinner 设置对话框、渲染器修改遮蔽警告\n\n- Profile.rendererOverrides（版本 id → renderer id）随配置 JSON 持久化，独立于 usesGlobal；\n  启动解析单点接入 getLaunchOptions：覆盖 > 特定设置 > 全局\n- 版本列表页左下角新增静态渲染器入口，打开 RendererOverrideDialog：\n  列出当前配置全部版本逐行 FCLSpinner 指定渲染器，默认「跟随设置」（即不覆盖）\n- 覆盖存在时从别处修改渲染器会弹遮蔽提示并提供三选项：\n  更新覆盖（覆盖改为本次选择）/清除覆盖（版本回到跟随设置）/保留覆盖\n  - 全局设置页仅检测当前选中版本，与既有「独立设置版本」提示合并展示\n  - 长按启动被遮蔽时不自动启动，更新/清除覆盖后沿用本次选择继续启动\n- 特定游戏设置页/长按启动的渲染器选择回调改传 Renderer（id 供覆盖比对）",
-    "created_at": "2026-10-28T09:35:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40665406007"
-  },
-  {
-    "id": 40646968749,
-    "sha": "bb6cc9881798787eeab1eaf0fe2e390fe15dd361",
-    "short_sha": "bb6cc98",
-    "message": "feat: 内置 MobileGlues 与 SimpleFPEWrapper 渲染器，齿轮对话框支持环境变量与 MG 运行时配置 (#1971)\n\n内置渲染器（同步 AngelAuraMC/Amethyst-Android v3_openjdk 预编译 AAR，MobileGlues LGPL-2.1 / SFPEW LGPL-3.0）：\n- RendererManager 新增 MobileGlues / SFPEW 条目；FCLauncher env 分支：MobileGlues 走 POJAV_RENDERER=opengles3_mobileglues、LIBGL_ES=3、LIBGL_EGL/POJAVEXEC_EGL=libmobileglues.so、MG_DIR_PATH 指向应用私有目录、MG_COUNT_LAUNCH；SFPEW 走 POJAV_RENDERER=opengles3_sfpew、LIBGL_ES=3、POJAVEXEC_EGL=libEGL.so、SFPEW_RELAXED_CONTEXT（单线程单上下文优化，默认开启）。Mesa 系 env 仅 ZINK 注入\n- 配置：渲染器列表行尾齿轮（仅内置可配置渲染器显示）→ RendererEnvDialog 复用插件 envPrefs 存储（builtin: 伪键）；MobileGlues 对齐官方 MGConfig 全量选项（enableANGLE/enableNoError/angleDepthClearFixMode/customGLVersion/maxGlslCacheSize/三扩展开关/fsr1Setting/MG_COUNT_LAUNCH），启动时仅合并显式配置过的键到 files/mobileglues/config.json（保留 MG 自管键），经 MG_DIR_PATH 生效；EnvSpec 增加可选 description 字段并在标题行下方渲染说明（中英文）\n- 修复：gl_bridge 对 LIBGL_ES 缺省做空值加固（strtol(NULL) 在 gl_init_context SEGV）\n- @enabled 开关键后缀约定收口 RendererPlugin.toggleEnabled/isConfigured，供 Java 侧注入 env 与写 MG 配置\n\n验证：Zulu17 编译通过；MuMu x86_64 实测齿轮对话框说明文字位于标题下方，MobileGlues 启动 env 注入正确、config.json 九键写入且 MG 原生侧读取生效（EGL initialized successfully）；SFPEW 真机实测命中 LIBGL_ES 缺省 SEGV，修复后可进入游戏",
-    "created_at": "2026-10-28T06:56:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40646968749"
-  },
-  {
-    "id": 40646968832,
-    "sha": "bb6cc9881798787eeab1eaf0fe2e390fe15dd361",
-    "short_sha": "bb6cc98",
-    "message": "feat: 内置 MobileGlues 与 SimpleFPEWrapper 渲染器，齿轮对话框支持环境变量与 MG 运行时配置 (#1971)\n\n内置渲染器（同步 AngelAuraMC/Amethyst-Android v3_openjdk 预编译 AAR，MobileGlues LGPL-2.1 / SFPEW LGPL-3.0）：\n- RendererManager 新增 MobileGlues / SFPEW 条目；FCLauncher env 分支：MobileGlues 走 POJAV_RENDERER=opengles3_mobileglues、LIBGL_ES=3、LIBGL_EGL/POJAVEXEC_EGL=libmobileglues.so、MG_DIR_PATH 指向应用私有目录、MG_COUNT_LAUNCH；SFPEW 走 POJAV_RENDERER=opengles3_sfpew、LIBGL_ES=3、POJAVEXEC_EGL=libEGL.so、SFPEW_RELAXED_CONTEXT（单线程单上下文优化，默认开启）。Mesa 系 env 仅 ZINK 注入\n- 配置：渲染器列表行尾齿轮（仅内置可配置渲染器显示）→ RendererEnvDialog 复用插件 envPrefs 存储（builtin: 伪键）；MobileGlues 对齐官方 MGConfig 全量选项（enableANGLE/enableNoError/angleDepthClearFixMode/customGLVersion/maxGlslCacheSize/三扩展开关/fsr1Setting/MG_COUNT_LAUNCH），启动时仅合并显式配置过的键到 files/mobileglues/config.json（保留 MG 自管键），经 MG_DIR_PATH 生效；EnvSpec 增加可选 description 字段并在标题行下方渲染说明（中英文）\n- 修复：gl_bridge 对 LIBGL_ES 缺省做空值加固（strtol(NULL) 在 gl_init_context SEGV）\n- @enabled 开关键后缀约定收口 RendererPlugin.toggleEnabled/isConfigured，供 Java 侧注入 env 与写 MG 配置\n\n验证：Zulu17 编译通过；MuMu x86_64 实测齿轮对话框说明文字位于标题下方，MobileGlues 启动 env 注入正确、config.json 九键写入且 MG 原生侧读取生效（EGL initialized successfully）；SFPEW 真机实测命中 LIBGL_ES 缺省 SEGV，修复后可进入游戏",
-    "created_at": "2026-10-28T06:56:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40646968832"
-  },
-  {
-    "id": 40646040561,
-    "sha": "54e120094cad734cc4423e6ca1d926a315b8f8ea",
-    "short_sha": "54e1200",
-    "message": "fix: 审查修正——EnvDialog 说明文字渲染到标题行下方，@enabled 后缀收口 RendererPlugin 辅助函数，Mesa env 收进 ZINK 分支，MG config.json 只合并显式配置键\n\n- RendererEnvDialog.buildRow：description 视图构建后插到 header 之后（index 1），修掉原实现在 when 块前 addView 进 row、被后加入的 header 顶到标题上方的问题（与提交意图'标题下渲染小字'相反）\n- RendererPlugin 新增 @JvmStatic toggleEnabled/isConfigured：开关键后缀约定收口，FCLauncher 删除 \"MG_COUNT_LAUNCH@enabled\"/\"SFPEW_RELAXED_CONTEXT@enabled\" 字面量与 mgToggleInt\n- addRendererEnvInner：MESA_*/driconf 五项只对 ZINK 注入，MobileGlues/SFPEW 不再吃到无效 Mesa env，注释同步\n- writeMobileGluesConfig：仅合并用户显式配置过的键（开关型经 isConfigured 查开关键），prefs 为空不落盘；未配置的已知键与 MG 自写未知键保留原值，不再首启固化全量默认值\n\n验证：Zulu17 :FCL:compileDebugJavaWithJavac 通过；MuMu x86_64 实测——齿轮对话框说明文字位于标题下方；MobileGlues 启动 env 注入正确（POJAV_RENDERER/LIBGL_ES=3/MG_COUNT_LAUNCH=1/MG_DIR_PATH），config.json 九键写入且 MG 原生侧读取生效（设置项逐一对应、EGL initialized successfully）",
-    "created_at": "2026-10-28T06:47:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40646040561"
-  },
-  {
-    "id": 40646040588,
-    "sha": "54e120094cad734cc4423e6ca1d926a315b8f8ea",
-    "short_sha": "54e1200",
-    "message": "fix: 审查修正——EnvDialog 说明文字渲染到标题行下方，@enabled 后缀收口 RendererPlugin 辅助函数，Mesa env 收进 ZINK 分支，MG config.json 只合并显式配置键\n\n- RendererEnvDialog.buildRow：description 视图构建后插到 header 之后（index 1），修掉原实现在 when 块前 addView 进 row、被后加入的 header 顶到标题上方的问题（与提交意图'标题下渲染小字'相反）\n- RendererPlugin 新增 @JvmStatic toggleEnabled/isConfigured：开关键后缀约定收口，FCLauncher 删除 \"MG_COUNT_LAUNCH@enabled\"/\"SFPEW_RELAXED_CONTEXT@enabled\" 字面量与 mgToggleInt\n- addRendererEnvInner：MESA_*/driconf 五项只对 ZINK 注入，MobileGlues/SFPEW 不再吃到无效 Mesa env，注释同步\n- writeMobileGluesConfig：仅合并用户显式配置过的键（开关型经 isConfigured 查开关键），prefs 为空不落盘；未配置的已知键与 MG 自写未知键保留原值，不再首启固化全量默认值\n\n验证：Zulu17 :FCL:compileDebugJavaWithJavac 通过；MuMu x86_64 实测——齿轮对话框说明文字位于标题下方；MobileGlues 启动 env 注入正确（POJAV_RENDERER/LIBGL_ES=3/MG_COUNT_LAUNCH=1/MG_DIR_PATH），config.json 九键写入且 MG 原生侧读取生效（设置项逐一对应、EGL initialized successfully）",
-    "created_at": "2026-10-28T06:47:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40646040588"
-  },
-  {
-    "id": 40646033684,
-    "sha": "54e120094cad734cc4423e6ca1d926a315b8f8ea",
-    "short_sha": "54e1200",
-    "message": "fix: 审查修正——EnvDialog 说明文字渲染到标题行下方，@enabled 后缀收口 RendererPlugin 辅助函数，Mesa env 收进 ZINK 分支，MG config.json 只合并显式配置键\n\n- RendererEnvDialog.buildRow：description 视图构建后插到 header 之后（index 1），修掉原实现在 when 块前 addView 进 row、被后加入的 header 顶到标题上方的问题（与提交意图'标题下渲染小字'相反）\n- RendererPlugin 新增 @JvmStatic toggleEnabled/isConfigured：开关键后缀约定收口，FCLauncher 删除 \"MG_COUNT_LAUNCH@enabled\"/\"SFPEW_RELAXED_CONTEXT@enabled\" 字面量与 mgToggleInt\n- addRendererEnvInner：MESA_*/driconf 五项只对 ZINK 注入，MobileGlues/SFPEW 不再吃到无效 Mesa env，注释同步\n- writeMobileGluesConfig：仅合并用户显式配置过的键（开关型经 isConfigured 查开关键），prefs 为空不落盘；未配置的已知键与 MG 自写未知键保留原值，不再首启固化全量默认值\n\n验证：Zulu17 :FCL:compileDebugJavaWithJavac 通过；MuMu x86_64 实测——齿轮对话框说明文字位于标题下方；MobileGlues 启动 env 注入正确（POJAV_RENDERER/LIBGL_ES=3/MG_COUNT_LAUNCH=1/MG_DIR_PATH），config.json 九键写入且 MG 原生侧读取生效（设置项逐一对应、EGL initialized successfully）",
-    "created_at": "2026-10-28T06:47:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40646033684"
-  },
-  {
-    "id": 40646033795,
-    "sha": "54e120094cad734cc4423e6ca1d926a315b8f8ea",
-    "short_sha": "54e1200",
-    "message": "fix: 审查修正——EnvDialog 说明文字渲染到标题行下方，@enabled 后缀收口 RendererPlugin 辅助函数，Mesa env 收进 ZINK 分支，MG config.json 只合并显式配置键\n\n- RendererEnvDialog.buildRow：description 视图构建后插到 header 之后（index 1），修掉原实现在 when 块前 addView 进 row、被后加入的 header 顶到标题上方的问题（与提交意图'标题下渲染小字'相反）\n- RendererPlugin 新增 @JvmStatic toggleEnabled/isConfigured：开关键后缀约定收口，FCLauncher 删除 \"MG_COUNT_LAUNCH@enabled\"/\"SFPEW_RELAXED_CONTEXT@enabled\" 字面量与 mgToggleInt\n- addRendererEnvInner：MESA_*/driconf 五项只对 ZINK 注入，MobileGlues/SFPEW 不再吃到无效 Mesa env，注释同步\n- writeMobileGluesConfig：仅合并用户显式配置过的键（开关型经 isConfigured 查开关键），prefs 为空不落盘；未配置的已知键与 MG 自写未知键保留原值，不再首启固化全量默认值\n\n验证：Zulu17 :FCL:compileDebugJavaWithJavac 通过；MuMu x86_64 实测——齿轮对话框说明文字位于标题下方；MobileGlues 启动 env 注入正确（POJAV_RENDERER/LIBGL_ES=3/MG_COUNT_LAUNCH=1/MG_DIR_PATH），config.json 九键写入且 MG 原生侧读取生效（设置项逐一对应、EGL initialized successfully）",
-    "created_at": "2026-10-28T06:47:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40646033795"
-  },
-  {
-    "id": 40638646950,
-    "sha": "1c9b0897596e48065a7af7363aea5b05795e681c",
-    "short_sha": "1c9b089",
-    "message": "fix: 更新内置 MioLibPatcher——oshi-core-ffm 7.x 在 bionic 缺 utmpx 致 SystemReport 三组信息报错，符号桩兜底 + HAS_UDEV 直置",
-    "created_at": "2026-10-28T05:32:22Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40638646950"
-  },
-  {
-    "id": 40638646824,
-    "sha": "1c9b0897596e48065a7af7363aea5b05795e681c",
-    "short_sha": "1c9b089",
-    "message": "fix: 更新内置 MioLibPatcher——oshi-core-ffm 7.x 在 bionic 缺 utmpx 致 SystemReport 三组信息报错，符号桩兜底 + HAS_UDEV 直置",
-    "created_at": "2026-10-28T05:32:22Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40638646824"
-  },
-  {
-    "id": 40629385177,
-    "sha": "638b49644eb87274cd617b0527867dcc787b8b27",
-    "short_sha": "638b496",
-    "message": "fix: 主题背景 Glide 加载后位图被池回收致绘制崩溃，loadInto 复制自持位图\n\nonResourceReady 直接把 centerCrop 产物设为 view.background，该 bitmap 归\nGlide 位图池所有：视图 detach、同视图再次加载或 trimMemory 池回收时被\nrecycle，而背景仍被视图持续绘制，主线程抛 Canvas: trying to use a\nrecycled bitmap。改为复制自持位图后再设背景，MainActivity/Splash/\nThemeEngine.applyBackground/GameMenu 四处调用点一并修复。",
-    "created_at": "2026-10-28T03:54:36Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40629385177"
-  },
-  {
-    "id": 40629385158,
-    "sha": "638b49644eb87274cd617b0527867dcc787b8b27",
-    "short_sha": "638b496",
-    "message": "fix: 主题背景 Glide 加载后位图被池回收致绘制崩溃，loadInto 复制自持位图\n\nonResourceReady 直接把 centerCrop 产物设为 view.background，该 bitmap 归\nGlide 位图池所有：视图 detach、同视图再次加载或 trimMemory 池回收时被\nrecycle，而背景仍被视图持续绘制，主线程抛 Canvas: trying to use a\nrecycled bitmap。改为复制自持位图后再设背景，MainActivity/Splash/\nThemeEngine.applyBackground/GameMenu 四处调用点一并修复。",
-    "created_at": "2026-10-28T03:54:36Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40629385158"
-  },
-  {
-    "id": 40510834983,
-    "sha": "708a6110bc60ba405e8b43cc74c16f9bb1cfddf6",
-    "short_sha": "708a611",
-    "message": "feat: 渲染器配置对话框选项添加说明——EnvSpec 增加可选 description 字段并在标题下渲染小字说明，MobileGlues 全部选项与 SFPEW 开关配上功能级中英文说明（值枚举挪入说明，标题精简为变量名）",
-    "created_at": "2026-10-27T13:16:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40510834983"
-  },
-  {
-    "id": 40510834953,
-    "sha": "708a6110bc60ba405e8b43cc74c16f9bb1cfddf6",
-    "short_sha": "708a611",
-    "message": "feat: 渲染器配置对话框选项添加说明——EnvSpec 增加可选 description 字段并在标题下渲染小字说明，MobileGlues 全部选项与 SFPEW 开关配上功能级中英文说明（值枚举挪入说明，标题精简为变量名）",
-    "created_at": "2026-10-27T13:16:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40510834953"
-  },
-  {
-    "id": 40510775795,
-    "sha": "708a6110bc60ba405e8b43cc74c16f9bb1cfddf6",
-    "short_sha": "708a611",
-    "message": "feat: 渲染器配置对话框选项添加说明——EnvSpec 增加可选 description 字段并在标题下渲染小字说明，MobileGlues 全部选项与 SFPEW 开关配上功能级中英文说明（值枚举挪入说明，标题精简为变量名）",
-    "created_at": "2026-10-27T13:16:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40510775795"
-  },
-  {
-    "id": 40510775828,
-    "sha": "708a6110bc60ba405e8b43cc74c16f9bb1cfddf6",
-    "short_sha": "708a611",
-    "message": "feat: 渲染器配置对话框选项添加说明——EnvSpec 增加可选 description 字段并在标题下渲染小字说明，MobileGlues 全部选项与 SFPEW 开关配上功能级中英文说明（值枚举挪入说明，标题精简为变量名）",
-    "created_at": "2026-10-27T13:16:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40510775828"
-  },
-  {
-    "id": 40504834893,
-    "sha": "8a1b8fac6a1a069afd1d121f0fec05e99b16fa85",
-    "short_sha": "8a1b8fa",
-    "message": "refactor: OSMesa 从内置剥离为 FCLRendererPlugin 插件，保留原生加载通路 (#1959)\n\n* refactor: OSMesa 从内置改为 FCLRendererPlugin 插件提供——移除打包的 libOSMesa_8/81、libvirgl_test_server、libvirglrenderer_1 与内置 Freedreno/VirGL 渲染器条目，保留全部原生加载通路并为插件渲染器补全 VIRGL_TEST_SERVER/VTEST_SOCKET_NAME/MESA_GLSL_CACHE_DIR 运行时路径\n* fix: dlsym_OSMesa 优先读 LIB_MESA_NAME——VirGL 插件渲染器裸库名 dlopen 在类加载器命名空间下搜不到插件目录导致 SIGSEGV\n* fix: virglMakeCurrent 的 OSMesa 颜色缓冲误传 libc setbuffer 函数地址（bionic API23+ 声明），首帧 flush 写只读代码页 SIGSEGV；改为按保存的宽高分配真实缓冲区\n* fix: virgl_ensure_framebuffer 先分配后释放——calloc 失败时保留旧缓冲并返回 NULL，virglMakeCurrent 守卫跳过本次绑定，避免 OOM 时向 OSMesaMakeCurrent 传 NULL\n* refactor: 清理 OSMesa 插件化后的死代码——FCLauncher 内置 else 分支仅剩 ZINK（删 ID_VIRGL/ID_FREEDRENO 分支与无关 VTEST_SOCKET_NAME），删除未引用的 VirGL/Freedreno 字符串资源",
-    "created_at": "2026-10-27T12:34:26Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40504834893"
-  },
-  {
-    "id": 40504834909,
-    "sha": "8a1b8fac6a1a069afd1d121f0fec05e99b16fa85",
-    "short_sha": "8a1b8fa",
-    "message": "refactor: OSMesa 从内置剥离为 FCLRendererPlugin 插件，保留原生加载通路 (#1959)\n\n* refactor: OSMesa 从内置改为 FCLRendererPlugin 插件提供——移除打包的 libOSMesa_8/81、libvirgl_test_server、libvirglrenderer_1 与内置 Freedreno/VirGL 渲染器条目，保留全部原生加载通路并为插件渲染器补全 VIRGL_TEST_SERVER/VTEST_SOCKET_NAME/MESA_GLSL_CACHE_DIR 运行时路径\n* fix: dlsym_OSMesa 优先读 LIB_MESA_NAME——VirGL 插件渲染器裸库名 dlopen 在类加载器命名空间下搜不到插件目录导致 SIGSEGV\n* fix: virglMakeCurrent 的 OSMesa 颜色缓冲误传 libc setbuffer 函数地址（bionic API23+ 声明），首帧 flush 写只读代码页 SIGSEGV；改为按保存的宽高分配真实缓冲区\n* fix: virgl_ensure_framebuffer 先分配后释放——calloc 失败时保留旧缓冲并返回 NULL，virglMakeCurrent 守卫跳过本次绑定，避免 OOM 时向 OSMesaMakeCurrent 传 NULL\n* refactor: 清理 OSMesa 插件化后的死代码——FCLauncher 内置 else 分支仅剩 ZINK（删 ID_VIRGL/ID_FREEDRENO 分支与无关 VTEST_SOCKET_NAME），删除未引用的 VirGL/Freedreno 字符串资源",
-    "created_at": "2026-10-27T12:34:26Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40504834909"
-  },
-  {
-    "id": 40504591475,
-    "sha": "23eb1995726a9134a0f8d3506a276c93c077be1d",
-    "short_sha": "23eb199",
-    "message": "refactor: 清理 OSMesa 插件化后的死代码——FCLauncher 内置 else 分支仅剩 ZINK（删 ID_VIRGL/ID_FREEDRENO 分支与无关 VTEST_SOCKET_NAME），删除未引用的 VirGL/Freedreno 字符串资源",
-    "created_at": "2026-10-27T12:27:10Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40504591475"
-  },
-  {
-    "id": 40504591419,
-    "sha": "23eb1995726a9134a0f8d3506a276c93c077be1d",
-    "short_sha": "23eb199",
-    "message": "refactor: 清理 OSMesa 插件化后的死代码——FCLauncher 内置 else 分支仅剩 ZINK（删 ID_VIRGL/ID_FREEDRENO 分支与无关 VTEST_SOCKET_NAME），删除未引用的 VirGL/Freedreno 字符串资源",
-    "created_at": "2026-10-27T12:27:10Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40504591419"
-  },
-  {
-    "id": 40504582805,
-    "sha": "23eb1995726a9134a0f8d3506a276c93c077be1d",
-    "short_sha": "23eb199",
-    "message": "refactor: 清理 OSMesa 插件化后的死代码——FCLauncher 内置 else 分支仅剩 ZINK（删 ID_VIRGL/ID_FREEDRENO 分支与无关 VTEST_SOCKET_NAME），删除未引用的 VirGL/Freedreno 字符串资源",
-    "created_at": "2026-10-27T12:27:10Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40504582805"
-  },
-  {
-    "id": 40504582831,
-    "sha": "23eb1995726a9134a0f8d3506a276c93c077be1d",
-    "short_sha": "23eb199",
-    "message": "refactor: 清理 OSMesa 插件化后的死代码——FCLauncher 内置 else 分支仅剩 ZINK（删 ID_VIRGL/ID_FREEDRENO 分支与无关 VTEST_SOCKET_NAME），删除未引用的 VirGL/Freedreno 字符串资源",
-    "created_at": "2026-10-27T12:27:10Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40504582831"
-  },
-  {
-    "id": 40502337100,
-    "sha": "9893cfb71a2480ced2a932c0f32ebc0ff6a5017e",
-    "short_sha": "9893cfb",
-    "message": "fix: jsound 桥接改走 alcSetThreadContext 线程局部 current，修复第二个 context 抢占全局致原版音效全失 (#1969) (#1970)\n\nalcMakeContextCurrent 会同时改写进程全局 current 并清空调用线程 TLS，\n桥接每次后端调用都抢占 current 后，paulscode 线程上的 AL 调用全部落进\n桥接 context（source ID 失效），其自身 context 孤立后被 OpenAL Soft\n1.25+ 的 alcCloseDevice 以 Releasing orphaned context 隐式销毁，\npaulscode 静默切换 No Sound。\n\n- 守卫式 enter/leave：进入保存调用线程旧 TLS current，退出还原，\n  兜底路径（无 alcSetThreadContext 扩展时）同样保存/还原全局 current\n- 初始化自检同样走受控激活，不在全局 current 留痕\n- 初始化失败清理改为先 alcDestroyContext 再 alcCloseDevice",
-    "created_at": "2026-10-27T12:15:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40502337100"
-  },
-  {
-    "id": 40500023664,
-    "sha": "76b91059e2eb3cb4435bfa650358752b402b8a2b",
-    "short_sha": "76b9105",
-    "message": "Merge fix/solid-skin-layer: 皮肤 3D 预览恢复体素化第二层（复刻 3D Skin Layers）",
-    "created_at": "2026-10-27T11:55:30Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40500023664"
   }
 ]
