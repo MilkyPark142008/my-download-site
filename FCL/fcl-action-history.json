@@ -1,5 +1,85 @@
 [
   {
+    "id": 41213177481,
+    "sha": "57f34de5f83848a862d185404bd6aa54a007612c",
+    "short_sha": "57f34de",
+    "message": "feat: 安装器进程常驻复用——多阶段同 JVM 直跑，零进程冷启\n\n- ProcessService(:jvm) 不再每阶段自杀换进程：服务常驻，各阶段在单线程执行器\n  串行运行，退出码/启动标记文件协议不变；阶段结束 60s 空闲自停，取消与超时\n  路径（主进程侧）不变；JRE 版本变化立即回收进程（常驻 JVM 字节码能力固定）\n- HotSpot DestroyJavaVM+二次 CreateJavaVM 的重建路径存在并发调度残留问题\n  （Forge patch processor 卡死 JVM_MonitorWait，JLI 基线对照实测定位），故\n  launchJVM 成功后 JVM 常驻不销毁，后续阶段经 runMainInExistingVM 以独立\n  URLClassLoader 直接 invoke 本阶段 main（classpath 按 ':' 拆 file:// URL）；\n  System.exit 仍走 exit hook 进程终止，与旧行为一致\n- MuMu 实测：Forge 1.21.1-52.1.20 安装成功（FART 重混淆/binary patch 全部\n  processor 同一进程同一 JVM 跑完，零进程冷启）\n- redirectStdio 幂等化：管道按轮隔离传参给 logger 线程、EOF 退出防自旋、\n  下一轮以唤醒字节+关旧读端回收旧 logger（原全局 fclFd 二次重定向被覆写，\n  多轮 JVM 场景两线程同读一条管道交错分发）",
+    "created_at": "2026-10-31T15:03:04Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41213177481"
+  },
+  {
+    "id": 41213177598,
+    "sha": "57f34de5f83848a862d185404bd6aa54a007612c",
+    "short_sha": "57f34de",
+    "message": "feat: 安装器进程常驻复用——多阶段同 JVM 直跑，零进程冷启\n\n- ProcessService(:jvm) 不再每阶段自杀换进程：服务常驻，各阶段在单线程执行器\n  串行运行，退出码/启动标记文件协议不变；阶段结束 60s 空闲自停，取消与超时\n  路径（主进程侧）不变；JRE 版本变化立即回收进程（常驻 JVM 字节码能力固定）\n- HotSpot DestroyJavaVM+二次 CreateJavaVM 的重建路径存在并发调度残留问题\n  （Forge patch processor 卡死 JVM_MonitorWait，JLI 基线对照实测定位），故\n  launchJVM 成功后 JVM 常驻不销毁，后续阶段经 runMainInExistingVM 以独立\n  URLClassLoader 直接 invoke 本阶段 main（classpath 按 ':' 拆 file:// URL）；\n  System.exit 仍走 exit hook 进程终止，与旧行为一致\n- MuMu 实测：Forge 1.21.1-52.1.20 安装成功（FART 重混淆/binary patch 全部\n  processor 同一进程同一 JVM 跑完，零进程冷启）\n- redirectStdio 幂等化：管道按轮隔离传参给 logger 线程、EOF 退出防自旋、\n  下一轮以唤醒字节+关旧读端回收旧 logger（原全局 fclFd 二次重定向被覆写，\n  多轮 JVM 场景两线程同读一条管道交错分发）",
+    "created_at": "2026-10-31T15:03:04Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41213177598"
+  },
+  {
+    "id": 41213002035,
+    "sha": "57f34de5f83848a862d185404bd6aa54a007612c",
+    "short_sha": "57f34de",
+    "message": "feat: 安装器进程常驻复用——多阶段同 JVM 直跑，零进程冷启\n\n- ProcessService(:jvm) 不再每阶段自杀换进程：服务常驻，各阶段在单线程执行器\n  串行运行，退出码/启动标记文件协议不变；阶段结束 60s 空闲自停，取消与超时\n  路径（主进程侧）不变；JRE 版本变化立即回收进程（常驻 JVM 字节码能力固定）\n- HotSpot DestroyJavaVM+二次 CreateJavaVM 的重建路径存在并发调度残留问题\n  （Forge patch processor 卡死 JVM_MonitorWait，JLI 基线对照实测定位），故\n  launchJVM 成功后 JVM 常驻不销毁，后续阶段经 runMainInExistingVM 以独立\n  URLClassLoader 直接 invoke 本阶段 main（classpath 按 ':' 拆 file:// URL）；\n  System.exit 仍走 exit hook 进程终止，与旧行为一致\n- MuMu 实测：Forge 1.21.1-52.1.20 安装成功（FART 重混淆/binary patch 全部\n  processor 同一进程同一 JVM 跑完，零进程冷启）\n- redirectStdio 幂等化：管道按轮隔离传参给 logger 线程、EOF 退出防自旋、\n  下一轮以唤醒字节+关旧读端回收旧 logger（原全局 fclFd 二次重定向被覆写，\n  多轮 JVM 场景两线程同读一条管道交错分发）",
+    "created_at": "2026-10-31T15:03:04Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41213002035"
+  },
+  {
+    "id": 41213002123,
+    "sha": "57f34de5f83848a862d185404bd6aa54a007612c",
+    "short_sha": "57f34de",
+    "message": "feat: 安装器进程常驻复用——多阶段同 JVM 直跑，零进程冷启\n\n- ProcessService(:jvm) 不再每阶段自杀换进程：服务常驻，各阶段在单线程执行器\n  串行运行，退出码/启动标记文件协议不变；阶段结束 60s 空闲自停，取消与超时\n  路径（主进程侧）不变；JRE 版本变化立即回收进程（常驻 JVM 字节码能力固定）\n- HotSpot DestroyJavaVM+二次 CreateJavaVM 的重建路径存在并发调度残留问题\n  （Forge patch processor 卡死 JVM_MonitorWait，JLI 基线对照实测定位），故\n  launchJVM 成功后 JVM 常驻不销毁，后续阶段经 runMainInExistingVM 以独立\n  URLClassLoader 直接 invoke 本阶段 main（classpath 按 ':' 拆 file:// URL）；\n  System.exit 仍走 exit hook 进程终止，与旧行为一致\n- MuMu 实测：Forge 1.21.1-52.1.20 安装成功（FART 重混淆/binary patch 全部\n  processor 同一进程同一 JVM 跑完，零进程冷启）\n- redirectStdio 幂等化：管道按轮隔离传参给 logger 线程、EOF 退出防自旋、\n  下一轮以唤醒字节+关旧读端回收旧 logger（原全局 fclFd 二次重定向被覆写，\n  多轮 JVM 场景两线程同读一条管道交错分发）",
+    "created_at": "2026-10-31T15:03:04Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41213002123"
+  },
+  {
+    "id": 41212652250,
+    "sha": "d6728acf76f998d276a9b0012fe2bfd7824cbd71",
+    "short_sha": "d6728ac",
+    "message": "refactor: 直启拆分抽取为 LaunchArgumentsParser 并对齐 java launcher 语义\n\n- 拆分逻辑纯函数化（无 Android 依赖），15 个 JUnit 用例以真机抓包形状做金样例\n  （1.12.2-LF 游戏 cacio 群、NeoForge 26.3 ConsoleTool、Forge FART/binarypatch）\n- 忠实化 java 语义：--class-path=/--module-path= 等号形式；-p/--module-path 与\n  --upgrade-module-path 以 --module-path= 等 VM 选项原样传递（-Djdk.module.path\n  属性形式模块系统不读，实测 Forge 1.20.1 bootstrap 炸 IMPL_LOOKUP opens）；\n  -m/--module 模块模式、launcher 自用命令（-version/--list-modules 等）与\n  @argfile 显式拒绝；主类后 token 停止解析（游戏参数含 '-' 开头项安全透传）\n- launchJVM 增加逐条 VM arg 日志，便于设备侧对照\n- 设备矩阵：1.12.2-LF/26.2-Fabric 完整启动+退出；1.20.1-Forge 模块链修复后\n  bootstrap 全通；1.20.1/26.3-NeoForge 启动链路通（挂设备数据缺失）；\n  天境/1.21.1 解析正常（挂 MuMu 预存渲染崩，与启动层无关）",
+    "created_at": "2026-10-31T14:59:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41212652250"
+  },
+  {
+    "id": 41212652252,
+    "sha": "d6728acf76f998d276a9b0012fe2bfd7824cbd71",
+    "short_sha": "d6728ac",
+    "message": "refactor: 直启拆分抽取为 LaunchArgumentsParser 并对齐 java launcher 语义\n\n- 拆分逻辑纯函数化（无 Android 依赖），15 个 JUnit 用例以真机抓包形状做金样例\n  （1.12.2-LF 游戏 cacio 群、NeoForge 26.3 ConsoleTool、Forge FART/binarypatch）\n- 忠实化 java 语义：--class-path=/--module-path= 等号形式；-p/--module-path 与\n  --upgrade-module-path 以 --module-path= 等 VM 选项原样传递（-Djdk.module.path\n  属性形式模块系统不读，实测 Forge 1.20.1 bootstrap 炸 IMPL_LOOKUP opens）；\n  -m/--module 模块模式、launcher 自用命令（-version/--list-modules 等）与\n  @argfile 显式拒绝；主类后 token 停止解析（游戏参数含 '-' 开头项安全透传）\n- launchJVM 增加逐条 VM arg 日志，便于设备侧对照\n- 设备矩阵：1.12.2-LF/26.2-Fabric 完整启动+退出；1.20.1-Forge 模块链修复后\n  bootstrap 全通；1.20.1/26.3-NeoForge 启动链路通（挂设备数据缺失）；\n  天境/1.21.1 解析正常（挂 MuMu 预存渲染崩，与启动层无关）",
+    "created_at": "2026-10-31T14:59:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41212652252"
+  },
+  {
+    "id": 41209281574,
+    "sha": "66f89a69d0231f5e927c1433ded6713bc22056c5",
+    "short_sha": "66f89a6",
+    "message": "fix: 直启拆分合并分离形式模块选项并展开 -jar 语义\n\n- 带值 JVM 选项（--add-opens/--add-exports/--add-modules/-p 等）合并为等号\n  形式：JNI_CreateJavaVM 逐条解析 JavaVMOption，分离的「选项 + 值」是两条互不\n  相干的 option（未识别项被静默忽略），Forge 1.17+ bootstrap 必需的模块选项会\n  全部失效；补上清单中缺失的 -p（其值此前会被误判为主类）并改名为\n  --module-path（JVM 侧不认 launcher 短名）\n- -jar 语义展开：jar 即 classpath（应用类加载器自行展开 manifest 的\n  Class-Path），主类取 manifest 的 Main-Class，修复 Jar Executor 链路直启失败\n- exit_info_code 改 _Atomic 消除 hook/waiter 跨线程数据竞争；mainClass 点分\n  转换改 strdup 动态分配，去掉 128 字节静默截断上限；补 ignoreUnrecognized\n  行为变化说明与文件头参考来源",
+    "created_at": "2026-10-31T14:15:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41209281574"
+  },
+  {
+    "id": 41209281708,
+    "sha": "66f89a69d0231f5e927c1433ded6713bc22056c5",
+    "short_sha": "66f89a6",
+    "message": "fix: 直启拆分合并分离形式模块选项并展开 -jar 语义\n\n- 带值 JVM 选项（--add-opens/--add-exports/--add-modules/-p 等）合并为等号\n  形式：JNI_CreateJavaVM 逐条解析 JavaVMOption，分离的「选项 + 值」是两条互不\n  相干的 option（未识别项被静默忽略），Forge 1.17+ bootstrap 必需的模块选项会\n  全部失效；补上清单中缺失的 -p（其值此前会被误判为主类）并改名为\n  --module-path（JVM 侧不认 launcher 短名）\n- -jar 语义展开：jar 即 classpath（应用类加载器自行展开 manifest 的\n  Class-Path），主类取 manifest 的 Main-Class，修复 Jar Executor 链路直启失败\n- exit_info_code 改 _Atomic 消除 hook/waiter 跨线程数据竞争；mainClass 点分\n  转换改 strdup 动态分配，去掉 128 字节静默截断上限；补 ignoreUnrecognized\n  行为变化说明与文件头参考来源",
+    "created_at": "2026-10-31T14:15:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41209281708"
+  },
+  {
+    "id": 41206200908,
+    "sha": "c01b6cfb3c0b5cb2046f376049837390cf9101ce",
+    "short_sha": "c01b6cf",
+    "message": "fix: 安装器主类动态识别与显式 dlopen libjvm，修复 RTLD_DEFAULT 命中 ART 致 JNI_EEXIST\n\n- launch() 三段拆分不再硬编码 mio.Wrapper 主类：安装器流程直接以目标工具类\n  （如 ForgeAutoRenamingTool）为主类，按带值 JVM 选项清单成对吞掉后取首个\n  非选项参数为主类\n- launchJVM 增加 libjvm 绝对路径参数并显式 dlopen：app 进程内 ART 已创建 VM\n  且导出同名 JNI_CreateJavaVM，RTLD_DEFAULT 会命中 ART 侧返回 JNI_EEXIST(-5)\n  （实测 :jvm 进程 Forge processor 全部 -5 退出）\n- 实测：FART 重混淆阶段以 JRE8 直启成功完成",
+    "created_at": "2026-10-31T13:34:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41206200908"
+  },
+  {
+    "id": 41206200960,
+    "sha": "c01b6cfb3c0b5cb2046f376049837390cf9101ce",
+    "short_sha": "c01b6cf",
+    "message": "fix: 安装器主类动态识别与显式 dlopen libjvm，修复 RTLD_DEFAULT 命中 ART 致 JNI_EEXIST\n\n- launch() 三段拆分不再硬编码 mio.Wrapper 主类：安装器流程直接以目标工具类\n  （如 ForgeAutoRenamingTool）为主类，按带值 JVM 选项清单成对吞掉后取首个\n  非选项参数为主类\n- launchJVM 增加 libjvm 绝对路径参数并显式 dlopen：app 进程内 ART 已创建 VM\n  且导出同名 JNI_CreateJavaVM，RTLD_DEFAULT 会命中 ART 侧返回 JNI_EEXIST(-5)\n  （实测 :jvm 进程 Forge processor 全部 -5 退出）\n- 实测：FART 重混淆阶段以 JRE8 直启成功完成",
+    "created_at": "2026-10-31T13:34:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41206200960"
+  },
+  {
     "id": 41202970264,
     "sha": "171e0a94d95ecb41c4481520ce637afeaa7e7526",
     "short_sha": "171e0a9",
@@ -318,85 +398,5 @@
     "message": "feat: SFPEW 兼容层启用时按组合后能力修正 MG 版本注册与启动门控\n\n内置 MobileGlues 的兼容层硬编码启用，组合后旧版固定管线由层补齐\n（1.8.9 实测可跑），注册信息与版本门控同步修正：\n\n- MG 注册信息去掉 minMCver=1.17 与名称中 \"1.17+\"：层恒开，无下界\n- 启动门控：层启用时跳过渲染器 minMCver 下界警告（插件渲染器层\n  开启时同样受益）；maxMCver 上界保留——层不扩展渲染器现代 GL 上限\n- 渲染器列表展示：内置渲染器无版本边界显示\"全部版本\"，\n  插件无声明仍显示\"未知\"",
     "created_at": "2026-10-31T03:58:30Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166610334"
-  },
-  {
-    "id": 41166610300,
-    "sha": "cb93daf66fdd70ba0c481a563d8fa838920bfa2f",
-    "short_sha": "cb93daf",
-    "message": "feat: SFPEW 兼容层启用时按组合后能力修正 MG 版本注册与启动门控\n\n内置 MobileGlues 的兼容层硬编码启用，组合后旧版固定管线由层补齐\n（1.8.9 实测可跑），注册信息与版本门控同步修正：\n\n- MG 注册信息去掉 minMCver=1.17 与名称中 \"1.17+\"：层恒开，无下界\n- 启动门控：层启用时跳过渲染器 minMCver 下界警告（插件渲染器层\n  开启时同样受益）；maxMCver 上界保留——层不扩展渲染器现代 GL 上限\n- 渲染器列表展示：内置渲染器无版本边界显示\"全部版本\"，\n  插件无声明仍显示\"未知\"",
-    "created_at": "2026-10-31T03:58:30Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166610300"
-  },
-  {
-    "id": 41165739968,
-    "sha": "7bbdc3c412a0964ff260feec409140884fbbd85d",
-    "short_sha": "7bbdc3c",
-    "message": "feat: SFPEW 改造为兼容层组合模式，对齐上游 AAMC 使用模型\n\nSFPEW 官方定位是 OpenGL FPE 兼容包装层而非完整驱动，此前作为独立渲染器\n与 gl4es/Zink/MobileGlues 并列可选属定位误用。本变更将其改为叠加在真实\n后端之上的兼容层：\n\n- 移除独立 SFPEW 渲染器条目（ID_SFPEW 常量保留作配置 key）\n- 内置渲染器按 AAMC 同款硬编码规则：默认叠加，仅自带 FPE/完整 GL 的\n  Krypton Wrapper/Holy GL4ES/VGPU/Kopper Zink 关闭\n- 外部插件渲染器由渲染器选择对话框左下角新增的\"高级设置\"页控制：\n  兼容层全局开关默认关闭 + SFPEW_RELAXED_CONTEXT 默认关闭（strict）\n- 启动链路：注入 SFPEW_LAYER=1 与 SFPEW_EGL=POJAVEXEC_EGL（后端与\n  底座 EGL 同源），${gl_lib_name}/SDL_OPENGL_LIBRARY 换为包装层路径，\n  游戏 GL 符号经 LWJGL libname 从 SFPEW 句柄解析\n- native 桥按 SFPEW 文档宿主集成指引将 eglMakeCurrent/eglSwapBuffers\n  路由进包装层（记录上下文切换、swap 前清空立即模式批次），解析失败\n  回落系统 EGL；进程退出先 drain 再销毁上下文\n- 修复高级设置页亮色模式说明文字与背景对比度过低",
-    "created_at": "2026-10-31T03:44:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41165739968"
-  },
-  {
-    "id": 41165739915,
-    "sha": "7bbdc3c412a0964ff260feec409140884fbbd85d",
-    "short_sha": "7bbdc3c",
-    "message": "feat: SFPEW 改造为兼容层组合模式，对齐上游 AAMC 使用模型\n\nSFPEW 官方定位是 OpenGL FPE 兼容包装层而非完整驱动，此前作为独立渲染器\n与 gl4es/Zink/MobileGlues 并列可选属定位误用。本变更将其改为叠加在真实\n后端之上的兼容层：\n\n- 移除独立 SFPEW 渲染器条目（ID_SFPEW 常量保留作配置 key）\n- 内置渲染器按 AAMC 同款硬编码规则：默认叠加，仅自带 FPE/完整 GL 的\n  Krypton Wrapper/Holy GL4ES/VGPU/Kopper Zink 关闭\n- 外部插件渲染器由渲染器选择对话框左下角新增的\"高级设置\"页控制：\n  兼容层全局开关默认关闭 + SFPEW_RELAXED_CONTEXT 默认关闭（strict）\n- 启动链路：注入 SFPEW_LAYER=1 与 SFPEW_EGL=POJAVEXEC_EGL（后端与\n  底座 EGL 同源），${gl_lib_name}/SDL_OPENGL_LIBRARY 换为包装层路径，\n  游戏 GL 符号经 LWJGL libname 从 SFPEW 句柄解析\n- native 桥按 SFPEW 文档宿主集成指引将 eglMakeCurrent/eglSwapBuffers\n  路由进包装层（记录上下文切换、swap 前清空立即模式批次），解析失败\n  回落系统 EGL；进程退出先 drain 再销毁上下文\n- 修复高级设置页亮色模式说明文字与背景对比度过低",
-    "created_at": "2026-10-31T03:44:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41165739915"
-  },
-  {
-    "id": 41165707843,
-    "sha": "7bbdc3c412a0964ff260feec409140884fbbd85d",
-    "short_sha": "7bbdc3c",
-    "message": "feat: SFPEW 改造为兼容层组合模式，对齐上游 AAMC 使用模型\n\nSFPEW 官方定位是 OpenGL FPE 兼容包装层而非完整驱动，此前作为独立渲染器\n与 gl4es/Zink/MobileGlues 并列可选属定位误用。本变更将其改为叠加在真实\n后端之上的兼容层：\n\n- 移除独立 SFPEW 渲染器条目（ID_SFPEW 常量保留作配置 key）\n- 内置渲染器按 AAMC 同款硬编码规则：默认叠加，仅自带 FPE/完整 GL 的\n  Krypton Wrapper/Holy GL4ES/VGPU/Kopper Zink 关闭\n- 外部插件渲染器由渲染器选择对话框左下角新增的\"高级设置\"页控制：\n  兼容层全局开关默认关闭 + SFPEW_RELAXED_CONTEXT 默认关闭（strict）\n- 启动链路：注入 SFPEW_LAYER=1 与 SFPEW_EGL=POJAVEXEC_EGL（后端与\n  底座 EGL 同源），${gl_lib_name}/SDL_OPENGL_LIBRARY 换为包装层路径，\n  游戏 GL 符号经 LWJGL libname 从 SFPEW 句柄解析\n- native 桥按 SFPEW 文档宿主集成指引将 eglMakeCurrent/eglSwapBuffers\n  路由进包装层（记录上下文切换、swap 前清空立即模式批次），解析失败\n  回落系统 EGL；进程退出先 drain 再销毁上下文\n- 修复高级设置页亮色模式说明文字与背景对比度过低",
-    "created_at": "2026-10-31T03:44:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41165707843"
-  },
-  {
-    "id": 41165707541,
-    "sha": "7bbdc3c412a0964ff260feec409140884fbbd85d",
-    "short_sha": "7bbdc3c",
-    "message": "feat: SFPEW 改造为兼容层组合模式，对齐上游 AAMC 使用模型\n\nSFPEW 官方定位是 OpenGL FPE 兼容包装层而非完整驱动，此前作为独立渲染器\n与 gl4es/Zink/MobileGlues 并列可选属定位误用。本变更将其改为叠加在真实\n后端之上的兼容层：\n\n- 移除独立 SFPEW 渲染器条目（ID_SFPEW 常量保留作配置 key）\n- 内置渲染器按 AAMC 同款硬编码规则：默认叠加，仅自带 FPE/完整 GL 的\n  Krypton Wrapper/Holy GL4ES/VGPU/Kopper Zink 关闭\n- 外部插件渲染器由渲染器选择对话框左下角新增的\"高级设置\"页控制：\n  兼容层全局开关默认关闭 + SFPEW_RELAXED_CONTEXT 默认关闭（strict）\n- 启动链路：注入 SFPEW_LAYER=1 与 SFPEW_EGL=POJAVEXEC_EGL（后端与\n  底座 EGL 同源），${gl_lib_name}/SDL_OPENGL_LIBRARY 换为包装层路径，\n  游戏 GL 符号经 LWJGL libname 从 SFPEW 句柄解析\n- native 桥按 SFPEW 文档宿主集成指引将 eglMakeCurrent/eglSwapBuffers\n  路由进包装层（记录上下文切换、swap 前清空立即模式批次），解析失败\n  回落系统 EGL；进程退出先 drain 再销毁上下文\n- 修复高级设置页亮色模式说明文字与背景对比度过低",
-    "created_at": "2026-10-31T03:44:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41165707541"
-  },
-  {
-    "id": 41082818872,
-    "sha": "5e4d584cc205655be77415820945bb7b712929c6",
-    "short_sha": "5e4d584",
-    "message": "fix: 键盘开关状态随输入法真实显隐自动同步，修复经输入法内按键收起后再次呼出需点两次\n\n- API 30+ 按系统 insets 真值判断键盘可见性；旧版本用可视区域高度估算（与 JVMActivity 平推同源同阈，adjustResize 下必然收缩）\n- 布局回调轮询同步：键盘真实出现过之后又消失且有焦点时，认定输入法自行收起，走统一清理（清空、隐藏、焦点与指针捕获还给游戏视图）\n- imeSeenVisible 闩锁防呼出动画期间误判，呼出请求时重置",
-    "created_at": "2026-10-30T15:38:16Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41082818872"
-  },
-  {
-    "id": 41082818889,
-    "sha": "5e4d584cc205655be77415820945bb7b712929c6",
-    "short_sha": "5e4d584",
-    "message": "fix: 键盘开关状态随输入法真实显隐自动同步，修复经输入法内按键收起后再次呼出需点两次\n\n- API 30+ 按系统 insets 真值判断键盘可见性；旧版本用可视区域高度估算（与 JVMActivity 平推同源同阈，adjustResize 下必然收缩）\n- 布局回调轮询同步：键盘真实出现过之后又消失且有焦点时，认定输入法自行收起，走统一清理（清空、隐藏、焦点与指针捕获还给游戏视图）\n- imeSeenVisible 闩锁防呼出动画期间误判，呼出请求时重置",
-    "created_at": "2026-10-30T15:38:16Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41082818889"
-  },
-  {
-    "id": 41073341163,
-    "sha": "20b79c9acbfb558fe7c763e2bf9d32c8760be1a0",
-    "short_sha": "20b79c9",
-    "message": "fix: 绑定控件组显隐对话框在小屏横屏下按钮被挤出屏幕、亮色模式下拉文字看不清（#1982）\n\n- 列表区由固定 320dp 改为 0dp + layout_weight，内容少时收紧、超出屏幕时由 LinearLayout 收缩列表区，确认/取消按钮始终可见\n- 允许返回键关闭对话框，避免被困\n- 条目 FCLSpinner 关闭 auto_text_tint，与同类 FCLDialog 一致继承默认文字色，修复亮色模式下文字与白底对比不足",
-    "created_at": "2026-10-30T14:36:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41073341163"
-  },
-  {
-    "id": 41072205125,
-    "sha": "d0488a25a383f095d017e1ad4a5add2a68f932f7",
-    "short_sha": "d0488a2",
-    "message": "refactor: 放大镜迁移至 Kotlin，修复平移死区与可见性细节\n\n- 按项目惯例将 InputMagnifierView 迁移为 Kotlin\n- 修复低分辨率帧下取样区域被钉死在整帧适配的死区：zoom=1 为整帧概览，\n  任何放大立即裁切且可平移（区域 = 视口 × fitScale ÷ zoom，等比不拉伸）\n- 平移加 0.5 阻尼，小窗口内更易定位\n- 放大镜画面回读按 33ms 节流，打开时强制捕获\n- 描边改走 foreground 绘制（background 描边会被 viewport 画面盖住），\n  白色 3dp 圆角边框提示当前为放大画面\n- 手动打开放大镜时重置 dismissedForInput，避免输入法动画抖动将其自动收回\n- 移除搜索图标被运行时覆盖的 tint",
-    "created_at": "2026-10-30T14:29:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41072205125"
-  },
-  {
-    "id": 41072205126,
-    "sha": "d0488a25a383f095d017e1ad4a5add2a68f932f7",
-    "short_sha": "d0488a2",
-    "message": "refactor: 放大镜迁移至 Kotlin，修复平移死区与可见性细节\n\n- 按项目惯例将 InputMagnifierView 迁移为 Kotlin\n- 修复低分辨率帧下取样区域被钉死在整帧适配的死区：zoom=1 为整帧概览，\n  任何放大立即裁切且可平移（区域 = 视口 × fitScale ÷ zoom，等比不拉伸）\n- 平移加 0.5 阻尼，小窗口内更易定位\n- 放大镜画面回读按 33ms 节流，打开时强制捕获\n- 描边改走 foreground 绘制（background 描边会被 viewport 画面盖住），\n  白色 3dp 圆角边框提示当前为放大画面\n- 手动打开放大镜时重置 dismissedForInput，避免输入法动画抖动将其自动收回\n- 移除搜索图标被运行时覆盖的 tint",
-    "created_at": "2026-10-30T14:29:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41072205126"
   }
 ]
