@@ -1,5 +1,149 @@
 [
   {
+    "id": 41202970264,
+    "sha": "171e0a94d95ecb41c4481520ce637afeaa7e7526",
+    "short_sha": "171e0a9",
+    "message": "feat: 启动层直启——JNI_CreateJavaVM 替代 JLI_Launch，退出路径收敛为 JVM option hook\n\n- jre_launcher.c 重写：dlsym JNI_CreateJavaVM 直启游戏 JVM 并 CallStaticVoidMethod\n  调用 mio.Wrapper，SIGABRT pipe waiter 退役\n- 退出/abort 经 JVM 调用 API 标准 exit/abort JavaVMOption hook 接管：hook 记录退出码\n  后 futex 唤醒 waiter 并原地停车，waiter 经 nominal_exit 走 ART 侧 FCLBridge.onExit\n  （非 0 弹 JVMCrashActivity，0 走 System.exit），进程终止权收归启动器\n- bytehook exit 拦截保留作外部 native exit() 兜底，sdl_hook/chmod_hook 不变\n- FCLauncher.launch() 参数三段拆分：classpath 改以 -Djava.class.path 传递，\n  主类与应用参数分离\n- MuMu 实测：JRE8(1.12.2)/JRE21(1.21.1)/JRE25(26.2) 直启、正常退出、\n  崩溃上报(SIGSEGV→code 6→CrashActivity)链路均通过",
+    "created_at": "2026-10-31T12:44:45Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41202970264"
+  },
+  {
+    "id": 41202970242,
+    "sha": "171e0a94d95ecb41c4481520ce637afeaa7e7526",
+    "short_sha": "171e0a9",
+    "message": "feat: 启动层直启——JNI_CreateJavaVM 替代 JLI_Launch，退出路径收敛为 JVM option hook\n\n- jre_launcher.c 重写：dlsym JNI_CreateJavaVM 直启游戏 JVM 并 CallStaticVoidMethod\n  调用 mio.Wrapper，SIGABRT pipe waiter 退役\n- 退出/abort 经 JVM 调用 API 标准 exit/abort JavaVMOption hook 接管：hook 记录退出码\n  后 futex 唤醒 waiter 并原地停车，waiter 经 nominal_exit 走 ART 侧 FCLBridge.onExit\n  （非 0 弹 JVMCrashActivity，0 走 System.exit），进程终止权收归启动器\n- bytehook exit 拦截保留作外部 native exit() 兜底，sdl_hook/chmod_hook 不变\n- FCLauncher.launch() 参数三段拆分：classpath 改以 -Djava.class.path 传递，\n  主类与应用参数分离\n- MuMu 实测：JRE8(1.12.2)/JRE21(1.21.1)/JRE25(26.2) 直启、正常退出、\n  崩溃上报(SIGSEGV→code 6→CrashActivity)链路均通过",
+    "created_at": "2026-10-31T12:44:45Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41202970242"
+  },
+  {
+    "id": 41202954463,
+    "sha": "171e0a94d95ecb41c4481520ce637afeaa7e7526",
+    "short_sha": "171e0a9",
+    "message": "feat: 启动层直启——JNI_CreateJavaVM 替代 JLI_Launch，退出路径收敛为 JVM option hook\n\n- jre_launcher.c 重写：dlsym JNI_CreateJavaVM 直启游戏 JVM 并 CallStaticVoidMethod\n  调用 mio.Wrapper，SIGABRT pipe waiter 退役\n- 退出/abort 经 JVM 调用 API 标准 exit/abort JavaVMOption hook 接管：hook 记录退出码\n  后 futex 唤醒 waiter 并原地停车，waiter 经 nominal_exit 走 ART 侧 FCLBridge.onExit\n  （非 0 弹 JVMCrashActivity，0 走 System.exit），进程终止权收归启动器\n- bytehook exit 拦截保留作外部 native exit() 兜底，sdl_hook/chmod_hook 不变\n- FCLauncher.launch() 参数三段拆分：classpath 改以 -Djava.class.path 传递，\n  主类与应用参数分离\n- MuMu 实测：JRE8(1.12.2)/JRE21(1.21.1)/JRE25(26.2) 直启、正常退出、\n  崩溃上报(SIGSEGV→code 6→CrashActivity)链路均通过",
+    "created_at": "2026-10-31T12:44:45Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41202954463"
+  },
+  {
+    "id": 41202954466,
+    "sha": "171e0a94d95ecb41c4481520ce637afeaa7e7526",
+    "short_sha": "171e0a9",
+    "message": "feat: 启动层直启——JNI_CreateJavaVM 替代 JLI_Launch，退出路径收敛为 JVM option hook\n\n- jre_launcher.c 重写：dlsym JNI_CreateJavaVM 直启游戏 JVM 并 CallStaticVoidMethod\n  调用 mio.Wrapper，SIGABRT pipe waiter 退役\n- 退出/abort 经 JVM 调用 API 标准 exit/abort JavaVMOption hook 接管：hook 记录退出码\n  后 futex 唤醒 waiter 并原地停车，waiter 经 nominal_exit 走 ART 侧 FCLBridge.onExit\n  （非 0 弹 JVMCrashActivity，0 走 System.exit），进程终止权收归启动器\n- bytehook exit 拦截保留作外部 native exit() 兜底，sdl_hook/chmod_hook 不变\n- FCLauncher.launch() 参数三段拆分：classpath 改以 -Djava.class.path 传递，\n  主类与应用参数分离\n- MuMu 实测：JRE8(1.12.2)/JRE21(1.21.1)/JRE25(26.2) 直启、正常退出、\n  崩溃上报(SIGSEGV→code 6→CrashActivity)链路均通过",
+    "created_at": "2026-10-31T12:44:45Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41202954466"
+  },
+  {
+    "id": 41200802064,
+    "sha": "a41ed621072584804b2bfd847c22d604de405925",
+    "short_sha": "a41ed62",
+    "message": "feat: SFPEW 自动选择 EGL Context 模式\n\n- egl_loader: SFPEW_LAYER 启用时经包装层 eglGetProcAddress 解析 eglCreateContext/eglDestroyContext，\n  耦合在 makeCurrent/swap 成功分支内（避免包装建、底座毁的所有权错配），失败回落底座入口\n- gl_bridge: gl_init_context 建上下文走 bridge_eglCreateContext 分流；egl_bridge: pojavTerminate\n  销毁与创建同源\n- SFPEW AAR 升级至 26.11-dev（commit 3042d8a8）：导出面从 5 符号扩展到完整 EGL\n  （CreateContext/ChooseConfig/GetDisplay/Initialize/Sync 等），native-profile 逐上下文\n  自动开关的宿主侧前提就此补齐\n- FCLauncher: 层开启时 SDL_EGL_LIBRARY 一并指向包装库，SDL 的 EGL 栈整体经包装层",
+    "created_at": "2026-10-31T12:22:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41200802064"
+  },
+  {
+    "id": 41200802062,
+    "sha": "a41ed621072584804b2bfd847c22d604de405925",
+    "short_sha": "a41ed62",
+    "message": "feat: SFPEW 自动选择 EGL Context 模式\n\n- egl_loader: SFPEW_LAYER 启用时经包装层 eglGetProcAddress 解析 eglCreateContext/eglDestroyContext，\n  耦合在 makeCurrent/swap 成功分支内（避免包装建、底座毁的所有权错配），失败回落底座入口\n- gl_bridge: gl_init_context 建上下文走 bridge_eglCreateContext 分流；egl_bridge: pojavTerminate\n  销毁与创建同源\n- SFPEW AAR 升级至 26.11-dev（commit 3042d8a8）：导出面从 5 符号扩展到完整 EGL\n  （CreateContext/ChooseConfig/GetDisplay/Initialize/Sync 等），native-profile 逐上下文\n  自动开关的宿主侧前提就此补齐\n- FCLauncher: 层开启时 SDL_EGL_LIBRARY 一并指向包装库，SDL 的 EGL 栈整体经包装层",
+    "created_at": "2026-10-31T12:22:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41200802062"
+  },
+  {
+    "id": 41189653513,
+    "sha": "4bc4b3d1222f87b775876cf1e7658f92933a4325",
+    "short_sha": "4bc4b3d",
+    "message": "refactor: 移除 MultiMC 整合包导出功能，仅保留导入支持\n\n导出侧整体下线，导入侧不受影响——Provider/安装任务/清单解析/启动参数\n修复(#1984)均原样保留，HMCL 等外部工具导出的 MultiMC 包仍可正常导入。\n\n- 删除 MultiMCModpackExportTask；ModpackTypeSelectionPage 移除 MultiMC\n  入口与 MODPACK_TYPE_MULTIMC 常量，ModpackFileSelectionPage 移除\n  exportAsMultiMC 及对应 switch 分支（连带不再使用的 VersionSetting import），\n  TaskListPane 移除导出任务命名分支，page_modpack_type.xml 移除选项项\n  （server 项约束链改挂 mcbbs）\n- 删除 MultiMCInstanceConfiguration.toProperties()：唯一调用方为导出任务，\n  属导出专用死代码；instance.cfg 解析侧不动\n- 移除 9 个语言文件的 modpack_type_multimc_export 字符串；\n  modpack_type_multimc 保留（TaskListPane 安装任务命名仍在使用）\n\n验证：全仓 grep 无残留引用；:FCL:compileDebugJavaWithJavac 与\nMultiMCLaunchArgsTest 全量用例通过。",
+    "created_at": "2026-10-31T09:39:37Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41189653513"
+  },
+  {
+    "id": 41189653496,
+    "sha": "4bc4b3d1222f87b775876cf1e7658f92933a4325",
+    "short_sha": "4bc4b3d",
+    "message": "refactor: 移除 MultiMC 整合包导出功能，仅保留导入支持\n\n导出侧整体下线，导入侧不受影响——Provider/安装任务/清单解析/启动参数\n修复(#1984)均原样保留，HMCL 等外部工具导出的 MultiMC 包仍可正常导入。\n\n- 删除 MultiMCModpackExportTask；ModpackTypeSelectionPage 移除 MultiMC\n  入口与 MODPACK_TYPE_MULTIMC 常量，ModpackFileSelectionPage 移除\n  exportAsMultiMC 及对应 switch 分支（连带不再使用的 VersionSetting import），\n  TaskListPane 移除导出任务命名分支，page_modpack_type.xml 移除选项项\n  （server 项约束链改挂 mcbbs）\n- 删除 MultiMCInstanceConfiguration.toProperties()：唯一调用方为导出任务，\n  属导出专用死代码；instance.cfg 解析侧不动\n- 移除 9 个语言文件的 modpack_type_multimc_export 字符串；\n  modpack_type_multimc 保留（TaskListPane 安装任务命名仍在使用）\n\n验证：全仓 grep 无残留引用；:FCL:compileDebugJavaWithJavac 与\nMultiMCLaunchArgsTest 全量用例通过。",
+    "created_at": "2026-10-31T09:39:37Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41189653496"
+  },
+  {
+    "id": 41179393687,
+    "sha": "36eaeb25e8b9fea869851f9244bcb75be6cf47ce",
+    "short_sha": "36eaeb2",
+    "message": "fix: 变基吸收 SFPEW/JNA 启动链钩子，修复阶段打勾错位\n\n- 自 main 移植三处启动链改动（解决 LauncherHelper.java 删除/修改冲突）：\n  mod 扫描后上报 FPE 模拟模组（RendererPlugin.setFpeEmulatorModsPresent），\n  JNA 版本 natives 现场补齐（JnaNatives.ensureNativeLibrary，防 26.x 快照\n  启动崩），SFPEW 兼容层启用时跳过渲染器 min MC 版本判定\n- enterStage 改为成功上一个真正进入的阶段：isNotCheckGame 跳过\n  dependencies 时 launch.state.java 不再漏勾、dependencies 不再误勾\n- TaskDialog.setStages 重复调用时释放上一个 TaskListPane\n- awaitChoice 按钮语义注释对齐实际用法",
+    "created_at": "2026-10-31T07:06:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41179393687"
+  },
+  {
+    "id": 41179393737,
+    "sha": "36eaeb25e8b9fea869851f9244bcb75be6cf47ce",
+    "short_sha": "36eaeb2",
+    "message": "fix: 变基吸收 SFPEW/JNA 启动链钩子，修复阶段打勾错位\n\n- 自 main 移植三处启动链改动（解决 LauncherHelper.java 删除/修改冲突）：\n  mod 扫描后上报 FPE 模拟模组（RendererPlugin.setFpeEmulatorModsPresent），\n  JNA 版本 natives 现场补齐（JnaNatives.ensureNativeLibrary，防 26.x 快照\n  启动崩），SFPEW 兼容层启用时跳过渲染器 min MC 版本判定\n- enterStage 改为成功上一个真正进入的阶段：isNotCheckGame 跳过\n  dependencies 时 launch.state.java 不再漏勾、dependencies 不再误勾\n- TaskDialog.setStages 重复调用时释放上一个 TaskListPane\n- awaitChoice 按钮语义注释对齐实际用法",
+    "created_at": "2026-10-31T07:06:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41179393737"
+  },
+  {
+    "id": 41179391267,
+    "sha": "36eaeb25e8b9fea869851f9244bcb75be6cf47ce",
+    "short_sha": "36eaeb2",
+    "message": "fix: 变基吸收 SFPEW/JNA 启动链钩子，修复阶段打勾错位\n\n- 自 main 移植三处启动链改动（解决 LauncherHelper.java 删除/修改冲突）：\n  mod 扫描后上报 FPE 模拟模组（RendererPlugin.setFpeEmulatorModsPresent），\n  JNA 版本 natives 现场补齐（JnaNatives.ensureNativeLibrary，防 26.x 快照\n  启动崩），SFPEW 兼容层启用时跳过渲染器 min MC 版本判定\n- enterStage 改为成功上一个真正进入的阶段：isNotCheckGame 跳过\n  dependencies 时 launch.state.java 不再漏勾、dependencies 不再误勾\n- TaskDialog.setStages 重复调用时释放上一个 TaskListPane\n- awaitChoice 按钮语义注释对齐实际用法",
+    "created_at": "2026-10-31T07:06:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41179391267"
+  },
+  {
+    "id": 41179391293,
+    "sha": "36eaeb25e8b9fea869851f9244bcb75be6cf47ce",
+    "short_sha": "36eaeb2",
+    "message": "fix: 变基吸收 SFPEW/JNA 启动链钩子，修复阶段打勾错位\n\n- 自 main 移植三处启动链改动（解决 LauncherHelper.java 删除/修改冲突）：\n  mod 扫描后上报 FPE 模拟模组（RendererPlugin.setFpeEmulatorModsPresent），\n  JNA 版本 natives 现场补齐（JnaNatives.ensureNativeLibrary，防 26.x 快照\n  启动崩），SFPEW 兼容层启用时跳过渲染器 min MC 版本判定\n- enterStage 改为成功上一个真正进入的阶段：isNotCheckGame 跳过\n  dependencies 时 launch.state.java 不再漏勾、dependencies 不再误勾\n- TaskDialog.setStages 重复调用时释放上一个 TaskListPane\n- awaitChoice 按钮语义注释对齐实际用法",
+    "created_at": "2026-10-31T07:06:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41179391293"
+  },
+  {
+    "id": 41178052518,
+    "sha": "52eb2b3aa51e677bc0382431e8788cc65ff43fc3",
+    "short_sha": "52eb2b3",
+    "message": "fix: MultiMC 整合包启动崩溃——游戏参数被两代格式重复拼接(ModLauncher 抛 MultipleArgumentsForOptionException) (#1984)\n\n* fix: MultiMC 整合包启动崩溃——游戏参数被两代格式重复拼接,ModLauncher 抛 MultipleArgumentsForOptionException\n\n根因:meta.multimc.org 对 net.neoforged 等加载器的 Json-Patch 以 legacy minecraftArguments\n承载全套标准参数与加载器附加项;导入合并后版本 json 同时存在 legacy 与新式 arguments.game,\nDefaultLauncher 把两代格式各拼一遍并再补一份默认分辨率参数,--gameDir/--username/--width\n等重复出现,ModLauncher 的 joptsimple 直接抛出 MultipleArgumentsForOptionException。\n\n修复两处:\n- DefaultLauncher:legacy minecraftArguments 与新式 arguments.game 互斥——legacy 非空时\n  只拼 legacy 并补 DEFAULT_GAME_ARGUMENTS(width/height 一次),否则走 arguments.game。\n  已导入的存量实例无需重新导入即可正常启动。\n- MultiMCInstancePatch.resolveArtifact:合成参数改以新式 game args 承载(对齐 HMCL main\n  的演进方向),extractExtraGameArguments 剥离官方标准占位参数对(flag + ${...} 占位值,\n  含 --clientId/--xuid/--userProperties),只保留加载器附加项;flag 带非占位符具体值时\n  视为有意覆盖原样保留。注意 FCL 保留原版 base patch 叠加且 Arguments.merge 为拼接语义,\n  与 HMCL main 的整体替换清单不同,不能直接照抄其 addGameArguments 全量承载的做法。\n\n测试:新增 MultiMCLaunchArgsTest(9 用例)——以修改前后拼接逻辑的参照实现驱动真实的\nresolveArtifact/addPatch/resolve/Arguments 解析:单一代际格式的版本修改前后输出完全一致;\n两条修复路径(存量 legacy 路径 / 新导入新式路径)输出精确断言;多重集余量恰为重复部分,\n证明修复只去重零丢失。已同步 HMCL #7077 之后的 main 上全量单测通过(仅 ControlConverterTest\n2 个预存失败)。\n\n* fix: MultiMC 整合包合成参数按基座格式选承载方式,修复老版 Forge 导入丢失 --tweakClass\n\n审查发现:resolveArtifact 无条件剥离标准占位参数对,对 <1.13 legacy 基座实例是回归——\n导入时 GameBuilder 先创建基础原版版本 json(<1.13 为 legacy minecraftArguments),合成\n补丁不再携带 legacy 串后,加载器附加项(--tweakClass/--versionType)全部落在 arguments.game;\n合并后基座 legacy 串非空,DefaultLauncher 的互斥逻辑跳过 arguments.game,--tweakClass 被\n丢弃,老版 Forge/LiteLoader 新导入将静默变原版启动(mods 不加载)。存量实例不受影响。\n\n修复:resolveArtifact 依 net.minecraft 组件(Json-Patch)的 minecraftArguments 判定基座\n参数格式——legacy 基座保持完整 legacy 串整体覆盖(MultiMC 原语义,Version.merge 对\nminecraftArguments 为覆盖语义);新式基座(1.13+)维持剥离+新式 game args 承载,NeoForge\n场景行为不变。\n\n测试:MultiMCLaunchArgsTest 补 legacyBase_oldForgeImport_tweakClassPreserved:1.8.9 基座 +\n1.12.2 Forge 本地补丁,断言合成补丁以 minecraftArguments 承载、合并后修改前后两代拼接逻辑\n均携带 FMLTweaker(修复前该用例失败,修复后通过)。全量 :FCL:testDebugUnitTest 通过\n(仅 ControlConverterTest 2 个预存失败,与本 PR 无关)。",
+    "created_at": "2026-10-31T06:47:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41178052518"
+  },
+  {
+    "id": 41178052557,
+    "sha": "52eb2b3aa51e677bc0382431e8788cc65ff43fc3",
+    "short_sha": "52eb2b3",
+    "message": "fix: MultiMC 整合包启动崩溃——游戏参数被两代格式重复拼接(ModLauncher 抛 MultipleArgumentsForOptionException) (#1984)\n\n* fix: MultiMC 整合包启动崩溃——游戏参数被两代格式重复拼接,ModLauncher 抛 MultipleArgumentsForOptionException\n\n根因:meta.multimc.org 对 net.neoforged 等加载器的 Json-Patch 以 legacy minecraftArguments\n承载全套标准参数与加载器附加项;导入合并后版本 json 同时存在 legacy 与新式 arguments.game,\nDefaultLauncher 把两代格式各拼一遍并再补一份默认分辨率参数,--gameDir/--username/--width\n等重复出现,ModLauncher 的 joptsimple 直接抛出 MultipleArgumentsForOptionException。\n\n修复两处:\n- DefaultLauncher:legacy minecraftArguments 与新式 arguments.game 互斥——legacy 非空时\n  只拼 legacy 并补 DEFAULT_GAME_ARGUMENTS(width/height 一次),否则走 arguments.game。\n  已导入的存量实例无需重新导入即可正常启动。\n- MultiMCInstancePatch.resolveArtifact:合成参数改以新式 game args 承载(对齐 HMCL main\n  的演进方向),extractExtraGameArguments 剥离官方标准占位参数对(flag + ${...} 占位值,\n  含 --clientId/--xuid/--userProperties),只保留加载器附加项;flag 带非占位符具体值时\n  视为有意覆盖原样保留。注意 FCL 保留原版 base patch 叠加且 Arguments.merge 为拼接语义,\n  与 HMCL main 的整体替换清单不同,不能直接照抄其 addGameArguments 全量承载的做法。\n\n测试:新增 MultiMCLaunchArgsTest(9 用例)——以修改前后拼接逻辑的参照实现驱动真实的\nresolveArtifact/addPatch/resolve/Arguments 解析:单一代际格式的版本修改前后输出完全一致;\n两条修复路径(存量 legacy 路径 / 新导入新式路径)输出精确断言;多重集余量恰为重复部分,\n证明修复只去重零丢失。已同步 HMCL #7077 之后的 main 上全量单测通过(仅 ControlConverterTest\n2 个预存失败)。\n\n* fix: MultiMC 整合包合成参数按基座格式选承载方式,修复老版 Forge 导入丢失 --tweakClass\n\n审查发现:resolveArtifact 无条件剥离标准占位参数对,对 <1.13 legacy 基座实例是回归——\n导入时 GameBuilder 先创建基础原版版本 json(<1.13 为 legacy minecraftArguments),合成\n补丁不再携带 legacy 串后,加载器附加项(--tweakClass/--versionType)全部落在 arguments.game;\n合并后基座 legacy 串非空,DefaultLauncher 的互斥逻辑跳过 arguments.game,--tweakClass 被\n丢弃,老版 Forge/LiteLoader 新导入将静默变原版启动(mods 不加载)。存量实例不受影响。\n\n修复:resolveArtifact 依 net.minecraft 组件(Json-Patch)的 minecraftArguments 判定基座\n参数格式——legacy 基座保持完整 legacy 串整体覆盖(MultiMC 原语义,Version.merge 对\nminecraftArguments 为覆盖语义);新式基座(1.13+)维持剥离+新式 game args 承载,NeoForge\n场景行为不变。\n\n测试:MultiMCLaunchArgsTest 补 legacyBase_oldForgeImport_tweakClassPreserved:1.8.9 基座 +\n1.12.2 Forge 本地补丁,断言合成补丁以 minecraftArguments 承载、合并后修改前后两代拼接逻辑\n均携带 FMLTweaker(修复前该用例失败,修复后通过)。全量 :FCL:testDebugUnitTest 通过\n(仅 ControlConverterTest 2 个预存失败,与本 PR 无关)。",
+    "created_at": "2026-10-31T06:47:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41178052557"
+  },
+  {
+    "id": 41177963033,
+    "sha": "6a27b95fffb6d4904c082f4016ae389b858085de",
+    "short_sha": "6a27b95",
+    "message": "fix: MultiMC 整合包合成参数按基座格式选承载方式,修复老版 Forge 导入丢失 --tweakClass\n\n审查发现:resolveArtifact 无条件剥离标准占位参数对,对 <1.13 legacy 基座实例是回归——\n导入时 GameBuilder 先创建基础原版版本 json(<1.13 为 legacy minecraftArguments),合成\n补丁不再携带 legacy 串后,加载器附加项(--tweakClass/--versionType)全部落在 arguments.game;\n合并后基座 legacy 串非空,DefaultLauncher 的互斥逻辑跳过 arguments.game,--tweakClass 被\n丢弃,老版 Forge/LiteLoader 新导入将静默变原版启动(mods 不加载)。存量实例不受影响。\n\n修复:resolveArtifact 依 net.minecraft 组件(Json-Patch)的 minecraftArguments 判定基座\n参数格式——legacy 基座保持完整 legacy 串整体覆盖(MultiMC 原语义,Version.merge 对\nminecraftArguments 为覆盖语义);新式基座(1.13+)维持剥离+新式 game args 承载,NeoForge\n场景行为不变。\n\n测试:MultiMCLaunchArgsTest 补 legacyBase_oldForgeImport_tweakClassPreserved:1.8.9 基座 +\n1.12.2 Forge 本地补丁,断言合成补丁以 minecraftArguments 承载、合并后修改前后两代拼接逻辑\n均携带 FMLTweaker(修复前该用例失败,修复后通过)。全量 :FCL:testDebugUnitTest 通过\n(仅 ControlConverterTest 2 个预存失败,与本 PR 无关)。",
+    "created_at": "2026-10-31T06:42:34Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41177963033"
+  },
+  {
+    "id": 41177962942,
+    "sha": "6a27b95fffb6d4904c082f4016ae389b858085de",
+    "short_sha": "6a27b95",
+    "message": "fix: MultiMC 整合包合成参数按基座格式选承载方式,修复老版 Forge 导入丢失 --tweakClass\n\n审查发现:resolveArtifact 无条件剥离标准占位参数对,对 <1.13 legacy 基座实例是回归——\n导入时 GameBuilder 先创建基础原版版本 json(<1.13 为 legacy minecraftArguments),合成\n补丁不再携带 legacy 串后,加载器附加项(--tweakClass/--versionType)全部落在 arguments.game;\n合并后基座 legacy 串非空,DefaultLauncher 的互斥逻辑跳过 arguments.game,--tweakClass 被\n丢弃,老版 Forge/LiteLoader 新导入将静默变原版启动(mods 不加载)。存量实例不受影响。\n\n修复:resolveArtifact 依 net.minecraft 组件(Json-Patch)的 minecraftArguments 判定基座\n参数格式——legacy 基座保持完整 legacy 串整体覆盖(MultiMC 原语义,Version.merge 对\nminecraftArguments 为覆盖语义);新式基座(1.13+)维持剥离+新式 game args 承载,NeoForge\n场景行为不变。\n\n测试:MultiMCLaunchArgsTest 补 legacyBase_oldForgeImport_tweakClassPreserved:1.8.9 基座 +\n1.12.2 Forge 本地补丁,断言合成补丁以 minecraftArguments 承载、合并后修改前后两代拼接逻辑\n均携带 FMLTweaker(修复前该用例失败,修复后通过)。全量 :FCL:testDebugUnitTest 通过\n(仅 ControlConverterTest 2 个预存失败,与本 PR 无关)。",
+    "created_at": "2026-10-31T06:42:34Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41177962942"
+  },
+  {
+    "id": 41177959644,
+    "sha": "6a27b95fffb6d4904c082f4016ae389b858085de",
+    "short_sha": "6a27b95",
+    "message": "fix: MultiMC 整合包合成参数按基座格式选承载方式,修复老版 Forge 导入丢失 --tweakClass\n\n审查发现:resolveArtifact 无条件剥离标准占位参数对,对 <1.13 legacy 基座实例是回归——\n导入时 GameBuilder 先创建基础原版版本 json(<1.13 为 legacy minecraftArguments),合成\n补丁不再携带 legacy 串后,加载器附加项(--tweakClass/--versionType)全部落在 arguments.game;\n合并后基座 legacy 串非空,DefaultLauncher 的互斥逻辑跳过 arguments.game,--tweakClass 被\n丢弃,老版 Forge/LiteLoader 新导入将静默变原版启动(mods 不加载)。存量实例不受影响。\n\n修复:resolveArtifact 依 net.minecraft 组件(Json-Patch)的 minecraftArguments 判定基座\n参数格式——legacy 基座保持完整 legacy 串整体覆盖(MultiMC 原语义,Version.merge 对\nminecraftArguments 为覆盖语义);新式基座(1.13+)维持剥离+新式 game args 承载,NeoForge\n场景行为不变。\n\n测试:MultiMCLaunchArgsTest 补 legacyBase_oldForgeImport_tweakClassPreserved:1.8.9 基座 +\n1.12.2 Forge 本地补丁,断言合成补丁以 minecraftArguments 承载、合并后修改前后两代拼接逻辑\n均携带 FMLTweaker(修复前该用例失败,修复后通过)。全量 :FCL:testDebugUnitTest 通过\n(仅 ControlConverterTest 2 个预存失败,与本 PR 无关)。",
+    "created_at": "2026-10-31T06:42:34Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41177959644"
+  },
+  {
+    "id": 41177959408,
+    "sha": "6a27b95fffb6d4904c082f4016ae389b858085de",
+    "short_sha": "6a27b95",
+    "message": "fix: MultiMC 整合包合成参数按基座格式选承载方式,修复老版 Forge 导入丢失 --tweakClass\n\n审查发现:resolveArtifact 无条件剥离标准占位参数对,对 <1.13 legacy 基座实例是回归——\n导入时 GameBuilder 先创建基础原版版本 json(<1.13 为 legacy minecraftArguments),合成\n补丁不再携带 legacy 串后,加载器附加项(--tweakClass/--versionType)全部落在 arguments.game;\n合并后基座 legacy 串非空,DefaultLauncher 的互斥逻辑跳过 arguments.game,--tweakClass 被\n丢弃,老版 Forge/LiteLoader 新导入将静默变原版启动(mods 不加载)。存量实例不受影响。\n\n修复:resolveArtifact 依 net.minecraft 组件(Json-Patch)的 minecraftArguments 判定基座\n参数格式——legacy 基座保持完整 legacy 串整体覆盖(MultiMC 原语义,Version.merge 对\nminecraftArguments 为覆盖语义);新式基座(1.13+)维持剥离+新式 game args 承载,NeoForge\n场景行为不变。\n\n测试:MultiMCLaunchArgsTest 补 legacyBase_oldForgeImport_tweakClassPreserved:1.8.9 基座 +\n1.12.2 Forge 本地补丁,断言合成补丁以 minecraftArguments 承载、合并后修改前后两代拼接逻辑\n均携带 FMLTweaker(修复前该用例失败,修复后通过)。全量 :FCL:testDebugUnitTest 通过\n(仅 ControlConverterTest 2 个预存失败,与本 PR 无关)。",
+    "created_at": "2026-10-31T06:42:34Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41177959408"
+  },
+  {
     "id": 41175414297,
     "sha": "cc5ad097975138f1bdc8d6bc0714eab6ef66a850",
     "short_sha": "cc5ad09",
@@ -88,20 +232,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41170049129"
   },
   {
-    "id": 41169816988,
-    "sha": "6ca800f11297168e9ddedcca292b4e38490d38d5",
-    "short_sha": "6ca800f",
-    "message": "feat: 同步 HMCL #7092——NeoForged Maven 相关文件支持 CurseForge CDN 镜像候选\n\n- NeoForgeRemoteVersion：新增 neoforged.forgecdn.net 元数据镜像常量与\n  getMirrorCandidates(url, mirrorFirst) 规则（/releases/ 路径按 mirrorFirst\n  在官方源与 BMCLAPI 间排序，一律追加 forgecdn）\n- NeoForgeOfficialVersionList：元数据 GetTask 改用 [原URL, 镜像URL] 双候选\n- Mojang/BMCLAPI DownloadProvider：maven.neoforged.net 专用镜像规则拦截\n  （覆盖 installer.jar 与库文件下载候选）\n\n同步自 HMCL-dev/HMCL@5ad4880 (#7092)",
-    "created_at": "2026-10-31T04:43:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41169816988"
-  },
-  {
     "id": 41169816795,
     "sha": "6ca800f11297168e9ddedcca292b4e38490d38d5",
     "short_sha": "6ca800f",
     "message": "feat: 同步 HMCL #7092——NeoForged Maven 相关文件支持 CurseForge CDN 镜像候选\n\n- NeoForgeRemoteVersion：新增 neoforged.forgecdn.net 元数据镜像常量与\n  getMirrorCandidates(url, mirrorFirst) 规则（/releases/ 路径按 mirrorFirst\n  在官方源与 BMCLAPI 间排序，一律追加 forgecdn）\n- NeoForgeOfficialVersionList：元数据 GetTask 改用 [原URL, 镜像URL] 双候选\n- Mojang/BMCLAPI DownloadProvider：maven.neoforged.net 专用镜像规则拦截\n  （覆盖 installer.jar 与库文件下载候选）\n\n同步自 HMCL-dev/HMCL@5ad4880 (#7092)",
     "created_at": "2026-10-31T04:43:46Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41169816795"
+  },
+  {
+    "id": 41169816988,
+    "sha": "6ca800f11297168e9ddedcca292b4e38490d38d5",
+    "short_sha": "6ca800f",
+    "message": "feat: 同步 HMCL #7092——NeoForged Maven 相关文件支持 CurseForge CDN 镜像候选\n\n- NeoForgeRemoteVersion：新增 neoforged.forgecdn.net 元数据镜像常量与\n  getMirrorCandidates(url, mirrorFirst) 规则（/releases/ 路径按 mirrorFirst\n  在官方源与 BMCLAPI 间排序，一律追加 forgecdn）\n- NeoForgeOfficialVersionList：元数据 GetTask 改用 [原URL, 镜像URL] 双候选\n- Mojang/BMCLAPI DownloadProvider：maven.neoforged.net 专用镜像规则拦截\n  （覆盖 installer.jar 与库文件下载候选）\n\n同步自 HMCL-dev/HMCL@5ad4880 (#7092)",
+    "created_at": "2026-10-31T04:43:46Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41169816988"
   },
   {
     "id": 41168711304,
@@ -120,14 +264,6 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41168711299"
   },
   {
-    "id": 41166880227,
-    "sha": "2092e95df4c9c9ff76fd689e8701f277cbafbd81",
-    "short_sha": "2092e95",
-    "message": "Update RendererManager.kt",
-    "created_at": "2026-10-31T04:02:10Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166880227"
-  },
-  {
     "id": 41166880191,
     "sha": "2092e95df4c9c9ff76fd689e8701f277cbafbd81",
     "short_sha": "2092e95",
@@ -136,12 +272,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166880191"
   },
   {
-    "id": 41166875985,
+    "id": 41166880227,
     "sha": "2092e95df4c9c9ff76fd689e8701f277cbafbd81",
     "short_sha": "2092e95",
     "message": "Update RendererManager.kt",
     "created_at": "2026-10-31T04:02:10Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166875985"
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166880227"
   },
   {
     "id": 41166875988,
@@ -150,6 +286,14 @@
     "message": "Update RendererManager.kt",
     "created_at": "2026-10-31T04:02:10Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166875988"
+  },
+  {
+    "id": 41166875985,
+    "sha": "2092e95df4c9c9ff76fd689e8701f277cbafbd81",
+    "short_sha": "2092e95",
+    "message": "Update RendererManager.kt",
+    "created_at": "2026-10-31T04:02:10Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166875985"
   },
   {
     "id": 41166614244,
@@ -254,149 +398,5 @@
     "message": "refactor: 放大镜迁移至 Kotlin，修复平移死区与可见性细节\n\n- 按项目惯例将 InputMagnifierView 迁移为 Kotlin\n- 修复低分辨率帧下取样区域被钉死在整帧适配的死区：zoom=1 为整帧概览，\n  任何放大立即裁切且可平移（区域 = 视口 × fitScale ÷ zoom，等比不拉伸）\n- 平移加 0.5 阻尼，小窗口内更易定位\n- 放大镜画面回读按 33ms 节流，打开时强制捕获\n- 描边改走 foreground 绘制（background 描边会被 viewport 画面盖住），\n  白色 3dp 圆角边框提示当前为放大画面\n- 手动打开放大镜时重置 dismissedForInput，避免输入法动画抖动将其自动收回\n- 移除搜索图标被运行时覆盖的 tint",
     "created_at": "2026-10-30T14:29:41Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41072205126"
-  },
-  {
-    "id": 41049276141,
-    "sha": "0b0e1ac8ae53ef65767c8f7e781fcb2ce0302611",
-    "short_sha": "0b0e1ac",
-    "message": "fix: 游戏自定义分辨率过小时，放大镜画面被拉伸",
-    "created_at": "2026-10-30T11:33:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41049276141"
-  },
-  {
-    "id": 41049275858,
-    "sha": "0b0e1ac8ae53ef65767c8f7e781fcb2ce0302611",
-    "short_sha": "0b0e1ac",
-    "message": "fix: 游戏自定义分辨率过小时，放大镜画面被拉伸",
-    "created_at": "2026-10-30T11:33:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41049275858"
-  },
-  {
-    "id": 41040704640,
-    "sha": "d7af735a3077e62b7b0bb91c1ba35a7d6676381a",
-    "short_sha": "d7af735",
-    "message": "feat: 输入法遮挡画面时提供放大镜窗口",
-    "created_at": "2026-10-30T10:25:19Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41040704640"
-  },
-  {
-    "id": 41040704880,
-    "sha": "d7af735a3077e62b7b0bb91c1ba35a7d6676381a",
-    "short_sha": "d7af735",
-    "message": "feat: 输入法遮挡画面时提供放大镜窗口",
-    "created_at": "2026-10-30T10:25:19Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41040704880"
-  },
-  {
-    "id": 40987226830,
-    "sha": "cdba79fa53b92624cca2cb806f58934ac879445c",
-    "short_sha": "cdba79f",
-    "message": "Update version_map.json",
-    "created_at": "2026-10-30T01:40:20Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40987226830"
-  },
-  {
-    "id": 40985785078,
-    "sha": "d3078f3f9769420b168863990a71ff0cd0f28929",
-    "short_sha": "d3078f3",
-    "message": "1.3.4.3",
-    "created_at": "2026-10-30T01:25:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40985785078"
-  },
-  {
-    "id": 40985784832,
-    "sha": "d3078f3f9769420b168863990a71ff0cd0f28929",
-    "short_sha": "d3078f3",
-    "message": "1.3.4.3",
-    "created_at": "2026-10-30T01:25:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40985784832"
-  },
-  {
-    "id": 40985784908,
-    "sha": "d3078f3f9769420b168863990a71ff0cd0f28929",
-    "short_sha": "d3078f3",
-    "message": "1.3.4.3",
-    "created_at": "2026-10-30T01:25:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40985784908"
-  },
-  {
-    "id": 40984025757,
-    "sha": "e12e0615d4fcb75363c111f983dae83c0690cbf2",
-    "short_sha": "e12e061",
-    "message": "fix: 版本列表切换版本时异常跳动（#1974） (#1976)\n\n三处跳动源：\n\n1. 分类 Tab 栏 scrollFlags 含 enterAlways|snap，点按条目时的微小\n   纵向漂移即触发嵌套滚动，AppBarLayout 展开又 snap 回弹，整个列表\n   随之上下窜动。改为仅 scroll：上滑仍可收起 Tab，点按不再牵动列表。\n\n2. diff 内容变化返回 null payload → 整行重绑 + itemAnimator 交叉\n   淡出 + 入场动画（playTranslationX）重播，一次列表刷新可见条目\n   集体横滑/闪烁。改为 PAYLOAD_CONTENT 局部重绑：复用 ViewHolder\n   只刷新数据字段，无动画。\n\n3. render 的 scrollToPosition 定位选中项在选中项已在视口内时仍会\n   拽动视口，改为仅选中项不可见时才滚动。\n\nMuMu 实测：微手势/连续切换版本下列表位移消失，星标置顶、页面重进、\n选中联动正常。",
-    "created_at": "2026-10-30T01:08:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40984025757"
-  },
-  {
-    "id": 40984025729,
-    "sha": "e12e0615d4fcb75363c111f983dae83c0690cbf2",
-    "short_sha": "e12e061",
-    "message": "fix: 版本列表切换版本时异常跳动（#1974） (#1976)\n\n三处跳动源：\n\n1. 分类 Tab 栏 scrollFlags 含 enterAlways|snap，点按条目时的微小\n   纵向漂移即触发嵌套滚动，AppBarLayout 展开又 snap 回弹，整个列表\n   随之上下窜动。改为仅 scroll：上滑仍可收起 Tab，点按不再牵动列表。\n\n2. diff 内容变化返回 null payload → 整行重绑 + itemAnimator 交叉\n   淡出 + 入场动画（playTranslationX）重播，一次列表刷新可见条目\n   集体横滑/闪烁。改为 PAYLOAD_CONTENT 局部重绑：复用 ViewHolder\n   只刷新数据字段，无动画。\n\n3. render 的 scrollToPosition 定位选中项在选中项已在视口内时仍会\n   拽动视口，改为仅选中项不可见时才滚动。\n\nMuMu 实测：微手势/连续切换版本下列表位移消失，星标置顶、页面重进、\n选中联动正常。",
-    "created_at": "2026-10-30T01:08:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40984025729"
-  },
-  {
-    "id": 40864421785,
-    "sha": "c9d4712e6bf757734b3674f0d91ecc49d5f7e8d4",
-    "short_sha": "c9d4712",
-    "message": "fix: BMCLAPI 兜底哈希改为写入时增量 SHA-1，修复 OptiFine 等无显式校验值的下载报 NoSuchFileException\n\n7fd9ce2a 引入的 FileDownloadTask 兜底校验在 close() 里重读 temp 文件，\n但 FileUtils.moveFile（copy 后删除源文件）在校验前已把 temp 删除，\nBMCLAPI 链路且无显式 IntegrityCheck 的下载（如 OptiFine 安装）在文件\n成功落位后 100% 抛 NoSuchFileException，并随重试反复完整重下仍失败。\n现改为 getContext 创建增量 MessageDigest、write() 边写边喂、close()\n直接比对内存摘要，零额外 I/O 且与 integrityCheck 路径同构。",
-    "created_at": "2026-10-29T11:17:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40864421785"
-  },
-  {
-    "id": 40864421833,
-    "sha": "c9d4712e6bf757734b3674f0d91ecc49d5f7e8d4",
-    "short_sha": "c9d4712",
-    "message": "fix: BMCLAPI 兜底哈希改为写入时增量 SHA-1，修复 OptiFine 等无显式校验值的下载报 NoSuchFileException\n\n7fd9ce2a 引入的 FileDownloadTask 兜底校验在 close() 里重读 temp 文件，\n但 FileUtils.moveFile（copy 后删除源文件）在校验前已把 temp 删除，\nBMCLAPI 链路且无显式 IntegrityCheck 的下载（如 OptiFine 安装）在文件\n成功落位后 100% 抛 NoSuchFileException，并随重试反复完整重下仍失败。\n现改为 getContext 创建增量 MessageDigest、write() 边写边喂、close()\n直接比对内存摘要，零额外 I/O 且与 integrityCheck 路径同构。",
-    "created_at": "2026-10-29T11:17:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40864421833"
-  },
-  {
-    "id": 40830732905,
-    "sha": "13fee7621f6b438523d42007b8cd35bd620428d4",
-    "short_sha": "13fee76",
-    "message": "fix: 更新 lwjgl-openal.jar，AL.create() 守卫补充 alcDevice 判空，修复 Cleanroom 替换 destroy() 后原版音效全失 (#1980)",
-    "created_at": "2026-10-29T06:41:18Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40830732905"
-  },
-  {
-    "id": 40683853448,
-    "sha": "9ebfae580ab5408d2801799950bc1a1860d63ede",
-    "short_sha": "9ebfae5",
-    "message": "fix: 版本列表切换版本时异常跳动（#1974）\n\n三处跳动源：\n\n1. 分类 Tab 栏 scrollFlags 含 enterAlways|snap，点按条目时的微小\n   纵向漂移即触发嵌套滚动，AppBarLayout 展开又 snap 回弹，整个列表\n   随之上下窜动。改为仅 scroll：上滑仍可收起 Tab，点按不再牵动列表。\n\n2. diff 内容变化返回 null payload → 整行重绑 + itemAnimator 交叉\n   淡出 + 入场动画（playTranslationX）重播，一次列表刷新可见条目\n   集体横滑/闪烁。改为 PAYLOAD_CONTENT 局部重绑：复用 ViewHolder\n   只刷新数据字段，无动画。\n\n3. render 的 scrollToPosition 定位选中项在选中项已在视口内时仍会\n   拽动视口，改为仅选中项不可见时才滚动。\n\nMuMu 实测：微手势/连续切换版本下列表位移消失，星标置顶、页面重进、\n选中联动正常。",
-    "created_at": "2026-10-28T11:56:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40683853448"
-  },
-  {
-    "id": 40683853532,
-    "sha": "9ebfae580ab5408d2801799950bc1a1860d63ede",
-    "short_sha": "9ebfae5",
-    "message": "fix: 版本列表切换版本时异常跳动（#1974）\n\n三处跳动源：\n\n1. 分类 Tab 栏 scrollFlags 含 enterAlways|snap，点按条目时的微小\n   纵向漂移即触发嵌套滚动，AppBarLayout 展开又 snap 回弹，整个列表\n   随之上下窜动。改为仅 scroll：上滑仍可收起 Tab，点按不再牵动列表。\n\n2. diff 内容变化返回 null payload → 整行重绑 + itemAnimator 交叉\n   淡出 + 入场动画（playTranslationX）重播，一次列表刷新可见条目\n   集体横滑/闪烁。改为 PAYLOAD_CONTENT 局部重绑：复用 ViewHolder\n   只刷新数据字段，无动画。\n\n3. render 的 scrollToPosition 定位选中项在选中项已在视口内时仍会\n   拽动视口，改为仅选中项不可见时才滚动。\n\nMuMu 实测：微手势/连续切换版本下列表位移消失，星标置顶、页面重进、\n选中联动正常。",
-    "created_at": "2026-10-28T11:56:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40683853532"
-  },
-  {
-    "id": 40683806444,
-    "sha": "9ebfae580ab5408d2801799950bc1a1860d63ede",
-    "short_sha": "9ebfae5",
-    "message": "fix: 版本列表切换版本时异常跳动（#1974）\n\n三处跳动源：\n\n1. 分类 Tab 栏 scrollFlags 含 enterAlways|snap，点按条目时的微小\n   纵向漂移即触发嵌套滚动，AppBarLayout 展开又 snap 回弹，整个列表\n   随之上下窜动。改为仅 scroll：上滑仍可收起 Tab，点按不再牵动列表。\n\n2. diff 内容变化返回 null payload → 整行重绑 + itemAnimator 交叉\n   淡出 + 入场动画（playTranslationX）重播，一次列表刷新可见条目\n   集体横滑/闪烁。改为 PAYLOAD_CONTENT 局部重绑：复用 ViewHolder\n   只刷新数据字段，无动画。\n\n3. render 的 scrollToPosition 定位选中项在选中项已在视口内时仍会\n   拽动视口，改为仅选中项不可见时才滚动。\n\nMuMu 实测：微手势/连续切换版本下列表位移消失，星标置顶、页面重进、\n选中联动正常。",
-    "created_at": "2026-10-28T11:56:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40683806444"
-  },
-  {
-    "id": 40683806359,
-    "sha": "9ebfae580ab5408d2801799950bc1a1860d63ede",
-    "short_sha": "9ebfae5",
-    "message": "fix: 版本列表切换版本时异常跳动（#1974）\n\n三处跳动源：\n\n1. 分类 Tab 栏 scrollFlags 含 enterAlways|snap，点按条目时的微小\n   纵向漂移即触发嵌套滚动，AppBarLayout 展开又 snap 回弹，整个列表\n   随之上下窜动。改为仅 scroll：上滑仍可收起 Tab，点按不再牵动列表。\n\n2. diff 内容变化返回 null payload → 整行重绑 + itemAnimator 交叉\n   淡出 + 入场动画（playTranslationX）重播，一次列表刷新可见条目\n   集体横滑/闪烁。改为 PAYLOAD_CONTENT 局部重绑：复用 ViewHolder\n   只刷新数据字段，无动画。\n\n3. render 的 scrollToPosition 定位选中项在选中项已在视口内时仍会\n   拽动视口，改为仅选中项不可见时才滚动。\n\nMuMu 实测：微手势/连续切换版本下列表位移消失，星标置顶、页面重进、\n选中联动正常。",
-    "created_at": "2026-10-28T11:56:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40683806359"
-  },
-  {
-    "id": 40668324017,
-    "sha": "fc843f175af40106e8d8c8de4b3f7cebc6a93795",
-    "short_sha": "fc843f1",
-    "message": "fix: 主题色透明度<100% 时下载页 item 透出垫底侧滑收藏按钮，SwipeMenuLayout 关闭态隐藏菜单层（INVISIBLE 保测量）",
-    "created_at": "2026-10-28T09:53:39Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40668324017"
   }
 ]

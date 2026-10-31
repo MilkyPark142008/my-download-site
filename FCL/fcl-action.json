@@ -1,93 +1,23 @@
 {"run": {
-  "id": 41175414297,
-  "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAJlj72GQ",
-  "head_branch": "main",
-  "head_sha": "cc5ad097975138f1bdc8d6bc0714eab6ef66a850",
-  "path": ".github/workflows/check-codes.yml",
-  "display_title": "feat: SFPEW 改造为兼容层组合模式，对齐上游 AAMC 使用模型 (#1983)",
-  "run_number": 377,
-  "event": "push",
+  "id": 41202970264,
+  "name": "Build",
+  "node_id": "WFR_kwLOIQeFGs8AAAAJl-NumA",
+  "head_branch": "feat/jvm-direct-launch",
+  "head_sha": "171e0a94d95ecb41c4481520ce637afeaa7e7526",
+  "path": ".github/workflows/build.yml",
+  "display_title": "feat: 启动层直启——JNI_CreateJavaVM 替代 JLI_Launch，退出路径收敛为 JVM option hook",
+  "run_number": 1480,
+  "event": "pull_request",
   "status": "completed",
   "conclusion": "success",
-  "workflow_id": 351611475,
-  "check_suite_id": 111615588990,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAZ_M66fg",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41175414297",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41175414297",
-  "pull_requests": [
-    {
-      "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
-      "id": 4452442002,
-      "number": 364,
-      "head": {
-        "ref": "main",
-        "sha": "cc5ad097975138f1bdc8d6bc0714eab6ef66a850",
-        "repo": {
-          "id": 554140954,
-          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "97dc0f6c4a5f5fada8b86aa68e1e9d4b189d1b25",
-        "repo": {
-          "id": 1026321990,
-          "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      }
-    },
-    {
-      "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher/pulls/37",
-      "id": 4452270030,
-      "number": 37,
-      "head": {
-        "ref": "main",
-        "sha": "cc5ad097975138f1bdc8d6bc0714eab6ef66a850",
-        "repo": {
-          "id": 554140954,
-          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
-        "repo": {
-          "id": 1335592322,
-          "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      }
-    },
-    {
-      "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher/pulls/400",
-      "id": 4451484148,
-      "number": 400,
-      "head": {
-        "ref": "main",
-        "sha": "cc5ad097975138f1bdc8d6bc0714eab6ef66a850",
-        "repo": {
-          "id": 554140954,
-          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
-        "repo": {
-          "id": 835628097,
-          "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      }
-    }
-  ],
-  "created_at": "2026-10-31T06:09:16Z",
-  "updated_at": "2026-10-31T06:10:42Z",
+  "workflow_id": 200966783,
+  "check_suite_id": 111687033094,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAaARDhBg",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41202970264",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41202970264",
+  "pull_requests": [],
+  "created_at": "2026-10-31T12:51:45Z",
+  "updated_at": "2026-10-31T12:56:08Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +41,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-10-31T06:09:16Z",
+  "run_started_at": "2026-10-31T12:51:45Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,26 +63,26 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41175414297/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41175414297/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/111615588990",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41175414297/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41175414297/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41175414297/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41202970264/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41202970264/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/111687033094",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41202970264/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41202970264/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41202970264/rerun",
   "previous_attempt_url": null,
-  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
+  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/200966783",
   "head_commit": {
-    "id": "cc5ad097975138f1bdc8d6bc0714eab6ef66a850",
-    "tree_id": "1c9448630213ff11e80531be3f05be02eb55907e",
-    "message": "feat: SFPEW 改造为兼容层组合模式，对齐上游 AAMC 使用模型 (#1983)\n\n* feat: SFPEW 改造为兼容层组合模式，对齐上游 AAMC 使用模型\n\nSFPEW 官方定位是 OpenGL FPE 兼容包装层而非完整驱动，此前作为独立渲染器\n与 gl4es/Zink/MobileGlues 并列可选属定位误用。本变更将其改为叠加在真实\n后端之上的兼容层：\n\n- 移除独立 SFPEW 渲染器条目（ID_SFPEW 常量保留作配置 key）\n- 内置渲染器按 AAMC 同款硬编码规则：默认叠加，仅自带 FPE/完整 GL 的\n  Krypton Wrapper/Holy GL4ES/VGPU/Kopper Zink 关闭\n- 外部插件渲染器由渲染器选择对话框左下角新增的\"高级设置\"页控制：\n  兼容层全局开关默认关闭 + SFPEW_RELAXED_CONTEXT 默认关闭（strict）\n- 启动链路：注入 SFPEW_LAYER=1 与 SFPEW_EGL=POJAVEXEC_EGL（后端与\n  底座 EGL 同源），${gl_lib_name}/SDL_OPENGL_LIBRARY 换为包装层路径，\n  游戏 GL 符号经 LWJGL libname 从 SFPEW 句柄解析\n- native 桥按 SFPEW 文档宿主集成指引将 eglMakeCurrent/eglSwapBuffers\n  路由进包装层（记录上下文切换、swap 前清空立即模式批次），解析失败\n  回落系统 EGL；进程退出先 drain 再销毁上下文\n- 修复高级设置页亮色模式说明文字与背景对比度过低\n\n* feat: SFPEW 兼容层启用时按组合后能力修正 MG 版本注册与启动门控\n\n内置 MobileGlues 的兼容层硬编码启用，组合后旧版固定管线由层补齐\n（1.8.9 实测可跑），注册信息与版本门控同步修正：\n\n- MG 注册信息去掉 minMCver=1.17 与名称中 \"1.17+\"：层恒开，无下界\n- 启动门控：层启用时跳过渲染器 minMCver 下界警告（插件渲染器层\n  开启时同样受益）；maxMCver 上界保留——层不扩展渲染器现代 GL 上限\n- 渲染器列表展示：内置渲染器无版本边界显示\"全部版本\"，\n  插件无声明仍显示\"未知\"\n\n* Update RendererManager.kt\n\n* feat: 装有自实现 FPE 模拟的模组（Angelica/Actinium）时自动跳过 SFPEW 兼容层\n\n对齐上游 AAMC 的模组检测（\"Angelica IS the FPE emulator\"）：这类模组\n接管旧版渲染链，把固定管线调用重写为 modern GL，叠加层只剩透传开销\n（strict 模式每入口上下文核查 + 影子维护对 shader-heavy 负载可感知），\n且层的能力探测差异（desktop 版本串、529 符号面外的 EXT 拼写）对深度\n接管渲染状态机的模组存在未经验证的边缘。\n\n- RendererPlugin：启动链扫描 mods 命中 angelica/actinium（仅活跃模组）\n  即整层跳过（含内置渲染器硬编码启用者），检测日志落 INFO\n- LauncherHelper：链首 mods 扫描后接线，命中状态仅进程内有效\n- 版本门控与启动注入共用 isSfpewLayerEnabled，判定自动一致\n\nMuMu 实测：1.8.9+MG 放置 modid=angelica 的假模组后 SFPEW_LAYER/SFPEW_EGL\n零注入并落检测日志；移除后恢复注入。",
-    "timestamp": "2026-10-31T06:09:13Z",
+    "id": "171e0a94d95ecb41c4481520ce637afeaa7e7526",
+    "tree_id": "a6d03f1b6f6a5a50d25abd8b3d3246cfd31db1e9",
+    "message": "feat: 启动层直启——JNI_CreateJavaVM 替代 JLI_Launch，退出路径收敛为 JVM option hook\n\n- jre_launcher.c 重写：dlsym JNI_CreateJavaVM 直启游戏 JVM 并 CallStaticVoidMethod\n  调用 mio.Wrapper，SIGABRT pipe waiter 退役\n- 退出/abort 经 JVM 调用 API 标准 exit/abort JavaVMOption hook 接管：hook 记录退出码\n  后 futex 唤醒 waiter 并原地停车，waiter 经 nominal_exit 走 ART 侧 FCLBridge.onExit\n  （非 0 弹 JVMCrashActivity，0 走 System.exit），进程终止权收归启动器\n- bytehook exit 拦截保留作外部 native exit() 兜底，sdl_hook/chmod_hook 不变\n- FCLauncher.launch() 参数三段拆分：classpath 改以 -Djava.class.path 传递，\n  主类与应用参数分离\n- MuMu 实测：JRE8(1.12.2)/JRE21(1.21.1)/JRE25(26.2) 直启、正常退出、\n  崩溃上报(SIGSEGV→code 6→CrashActivity)链路均通过",
+    "timestamp": "2026-10-31T12:44:45Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
     },
     "committer": {
-      "name": "GitHub",
-      "email": "noreply@github.com"
+      "name": "ShirosakiMio",
+      "email": "852468399@qq.com"
     }
   },
   "repository": {
@@ -292,8 +222,107 @@
     "deployments_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/deployments"
   }
 }, "artifacts": {
-  "total_count": 0,
+  "total_count": 5,
   "artifacts": [
-
+    {
+      "id": 13044005116,
+      "node_id": "MDg6QXJ0aWZhY3QxMzA0NDAwNTExNg==",
+      "name": "app-arm64",
+      "size_in_bytes": 172540480,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13044005116",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13044005116/zip",
+      "expired": false,
+      "digest": "sha256:c0dfb30fa27ee05015ffc5f37b825cecd4349b3445a41340472e58184e84a2bf",
+      "created_at": "2026-10-31T12:55:55Z",
+      "updated_at": "2026-10-31T12:55:55Z",
+      "expires_at": "2026-11-07T12:51:45Z",
+      "workflow_run": {
+        "id": 41202970264,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "feat/jvm-direct-launch",
+        "head_sha": "171e0a94d95ecb41c4481520ce637afeaa7e7526"
+      }
+    },
+    {
+      "id": 13043580894,
+      "node_id": "MDg6QXJ0aWZhY3QxMzA0MzU4MDg5NA==",
+      "name": "app-x86",
+      "size_in_bytes": 168208765,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13043580894",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13043580894/zip",
+      "expired": false,
+      "digest": "sha256:bf91ffe2eaa92922bf754be43a66d8004faa35623f36d6625ace3a65d907a300",
+      "created_at": "2026-10-31T12:55:57Z",
+      "updated_at": "2026-10-31T12:55:57Z",
+      "expires_at": "2026-11-07T12:51:45Z",
+      "workflow_run": {
+        "id": 41202970264,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "feat/jvm-direct-launch",
+        "head_sha": "171e0a94d95ecb41c4481520ce637afeaa7e7526"
+      }
+    },
+    {
+      "id": 13043079350,
+      "node_id": "MDg6QXJ0aWZhY3QxMzA0MzA3OTM1MA==",
+      "name": "app-arm",
+      "size_in_bytes": 164166207,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13043079350",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13043079350/zip",
+      "expired": false,
+      "digest": "sha256:2b73868c9a018a66c1a2575ea96701789a252dd5be938ae4848ec75163553633",
+      "created_at": "2026-10-31T12:55:56Z",
+      "updated_at": "2026-10-31T12:55:56Z",
+      "expires_at": "2026-11-07T12:51:45Z",
+      "workflow_run": {
+        "id": 41202970264,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "feat/jvm-direct-launch",
+        "head_sha": "171e0a94d95ecb41c4481520ce637afeaa7e7526"
+      }
+    },
+    {
+      "id": 13043027921,
+      "node_id": "MDg6QXJ0aWZhY3QxMzA0MzAyNzkyMQ==",
+      "name": "app-x86_64",
+      "size_in_bytes": 178166778,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13043027921",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13043027921/zip",
+      "expired": false,
+      "digest": "sha256:6a0605aecb1e755945ff3023f14ca741869e658272616c0ef2c97ae403acd981",
+      "created_at": "2026-10-31T12:55:56Z",
+      "updated_at": "2026-10-31T12:55:56Z",
+      "expires_at": "2026-11-07T12:51:45Z",
+      "workflow_run": {
+        "id": 41202970264,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "feat/jvm-direct-launch",
+        "head_sha": "171e0a94d95ecb41c4481520ce637afeaa7e7526"
+      }
+    },
+    {
+      "id": 13042984601,
+      "node_id": "MDg6QXJ0aWZhY3QxMzA0Mjk4NDYwMQ==",
+      "name": "app-all",
+      "size_in_bytes": 334125720,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13042984601",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13042984601/zip",
+      "expired": false,
+      "digest": "sha256:64e9cb10f8a2df42d169f15bc82c04b291541ead59b74fc117cdad969d03e405",
+      "created_at": "2026-10-31T12:56:05Z",
+      "updated_at": "2026-10-31T12:56:05Z",
+      "expires_at": "2026-11-07T12:51:45Z",
+      "workflow_run": {
+        "id": 41202970264,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "feat/jvm-direct-launch",
+        "head_sha": "171e0a94d95ecb41c4481520ce637afeaa7e7526"
+      }
+    }
   ]
 }}
