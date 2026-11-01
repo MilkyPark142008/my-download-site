@@ -48,20 +48,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312230712"
   },
   {
-    "id": 41310733912,
-    "sha": "7894be5f2473af9eeffe6f4bbf36f1dbd5860b72",
-    "short_sha": "7894be5",
-    "message": "feat: 内置 MobileGlues 2.0.1 MultiDraw 方案排序配置，enableANGLE 默认值对齐上游\n\n- RendererPlugin 新增 ORDERED 配置类型（方案偏好序）：候选集合与默认序同源覆盖、\n  coerceOrder 规整（剔未知/去重保首见/缺项按默认序补尾）、expandOrder 继承展开\n  （父序伪项 native 替换为本条目真实后端），纯函数置顶层供单测直接钉住\n- multidraw 6 键对齐 MG 2.0.1 上游 settings.cpp：全局 multidrawOrder + 五个函数级\n  异常条目（默认关闭跟随全局；启用时刻快照当前全局序，此后不再跟随）\n- RendererEnvDialog ordered 条目 UI：折叠编号列表 + 上移/下移，函数级开关门控展开\n- FCLauncher.mergeMobileGluesConfig 增补 6 键：函数级显式关闭时摘除 config.json\n  残留键交还全局序，从未配置则不触碰（保留手编 / MG 自管值）\n- enableANGLE 回落默认 1→0：MG 2.0.1 起缺省语义为 DisableIfPossible（settings.cpp），\n  对话框确认全量落盘时不再与上游默认相悖\n- 单测 RendererOrderedSpecTest：规整/展开/集合钉死，期望值与 ZL2 #2165 一致",
-    "created_at": "2026-11-01T13:11:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41310733912"
-  },
-  {
     "id": 41310733939,
     "sha": "7894be5f2473af9eeffe6f4bbf36f1dbd5860b72",
     "short_sha": "7894be5",
     "message": "feat: 内置 MobileGlues 2.0.1 MultiDraw 方案排序配置，enableANGLE 默认值对齐上游\n\n- RendererPlugin 新增 ORDERED 配置类型（方案偏好序）：候选集合与默认序同源覆盖、\n  coerceOrder 规整（剔未知/去重保首见/缺项按默认序补尾）、expandOrder 继承展开\n  （父序伪项 native 替换为本条目真实后端），纯函数置顶层供单测直接钉住\n- multidraw 6 键对齐 MG 2.0.1 上游 settings.cpp：全局 multidrawOrder + 五个函数级\n  异常条目（默认关闭跟随全局；启用时刻快照当前全局序，此后不再跟随）\n- RendererEnvDialog ordered 条目 UI：折叠编号列表 + 上移/下移，函数级开关门控展开\n- FCLauncher.mergeMobileGluesConfig 增补 6 键：函数级显式关闭时摘除 config.json\n  残留键交还全局序，从未配置则不触碰（保留手编 / MG 自管值）\n- enableANGLE 回落默认 1→0：MG 2.0.1 起缺省语义为 DisableIfPossible（settings.cpp），\n  对话框确认全量落盘时不再与上游默认相悖\n- 单测 RendererOrderedSpecTest：规整/展开/集合钉死，期望值与 ZL2 #2165 一致",
     "created_at": "2026-11-01T13:11:53Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41310733939"
+  },
+  {
+    "id": 41310733912,
+    "sha": "7894be5f2473af9eeffe6f4bbf36f1dbd5860b72",
+    "short_sha": "7894be5",
+    "message": "feat: 内置 MobileGlues 2.0.1 MultiDraw 方案排序配置，enableANGLE 默认值对齐上游\n\n- RendererPlugin 新增 ORDERED 配置类型（方案偏好序）：候选集合与默认序同源覆盖、\n  coerceOrder 规整（剔未知/去重保首见/缺项按默认序补尾）、expandOrder 继承展开\n  （父序伪项 native 替换为本条目真实后端），纯函数置顶层供单测直接钉住\n- multidraw 6 键对齐 MG 2.0.1 上游 settings.cpp：全局 multidrawOrder + 五个函数级\n  异常条目（默认关闭跟随全局；启用时刻快照当前全局序，此后不再跟随）\n- RendererEnvDialog ordered 条目 UI：折叠编号列表 + 上移/下移，函数级开关门控展开\n- FCLauncher.mergeMobileGluesConfig 增补 6 键：函数级显式关闭时摘除 config.json\n  残留键交还全局序，从未配置则不触碰（保留手编 / MG 自管值）\n- enableANGLE 回落默认 1→0：MG 2.0.1 起缺省语义为 DisableIfPossible（settings.cpp），\n  对话框确认全量落盘时不再与上游默认相悖\n- 单测 RendererOrderedSpecTest：规整/展开/集合钉死，期望值与 ZL2 #2165 一致",
+    "created_at": "2026-11-01T13:11:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41310733912"
   },
   {
     "id": 41302205053,
