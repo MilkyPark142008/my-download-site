@@ -1,5 +1,61 @@
 [
   {
+    "id": 41309300257,
+    "sha": "cbf877a979b9375569010b1021fe885d3a05895a",
+    "short_sha": "cbf877a",
+    "message": "update: 更新项目依赖库版本",
+    "created_at": "2026-11-01T13:00:24Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41309300257"
+  },
+  {
+    "id": 41309152165,
+    "sha": "cbf877a979b9375569010b1021fe885d3a05895a",
+    "short_sha": "cbf877a",
+    "message": "update: 更新项目依赖库版本",
+    "created_at": "2026-11-01T13:00:24Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41309152165"
+  },
+  {
+    "id": 41308942196,
+    "sha": "f9b96a241b6b2ec5b62380fd94d3a6f3acd97421",
+    "short_sha": "f9b96a2",
+    "message": "Merge pull request #2165 from ZalithLauncher/update/mobileglues-2.0.1-dev\n\nfeat: 更新 MobileGlues 至 2.0.1 dev & 更新自定义渲染器设置项",
+    "created_at": "2026-11-01T12:57:48Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41308942196"
+  },
+  {
+    "id": 41305809915,
+    "sha": "3ae35939b82f45d59bb16827df5e5d28da24df3d",
+    "short_sha": "3ae3593",
+    "message": "fix: MobileGlues 配置文件写入失败",
+    "created_at": "2026-11-01T12:17:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41305809915"
+  },
+  {
+    "id": 41303539361,
+    "sha": "ab2d1b094f16ed19f99a31975b63a70a46112e93",
+    "short_sha": "ab2d1b0",
+    "message": "fix: 修正渲染器版本支持描述",
+    "created_at": "2026-11-01T11:48:36Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41303539361"
+  },
+  {
+    "id": 41303076006,
+    "sha": "d8c31a06c566d8be0f88eb84f3b94c6607743197",
+    "short_sha": "d8c31a0",
+    "message": "fix: 去掉 MobileGlues 最大游戏版本的判断",
+    "created_at": "2026-11-01T11:42:04Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41303076006"
+  },
+  {
+    "id": 41302548012,
+    "sha": "7992c13997e10b6431720e632e4cc3217f8f3bb5",
+    "short_sha": "7992c13",
+    "message": "feat: 更新 MobileGlues 渲染器自定义配置",
+    "created_at": "2026-11-01T11:35:06Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41302548012"
+  },
+  {
     "id": 41278232664,
     "sha": "8a42b094e06fdbbd6f66146b227b80ce07051750",
     "short_sha": "8a42b09",
@@ -342,61 +398,5 @@
     "message": "feat: 首次打开启动器时进入欢迎页面",
     "created_at": "2026-10-28T23:09:18Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40785315628"
-  },
-  {
-    "id": 40722784373,
-    "sha": "a6b6fb6a63ce22c4e4fa91cc29a4d64286cd0924",
-    "short_sha": "a6b6fb6",
-    "message": "update: MioLibPatcher.jar",
-    "created_at": "2026-10-28T16:06:52Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40722784373"
-  },
-  {
-    "id": 40722297531,
-    "sha": "5795412b3889c8ca4df360e2d9e3b517dee5c66e",
-    "short_sha": "5795412",
-    "message": "Merge pull request #2147 from ZalithLauncher/feat/builtin-renderers-config\n\nfeat: 内置 MobileGlues 与 SimpleFPEWrapper 渲染器，新增渲染器配置体系并兼容 V2 插件",
-    "created_at": "2026-10-28T16:04:10Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40722297531"
-  },
-  {
-    "id": 40721915040,
-    "sha": "737252b21825cc1b0880cab485211f32102f89a1",
-    "short_sha": "737252b",
-    "message": "feat: 内置 MobileGlues 与 SimpleFPEWrapper 渲染器，新增渲染器配置体系并兼容 V2 插件",
-    "created_at": "2026-10-28T16:00:28Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40721915040"
-  },
-  {
-    "id": 40686817054,
-    "sha": "013b1b49824f8d18ce5c11c437a66b001014c511",
-    "short_sha": "013b1b4",
-    "message": "Merge pull request #2146 from ZalithLauncher/refactor/jna\n\nrefactor: 重构 JNA 解压任务 & 仅包含 5.13.0 - 5.19.1",
-    "created_at": "2026-10-28T12:19:06Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40686817054"
-  },
-  {
-    "id": 40686765119,
-    "sha": "a4e1bb9762c16725ca85218626540e2612ce8f4a",
-    "short_sha": "a4e1bb9",
-    "message": "refactor: 重构 JNA 解压任务 & 仅包含 5.13.0 - 5.19.1",
-    "created_at": "2026-10-28T12:18:35Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40686765119"
-  },
-  {
-    "id": 40683603818,
-    "sha": "61b25d828945c5bdb3216c5269139586f4c1220d",
-    "short_sha": "61b25d8",
-    "message": "Merge pull request #2145 from ZalithLauncher/fix/virgl-osmesa-framebuffer\n\nfix: VirGL 颜色缓冲改用真实分配的可写内存",
-    "created_at": "2026-10-28T11:54:45Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40683603818"
-  },
-  {
-    "id": 40683558220,
-    "sha": "0bb6ea84c8b82493f498cf8795bac0aaa00d8a0a",
-    "short_sha": "0bb6ea8",
-    "message": "fix: VirGL 颜色缓冲改用真实分配的可写内存",
-    "created_at": "2026-10-28T11:54:15Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40683558220"
   }
 ]

@@ -1,5 +1,85 @@
 [
   {
+    "id": 41312471259,
+    "sha": "4e3def1a37299c751bfa4fa54039ec65b9d4504c",
+    "short_sha": "4e3def1",
+    "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1993)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat 吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做 notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画\n\nFixes #1899",
+    "created_at": "2026-11-01T13:41:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312471259"
+  },
+  {
+    "id": 41312471281,
+    "sha": "4e3def1a37299c751bfa4fa54039ec65b9d4504c",
+    "short_sha": "4e3def1",
+    "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1993)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat 吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做 notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画\n\nFixes #1899",
+    "created_at": "2026-11-01T13:41:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312471281"
+  },
+  {
+    "id": 41312250569,
+    "sha": "76f070f92e4b363341adb890ec794081ad7ddf3d",
+    "short_sha": "76f070f",
+    "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1899)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑\n发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat\n吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做\n  notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画",
+    "created_at": "2026-11-01T13:38:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312250569"
+  },
+  {
+    "id": 41312250555,
+    "sha": "76f070f92e4b363341adb890ec794081ad7ddf3d",
+    "short_sha": "76f070f",
+    "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1899)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑\n发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat\n吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做\n  notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画",
+    "created_at": "2026-11-01T13:38:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312250555"
+  },
+  {
+    "id": 41312230723,
+    "sha": "76f070f92e4b363341adb890ec794081ad7ddf3d",
+    "short_sha": "76f070f",
+    "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1899)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑\n发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat\n吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做\n  notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画",
+    "created_at": "2026-11-01T13:38:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312230723"
+  },
+  {
+    "id": 41312230712,
+    "sha": "76f070f92e4b363341adb890ec794081ad7ddf3d",
+    "short_sha": "76f070f",
+    "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1899)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑\n发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat\n吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做\n  notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画",
+    "created_at": "2026-11-01T13:38:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312230712"
+  },
+  {
+    "id": 41310733912,
+    "sha": "7894be5f2473af9eeffe6f4bbf36f1dbd5860b72",
+    "short_sha": "7894be5",
+    "message": "feat: 内置 MobileGlues 2.0.1 MultiDraw 方案排序配置，enableANGLE 默认值对齐上游\n\n- RendererPlugin 新增 ORDERED 配置类型（方案偏好序）：候选集合与默认序同源覆盖、\n  coerceOrder 规整（剔未知/去重保首见/缺项按默认序补尾）、expandOrder 继承展开\n  （父序伪项 native 替换为本条目真实后端），纯函数置顶层供单测直接钉住\n- multidraw 6 键对齐 MG 2.0.1 上游 settings.cpp：全局 multidrawOrder + 五个函数级\n  异常条目（默认关闭跟随全局；启用时刻快照当前全局序，此后不再跟随）\n- RendererEnvDialog ordered 条目 UI：折叠编号列表 + 上移/下移，函数级开关门控展开\n- FCLauncher.mergeMobileGluesConfig 增补 6 键：函数级显式关闭时摘除 config.json\n  残留键交还全局序，从未配置则不触碰（保留手编 / MG 自管值）\n- enableANGLE 回落默认 1→0：MG 2.0.1 起缺省语义为 DisableIfPossible（settings.cpp），\n  对话框确认全量落盘时不再与上游默认相悖\n- 单测 RendererOrderedSpecTest：规整/展开/集合钉死，期望值与 ZL2 #2165 一致",
+    "created_at": "2026-11-01T13:11:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41310733912"
+  },
+  {
+    "id": 41310733939,
+    "sha": "7894be5f2473af9eeffe6f4bbf36f1dbd5860b72",
+    "short_sha": "7894be5",
+    "message": "feat: 内置 MobileGlues 2.0.1 MultiDraw 方案排序配置，enableANGLE 默认值对齐上游\n\n- RendererPlugin 新增 ORDERED 配置类型（方案偏好序）：候选集合与默认序同源覆盖、\n  coerceOrder 规整（剔未知/去重保首见/缺项按默认序补尾）、expandOrder 继承展开\n  （父序伪项 native 替换为本条目真实后端），纯函数置顶层供单测直接钉住\n- multidraw 6 键对齐 MG 2.0.1 上游 settings.cpp：全局 multidrawOrder + 五个函数级\n  异常条目（默认关闭跟随全局；启用时刻快照当前全局序，此后不再跟随）\n- RendererEnvDialog ordered 条目 UI：折叠编号列表 + 上移/下移，函数级开关门控展开\n- FCLauncher.mergeMobileGluesConfig 增补 6 键：函数级显式关闭时摘除 config.json\n  残留键交还全局序，从未配置则不触碰（保留手编 / MG 自管值）\n- enableANGLE 回落默认 1→0：MG 2.0.1 起缺省语义为 DisableIfPossible（settings.cpp），\n  对话框确认全量落盘时不再与上游默认相悖\n- 单测 RendererOrderedSpecTest：规整/展开/集合钉死，期望值与 ZL2 #2165 一致",
+    "created_at": "2026-11-01T13:11:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41310733939"
+  },
+  {
+    "id": 41302205053,
+    "sha": "ef060b6401bfbc41f79827c059db73a3ebdf6150",
+    "short_sha": "ef060b6",
+    "message": "chore: 升级内置 MobileGlues 至 2.0.1\n\n- 替换 FCL/libs/MobileGlues-release.aar（四 ABI libmobileglues.so 全量更新）\n- RendererManager 的 MobileGlues 条目不再声明 maxMCver/displayMaxMCver，版本展示回落为全版本可跑",
+    "created_at": "2026-11-01T11:29:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41302205053"
+  },
+  {
+    "id": 41302205050,
+    "sha": "ef060b6401bfbc41f79827c059db73a3ebdf6150",
+    "short_sha": "ef060b6",
+    "message": "chore: 升级内置 MobileGlues 至 2.0.1\n\n- 替换 FCL/libs/MobileGlues-release.aar（四 ABI libmobileglues.so 全量更新）\n- RendererManager 的 MobileGlues 条目不再声明 maxMCver/displayMaxMCver，版本展示回落为全版本可跑",
+    "created_at": "2026-11-01T11:29:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41302205050"
+  },
+  {
     "id": 41272944692,
     "sha": "284512e8072818f06ae84b4e14e6ea4507a137fb",
     "short_sha": "284512e",
@@ -318,85 +398,5 @@
     "message": "feat: SFPEW 改造为兼容层组合模式，对齐上游 AAMC 使用模型 (#1983)\n\n* feat: SFPEW 改造为兼容层组合模式，对齐上游 AAMC 使用模型\n\nSFPEW 官方定位是 OpenGL FPE 兼容包装层而非完整驱动，此前作为独立渲染器\n与 gl4es/Zink/MobileGlues 并列可选属定位误用。本变更将其改为叠加在真实\n后端之上的兼容层：\n\n- 移除独立 SFPEW 渲染器条目（ID_SFPEW 常量保留作配置 key）\n- 内置渲染器按 AAMC 同款硬编码规则：默认叠加，仅自带 FPE/完整 GL 的\n  Krypton Wrapper/Holy GL4ES/VGPU/Kopper Zink 关闭\n- 外部插件渲染器由渲染器选择对话框左下角新增的\"高级设置\"页控制：\n  兼容层全局开关默认关闭 + SFPEW_RELAXED_CONTEXT 默认关闭（strict）\n- 启动链路：注入 SFPEW_LAYER=1 与 SFPEW_EGL=POJAVEXEC_EGL（后端与\n  底座 EGL 同源），${gl_lib_name}/SDL_OPENGL_LIBRARY 换为包装层路径，\n  游戏 GL 符号经 LWJGL libname 从 SFPEW 句柄解析\n- native 桥按 SFPEW 文档宿主集成指引将 eglMakeCurrent/eglSwapBuffers\n  路由进包装层（记录上下文切换、swap 前清空立即模式批次），解析失败\n  回落系统 EGL；进程退出先 drain 再销毁上下文\n- 修复高级设置页亮色模式说明文字与背景对比度过低\n\n* feat: SFPEW 兼容层启用时按组合后能力修正 MG 版本注册与启动门控\n\n内置 MobileGlues 的兼容层硬编码启用，组合后旧版固定管线由层补齐\n（1.8.9 实测可跑），注册信息与版本门控同步修正：\n\n- MG 注册信息去掉 minMCver=1.17 与名称中 \"1.17+\"：层恒开，无下界\n- 启动门控：层启用时跳过渲染器 minMCver 下界警告（插件渲染器层\n  开启时同样受益）；maxMCver 上界保留——层不扩展渲染器现代 GL 上限\n- 渲染器列表展示：内置渲染器无版本边界显示\"全部版本\"，\n  插件无声明仍显示\"未知\"\n\n* Update RendererManager.kt\n\n* feat: 装有自实现 FPE 模拟的模组（Angelica/Actinium）时自动跳过 SFPEW 兼容层\n\n对齐上游 AAMC 的模组检测（\"Angelica IS the FPE emulator\"）：这类模组\n接管旧版渲染链，把固定管线调用重写为 modern GL，叠加层只剩透传开销\n（strict 模式每入口上下文核查 + 影子维护对 shader-heavy 负载可感知），\n且层的能力探测差异（desktop 版本串、529 符号面外的 EXT 拼写）对深度\n接管渲染状态机的模组存在未经验证的边缘。\n\n- RendererPlugin：启动链扫描 mods 命中 angelica/actinium（仅活跃模组）\n  即整层跳过（含内置渲染器硬编码启用者），检测日志落 INFO\n- LauncherHelper：链首 mods 扫描后接线，命中状态仅进程内有效\n- 版本门控与启动注入共用 isSfpewLayerEnabled，判定自动一致\n\nMuMu 实测：1.8.9+MG 放置 modid=angelica 的假模组后 SFPEW_LAYER/SFPEW_EGL\n零注入并落检测日志；移除后恢复注入。",
     "created_at": "2026-10-31T06:09:13Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41175414263"
-  },
-  {
-    "id": 41174996485,
-    "sha": "ff9c445e8af3327a09e87d00aa7ae1d726e69379",
-    "short_sha": "ff9c445",
-    "message": "feat: 装有自实现 FPE 模拟的模组（Angelica/Actinium）时自动跳过 SFPEW 兼容层\n\n对齐上游 AAMC 的模组检测（\"Angelica IS the FPE emulator\"）：这类模组\n接管旧版渲染链，把固定管线调用重写为 modern GL，叠加层只剩透传开销\n（strict 模式每入口上下文核查 + 影子维护对 shader-heavy 负载可感知），\n且层的能力探测差异（desktop 版本串、529 符号面外的 EXT 拼写）对深度\n接管渲染状态机的模组存在未经验证的边缘。\n\n- RendererPlugin：启动链扫描 mods 命中 angelica/actinium（仅活跃模组）\n  即整层跳过（含内置渲染器硬编码启用者），检测日志落 INFO\n- LauncherHelper：链首 mods 扫描后接线，命中状态仅进程内有效\n- 版本门控与启动注入共用 isSfpewLayerEnabled，判定自动一致\n\nMuMu 实测：1.8.9+MG 放置 modid=angelica 的假模组后 SFPEW_LAYER/SFPEW_EGL\n零注入并落检测日志；移除后恢复注入。",
-    "created_at": "2026-10-31T06:02:57Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41174996485"
-  },
-  {
-    "id": 41174996466,
-    "sha": "ff9c445e8af3327a09e87d00aa7ae1d726e69379",
-    "short_sha": "ff9c445",
-    "message": "feat: 装有自实现 FPE 模拟的模组（Angelica/Actinium）时自动跳过 SFPEW 兼容层\n\n对齐上游 AAMC 的模组检测（\"Angelica IS the FPE emulator\"）：这类模组\n接管旧版渲染链，把固定管线调用重写为 modern GL，叠加层只剩透传开销\n（strict 模式每入口上下文核查 + 影子维护对 shader-heavy 负载可感知），\n且层的能力探测差异（desktop 版本串、529 符号面外的 EXT 拼写）对深度\n接管渲染状态机的模组存在未经验证的边缘。\n\n- RendererPlugin：启动链扫描 mods 命中 angelica/actinium（仅活跃模组）\n  即整层跳过（含内置渲染器硬编码启用者），检测日志落 INFO\n- LauncherHelper：链首 mods 扫描后接线，命中状态仅进程内有效\n- 版本门控与启动注入共用 isSfpewLayerEnabled，判定自动一致\n\nMuMu 实测：1.8.9+MG 放置 modid=angelica 的假模组后 SFPEW_LAYER/SFPEW_EGL\n零注入并落检测日志；移除后恢复注入。",
-    "created_at": "2026-10-31T06:02:57Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41174996466"
-  },
-  {
-    "id": 41174992533,
-    "sha": "ff9c445e8af3327a09e87d00aa7ae1d726e69379",
-    "short_sha": "ff9c445",
-    "message": "feat: 装有自实现 FPE 模拟的模组（Angelica/Actinium）时自动跳过 SFPEW 兼容层\n\n对齐上游 AAMC 的模组检测（\"Angelica IS the FPE emulator\"）：这类模组\n接管旧版渲染链，把固定管线调用重写为 modern GL，叠加层只剩透传开销\n（strict 模式每入口上下文核查 + 影子维护对 shader-heavy 负载可感知），\n且层的能力探测差异（desktop 版本串、529 符号面外的 EXT 拼写）对深度\n接管渲染状态机的模组存在未经验证的边缘。\n\n- RendererPlugin：启动链扫描 mods 命中 angelica/actinium（仅活跃模组）\n  即整层跳过（含内置渲染器硬编码启用者），检测日志落 INFO\n- LauncherHelper：链首 mods 扫描后接线，命中状态仅进程内有效\n- 版本门控与启动注入共用 isSfpewLayerEnabled，判定自动一致\n\nMuMu 实测：1.8.9+MG 放置 modid=angelica 的假模组后 SFPEW_LAYER/SFPEW_EGL\n零注入并落检测日志；移除后恢复注入。",
-    "created_at": "2026-10-31T06:02:57Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41174992533"
-  },
-  {
-    "id": 41174992649,
-    "sha": "ff9c445e8af3327a09e87d00aa7ae1d726e69379",
-    "short_sha": "ff9c445",
-    "message": "feat: 装有自实现 FPE 模拟的模组（Angelica/Actinium）时自动跳过 SFPEW 兼容层\n\n对齐上游 AAMC 的模组检测（\"Angelica IS the FPE emulator\"）：这类模组\n接管旧版渲染链，把固定管线调用重写为 modern GL，叠加层只剩透传开销\n（strict 模式每入口上下文核查 + 影子维护对 shader-heavy 负载可感知），\n且层的能力探测差异（desktop 版本串、529 符号面外的 EXT 拼写）对深度\n接管渲染状态机的模组存在未经验证的边缘。\n\n- RendererPlugin：启动链扫描 mods 命中 angelica/actinium（仅活跃模组）\n  即整层跳过（含内置渲染器硬编码启用者），检测日志落 INFO\n- LauncherHelper：链首 mods 扫描后接线，命中状态仅进程内有效\n- 版本门控与启动注入共用 isSfpewLayerEnabled，判定自动一致\n\nMuMu 实测：1.8.9+MG 放置 modid=angelica 的假模组后 SFPEW_LAYER/SFPEW_EGL\n零注入并落检测日志；移除后恢复注入。",
-    "created_at": "2026-10-31T06:02:57Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41174992649"
-  },
-  {
-    "id": 41173893852,
-    "sha": "4b6be95f72833698a5a6ba9fa635aa6396bffdd2",
-    "short_sha": "4b6be95",
-    "message": "fix: MultiMC 整合包启动崩溃——游戏参数被两代格式重复拼接,ModLauncher 抛 MultipleArgumentsForOptionException\n\n根因:meta.multimc.org 对 net.neoforged 等加载器的 Json-Patch 以 legacy minecraftArguments\n承载全套标准参数与加载器附加项;导入合并后版本 json 同时存在 legacy 与新式 arguments.game,\nDefaultLauncher 把两代格式各拼一遍并再补一份默认分辨率参数,--gameDir/--username/--width\n等重复出现,ModLauncher 的 joptsimple 直接抛出 MultipleArgumentsForOptionException。\n\n修复两处:\n- DefaultLauncher:legacy minecraftArguments 与新式 arguments.game 互斥——legacy 非空时\n  只拼 legacy 并补 DEFAULT_GAME_ARGUMENTS(width/height 一次),否则走 arguments.game。\n  已导入的存量实例无需重新导入即可正常启动。\n- MultiMCInstancePatch.resolveArtifact:合成参数改以新式 game args 承载(对齐 HMCL main\n  的演进方向),extractExtraGameArguments 剥离官方标准占位参数对(flag + ${...} 占位值,\n  含 --clientId/--xuid/--userProperties),只保留加载器附加项;flag 带非占位符具体值时\n  视为有意覆盖原样保留。注意 FCL 保留原版 base patch 叠加且 Arguments.merge 为拼接语义,\n  与 HMCL main 的整体替换清单不同,不能直接照抄其 addGameArguments 全量承载的做法。\n\n测试:新增 MultiMCLaunchArgsTest(9 用例)——以修改前后拼接逻辑的参照实现驱动真实的\nresolveArtifact/addPatch/resolve/Arguments 解析:单一代际格式的版本修改前后输出完全一致;\n两条修复路径(存量 legacy 路径 / 新导入新式路径)输出精确断言;多重集余量恰为重复部分,\n证明修复只去重零丢失。已同步 HMCL #7077 之后的 main 上全量单测通过(仅 ControlConverterTest\n2 个预存失败)。",
-    "created_at": "2026-10-31T05:45:33Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41173893852"
-  },
-  {
-    "id": 41173893960,
-    "sha": "4b6be95f72833698a5a6ba9fa635aa6396bffdd2",
-    "short_sha": "4b6be95",
-    "message": "fix: MultiMC 整合包启动崩溃——游戏参数被两代格式重复拼接,ModLauncher 抛 MultipleArgumentsForOptionException\n\n根因:meta.multimc.org 对 net.neoforged 等加载器的 Json-Patch 以 legacy minecraftArguments\n承载全套标准参数与加载器附加项;导入合并后版本 json 同时存在 legacy 与新式 arguments.game,\nDefaultLauncher 把两代格式各拼一遍并再补一份默认分辨率参数,--gameDir/--username/--width\n等重复出现,ModLauncher 的 joptsimple 直接抛出 MultipleArgumentsForOptionException。\n\n修复两处:\n- DefaultLauncher:legacy minecraftArguments 与新式 arguments.game 互斥——legacy 非空时\n  只拼 legacy 并补 DEFAULT_GAME_ARGUMENTS(width/height 一次),否则走 arguments.game。\n  已导入的存量实例无需重新导入即可正常启动。\n- MultiMCInstancePatch.resolveArtifact:合成参数改以新式 game args 承载(对齐 HMCL main\n  的演进方向),extractExtraGameArguments 剥离官方标准占位参数对(flag + ${...} 占位值,\n  含 --clientId/--xuid/--userProperties),只保留加载器附加项;flag 带非占位符具体值时\n  视为有意覆盖原样保留。注意 FCL 保留原版 base patch 叠加且 Arguments.merge 为拼接语义,\n  与 HMCL main 的整体替换清单不同,不能直接照抄其 addGameArguments 全量承载的做法。\n\n测试:新增 MultiMCLaunchArgsTest(9 用例)——以修改前后拼接逻辑的参照实现驱动真实的\nresolveArtifact/addPatch/resolve/Arguments 解析:单一代际格式的版本修改前后输出完全一致;\n两条修复路径(存量 legacy 路径 / 新导入新式路径)输出精确断言;多重集余量恰为重复部分,\n证明修复只去重零丢失。已同步 HMCL #7077 之后的 main 上全量单测通过(仅 ControlConverterTest\n2 个预存失败)。",
-    "created_at": "2026-10-31T05:45:33Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41173893960"
-  },
-  {
-    "id": 41173867253,
-    "sha": "4b6be95f72833698a5a6ba9fa635aa6396bffdd2",
-    "short_sha": "4b6be95",
-    "message": "fix: MultiMC 整合包启动崩溃——游戏参数被两代格式重复拼接,ModLauncher 抛 MultipleArgumentsForOptionException\n\n根因:meta.multimc.org 对 net.neoforged 等加载器的 Json-Patch 以 legacy minecraftArguments\n承载全套标准参数与加载器附加项;导入合并后版本 json 同时存在 legacy 与新式 arguments.game,\nDefaultLauncher 把两代格式各拼一遍并再补一份默认分辨率参数,--gameDir/--username/--width\n等重复出现,ModLauncher 的 joptsimple 直接抛出 MultipleArgumentsForOptionException。\n\n修复两处:\n- DefaultLauncher:legacy minecraftArguments 与新式 arguments.game 互斥——legacy 非空时\n  只拼 legacy 并补 DEFAULT_GAME_ARGUMENTS(width/height 一次),否则走 arguments.game。\n  已导入的存量实例无需重新导入即可正常启动。\n- MultiMCInstancePatch.resolveArtifact:合成参数改以新式 game args 承载(对齐 HMCL main\n  的演进方向),extractExtraGameArguments 剥离官方标准占位参数对(flag + ${...} 占位值,\n  含 --clientId/--xuid/--userProperties),只保留加载器附加项;flag 带非占位符具体值时\n  视为有意覆盖原样保留。注意 FCL 保留原版 base patch 叠加且 Arguments.merge 为拼接语义,\n  与 HMCL main 的整体替换清单不同,不能直接照抄其 addGameArguments 全量承载的做法。\n\n测试:新增 MultiMCLaunchArgsTest(9 用例)——以修改前后拼接逻辑的参照实现驱动真实的\nresolveArtifact/addPatch/resolve/Arguments 解析:单一代际格式的版本修改前后输出完全一致;\n两条修复路径(存量 legacy 路径 / 新导入新式路径)输出精确断言;多重集余量恰为重复部分,\n证明修复只去重零丢失。已同步 HMCL #7077 之后的 main 上全量单测通过(仅 ControlConverterTest\n2 个预存失败)。",
-    "created_at": "2026-10-31T05:45:33Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41173867253"
-  },
-  {
-    "id": 41173867215,
-    "sha": "4b6be95f72833698a5a6ba9fa635aa6396bffdd2",
-    "short_sha": "4b6be95",
-    "message": "fix: MultiMC 整合包启动崩溃——游戏参数被两代格式重复拼接,ModLauncher 抛 MultipleArgumentsForOptionException\n\n根因:meta.multimc.org 对 net.neoforged 等加载器的 Json-Patch 以 legacy minecraftArguments\n承载全套标准参数与加载器附加项;导入合并后版本 json 同时存在 legacy 与新式 arguments.game,\nDefaultLauncher 把两代格式各拼一遍并再补一份默认分辨率参数,--gameDir/--username/--width\n等重复出现,ModLauncher 的 joptsimple 直接抛出 MultipleArgumentsForOptionException。\n\n修复两处:\n- DefaultLauncher:legacy minecraftArguments 与新式 arguments.game 互斥——legacy 非空时\n  只拼 legacy 并补 DEFAULT_GAME_ARGUMENTS(width/height 一次),否则走 arguments.game。\n  已导入的存量实例无需重新导入即可正常启动。\n- MultiMCInstancePatch.resolveArtifact:合成参数改以新式 game args 承载(对齐 HMCL main\n  的演进方向),extractExtraGameArguments 剥离官方标准占位参数对(flag + ${...} 占位值,\n  含 --clientId/--xuid/--userProperties),只保留加载器附加项;flag 带非占位符具体值时\n  视为有意覆盖原样保留。注意 FCL 保留原版 base patch 叠加且 Arguments.merge 为拼接语义,\n  与 HMCL main 的整体替换清单不同,不能直接照抄其 addGameArguments 全量承载的做法。\n\n测试:新增 MultiMCLaunchArgsTest(9 用例)——以修改前后拼接逻辑的参照实现驱动真实的\nresolveArtifact/addPatch/resolve/Arguments 解析:单一代际格式的版本修改前后输出完全一致;\n两条修复路径(存量 legacy 路径 / 新导入新式路径)输出精确断言;多重集余量恰为重复部分,\n证明修复只去重零丢失。已同步 HMCL #7077 之后的 main 上全量单测通过(仅 ControlConverterTest\n2 个预存失败)。",
-    "created_at": "2026-10-31T05:45:33Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41173867215"
-  },
-  {
-    "id": 41170049129,
-    "sha": "d554cc4fdb25be14662f352b9491dcee1f869715",
-    "short_sha": "d554cc4",
-    "message": "feat: 同步 HMCL #7077——过滤模组中文名中的 Emoji",
-    "created_at": "2026-10-31T04:46:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41170049129"
-  },
-  {
-    "id": 41169816795,
-    "sha": "6ca800f11297168e9ddedcca292b4e38490d38d5",
-    "short_sha": "6ca800f",
-    "message": "feat: 同步 HMCL #7092——NeoForged Maven 相关文件支持 CurseForge CDN 镜像候选\n\n- NeoForgeRemoteVersion：新增 neoforged.forgecdn.net 元数据镜像常量与\n  getMirrorCandidates(url, mirrorFirst) 规则（/releases/ 路径按 mirrorFirst\n  在官方源与 BMCLAPI 间排序，一律追加 forgecdn）\n- NeoForgeOfficialVersionList：元数据 GetTask 改用 [原URL, 镜像URL] 双候选\n- Mojang/BMCLAPI DownloadProvider：maven.neoforged.net 专用镜像规则拦截\n  （覆盖 installer.jar 与库文件下载候选）\n\n同步自 HMCL-dev/HMCL@5ad4880 (#7092)",
-    "created_at": "2026-10-31T04:43:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41169816795"
   }
 ]
