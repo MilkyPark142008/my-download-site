@@ -1,5 +1,85 @@
 [
   {
+    "id": 41272944692,
+    "sha": "284512e8072818f06ae84b4e14e6ea4507a137fb",
+    "short_sha": "284512e",
+    "message": "feat: 按键编辑撤销/恢复——按组快照两栈历史，入口为左抽屉底部操作区",
+    "created_at": "2026-11-01T04:22:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41272944692"
+  },
+  {
+    "id": 41272944688,
+    "sha": "284512e8072818f06ae84b4e14e6ea4507a137fb",
+    "short_sha": "284512e",
+    "message": "feat: 按键编辑撤销/恢复——按组快照两栈历史，入口为左抽屉底部操作区",
+    "created_at": "2026-11-01T04:22:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41272944688"
+  },
+  {
+    "id": 41272889130,
+    "sha": "284512e8072818f06ae84b4e14e6ea4507a137fb",
+    "short_sha": "284512e",
+    "message": "feat: 按键编辑撤销/恢复——按组快照两栈历史，入口为左抽屉底部操作区",
+    "created_at": "2026-11-01T04:22:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41272889130"
+  },
+  {
+    "id": 41272889140,
+    "sha": "284512e8072818f06ae84b4e14e6ea4507a137fb",
+    "short_sha": "284512e",
+    "message": "feat: 按键编辑撤销/恢复——按组快照两栈历史，入口为左抽屉底部操作区",
+    "created_at": "2026-11-01T04:22:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41272889140"
+  },
+  {
+    "id": 41265010288,
+    "sha": "4744e601bcc0d8c96c5744196e017d269ab084ef",
+    "short_sha": "4744e60",
+    "message": "fix: 整合包版本特定设置无法被用户关闭——版本刷新不再强制覆盖用户选择\n\n根因(双重锁死):\n- FCLGameRepository.refreshVersionsImpl 每次版本刷新对含 modpack.cfg 的版本\n  无条件 specializeVersionSetting()(setUsesGlobal(false)),用户关闭后下次刷新\n  即被覆盖回来;\n- VersionSettingAdapter 对特定设置开关行 disabled = modpack 直接禁点。\n安装流程(ModpackHelper.getInstallTask 成功回调)本就显式 specialize+isolate,\n刷新时的反复强制属多余。\n\n修复:\n- 刷新时仅在首次检测(无 fclversion.cfg)时自动开启特定设置,已有设置文件则\n  尊重用户选择;新装/外部导入的整合包行为不变;\n- 放开特定设置开关(开↔关走既有 specialize/globalizeVersionSetting);\n- 隔离游戏目录开关保持禁用:getGameDirectoryType 对整合包版本无条件返回\n  VERSION_FOLDER(先于 isolateGameDir 判断),mod 加载依赖版本目录 mods/,\n  放开会直接坏整合包;展示值改恒真,避免特定设置关闭后(effective=全局设置)\n  该行显示全局的 false 而实际仍强制隔离造成误导。\n\n测试:FCLGameRepositoryTest 新增 modpackVersionSpecificSettingRespectsUserChoice\n(首次自动开→globalize→连续两次刷新保持用户选择);MuMu(192.168.2.8)\nconnectedFordebugAndroidTest 全类 12 用例通过。",
+    "created_at": "2026-11-01T02:23:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41265010288"
+  },
+  {
+    "id": 41265010387,
+    "sha": "4744e601bcc0d8c96c5744196e017d269ab084ef",
+    "short_sha": "4744e60",
+    "message": "fix: 整合包版本特定设置无法被用户关闭——版本刷新不再强制覆盖用户选择\n\n根因(双重锁死):\n- FCLGameRepository.refreshVersionsImpl 每次版本刷新对含 modpack.cfg 的版本\n  无条件 specializeVersionSetting()(setUsesGlobal(false)),用户关闭后下次刷新\n  即被覆盖回来;\n- VersionSettingAdapter 对特定设置开关行 disabled = modpack 直接禁点。\n安装流程(ModpackHelper.getInstallTask 成功回调)本就显式 specialize+isolate,\n刷新时的反复强制属多余。\n\n修复:\n- 刷新时仅在首次检测(无 fclversion.cfg)时自动开启特定设置,已有设置文件则\n  尊重用户选择;新装/外部导入的整合包行为不变;\n- 放开特定设置开关(开↔关走既有 specialize/globalizeVersionSetting);\n- 隔离游戏目录开关保持禁用:getGameDirectoryType 对整合包版本无条件返回\n  VERSION_FOLDER(先于 isolateGameDir 判断),mod 加载依赖版本目录 mods/,\n  放开会直接坏整合包;展示值改恒真,避免特定设置关闭后(effective=全局设置)\n  该行显示全局的 false 而实际仍强制隔离造成误导。\n\n测试:FCLGameRepositoryTest 新增 modpackVersionSpecificSettingRespectsUserChoice\n(首次自动开→globalize→连续两次刷新保持用户选择);MuMu(192.168.2.8)\nconnectedFordebugAndroidTest 全类 12 用例通过。",
+    "created_at": "2026-11-01T02:23:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41265010387"
+  },
+  {
+    "id": 41263808769,
+    "sha": "d2ac04ec33f3e88a4f828500a6e2888b37deb7d3",
+    "short_sha": "d2ac04e",
+    "message": "feat: 整合包补全自动恢复前弹窗确认，支持对话框内直接关闭补全\n\n整合包版本每次启动都会执行补全任务，清单内缺失的文件（含被用户\n主动删除/更新的模组）会被静默装回，无任何提示。\n\n启动补全前先本地探测将被恢复的缺失文件，非空则弹窗列出，用户可选：\n- 继续补全：照常恢复\n- 跳过本次：本次不补全，下次启动再询问\n- 不再自动补全：持久化到版本设置（版本设置中可随时改回）\n\n探测按 Provider 类型分派并用具体 TypeToken 重读清单（规避\nModpackConfiguration<?> 通配反序列化得到 LinkedTreeMap 的坑），\n清单源与各补全任务对齐（curse 读版本根目录 manifest.json、\nmodrinth 读 modrinth.index.json、mcbbs/server 读 modpack.cfg），\n任何异常兜底返回空表，绝不阻断启动。",
+    "created_at": "2026-11-01T02:06:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41263808769"
+  },
+  {
+    "id": 41263808785,
+    "sha": "d2ac04ec33f3e88a4f828500a6e2888b37deb7d3",
+    "short_sha": "d2ac04e",
+    "message": "feat: 整合包补全自动恢复前弹窗确认，支持对话框内直接关闭补全\n\n整合包版本每次启动都会执行补全任务，清单内缺失的文件（含被用户\n主动删除/更新的模组）会被静默装回，无任何提示。\n\n启动补全前先本地探测将被恢复的缺失文件，非空则弹窗列出，用户可选：\n- 继续补全：照常恢复\n- 跳过本次：本次不补全，下次启动再询问\n- 不再自动补全：持久化到版本设置（版本设置中可随时改回）\n\n探测按 Provider 类型分派并用具体 TypeToken 重读清单（规避\nModpackConfiguration<?> 通配反序列化得到 LinkedTreeMap 的坑），\n清单源与各补全任务对齐（curse 读版本根目录 manifest.json、\nmodrinth 读 modrinth.index.json、mcbbs/server 读 modpack.cfg），\n任何异常兜底返回空表，绝不阻断启动。",
+    "created_at": "2026-11-01T02:06:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41263808785"
+  },
+  {
+    "id": 41263794355,
+    "sha": "d2ac04ec33f3e88a4f828500a6e2888b37deb7d3",
+    "short_sha": "d2ac04e",
+    "message": "feat: 整合包补全自动恢复前弹窗确认，支持对话框内直接关闭补全\n\n整合包版本每次启动都会执行补全任务，清单内缺失的文件（含被用户\n主动删除/更新的模组）会被静默装回，无任何提示。\n\n启动补全前先本地探测将被恢复的缺失文件，非空则弹窗列出，用户可选：\n- 继续补全：照常恢复\n- 跳过本次：本次不补全，下次启动再询问\n- 不再自动补全：持久化到版本设置（版本设置中可随时改回）\n\n探测按 Provider 类型分派并用具体 TypeToken 重读清单（规避\nModpackConfiguration<?> 通配反序列化得到 LinkedTreeMap 的坑），\n清单源与各补全任务对齐（curse 读版本根目录 manifest.json、\nmodrinth 读 modrinth.index.json、mcbbs/server 读 modpack.cfg），\n任何异常兜底返回空表，绝不阻断启动。",
+    "created_at": "2026-11-01T02:06:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41263794355"
+  },
+  {
+    "id": 41263794364,
+    "sha": "d2ac04ec33f3e88a4f828500a6e2888b37deb7d3",
+    "short_sha": "d2ac04e",
+    "message": "feat: 整合包补全自动恢复前弹窗确认，支持对话框内直接关闭补全\n\n整合包版本每次启动都会执行补全任务，清单内缺失的文件（含被用户\n主动删除/更新的模组）会被静默装回，无任何提示。\n\n启动补全前先本地探测将被恢复的缺失文件，非空则弹窗列出，用户可选：\n- 继续补全：照常恢复\n- 跳过本次：本次不补全，下次启动再询问\n- 不再自动补全：持久化到版本设置（版本设置中可随时改回）\n\n探测按 Provider 类型分派并用具体 TypeToken 重读清单（规避\nModpackConfiguration<?> 通配反序列化得到 LinkedTreeMap 的坑），\n清单源与各补全任务对齐（curse 读版本根目录 manifest.json、\nmodrinth 读 modrinth.index.json、mcbbs/server 读 modpack.cfg），\n任何异常兜底返回空表，绝不阻断启动。",
+    "created_at": "2026-11-01T02:06:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41263794364"
+  },
+  {
     "id": 41213177481,
     "sha": "57f34de5f83848a862d185404bd6aa54a007612c",
     "short_sha": "57f34de",
@@ -318,85 +398,5 @@
     "message": "feat: 同步 HMCL #7092——NeoForged Maven 相关文件支持 CurseForge CDN 镜像候选\n\n- NeoForgeRemoteVersion：新增 neoforged.forgecdn.net 元数据镜像常量与\n  getMirrorCandidates(url, mirrorFirst) 规则（/releases/ 路径按 mirrorFirst\n  在官方源与 BMCLAPI 间排序，一律追加 forgecdn）\n- NeoForgeOfficialVersionList：元数据 GetTask 改用 [原URL, 镜像URL] 双候选\n- Mojang/BMCLAPI DownloadProvider：maven.neoforged.net 专用镜像规则拦截\n  （覆盖 installer.jar 与库文件下载候选）\n\n同步自 HMCL-dev/HMCL@5ad4880 (#7092)",
     "created_at": "2026-10-31T04:43:46Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41169816795"
-  },
-  {
-    "id": 41169816988,
-    "sha": "6ca800f11297168e9ddedcca292b4e38490d38d5",
-    "short_sha": "6ca800f",
-    "message": "feat: 同步 HMCL #7092——NeoForged Maven 相关文件支持 CurseForge CDN 镜像候选\n\n- NeoForgeRemoteVersion：新增 neoforged.forgecdn.net 元数据镜像常量与\n  getMirrorCandidates(url, mirrorFirst) 规则（/releases/ 路径按 mirrorFirst\n  在官方源与 BMCLAPI 间排序，一律追加 forgecdn）\n- NeoForgeOfficialVersionList：元数据 GetTask 改用 [原URL, 镜像URL] 双候选\n- Mojang/BMCLAPI DownloadProvider：maven.neoforged.net 专用镜像规则拦截\n  （覆盖 installer.jar 与库文件下载候选）\n\n同步自 HMCL-dev/HMCL@5ad4880 (#7092)",
-    "created_at": "2026-10-31T04:43:46Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41169816988"
-  },
-  {
-    "id": 41168711304,
-    "sha": "6345b6d1ba81f370775ce8b6ec6d04f4f71129be",
-    "short_sha": "6345b6d",
-    "message": "feat: 输入法遮挡画面时提供放大镜窗口 (#1981)\n\n* feat: 输入法遮挡画面时提供放大镜窗口\n\n* fix: 游戏自定义分辨率过小时，放大镜画面被拉伸\n\n* refactor: 放大镜迁移至 Kotlin，修复平移死区与可见性细节\n\n- 按项目惯例将 InputMagnifierView 迁移为 Kotlin\n- 修复低分辨率帧下取样区域被钉死在整帧适配的死区：zoom=1 为整帧概览，\n  任何放大立即裁切且可平移（区域 = 视口 × fitScale ÷ zoom，等比不拉伸）\n- 平移加 0.5 阻尼，小窗口内更易定位\n- 放大镜画面回读按 33ms 节流，打开时强制捕获\n- 描边改走 foreground 绘制（background 描边会被 viewport 画面盖住），\n  白色 3dp 圆角边框提示当前为放大画面\n- 手动打开放大镜时重置 dismissedForInput，避免输入法动画抖动将其自动收回\n- 移除搜索图标被运行时覆盖的 tint\n\n---------\n\nCo-authored-by: ShirosakiMio <852468399@qq.com>",
-    "created_at": "2026-10-31T04:28:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41168711304"
-  },
-  {
-    "id": 41168711299,
-    "sha": "6345b6d1ba81f370775ce8b6ec6d04f4f71129be",
-    "short_sha": "6345b6d",
-    "message": "feat: 输入法遮挡画面时提供放大镜窗口 (#1981)\n\n* feat: 输入法遮挡画面时提供放大镜窗口\n\n* fix: 游戏自定义分辨率过小时，放大镜画面被拉伸\n\n* refactor: 放大镜迁移至 Kotlin，修复平移死区与可见性细节\n\n- 按项目惯例将 InputMagnifierView 迁移为 Kotlin\n- 修复低分辨率帧下取样区域被钉死在整帧适配的死区：zoom=1 为整帧概览，\n  任何放大立即裁切且可平移（区域 = 视口 × fitScale ÷ zoom，等比不拉伸）\n- 平移加 0.5 阻尼，小窗口内更易定位\n- 放大镜画面回读按 33ms 节流，打开时强制捕获\n- 描边改走 foreground 绘制（background 描边会被 viewport 画面盖住），\n  白色 3dp 圆角边框提示当前为放大画面\n- 手动打开放大镜时重置 dismissedForInput，避免输入法动画抖动将其自动收回\n- 移除搜索图标被运行时覆盖的 tint\n\n---------\n\nCo-authored-by: ShirosakiMio <852468399@qq.com>",
-    "created_at": "2026-10-31T04:28:29Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41168711299"
-  },
-  {
-    "id": 41166880191,
-    "sha": "2092e95df4c9c9ff76fd689e8701f277cbafbd81",
-    "short_sha": "2092e95",
-    "message": "Update RendererManager.kt",
-    "created_at": "2026-10-31T04:02:10Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166880191"
-  },
-  {
-    "id": 41166880227,
-    "sha": "2092e95df4c9c9ff76fd689e8701f277cbafbd81",
-    "short_sha": "2092e95",
-    "message": "Update RendererManager.kt",
-    "created_at": "2026-10-31T04:02:10Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166880227"
-  },
-  {
-    "id": 41166875988,
-    "sha": "2092e95df4c9c9ff76fd689e8701f277cbafbd81",
-    "short_sha": "2092e95",
-    "message": "Update RendererManager.kt",
-    "created_at": "2026-10-31T04:02:10Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166875988"
-  },
-  {
-    "id": 41166875985,
-    "sha": "2092e95df4c9c9ff76fd689e8701f277cbafbd81",
-    "short_sha": "2092e95",
-    "message": "Update RendererManager.kt",
-    "created_at": "2026-10-31T04:02:10Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166875985"
-  },
-  {
-    "id": 41166614244,
-    "sha": "cb93daf66fdd70ba0c481a563d8fa838920bfa2f",
-    "short_sha": "cb93daf",
-    "message": "feat: SFPEW 兼容层启用时按组合后能力修正 MG 版本注册与启动门控\n\n内置 MobileGlues 的兼容层硬编码启用，组合后旧版固定管线由层补齐\n（1.8.9 实测可跑），注册信息与版本门控同步修正：\n\n- MG 注册信息去掉 minMCver=1.17 与名称中 \"1.17+\"：层恒开，无下界\n- 启动门控：层启用时跳过渲染器 minMCver 下界警告（插件渲染器层\n  开启时同样受益）；maxMCver 上界保留——层不扩展渲染器现代 GL 上限\n- 渲染器列表展示：内置渲染器无版本边界显示\"全部版本\"，\n  插件无声明仍显示\"未知\"",
-    "created_at": "2026-10-31T03:58:30Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166614244"
-  },
-  {
-    "id": 41166614213,
-    "sha": "cb93daf66fdd70ba0c481a563d8fa838920bfa2f",
-    "short_sha": "cb93daf",
-    "message": "feat: SFPEW 兼容层启用时按组合后能力修正 MG 版本注册与启动门控\n\n内置 MobileGlues 的兼容层硬编码启用，组合后旧版固定管线由层补齐\n（1.8.9 实测可跑），注册信息与版本门控同步修正：\n\n- MG 注册信息去掉 minMCver=1.17 与名称中 \"1.17+\"：层恒开，无下界\n- 启动门控：层启用时跳过渲染器 minMCver 下界警告（插件渲染器层\n  开启时同样受益）；maxMCver 上界保留——层不扩展渲染器现代 GL 上限\n- 渲染器列表展示：内置渲染器无版本边界显示\"全部版本\"，\n  插件无声明仍显示\"未知\"",
-    "created_at": "2026-10-31T03:58:30Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166614213"
-  },
-  {
-    "id": 41166610334,
-    "sha": "cb93daf66fdd70ba0c481a563d8fa838920bfa2f",
-    "short_sha": "cb93daf",
-    "message": "feat: SFPEW 兼容层启用时按组合后能力修正 MG 版本注册与启动门控\n\n内置 MobileGlues 的兼容层硬编码启用，组合后旧版固定管线由层补齐\n（1.8.9 实测可跑），注册信息与版本门控同步修正：\n\n- MG 注册信息去掉 minMCver=1.17 与名称中 \"1.17+\"：层恒开，无下界\n- 启动门控：层启用时跳过渲染器 minMCver 下界警告（插件渲染器层\n  开启时同样受益）；maxMCver 上界保留——层不扩展渲染器现代 GL 上限\n- 渲染器列表展示：内置渲染器无版本边界显示\"全部版本\"，\n  插件无声明仍显示\"未知\"",
-    "created_at": "2026-10-31T03:58:30Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41166610334"
   }
 ]
