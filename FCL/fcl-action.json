@@ -1,20 +1,20 @@
 {"run": {
-  "id": 41312471259,
-  "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAJnmpI2w",
+  "id": 41379266349,
+  "name": "Sync version map",
+  "node_id": "WFR_kwLOIQeFGs8AAAAJomV_LQ",
   "head_branch": "main",
-  "head_sha": "4e3def1a37299c751bfa4fa54039ec65b9d4504c",
-  "path": ".github/workflows/check-codes.yml",
-  "display_title": "fix: 「使用系统Vulkan驱动」开关无动画 (#1993)",
-  "run_number": 401,
+  "head_sha": "f1907eb2a1127dcc7ef61477279e8f2bdb011978",
+  "path": ".github/workflows/sync-version-map.yml",
+  "display_title": "Update version_map.json",
+  "run_number": 7,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
-  "workflow_id": 351611475,
-  "check_suite_id": 111967925141,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAaEc7zlQ",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41312471259",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312471259",
+  "workflow_id": 383183163,
+  "check_suite_id": 112139267821,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAaHAVu7Q",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41379266349",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41379266349",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
@@ -22,7 +22,7 @@
       "number": 364,
       "head": {
         "ref": "main",
-        "sha": "4e3def1a37299c751bfa4fa54039ec65b9d4504c",
+        "sha": "f1907eb2a1127dcc7ef61477279e8f2bdb011978",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -45,7 +45,7 @@
       "number": 37,
       "head": {
         "ref": "main",
-        "sha": "4e3def1a37299c751bfa4fa54039ec65b9d4504c",
+        "sha": "f1907eb2a1127dcc7ef61477279e8f2bdb011978",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -68,7 +68,7 @@
       "number": 400,
       "head": {
         "ref": "main",
-        "sha": "4e3def1a37299c751bfa4fa54039ec65b9d4504c",
+        "sha": "f1907eb2a1127dcc7ef61477279e8f2bdb011978",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -86,8 +86,8 @@
       }
     }
   ],
-  "created_at": "2026-11-01T13:41:26Z",
-  "updated_at": "2026-11-01T13:42:44Z",
+  "created_at": "2026-11-02T02:43:51Z",
+  "updated_at": "2026-11-02T02:44:09Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-11-01T13:41:26Z",
+  "run_started_at": "2026-11-02T02:43:51Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,26 +133,26 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41312471259/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41312471259/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/111967925141",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41312471259/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41312471259/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41312471259/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41379266349/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41379266349/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/112139267821",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41379266349/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41379266349/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41379266349/rerun",
   "previous_attempt_url": null,
-  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
+  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/383183163",
   "head_commit": {
-    "id": "4e3def1a37299c751bfa4fa54039ec65b9d4504c",
-    "tree_id": "40d90f6e931aca1c3fe5d453bf8ea78d509ee4ec",
-    "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1993)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat 吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做 notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画\n\nFixes #1899",
-    "timestamp": "2026-11-01T13:41:22Z",
+    "id": "f1907eb2a1127dcc7ef61477279e8f2bdb011978",
+    "tree_id": "59af534983c9d6cd985e78c675f49be31180c292",
+    "message": "Update version_map.json",
+    "timestamp": "2026-11-02T02:43:43Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
     },
     "committer": {
-      "name": "GitHub",
-      "email": "noreply@github.com"
+      "name": "ShirosakiMio",
+      "email": "852468399@qq.com"
     }
   },
   "repository": {
