@@ -1,20 +1,20 @@
 {"run": {
-  "id": 41379266349,
-  "name": "Sync version map",
-  "node_id": "WFR_kwLOIQeFGs8AAAAJomV_LQ",
+  "id": 41435635125,
+  "name": "Check Codes",
+  "node_id": "WFR_kwLOIQeFGs8AAAAJpcGdtQ",
   "head_branch": "main",
-  "head_sha": "f1907eb2a1127dcc7ef61477279e8f2bdb011978",
-  "path": ".github/workflows/sync-version-map.yml",
-  "display_title": "Update version_map.json",
-  "run_number": 7,
+  "head_sha": "a32fd727d95845d0216f097f012d20e520be6b17",
+  "path": ".github/workflows/check-codes.yml",
+  "display_title": "fix: 修复版本列表切换版本时的异常动画",
+  "run_number": 406,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
-  "workflow_id": 383183163,
-  "check_suite_id": 112139267821,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAaHAVu7Q",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41379266349",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41379266349",
+  "workflow_id": 351611475,
+  "check_suite_id": 112286830744,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAaJNEQmA",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41435635125",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41435635125",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
@@ -22,7 +22,7 @@
       "number": 364,
       "head": {
         "ref": "main",
-        "sha": "f1907eb2a1127dcc7ef61477279e8f2bdb011978",
+        "sha": "a32fd727d95845d0216f097f012d20e520be6b17",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -45,7 +45,7 @@
       "number": 37,
       "head": {
         "ref": "main",
-        "sha": "f1907eb2a1127dcc7ef61477279e8f2bdb011978",
+        "sha": "a32fd727d95845d0216f097f012d20e520be6b17",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -68,7 +68,7 @@
       "number": 400,
       "head": {
         "ref": "main",
-        "sha": "f1907eb2a1127dcc7ef61477279e8f2bdb011978",
+        "sha": "a32fd727d95845d0216f097f012d20e520be6b17",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -86,8 +86,8 @@
       }
     }
   ],
-  "created_at": "2026-11-02T02:43:51Z",
-  "updated_at": "2026-11-02T02:44:09Z",
+  "created_at": "2026-11-02T11:17:29Z",
+  "updated_at": "2026-11-02T11:19:02Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-11-02T02:43:51Z",
+  "run_started_at": "2026-11-02T11:17:29Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,19 +133,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41379266349/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41379266349/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/112139267821",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41379266349/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41379266349/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41379266349/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41435635125/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41435635125/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/112286830744",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41435635125/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41435635125/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41435635125/rerun",
   "previous_attempt_url": null,
-  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/383183163",
+  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "f1907eb2a1127dcc7ef61477279e8f2bdb011978",
-    "tree_id": "59af534983c9d6cd985e78c675f49be31180c292",
-    "message": "Update version_map.json",
-    "timestamp": "2026-11-02T02:43:43Z",
+    "id": "a32fd727d95845d0216f097f012d20e520be6b17",
+    "tree_id": "1943d469e17d7c02b03057f89ce1e2b538c186bf",
+    "message": "fix: 修复版本列表切换版本时的异常动画",
+    "timestamp": "2026-11-02T11:16:53Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
