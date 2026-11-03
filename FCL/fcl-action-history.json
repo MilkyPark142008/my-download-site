@@ -1,5 +1,13 @@
 [
   {
+    "id": 41644092992,
+    "sha": "bf84aa71c84c9e863cdb6890866957c8497cb841",
+    "short_sha": "bf84aa7",
+    "message": "fix: 背景图改为按视图实时尺寸居中裁剪，修复息屏启动后比例拉伸\n\n新增 CenterCropDrawable，绘制时按当前 bounds 实时等比缩放居中裁剪；\nImageUtil.loadInto 移除 Glide，不再按加载时刻定格的视图尺寸裁出固定\nBitmap，旋转、折叠等尺寸变化场景同样保持正确比例",
+    "created_at": "2026-11-03T13:24:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41644092992"
+  },
+  {
     "id": 41581618526,
     "sha": "badf87666930d03433e2008e4160737a22bb1109",
     "short_sha": "badf876",
@@ -32,20 +40,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41581536079"
   },
   {
-    "id": 41581531364,
-    "sha": "70e54048c3b29f94b8c492653083b0bcbd7390d7",
-    "short_sha": "70e5404",
-    "message": "fix: 接通 SDL 通道键盘真实显隐上报，修复 26.3 开关软键盘需点两次\n\nSDL 桥的 notifyImeVisibilityChanged 上报入口移植后从未接线，SdlImeController.mKeyboardShown 只能靠 doShow 中 showSoftInput 后立即查询 isAcceptingText()（竞态：键盘实际弹出前恒为 false，弹出后才为 true）与 doHide 更新，与真实显隐必然漂移：呼出后首次点按收起被误判为再次呼出（无可见变化），第二次才真正收起；标志反向漂移时呼出同理。\n\n- JVMActivity 既有布局回调本就随 IME 显隐触发，以 getImeOccludedHeight 推导的真实可见性轮询上报，置于「禁用软键盘自适应」早退之前不被其挡住\n- notifyVisibilityChanged 自带标志比对去重，重复上报无副作用；通道关闭时 IME 自行弹出的强制按回安全网随之生效\n- 开关软键盘、放大镜 inputActive、doShow 的 already-visible 守卫同源受益，不再依赖漂移标志",
-    "created_at": "2026-11-03T04:54:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41581531364"
-  },
-  {
     "id": 41581531347,
     "sha": "70e54048c3b29f94b8c492653083b0bcbd7390d7",
     "short_sha": "70e5404",
     "message": "fix: 接通 SDL 通道键盘真实显隐上报，修复 26.3 开关软键盘需点两次\n\nSDL 桥的 notifyImeVisibilityChanged 上报入口移植后从未接线，SdlImeController.mKeyboardShown 只能靠 doShow 中 showSoftInput 后立即查询 isAcceptingText()（竞态：键盘实际弹出前恒为 false，弹出后才为 true）与 doHide 更新，与真实显隐必然漂移：呼出后首次点按收起被误判为再次呼出（无可见变化），第二次才真正收起；标志反向漂移时呼出同理。\n\n- JVMActivity 既有布局回调本就随 IME 显隐触发，以 getImeOccludedHeight 推导的真实可见性轮询上报，置于「禁用软键盘自适应」早退之前不被其挡住\n- notifyVisibilityChanged 自带标志比对去重，重复上报无副作用；通道关闭时 IME 自行弹出的强制按回安全网随之生效\n- 开关软键盘、放大镜 inputActive、doShow 的 already-visible 守卫同源受益，不再依赖漂移标志",
     "created_at": "2026-11-03T04:54:28Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41581531347"
+  },
+  {
+    "id": 41581531364,
+    "sha": "70e54048c3b29f94b8c492653083b0bcbd7390d7",
+    "short_sha": "70e5404",
+    "message": "fix: 接通 SDL 通道键盘真实显隐上报，修复 26.3 开关软键盘需点两次\n\nSDL 桥的 notifyImeVisibilityChanged 上报入口移植后从未接线，SdlImeController.mKeyboardShown 只能靠 doShow 中 showSoftInput 后立即查询 isAcceptingText()（竞态：键盘实际弹出前恒为 false，弹出后才为 true）与 doHide 更新，与真实显隐必然漂移：呼出后首次点按收起被误判为再次呼出（无可见变化），第二次才真正收起；标志反向漂移时呼出同理。\n\n- JVMActivity 既有布局回调本就随 IME 显隐触发，以 getImeOccludedHeight 推导的真实可见性轮询上报，置于「禁用软键盘自适应」早退之前不被其挡住\n- notifyVisibilityChanged 自带标志比对去重，重复上报无副作用；通道关闭时 IME 自行弹出的强制按回安全网随之生效\n- 开关软键盘、放大镜 inputActive、doShow 的 already-visible 守卫同源受益，不再依赖漂移标志",
+    "created_at": "2026-11-03T04:54:28Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41581531364"
   },
   {
     "id": 41575772991,
@@ -390,13 +398,5 @@
     "message": "fix: 直启拆分合并分离形式模块选项并展开 -jar 语义\n\n- 带值 JVM 选项（--add-opens/--add-exports/--add-modules/-p 等）合并为等号\n  形式：JNI_CreateJavaVM 逐条解析 JavaVMOption，分离的「选项 + 值」是两条互不\n  相干的 option（未识别项被静默忽略），Forge 1.17+ bootstrap 必需的模块选项会\n  全部失效；补上清单中缺失的 -p（其值此前会被误判为主类）并改名为\n  --module-path（JVM 侧不认 launcher 短名）\n- -jar 语义展开：jar 即 classpath（应用类加载器自行展开 manifest 的\n  Class-Path），主类取 manifest 的 Main-Class，修复 Jar Executor 链路直启失败\n- exit_info_code 改 _Atomic 消除 hook/waiter 跨线程数据竞争；mainClass 点分\n  转换改 strdup 动态分配，去掉 128 字节静默截断上限；补 ignoreUnrecognized\n  行为变化说明与文件头参考来源",
     "created_at": "2026-10-31T14:15:12Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41209281574"
-  },
-  {
-    "id": 41209281708,
-    "sha": "66f89a69d0231f5e927c1433ded6713bc22056c5",
-    "short_sha": "66f89a6",
-    "message": "fix: 直启拆分合并分离形式模块选项并展开 -jar 语义\n\n- 带值 JVM 选项（--add-opens/--add-exports/--add-modules/-p 等）合并为等号\n  形式：JNI_CreateJavaVM 逐条解析 JavaVMOption，分离的「选项 + 值」是两条互不\n  相干的 option（未识别项被静默忽略），Forge 1.17+ bootstrap 必需的模块选项会\n  全部失效；补上清单中缺失的 -p（其值此前会被误判为主类）并改名为\n  --module-path（JVM 侧不认 launcher 短名）\n- -jar 语义展开：jar 即 classpath（应用类加载器自行展开 manifest 的\n  Class-Path），主类取 manifest 的 Main-Class，修复 Jar Executor 链路直启失败\n- exit_info_code 改 _Atomic 消除 hook/waiter 跨线程数据竞争；mainClass 点分\n  转换改 strdup 动态分配，去掉 128 字节静默截断上限；补 ignoreUnrecognized\n  行为变化说明与文件头参考来源",
-    "created_at": "2026-10-31T14:15:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41209281708"
   }
 ]
