@@ -1,20 +1,20 @@
 {"run": {
-  "id": 41435635125,
-  "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAJpcGdtQ",
+  "id": 41581618526,
+  "name": "Build",
+  "node_id": "WFR_kwLOIQeFGs8AAAAJrnUlXg",
   "head_branch": "main",
-  "head_sha": "a32fd727d95845d0216f097f012d20e520be6b17",
-  "path": ".github/workflows/check-codes.yml",
-  "display_title": "fix: 修复版本列表切换版本时的异常动画",
-  "run_number": 406,
+  "head_sha": "badf87666930d03433e2008e4160737a22bb1109",
+  "path": ".github/workflows/build.yml",
+  "display_title": "fix: 软键盘抬升改读 IME insets 真值，修复 26.3 输入法双倍抬升黑屏与开关需点两次 (#1997)",
+  "run_number": 1505,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
-  "workflow_id": 351611475,
-  "check_suite_id": 112286830744,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAaJNEQmA",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41435635125",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41435635125",
+  "workflow_id": 200966783,
+  "check_suite_id": 112675919749,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAaPAIXhQ",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41581618526",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41581618526",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
@@ -22,7 +22,7 @@
       "number": 364,
       "head": {
         "ref": "main",
-        "sha": "a32fd727d95845d0216f097f012d20e520be6b17",
+        "sha": "badf87666930d03433e2008e4160737a22bb1109",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -45,7 +45,7 @@
       "number": 37,
       "head": {
         "ref": "main",
-        "sha": "a32fd727d95845d0216f097f012d20e520be6b17",
+        "sha": "badf87666930d03433e2008e4160737a22bb1109",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -68,7 +68,7 @@
       "number": 400,
       "head": {
         "ref": "main",
-        "sha": "a32fd727d95845d0216f097f012d20e520be6b17",
+        "sha": "badf87666930d03433e2008e4160737a22bb1109",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -86,8 +86,8 @@
       }
     }
   ],
-  "created_at": "2026-11-02T11:17:29Z",
-  "updated_at": "2026-11-02T11:19:02Z",
+  "created_at": "2026-11-03T05:03:19Z",
+  "updated_at": "2026-11-03T05:09:17Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-11-02T11:17:29Z",
+  "run_started_at": "2026-11-03T05:03:19Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,26 +133,26 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41435635125/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41435635125/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/112286830744",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41435635125/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41435635125/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41435635125/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41581618526/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41581618526/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/112675919749",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41581618526/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41581618526/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41581618526/rerun",
   "previous_attempt_url": null,
-  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
+  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/200966783",
   "head_commit": {
-    "id": "a32fd727d95845d0216f097f012d20e520be6b17",
-    "tree_id": "1943d469e17d7c02b03057f89ce1e2b538c186bf",
-    "message": "fix: 修复版本列表切换版本时的异常动画",
-    "timestamp": "2026-11-02T11:16:53Z",
+    "id": "badf87666930d03433e2008e4160737a22bb1109",
+    "tree_id": "11049b481a8cb394b2bb8d437827c4f184f15f74",
+    "message": "fix: 软键盘抬升改读 IME insets 真值，修复 26.3 输入法双倍抬升黑屏与开关需点两次 (#1997)\n\n三个相关但独立的软键盘修复：\n\n- 画面抬升/放大镜遮挡高度改读 IME insets 真值（新增 getImeOccludedHeight 共用工具）：矮键盘不再漏判，悬浮键盘 inset 为 0 不误抬；API 26–29 无专用通道沿用原可视区估算\n- SDL 编辑框固定左上角 1px，忽略游戏传入的文本输入区域矩形：焦点不再落在键盘覆盖区，系统不再平推窗口，与 JVMActivity 画面平移叠加成双倍抬升的黑屏修复（偶发性源于编辑框位置随呼出方漂移）\n- 接通移植时丢失的 notifyImeVisibilityChanged 真实显隐上报（JVMActivity 布局回调轮询）：SdlImeController 缓存标志不再漂移，修复开关软键盘需点两次，「通道关闭时 IME 自行弹出强制按回」安全网随之生效\n\n编译（Kotlin+javac）与 checkstyle 通过；26.3 真机验证通过。\n\nFixes #1994",
+    "timestamp": "2026-11-03T05:03:15Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
     },
     "committer": {
-      "name": "ShirosakiMio",
-      "email": "852468399@qq.com"
+      "name": "GitHub",
+      "email": "noreply@github.com"
     }
   },
   "repository": {
@@ -292,8 +292,107 @@
     "deployments_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/deployments"
   }
 }, "artifacts": {
-  "total_count": 0,
+  "total_count": 5,
   "artifacts": [
-
+    {
+      "id": 13206512571,
+      "node_id": "MDg6QXJ0aWZhY3QxMzIwNjUxMjU3MQ==",
+      "name": "app-all",
+      "size_in_bytes": 319394266,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13206512571",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13206512571/zip",
+      "expired": false,
+      "digest": "sha256:aa147f513e3583155621f5f4f43b849255acc6cb651816a7137e8813b28c13bc",
+      "created_at": "2026-11-03T05:09:13Z",
+      "updated_at": "2026-11-03T05:09:13Z",
+      "expires_at": "2026-11-10T05:03:19Z",
+      "workflow_run": {
+        "id": 41581618526,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "main",
+        "head_sha": "badf87666930d03433e2008e4160737a22bb1109"
+      }
+    },
+    {
+      "id": 13206352928,
+      "node_id": "MDg6QXJ0aWZhY3QxMzIwNjM1MjkyOA==",
+      "name": "app-arm64",
+      "size_in_bytes": 166505597,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13206352928",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13206352928/zip",
+      "expired": false,
+      "digest": "sha256:0f0689ee9c87606fdd4a15c1201ca3eb5676d3bcec811b68be711e65d10dbbad",
+      "created_at": "2026-11-03T05:07:58Z",
+      "updated_at": "2026-11-03T05:07:58Z",
+      "expires_at": "2026-11-10T05:03:19Z",
+      "workflow_run": {
+        "id": 41581618526,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "main",
+        "head_sha": "badf87666930d03433e2008e4160737a22bb1109"
+      }
+    },
+    {
+      "id": 13205947805,
+      "node_id": "MDg6QXJ0aWZhY3QxMzIwNTk0NzgwNQ==",
+      "name": "app-arm",
+      "size_in_bytes": 159099648,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13205947805",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13205947805/zip",
+      "expired": false,
+      "digest": "sha256:8b328f64e7c22fa4c35c69ee19c6d975b677cb0cdb3648f6e14c8b7c6d5e76ce",
+      "created_at": "2026-11-03T05:08:52Z",
+      "updated_at": "2026-11-03T05:08:52Z",
+      "expires_at": "2026-11-10T05:03:19Z",
+      "workflow_run": {
+        "id": 41581618526,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "main",
+        "head_sha": "badf87666930d03433e2008e4160737a22bb1109"
+      }
+    },
+    {
+      "id": 13205633221,
+      "node_id": "MDg6QXJ0aWZhY3QxMzIwNTYzMzIyMQ==",
+      "name": "app-x86",
+      "size_in_bytes": 161435976,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13205633221",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13205633221/zip",
+      "expired": false,
+      "digest": "sha256:741a93a2b3d9429d77dc2f347e16ecc0e5733eb9ec9dc68d61bf8b896ddbfa59",
+      "created_at": "2026-11-03T05:08:16Z",
+      "updated_at": "2026-11-03T05:08:16Z",
+      "expires_at": "2026-11-10T05:03:19Z",
+      "workflow_run": {
+        "id": 41581618526,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "main",
+        "head_sha": "badf87666930d03433e2008e4160737a22bb1109"
+      }
+    },
+    {
+      "id": 13205553529,
+      "node_id": "MDg6QXJ0aWZhY3QxMzIwNTU1MzUyOQ==",
+      "name": "app-x86_64",
+      "size_in_bytes": 171699492,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13205553529",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13205553529/zip",
+      "expired": false,
+      "digest": "sha256:b7e0327dce5d02b992330723be1de0d9e0b3f83ce034b2242b6e403f2ee80f2f",
+      "created_at": "2026-11-03T05:06:53Z",
+      "updated_at": "2026-11-03T05:06:53Z",
+      "expires_at": "2026-11-10T05:03:19Z",
+      "workflow_run": {
+        "id": 41581618526,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "main",
+        "head_sha": "badf87666930d03433e2008e4160737a22bb1109"
+      }
+    }
   ]
 }}
