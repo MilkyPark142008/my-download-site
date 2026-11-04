@@ -1,5 +1,21 @@
 [
   {
+    "id": 41755396631,
+    "sha": "0dbbcf5e67a8f8e5440bef5c4429cdbdb4b49fea",
+    "short_sha": "0dbbcf5",
+    "message": "style: CenterCropDrawable 改用 withTranslation 扩展，MainActivity 格式化",
+    "created_at": "2026-11-04T01:37:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41755396631"
+  },
+  {
+    "id": 41755396740,
+    "sha": "0dbbcf5e67a8f8e5440bef5c4429cdbdb4b49fea",
+    "short_sha": "0dbbcf5",
+    "message": "style: CenterCropDrawable 改用 withTranslation 扩展，MainActivity 格式化",
+    "created_at": "2026-11-04T01:37:54Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41755396740"
+  },
+  {
     "id": 41644092992,
     "sha": "bf84aa71c84c9e863cdb6890866957c8497cb841",
     "short_sha": "bf84aa7",
@@ -24,20 +40,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41581618510"
   },
   {
-    "id": 41581536080,
-    "sha": "70e54048c3b29f94b8c492653083b0bcbd7390d7",
-    "short_sha": "70e5404",
-    "message": "fix: 接通 SDL 通道键盘真实显隐上报，修复 26.3 开关软键盘需点两次\n\nSDL 桥的 notifyImeVisibilityChanged 上报入口移植后从未接线，SdlImeController.mKeyboardShown 只能靠 doShow 中 showSoftInput 后立即查询 isAcceptingText()（竞态：键盘实际弹出前恒为 false，弹出后才为 true）与 doHide 更新，与真实显隐必然漂移：呼出后首次点按收起被误判为再次呼出（无可见变化），第二次才真正收起；标志反向漂移时呼出同理。\n\n- JVMActivity 既有布局回调本就随 IME 显隐触发，以 getImeOccludedHeight 推导的真实可见性轮询上报，置于「禁用软键盘自适应」早退之前不被其挡住\n- notifyVisibilityChanged 自带标志比对去重，重复上报无副作用；通道关闭时 IME 自行弹出的强制按回安全网随之生效\n- 开关软键盘、放大镜 inputActive、doShow 的 already-visible 守卫同源受益，不再依赖漂移标志",
-    "created_at": "2026-11-03T04:54:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41581536080"
-  },
-  {
     "id": 41581536079,
     "sha": "70e54048c3b29f94b8c492653083b0bcbd7390d7",
     "short_sha": "70e5404",
     "message": "fix: 接通 SDL 通道键盘真实显隐上报，修复 26.3 开关软键盘需点两次\n\nSDL 桥的 notifyImeVisibilityChanged 上报入口移植后从未接线，SdlImeController.mKeyboardShown 只能靠 doShow 中 showSoftInput 后立即查询 isAcceptingText()（竞态：键盘实际弹出前恒为 false，弹出后才为 true）与 doHide 更新，与真实显隐必然漂移：呼出后首次点按收起被误判为再次呼出（无可见变化），第二次才真正收起；标志反向漂移时呼出同理。\n\n- JVMActivity 既有布局回调本就随 IME 显隐触发，以 getImeOccludedHeight 推导的真实可见性轮询上报，置于「禁用软键盘自适应」早退之前不被其挡住\n- notifyVisibilityChanged 自带标志比对去重，重复上报无副作用；通道关闭时 IME 自行弹出的强制按回安全网随之生效\n- 开关软键盘、放大镜 inputActive、doShow 的 already-visible 守卫同源受益，不再依赖漂移标志",
     "created_at": "2026-11-03T04:54:28Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41581536079"
+  },
+  {
+    "id": 41581536080,
+    "sha": "70e54048c3b29f94b8c492653083b0bcbd7390d7",
+    "short_sha": "70e5404",
+    "message": "fix: 接通 SDL 通道键盘真实显隐上报，修复 26.3 开关软键盘需点两次\n\nSDL 桥的 notifyImeVisibilityChanged 上报入口移植后从未接线，SdlImeController.mKeyboardShown 只能靠 doShow 中 showSoftInput 后立即查询 isAcceptingText()（竞态：键盘实际弹出前恒为 false，弹出后才为 true）与 doHide 更新，与真实显隐必然漂移：呼出后首次点按收起被误判为再次呼出（无可见变化），第二次才真正收起；标志反向漂移时呼出同理。\n\n- JVMActivity 既有布局回调本就随 IME 显隐触发，以 getImeOccludedHeight 推导的真实可见性轮询上报，置于「禁用软键盘自适应」早退之前不被其挡住\n- notifyVisibilityChanged 自带标志比对去重，重复上报无副作用；通道关闭时 IME 自行弹出的强制按回安全网随之生效\n- 开关软键盘、放大镜 inputActive、doShow 的 already-visible 守卫同源受益，不再依赖漂移标志",
+    "created_at": "2026-11-03T04:54:28Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41581536080"
   },
   {
     "id": 41581531347,
@@ -56,20 +72,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41581531364"
   },
   {
-    "id": 41575772991,
-    "sha": "b940768c2a8867c4e72f003166841efb4a5ce2b0",
-    "short_sha": "b940768",
-    "message": "fix: SDL 编辑框固定左上角，修复呼出输入法时画面双倍抬升黑屏\n\n26.3（SDL 路径）呼出输入法偶发大面积黑屏，画面总位移为两倍键盘高。根因是两个推手叠加：JVMActivity 未声明 windowSoftInputMode，SDL 的焦点编辑框 mEdit 按游戏传入的文本输入区域（聊天框，屏幕底部）摆放，被键盘盖住时系统 adjustPan 平推整个窗口，再叠加 JVMActivity 自身的 TextureView 平移。启动器发起呼出且 mEdit 为空时落在 (0,0,1,1) 不触发平推，故表现为偶发。\n\n- SdlImeController：mEdit 固定 1px 钉在左上角，忽略游戏传入的区域矩形（与 GLFW 路径 TouchCharInput 同模式）；requestShow/doShow 去掉坐标参数，删除 makeParams 与 HEIGHT_PADDING\n- SDLActivity.showTextInput：JNI 签名保留区域参数，不再向下传递\n- 文本送达走 SDLInputConnection 通道，不受编辑框位置影响\n\nFixes #1994",
-    "created_at": "2026-11-03T02:10:11Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41575772991"
-  },
-  {
     "id": 41575772953,
     "sha": "b940768c2a8867c4e72f003166841efb4a5ce2b0",
     "short_sha": "b940768",
     "message": "fix: SDL 编辑框固定左上角，修复呼出输入法时画面双倍抬升黑屏\n\n26.3（SDL 路径）呼出输入法偶发大面积黑屏，画面总位移为两倍键盘高。根因是两个推手叠加：JVMActivity 未声明 windowSoftInputMode，SDL 的焦点编辑框 mEdit 按游戏传入的文本输入区域（聊天框，屏幕底部）摆放，被键盘盖住时系统 adjustPan 平推整个窗口，再叠加 JVMActivity 自身的 TextureView 平移。启动器发起呼出且 mEdit 为空时落在 (0,0,1,1) 不触发平推，故表现为偶发。\n\n- SdlImeController：mEdit 固定 1px 钉在左上角，忽略游戏传入的区域矩形（与 GLFW 路径 TouchCharInput 同模式）；requestShow/doShow 去掉坐标参数，删除 makeParams 与 HEIGHT_PADDING\n- SDLActivity.showTextInput：JNI 签名保留区域参数，不再向下传递\n- 文本送达走 SDLInputConnection 通道，不受编辑框位置影响\n\nFixes #1994",
     "created_at": "2026-11-03T02:10:11Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41575772953"
+  },
+  {
+    "id": 41575772991,
+    "sha": "b940768c2a8867c4e72f003166841efb4a5ce2b0",
+    "short_sha": "b940768",
+    "message": "fix: SDL 编辑框固定左上角，修复呼出输入法时画面双倍抬升黑屏\n\n26.3（SDL 路径）呼出输入法偶发大面积黑屏，画面总位移为两倍键盘高。根因是两个推手叠加：JVMActivity 未声明 windowSoftInputMode，SDL 的焦点编辑框 mEdit 按游戏传入的文本输入区域（聊天框，屏幕底部）摆放，被键盘盖住时系统 adjustPan 平推整个窗口，再叠加 JVMActivity 自身的 TextureView 平移。启动器发起呼出且 mEdit 为空时落在 (0,0,1,1) 不触发平推，故表现为偶发。\n\n- SdlImeController：mEdit 固定 1px 钉在左上角，忽略游戏传入的区域矩形（与 GLFW 路径 TouchCharInput 同模式）；requestShow/doShow 去掉坐标参数，删除 makeParams 与 HEIGHT_PADDING\n- SDLActivity.showTextInput：JNI 签名保留区域参数，不再向下传递\n- 文本送达走 SDLInputConnection 通道，不受编辑框位置影响\n\nFixes #1994",
+    "created_at": "2026-11-03T02:10:11Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41575772991"
   },
   {
     "id": 41564963005,
@@ -88,14 +104,6 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41564963030"
   },
   {
-    "id": 41435635125,
-    "sha": "a32fd727d95845d0216f097f012d20e520be6b17",
-    "short_sha": "a32fd72",
-    "message": "fix: 修复版本列表切换版本时的异常动画",
-    "created_at": "2026-11-02T11:16:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41435635125"
-  },
-  {
     "id": 41435635038,
     "sha": "a32fd727d95845d0216f097f012d20e520be6b17",
     "short_sha": "a32fd72",
@@ -104,12 +112,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41435635038"
   },
   {
-    "id": 41431305530,
-    "sha": "5377a427bc20f6f2a5d9119bd107d0391e77bb04",
-    "short_sha": "5377a42",
-    "message": "refactor: LauncherHelper 迁移至 Kotlin，启动任务链改为协程驱动 (#1877)\n\n启动流程由多层 thenComposeAsync 任务链改为单个协程线性执行：版本解析 → mod 扫描 → Java 检查 → 依赖补全 → 解包内置 jar → 登录 → 启动前检查 → 主线程拉起 JVMActivity。\n\n- launch0 拆分为 completeDependencies / unpackBuiltinJars / prepareLaunch / runPreLaunchChecks / startGame\n- fclcore 任务（游戏文件与整合包补全、GameVerificationFixTask）经 runTracked 接入 TaskExecutor，复用弹窗下载进度展示，协程取消与执行器取消双向级联\n- 检查与登录弹窗改为挂起式 awaitChoice / awaitLoginChoice，协程取消时一并关闭停留的弹窗；认证失败可反复重试，重试期间保留微软登录进度\n- 启动弹窗以六阶段任务列表展示，阶段按实际进入顺序打勾，isNotCheckGame 跳过依赖补全时不错位；TaskDialog 新增 setStages / beginStage / succeedStage / failStage 展示模式，TaskListPane 支持在展示模式下接入执行器\n- TaskDialog 换绑执行器或重设阶段列表时摘除旧监听并释放旧列表，避免监听与视图树残留\n- 取消路径加固：启动重入保护、onStop 与弹窗回调 isActive 守卫、执行器先启动再挂取消回调\n- modloader 安装引导改在主线程跳转，跳转失败同样取消启动；checkMod 回退扫描改用当前 profile 与版本\n\n验证：CI 全架构构建与 checkstyle 通过；真机测试 JNA 5.19.1 natives 补齐、SFPEW 层下的旧版 MC、Angelica 跳过渲染器检查。",
-    "created_at": "2026-11-02T10:45:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41431305530"
+    "id": 41435635125,
+    "sha": "a32fd727d95845d0216f097f012d20e520be6b17",
+    "short_sha": "a32fd72",
+    "message": "fix: 修复版本列表切换版本时的异常动画",
+    "created_at": "2026-11-02T11:16:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41435635125"
   },
   {
     "id": 41431305782,
@@ -120,12 +128,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41431305782"
   },
   {
-    "id": 41430235492,
-    "sha": "9aef9fcff7db4fae9c34863689e43053161f779e",
-    "short_sha": "9aef9fc",
-    "message": "refactor: 启动协程复用 mainScope，Java 检查合并为单段主线程执行\n\n- 启动协程改由 mainScope 在 IO 调度器上启动，不再每次新建游离 scope\n\n- checkGameState 两段主线程块合并为一段，setting.java 入口快照一次，选定与检查使用同一值",
-    "created_at": "2026-11-02T10:36:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41430235492"
+    "id": 41431305530,
+    "sha": "5377a427bc20f6f2a5d9119bd107d0391e77bb04",
+    "short_sha": "5377a42",
+    "message": "refactor: LauncherHelper 迁移至 Kotlin，启动任务链改为协程驱动 (#1877)\n\n启动流程由多层 thenComposeAsync 任务链改为单个协程线性执行：版本解析 → mod 扫描 → Java 检查 → 依赖补全 → 解包内置 jar → 登录 → 启动前检查 → 主线程拉起 JVMActivity。\n\n- launch0 拆分为 completeDependencies / unpackBuiltinJars / prepareLaunch / runPreLaunchChecks / startGame\n- fclcore 任务（游戏文件与整合包补全、GameVerificationFixTask）经 runTracked 接入 TaskExecutor，复用弹窗下载进度展示，协程取消与执行器取消双向级联\n- 检查与登录弹窗改为挂起式 awaitChoice / awaitLoginChoice，协程取消时一并关闭停留的弹窗；认证失败可反复重试，重试期间保留微软登录进度\n- 启动弹窗以六阶段任务列表展示，阶段按实际进入顺序打勾，isNotCheckGame 跳过依赖补全时不错位；TaskDialog 新增 setStages / beginStage / succeedStage / failStage 展示模式，TaskListPane 支持在展示模式下接入执行器\n- TaskDialog 换绑执行器或重设阶段列表时摘除旧监听并释放旧列表，避免监听与视图树残留\n- 取消路径加固：启动重入保护、onStop 与弹窗回调 isActive 守卫、执行器先启动再挂取消回调\n- modloader 安装引导改在主线程跳转，跳转失败同样取消启动；checkMod 回退扫描改用当前 profile 与版本\n\n验证：CI 全架构构建与 checkstyle 通过；真机测试 JNA 5.19.1 natives 补齐、SFPEW 层下的旧版 MC、Angelica 跳过渲染器检查。",
+    "created_at": "2026-11-02T10:45:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41431305530"
   },
   {
     "id": 41430235511,
@@ -136,12 +144,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41430235511"
   },
   {
-    "id": 41430228201,
+    "id": 41430235492,
     "sha": "9aef9fcff7db4fae9c34863689e43053161f779e",
     "short_sha": "9aef9fc",
     "message": "refactor: 启动协程复用 mainScope，Java 检查合并为单段主线程执行\n\n- 启动协程改由 mainScope 在 IO 调度器上启动，不再每次新建游离 scope\n\n- checkGameState 两段主线程块合并为一段，setting.java 入口快照一次，选定与检查使用同一值",
     "created_at": "2026-11-02T10:36:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41430228201"
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41430235492"
   },
   {
     "id": 41430228225,
@@ -152,20 +160,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41430228225"
   },
   {
+    "id": 41430228201,
+    "sha": "9aef9fcff7db4fae9c34863689e43053161f779e",
+    "short_sha": "9aef9fc",
+    "message": "refactor: 启动协程复用 mainScope，Java 检查合并为单段主线程执行\n\n- 启动协程改由 mainScope 在 IO 调度器上启动，不再每次新建游离 scope\n\n- checkGameState 两段主线程块合并为一段，setting.java 入口快照一次，选定与检查使用同一值",
+    "created_at": "2026-11-02T10:36:40Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41430228201"
+  },
+  {
     "id": 41379266349,
     "sha": "f1907eb2a1127dcc7ef61477279e8f2bdb011978",
     "short_sha": "f1907eb",
     "message": "Update version_map.json",
     "created_at": "2026-11-02T02:43:43Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41379266349"
-  },
-  {
-    "id": 41378014437,
-    "sha": "794b7469b8fde226f2858371416346773e1cf786",
-    "short_sha": "794b746",
-    "message": "1.3.4.4",
-    "created_at": "2026-11-02T02:29:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41378014437"
   },
   {
     "id": 41378014419,
@@ -176,20 +184,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41378014419"
   },
   {
+    "id": 41378014437,
+    "sha": "794b7469b8fde226f2858371416346773e1cf786",
+    "short_sha": "794b746",
+    "message": "1.3.4.4",
+    "created_at": "2026-11-02T02:29:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41378014437"
+  },
+  {
     "id": 41378014453,
     "sha": "794b7469b8fde226f2858371416346773e1cf786",
     "short_sha": "794b746",
     "message": "1.3.4.4",
     "created_at": "2026-11-02T02:29:15Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41378014453"
-  },
-  {
-    "id": 41312471259,
-    "sha": "4e3def1a37299c751bfa4fa54039ec65b9d4504c",
-    "short_sha": "4e3def1",
-    "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1993)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat 吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做 notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画\n\nFixes #1899",
-    "created_at": "2026-11-01T13:41:22Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312471259"
   },
   {
     "id": 41312471281,
@@ -200,12 +208,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312471281"
   },
   {
-    "id": 41312250569,
-    "sha": "76f070f92e4b363341adb890ec794081ad7ddf3d",
-    "short_sha": "76f070f",
-    "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1899)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑\n发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat\n吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做\n  notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画",
-    "created_at": "2026-11-01T13:38:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312250569"
+    "id": 41312471259,
+    "sha": "4e3def1a37299c751bfa4fa54039ec65b9d4504c",
+    "short_sha": "4e3def1",
+    "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1993)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat 吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做 notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画\n\nFixes #1899",
+    "created_at": "2026-11-01T13:41:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312471259"
   },
   {
     "id": 41312250555,
@@ -216,12 +224,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312250555"
   },
   {
-    "id": 41312230723,
+    "id": 41312250569,
     "sha": "76f070f92e4b363341adb890ec794081ad7ddf3d",
     "short_sha": "76f070f",
     "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1899)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑\n发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat\n吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做\n  notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画",
     "created_at": "2026-11-01T13:38:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312230723"
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312250569"
   },
   {
     "id": 41312230712,
@@ -232,12 +240,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312230712"
   },
   {
-    "id": 41310733939,
-    "sha": "7894be5f2473af9eeffe6f4bbf36f1dbd5860b72",
-    "short_sha": "7894be5",
-    "message": "feat: 内置 MobileGlues 2.0.1 MultiDraw 方案排序配置，enableANGLE 默认值对齐上游\n\n- RendererPlugin 新增 ORDERED 配置类型（方案偏好序）：候选集合与默认序同源覆盖、\n  coerceOrder 规整（剔未知/去重保首见/缺项按默认序补尾）、expandOrder 继承展开\n  （父序伪项 native 替换为本条目真实后端），纯函数置顶层供单测直接钉住\n- multidraw 6 键对齐 MG 2.0.1 上游 settings.cpp：全局 multidrawOrder + 五个函数级\n  异常条目（默认关闭跟随全局；启用时刻快照当前全局序，此后不再跟随）\n- RendererEnvDialog ordered 条目 UI：折叠编号列表 + 上移/下移，函数级开关门控展开\n- FCLauncher.mergeMobileGluesConfig 增补 6 键：函数级显式关闭时摘除 config.json\n  残留键交还全局序，从未配置则不触碰（保留手编 / MG 自管值）\n- enableANGLE 回落默认 1→0：MG 2.0.1 起缺省语义为 DisableIfPossible（settings.cpp），\n  对话框确认全量落盘时不再与上游默认相悖\n- 单测 RendererOrderedSpecTest：规整/展开/集合钉死，期望值与 ZL2 #2165 一致",
-    "created_at": "2026-11-01T13:11:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41310733939"
+    "id": 41312230723,
+    "sha": "76f070f92e4b363341adb890ec794081ad7ddf3d",
+    "short_sha": "76f070f",
+    "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1899)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑\n发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat\n吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做\n  notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画",
+    "created_at": "2026-11-01T13:38:12Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312230723"
   },
   {
     "id": 41310733912,
@@ -246,6 +254,14 @@
     "message": "feat: 内置 MobileGlues 2.0.1 MultiDraw 方案排序配置，enableANGLE 默认值对齐上游\n\n- RendererPlugin 新增 ORDERED 配置类型（方案偏好序）：候选集合与默认序同源覆盖、\n  coerceOrder 规整（剔未知/去重保首见/缺项按默认序补尾）、expandOrder 继承展开\n  （父序伪项 native 替换为本条目真实后端），纯函数置顶层供单测直接钉住\n- multidraw 6 键对齐 MG 2.0.1 上游 settings.cpp：全局 multidrawOrder + 五个函数级\n  异常条目（默认关闭跟随全局；启用时刻快照当前全局序，此后不再跟随）\n- RendererEnvDialog ordered 条目 UI：折叠编号列表 + 上移/下移，函数级开关门控展开\n- FCLauncher.mergeMobileGluesConfig 增补 6 键：函数级显式关闭时摘除 config.json\n  残留键交还全局序，从未配置则不触碰（保留手编 / MG 自管值）\n- enableANGLE 回落默认 1→0：MG 2.0.1 起缺省语义为 DisableIfPossible（settings.cpp），\n  对话框确认全量落盘时不再与上游默认相悖\n- 单测 RendererOrderedSpecTest：规整/展开/集合钉死，期望值与 ZL2 #2165 一致",
     "created_at": "2026-11-01T13:11:53Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41310733912"
+  },
+  {
+    "id": 41310733939,
+    "sha": "7894be5f2473af9eeffe6f4bbf36f1dbd5860b72",
+    "short_sha": "7894be5",
+    "message": "feat: 内置 MobileGlues 2.0.1 MultiDraw 方案排序配置，enableANGLE 默认值对齐上游\n\n- RendererPlugin 新增 ORDERED 配置类型（方案偏好序）：候选集合与默认序同源覆盖、\n  coerceOrder 规整（剔未知/去重保首见/缺项按默认序补尾）、expandOrder 继承展开\n  （父序伪项 native 替换为本条目真实后端），纯函数置顶层供单测直接钉住\n- multidraw 6 键对齐 MG 2.0.1 上游 settings.cpp：全局 multidrawOrder + 五个函数级\n  异常条目（默认关闭跟随全局；启用时刻快照当前全局序，此后不再跟随）\n- RendererEnvDialog ordered 条目 UI：折叠编号列表 + 上移/下移，函数级开关门控展开\n- FCLauncher.mergeMobileGluesConfig 增补 6 键：函数级显式关闭时摘除 config.json\n  残留键交还全局序，从未配置则不触碰（保留手编 / MG 自管值）\n- enableANGLE 回落默认 1→0：MG 2.0.1 起缺省语义为 DisableIfPossible（settings.cpp），\n  对话框确认全量落盘时不再与上游默认相悖\n- 单测 RendererOrderedSpecTest：规整/展开/集合钉死，期望值与 ZL2 #2165 一致",
+    "created_at": "2026-11-01T13:11:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41310733939"
   },
   {
     "id": 41302205053,
@@ -264,20 +280,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41302205050"
   },
   {
-    "id": 41272944692,
-    "sha": "284512e8072818f06ae84b4e14e6ea4507a137fb",
-    "short_sha": "284512e",
-    "message": "feat: 按键编辑撤销/恢复——按组快照两栈历史，入口为左抽屉底部操作区",
-    "created_at": "2026-11-01T04:22:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41272944692"
-  },
-  {
     "id": 41272944688,
     "sha": "284512e8072818f06ae84b4e14e6ea4507a137fb",
     "short_sha": "284512e",
     "message": "feat: 按键编辑撤销/恢复——按组快照两栈历史，入口为左抽屉底部操作区",
     "created_at": "2026-11-01T04:22:58Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41272944688"
+  },
+  {
+    "id": 41272944692,
+    "sha": "284512e8072818f06ae84b4e14e6ea4507a137fb",
+    "short_sha": "284512e",
+    "message": "feat: 按键编辑撤销/恢复——按组快照两栈历史，入口为左抽屉底部操作区",
+    "created_at": "2026-11-01T04:22:58Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41272944692"
   },
   {
     "id": 41272889130,
@@ -312,14 +328,6 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41265010387"
   },
   {
-    "id": 41263808769,
-    "sha": "d2ac04ec33f3e88a4f828500a6e2888b37deb7d3",
-    "short_sha": "d2ac04e",
-    "message": "feat: 整合包补全自动恢复前弹窗确认，支持对话框内直接关闭补全\n\n整合包版本每次启动都会执行补全任务，清单内缺失的文件（含被用户\n主动删除/更新的模组）会被静默装回，无任何提示。\n\n启动补全前先本地探测将被恢复的缺失文件，非空则弹窗列出，用户可选：\n- 继续补全：照常恢复\n- 跳过本次：本次不补全，下次启动再询问\n- 不再自动补全：持久化到版本设置（版本设置中可随时改回）\n\n探测按 Provider 类型分派并用具体 TypeToken 重读清单（规避\nModpackConfiguration<?> 通配反序列化得到 LinkedTreeMap 的坑），\n清单源与各补全任务对齐（curse 读版本根目录 manifest.json、\nmodrinth 读 modrinth.index.json、mcbbs/server 读 modpack.cfg），\n任何异常兜底返回空表，绝不阻断启动。",
-    "created_at": "2026-11-01T02:06:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41263808769"
-  },
-  {
     "id": 41263808785,
     "sha": "d2ac04ec33f3e88a4f828500a6e2888b37deb7d3",
     "short_sha": "d2ac04e",
@@ -328,12 +336,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41263808785"
   },
   {
-    "id": 41263794355,
+    "id": 41263808769,
     "sha": "d2ac04ec33f3e88a4f828500a6e2888b37deb7d3",
     "short_sha": "d2ac04e",
     "message": "feat: 整合包补全自动恢复前弹窗确认，支持对话框内直接关闭补全\n\n整合包版本每次启动都会执行补全任务，清单内缺失的文件（含被用户\n主动删除/更新的模组）会被静默装回，无任何提示。\n\n启动补全前先本地探测将被恢复的缺失文件，非空则弹窗列出，用户可选：\n- 继续补全：照常恢复\n- 跳过本次：本次不补全，下次启动再询问\n- 不再自动补全：持久化到版本设置（版本设置中可随时改回）\n\n探测按 Provider 类型分派并用具体 TypeToken 重读清单（规避\nModpackConfiguration<?> 通配反序列化得到 LinkedTreeMap 的坑），\n清单源与各补全任务对齐（curse 读版本根目录 manifest.json、\nmodrinth 读 modrinth.index.json、mcbbs/server 读 modpack.cfg），\n任何异常兜底返回空表，绝不阻断启动。",
     "created_at": "2026-11-01T02:06:13Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41263794355"
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41263808769"
   },
   {
     "id": 41263794364,
@@ -344,12 +352,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41263794364"
   },
   {
-    "id": 41213177481,
-    "sha": "57f34de5f83848a862d185404bd6aa54a007612c",
-    "short_sha": "57f34de",
-    "message": "feat: 安装器进程常驻复用——多阶段同 JVM 直跑，零进程冷启\n\n- ProcessService(:jvm) 不再每阶段自杀换进程：服务常驻，各阶段在单线程执行器\n  串行运行，退出码/启动标记文件协议不变；阶段结束 60s 空闲自停，取消与超时\n  路径（主进程侧）不变；JRE 版本变化立即回收进程（常驻 JVM 字节码能力固定）\n- HotSpot DestroyJavaVM+二次 CreateJavaVM 的重建路径存在并发调度残留问题\n  （Forge patch processor 卡死 JVM_MonitorWait，JLI 基线对照实测定位），故\n  launchJVM 成功后 JVM 常驻不销毁，后续阶段经 runMainInExistingVM 以独立\n  URLClassLoader 直接 invoke 本阶段 main（classpath 按 ':' 拆 file:// URL）；\n  System.exit 仍走 exit hook 进程终止，与旧行为一致\n- MuMu 实测：Forge 1.21.1-52.1.20 安装成功（FART 重混淆/binary patch 全部\n  processor 同一进程同一 JVM 跑完，零进程冷启）\n- redirectStdio 幂等化：管道按轮隔离传参给 logger 线程、EOF 退出防自旋、\n  下一轮以唤醒字节+关旧读端回收旧 logger（原全局 fclFd 二次重定向被覆写，\n  多轮 JVM 场景两线程同读一条管道交错分发）",
-    "created_at": "2026-10-31T15:03:04Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41213177481"
+    "id": 41263794355,
+    "sha": "d2ac04ec33f3e88a4f828500a6e2888b37deb7d3",
+    "short_sha": "d2ac04e",
+    "message": "feat: 整合包补全自动恢复前弹窗确认，支持对话框内直接关闭补全\n\n整合包版本每次启动都会执行补全任务，清单内缺失的文件（含被用户\n主动删除/更新的模组）会被静默装回，无任何提示。\n\n启动补全前先本地探测将被恢复的缺失文件，非空则弹窗列出，用户可选：\n- 继续补全：照常恢复\n- 跳过本次：本次不补全，下次启动再询问\n- 不再自动补全：持久化到版本设置（版本设置中可随时改回）\n\n探测按 Provider 类型分派并用具体 TypeToken 重读清单（规避\nModpackConfiguration<?> 通配反序列化得到 LinkedTreeMap 的坑），\n清单源与各补全任务对齐（curse 读版本根目录 manifest.json、\nmodrinth 读 modrinth.index.json、mcbbs/server 读 modpack.cfg），\n任何异常兜底返回空表，绝不阻断启动。",
+    "created_at": "2026-11-01T02:06:13Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41263794355"
   },
   {
     "id": 41213177598,
@@ -360,12 +368,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41213177598"
   },
   {
-    "id": 41213002035,
+    "id": 41213177481,
     "sha": "57f34de5f83848a862d185404bd6aa54a007612c",
     "short_sha": "57f34de",
     "message": "feat: 安装器进程常驻复用——多阶段同 JVM 直跑，零进程冷启\n\n- ProcessService(:jvm) 不再每阶段自杀换进程：服务常驻，各阶段在单线程执行器\n  串行运行，退出码/启动标记文件协议不变；阶段结束 60s 空闲自停，取消与超时\n  路径（主进程侧）不变；JRE 版本变化立即回收进程（常驻 JVM 字节码能力固定）\n- HotSpot DestroyJavaVM+二次 CreateJavaVM 的重建路径存在并发调度残留问题\n  （Forge patch processor 卡死 JVM_MonitorWait，JLI 基线对照实测定位），故\n  launchJVM 成功后 JVM 常驻不销毁，后续阶段经 runMainInExistingVM 以独立\n  URLClassLoader 直接 invoke 本阶段 main（classpath 按 ':' 拆 file:// URL）；\n  System.exit 仍走 exit hook 进程终止，与旧行为一致\n- MuMu 实测：Forge 1.21.1-52.1.20 安装成功（FART 重混淆/binary patch 全部\n  processor 同一进程同一 JVM 跑完，零进程冷启）\n- redirectStdio 幂等化：管道按轮隔离传参给 logger 线程、EOF 退出防自旋、\n  下一轮以唤醒字节+关旧读端回收旧 logger（原全局 fclFd 二次重定向被覆写，\n  多轮 JVM 场景两线程同读一条管道交错分发）",
     "created_at": "2026-10-31T15:03:04Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41213002035"
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41213177481"
   },
   {
     "id": 41213002123,
@@ -376,27 +384,19 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41213002123"
   },
   {
+    "id": 41213002035,
+    "sha": "57f34de5f83848a862d185404bd6aa54a007612c",
+    "short_sha": "57f34de",
+    "message": "feat: 安装器进程常驻复用——多阶段同 JVM 直跑，零进程冷启\n\n- ProcessService(:jvm) 不再每阶段自杀换进程：服务常驻，各阶段在单线程执行器\n  串行运行，退出码/启动标记文件协议不变；阶段结束 60s 空闲自停，取消与超时\n  路径（主进程侧）不变；JRE 版本变化立即回收进程（常驻 JVM 字节码能力固定）\n- HotSpot DestroyJavaVM+二次 CreateJavaVM 的重建路径存在并发调度残留问题\n  （Forge patch processor 卡死 JVM_MonitorWait，JLI 基线对照实测定位），故\n  launchJVM 成功后 JVM 常驻不销毁，后续阶段经 runMainInExistingVM 以独立\n  URLClassLoader 直接 invoke 本阶段 main（classpath 按 ':' 拆 file:// URL）；\n  System.exit 仍走 exit hook 进程终止，与旧行为一致\n- MuMu 实测：Forge 1.21.1-52.1.20 安装成功（FART 重混淆/binary patch 全部\n  processor 同一进程同一 JVM 跑完，零进程冷启）\n- redirectStdio 幂等化：管道按轮隔离传参给 logger 线程、EOF 退出防自旋、\n  下一轮以唤醒字节+关旧读端回收旧 logger（原全局 fclFd 二次重定向被覆写，\n  多轮 JVM 场景两线程同读一条管道交错分发）",
+    "created_at": "2026-10-31T15:03:04Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41213002035"
+  },
+  {
     "id": 41212652250,
     "sha": "d6728acf76f998d276a9b0012fe2bfd7824cbd71",
     "short_sha": "d6728ac",
     "message": "refactor: 直启拆分抽取为 LaunchArgumentsParser 并对齐 java launcher 语义\n\n- 拆分逻辑纯函数化（无 Android 依赖），15 个 JUnit 用例以真机抓包形状做金样例\n  （1.12.2-LF 游戏 cacio 群、NeoForge 26.3 ConsoleTool、Forge FART/binarypatch）\n- 忠实化 java 语义：--class-path=/--module-path= 等号形式；-p/--module-path 与\n  --upgrade-module-path 以 --module-path= 等 VM 选项原样传递（-Djdk.module.path\n  属性形式模块系统不读，实测 Forge 1.20.1 bootstrap 炸 IMPL_LOOKUP opens）；\n  -m/--module 模块模式、launcher 自用命令（-version/--list-modules 等）与\n  @argfile 显式拒绝；主类后 token 停止解析（游戏参数含 '-' 开头项安全透传）\n- launchJVM 增加逐条 VM arg 日志，便于设备侧对照\n- 设备矩阵：1.12.2-LF/26.2-Fabric 完整启动+退出；1.20.1-Forge 模块链修复后\n  bootstrap 全通；1.20.1/26.3-NeoForge 启动链路通（挂设备数据缺失）；\n  天境/1.21.1 解析正常（挂 MuMu 预存渲染崩，与启动层无关）",
     "created_at": "2026-10-31T14:59:12Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41212652250"
-  },
-  {
-    "id": 41212652252,
-    "sha": "d6728acf76f998d276a9b0012fe2bfd7824cbd71",
-    "short_sha": "d6728ac",
-    "message": "refactor: 直启拆分抽取为 LaunchArgumentsParser 并对齐 java launcher 语义\n\n- 拆分逻辑纯函数化（无 Android 依赖），15 个 JUnit 用例以真机抓包形状做金样例\n  （1.12.2-LF 游戏 cacio 群、NeoForge 26.3 ConsoleTool、Forge FART/binarypatch）\n- 忠实化 java 语义：--class-path=/--module-path= 等号形式；-p/--module-path 与\n  --upgrade-module-path 以 --module-path= 等 VM 选项原样传递（-Djdk.module.path\n  属性形式模块系统不读，实测 Forge 1.20.1 bootstrap 炸 IMPL_LOOKUP opens）；\n  -m/--module 模块模式、launcher 自用命令（-version/--list-modules 等）与\n  @argfile 显式拒绝；主类后 token 停止解析（游戏参数含 '-' 开头项安全透传）\n- launchJVM 增加逐条 VM arg 日志，便于设备侧对照\n- 设备矩阵：1.12.2-LF/26.2-Fabric 完整启动+退出；1.20.1-Forge 模块链修复后\n  bootstrap 全通；1.20.1/26.3-NeoForge 启动链路通（挂设备数据缺失）；\n  天境/1.21.1 解析正常（挂 MuMu 预存渲染崩，与启动层无关）",
-    "created_at": "2026-10-31T14:59:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41212652252"
-  },
-  {
-    "id": 41209281574,
-    "sha": "66f89a69d0231f5e927c1433ded6713bc22056c5",
-    "short_sha": "66f89a6",
-    "message": "fix: 直启拆分合并分离形式模块选项并展开 -jar 语义\n\n- 带值 JVM 选项（--add-opens/--add-exports/--add-modules/-p 等）合并为等号\n  形式：JNI_CreateJavaVM 逐条解析 JavaVMOption，分离的「选项 + 值」是两条互不\n  相干的 option（未识别项被静默忽略），Forge 1.17+ bootstrap 必需的模块选项会\n  全部失效；补上清单中缺失的 -p（其值此前会被误判为主类）并改名为\n  --module-path（JVM 侧不认 launcher 短名）\n- -jar 语义展开：jar 即 classpath（应用类加载器自行展开 manifest 的\n  Class-Path），主类取 manifest 的 Main-Class，修复 Jar Executor 链路直启失败\n- exit_info_code 改 _Atomic 消除 hook/waiter 跨线程数据竞争；mainClass 点分\n  转换改 strdup 动态分配，去掉 128 字节静默截断上限；补 ignoreUnrecognized\n  行为变化说明与文件头参考来源",
-    "created_at": "2026-10-31T14:15:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41209281574"
   }
 ]
