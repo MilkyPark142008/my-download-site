@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 168391097,
         "digest": "sha256:8c6b438ea2a3319adaf673d639adfb779dfb15d694d940814cd1c6b099d323a2",
-        "download_count": 21649,
+        "download_count": 21684,
         "created_at": "2026-07-31T02:59:21Z",
         "updated_at": "2026-07-31T03:03:42Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.7/Amethyst-Debug.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 156535672,
         "digest": "sha256:6b5579e93f50a62f4d96279683bb447325e5a4de9015deae787eee56c248211f",
-        "download_count": 88103,
+        "download_count": 88301,
         "created_at": "2026-07-31T02:59:28Z",
         "updated_at": "2026-07-31T03:03:42Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.7/Amethyst.apk"
@@ -128,72 +128,25 @@
   },
   "action": {
     "run": {
-      "id": 40359022785,
+      "id": 41899609094,
       "name": "Android CI",
-      "node_id": "WFR_kwLOOrUn6c8AAAAJZZXQwQ",
-      "head_branch": "v3_openjdk",
-      "head_sha": "28d6e12d68121b7dd75f2e841058a6b7cdfe4a29",
+      "node_id": "WFR_kwLOOrUn6c8AAAAJwWlMBg",
+      "head_branch": "feat/mobilegl",
+      "head_sha": "dd48d00f4924e4dcd36b894fdba3a9c94c4f5f56",
       "path": ".github/workflows/android.yml",
-      "display_title": "Fix gamepad relative mouse motion for captured SDL input",
-      "run_number": 1024,
+      "display_title": "bump: mobilegl",
+      "run_number": 1025,
       "event": "push",
       "status": "completed",
       "conclusion": "success",
       "workflow_id": 162757109,
-      "check_suite_id": 109386747154,
-      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAZd_VNEg",
-      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/40359022785",
-      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/40359022785",
-      "pull_requests": [
-        {
-          "url": "https://api.github.com/repos/CopperLauncher/Copper-AAMC/pulls/133",
-          "id": 4461331187,
-          "number": 133,
-          "head": {
-            "ref": "v3_openjdk",
-            "sha": "28d6e12d68121b7dd75f2e841058a6b7cdfe4a29",
-            "repo": {
-              "id": 984950761,
-              "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
-              "name": "Amethyst-Android"
-            }
-          },
-          "base": {
-            "ref": "v3_openjdk",
-            "sha": "a87ac8325c6b7a89a44752d44cceebc00b1f602e",
-            "repo": {
-              "id": 1157827415,
-              "url": "https://api.github.com/repos/CopperLauncher/Copper-AAMC",
-              "name": "Copper-AAMC"
-            }
-          }
-        },
-        {
-          "url": "https://api.github.com/repos/Lapis-ORG/Lapis-Android/pulls/2",
-          "id": 3992538538,
-          "number": 2,
-          "head": {
-            "ref": "v3_openjdk",
-            "sha": "28d6e12d68121b7dd75f2e841058a6b7cdfe4a29",
-            "repo": {
-              "id": 984950761,
-              "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
-              "name": "Amethyst-Android"
-            }
-          },
-          "base": {
-            "ref": "v3_openjdk",
-            "sha": "d1df879a316be61b5c2ef7c867d898b0fb83abba",
-            "repo": {
-              "id": 1230029877,
-              "url": "https://api.github.com/repos/Lapis-ORG/Lapis-Android",
-              "name": "Lapis-Android"
-            }
-          }
-        }
-      ],
-      "created_at": "2026-10-26T16:25:45Z",
-      "updated_at": "2026-10-26T16:30:12Z",
+      "check_suite_id": 113540482495,
+      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAab4pFvw",
+      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/41899609094",
+      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/41899609094",
+      "pull_requests": [],
+      "created_at": "2026-11-04T19:42:58Z",
+      "updated_at": "2026-11-04T20:14:51Z",
       "actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -217,7 +170,7 @@
       },
       "run_attempt": 1,
       "referenced_workflows": [],
-      "run_started_at": "2026-10-26T16:25:45Z",
+      "run_started_at": "2026-11-04T19:42:58Z",
       "triggering_actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -239,22 +192,22 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/40359022785/jobs",
-      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/40359022785/logs",
-      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/109386747154",
-      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/40359022785/artifacts",
-      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/40359022785/cancel",
-      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/40359022785/rerun",
+      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/41899609094/jobs",
+      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/41899609094/logs",
+      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/113540482495",
+      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/41899609094/artifacts",
+      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/41899609094/cancel",
+      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/41899609094/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/workflows/162757109",
       "head_commit": {
-        "id": "28d6e12d68121b7dd75f2e841058a6b7cdfe4a29",
-        "tree_id": "397cda9072ecdfe331c8f56a4c1d7725d05a0880",
-        "message": "Fix gamepad relative mouse motion for captured SDL input\n\nPublish final per-tick X and inverted Y deltas before cursor dispatch, matching position changes and the touchscreen/physical-mouse convention. Assign both components on every movement event so SDL does not reuse stale input. Preserve existing scaling, joystick choice and menu clamping.\n\nCherry-picked change from Russianranger/amethyst_cursorfix commit 4ca84b97c41a4bf7f1c534c933958c536ebfaa94. The debug APK containing this change built successfully, and the reporter confirmed the GTNH 2.9 right-stick fix on AYN Thor (Android 13, ARM64).",
-        "timestamp": "2026-10-26T16:25:41Z",
+        "id": "dd48d00f4924e4dcd36b894fdba3a9c94c4f5f56",
+        "tree_id": "c42c4b85de641efec0910cea86bf280dd074fab2",
+        "message": "bump: mobilegl",
+        "timestamp": "2026-11-04T19:42:34Z",
         "author": {
-          "name": "Russianranger",
-          "email": "96875906+Russianranger@users.noreply.github.com"
+          "name": "tomikun",
+          "email": "60690056+alexytomi@users.noreply.github.com"
         },
         "committer": {
           "name": "tomikun",
@@ -400,43 +353,43 @@
     },
     "artifacts": [
       {
-        "id": 12666893511,
-        "node_id": "MDg6QXJ0aWZhY3QxMjY2Njg5MzUxMQ==",
-        "name": "app-release",
-        "size_in_bytes": 154664752,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/12666893511",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/12666893511/zip",
+        "id": 13360270129,
+        "node_id": "MDg6QXJ0aWZhY3QxMzM2MDI3MDEyOQ==",
+        "name": "app-debug (recommended)",
+        "size_in_bytes": 174245842,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/13360270129",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/13360270129/zip",
         "expired": false,
-        "digest": "sha256:5bbd3f55a441772b389ee87e43783f72c8e2bb59cb6f5624e2060b4beecf278a",
-        "created_at": "2026-10-26T16:29:46Z",
-        "updated_at": "2026-10-26T16:29:46Z",
-        "expires_at": "2027-01-24T16:25:45Z",
+        "digest": "sha256:41ec1d8ee677b3a84e89e365411c685c4b55633efe05db6a1fa1e7ca978a2ebb",
+        "created_at": "2026-11-04T20:14:40Z",
+        "updated_at": "2026-11-04T20:14:40Z",
+        "expires_at": "2027-02-02T19:42:59Z",
         "workflow_run": {
-          "id": 40359022785,
+          "id": 41899609094,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
-          "head_branch": "v3_openjdk",
-          "head_sha": "28d6e12d68121b7dd75f2e841058a6b7cdfe4a29"
+          "head_branch": "feat/mobilegl",
+          "head_sha": "dd48d00f4924e4dcd36b894fdba3a9c94c4f5f56"
         }
       },
       {
-        "id": 12666334524,
-        "node_id": "MDg6QXJ0aWZhY3QxMjY2NjMzNDUyNA==",
-        "name": "app-debug (recommended)",
-        "size_in_bytes": 166243451,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/12666334524",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/12666334524/zip",
+        "id": 13358374665,
+        "node_id": "MDg6QXJ0aWZhY3QxMzM1ODM3NDY2NQ==",
+        "name": "app-release",
+        "size_in_bytes": 161305588,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/13358374665",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/13358374665/zip",
         "expired": false,
-        "digest": "sha256:b5895da9598e6d67eaa6222098c0b614b4f9e228d2b52cc970087c1bf0ceee73",
-        "created_at": "2026-10-26T16:29:41Z",
-        "updated_at": "2026-10-26T16:29:41Z",
-        "expires_at": "2027-01-24T16:25:45Z",
+        "digest": "sha256:1b5ca36e7b90c88d754407e64e49f590a786e3cbdd1a1b908b2ab0cf66e22cb9",
+        "created_at": "2026-11-04T20:14:46Z",
+        "updated_at": "2026-11-04T20:14:46Z",
+        "expires_at": "2027-02-02T19:42:59Z",
         "workflow_run": {
-          "id": 40359022785,
+          "id": 41899609094,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
-          "head_branch": "v3_openjdk",
-          "head_sha": "28d6e12d68121b7dd75f2e841058a6b7cdfe4a29"
+          "head_branch": "feat/mobilegl",
+          "head_sha": "dd48d00f4924e4dcd36b894fdba3a9c94c4f5f56"
         }
       }
     ]
