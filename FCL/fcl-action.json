@@ -1,20 +1,20 @@
 {"run": {
-  "id": 41761562056,
+  "id": 41971937619,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAJuS7dyA",
+  "node_id": "WFR_kwLOIQeFGs8AAAAJxbjxUw",
   "head_branch": "main",
-  "head_sha": "eafbb81845141711e076b93bb7dbda5c5c15d912",
+  "head_sha": "b810127701cc826e0e4277da2bd59e1b3f2fffbd",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "feat: 整合包补全自动恢复前弹窗确认，支持对话框内直接关闭补全 (#1990)",
-  "run_number": 416,
+  "display_title": "feat: 文件下载并行续传——多连接分块突破按连接限速的慢速源 (#1960)",
+  "run_number": 420,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 113164940366,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAaWSf0Tg",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41761562056",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41761562056",
+  "check_suite_id": 113732489984,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAaevwTAA",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41971937619",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41971937619",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
@@ -22,7 +22,7 @@
       "number": 364,
       "head": {
         "ref": "main",
-        "sha": "eafbb81845141711e076b93bb7dbda5c5c15d912",
+        "sha": "b810127701cc826e0e4277da2bd59e1b3f2fffbd",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -45,7 +45,7 @@
       "number": 37,
       "head": {
         "ref": "main",
-        "sha": "eafbb81845141711e076b93bb7dbda5c5c15d912",
+        "sha": "b810127701cc826e0e4277da2bd59e1b3f2fffbd",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -68,7 +68,7 @@
       "number": 400,
       "head": {
         "ref": "main",
-        "sha": "eafbb81845141711e076b93bb7dbda5c5c15d912",
+        "sha": "b810127701cc826e0e4277da2bd59e1b3f2fffbd",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -86,8 +86,8 @@
       }
     }
   ],
-  "created_at": "2026-11-04T02:33:50Z",
-  "updated_at": "2026-11-04T02:35:18Z",
+  "created_at": "2026-11-05T05:06:57Z",
+  "updated_at": "2026-11-05T05:08:18Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-11-04T02:33:50Z",
+  "run_started_at": "2026-11-05T05:06:57Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,19 +133,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41761562056/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41761562056/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/113164940366",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41761562056/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41761562056/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41761562056/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41971937619/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41971937619/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/113732489984",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41971937619/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41971937619/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41971937619/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "eafbb81845141711e076b93bb7dbda5c5c15d912",
-    "tree_id": "fcdb11665692bf49476922398e8bc0b7a8661848",
-    "message": "feat: 整合包补全自动恢复前弹窗确认，支持对话框内直接关闭补全 (#1990)\n\n* feat: 整合包补全自动恢复前弹窗确认，支持对话框内直接关闭补全\n\n整合包版本每次启动都会执行补全任务，清单内缺失的文件（含被用户\n主动删除/更新的模组）会被静默装回，无任何提示。\n\n启动补全前先本地探测将被恢复的缺失文件，非空则弹窗列出，用户可选：\n- 继续补全：照常恢复\n- 跳过本次：本次不补全，下次启动再询问\n- 不再自动补全：持久化到版本设置（版本设置中可随时改回）\n\n探测按 Provider 类型分派并用具体 TypeToken 重读清单（规避\nModpackConfiguration<?> 通配反序列化得到 LinkedTreeMap 的坑），\n清单源与各补全任务对齐（curse 读版本根目录 manifest.json、\nmodrinth 读 modrinth.index.json、mcbbs/server 读 modpack.cfg），\n任何异常兜底返回空表，绝不阻断启动。\n\n* fix: 弹窗确认移植协程版启动流程，探测口径与补全任务对齐\n\n- LauncherHelper 协程化后整合包补全确认改在 completeDependencies 内以 awaitChoice 挂起式三选弹窗实现（跳过本次/继续补全/不再自动补全），协程取消自动收起弹窗\n- Server 探测补齐 fileApi 空判断：为空时补全任务空转，不弹窗\n- Curse/Modrinth 清单缺失时不再回退 modpack.cfg（补全任务此时同样空转），避免弹窗承诺不会发生的补全\n- Curse 资源包/光影包根目录改用与补全任务一致的版本根目录表达式\n- javadoc 注明 Mcbbs/Server 远端清单更新行为不在探测范围",
-    "timestamp": "2026-11-04T02:33:47Z",
+    "id": "b810127701cc826e0e4277da2bd59e1b3f2fffbd",
+    "tree_id": "7f2fa96981043b474980d1dc3c9216403d4881c7",
+    "message": "feat: 文件下载并行续传——多连接分块突破按连接限速的慢速源 (#1960)\n\n* feat: 文件下载并行续传——单连接持续低速时切换多连接分块拉取剩余区间，突破网盘直链按连接数限速（修复 Cleanroom alist 镜像 50KB/s 下载缓慢）\n\n- FetchTask 单流读循环加 downloadParallelRemainder 钩子：复用 BMCLAPIRetryPolicy 同款 10s 速度窗口，持续低于 128KB/s 且剩余量按当前速度还需超一个窗口时触发；触发前零额外请求，快服务器不受影响\n- FileDownloadTask 实现：1 字节 Range 探测（206+总大小核对，不支持则回退单流）→ 剩余区间按 ≥2MB/块均分最多 8 连接 → 按绝对偏移 FileChannel 写同一临时文件保留前缀 → 复用 Context.close() 原有落盘/ZIP 校验/缓存流程\n- 分块读超时放宽到 30s 且在 resolveConnection 之后设置：按连接限速的服务器数据间歇性滴流，常规 10s 会反复掐死正常工作的分块连接\n- 分块失败按轮次统一重试（retry 轮+轮间退避），续传请求从已写偏移发 Range 只补未完成区间；全局进度=前缀+Σ(分块已写偏移) 严格单调，修复分块重试重复计字节把进度顶破 100% 导致整轮报废、进度条反复跑满清零的问题\n- BMCLAPI 链路原慢速节点切换优先级不变；GetTask 不受影响\n- 新增 androidTest FileDownloadTaskTest：Content-Range 解析单测 + 真实限速链路端到端（MuMu 实测 145s/191s vs 单连接 ≥300s 下限，含 round-2 真实续传路径与进度单调性断言）\n\n* fix: 并行续传完成后按最终文件重算校验摘要，修复带校验下载触发并行后必失败\n\n- digest/bmclapiDigest 字段化：分块写入不经过 Context.write，完成时对临时文件整体重建摘要，否则带 IntegrityCheck 或 BMCLAPI 兜底哈希的下载触发并行后校验必失败\n- 修正并行续传与慢速节点切换的优先级注释：BMCLAPI 链路同命中时仍优先换节点，仅末次尝试由并行接管\n- downloadedBytes 加 volatile（并行续传阶段由分块线程并发写）\n- 新增本地可控服务器（单流限速、分块全速）带 SHA-1 校验的并行续传回归用例，未修复状态实测必红；外网用例标注对镜像限速行为的依赖；清理测试内全限定名",
+    "timestamp": "2026-11-05T05:06:54Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
