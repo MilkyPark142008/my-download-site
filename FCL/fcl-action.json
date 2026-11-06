@@ -1,28 +1,28 @@
 {"run": {
-  "id": 41971937619,
+  "id": 42144949130,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAJxbjxUw",
-  "head_branch": "main",
-  "head_sha": "b810127701cc826e0e4277da2bd59e1b3f2fffbd",
+  "node_id": "WFR_kwLOIQeFGs8AAAAJ0Ajjig",
+  "head_branch": "feat/per-version-renderer-override",
+  "head_sha": "27dac3af210f56f4d87f130327697c1f608f4390",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "feat: 文件下载并行续传——多连接分块突破按连接限速的慢速源 (#1960)",
-  "run_number": 420,
-  "event": "push",
+  "display_title": "feat: 每版本渲染器覆盖——多版本切换免频繁改渲染器",
+  "run_number": 422,
+  "event": "pull_request",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 113732489984,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAaevwTAA",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41971937619",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41971937619",
+  "check_suite_id": 114199553633,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAaltLmYQ",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42144949130",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42144949130",
   "pull_requests": [
     {
-      "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
-      "id": 4452442002,
-      "number": 364,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/pulls/1975",
+      "id": 5048275604,
+      "number": 1975,
       "head": {
-        "ref": "main",
-        "sha": "b810127701cc826e0e4277da2bd59e1b3f2fffbd",
+        "ref": "feat/per-version-renderer-override",
+        "sha": "27dac3af210f56f4d87f130327697c1f608f4390",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -31,63 +31,17 @@
       },
       "base": {
         "ref": "main",
-        "sha": "97dc0f6c4a5f5fada8b86aa68e1e9d4b189d1b25",
-        "repo": {
-          "id": 1026321990,
-          "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      }
-    },
-    {
-      "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher/pulls/37",
-      "id": 4452270030,
-      "number": 37,
-      "head": {
-        "ref": "main",
-        "sha": "b810127701cc826e0e4277da2bd59e1b3f2fffbd",
+        "sha": "bb6cc9881798787eeab1eaf0fe2e390fe15dd361",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
-        "repo": {
-          "id": 1335592322,
-          "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      }
-    },
-    {
-      "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher/pulls/400",
-      "id": 4451484148,
-      "number": 400,
-      "head": {
-        "ref": "main",
-        "sha": "b810127701cc826e0e4277da2bd59e1b3f2fffbd",
-        "repo": {
-          "id": 554140954,
-          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
-        "repo": {
-          "id": 835628097,
-          "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher",
           "name": "FoldCraftLauncher"
         }
       }
     }
   ],
-  "created_at": "2026-11-05T05:06:57Z",
-  "updated_at": "2026-11-05T05:08:18Z",
+  "created_at": "2026-11-06T01:36:22Z",
+  "updated_at": "2026-11-06T01:37:46Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +65,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-11-05T05:06:57Z",
+  "run_started_at": "2026-11-06T01:36:22Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,26 +87,26 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41971937619/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41971937619/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/113732489984",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41971937619/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41971937619/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/41971937619/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42144949130/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42144949130/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/114199553633",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42144949130/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42144949130/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42144949130/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "b810127701cc826e0e4277da2bd59e1b3f2fffbd",
-    "tree_id": "7f2fa96981043b474980d1dc3c9216403d4881c7",
-    "message": "feat: 文件下载并行续传——多连接分块突破按连接限速的慢速源 (#1960)\n\n* feat: 文件下载并行续传——单连接持续低速时切换多连接分块拉取剩余区间，突破网盘直链按连接数限速（修复 Cleanroom alist 镜像 50KB/s 下载缓慢）\n\n- FetchTask 单流读循环加 downloadParallelRemainder 钩子：复用 BMCLAPIRetryPolicy 同款 10s 速度窗口，持续低于 128KB/s 且剩余量按当前速度还需超一个窗口时触发；触发前零额外请求，快服务器不受影响\n- FileDownloadTask 实现：1 字节 Range 探测（206+总大小核对，不支持则回退单流）→ 剩余区间按 ≥2MB/块均分最多 8 连接 → 按绝对偏移 FileChannel 写同一临时文件保留前缀 → 复用 Context.close() 原有落盘/ZIP 校验/缓存流程\n- 分块读超时放宽到 30s 且在 resolveConnection 之后设置：按连接限速的服务器数据间歇性滴流，常规 10s 会反复掐死正常工作的分块连接\n- 分块失败按轮次统一重试（retry 轮+轮间退避），续传请求从已写偏移发 Range 只补未完成区间；全局进度=前缀+Σ(分块已写偏移) 严格单调，修复分块重试重复计字节把进度顶破 100% 导致整轮报废、进度条反复跑满清零的问题\n- BMCLAPI 链路原慢速节点切换优先级不变；GetTask 不受影响\n- 新增 androidTest FileDownloadTaskTest：Content-Range 解析单测 + 真实限速链路端到端（MuMu 实测 145s/191s vs 单连接 ≥300s 下限，含 round-2 真实续传路径与进度单调性断言）\n\n* fix: 并行续传完成后按最终文件重算校验摘要，修复带校验下载触发并行后必失败\n\n- digest/bmclapiDigest 字段化：分块写入不经过 Context.write，完成时对临时文件整体重建摘要，否则带 IntegrityCheck 或 BMCLAPI 兜底哈希的下载触发并行后校验必失败\n- 修正并行续传与慢速节点切换的优先级注释：BMCLAPI 链路同命中时仍优先换节点，仅末次尝试由并行接管\n- downloadedBytes 加 volatile（并行续传阶段由分块线程并发写）\n- 新增本地可控服务器（单流限速、分块全速）带 SHA-1 校验的并行续传回归用例，未修复状态实测必红；外网用例标注对镜像限速行为的依赖；清理测试内全限定名",
-    "timestamp": "2026-11-05T05:06:54Z",
+    "id": "27dac3af210f56f4d87f130327697c1f608f4390",
+    "tree_id": "a6e427a829753f4912bc372a1be9ecbaacb4e222",
+    "message": "fix: 渲染器覆盖指向已卸载/禁用的渲染器时视同无覆盖，长按启动取消时回滚写入\n\n- 新增 RendererManager.findRenderer（查找不兜底）与 Profile.getEffectiveRendererOverride，\n  启动解析、三处遮蔽检测统一改用有效覆盖判定，失效覆盖不再落入 NGGL4ES 兜底\n- 渲染器覆盖对话框打开时顺手清除失效覆盖并落盘，配置与界面、启动行为保持一致\n- MainActivity 长按启动被遮蔽提示打断后选取消时，回滚本次写入版本设置的渲染器，\n  避免放弃启动仍残留修改",
+    "timestamp": "2026-11-06T01:36:03Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
     },
     "committer": {
-      "name": "GitHub",
-      "email": "noreply@github.com"
+      "name": "ShirosakiMio",
+      "email": "852468399@qq.com"
     }
   },
   "repository": {

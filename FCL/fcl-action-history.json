@@ -1,5 +1,37 @@
 [
   {
+    "id": 42144949130,
+    "sha": "27dac3af210f56f4d87f130327697c1f608f4390",
+    "short_sha": "27dac3a",
+    "message": "fix: 渲染器覆盖指向已卸载/禁用的渲染器时视同无覆盖，长按启动取消时回滚写入\n\n- 新增 RendererManager.findRenderer（查找不兜底）与 Profile.getEffectiveRendererOverride，\n  启动解析、三处遮蔽检测统一改用有效覆盖判定，失效覆盖不再落入 NGGL4ES 兜底\n- 渲染器覆盖对话框打开时顺手清除失效覆盖并落盘，配置与界面、启动行为保持一致\n- MainActivity 长按启动被遮蔽提示打断后选取消时，回滚本次写入版本设置的渲染器，\n  避免放弃启动仍残留修改",
+    "created_at": "2026-11-06T01:36:03Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42144949130"
+  },
+  {
+    "id": 42144949012,
+    "sha": "27dac3af210f56f4d87f130327697c1f608f4390",
+    "short_sha": "27dac3a",
+    "message": "fix: 渲染器覆盖指向已卸载/禁用的渲染器时视同无覆盖，长按启动取消时回滚写入\n\n- 新增 RendererManager.findRenderer（查找不兜底）与 Profile.getEffectiveRendererOverride，\n  启动解析、三处遮蔽检测统一改用有效覆盖判定，失效覆盖不再落入 NGGL4ES 兜底\n- 渲染器覆盖对话框打开时顺手清除失效覆盖并落盘，配置与界面、启动行为保持一致\n- MainActivity 长按启动被遮蔽提示打断后选取消时，回滚本次写入版本设置的渲染器，\n  避免放弃启动仍残留修改",
+    "created_at": "2026-11-06T01:36:03Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42144949012"
+  },
+  {
+    "id": 42144927449,
+    "sha": "27dac3af210f56f4d87f130327697c1f608f4390",
+    "short_sha": "27dac3a",
+    "message": "fix: 渲染器覆盖指向已卸载/禁用的渲染器时视同无覆盖，长按启动取消时回滚写入\n\n- 新增 RendererManager.findRenderer（查找不兜底）与 Profile.getEffectiveRendererOverride，\n  启动解析、三处遮蔽检测统一改用有效覆盖判定，失效覆盖不再落入 NGGL4ES 兜底\n- 渲染器覆盖对话框打开时顺手清除失效覆盖并落盘，配置与界面、启动行为保持一致\n- MainActivity 长按启动被遮蔽提示打断后选取消时，回滚本次写入版本设置的渲染器，\n  避免放弃启动仍残留修改",
+    "created_at": "2026-11-06T01:36:03Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42144927449"
+  },
+  {
+    "id": 42144927473,
+    "sha": "27dac3af210f56f4d87f130327697c1f608f4390",
+    "short_sha": "27dac3a",
+    "message": "fix: 渲染器覆盖指向已卸载/禁用的渲染器时视同无覆盖，长按启动取消时回滚写入\n\n- 新增 RendererManager.findRenderer（查找不兜底）与 Profile.getEffectiveRendererOverride，\n  启动解析、三处遮蔽检测统一改用有效覆盖判定，失效覆盖不再落入 NGGL4ES 兜底\n- 渲染器覆盖对话框打开时顺手清除失效覆盖并落盘，配置与界面、启动行为保持一致\n- MainActivity 长按启动被遮蔽提示打断后选取消时，回滚本次写入版本设置的渲染器，\n  避免放弃启动仍残留修改",
+    "created_at": "2026-11-06T01:36:03Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42144927473"
+  },
+  {
     "id": 41971937619,
     "sha": "b810127701cc826e0e4277da2bd59e1b3f2fffbd",
     "short_sha": "b810127",
@@ -366,37 +398,5 @@
     "message": "chore: 升级内置 MobileGlues 至 2.0.1\n\n- 替换 FCL/libs/MobileGlues-release.aar（四 ABI libmobileglues.so 全量更新）\n- RendererManager 的 MobileGlues 条目不再声明 maxMCver/displayMaxMCver，版本展示回落为全版本可跑",
     "created_at": "2026-11-01T11:29:12Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41302205053"
-  },
-  {
-    "id": 41302205050,
-    "sha": "ef060b6401bfbc41f79827c059db73a3ebdf6150",
-    "short_sha": "ef060b6",
-    "message": "chore: 升级内置 MobileGlues 至 2.0.1\n\n- 替换 FCL/libs/MobileGlues-release.aar（四 ABI libmobileglues.so 全量更新）\n- RendererManager 的 MobileGlues 条目不再声明 maxMCver/displayMaxMCver，版本展示回落为全版本可跑",
-    "created_at": "2026-11-01T11:29:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41302205050"
-  },
-  {
-    "id": 41272944692,
-    "sha": "284512e8072818f06ae84b4e14e6ea4507a137fb",
-    "short_sha": "284512e",
-    "message": "feat: 按键编辑撤销/恢复——按组快照两栈历史，入口为左抽屉底部操作区",
-    "created_at": "2026-11-01T04:22:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41272944692"
-  },
-  {
-    "id": 41272944688,
-    "sha": "284512e8072818f06ae84b4e14e6ea4507a137fb",
-    "short_sha": "284512e",
-    "message": "feat: 按键编辑撤销/恢复——按组快照两栈历史，入口为左抽屉底部操作区",
-    "created_at": "2026-11-01T04:22:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41272944688"
-  },
-  {
-    "id": 41272889130,
-    "sha": "284512e8072818f06ae84b4e14e6ea4507a137fb",
-    "short_sha": "284512e",
-    "message": "feat: 按键编辑撤销/恢复——按组快照两栈历史，入口为左抽屉底部操作区",
-    "created_at": "2026-11-01T04:22:58Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41272889130"
   }
 ]
