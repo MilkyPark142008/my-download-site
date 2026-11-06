@@ -1,5 +1,53 @@
 [
   {
+    "id": 42160999401,
+    "sha": "965c23db648b6f2ac0690522f5db7dba4c1a6e95",
+    "short_sha": "965c23d",
+    "message": "feat: 皮肤模型设置菜单改双指点击触发并添加引导，新增点击音效与开关",
+    "created_at": "2026-11-06T04:10:34Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42160999401"
+  },
+  {
+    "id": 42160999405,
+    "sha": "965c23db648b6f2ac0690522f5db7dba4c1a6e95",
+    "short_sha": "965c23d",
+    "message": "feat: 皮肤模型设置菜单改双指点击触发并添加引导，新增点击音效与开关",
+    "created_at": "2026-11-06T04:10:34Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42160999405"
+  },
+  {
+    "id": 42148304918,
+    "sha": "e73dd5bac4d274439c624a9db35926c462ff094f",
+    "short_sha": "e73dd5b",
+    "message": "fix: 修复无法正常启动 Minecraft 13w16a~13w23b 快照的问题\n\n- 13w16a~13w23b 快照缺少非英语语言的外部语言资源，写入 lang 后启动会卡在 Mojang 加载界面，历史已写入的 lang 一并重置为默认英语\n- has_custom_resolution 特性标志增加版本门控，1.6（快照 13w25a）之前的版本不支持自定义分辨率参数\n\n参考 HMCL（https://github.com/HMCL-dev/HMCL/commit/087b2b678d51782f0d6bd64db8a2acd7608c8ee7）",
+    "created_at": "2026-11-06T02:07:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42148304918"
+  },
+  {
+    "id": 42148304866,
+    "sha": "e73dd5bac4d274439c624a9db35926c462ff094f",
+    "short_sha": "e73dd5b",
+    "message": "fix: 修复无法正常启动 Minecraft 13w16a~13w23b 快照的问题\n\n- 13w16a~13w23b 快照缺少非英语语言的外部语言资源，写入 lang 后启动会卡在 Mojang 加载界面，历史已写入的 lang 一并重置为默认英语\n- has_custom_resolution 特性标志增加版本门控，1.6（快照 13w25a）之前的版本不支持自定义分辨率参数\n\n参考 HMCL（https://github.com/HMCL-dev/HMCL/commit/087b2b678d51782f0d6bd64db8a2acd7608c8ee7）",
+    "created_at": "2026-11-06T02:07:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42148304866"
+  },
+  {
+    "id": 42148276474,
+    "sha": "e73dd5bac4d274439c624a9db35926c462ff094f",
+    "short_sha": "e73dd5b",
+    "message": "fix: 修复无法正常启动 Minecraft 13w16a~13w23b 快照的问题\n\n- 13w16a~13w23b 快照缺少非英语语言的外部语言资源，写入 lang 后启动会卡在 Mojang 加载界面，历史已写入的 lang 一并重置为默认英语\n- has_custom_resolution 特性标志增加版本门控，1.6（快照 13w25a）之前的版本不支持自定义分辨率参数\n\n参考 HMCL（https://github.com/HMCL-dev/HMCL/commit/087b2b678d51782f0d6bd64db8a2acd7608c8ee7）",
+    "created_at": "2026-11-06T02:07:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42148276474"
+  },
+  {
+    "id": 42148276299,
+    "sha": "e73dd5bac4d274439c624a9db35926c462ff094f",
+    "short_sha": "e73dd5b",
+    "message": "fix: 修复无法正常启动 Minecraft 13w16a~13w23b 快照的问题\n\n- 13w16a~13w23b 快照缺少非英语语言的外部语言资源，写入 lang 后启动会卡在 Mojang 加载界面，历史已写入的 lang 一并重置为默认英语\n- has_custom_resolution 特性标志增加版本门控，1.6（快照 13w25a）之前的版本不支持自定义分辨率参数\n\n参考 HMCL（https://github.com/HMCL-dev/HMCL/commit/087b2b678d51782f0d6bd64db8a2acd7608c8ee7）",
+    "created_at": "2026-11-06T02:07:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42148276299"
+  },
+  {
     "id": 42144949130,
     "sha": "27dac3af210f56f4d87f130327697c1f608f4390",
     "short_sha": "27dac3a",
@@ -350,53 +398,5 @@
     "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1899)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑\n发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat\n吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做\n  notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画",
     "created_at": "2026-11-01T13:38:12Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312250569"
-  },
-  {
-    "id": 41312250555,
-    "sha": "76f070f92e4b363341adb890ec794081ad7ddf3d",
-    "short_sha": "76f070f",
-    "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1899)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑\n发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat\n吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做\n  notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画",
-    "created_at": "2026-11-01T13:38:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312250555"
-  },
-  {
-    "id": 41312230723,
-    "sha": "76f070f92e4b363341adb890ec794081ad7ddf3d",
-    "short_sha": "76f070f",
-    "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1899)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑\n发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat\n吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做\n  notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画",
-    "created_at": "2026-11-01T13:38:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312230723"
-  },
-  {
-    "id": 41312230712,
-    "sha": "76f070f92e4b363341adb890ec794081ad7ddf3d",
-    "short_sha": "76f070f",
-    "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1899)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑\n发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat\n吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做\n  notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画",
-    "created_at": "2026-11-01T13:38:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312230712"
-  },
-  {
-    "id": 41310733939,
-    "sha": "7894be5f2473af9eeffe6f4bbf36f1dbd5860b72",
-    "short_sha": "7894be5",
-    "message": "feat: 内置 MobileGlues 2.0.1 MultiDraw 方案排序配置，enableANGLE 默认值对齐上游\n\n- RendererPlugin 新增 ORDERED 配置类型（方案偏好序）：候选集合与默认序同源覆盖、\n  coerceOrder 规整（剔未知/去重保首见/缺项按默认序补尾）、expandOrder 继承展开\n  （父序伪项 native 替换为本条目真实后端），纯函数置顶层供单测直接钉住\n- multidraw 6 键对齐 MG 2.0.1 上游 settings.cpp：全局 multidrawOrder + 五个函数级\n  异常条目（默认关闭跟随全局；启用时刻快照当前全局序，此后不再跟随）\n- RendererEnvDialog ordered 条目 UI：折叠编号列表 + 上移/下移，函数级开关门控展开\n- FCLauncher.mergeMobileGluesConfig 增补 6 键：函数级显式关闭时摘除 config.json\n  残留键交还全局序，从未配置则不触碰（保留手编 / MG 自管值）\n- enableANGLE 回落默认 1→0：MG 2.0.1 起缺省语义为 DisableIfPossible（settings.cpp），\n  对话框确认全量落盘时不再与上游默认相悖\n- 单测 RendererOrderedSpecTest：规整/展开/集合钉死，期望值与 ZL2 #2165 一致",
-    "created_at": "2026-11-01T13:11:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41310733939"
-  },
-  {
-    "id": 41310733912,
-    "sha": "7894be5f2473af9eeffe6f4bbf36f1dbd5860b72",
-    "short_sha": "7894be5",
-    "message": "feat: 内置 MobileGlues 2.0.1 MultiDraw 方案排序配置，enableANGLE 默认值对齐上游\n\n- RendererPlugin 新增 ORDERED 配置类型（方案偏好序）：候选集合与默认序同源覆盖、\n  coerceOrder 规整（剔未知/去重保首见/缺项按默认序补尾）、expandOrder 继承展开\n  （父序伪项 native 替换为本条目真实后端），纯函数置顶层供单测直接钉住\n- multidraw 6 键对齐 MG 2.0.1 上游 settings.cpp：全局 multidrawOrder + 五个函数级\n  异常条目（默认关闭跟随全局；启用时刻快照当前全局序，此后不再跟随）\n- RendererEnvDialog ordered 条目 UI：折叠编号列表 + 上移/下移，函数级开关门控展开\n- FCLauncher.mergeMobileGluesConfig 增补 6 键：函数级显式关闭时摘除 config.json\n  残留键交还全局序，从未配置则不触碰（保留手编 / MG 自管值）\n- enableANGLE 回落默认 1→0：MG 2.0.1 起缺省语义为 DisableIfPossible（settings.cpp），\n  对话框确认全量落盘时不再与上游默认相悖\n- 单测 RendererOrderedSpecTest：规整/展开/集合钉死，期望值与 ZL2 #2165 一致",
-    "created_at": "2026-11-01T13:11:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41310733912"
-  },
-  {
-    "id": 41302205053,
-    "sha": "ef060b6401bfbc41f79827c059db73a3ebdf6150",
-    "short_sha": "ef060b6",
-    "message": "chore: 升级内置 MobileGlues 至 2.0.1\n\n- 替换 FCL/libs/MobileGlues-release.aar（四 ABI libmobileglues.so 全量更新）\n- RendererManager 的 MobileGlues 条目不再声明 maxMCver/displayMaxMCver，版本展示回落为全版本可跑",
-    "created_at": "2026-11-01T11:29:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41302205053"
   }
 ]
