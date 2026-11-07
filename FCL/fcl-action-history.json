@@ -1,5 +1,37 @@
 [
   {
+    "id": 42327822957,
+    "sha": "9ea040443effea5a78bd8aeed260e829ae349c2d",
+    "short_sha": "9ea0404",
+    "message": "Update version_map.json",
+    "created_at": "2026-11-07T02:09:41Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42327822957"
+  },
+  {
+    "id": 42326127382,
+    "sha": "b08db5e96a57bc74ae536fee337b32aa9c9ea156",
+    "short_sha": "b08db5e",
+    "message": "1.3.4.5",
+    "created_at": "2026-11-07T01:49:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42326127382"
+  },
+  {
+    "id": 42326127403,
+    "sha": "b08db5e96a57bc74ae536fee337b32aa9c9ea156",
+    "short_sha": "b08db5e",
+    "message": "1.3.4.5",
+    "created_at": "2026-11-07T01:49:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42326127403"
+  },
+  {
+    "id": 42326127316,
+    "sha": "b08db5e96a57bc74ae536fee337b32aa9c9ea156",
+    "short_sha": "b08db5e",
+    "message": "1.3.4.5",
+    "created_at": "2026-11-07T01:49:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42326127316"
+  },
+  {
     "id": 42160999401,
     "sha": "965c23db648b6f2ac0690522f5db7dba4c1a6e95",
     "short_sha": "965c23d",
@@ -366,37 +398,5 @@
     "message": "1.3.4.4",
     "created_at": "2026-11-02T02:29:15Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41378014419"
-  },
-  {
-    "id": 41378014453,
-    "sha": "794b7469b8fde226f2858371416346773e1cf786",
-    "short_sha": "794b746",
-    "message": "1.3.4.4",
-    "created_at": "2026-11-02T02:29:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41378014453"
-  },
-  {
-    "id": 41312471259,
-    "sha": "4e3def1a37299c751bfa4fa54039ec65b9d4504c",
-    "short_sha": "4e3def1",
-    "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1993)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat 吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做 notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画\n\nFixes #1899",
-    "created_at": "2026-11-01T13:41:22Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312471259"
-  },
-  {
-    "id": 41312471281,
-    "sha": "4e3def1a37299c751bfa4fa54039ec65b9d4504c",
-    "short_sha": "4e3def1",
-    "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1993)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat 吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做 notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画\n\nFixes #1899",
-    "created_at": "2026-11-01T13:41:22Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312471281"
-  },
-  {
-    "id": 41312250569,
-    "sha": "76f070f92e4b363341adb890ec794081ad7ddf3d",
-    "short_sha": "76f070f",
-    "message": "fix: 「使用系统Vulkan驱动」开关无动画 (#1899)\n\n切换该开关会触发 notifyDataSetChanged 全量重绑，RecyclerView 复用重绑\n发生在 detach 状态下，bindSwitch 的 setChecked(同一值) 走进 SwitchCompat\n吸附分支取消点按滑块动画，表现为贴图直接跳变。\n\n- 新增 updateVulkanDriverRow()：仅对随开关显隐的自定义驱动行做\n  notifyItemInserted/Removed 局部刷新，开关行不重绑、动画正常播放\n- bindSwitch 状态一致时跳过 setChecked，防御其他全量重建路径同样杀动画",
-    "created_at": "2026-11-01T13:38:12Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41312250569"
   }
 ]
