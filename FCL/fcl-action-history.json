@@ -1,5 +1,133 @@
 [
   {
+    "id": 42456553781,
+    "sha": "07b97289dee9d9ce469d4aad462b2599511b0972",
+    "short_sha": "07b9728",
+    "message": "feat: 每版本渲染器覆盖——多版本切换免频繁改渲染器 (#1975)\n\n* feat: 每版本渲染器覆盖——版本列表入口、全版本 Spinner 设置对话框、渲染器修改遮蔽警告\n\n- Profile.rendererOverrides（版本 id → renderer id）随配置 JSON 持久化，独立于 usesGlobal；\n  启动解析单点接入 getLaunchOptions：覆盖 > 特定设置 > 全局\n- 版本列表页左下角新增静态渲染器入口，打开 RendererOverrideDialog：\n  列出当前配置全部版本逐行 FCLSpinner 指定渲染器，默认「跟随设置」（即不覆盖）\n- 覆盖存在时从别处修改渲染器会弹遮蔽提示并提供三选项：\n  更新覆盖（覆盖改为本次选择）/清除覆盖（版本回到跟随设置）/保留覆盖\n  - 全局设置页仅检测当前选中版本，与既有「独立设置版本」提示合并展示\n  - 长按启动被遮蔽时不自动启动，更新/清除覆盖后沿用本次选择继续启动\n- 特定游戏设置页/长按启动的渲染器选择回调改传 Renderer（id 供覆盖比对）\n\n* fix: 渲染器覆盖指向已卸载/禁用的渲染器时视同无覆盖，长按启动取消时回滚写入\n\n- 新增 RendererManager.findRenderer（查找不兜底）与 Profile.getEffectiveRendererOverride，\n  启动解析、三处遮蔽检测统一改用有效覆盖判定，失效覆盖不再落入 NGGL4ES 兜底\n- 渲染器覆盖对话框打开时顺手清除失效覆盖并落盘，配置与界面、启动行为保持一致\n- MainActivity 长按启动被遮蔽提示打断后选取消时，回滚本次写入版本设置的渲染器，\n  避免放弃启动仍残留修改\n\n* fix: 渲染器遮蔽弹窗取消/保留时回滚对话框已写入的设置，全局页覆盖提示与 usesGlobal 解耦",
+    "created_at": "2026-11-08T06:53:19Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42456553781"
+  },
+  {
+    "id": 42456553894,
+    "sha": "07b97289dee9d9ce469d4aad462b2599511b0972",
+    "short_sha": "07b9728",
+    "message": "feat: 每版本渲染器覆盖——多版本切换免频繁改渲染器 (#1975)\n\n* feat: 每版本渲染器覆盖——版本列表入口、全版本 Spinner 设置对话框、渲染器修改遮蔽警告\n\n- Profile.rendererOverrides（版本 id → renderer id）随配置 JSON 持久化，独立于 usesGlobal；\n  启动解析单点接入 getLaunchOptions：覆盖 > 特定设置 > 全局\n- 版本列表页左下角新增静态渲染器入口，打开 RendererOverrideDialog：\n  列出当前配置全部版本逐行 FCLSpinner 指定渲染器，默认「跟随设置」（即不覆盖）\n- 覆盖存在时从别处修改渲染器会弹遮蔽提示并提供三选项：\n  更新覆盖（覆盖改为本次选择）/清除覆盖（版本回到跟随设置）/保留覆盖\n  - 全局设置页仅检测当前选中版本，与既有「独立设置版本」提示合并展示\n  - 长按启动被遮蔽时不自动启动，更新/清除覆盖后沿用本次选择继续启动\n- 特定游戏设置页/长按启动的渲染器选择回调改传 Renderer（id 供覆盖比对）\n\n* fix: 渲染器覆盖指向已卸载/禁用的渲染器时视同无覆盖，长按启动取消时回滚写入\n\n- 新增 RendererManager.findRenderer（查找不兜底）与 Profile.getEffectiveRendererOverride，\n  启动解析、三处遮蔽检测统一改用有效覆盖判定，失效覆盖不再落入 NGGL4ES 兜底\n- 渲染器覆盖对话框打开时顺手清除失效覆盖并落盘，配置与界面、启动行为保持一致\n- MainActivity 长按启动被遮蔽提示打断后选取消时，回滚本次写入版本设置的渲染器，\n  避免放弃启动仍残留修改\n\n* fix: 渲染器遮蔽弹窗取消/保留时回滚对话框已写入的设置，全局页覆盖提示与 usesGlobal 解耦",
+    "created_at": "2026-11-08T06:53:19Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42456553894"
+  },
+  {
+    "id": 42455842575,
+    "sha": "20f9cfefd55ec5a1faef3b9d8f9b92cc6d567580",
+    "short_sha": "20f9cfe",
+    "message": "fix: 渲染器遮蔽弹窗取消/保留时回滚对话框已写入的设置，全局页覆盖提示与 usesGlobal 解耦",
+    "created_at": "2026-11-08T06:42:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42455842575"
+  },
+  {
+    "id": 42455842625,
+    "sha": "20f9cfefd55ec5a1faef3b9d8f9b92cc6d567580",
+    "short_sha": "20f9cfe",
+    "message": "fix: 渲染器遮蔽弹窗取消/保留时回滚对话框已写入的设置，全局页覆盖提示与 usesGlobal 解耦",
+    "created_at": "2026-11-08T06:42:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42455842625"
+  },
+  {
+    "id": 42455838687,
+    "sha": "20f9cfefd55ec5a1faef3b9d8f9b92cc6d567580",
+    "short_sha": "20f9cfe",
+    "message": "fix: 渲染器遮蔽弹窗取消/保留时回滚对话框已写入的设置，全局页覆盖提示与 usesGlobal 解耦",
+    "created_at": "2026-11-08T06:42:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42455838687"
+  },
+  {
+    "id": 42455838665,
+    "sha": "20f9cfefd55ec5a1faef3b9d8f9b92cc6d567580",
+    "short_sha": "20f9cfe",
+    "message": "fix: 渲染器遮蔽弹窗取消/保留时回滚对话框已写入的设置，全局页覆盖提示与 usesGlobal 解耦",
+    "created_at": "2026-11-08T06:42:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42455838665"
+  },
+  {
+    "id": 42454543604,
+    "sha": "ad2af1b84b69a09a1cef38627ef795eb998f9dee",
+    "short_sha": "ad2af1b",
+    "message": "fix: 移除游戏内按键投影阴影，elevation 仅保留堆叠 z 序 #2007",
+    "created_at": "2026-11-08T06:22:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42454543604"
+  },
+  {
+    "id": 42454543600,
+    "sha": "ad2af1b84b69a09a1cef38627ef795eb998f9dee",
+    "short_sha": "ad2af1b",
+    "message": "fix: 移除游戏内按键投影阴影，elevation 仅保留堆叠 z 序 #2007",
+    "created_at": "2026-11-08T06:22:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42454543600"
+  },
+  {
+    "id": 42454509043,
+    "sha": "ad2af1b84b69a09a1cef38627ef795eb998f9dee",
+    "short_sha": "ad2af1b",
+    "message": "fix: 移除游戏内按键投影阴影，elevation 仅保留堆叠 z 序 #2007",
+    "created_at": "2026-11-08T06:22:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42454509043"
+  },
+  {
+    "id": 42454508966,
+    "sha": "ad2af1b84b69a09a1cef38627ef795eb998f9dee",
+    "short_sha": "ad2af1b",
+    "message": "fix: 移除游戏内按键投影阴影，elevation 仅保留堆叠 z 序 #2007",
+    "created_at": "2026-11-08T06:22:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42454508966"
+  },
+  {
+    "id": 42452522290,
+    "sha": "d6aab74d04fac7db6808692ab82b7a78608d6dd6",
+    "short_sha": "d6aab74",
+    "message": "feat: 游戏内 DEBUG 分类新增启动进度遮罩开关并修复自动显示日志首帧误判 #2005",
+    "created_at": "2026-11-08T05:53:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42452522290"
+  },
+  {
+    "id": 42452522319,
+    "sha": "d6aab74d04fac7db6808692ab82b7a78608d6dd6",
+    "short_sha": "d6aab74",
+    "message": "feat: 游戏内 DEBUG 分类新增启动进度遮罩开关并修复自动显示日志首帧误判 #2005",
+    "created_at": "2026-11-08T05:53:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42452522319"
+  },
+  {
+    "id": 42437831786,
+    "sha": "caec778a4f722e6d1b91e317002116ee2a7645ba",
+    "short_sha": "caec778",
+    "message": "fix: 主界面版本卡片图标保留原始比例——改 src+fitCenter 等比缩放，不再压扁长方形 icon",
+    "created_at": "2026-11-08T02:16:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42437831786"
+  },
+  {
+    "id": 42437831731,
+    "sha": "caec778a4f722e6d1b91e317002116ee2a7645ba",
+    "short_sha": "caec778",
+    "message": "fix: 主界面版本卡片图标保留原始比例——改 src+fitCenter 等比缩放，不再压扁长方形 icon",
+    "created_at": "2026-11-08T02:16:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42437831731"
+  },
+  {
+    "id": 42436438056,
+    "sha": "7ba22b70af68e3c3067ead39bf17b64752ca6fa1",
+    "short_sha": "7ba22b7",
+    "message": "fix: HMCL/MultiMC 整合包启动 NPE——Kotlin 化后对 createCompletionTask 的 null 约定误加非空断言",
+    "created_at": "2026-11-08T01:57:02Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42436438056"
+  },
+  {
+    "id": 42436438068,
+    "sha": "7ba22b70af68e3c3067ead39bf17b64752ca6fa1",
+    "short_sha": "7ba22b7",
+    "message": "fix: HMCL/MultiMC 整合包启动 NPE——Kotlin 化后对 createCompletionTask 的 null 约定误加非空断言",
+    "created_at": "2026-11-08T01:57:02Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42436438068"
+  },
+  {
     "id": 42341101859,
     "sha": "c987300c258a4b52dab1df6a6fa1e1f1a88b6678",
     "short_sha": "c987300",
@@ -270,133 +398,5 @@
     "message": "fix: 接通 SDL 通道键盘真实显隐上报，修复 26.3 开关软键盘需点两次\n\nSDL 桥的 notifyImeVisibilityChanged 上报入口移植后从未接线，SdlImeController.mKeyboardShown 只能靠 doShow 中 showSoftInput 后立即查询 isAcceptingText()（竞态：键盘实际弹出前恒为 false，弹出后才为 true）与 doHide 更新，与真实显隐必然漂移：呼出后首次点按收起被误判为再次呼出（无可见变化），第二次才真正收起；标志反向漂移时呼出同理。\n\n- JVMActivity 既有布局回调本就随 IME 显隐触发，以 getImeOccludedHeight 推导的真实可见性轮询上报，置于「禁用软键盘自适应」早退之前不被其挡住\n- notifyVisibilityChanged 自带标志比对去重，重复上报无副作用；通道关闭时 IME 自行弹出的强制按回安全网随之生效\n- 开关软键盘、放大镜 inputActive、doShow 的 already-visible 守卫同源受益，不再依赖漂移标志",
     "created_at": "2026-11-03T04:54:28Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41581536080"
-  },
-  {
-    "id": 41581536079,
-    "sha": "70e54048c3b29f94b8c492653083b0bcbd7390d7",
-    "short_sha": "70e5404",
-    "message": "fix: 接通 SDL 通道键盘真实显隐上报，修复 26.3 开关软键盘需点两次\n\nSDL 桥的 notifyImeVisibilityChanged 上报入口移植后从未接线，SdlImeController.mKeyboardShown 只能靠 doShow 中 showSoftInput 后立即查询 isAcceptingText()（竞态：键盘实际弹出前恒为 false，弹出后才为 true）与 doHide 更新，与真实显隐必然漂移：呼出后首次点按收起被误判为再次呼出（无可见变化），第二次才真正收起；标志反向漂移时呼出同理。\n\n- JVMActivity 既有布局回调本就随 IME 显隐触发，以 getImeOccludedHeight 推导的真实可见性轮询上报，置于「禁用软键盘自适应」早退之前不被其挡住\n- notifyVisibilityChanged 自带标志比对去重，重复上报无副作用；通道关闭时 IME 自行弹出的强制按回安全网随之生效\n- 开关软键盘、放大镜 inputActive、doShow 的 already-visible 守卫同源受益，不再依赖漂移标志",
-    "created_at": "2026-11-03T04:54:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41581536079"
-  },
-  {
-    "id": 41581531347,
-    "sha": "70e54048c3b29f94b8c492653083b0bcbd7390d7",
-    "short_sha": "70e5404",
-    "message": "fix: 接通 SDL 通道键盘真实显隐上报，修复 26.3 开关软键盘需点两次\n\nSDL 桥的 notifyImeVisibilityChanged 上报入口移植后从未接线，SdlImeController.mKeyboardShown 只能靠 doShow 中 showSoftInput 后立即查询 isAcceptingText()（竞态：键盘实际弹出前恒为 false，弹出后才为 true）与 doHide 更新，与真实显隐必然漂移：呼出后首次点按收起被误判为再次呼出（无可见变化），第二次才真正收起；标志反向漂移时呼出同理。\n\n- JVMActivity 既有布局回调本就随 IME 显隐触发，以 getImeOccludedHeight 推导的真实可见性轮询上报，置于「禁用软键盘自适应」早退之前不被其挡住\n- notifyVisibilityChanged 自带标志比对去重，重复上报无副作用；通道关闭时 IME 自行弹出的强制按回安全网随之生效\n- 开关软键盘、放大镜 inputActive、doShow 的 already-visible 守卫同源受益，不再依赖漂移标志",
-    "created_at": "2026-11-03T04:54:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41581531347"
-  },
-  {
-    "id": 41581531364,
-    "sha": "70e54048c3b29f94b8c492653083b0bcbd7390d7",
-    "short_sha": "70e5404",
-    "message": "fix: 接通 SDL 通道键盘真实显隐上报，修复 26.3 开关软键盘需点两次\n\nSDL 桥的 notifyImeVisibilityChanged 上报入口移植后从未接线，SdlImeController.mKeyboardShown 只能靠 doShow 中 showSoftInput 后立即查询 isAcceptingText()（竞态：键盘实际弹出前恒为 false，弹出后才为 true）与 doHide 更新，与真实显隐必然漂移：呼出后首次点按收起被误判为再次呼出（无可见变化），第二次才真正收起；标志反向漂移时呼出同理。\n\n- JVMActivity 既有布局回调本就随 IME 显隐触发，以 getImeOccludedHeight 推导的真实可见性轮询上报，置于「禁用软键盘自适应」早退之前不被其挡住\n- notifyVisibilityChanged 自带标志比对去重，重复上报无副作用；通道关闭时 IME 自行弹出的强制按回安全网随之生效\n- 开关软键盘、放大镜 inputActive、doShow 的 already-visible 守卫同源受益，不再依赖漂移标志",
-    "created_at": "2026-11-03T04:54:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41581531364"
-  },
-  {
-    "id": 41575772991,
-    "sha": "b940768c2a8867c4e72f003166841efb4a5ce2b0",
-    "short_sha": "b940768",
-    "message": "fix: SDL 编辑框固定左上角，修复呼出输入法时画面双倍抬升黑屏\n\n26.3（SDL 路径）呼出输入法偶发大面积黑屏，画面总位移为两倍键盘高。根因是两个推手叠加：JVMActivity 未声明 windowSoftInputMode，SDL 的焦点编辑框 mEdit 按游戏传入的文本输入区域（聊天框，屏幕底部）摆放，被键盘盖住时系统 adjustPan 平推整个窗口，再叠加 JVMActivity 自身的 TextureView 平移。启动器发起呼出且 mEdit 为空时落在 (0,0,1,1) 不触发平推，故表现为偶发。\n\n- SdlImeController：mEdit 固定 1px 钉在左上角，忽略游戏传入的区域矩形（与 GLFW 路径 TouchCharInput 同模式）；requestShow/doShow 去掉坐标参数，删除 makeParams 与 HEIGHT_PADDING\n- SDLActivity.showTextInput：JNI 签名保留区域参数，不再向下传递\n- 文本送达走 SDLInputConnection 通道，不受编辑框位置影响\n\nFixes #1994",
-    "created_at": "2026-11-03T02:10:11Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41575772991"
-  },
-  {
-    "id": 41575772953,
-    "sha": "b940768c2a8867c4e72f003166841efb4a5ce2b0",
-    "short_sha": "b940768",
-    "message": "fix: SDL 编辑框固定左上角，修复呼出输入法时画面双倍抬升黑屏\n\n26.3（SDL 路径）呼出输入法偶发大面积黑屏，画面总位移为两倍键盘高。根因是两个推手叠加：JVMActivity 未声明 windowSoftInputMode，SDL 的焦点编辑框 mEdit 按游戏传入的文本输入区域（聊天框，屏幕底部）摆放，被键盘盖住时系统 adjustPan 平推整个窗口，再叠加 JVMActivity 自身的 TextureView 平移。启动器发起呼出且 mEdit 为空时落在 (0,0,1,1) 不触发平推，故表现为偶发。\n\n- SdlImeController：mEdit 固定 1px 钉在左上角，忽略游戏传入的区域矩形（与 GLFW 路径 TouchCharInput 同模式）；requestShow/doShow 去掉坐标参数，删除 makeParams 与 HEIGHT_PADDING\n- SDLActivity.showTextInput：JNI 签名保留区域参数，不再向下传递\n- 文本送达走 SDLInputConnection 通道，不受编辑框位置影响\n\nFixes #1994",
-    "created_at": "2026-11-03T02:10:11Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41575772953"
-  },
-  {
-    "id": 41564963005,
-    "sha": "b940768c2a8867c4e72f003166841efb4a5ce2b0",
-    "short_sha": "b940768",
-    "message": "fix: SDL 编辑框固定左上角，修复呼出输入法时画面双倍抬升黑屏\n\n26.3（SDL 路径）呼出输入法偶发大面积黑屏，画面总位移为两倍键盘高。根因是两个推手叠加：JVMActivity 未声明 windowSoftInputMode，SDL 的焦点编辑框 mEdit 按游戏传入的文本输入区域（聊天框，屏幕底部）摆放，被键盘盖住时系统 adjustPan 平推整个窗口，再叠加 JVMActivity 自身的 TextureView 平移。启动器发起呼出且 mEdit 为空时落在 (0,0,1,1) 不触发平推，故表现为偶发。\n\n- SdlImeController：mEdit 固定 1px 钉在左上角，忽略游戏传入的区域矩形（与 GLFW 路径 TouchCharInput 同模式）；requestShow/doShow 去掉坐标参数，删除 makeParams 与 HEIGHT_PADDING\n- SDLActivity.showTextInput：JNI 签名保留区域参数，不再向下传递\n- 文本送达走 SDLInputConnection 通道，不受编辑框位置影响\n\nFixes #1994",
-    "created_at": "2026-11-03T02:10:11Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41564963005"
-  },
-  {
-    "id": 41564963030,
-    "sha": "b940768c2a8867c4e72f003166841efb4a5ce2b0",
-    "short_sha": "b940768",
-    "message": "fix: SDL 编辑框固定左上角，修复呼出输入法时画面双倍抬升黑屏\n\n26.3（SDL 路径）呼出输入法偶发大面积黑屏，画面总位移为两倍键盘高。根因是两个推手叠加：JVMActivity 未声明 windowSoftInputMode，SDL 的焦点编辑框 mEdit 按游戏传入的文本输入区域（聊天框，屏幕底部）摆放，被键盘盖住时系统 adjustPan 平推整个窗口，再叠加 JVMActivity 自身的 TextureView 平移。启动器发起呼出且 mEdit 为空时落在 (0,0,1,1) 不触发平推，故表现为偶发。\n\n- SdlImeController：mEdit 固定 1px 钉在左上角，忽略游戏传入的区域矩形（与 GLFW 路径 TouchCharInput 同模式）；requestShow/doShow 去掉坐标参数，删除 makeParams 与 HEIGHT_PADDING\n- SDLActivity.showTextInput：JNI 签名保留区域参数，不再向下传递\n- 文本送达走 SDLInputConnection 通道，不受编辑框位置影响\n\nFixes #1994",
-    "created_at": "2026-11-03T02:10:11Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41564963030"
-  },
-  {
-    "id": 41435635125,
-    "sha": "a32fd727d95845d0216f097f012d20e520be6b17",
-    "short_sha": "a32fd72",
-    "message": "fix: 修复版本列表切换版本时的异常动画",
-    "created_at": "2026-11-02T11:16:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41435635125"
-  },
-  {
-    "id": 41435635038,
-    "sha": "a32fd727d95845d0216f097f012d20e520be6b17",
-    "short_sha": "a32fd72",
-    "message": "fix: 修复版本列表切换版本时的异常动画",
-    "created_at": "2026-11-02T11:16:53Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41435635038"
-  },
-  {
-    "id": 41431305530,
-    "sha": "5377a427bc20f6f2a5d9119bd107d0391e77bb04",
-    "short_sha": "5377a42",
-    "message": "refactor: LauncherHelper 迁移至 Kotlin，启动任务链改为协程驱动 (#1877)\n\n启动流程由多层 thenComposeAsync 任务链改为单个协程线性执行：版本解析 → mod 扫描 → Java 检查 → 依赖补全 → 解包内置 jar → 登录 → 启动前检查 → 主线程拉起 JVMActivity。\n\n- launch0 拆分为 completeDependencies / unpackBuiltinJars / prepareLaunch / runPreLaunchChecks / startGame\n- fclcore 任务（游戏文件与整合包补全、GameVerificationFixTask）经 runTracked 接入 TaskExecutor，复用弹窗下载进度展示，协程取消与执行器取消双向级联\n- 检查与登录弹窗改为挂起式 awaitChoice / awaitLoginChoice，协程取消时一并关闭停留的弹窗；认证失败可反复重试，重试期间保留微软登录进度\n- 启动弹窗以六阶段任务列表展示，阶段按实际进入顺序打勾，isNotCheckGame 跳过依赖补全时不错位；TaskDialog 新增 setStages / beginStage / succeedStage / failStage 展示模式，TaskListPane 支持在展示模式下接入执行器\n- TaskDialog 换绑执行器或重设阶段列表时摘除旧监听并释放旧列表，避免监听与视图树残留\n- 取消路径加固：启动重入保护、onStop 与弹窗回调 isActive 守卫、执行器先启动再挂取消回调\n- modloader 安装引导改在主线程跳转，跳转失败同样取消启动；checkMod 回退扫描改用当前 profile 与版本\n\n验证：CI 全架构构建与 checkstyle 通过；真机测试 JNA 5.19.1 natives 补齐、SFPEW 层下的旧版 MC、Angelica 跳过渲染器检查。",
-    "created_at": "2026-11-02T10:45:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41431305530"
-  },
-  {
-    "id": 41431305782,
-    "sha": "5377a427bc20f6f2a5d9119bd107d0391e77bb04",
-    "short_sha": "5377a42",
-    "message": "refactor: LauncherHelper 迁移至 Kotlin，启动任务链改为协程驱动 (#1877)\n\n启动流程由多层 thenComposeAsync 任务链改为单个协程线性执行：版本解析 → mod 扫描 → Java 检查 → 依赖补全 → 解包内置 jar → 登录 → 启动前检查 → 主线程拉起 JVMActivity。\n\n- launch0 拆分为 completeDependencies / unpackBuiltinJars / prepareLaunch / runPreLaunchChecks / startGame\n- fclcore 任务（游戏文件与整合包补全、GameVerificationFixTask）经 runTracked 接入 TaskExecutor，复用弹窗下载进度展示，协程取消与执行器取消双向级联\n- 检查与登录弹窗改为挂起式 awaitChoice / awaitLoginChoice，协程取消时一并关闭停留的弹窗；认证失败可反复重试，重试期间保留微软登录进度\n- 启动弹窗以六阶段任务列表展示，阶段按实际进入顺序打勾，isNotCheckGame 跳过依赖补全时不错位；TaskDialog 新增 setStages / beginStage / succeedStage / failStage 展示模式，TaskListPane 支持在展示模式下接入执行器\n- TaskDialog 换绑执行器或重设阶段列表时摘除旧监听并释放旧列表，避免监听与视图树残留\n- 取消路径加固：启动重入保护、onStop 与弹窗回调 isActive 守卫、执行器先启动再挂取消回调\n- modloader 安装引导改在主线程跳转，跳转失败同样取消启动；checkMod 回退扫描改用当前 profile 与版本\n\n验证：CI 全架构构建与 checkstyle 通过；真机测试 JNA 5.19.1 natives 补齐、SFPEW 层下的旧版 MC、Angelica 跳过渲染器检查。",
-    "created_at": "2026-11-02T10:45:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41431305782"
-  },
-  {
-    "id": 41430235511,
-    "sha": "9aef9fcff7db4fae9c34863689e43053161f779e",
-    "short_sha": "9aef9fc",
-    "message": "refactor: 启动协程复用 mainScope，Java 检查合并为单段主线程执行\n\n- 启动协程改由 mainScope 在 IO 调度器上启动，不再每次新建游离 scope\n\n- checkGameState 两段主线程块合并为一段，setting.java 入口快照一次，选定与检查使用同一值",
-    "created_at": "2026-11-02T10:36:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41430235511"
-  },
-  {
-    "id": 41430235492,
-    "sha": "9aef9fcff7db4fae9c34863689e43053161f779e",
-    "short_sha": "9aef9fc",
-    "message": "refactor: 启动协程复用 mainScope，Java 检查合并为单段主线程执行\n\n- 启动协程改由 mainScope 在 IO 调度器上启动，不再每次新建游离 scope\n\n- checkGameState 两段主线程块合并为一段，setting.java 入口快照一次，选定与检查使用同一值",
-    "created_at": "2026-11-02T10:36:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41430235492"
-  },
-  {
-    "id": 41430228225,
-    "sha": "9aef9fcff7db4fae9c34863689e43053161f779e",
-    "short_sha": "9aef9fc",
-    "message": "refactor: 启动协程复用 mainScope，Java 检查合并为单段主线程执行\n\n- 启动协程改由 mainScope 在 IO 调度器上启动，不再每次新建游离 scope\n\n- checkGameState 两段主线程块合并为一段，setting.java 入口快照一次，选定与检查使用同一值",
-    "created_at": "2026-11-02T10:36:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41430228225"
-  },
-  {
-    "id": 41430228201,
-    "sha": "9aef9fcff7db4fae9c34863689e43053161f779e",
-    "short_sha": "9aef9fc",
-    "message": "refactor: 启动协程复用 mainScope，Java 检查合并为单段主线程执行\n\n- 启动协程改由 mainScope 在 IO 调度器上启动，不再每次新建游离 scope\n\n- checkGameState 两段主线程块合并为一段，setting.java 入口快照一次，选定与检查使用同一值",
-    "created_at": "2026-11-02T10:36:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41430228201"
-  },
-  {
-    "id": 41379266349,
-    "sha": "f1907eb2a1127dcc7ef61477279e8f2bdb011978",
-    "short_sha": "f1907eb",
-    "message": "Update version_map.json",
-    "created_at": "2026-11-02T02:43:43Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41379266349"
   }
 ]

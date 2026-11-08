@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 168391097,
         "digest": "sha256:8c6b438ea2a3319adaf673d639adfb779dfb15d694d940814cd1c6b099d323a2",
-        "download_count": 22429,
+        "download_count": 22498,
         "created_at": "2026-07-31T02:59:21Z",
         "updated_at": "2026-07-31T03:03:42Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.7/Amethyst-Debug.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 156535672,
         "digest": "sha256:6b5579e93f50a62f4d96279683bb447325e5a4de9015deae787eee56c248211f",
-        "download_count": 91077,
+        "download_count": 91297,
         "created_at": "2026-07-31T02:59:28Z",
         "updated_at": "2026-07-31T03:03:42Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.7/Amethyst.apk"
@@ -128,25 +128,72 @@
   },
   "action": {
     "run": {
-      "id": 42353537719,
+      "id": 42441052362,
       "name": "Android CI",
-      "node_id": "WFR_kwLOOrUn6c8AAAAJ3Heytw",
-      "head_branch": "feat/mobilegl",
-      "head_sha": "3d5ce5d7d707d05a74aab19eebef9aba0081f6e8",
+      "node_id": "WFR_kwLOOrUn6c8AAAAJ4a8Qyg",
+      "head_branch": "v3_openjdk",
+      "head_sha": "a743e284382fdcbd3f809d483b8a7a92483b5341",
       "path": ".github/workflows/android.yml",
-      "display_title": "bump: mobilegl",
-      "run_number": 1027,
+      "display_title": "Update androidnsbypass submodule to use HTTP instead of SSH",
+      "run_number": 1029,
       "event": "push",
       "status": "completed",
       "conclusion": "success",
       "workflow_id": 162757109,
-      "check_suite_id": 114751301326,
-      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAat7Xmzg",
-      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/42353537719",
-      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/42353537719",
-      "pull_requests": [],
-      "created_at": "2026-11-07T07:59:34Z",
-      "updated_at": "2026-11-07T08:33:06Z",
+      "check_suite_id": 114974050274,
+      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAaxPzH4g",
+      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/42441052362",
+      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/42441052362",
+      "pull_requests": [
+        {
+          "url": "https://api.github.com/repos/CopperLauncher/Copper-AAMC/pulls/133",
+          "id": 4461331187,
+          "number": 133,
+          "head": {
+            "ref": "v3_openjdk",
+            "sha": "a743e284382fdcbd3f809d483b8a7a92483b5341",
+            "repo": {
+              "id": 984950761,
+              "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
+              "name": "Amethyst-Android"
+            }
+          },
+          "base": {
+            "ref": "v3_openjdk",
+            "sha": "a87ac8325c6b7a89a44752d44cceebc00b1f602e",
+            "repo": {
+              "id": 1157827415,
+              "url": "https://api.github.com/repos/CopperLauncher/Copper-AAMC",
+              "name": "Copper-AAMC"
+            }
+          }
+        },
+        {
+          "url": "https://api.github.com/repos/Lapis-ORG/Lapis-Android/pulls/2",
+          "id": 3992538538,
+          "number": 2,
+          "head": {
+            "ref": "v3_openjdk",
+            "sha": "a743e284382fdcbd3f809d483b8a7a92483b5341",
+            "repo": {
+              "id": 984950761,
+              "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
+              "name": "Amethyst-Android"
+            }
+          },
+          "base": {
+            "ref": "v3_openjdk",
+            "sha": "d1df879a316be61b5c2ef7c867d898b0fb83abba",
+            "repo": {
+              "id": 1230029877,
+              "url": "https://api.github.com/repos/Lapis-ORG/Lapis-Android",
+              "name": "Lapis-Android"
+            }
+          }
+        }
+      ],
+      "created_at": "2026-11-08T03:03:06Z",
+      "updated_at": "2026-11-08T03:08:35Z",
       "actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -170,7 +217,7 @@
       },
       "run_attempt": 1,
       "referenced_workflows": [],
-      "run_started_at": "2026-11-07T07:59:34Z",
+      "run_started_at": "2026-11-08T03:03:06Z",
       "triggering_actor": {
         "login": "alexytomi",
         "id": 60690056,
@@ -192,22 +239,22 @@
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/42353537719/jobs",
-      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/42353537719/logs",
-      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/114751301326",
-      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/42353537719/artifacts",
-      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/42353537719/cancel",
-      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/42353537719/rerun",
+      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/42441052362/jobs",
+      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/42441052362/logs",
+      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/114974050274",
+      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/42441052362/artifacts",
+      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/42441052362/cancel",
+      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/42441052362/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/workflows/162757109",
       "head_commit": {
-        "id": "3d5ce5d7d707d05a74aab19eebef9aba0081f6e8",
-        "tree_id": "4a47f7dc56c8a462cda959975bd0939bf63ed92e",
-        "message": "bump: mobilegl",
-        "timestamp": "2026-11-07T07:59:27Z",
+        "id": "a743e284382fdcbd3f809d483b8a7a92483b5341",
+        "tree_id": "54a9635a3e8fc8d1b29031882e45b0c58c47da32",
+        "message": "Update androidnsbypass submodule to use HTTP instead of SSH\n\nWill Close #405",
+        "timestamp": "2026-11-08T03:03:03Z",
         "author": {
-          "name": "tomikun",
-          "email": "60690056+alexytomi@users.noreply.github.com"
+          "name": "Scott McKay",
+          "email": "evilscaught@gmail.com"
         },
         "committer": {
           "name": "tomikun",
@@ -353,43 +400,43 @@
     },
     "artifacts": [
       {
-        "id": 13567586926,
-        "node_id": "MDg6QXJ0aWZhY3QxMzU2NzU4NjkyNg==",
-        "name": "app-debug (recommended)",
-        "size_in_bytes": 174279385,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/13567586926",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/13567586926/zip",
+        "id": 13601484015,
+        "node_id": "MDg6QXJ0aWZhY3QxMzYwMTQ4NDAxNQ==",
+        "name": "app-release",
+        "size_in_bytes": 154757383,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/13601484015",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/13601484015/zip",
         "expired": false,
-        "digest": "sha256:46ebf24fa84d1bf3639113f159814d3fc609a8a16a86b033a02e6ee31b95f9c9",
-        "created_at": "2026-11-07T08:32:56Z",
-        "updated_at": "2026-11-07T08:32:56Z",
-        "expires_at": "2027-02-05T07:59:35Z",
+        "digest": "sha256:d28c3bcbb526bea53c57420d75b4b72324651745bbbf19994e45efa71e017a28",
+        "created_at": "2026-11-08T03:08:02Z",
+        "updated_at": "2026-11-08T03:08:02Z",
+        "expires_at": "2027-02-06T03:03:07Z",
         "workflow_run": {
-          "id": 42353537719,
+          "id": 42441052362,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
-          "head_branch": "feat/mobilegl",
-          "head_sha": "3d5ce5d7d707d05a74aab19eebef9aba0081f6e8"
+          "head_branch": "v3_openjdk",
+          "head_sha": "a743e284382fdcbd3f809d483b8a7a92483b5341"
         }
       },
       {
-        "id": 13567309088,
-        "node_id": "MDg6QXJ0aWZhY3QxMzU2NzMwOTA4OA==",
-        "name": "app-release",
-        "size_in_bytes": 161333815,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/13567309088",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/13567309088/zip",
+        "id": 13601394276,
+        "node_id": "MDg6QXJ0aWZhY3QxMzYwMTM5NDI3Ng==",
+        "name": "app-debug (recommended)",
+        "size_in_bytes": 166337006,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/13601394276",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/13601394276/zip",
         "expired": false,
-        "digest": "sha256:ac1644b62b41774c7c05a5af5b6a2b4e10c89c4789181ab8a40e2a6b549ce421",
-        "created_at": "2026-11-07T08:33:02Z",
-        "updated_at": "2026-11-07T08:33:02Z",
-        "expires_at": "2027-02-05T07:59:35Z",
+        "digest": "sha256:4ac279cf9fc3adc537abf5b1bde0ef1075f00487c705321253b761bece4bb89f",
+        "created_at": "2026-11-08T03:07:56Z",
+        "updated_at": "2026-11-08T03:07:56Z",
+        "expires_at": "2027-02-06T03:03:07Z",
         "workflow_run": {
-          "id": 42353537719,
+          "id": 42441052362,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
-          "head_branch": "feat/mobilegl",
-          "head_sha": "3d5ce5d7d707d05a74aab19eebef9aba0081f6e8"
+          "head_branch": "v3_openjdk",
+          "head_sha": "a743e284382fdcbd3f809d483b8a7a92483b5341"
         }
       }
     ]

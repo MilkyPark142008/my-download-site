@@ -1,23 +1,116 @@
 {"run": {
-  "id": 42341101859,
-  "name": "Build",
-  "node_id": "WFR_kwLOIQeFGs8AAAAJ27nxIw",
-  "head_branch": "feat/quest-vr",
-  "head_sha": "c987300c258a4b52dab1df6a6fa1e1f1a88b6678",
-  "path": ".github/workflows/build.yml",
-  "display_title": "fix: Quest VR 门控按 Meta 厂商/型号兜底，判定结果缓存并输出日志",
-  "run_number": 1522,
+  "id": 42456553781,
+  "name": "Check Codes",
+  "node_id": "WFR_kwLOIQeFGs8AAAAJ4puZNQ",
+  "head_branch": "main",
+  "head_sha": "07b97289dee9d9ce469d4aad462b2599511b0972",
+  "path": ".github/workflows/check-codes.yml",
+  "display_title": "feat: 每版本渲染器覆盖——多版本切换免频繁改渲染器 (#1975)",
+  "run_number": 435,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
-  "workflow_id": 200966783,
-  "check_suite_id": 114719603580,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAatdI7fA",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42341101859",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42341101859",
-  "pull_requests": [],
-  "created_at": "2026-11-07T05:03:46Z",
-  "updated_at": "2026-11-07T05:09:31Z",
+  "workflow_id": 351611475,
+  "check_suite_id": 115013167309,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAax1GozQ",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42456553781",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42456553781",
+  "pull_requests": [
+    {
+      "url": "https://api.github.com/repos/root-S7/FoldCraftLauncher/pulls/137",
+      "id": 5202123034,
+      "number": 137,
+      "head": {
+        "ref": "main",
+        "sha": "07b97289dee9d9ce469d4aad462b2599511b0972",
+        "repo": {
+          "id": 554140954,
+          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      },
+      "base": {
+        "ref": "main",
+        "sha": "232485bc6ece1a1c3033579d3fd463349561cdb5",
+        "repo": {
+          "id": 672154970,
+          "url": "https://api.github.com/repos/root-S7/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
+      "id": 4452442002,
+      "number": 364,
+      "head": {
+        "ref": "main",
+        "sha": "07b97289dee9d9ce469d4aad462b2599511b0972",
+        "repo": {
+          "id": 554140954,
+          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      },
+      "base": {
+        "ref": "main",
+        "sha": "97dc0f6c4a5f5fada8b86aa68e1e9d4b189d1b25",
+        "repo": {
+          "id": 1026321990,
+          "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher/pulls/37",
+      "id": 4452270030,
+      "number": 37,
+      "head": {
+        "ref": "main",
+        "sha": "07b97289dee9d9ce469d4aad462b2599511b0972",
+        "repo": {
+          "id": 554140954,
+          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      },
+      "base": {
+        "ref": "main",
+        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
+        "repo": {
+          "id": 1335592322,
+          "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher/pulls/400",
+      "id": 4451484148,
+      "number": 400,
+      "head": {
+        "ref": "main",
+        "sha": "07b97289dee9d9ce469d4aad462b2599511b0972",
+        "repo": {
+          "id": 554140954,
+          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      },
+      "base": {
+        "ref": "main",
+        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
+        "repo": {
+          "id": 835628097,
+          "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      }
+    }
+  ],
+  "created_at": "2026-11-08T06:53:22Z",
+  "updated_at": "2026-11-08T06:54:41Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -41,7 +134,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-11-07T05:03:46Z",
+  "run_started_at": "2026-11-08T06:53:22Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -63,26 +156,26 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42341101859/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42341101859/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/114719603580",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42341101859/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42341101859/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42341101859/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42456553781/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42456553781/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/115013167309",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42456553781/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42456553781/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42456553781/rerun",
   "previous_attempt_url": null,
-  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/200966783",
+  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "c987300c258a4b52dab1df6a6fa1e1f1a88b6678",
-    "tree_id": "4be3b67c32b929226443f50b68ba8af29e3dc88d",
-    "message": "fix: Quest VR 门控按 Meta 厂商/型号兜底，判定结果缓存并输出日志\n\nHorizon OS 部分版本不向普通应用报告 android.hardware.vr.headtracking\n特性，仅依赖该特性会把 Quest 设备挡在 VR 设置之外；Meta 设备改为\n厂商/型号兜底判定，首次判定缓存并打 logcat 便于排查。",
-    "timestamp": "2026-11-07T04:48:07Z",
+    "id": "07b97289dee9d9ce469d4aad462b2599511b0972",
+    "tree_id": "adda98313473bb6bbe347ddde75dd50f823f8758",
+    "message": "feat: 每版本渲染器覆盖——多版本切换免频繁改渲染器 (#1975)\n\n* feat: 每版本渲染器覆盖——版本列表入口、全版本 Spinner 设置对话框、渲染器修改遮蔽警告\n\n- Profile.rendererOverrides（版本 id → renderer id）随配置 JSON 持久化，独立于 usesGlobal；\n  启动解析单点接入 getLaunchOptions：覆盖 > 特定设置 > 全局\n- 版本列表页左下角新增静态渲染器入口，打开 RendererOverrideDialog：\n  列出当前配置全部版本逐行 FCLSpinner 指定渲染器，默认「跟随设置」（即不覆盖）\n- 覆盖存在时从别处修改渲染器会弹遮蔽提示并提供三选项：\n  更新覆盖（覆盖改为本次选择）/清除覆盖（版本回到跟随设置）/保留覆盖\n  - 全局设置页仅检测当前选中版本，与既有「独立设置版本」提示合并展示\n  - 长按启动被遮蔽时不自动启动，更新/清除覆盖后沿用本次选择继续启动\n- 特定游戏设置页/长按启动的渲染器选择回调改传 Renderer（id 供覆盖比对）\n\n* fix: 渲染器覆盖指向已卸载/禁用的渲染器时视同无覆盖，长按启动取消时回滚写入\n\n- 新增 RendererManager.findRenderer（查找不兜底）与 Profile.getEffectiveRendererOverride，\n  启动解析、三处遮蔽检测统一改用有效覆盖判定，失效覆盖不再落入 NGGL4ES 兜底\n- 渲染器覆盖对话框打开时顺手清除失效覆盖并落盘，配置与界面、启动行为保持一致\n- MainActivity 长按启动被遮蔽提示打断后选取消时，回滚本次写入版本设置的渲染器，\n  避免放弃启动仍残留修改\n\n* fix: 渲染器遮蔽弹窗取消/保留时回滚对话框已写入的设置，全局页覆盖提示与 usesGlobal 解耦",
+    "timestamp": "2026-11-08T06:53:19Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
     },
     "committer": {
-      "name": "ShirosakiMio",
-      "email": "852468399@qq.com"
+      "name": "GitHub",
+      "email": "noreply@github.com"
     }
   },
   "repository": {
@@ -222,107 +315,8 @@
     "deployments_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/deployments"
   }
 }, "artifacts": {
-  "total_count": 5,
+  "total_count": 0,
   "artifacts": [
-    {
-      "id": 13561459338,
-      "node_id": "MDg6QXJ0aWZhY3QxMzU2MTQ1OTMzOA==",
-      "name": "app-arm64",
-      "size_in_bytes": 168966506,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13561459338",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13561459338/zip",
-      "expired": false,
-      "digest": "sha256:67306ef626278196d94822e4b9095ece0318e84f9860ae9a28f51856464744d9",
-      "created_at": "2026-11-07T05:09:10Z",
-      "updated_at": "2026-11-07T05:09:10Z",
-      "expires_at": "2026-11-14T05:03:46Z",
-      "workflow_run": {
-        "id": 42341101859,
-        "repository_id": 554140954,
-        "head_repository_id": 554140954,
-        "head_branch": "feat/quest-vr",
-        "head_sha": "c987300c258a4b52dab1df6a6fa1e1f1a88b6678"
-      }
-    },
-    {
-      "id": 13561384354,
-      "node_id": "MDg6QXJ0aWZhY3QxMzU2MTM4NDM1NA==",
-      "name": "app-arm",
-      "size_in_bytes": 161063192,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13561384354",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13561384354/zip",
-      "expired": false,
-      "digest": "sha256:86f157ac771d211339e007c17b8600582b471c4fc26e56d9845429767fc44d15",
-      "created_at": "2026-11-07T05:08:31Z",
-      "updated_at": "2026-11-07T05:08:31Z",
-      "expires_at": "2026-11-14T05:03:46Z",
-      "workflow_run": {
-        "id": 42341101859,
-        "repository_id": 554140954,
-        "head_repository_id": 554140954,
-        "head_branch": "feat/quest-vr",
-        "head_sha": "c987300c258a4b52dab1df6a6fa1e1f1a88b6678"
-      }
-    },
-    {
-      "id": 13561069865,
-      "node_id": "MDg6QXJ0aWZhY3QxMzU2MTA2OTg2NQ==",
-      "name": "app-x86_64",
-      "size_in_bytes": 173664683,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13561069865",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13561069865/zip",
-      "expired": false,
-      "digest": "sha256:282a5e997a16d962a4d949825cd0b4520192c01130a605115f128314cfc30764",
-      "created_at": "2026-11-07T05:08:32Z",
-      "updated_at": "2026-11-07T05:08:32Z",
-      "expires_at": "2026-11-14T05:03:46Z",
-      "workflow_run": {
-        "id": 42341101859,
-        "repository_id": 554140954,
-        "head_repository_id": 554140954,
-        "head_branch": "feat/quest-vr",
-        "head_sha": "c987300c258a4b52dab1df6a6fa1e1f1a88b6678"
-      }
-    },
-    {
-      "id": 13560909495,
-      "node_id": "MDg6QXJ0aWZhY3QxMzU2MDkwOTQ5NQ==",
-      "name": "app-all",
-      "size_in_bytes": 321909782,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13560909495",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13560909495/zip",
-      "expired": false,
-      "digest": "sha256:081e096bac55275b3df4d23e3a263197417f715e4db8e9c71914d1e118be5e12",
-      "created_at": "2026-11-07T05:09:27Z",
-      "updated_at": "2026-11-07T05:09:27Z",
-      "expires_at": "2026-11-14T05:03:46Z",
-      "workflow_run": {
-        "id": 42341101859,
-        "repository_id": 554140954,
-        "head_repository_id": 554140954,
-        "head_branch": "feat/quest-vr",
-        "head_sha": "c987300c258a4b52dab1df6a6fa1e1f1a88b6678"
-      }
-    },
-    {
-      "id": 13560744829,
-      "node_id": "MDg6QXJ0aWZhY3QxMzU2MDc0NDgyOQ==",
-      "name": "app-x86",
-      "size_in_bytes": 163402364,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13560744829",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/13560744829/zip",
-      "expired": false,
-      "digest": "sha256:e546815c5247054682a7a265615042400a2cb88526038e57b92f489e43ef1f97",
-      "created_at": "2026-11-07T05:08:50Z",
-      "updated_at": "2026-11-07T05:08:50Z",
-      "expires_at": "2026-11-14T05:03:46Z",
-      "workflow_run": {
-        "id": 42341101859,
-        "repository_id": 554140954,
-        "head_repository_id": 554140954,
-        "head_branch": "feat/quest-vr",
-        "head_sha": "c987300c258a4b52dab1df6a6fa1e1f1a88b6678"
-      }
-    }
+
   ]
 }}
