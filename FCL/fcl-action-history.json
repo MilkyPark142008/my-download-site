@@ -1,19 +1,19 @@
 [
   {
-    "id": 42488542930,
-    "sha": "601f3a9f5da116c450edae00170012b276028986",
-    "short_sha": "601f3a9",
-    "message": "fix: logger 线程退出先释放全局引用再 Detach，修复安装进程 CheckJNI abort\n\ncherry-pick 审查修复时漏掉了退出顺序修正：DetachCurrentThread 必须是\n退出路径最后一个 JNI 调用，脱离后再用旧 env DeleteGlobalRef 会触发\nCheckAttachedThread JniAbort 打崩 :jvm 进程——表现为下一 processor 阶段\nredirectStdio 接管 stdio 时安装中断",
-    "created_at": "2026-11-08T14:06:11Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42488542930"
-  },
-  {
     "id": 42488542954,
     "sha": "601f3a9f5da116c450edae00170012b276028986",
     "short_sha": "601f3a9",
     "message": "fix: logger 线程退出先释放全局引用再 Detach，修复安装进程 CheckJNI abort\n\ncherry-pick 审查修复时漏掉了退出顺序修正：DetachCurrentThread 必须是\n退出路径最后一个 JNI 调用，脱离后再用旧 env DeleteGlobalRef 会触发\nCheckAttachedThread JniAbort 打崩 :jvm 进程——表现为下一 processor 阶段\nredirectStdio 接管 stdio 时安装中断",
     "created_at": "2026-11-08T14:06:11Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42488542954"
+  },
+  {
+    "id": 42488542930,
+    "sha": "601f3a9f5da116c450edae00170012b276028986",
+    "short_sha": "601f3a9",
+    "message": "fix: logger 线程退出先释放全局引用再 Detach，修复安装进程 CheckJNI abort\n\ncherry-pick 审查修复时漏掉了退出顺序修正：DetachCurrentThread 必须是\n退出路径最后一个 JNI 调用，脱离后再用旧 env DeleteGlobalRef 会触发\nCheckAttachedThread JniAbort 打崩 :jvm 进程——表现为下一 processor 阶段\nredirectStdio 接管 stdio 时安装中断",
+    "created_at": "2026-11-08T14:06:11Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42488542930"
   },
   {
     "id": 42488538471,
