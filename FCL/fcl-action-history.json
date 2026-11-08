@@ -1,5 +1,149 @@
 [
   {
+    "id": 42488542954,
+    "sha": "601f3a9f5da116c450edae00170012b276028986",
+    "short_sha": "601f3a9",
+    "message": "fix: logger 线程退出先释放全局引用再 Detach，修复安装进程 CheckJNI abort\n\ncherry-pick 审查修复时漏掉了退出顺序修正：DetachCurrentThread 必须是\n退出路径最后一个 JNI 调用，脱离后再用旧 env DeleteGlobalRef 会触发\nCheckAttachedThread JniAbort 打崩 :jvm 进程——表现为下一 processor 阶段\nredirectStdio 接管 stdio 时安装中断",
+    "created_at": "2026-11-08T14:06:11Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42488542954"
+  },
+  {
+    "id": 42487152884,
+    "sha": "1961d05e6c8827fe5b14117018be374c6b4e1f59",
+    "short_sha": "1961d05",
+    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
+    "created_at": "2026-11-08T13:53:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487152884"
+  },
+  {
+    "id": 42487152855,
+    "sha": "1961d05e6c8827fe5b14117018be374c6b4e1f59",
+    "short_sha": "1961d05",
+    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
+    "created_at": "2026-11-08T13:53:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487152855"
+  },
+  {
+    "id": 42487149059,
+    "sha": "1961d05e6c8827fe5b14117018be374c6b4e1f59",
+    "short_sha": "1961d05",
+    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
+    "created_at": "2026-11-08T13:53:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487149059"
+  },
+  {
+    "id": 42487149107,
+    "sha": "1961d05e6c8827fe5b14117018be374c6b4e1f59",
+    "short_sha": "1961d05",
+    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
+    "created_at": "2026-11-08T13:53:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487149107"
+  },
+  {
+    "id": 42487011565,
+    "sha": "95327bb1fa9cbdd3ce561a3db0556035e2625574",
+    "short_sha": "95327bb",
+    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
+    "created_at": "2026-11-08T13:51:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487011565"
+  },
+  {
+    "id": 42487011727,
+    "sha": "95327bb1fa9cbdd3ce561a3db0556035e2625574",
+    "short_sha": "95327bb",
+    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
+    "created_at": "2026-11-08T13:51:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487011727"
+  },
+  {
+    "id": 42487008187,
+    "sha": "95327bb1fa9cbdd3ce561a3db0556035e2625574",
+    "short_sha": "95327bb",
+    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
+    "created_at": "2026-11-08T13:51:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487008187"
+  },
+  {
+    "id": 42487008176,
+    "sha": "95327bb1fa9cbdd3ce561a3db0556035e2625574",
+    "short_sha": "95327bb",
+    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
+    "created_at": "2026-11-08T13:51:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487008176"
+  },
+  {
+    "id": 42484839386,
+    "sha": "2f6ce6d7060bbaf1f2fa504f4d96783857a1fb76",
+    "short_sha": "2f6ce6d",
+    "message": "fix: updateBuiltinJarSha1 去掉输入输出声明，规避 lintVitalAnalyzeRelease 隐式依赖校验失败",
+    "created_at": "2026-11-08T13:23:36Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42484839386"
+  },
+  {
+    "id": 42483752349,
+    "sha": "234d213690fb0d9ea07b540541bd33f270caaa78",
+    "short_sha": "234d213",
+    "message": "fix: 修复无法正常启动 Minecraft 13w16a~13w23b 快照的问题 (#2002)\n\n- 13w16a~13w23b 快照缺少非英语语言的外部语言资源，写入 lang 后启动会卡在 Mojang 加载界面，历史已写入的 lang 一并重置为默认英语\n- has_custom_resolution 特性标志增加版本门控，1.6（快照 13w25a）之前的版本不支持自定义分辨率参数\n\n参考 HMCL（https://github.com/HMCL-dev/HMCL/commit/087b2b678d51782f0d6bd64db8a2acd7608c8ee7）",
+    "created_at": "2026-11-08T13:11:17Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42483752349"
+  },
+  {
+    "id": 42483714589,
+    "sha": "d03e3a69f4b4ff90e93924d98c030da55780e443",
+    "short_sha": "d03e3a6",
+    "message": "fix: 移除游戏内按键投影阴影，elevation 仅保留堆叠 z 序 #2007 (#2008)",
+    "created_at": "2026-11-08T13:10:50Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42483714589"
+  },
+  {
+    "id": 42483113477,
+    "sha": "4ed453185f80c6e1768347947aef5c6e4f19104e",
+    "short_sha": "4ed4531",
+    "message": "optimize: 启动解包内置 jar 前按包内 .sha1 比对跳过重复释放，kts 注册 updateBuiltinJarSha1 自动续期校验文件",
+    "created_at": "2026-11-08T13:02:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42483113477"
+  },
+  {
+    "id": 42472434886,
+    "sha": "dba408c250b788e95286db4fb5cfa5604374484b",
+    "short_sha": "dba408c",
+    "message": "feat: AWT 悬浮层补齐 jre8 支持，AwtHelper 迁为 LWJGL 子模块随启动释放",
+    "created_at": "2026-11-08T10:40:39Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42472434886"
+  },
+  {
+    "id": 42472434849,
+    "sha": "dba408c250b788e95286db4fb5cfa5604374484b",
+    "short_sha": "dba408c",
+    "message": "feat: AWT 悬浮层补齐 jre8 支持，AwtHelper 迁为 LWJGL 子模块随启动释放",
+    "created_at": "2026-11-08T10:40:39Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42472434849"
+  },
+  {
+    "id": 42470165137,
+    "sha": "714e01b28111d5180ecdc29a4547f053e1851c14",
+    "short_sha": "714e01b",
+    "message": "fix: 启动时将系统 CJK 字体挂入 JRE fallback 目录修复 AWT 中文渲染",
+    "created_at": "2026-11-08T09:45:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42470165137"
+  },
+  {
+    "id": 42470165096,
+    "sha": "714e01b28111d5180ecdc29a4547f053e1851c14",
+    "short_sha": "714e01b",
+    "message": "fix: 启动时将系统 CJK 字体挂入 JRE fallback 目录修复 AWT 中文渲染",
+    "created_at": "2026-11-08T09:45:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42470165096"
+  },
+  {
+    "id": 42464706916,
+    "sha": "4651817676c76aa1218bd9d0610a5f251a1a5c49",
+    "short_sha": "4651817",
+    "message": "fix: 渲染器覆盖对话框行内 Spinner 关闭 autoTint，避免对比色与对话框固定背景撞色",
+    "created_at": "2026-11-08T08:51:09Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42464706916"
+  },
+  {
     "id": 42456553781,
     "sha": "07b97289dee9d9ce469d4aad462b2599511b0972",
     "short_sha": "07b9728",
@@ -254,149 +398,5 @@
     "message": "fix: 渲染器覆盖指向已卸载/禁用的渲染器时视同无覆盖，长按启动取消时回滚写入\n\n- 新增 RendererManager.findRenderer（查找不兜底）与 Profile.getEffectiveRendererOverride，\n  启动解析、三处遮蔽检测统一改用有效覆盖判定，失效覆盖不再落入 NGGL4ES 兜底\n- 渲染器覆盖对话框打开时顺手清除失效覆盖并落盘，配置与界面、启动行为保持一致\n- MainActivity 长按启动被遮蔽提示打断后选取消时，回滚本次写入版本设置的渲染器，\n  避免放弃启动仍残留修改",
     "created_at": "2026-11-06T01:36:03Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42144927473"
-  },
-  {
-    "id": 41971937619,
-    "sha": "b810127701cc826e0e4277da2bd59e1b3f2fffbd",
-    "short_sha": "b810127",
-    "message": "feat: 文件下载并行续传——多连接分块突破按连接限速的慢速源 (#1960)\n\n* feat: 文件下载并行续传——单连接持续低速时切换多连接分块拉取剩余区间，突破网盘直链按连接数限速（修复 Cleanroom alist 镜像 50KB/s 下载缓慢）\n\n- FetchTask 单流读循环加 downloadParallelRemainder 钩子：复用 BMCLAPIRetryPolicy 同款 10s 速度窗口，持续低于 128KB/s 且剩余量按当前速度还需超一个窗口时触发；触发前零额外请求，快服务器不受影响\n- FileDownloadTask 实现：1 字节 Range 探测（206+总大小核对，不支持则回退单流）→ 剩余区间按 ≥2MB/块均分最多 8 连接 → 按绝对偏移 FileChannel 写同一临时文件保留前缀 → 复用 Context.close() 原有落盘/ZIP 校验/缓存流程\n- 分块读超时放宽到 30s 且在 resolveConnection 之后设置：按连接限速的服务器数据间歇性滴流，常规 10s 会反复掐死正常工作的分块连接\n- 分块失败按轮次统一重试（retry 轮+轮间退避），续传请求从已写偏移发 Range 只补未完成区间；全局进度=前缀+Σ(分块已写偏移) 严格单调，修复分块重试重复计字节把进度顶破 100% 导致整轮报废、进度条反复跑满清零的问题\n- BMCLAPI 链路原慢速节点切换优先级不变；GetTask 不受影响\n- 新增 androidTest FileDownloadTaskTest：Content-Range 解析单测 + 真实限速链路端到端（MuMu 实测 145s/191s vs 单连接 ≥300s 下限，含 round-2 真实续传路径与进度单调性断言）\n\n* fix: 并行续传完成后按最终文件重算校验摘要，修复带校验下载触发并行后必失败\n\n- digest/bmclapiDigest 字段化：分块写入不经过 Context.write，完成时对临时文件整体重建摘要，否则带 IntegrityCheck 或 BMCLAPI 兜底哈希的下载触发并行后校验必失败\n- 修正并行续传与慢速节点切换的优先级注释：BMCLAPI 链路同命中时仍优先换节点，仅末次尝试由并行接管\n- downloadedBytes 加 volatile（并行续传阶段由分块线程并发写）\n- 新增本地可控服务器（单流限速、分块全速）带 SHA-1 校验的并行续传回归用例，未修复状态实测必红；外网用例标注对镜像限速行为的依赖；清理测试内全限定名",
-    "created_at": "2026-11-05T05:06:54Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41971937619"
-  },
-  {
-    "id": 41971937613,
-    "sha": "b810127701cc826e0e4277da2bd59e1b3f2fffbd",
-    "short_sha": "b810127",
-    "message": "feat: 文件下载并行续传——多连接分块突破按连接限速的慢速源 (#1960)\n\n* feat: 文件下载并行续传——单连接持续低速时切换多连接分块拉取剩余区间，突破网盘直链按连接数限速（修复 Cleanroom alist 镜像 50KB/s 下载缓慢）\n\n- FetchTask 单流读循环加 downloadParallelRemainder 钩子：复用 BMCLAPIRetryPolicy 同款 10s 速度窗口，持续低于 128KB/s 且剩余量按当前速度还需超一个窗口时触发；触发前零额外请求，快服务器不受影响\n- FileDownloadTask 实现：1 字节 Range 探测（206+总大小核对，不支持则回退单流）→ 剩余区间按 ≥2MB/块均分最多 8 连接 → 按绝对偏移 FileChannel 写同一临时文件保留前缀 → 复用 Context.close() 原有落盘/ZIP 校验/缓存流程\n- 分块读超时放宽到 30s 且在 resolveConnection 之后设置：按连接限速的服务器数据间歇性滴流，常规 10s 会反复掐死正常工作的分块连接\n- 分块失败按轮次统一重试（retry 轮+轮间退避），续传请求从已写偏移发 Range 只补未完成区间；全局进度=前缀+Σ(分块已写偏移) 严格单调，修复分块重试重复计字节把进度顶破 100% 导致整轮报废、进度条反复跑满清零的问题\n- BMCLAPI 链路原慢速节点切换优先级不变；GetTask 不受影响\n- 新增 androidTest FileDownloadTaskTest：Content-Range 解析单测 + 真实限速链路端到端（MuMu 实测 145s/191s vs 单连接 ≥300s 下限，含 round-2 真实续传路径与进度单调性断言）\n\n* fix: 并行续传完成后按最终文件重算校验摘要，修复带校验下载触发并行后必失败\n\n- digest/bmclapiDigest 字段化：分块写入不经过 Context.write，完成时对临时文件整体重建摘要，否则带 IntegrityCheck 或 BMCLAPI 兜底哈希的下载触发并行后校验必失败\n- 修正并行续传与慢速节点切换的优先级注释：BMCLAPI 链路同命中时仍优先换节点，仅末次尝试由并行接管\n- downloadedBytes 加 volatile（并行续传阶段由分块线程并发写）\n- 新增本地可控服务器（单流限速、分块全速）带 SHA-1 校验的并行续传回归用例，未修复状态实测必红；外网用例标注对镜像限速行为的依赖；清理测试内全限定名",
-    "created_at": "2026-11-05T05:06:54Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41971937613"
-  },
-  {
-    "id": 41967357771,
-    "sha": "98489567e746c2a8a18d7de168b5706bec0ef872",
-    "short_sha": "9848956",
-    "message": "fix: 并行续传完成后按最终文件重算校验摘要，修复带校验下载触发并行后必失败\n\n- digest/bmclapiDigest 字段化：分块写入不经过 Context.write，完成时对临时文件整体重建摘要，否则带 IntegrityCheck 或 BMCLAPI 兜底哈希的下载触发并行后校验必失败\n- 修正并行续传与慢速节点切换的优先级注释：BMCLAPI 链路同命中时仍优先换节点，仅末次尝试由并行接管\n- downloadedBytes 加 volatile（并行续传阶段由分块线程并发写）\n- 新增本地可控服务器（单流限速、分块全速）带 SHA-1 校验的并行续传回归用例，未修复状态实测必红；外网用例标注对镜像限速行为的依赖；清理测试内全限定名",
-    "created_at": "2026-11-05T04:19:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41967357771"
-  },
-  {
-    "id": 41967357921,
-    "sha": "98489567e746c2a8a18d7de168b5706bec0ef872",
-    "short_sha": "9848956",
-    "message": "fix: 并行续传完成后按最终文件重算校验摘要，修复带校验下载触发并行后必失败\n\n- digest/bmclapiDigest 字段化：分块写入不经过 Context.write，完成时对临时文件整体重建摘要，否则带 IntegrityCheck 或 BMCLAPI 兜底哈希的下载触发并行后校验必失败\n- 修正并行续传与慢速节点切换的优先级注释：BMCLAPI 链路同命中时仍优先换节点，仅末次尝试由并行接管\n- downloadedBytes 加 volatile（并行续传阶段由分块线程并发写）\n- 新增本地可控服务器（单流限速、分块全速）带 SHA-1 校验的并行续传回归用例，未修复状态实测必红；外网用例标注对镜像限速行为的依赖；清理测试内全限定名",
-    "created_at": "2026-11-05T04:19:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41967357921"
-  },
-  {
-    "id": 41967352105,
-    "sha": "98489567e746c2a8a18d7de168b5706bec0ef872",
-    "short_sha": "9848956",
-    "message": "fix: 并行续传完成后按最终文件重算校验摘要，修复带校验下载触发并行后必失败\n\n- digest/bmclapiDigest 字段化：分块写入不经过 Context.write，完成时对临时文件整体重建摘要，否则带 IntegrityCheck 或 BMCLAPI 兜底哈希的下载触发并行后校验必失败\n- 修正并行续传与慢速节点切换的优先级注释：BMCLAPI 链路同命中时仍优先换节点，仅末次尝试由并行接管\n- downloadedBytes 加 volatile（并行续传阶段由分块线程并发写）\n- 新增本地可控服务器（单流限速、分块全速）带 SHA-1 校验的并行续传回归用例，未修复状态实测必红；外网用例标注对镜像限速行为的依赖；清理测试内全限定名",
-    "created_at": "2026-11-05T04:19:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41967352105"
-  },
-  {
-    "id": 41967352103,
-    "sha": "98489567e746c2a8a18d7de168b5706bec0ef872",
-    "short_sha": "9848956",
-    "message": "fix: 并行续传完成后按最终文件重算校验摘要，修复带校验下载触发并行后必失败\n\n- digest/bmclapiDigest 字段化：分块写入不经过 Context.write，完成时对临时文件整体重建摘要，否则带 IntegrityCheck 或 BMCLAPI 兜底哈希的下载触发并行后校验必失败\n- 修正并行续传与慢速节点切换的优先级注释：BMCLAPI 链路同命中时仍优先换节点，仅末次尝试由并行接管\n- downloadedBytes 加 volatile（并行续传阶段由分块线程并发写）\n- 新增本地可控服务器（单流限速、分块全速）带 SHA-1 校验的并行续传回归用例，未修复状态实测必红；外网用例标注对镜像限速行为的依赖；清理测试内全限定名",
-    "created_at": "2026-11-05T04:19:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41967352103"
-  },
-  {
-    "id": 41761562139,
-    "sha": "eafbb81845141711e076b93bb7dbda5c5c15d912",
-    "short_sha": "eafbb81",
-    "message": "feat: 整合包补全自动恢复前弹窗确认，支持对话框内直接关闭补全 (#1990)\n\n* feat: 整合包补全自动恢复前弹窗确认，支持对话框内直接关闭补全\n\n整合包版本每次启动都会执行补全任务，清单内缺失的文件（含被用户\n主动删除/更新的模组）会被静默装回，无任何提示。\n\n启动补全前先本地探测将被恢复的缺失文件，非空则弹窗列出，用户可选：\n- 继续补全：照常恢复\n- 跳过本次：本次不补全，下次启动再询问\n- 不再自动补全：持久化到版本设置（版本设置中可随时改回）\n\n探测按 Provider 类型分派并用具体 TypeToken 重读清单（规避\nModpackConfiguration<?> 通配反序列化得到 LinkedTreeMap 的坑），\n清单源与各补全任务对齐（curse 读版本根目录 manifest.json、\nmodrinth 读 modrinth.index.json、mcbbs/server 读 modpack.cfg），\n任何异常兜底返回空表，绝不阻断启动。\n\n* fix: 弹窗确认移植协程版启动流程，探测口径与补全任务对齐\n\n- LauncherHelper 协程化后整合包补全确认改在 completeDependencies 内以 awaitChoice 挂起式三选弹窗实现（跳过本次/继续补全/不再自动补全），协程取消自动收起弹窗\n- Server 探测补齐 fileApi 空判断：为空时补全任务空转，不弹窗\n- Curse/Modrinth 清单缺失时不再回退 modpack.cfg（补全任务此时同样空转），避免弹窗承诺不会发生的补全\n- Curse 资源包/光影包根目录改用与补全任务一致的版本根目录表达式\n- javadoc 注明 Mcbbs/Server 远端清单更新行为不在探测范围",
-    "created_at": "2026-11-04T02:33:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41761562139"
-  },
-  {
-    "id": 41761562056,
-    "sha": "eafbb81845141711e076b93bb7dbda5c5c15d912",
-    "short_sha": "eafbb81",
-    "message": "feat: 整合包补全自动恢复前弹窗确认，支持对话框内直接关闭补全 (#1990)\n\n* feat: 整合包补全自动恢复前弹窗确认，支持对话框内直接关闭补全\n\n整合包版本每次启动都会执行补全任务，清单内缺失的文件（含被用户\n主动删除/更新的模组）会被静默装回，无任何提示。\n\n启动补全前先本地探测将被恢复的缺失文件，非空则弹窗列出，用户可选：\n- 继续补全：照常恢复\n- 跳过本次：本次不补全，下次启动再询问\n- 不再自动补全：持久化到版本设置（版本设置中可随时改回）\n\n探测按 Provider 类型分派并用具体 TypeToken 重读清单（规避\nModpackConfiguration<?> 通配反序列化得到 LinkedTreeMap 的坑），\n清单源与各补全任务对齐（curse 读版本根目录 manifest.json、\nmodrinth 读 modrinth.index.json、mcbbs/server 读 modpack.cfg），\n任何异常兜底返回空表，绝不阻断启动。\n\n* fix: 弹窗确认移植协程版启动流程，探测口径与补全任务对齐\n\n- LauncherHelper 协程化后整合包补全确认改在 completeDependencies 内以 awaitChoice 挂起式三选弹窗实现（跳过本次/继续补全/不再自动补全），协程取消自动收起弹窗\n- Server 探测补齐 fileApi 空判断：为空时补全任务空转，不弹窗\n- Curse/Modrinth 清单缺失时不再回退 modpack.cfg（补全任务此时同样空转），避免弹窗承诺不会发生的补全\n- Curse 资源包/光影包根目录改用与补全任务一致的版本根目录表达式\n- javadoc 注明 Mcbbs/Server 远端清单更新行为不在探测范围",
-    "created_at": "2026-11-04T02:33:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41761562056"
-  },
-  {
-    "id": 41758588253,
-    "sha": "2a9c0309bdd6809869c517ae5a3e97c07123e881",
-    "short_sha": "2a9c030",
-    "message": "fix: 弹窗确认移植协程版启动流程，探测口径与补全任务对齐\n\n- LauncherHelper 协程化后整合包补全确认改在 completeDependencies 内以 awaitChoice 挂起式三选弹窗实现（跳过本次/继续补全/不再自动补全），协程取消自动收起弹窗\n- Server 探测补齐 fileApi 空判断：为空时补全任务空转，不弹窗\n- Curse/Modrinth 清单缺失时不再回退 modpack.cfg（补全任务此时同样空转），避免弹窗承诺不会发生的补全\n- Curse 资源包/光影包根目录改用与补全任务一致的版本根目录表达式\n- javadoc 注明 Mcbbs/Server 远端清单更新行为不在探测范围",
-    "created_at": "2026-11-04T02:06:43Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41758588253"
-  },
-  {
-    "id": 41758588305,
-    "sha": "2a9c0309bdd6809869c517ae5a3e97c07123e881",
-    "short_sha": "2a9c030",
-    "message": "fix: 弹窗确认移植协程版启动流程，探测口径与补全任务对齐\n\n- LauncherHelper 协程化后整合包补全确认改在 completeDependencies 内以 awaitChoice 挂起式三选弹窗实现（跳过本次/继续补全/不再自动补全），协程取消自动收起弹窗\n- Server 探测补齐 fileApi 空判断：为空时补全任务空转，不弹窗\n- Curse/Modrinth 清单缺失时不再回退 modpack.cfg（补全任务此时同样空转），避免弹窗承诺不会发生的补全\n- Curse 资源包/光影包根目录改用与补全任务一致的版本根目录表达式\n- javadoc 注明 Mcbbs/Server 远端清单更新行为不在探测范围",
-    "created_at": "2026-11-04T02:06:43Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41758588305"
-  },
-  {
-    "id": 41758583688,
-    "sha": "2a9c0309bdd6809869c517ae5a3e97c07123e881",
-    "short_sha": "2a9c030",
-    "message": "fix: 弹窗确认移植协程版启动流程，探测口径与补全任务对齐\n\n- LauncherHelper 协程化后整合包补全确认改在 completeDependencies 内以 awaitChoice 挂起式三选弹窗实现（跳过本次/继续补全/不再自动补全），协程取消自动收起弹窗\n- Server 探测补齐 fileApi 空判断：为空时补全任务空转，不弹窗\n- Curse/Modrinth 清单缺失时不再回退 modpack.cfg（补全任务此时同样空转），避免弹窗承诺不会发生的补全\n- Curse 资源包/光影包根目录改用与补全任务一致的版本根目录表达式\n- javadoc 注明 Mcbbs/Server 远端清单更新行为不在探测范围",
-    "created_at": "2026-11-04T02:06:43Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41758583688"
-  },
-  {
-    "id": 41758583539,
-    "sha": "2a9c0309bdd6809869c517ae5a3e97c07123e881",
-    "short_sha": "2a9c030",
-    "message": "fix: 弹窗确认移植协程版启动流程，探测口径与补全任务对齐\n\n- LauncherHelper 协程化后整合包补全确认改在 completeDependencies 内以 awaitChoice 挂起式三选弹窗实现（跳过本次/继续补全/不再自动补全），协程取消自动收起弹窗\n- Server 探测补齐 fileApi 空判断：为空时补全任务空转，不弹窗\n- Curse/Modrinth 清单缺失时不再回退 modpack.cfg（补全任务此时同样空转），避免弹窗承诺不会发生的补全\n- Curse 资源包/光影包根目录改用与补全任务一致的版本根目录表达式\n- javadoc 注明 Mcbbs/Server 远端清单更新行为不在探测范围",
-    "created_at": "2026-11-04T02:06:43Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41758583539"
-  },
-  {
-    "id": 41755396631,
-    "sha": "0dbbcf5e67a8f8e5440bef5c4429cdbdb4b49fea",
-    "short_sha": "0dbbcf5",
-    "message": "style: CenterCropDrawable 改用 withTranslation 扩展，MainActivity 格式化",
-    "created_at": "2026-11-04T01:37:54Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41755396631"
-  },
-  {
-    "id": 41755396740,
-    "sha": "0dbbcf5e67a8f8e5440bef5c4429cdbdb4b49fea",
-    "short_sha": "0dbbcf5",
-    "message": "style: CenterCropDrawable 改用 withTranslation 扩展，MainActivity 格式化",
-    "created_at": "2026-11-04T01:37:54Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41755396740"
-  },
-  {
-    "id": 41644092992,
-    "sha": "bf84aa71c84c9e863cdb6890866957c8497cb841",
-    "short_sha": "bf84aa7",
-    "message": "fix: 背景图改为按视图实时尺寸居中裁剪，修复息屏启动后比例拉伸\n\n新增 CenterCropDrawable，绘制时按当前 bounds 实时等比缩放居中裁剪；\nImageUtil.loadInto 移除 Glide，不再按加载时刻定格的视图尺寸裁出固定\nBitmap，旋转、折叠等尺寸变化场景同样保持正确比例",
-    "created_at": "2026-11-03T13:24:22Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41644092992"
-  },
-  {
-    "id": 41581618526,
-    "sha": "badf87666930d03433e2008e4160737a22bb1109",
-    "short_sha": "badf876",
-    "message": "fix: 软键盘抬升改读 IME insets 真值，修复 26.3 输入法双倍抬升黑屏与开关需点两次 (#1997)\n\n三个相关但独立的软键盘修复：\n\n- 画面抬升/放大镜遮挡高度改读 IME insets 真值（新增 getImeOccludedHeight 共用工具）：矮键盘不再漏判，悬浮键盘 inset 为 0 不误抬；API 26–29 无专用通道沿用原可视区估算\n- SDL 编辑框固定左上角 1px，忽略游戏传入的文本输入区域矩形：焦点不再落在键盘覆盖区，系统不再平推窗口，与 JVMActivity 画面平移叠加成双倍抬升的黑屏修复（偶发性源于编辑框位置随呼出方漂移）\n- 接通移植时丢失的 notifyImeVisibilityChanged 真实显隐上报（JVMActivity 布局回调轮询）：SdlImeController 缓存标志不再漂移，修复开关软键盘需点两次，「通道关闭时 IME 自行弹出强制按回」安全网随之生效\n\n编译（Kotlin+javac）与 checkstyle 通过；26.3 真机验证通过。\n\nFixes #1994",
-    "created_at": "2026-11-03T05:03:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41581618526"
-  },
-  {
-    "id": 41581618510,
-    "sha": "badf87666930d03433e2008e4160737a22bb1109",
-    "short_sha": "badf876",
-    "message": "fix: 软键盘抬升改读 IME insets 真值，修复 26.3 输入法双倍抬升黑屏与开关需点两次 (#1997)\n\n三个相关但独立的软键盘修复：\n\n- 画面抬升/放大镜遮挡高度改读 IME insets 真值（新增 getImeOccludedHeight 共用工具）：矮键盘不再漏判，悬浮键盘 inset 为 0 不误抬；API 26–29 无专用通道沿用原可视区估算\n- SDL 编辑框固定左上角 1px，忽略游戏传入的文本输入区域矩形：焦点不再落在键盘覆盖区，系统不再平推窗口，与 JVMActivity 画面平移叠加成双倍抬升的黑屏修复（偶发性源于编辑框位置随呼出方漂移）\n- 接通移植时丢失的 notifyImeVisibilityChanged 真实显隐上报（JVMActivity 布局回调轮询）：SdlImeController 缓存标志不再漂移，修复开关软键盘需点两次，「通道关闭时 IME 自行弹出强制按回」安全网随之生效\n\n编译（Kotlin+javac）与 checkstyle 通过；26.3 真机验证通过。\n\nFixes #1994",
-    "created_at": "2026-11-03T05:03:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41581618510"
-  },
-  {
-    "id": 41581536080,
-    "sha": "70e54048c3b29f94b8c492653083b0bcbd7390d7",
-    "short_sha": "70e5404",
-    "message": "fix: 接通 SDL 通道键盘真实显隐上报，修复 26.3 开关软键盘需点两次\n\nSDL 桥的 notifyImeVisibilityChanged 上报入口移植后从未接线，SdlImeController.mKeyboardShown 只能靠 doShow 中 showSoftInput 后立即查询 isAcceptingText()（竞态：键盘实际弹出前恒为 false，弹出后才为 true）与 doHide 更新，与真实显隐必然漂移：呼出后首次点按收起被误判为再次呼出（无可见变化），第二次才真正收起；标志反向漂移时呼出同理。\n\n- JVMActivity 既有布局回调本就随 IME 显隐触发，以 getImeOccludedHeight 推导的真实可见性轮询上报，置于「禁用软键盘自适应」早退之前不被其挡住\n- notifyVisibilityChanged 自带标志比对去重，重复上报无副作用；通道关闭时 IME 自行弹出的强制按回安全网随之生效\n- 开关软键盘、放大镜 inputActive、doShow 的 already-visible 守卫同源受益，不再依赖漂移标志",
-    "created_at": "2026-11-03T04:54:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41581536080"
   }
 ]

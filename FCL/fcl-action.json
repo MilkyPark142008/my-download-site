@@ -1,28 +1,28 @@
 {"run": {
-  "id": 42456553781,
+  "id": 42488542954,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAJ4puZNQ",
-  "head_branch": "main",
-  "head_sha": "07b97289dee9d9ce469d4aad462b2599511b0972",
+  "node_id": "WFR_kwLOIQeFGs8AAAAJ5IO26g",
+  "head_branch": "feat/installer-process-reuse",
+  "head_sha": "601f3a9f5da116c450edae00170012b276028986",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "feat: 每版本渲染器覆盖——多版本切换免频繁改渲染器 (#1975)",
-  "run_number": 435,
-  "event": "push",
+  "display_title": "feat: 启动层直启与安装器进程常驻复用",
+  "run_number": 445,
+  "event": "pull_request",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 115013167309,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAax1GozQ",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42456553781",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42456553781",
+  "check_suite_id": 115095083246,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAazDOY7g",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42488542954",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42488542954",
   "pull_requests": [
     {
-      "url": "https://api.github.com/repos/root-S7/FoldCraftLauncher/pulls/137",
-      "id": 5202123034,
-      "number": 137,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/pulls/1988",
+      "id": 5098739824,
+      "number": 1988,
       "head": {
-        "ref": "main",
-        "sha": "07b97289dee9d9ce469d4aad462b2599511b0972",
+        "ref": "feat/installer-process-reuse",
+        "sha": "601f3a9f5da116c450edae00170012b276028986",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -31,86 +31,17 @@
       },
       "base": {
         "ref": "main",
-        "sha": "232485bc6ece1a1c3033579d3fd463349561cdb5",
-        "repo": {
-          "id": 672154970,
-          "url": "https://api.github.com/repos/root-S7/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      }
-    },
-    {
-      "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
-      "id": 4452442002,
-      "number": 364,
-      "head": {
-        "ref": "main",
-        "sha": "07b97289dee9d9ce469d4aad462b2599511b0972",
+        "sha": "2f6ce6d7060bbaf1f2fa504f4d96783857a1fb76",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "97dc0f6c4a5f5fada8b86aa68e1e9d4b189d1b25",
-        "repo": {
-          "id": 1026321990,
-          "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      }
-    },
-    {
-      "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher/pulls/37",
-      "id": 4452270030,
-      "number": 37,
-      "head": {
-        "ref": "main",
-        "sha": "07b97289dee9d9ce469d4aad462b2599511b0972",
-        "repo": {
-          "id": 554140954,
-          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
-        "repo": {
-          "id": 1335592322,
-          "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      }
-    },
-    {
-      "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher/pulls/400",
-      "id": 4451484148,
-      "number": 400,
-      "head": {
-        "ref": "main",
-        "sha": "07b97289dee9d9ce469d4aad462b2599511b0972",
-        "repo": {
-          "id": 554140954,
-          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
-        "repo": {
-          "id": 835628097,
-          "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher",
           "name": "FoldCraftLauncher"
         }
       }
     }
   ],
-  "created_at": "2026-11-08T06:53:22Z",
-  "updated_at": "2026-11-08T06:54:41Z",
+  "created_at": "2026-11-08T14:11:04Z",
+  "updated_at": "2026-11-08T14:12:28Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -134,7 +65,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-11-08T06:53:22Z",
+  "run_started_at": "2026-11-08T14:11:04Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -156,26 +87,26 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42456553781/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42456553781/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/115013167309",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42456553781/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42456553781/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42456553781/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42488542954/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42488542954/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/115095083246",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42488542954/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42488542954/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42488542954/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "07b97289dee9d9ce469d4aad462b2599511b0972",
-    "tree_id": "adda98313473bb6bbe347ddde75dd50f823f8758",
-    "message": "feat: 每版本渲染器覆盖——多版本切换免频繁改渲染器 (#1975)\n\n* feat: 每版本渲染器覆盖——版本列表入口、全版本 Spinner 设置对话框、渲染器修改遮蔽警告\n\n- Profile.rendererOverrides（版本 id → renderer id）随配置 JSON 持久化，独立于 usesGlobal；\n  启动解析单点接入 getLaunchOptions：覆盖 > 特定设置 > 全局\n- 版本列表页左下角新增静态渲染器入口，打开 RendererOverrideDialog：\n  列出当前配置全部版本逐行 FCLSpinner 指定渲染器，默认「跟随设置」（即不覆盖）\n- 覆盖存在时从别处修改渲染器会弹遮蔽提示并提供三选项：\n  更新覆盖（覆盖改为本次选择）/清除覆盖（版本回到跟随设置）/保留覆盖\n  - 全局设置页仅检测当前选中版本，与既有「独立设置版本」提示合并展示\n  - 长按启动被遮蔽时不自动启动，更新/清除覆盖后沿用本次选择继续启动\n- 特定游戏设置页/长按启动的渲染器选择回调改传 Renderer（id 供覆盖比对）\n\n* fix: 渲染器覆盖指向已卸载/禁用的渲染器时视同无覆盖，长按启动取消时回滚写入\n\n- 新增 RendererManager.findRenderer（查找不兜底）与 Profile.getEffectiveRendererOverride，\n  启动解析、三处遮蔽检测统一改用有效覆盖判定，失效覆盖不再落入 NGGL4ES 兜底\n- 渲染器覆盖对话框打开时顺手清除失效覆盖并落盘，配置与界面、启动行为保持一致\n- MainActivity 长按启动被遮蔽提示打断后选取消时，回滚本次写入版本设置的渲染器，\n  避免放弃启动仍残留修改\n\n* fix: 渲染器遮蔽弹窗取消/保留时回滚对话框已写入的设置，全局页覆盖提示与 usesGlobal 解耦",
-    "timestamp": "2026-11-08T06:53:19Z",
+    "id": "601f3a9f5da116c450edae00170012b276028986",
+    "tree_id": "91281a1d024ed27637bb9914724ebb0e3daab0af",
+    "message": "fix: logger 线程退出先释放全局引用再 Detach，修复安装进程 CheckJNI abort\n\ncherry-pick 审查修复时漏掉了退出顺序修正：DetachCurrentThread 必须是\n退出路径最后一个 JNI 调用，脱离后再用旧 env DeleteGlobalRef 会触发\nCheckAttachedThread JniAbort 打崩 :jvm 进程——表现为下一 processor 阶段\nredirectStdio 接管 stdio 时安装中断",
+    "timestamp": "2026-11-08T14:06:11Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
     },
     "committer": {
-      "name": "GitHub",
-      "email": "noreply@github.com"
+      "name": "ShirosakiMio",
+      "email": "852468399@qq.com"
     }
   },
   "repository": {
