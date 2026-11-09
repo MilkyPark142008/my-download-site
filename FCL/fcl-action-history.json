@@ -1,5 +1,85 @@
 [
   {
+    "id": 42565828223,
+    "sha": "7f0a40540fe9a8e53ddcbd2646b45451ba3ffe45",
+    "short_sha": "7f0a405",
+    "message": "optimize: 任务列表任务行增删改为批量刷新，修复高速下载卡顿 (#2010)\n\n* optimize: 任务列表任务行增删改为 100ms 批量刷新，修复高速下载时逐事件全量刷新 ListView 导致的卡顿\n\n* fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
+    "created_at": "2026-11-09T05:11:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565828223"
+  },
+  {
+    "id": 42565828285,
+    "sha": "7f0a40540fe9a8e53ddcbd2646b45451ba3ffe45",
+    "short_sha": "7f0a405",
+    "message": "optimize: 任务列表任务行增删改为批量刷新，修复高速下载卡顿 (#2010)\n\n* optimize: 任务列表任务行增删改为 100ms 批量刷新，修复高速下载时逐事件全量刷新 ListView 导致的卡顿\n\n* fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
+    "created_at": "2026-11-09T05:11:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565828285"
+  },
+  {
+    "id": 42565801356,
+    "sha": "272ab1dd1fbfcd4928d859827f33c76ba66e93c9",
+    "short_sha": "272ab1d",
+    "message": "fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
+    "created_at": "2026-11-09T05:10:52Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565801356"
+  },
+  {
+    "id": 42565801346,
+    "sha": "272ab1dd1fbfcd4928d859827f33c76ba66e93c9",
+    "short_sha": "272ab1d",
+    "message": "fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
+    "created_at": "2026-11-09T05:10:52Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565801346"
+  },
+  {
+    "id": 42565796461,
+    "sha": "272ab1dd1fbfcd4928d859827f33c76ba66e93c9",
+    "short_sha": "272ab1d",
+    "message": "fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
+    "created_at": "2026-11-09T05:10:52Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565796461"
+  },
+  {
+    "id": 42565796497,
+    "sha": "272ab1dd1fbfcd4928d859827f33c76ba66e93c9",
+    "short_sha": "272ab1d",
+    "message": "fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
+    "created_at": "2026-11-09T05:10:52Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565796497"
+  },
+  {
+    "id": 42563870795,
+    "sha": "c13dbc03c475df243ec1f0fab43c848b37d67bbc",
+    "short_sha": "c13dbc0",
+    "message": "optimize: 任务列表任务行增删改为 100ms 批量刷新，修复高速下载时逐事件全量刷新 ListView 导致的卡顿",
+    "created_at": "2026-11-09T04:48:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42563870795"
+  },
+  {
+    "id": 42563870768,
+    "sha": "c13dbc03c475df243ec1f0fab43c848b37d67bbc",
+    "short_sha": "c13dbc0",
+    "message": "optimize: 任务列表任务行增删改为 100ms 批量刷新，修复高速下载时逐事件全量刷新 ListView 导致的卡顿",
+    "created_at": "2026-11-09T04:48:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42563870768"
+  },
+  {
+    "id": 42563828278,
+    "sha": "c13dbc03c475df243ec1f0fab43c848b37d67bbc",
+    "short_sha": "c13dbc0",
+    "message": "optimize: 任务列表任务行增删改为 100ms 批量刷新，修复高速下载时逐事件全量刷新 ListView 导致的卡顿",
+    "created_at": "2026-11-09T04:48:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42563828278"
+  },
+  {
+    "id": 42563828226,
+    "sha": "c13dbc03c475df243ec1f0fab43c848b37d67bbc",
+    "short_sha": "c13dbc0",
+    "message": "optimize: 任务列表任务行增删改为 100ms 批量刷新，修复高速下载时逐事件全量刷新 ListView 导致的卡顿",
+    "created_at": "2026-11-09T04:48:33Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42563828226"
+  },
+  {
     "id": 42488542954,
     "sha": "601f3a9f5da116c450edae00170012b276028986",
     "short_sha": "601f3a9",
@@ -56,14 +136,6 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487149107"
   },
   {
-    "id": 42487011727,
-    "sha": "95327bb1fa9cbdd3ce561a3db0556035e2625574",
-    "short_sha": "95327bb",
-    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
-    "created_at": "2026-11-08T13:51:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487011727"
-  },
-  {
     "id": 42487011565,
     "sha": "95327bb1fa9cbdd3ce561a3db0556035e2625574",
     "short_sha": "95327bb",
@@ -72,12 +144,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487011565"
   },
   {
-    "id": 42487008176,
+    "id": 42487011727,
     "sha": "95327bb1fa9cbdd3ce561a3db0556035e2625574",
     "short_sha": "95327bb",
     "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
     "created_at": "2026-11-08T13:51:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487008176"
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487011727"
   },
   {
     "id": 42487008187,
@@ -86,6 +158,14 @@
     "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
     "created_at": "2026-11-08T13:51:15Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487008187"
+  },
+  {
+    "id": 42487008176,
+    "sha": "95327bb1fa9cbdd3ce561a3db0556035e2625574",
+    "short_sha": "95327bb",
+    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
+    "created_at": "2026-11-08T13:51:15Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487008176"
   },
   {
     "id": 42484839386,
@@ -318,85 +398,5 @@
     "message": "1.3.4.5",
     "created_at": "2026-11-07T01:49:35Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42326127382"
-  },
-  {
-    "id": 42326127403,
-    "sha": "b08db5e96a57bc74ae536fee337b32aa9c9ea156",
-    "short_sha": "b08db5e",
-    "message": "1.3.4.5",
-    "created_at": "2026-11-07T01:49:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42326127403"
-  },
-  {
-    "id": 42326127316,
-    "sha": "b08db5e96a57bc74ae536fee337b32aa9c9ea156",
-    "short_sha": "b08db5e",
-    "message": "1.3.4.5",
-    "created_at": "2026-11-07T01:49:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42326127316"
-  },
-  {
-    "id": 42160999401,
-    "sha": "965c23db648b6f2ac0690522f5db7dba4c1a6e95",
-    "short_sha": "965c23d",
-    "message": "feat: 皮肤模型设置菜单改双指点击触发并添加引导，新增点击音效与开关",
-    "created_at": "2026-11-06T04:10:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42160999401"
-  },
-  {
-    "id": 42160999405,
-    "sha": "965c23db648b6f2ac0690522f5db7dba4c1a6e95",
-    "short_sha": "965c23d",
-    "message": "feat: 皮肤模型设置菜单改双指点击触发并添加引导，新增点击音效与开关",
-    "created_at": "2026-11-06T04:10:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42160999405"
-  },
-  {
-    "id": 42148304918,
-    "sha": "e73dd5bac4d274439c624a9db35926c462ff094f",
-    "short_sha": "e73dd5b",
-    "message": "fix: 修复无法正常启动 Minecraft 13w16a~13w23b 快照的问题\n\n- 13w16a~13w23b 快照缺少非英语语言的外部语言资源，写入 lang 后启动会卡在 Mojang 加载界面，历史已写入的 lang 一并重置为默认英语\n- has_custom_resolution 特性标志增加版本门控，1.6（快照 13w25a）之前的版本不支持自定义分辨率参数\n\n参考 HMCL（https://github.com/HMCL-dev/HMCL/commit/087b2b678d51782f0d6bd64db8a2acd7608c8ee7）",
-    "created_at": "2026-11-06T02:07:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42148304918"
-  },
-  {
-    "id": 42148304866,
-    "sha": "e73dd5bac4d274439c624a9db35926c462ff094f",
-    "short_sha": "e73dd5b",
-    "message": "fix: 修复无法正常启动 Minecraft 13w16a~13w23b 快照的问题\n\n- 13w16a~13w23b 快照缺少非英语语言的外部语言资源，写入 lang 后启动会卡在 Mojang 加载界面，历史已写入的 lang 一并重置为默认英语\n- has_custom_resolution 特性标志增加版本门控，1.6（快照 13w25a）之前的版本不支持自定义分辨率参数\n\n参考 HMCL（https://github.com/HMCL-dev/HMCL/commit/087b2b678d51782f0d6bd64db8a2acd7608c8ee7）",
-    "created_at": "2026-11-06T02:07:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42148304866"
-  },
-  {
-    "id": 42148276474,
-    "sha": "e73dd5bac4d274439c624a9db35926c462ff094f",
-    "short_sha": "e73dd5b",
-    "message": "fix: 修复无法正常启动 Minecraft 13w16a~13w23b 快照的问题\n\n- 13w16a~13w23b 快照缺少非英语语言的外部语言资源，写入 lang 后启动会卡在 Mojang 加载界面，历史已写入的 lang 一并重置为默认英语\n- has_custom_resolution 特性标志增加版本门控，1.6（快照 13w25a）之前的版本不支持自定义分辨率参数\n\n参考 HMCL（https://github.com/HMCL-dev/HMCL/commit/087b2b678d51782f0d6bd64db8a2acd7608c8ee7）",
-    "created_at": "2026-11-06T02:07:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42148276474"
-  },
-  {
-    "id": 42148276299,
-    "sha": "e73dd5bac4d274439c624a9db35926c462ff094f",
-    "short_sha": "e73dd5b",
-    "message": "fix: 修复无法正常启动 Minecraft 13w16a~13w23b 快照的问题\n\n- 13w16a~13w23b 快照缺少非英语语言的外部语言资源，写入 lang 后启动会卡在 Mojang 加载界面，历史已写入的 lang 一并重置为默认英语\n- has_custom_resolution 特性标志增加版本门控，1.6（快照 13w25a）之前的版本不支持自定义分辨率参数\n\n参考 HMCL（https://github.com/HMCL-dev/HMCL/commit/087b2b678d51782f0d6bd64db8a2acd7608c8ee7）",
-    "created_at": "2026-11-06T02:07:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42148276299"
-  },
-  {
-    "id": 42144949130,
-    "sha": "27dac3af210f56f4d87f130327697c1f608f4390",
-    "short_sha": "27dac3a",
-    "message": "fix: 渲染器覆盖指向已卸载/禁用的渲染器时视同无覆盖，长按启动取消时回滚写入\n\n- 新增 RendererManager.findRenderer（查找不兜底）与 Profile.getEffectiveRendererOverride，\n  启动解析、三处遮蔽检测统一改用有效覆盖判定，失效覆盖不再落入 NGGL4ES 兜底\n- 渲染器覆盖对话框打开时顺手清除失效覆盖并落盘，配置与界面、启动行为保持一致\n- MainActivity 长按启动被遮蔽提示打断后选取消时，回滚本次写入版本设置的渲染器，\n  避免放弃启动仍残留修改",
-    "created_at": "2026-11-06T01:36:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42144949130"
-  },
-  {
-    "id": 42144949012,
-    "sha": "27dac3af210f56f4d87f130327697c1f608f4390",
-    "short_sha": "27dac3a",
-    "message": "fix: 渲染器覆盖指向已卸载/禁用的渲染器时视同无覆盖，长按启动取消时回滚写入\n\n- 新增 RendererManager.findRenderer（查找不兜底）与 Profile.getEffectiveRendererOverride，\n  启动解析、三处遮蔽检测统一改用有效覆盖判定，失效覆盖不再落入 NGGL4ES 兜底\n- 渲染器覆盖对话框打开时顺手清除失效覆盖并落盘，配置与界面、启动行为保持一致\n- MainActivity 长按启动被遮蔽提示打断后选取消时，回滚本次写入版本设置的渲染器，\n  避免放弃启动仍残留修改",
-    "created_at": "2026-11-06T01:36:03Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42144949012"
   }
 ]

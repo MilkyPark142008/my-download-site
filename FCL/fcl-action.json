@@ -1,28 +1,28 @@
 {"run": {
-  "id": 42488542954,
+  "id": 42565828223,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAJ5IO26g",
-  "head_branch": "feat/installer-process-reuse",
-  "head_sha": "601f3a9f5da116c450edae00170012b276028986",
+  "node_id": "WFR_kwLOIQeFGs8AAAAJ6R7-fw",
+  "head_branch": "main",
+  "head_sha": "7f0a40540fe9a8e53ddcbd2646b45451ba3ffe45",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "feat: 启动层直启与安装器进程常驻复用",
-  "run_number": 445,
-  "event": "pull_request",
+  "display_title": "optimize: 任务列表任务行增删改为批量刷新，修复高速下载卡顿 (#2010)",
+  "run_number": 450,
+  "event": "push",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 115095083246,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAazDOY7g",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42488542954",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42488542954",
+  "check_suite_id": 115293339516,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAa2AS_fA",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42565828223",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565828223",
   "pull_requests": [
     {
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/pulls/1988",
-      "id": 5098739824,
-      "number": 1988,
+      "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
+      "id": 4452442002,
+      "number": 364,
       "head": {
-        "ref": "feat/installer-process-reuse",
-        "sha": "601f3a9f5da116c450edae00170012b276028986",
+        "ref": "main",
+        "sha": "7f0a40540fe9a8e53ddcbd2646b45451ba3ffe45",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -31,17 +31,63 @@
       },
       "base": {
         "ref": "main",
-        "sha": "2f6ce6d7060bbaf1f2fa504f4d96783857a1fb76",
+        "sha": "97dc0f6c4a5f5fada8b86aa68e1e9d4b189d1b25",
+        "repo": {
+          "id": 1026321990,
+          "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher/pulls/37",
+      "id": 4452270030,
+      "number": 37,
+      "head": {
+        "ref": "main",
+        "sha": "7f0a40540fe9a8e53ddcbd2646b45451ba3ffe45",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
           "name": "FoldCraftLauncher"
         }
+      },
+      "base": {
+        "ref": "main",
+        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
+        "repo": {
+          "id": 1335592322,
+          "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      }
+    },
+    {
+      "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher/pulls/400",
+      "id": 4451484148,
+      "number": 400,
+      "head": {
+        "ref": "main",
+        "sha": "7f0a40540fe9a8e53ddcbd2646b45451ba3ffe45",
+        "repo": {
+          "id": 554140954,
+          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
+      },
+      "base": {
+        "ref": "main",
+        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
+        "repo": {
+          "id": 835628097,
+          "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher",
+          "name": "FoldCraftLauncher"
+        }
       }
     }
   ],
-  "created_at": "2026-11-08T14:11:04Z",
-  "updated_at": "2026-11-08T14:12:28Z",
+  "created_at": "2026-11-09T05:11:17Z",
+  "updated_at": "2026-11-09T05:12:41Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -65,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-11-08T14:11:04Z",
+  "run_started_at": "2026-11-09T05:11:17Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -87,26 +133,26 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42488542954/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42488542954/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/115095083246",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42488542954/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42488542954/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42488542954/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42565828223/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42565828223/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/115293339516",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42565828223/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42565828223/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/42565828223/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "601f3a9f5da116c450edae00170012b276028986",
-    "tree_id": "91281a1d024ed27637bb9914724ebb0e3daab0af",
-    "message": "fix: logger 线程退出先释放全局引用再 Detach，修复安装进程 CheckJNI abort\n\ncherry-pick 审查修复时漏掉了退出顺序修正：DetachCurrentThread 必须是\n退出路径最后一个 JNI 调用，脱离后再用旧 env DeleteGlobalRef 会触发\nCheckAttachedThread JniAbort 打崩 :jvm 进程——表现为下一 processor 阶段\nredirectStdio 接管 stdio 时安装中断",
-    "timestamp": "2026-11-08T14:06:11Z",
+    "id": "7f0a40540fe9a8e53ddcbd2646b45451ba3ffe45",
+    "tree_id": "341d0bd5b3eca7092cfaaa3ef3d3a4c8b757a653",
+    "message": "optimize: 任务列表任务行增删改为批量刷新，修复高速下载卡顿 (#2010)\n\n* optimize: 任务列表任务行增删改为 100ms 批量刷新，修复高速下载时逐事件全量刷新 ListView 导致的卡顿\n\n* fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
+    "timestamp": "2026-11-09T05:11:14Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
     },
     "committer": {
-      "name": "ShirosakiMio",
-      "email": "852468399@qq.com"
+      "name": "GitHub",
+      "email": "noreply@github.com"
     }
   },
   "repository": {
