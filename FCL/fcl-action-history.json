@@ -1,11 +1,35 @@
 [
   {
-    "id": 42565828223,
-    "sha": "7f0a40540fe9a8e53ddcbd2646b45451ba3ffe45",
-    "short_sha": "7f0a405",
-    "message": "optimize: 任务列表任务行增删改为批量刷新，修复高速下载卡顿 (#2010)\n\n* optimize: 任务列表任务行增删改为 100ms 批量刷新，修复高速下载时逐事件全量刷新 ListView 导致的卡顿\n\n* fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
-    "created_at": "2026-11-09T05:11:14Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565828223"
+    "id": 42616714844,
+    "sha": "a6ded718d41346fa61cefe15dda4f05cf108827c",
+    "short_sha": "a6ded71",
+    "message": "optimize: 移除运行环境解压时对小文件的人为延时",
+    "created_at": "2026-11-09T12:23:05Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42616714844"
+  },
+  {
+    "id": 42616715010,
+    "sha": "a6ded718d41346fa61cefe15dda4f05cf108827c",
+    "short_sha": "a6ded71",
+    "message": "optimize: 移除运行环境解压时对小文件的人为延时",
+    "created_at": "2026-11-09T12:23:05Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42616715010"
+  },
+  {
+    "id": 42604599134,
+    "sha": "f5bb1526eb371d81cb086d74cdb8535043b51ee4",
+    "short_sha": "f5bb152",
+    "message": "fix: 主动同步 SDL 手柄设备枚举，修复 Controlify 需重连手柄才能直通（同步 ZL2 PR #2204）",
+    "created_at": "2026-11-09T10:53:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42604599134"
+  },
+  {
+    "id": 42604599229,
+    "sha": "f5bb1526eb371d81cb086d74cdb8535043b51ee4",
+    "short_sha": "f5bb152",
+    "message": "fix: 主动同步 SDL 手柄设备枚举，修复 Controlify 需重连手柄才能直通（同步 ZL2 PR #2204）",
+    "created_at": "2026-11-09T10:53:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42604599229"
   },
   {
     "id": 42565828285,
@@ -14,6 +38,14 @@
     "message": "optimize: 任务列表任务行增删改为批量刷新，修复高速下载卡顿 (#2010)\n\n* optimize: 任务列表任务行增删改为 100ms 批量刷新，修复高速下载时逐事件全量刷新 ListView 导致的卡顿\n\n* fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
     "created_at": "2026-11-09T05:11:14Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565828285"
+  },
+  {
+    "id": 42565828223,
+    "sha": "7f0a40540fe9a8e53ddcbd2646b45451ba3ffe45",
+    "short_sha": "7f0a405",
+    "message": "optimize: 任务列表任务行增删改为批量刷新，修复高速下载卡顿 (#2010)\n\n* optimize: 任务列表任务行增删改为 100ms 批量刷新，修复高速下载时逐事件全量刷新 ListView 导致的卡顿\n\n* fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
+    "created_at": "2026-11-09T05:11:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565828223"
   },
   {
     "id": 42565801356,
@@ -32,20 +64,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565801346"
   },
   {
-    "id": 42565796461,
-    "sha": "272ab1dd1fbfcd4928d859827f33c76ba66e93c9",
-    "short_sha": "272ab1d",
-    "message": "fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
-    "created_at": "2026-11-09T05:10:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565796461"
-  },
-  {
     "id": 42565796497,
     "sha": "272ab1dd1fbfcd4928d859827f33c76ba66e93c9",
     "short_sha": "272ab1d",
     "message": "fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
     "created_at": "2026-11-09T05:10:52Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565796497"
+  },
+  {
+    "id": 42565796461,
+    "sha": "272ab1dd1fbfcd4928d859827f33c76ba66e93c9",
+    "short_sha": "272ab1d",
+    "message": "fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
+    "created_at": "2026-11-09T05:10:52Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565796461"
   },
   {
     "id": 42563870795,
@@ -366,37 +398,5 @@
     "message": "fix: HMCL/MultiMC 整合包启动 NPE——Kotlin 化后对 createCompletionTask 的 null 约定误加非空断言",
     "created_at": "2026-11-08T01:57:02Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42436438068"
-  },
-  {
-    "id": 42341101859,
-    "sha": "c987300c258a4b52dab1df6a6fa1e1f1a88b6678",
-    "short_sha": "c987300",
-    "message": "fix: Quest VR 门控按 Meta 厂商/型号兜底，判定结果缓存并输出日志\n\nHorizon OS 部分版本不向普通应用报告 android.hardware.vr.headtracking\n特性，仅依赖该特性会把 Quest 设备挡在 VR 设置之外；Meta 设备改为\n厂商/型号兜底判定，首次判定缓存并打 logcat 便于排查。",
-    "created_at": "2026-11-07T04:48:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42341101859"
-  },
-  {
-    "id": 42341101870,
-    "sha": "c987300c258a4b52dab1df6a6fa1e1f1a88b6678",
-    "short_sha": "c987300",
-    "message": "fix: Quest VR 门控按 Meta 厂商/型号兜底，判定结果缓存并输出日志\n\nHorizon OS 部分版本不向普通应用报告 android.hardware.vr.headtracking\n特性，仅依赖该特性会把 Quest 设备挡在 VR 设置之外；Meta 设备改为\n厂商/型号兜底判定，首次判定缓存并打 logcat 便于排查。",
-    "created_at": "2026-11-07T04:48:07Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42341101870"
-  },
-  {
-    "id": 42327822957,
-    "sha": "9ea040443effea5a78bd8aeed260e829ae349c2d",
-    "short_sha": "9ea0404",
-    "message": "Update version_map.json",
-    "created_at": "2026-11-07T02:09:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42327822957"
-  },
-  {
-    "id": 42326127382,
-    "sha": "b08db5e96a57bc74ae536fee337b32aa9c9ea156",
-    "short_sha": "b08db5e",
-    "message": "1.3.4.5",
-    "created_at": "2026-11-07T01:49:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42326127382"
   }
 ]
