@@ -1,5 +1,37 @@
 [
   {
+    "id": 43431049731,
+    "sha": "50a1518218777537eb8868166c31ef9c3a361546",
+    "short_sha": "50a1518",
+    "message": "Merge pull request #2240 from ZalithLauncher/refactor/pref-settings\n\nrefactor: 拆分设置项持久化并优化游戏布局缓存",
+    "created_at": "2026-11-13T13:08:14Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43431049731"
+  },
+  {
+    "id": 43430990594,
+    "sha": "8c9ebae274c7ac8813a656bd4c2e62775839ca8d",
+    "short_sha": "8c9ebae",
+    "message": "perf: 移除设置恢复过程中的重复刷新",
+    "created_at": "2026-11-13T13:04:23Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43430990594"
+  },
+  {
+    "id": 43418587749,
+    "sha": "448593c99cd04d430ad3b9b0337ad59fa8efe9d6",
+    "short_sha": "448593c",
+    "message": "refactor: 拆分设置项持久化并优化游戏布局缓存",
+    "created_at": "2026-11-13T11:37:07Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43418587749"
+  },
+  {
+    "id": 43388832355,
+    "sha": "64ca8033b6ad5f856906bb7656434ec8887cb1b8",
+    "short_sha": "64ca803",
+    "message": "refactor: 引入 Miuix 过度滚动效果",
+    "created_at": "2026-11-13T07:51:55Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43388832355"
+  },
+  {
     "id": 43193921469,
     "sha": "48b726e2574260fbdfc35cb6a697f0d27df9ef36",
     "short_sha": "48b726e",
@@ -46,118 +78,6 @@
     "message": "chore: 调整赞助金额显示单位为 CNY",
     "created_at": "2026-11-10T09:07:23Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/42788063086"
-  },
-  {
-    "id": 42224612154,
-    "sha": "a513af6b2f53edd6ad4a97b74f1736650deed9a9",
-    "short_sha": "a513af6",
-    "message": "refactor: 抽取通用屏幕类型布局组件",
-    "created_at": "2026-11-06T13:19:07Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/42224612154"
-  },
-  {
-    "id": 42221654501,
-    "sha": "c6fc6fd01c9cfb2baca7eb68c037a63599836918",
-    "short_sha": "c6fc6fd",
-    "message": "feat: 欢迎页适配手表等小屏设备",
-    "created_at": "2026-11-06T12:56:42Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/42221654501"
-  },
-  {
-    "id": 42201546553,
-    "sha": "11c4b146a5eb74b7a10c6a6219f9f0e33bc10285",
-    "short_sha": "11c4b14",
-    "message": "Merge branch 'main' into weblate_terracotta",
-    "created_at": "2026-11-06T09:19:23Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/42201546553"
-  },
-  {
-    "id": 42201543483,
-    "sha": "6e6b750dafe0ed47f72d24d19f4e633d71baaa0f",
-    "short_sha": "6e6b750",
-    "message": "Merge pull request #2206 from ZalithLauncher/fix/mod-update-disabled-state\n\nfix: 更新模组时保持原文件的禁用状态",
-    "created_at": "2026-11-06T08:44:25Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/42201543483"
-  },
-  {
-    "id": 42194782013,
-    "sha": "dbf5a414504cdeb584d9e8fb437078b77b512ba4",
-    "short_sha": "dbf5a41",
-    "message": "bump version to 2.8.2",
-    "created_at": "2026-11-06T09:21:06Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/42194782013"
-  },
-  {
-    "id": 42194400835,
-    "sha": "dbf5a414504cdeb584d9e8fb437078b77b512ba4",
-    "short_sha": "dbf5a41",
-    "message": "bump version to 2.8.2",
-    "created_at": "2026-11-06T09:21:06Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/42194400835"
-  },
-  {
-    "id": 42194305387,
-    "sha": "11c4b146a5eb74b7a10c6a6219f9f0e33bc10285",
-    "short_sha": "11c4b14",
-    "message": "Merge branch 'main' into weblate_terracotta",
-    "created_at": "2026-11-06T09:19:23Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/42194305387"
-  },
-  {
-    "id": 42194248849,
-    "sha": "6e6b750dafe0ed47f72d24d19f4e633d71baaa0f",
-    "short_sha": "6e6b750",
-    "message": "Merge pull request #2206 from ZalithLauncher/fix/mod-update-disabled-state\n\nfix: 更新模组时保持原文件的禁用状态",
-    "created_at": "2026-11-06T08:44:25Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/42194248849"
-  },
-  {
-    "id": 42194191143,
-    "sha": "11c4b146a5eb74b7a10c6a6219f9f0e33bc10285",
-    "short_sha": "11c4b14",
-    "message": "Merge branch 'main' into weblate_terracotta",
-    "created_at": "2026-11-06T09:19:23Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/42194191143"
-  },
-  {
-    "id": 42189845160,
-    "sha": "6e6b750dafe0ed47f72d24d19f4e633d71baaa0f",
-    "short_sha": "6e6b750",
-    "message": "Merge pull request #2206 from ZalithLauncher/fix/mod-update-disabled-state\n\nfix: 更新模组时保持原文件的禁用状态",
-    "created_at": "2026-11-06T08:44:25Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/42189845160"
-  },
-  {
-    "id": 42187739651,
-    "sha": "27d43d2a3053ab533f7b9bddedcf45615b71d0b8",
-    "short_sha": "27d43d2",
-    "message": "Merge pull request #2205 from ZalithLauncher/fix/server-icon\n\nfix: 服务器图标的本地缓存始终无法更新",
-    "created_at": "2026-11-06T08:26:51Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/42187739651"
-  },
-  {
-    "id": 42186812268,
-    "sha": "0670d67d643b7d5bf58be090b0b0c6cb408d08a2",
-    "short_sha": "0670d67",
-    "message": "fix: 服务器图标的本地缓存始终无法更新",
-    "created_at": "2026-11-06T08:19:00Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/42186812268"
-  },
-  {
-    "id": 42179913914,
-    "sha": "902660ca8d6c1f808174c678f923e637b86f2f04",
-    "short_sha": "902660c",
-    "message": "Merge pull request #2204 from ZalithLauncher/fix/sdl-gamepad-hotplug\n\nfix: 主动同步 SDL 手柄设备枚举，修复 Controlify 需重连手柄才能直通",
-    "created_at": "2026-11-06T07:17:36Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/42179913914"
-  },
-  {
-    "id": 42179837809,
-    "sha": "211e8048611da38e50ab96b9c8d1743a32c2ab92",
-    "short_sha": "211e804",
-    "message": "fix: 主动同步 SDL 手柄设备枚举，修复 Controlify 需重连手柄才能直通",
-    "created_at": "2026-11-06T07:16:14Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/42179837809"
   },
   {
     "id": 41060394940,
@@ -398,5 +318,85 @@
     "message": "refactor: 重构 JNA 解压任务 & 仅包含 5.13.0 - 5.19.1",
     "created_at": "2026-10-28T12:18:35Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40686765119"
+  },
+  {
+    "id": 40683603818,
+    "sha": "61b25d828945c5bdb3216c5269139586f4c1220d",
+    "short_sha": "61b25d8",
+    "message": "Merge pull request #2145 from ZalithLauncher/fix/virgl-osmesa-framebuffer\n\nfix: VirGL 颜色缓冲改用真实分配的可写内存",
+    "created_at": "2026-10-28T11:54:45Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40683603818"
+  },
+  {
+    "id": 40683558220,
+    "sha": "0bb6ea84c8b82493f498cf8795bac0aaa00d8a0a",
+    "short_sha": "0bb6ea8",
+    "message": "fix: VirGL 颜色缓冲改用真实分配的可写内存",
+    "created_at": "2026-10-28T11:54:15Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40683558220"
+  },
+  {
+    "id": 40680671507,
+    "sha": "781c517846380bf906595bd963c782a0dd8e74bf",
+    "short_sha": "781c517",
+    "message": "Merge pull request #2144 from ZalithLauncher/fix/launch-inherited-json-error-flow\n\nfix: 修复继承清单缺失与启动异常处理",
+    "created_at": "2026-10-28T11:31:51Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40680671507"
+  },
+  {
+    "id": 40680406926,
+    "sha": "608af8615789f9b22461814f79a95175e20a4b0a",
+    "short_sha": "608af86",
+    "message": "fix: 修复继承清单缺失与启动异常处理",
+    "created_at": "2026-10-28T11:29:24Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40680406926"
+  },
+  {
+    "id": 40675021854,
+    "sha": "d05901e8c218ab3331f28ea2a884c9737d93ea88",
+    "short_sha": "d05901e",
+    "message": "Merge pull request #2143 from ZalithLauncher/feat/jsound-native\n\nfeat: JSound 替换为原生 libjsound.so",
+    "created_at": "2026-10-28T10:48:25Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40675021854"
+  },
+  {
+    "id": 40674880204,
+    "sha": "c1726fed049a686297ac940f35436b9cc4c2ad39",
+    "short_sha": "c1726fe",
+    "message": "feat: JSound 替换为原生 libjsound.so",
+    "created_at": "2026-10-28T10:47:11Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40674880204"
+  },
+  {
+    "id": 40656035215,
+    "sha": "5e5c1a0700026bb07226a35bfd01326c1c1cfb75",
+    "short_sha": "5e5c1a0",
+    "message": "Merge pull request #2142 from ZalithLauncher/fix/lwjgl-window-monitor\n\nfix: LWJGL 未拦截非法窗口尺寸设置",
+    "created_at": "2026-10-28T08:20:04Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40656035215"
+  },
+  {
+    "id": 40655976300,
+    "sha": "210589b9b28836781704a7fa461dfeba254e0163",
+    "short_sha": "210589b",
+    "message": "Merge pull request #2141 from ZalithLauncher/fix/surface-clearframerate\n\nfix: Surface.clearFrameRate 守卫提升到 API 34，修复 Android 13 进游戏闪退",
+    "created_at": "2026-10-28T08:19:35Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40655976300"
+  },
+  {
+    "id": 40655922794,
+    "sha": "6367245db5ba4caaa898b688e7327d30a60d2d45",
+    "short_sha": "6367245",
+    "message": "fix: LWJGL 未拦截非法窗口尺寸设置",
+    "created_at": "2026-10-28T08:19:00Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40655922794"
+  },
+  {
+    "id": 40655059096,
+    "sha": "786222c864c016e3362a77b40669e5c214640521",
+    "short_sha": "786222c",
+    "message": "fix: Surface.clearFrameRate 守卫提升到 API 34，修复 Android 13 进游戏闪退",
+    "created_at": "2026-10-28T08:10:29Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40655059096"
   }
 ]
