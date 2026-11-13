@@ -1,5 +1,37 @@
 [
   {
+    "id": 43367619317,
+    "sha": "9f52d599d596dc9384fd566bbeed5b2bfc726e6f",
+    "short_sha": "9f52d59",
+    "message": "fix: 主题色透明度为 0 时进度条与滑条不可见 (#2016)\n\n进度条/滑条 tint 改用不受主题透明度影响的 opaqueDkColor，并补充派生色透明度的回归测试。",
+    "created_at": "2026-11-13T04:45:27Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43367619317"
+  },
+  {
+    "id": 43367619272,
+    "sha": "9f52d599d596dc9384fd566bbeed5b2bfc726e6f",
+    "short_sha": "9f52d59",
+    "message": "fix: 主题色透明度为 0 时进度条与滑条不可见 (#2016)\n\n进度条/滑条 tint 改用不受主题透明度影响的 opaqueDkColor，并补充派生色透明度的回归测试。",
+    "created_at": "2026-11-13T04:45:27Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43367619272"
+  },
+  {
+    "id": 43366537802,
+    "sha": "855c5857dbbd7c27c4d8551f7f773f8ae761119c",
+    "short_sha": "855c585",
+    "message": "fix: 资源包图标按显示上限降采样解码，修复超大 pack.png 导致启动器崩溃 (#2015)\n\npack.png 尺寸不受游戏约束，原尺寸解码会产生数百 MB 的位图，\n资源包列表绘制时报 Canvas: trying to draw too large 直接崩溃。\n改为先读尺寸边界再按 2 的幂降采样到 160px（列表图标 40dp 按 4x 屏换算）。",
+    "created_at": "2026-11-13T04:27:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43366537802"
+  },
+  {
+    "id": 43366537909,
+    "sha": "855c5857dbbd7c27c4d8551f7f773f8ae761119c",
+    "short_sha": "855c585",
+    "message": "fix: 资源包图标按显示上限降采样解码，修复超大 pack.png 导致启动器崩溃 (#2015)\n\npack.png 尺寸不受游戏约束，原尺寸解码会产生数百 MB 的位图，\n资源包列表绘制时报 Canvas: trying to draw too large 直接崩溃。\n改为先读尺寸边界再按 2 的幂降采样到 160px（列表图标 40dp 按 4x 屏换算）。",
+    "created_at": "2026-11-13T04:27:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43366537909"
+  },
+  {
     "id": 43146294323,
     "sha": "733f7199cfdac76d0b44c0ee5fec4d1b239d45ef",
     "short_sha": "733f719",
@@ -366,37 +398,5 @@
     "message": "feat: 每版本渲染器覆盖——多版本切换免频繁改渲染器 (#1975)\n\n* feat: 每版本渲染器覆盖——版本列表入口、全版本 Spinner 设置对话框、渲染器修改遮蔽警告\n\n- Profile.rendererOverrides（版本 id → renderer id）随配置 JSON 持久化，独立于 usesGlobal；\n  启动解析单点接入 getLaunchOptions：覆盖 > 特定设置 > 全局\n- 版本列表页左下角新增静态渲染器入口，打开 RendererOverrideDialog：\n  列出当前配置全部版本逐行 FCLSpinner 指定渲染器，默认「跟随设置」（即不覆盖）\n- 覆盖存在时从别处修改渲染器会弹遮蔽提示并提供三选项：\n  更新覆盖（覆盖改为本次选择）/清除覆盖（版本回到跟随设置）/保留覆盖\n  - 全局设置页仅检测当前选中版本，与既有「独立设置版本」提示合并展示\n  - 长按启动被遮蔽时不自动启动，更新/清除覆盖后沿用本次选择继续启动\n- 特定游戏设置页/长按启动的渲染器选择回调改传 Renderer（id 供覆盖比对）\n\n* fix: 渲染器覆盖指向已卸载/禁用的渲染器时视同无覆盖，长按启动取消时回滚写入\n\n- 新增 RendererManager.findRenderer（查找不兜底）与 Profile.getEffectiveRendererOverride，\n  启动解析、三处遮蔽检测统一改用有效覆盖判定，失效覆盖不再落入 NGGL4ES 兜底\n- 渲染器覆盖对话框打开时顺手清除失效覆盖并落盘，配置与界面、启动行为保持一致\n- MainActivity 长按启动被遮蔽提示打断后选取消时，回滚本次写入版本设置的渲染器，\n  避免放弃启动仍残留修改\n\n* fix: 渲染器遮蔽弹窗取消/保留时回滚对话框已写入的设置，全局页覆盖提示与 usesGlobal 解耦",
     "created_at": "2026-11-08T06:53:19Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42456553894"
-  },
-  {
-    "id": 42455842575,
-    "sha": "20f9cfefd55ec5a1faef3b9d8f9b92cc6d567580",
-    "short_sha": "20f9cfe",
-    "message": "fix: 渲染器遮蔽弹窗取消/保留时回滚对话框已写入的设置，全局页覆盖提示与 usesGlobal 解耦",
-    "created_at": "2026-11-08T06:42:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42455842575"
-  },
-  {
-    "id": 42455842625,
-    "sha": "20f9cfefd55ec5a1faef3b9d8f9b92cc6d567580",
-    "short_sha": "20f9cfe",
-    "message": "fix: 渲染器遮蔽弹窗取消/保留时回滚对话框已写入的设置，全局页覆盖提示与 usesGlobal 解耦",
-    "created_at": "2026-11-08T06:42:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42455842625"
-  },
-  {
-    "id": 42455838687,
-    "sha": "20f9cfefd55ec5a1faef3b9d8f9b92cc6d567580",
-    "short_sha": "20f9cfe",
-    "message": "fix: 渲染器遮蔽弹窗取消/保留时回滚对话框已写入的设置，全局页覆盖提示与 usesGlobal 解耦",
-    "created_at": "2026-11-08T06:42:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42455838687"
-  },
-  {
-    "id": 42455838665,
-    "sha": "20f9cfefd55ec5a1faef3b9d8f9b92cc6d567580",
-    "short_sha": "20f9cfe",
-    "message": "fix: 渲染器遮蔽弹窗取消/保留时回滚对话框已写入的设置，全局页覆盖提示与 usesGlobal 解耦",
-    "created_at": "2026-11-08T06:42:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42455838665"
   }
 ]

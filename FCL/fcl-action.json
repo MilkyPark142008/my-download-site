@@ -1,20 +1,20 @@
 {"run": {
-  "id": 43146294323,
-  "name": "Sync version map",
-  "node_id": "WFR_kwLOIQeFGs8AAAAKC7g0Mw",
+  "id": 43367619317,
+  "name": "Check Codes",
+  "node_id": "WFR_kwLOIQeFGs8AAAAKGOla9Q",
   "head_branch": "main",
-  "head_sha": "733f7199cfdac76d0b44c0ee5fec4d1b239d45ef",
-  "path": ".github/workflows/sync-version-map.yml",
-  "display_title": "Update version_map.json",
-  "run_number": 9,
+  "head_sha": "9f52d599d596dc9384fd566bbeed5b2bfc726e6f",
+  "path": ".github/workflows/check-codes.yml",
+  "display_title": "fix: 主题色透明度为 0 时进度条与滑条不可见 (#2016)",
+  "run_number": 458,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
-  "workflow_id": 383183163,
-  "check_suite_id": 116839839127,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAbNDJ1lw",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43146294323",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43146294323",
+  "workflow_id": 351611475,
+  "check_suite_id": 117433805381,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAbV5mqRQ",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43367619317",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43367619317",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
@@ -22,7 +22,7 @@
       "number": 364,
       "head": {
         "ref": "main",
-        "sha": "733f7199cfdac76d0b44c0ee5fec4d1b239d45ef",
+        "sha": "9f52d599d596dc9384fd566bbeed5b2bfc726e6f",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -45,7 +45,7 @@
       "number": 37,
       "head": {
         "ref": "main",
-        "sha": "733f7199cfdac76d0b44c0ee5fec4d1b239d45ef",
+        "sha": "9f52d599d596dc9384fd566bbeed5b2bfc726e6f",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -68,7 +68,7 @@
       "number": 400,
       "head": {
         "ref": "main",
-        "sha": "733f7199cfdac76d0b44c0ee5fec4d1b239d45ef",
+        "sha": "9f52d599d596dc9384fd566bbeed5b2bfc726e6f",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -86,8 +86,8 @@
       }
     }
   ],
-  "created_at": "2026-11-12T03:09:38Z",
-  "updated_at": "2026-11-12T03:10:03Z",
+  "created_at": "2026-11-13T04:45:56Z",
+  "updated_at": "2026-11-13T04:47:11Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-11-12T03:09:38Z",
+  "run_started_at": "2026-11-13T04:45:56Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,19 +133,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43146294323/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43146294323/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/116839839127",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43146294323/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43146294323/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43146294323/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43367619317/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43367619317/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/117433805381",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43367619317/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43367619317/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43367619317/rerun",
   "previous_attempt_url": null,
-  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/383183163",
+  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "733f7199cfdac76d0b44c0ee5fec4d1b239d45ef",
-    "tree_id": "7e66a6800df1607b65680ddf06f08afb6b70db5c",
-    "message": "Update version_map.json",
-    "timestamp": "2026-11-12T03:09:30Z",
+    "id": "9f52d599d596dc9384fd566bbeed5b2bfc726e6f",
+    "tree_id": "0620580b6239c86d68d40fce491e959045b91ee1",
+    "message": "fix: 主题色透明度为 0 时进度条与滑条不可见 (#2016)\n\n进度条/滑条 tint 改用不受主题透明度影响的 opaqueDkColor，并补充派生色透明度的回归测试。",
+    "timestamp": "2026-11-13T04:45:27Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"

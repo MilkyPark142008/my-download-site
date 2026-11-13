@@ -1,5 +1,13 @@
 [
   {
+    "id": 43360792346,
+    "sha": "166af615dbdca1a507b8c2d379822cca02795132",
+    "short_sha": "166af61",
+    "message": "feat(readme): provide more building info in readme (#404)",
+    "created_at": "2026-11-13T03:42:57Z",
+    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/43360792346"
+  },
+  {
     "id": 42441052362,
     "sha": "a743e284382fdcbd3f809d483b8a7a92483b5341",
     "short_sha": "a743e28",
@@ -390,13 +398,5 @@
     "message": "turnip works omgmasodmas",
     "created_at": "2026-08-25T13:05:33Z",
     "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/32851309812"
-  },
-  {
-    "id": 32651382884,
-    "sha": "5d71d89fa382d84af72018fddfdf6e7dadaa903d",
-    "short_sha": "5d71d89",
-    "message": "fix(nsbypass): Add /system_ext/ to permitted_when_isolated_path\n\nSome xiaomi phones load a libmivk.so from there which seem to use a hook\nlike libadrenotools. No clue what its for but the symbols contain\nYuanshen(CN GenshinImpact), Star Rail, ZZZ, and thats all I saw. Found\nVRS in there too. Found this dump that contains those files\nhttps://babadook.keenetic.link/dumps/redmi/mist/-/tree/missi-user-16-BP2A.250605.031.A3-OS3.0.305.0.WPUCNXM-release-keys\n\nGuess its for the screen enhancements stuff in their game ready driver\nstuff.",
-    "created_at": "2026-08-23T16:20:45Z",
-    "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/32651382884"
   }
 ]
