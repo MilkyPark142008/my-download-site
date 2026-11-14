@@ -1,5 +1,69 @@
 [
   {
+    "id": 43613295315,
+    "sha": "52224a05efb7b194b2b5e76abf2e8759e5de8bee",
+    "short_sha": "52224a0",
+    "message": "chore: 调整主界面布局，人物模型常驻显示",
+    "created_at": "2026-11-14T16:00:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43613295315"
+  },
+  {
+    "id": 43601604657,
+    "sha": "b1921fe28128716d82c650114d2b677b14a587b1",
+    "short_sha": "b1921fe",
+    "message": "fix: PetLib 控制器加载失败时导致启动器崩溃",
+    "created_at": "2026-11-14T13:48:13Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43601604657"
+  },
+  {
+    "id": 43600832095,
+    "sha": "24e3528c6b2e1c5db1b25a5c9d22487c8915e785",
+    "short_sha": "24e3528",
+    "message": "update: 更新 .gitignore",
+    "created_at": "2026-11-14T13:38:56Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43600832095"
+  },
+  {
+    "id": 43598999485,
+    "sha": "cba4bd206def6cbfb4fa38d250824ddcf9d91f9c",
+    "short_sha": "cba4bd2",
+    "message": "fix: 无法读取设置项时使用默认值",
+    "created_at": "2026-11-14T13:17:11Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43598999485"
+  },
+  {
+    "id": 43595150360,
+    "sha": "55964fd12d2918ec452fa5781c731f590e4175a4",
+    "short_sha": "55964fd",
+    "message": "合并拉取请求 #2246\n\nchore: 调整列表当前选择项的UI元素为胶囊",
+    "created_at": "2026-11-14T12:30:16Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43595150360"
+  },
+  {
+    "id": 43595104483,
+    "sha": "802b7c34223325d817185f8cc652efe58f98253b",
+    "short_sha": "802b7c3",
+    "message": "chore: 调整列表当前选择项的UI元素为胶囊",
+    "created_at": "2026-11-14T12:29:39Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43595104483"
+  },
+  {
+    "id": 43592025032,
+    "sha": "4aef541548d9230aac898196458885de6980befd",
+    "short_sha": "4aef541",
+    "message": "Merge pull request #2245 from ZalithLauncher/feat/arch-check\n\nfeat: 打开应用时检查架构是否匹配，不匹配时拒绝进入启动器",
+    "created_at": "2026-11-14T11:51:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43592025032"
+  },
+  {
+    "id": 43589321987,
+    "sha": "45c51e71c2dc3b0e0a4b738a5348baeee601de38",
+    "short_sha": "45c51e7",
+    "message": "chore: 持久化存储内容管理器的排序方式",
+    "created_at": "2026-11-14T11:17:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43589321987"
+  },
+  {
     "id": 43447948129,
     "sha": "6dee5eb156916a218cb8fd292aad70c363f9bccd",
     "short_sha": "6dee5eb",
@@ -334,69 +398,5 @@
     "message": "feat: 内置 MobileGlues 与 SimpleFPEWrapper 渲染器，新增渲染器配置体系并兼容 V2 插件",
     "created_at": "2026-10-28T16:00:28Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40721915040"
-  },
-  {
-    "id": 40686817054,
-    "sha": "013b1b49824f8d18ce5c11c437a66b001014c511",
-    "short_sha": "013b1b4",
-    "message": "Merge pull request #2146 from ZalithLauncher/refactor/jna\n\nrefactor: 重构 JNA 解压任务 & 仅包含 5.13.0 - 5.19.1",
-    "created_at": "2026-10-28T12:19:06Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40686817054"
-  },
-  {
-    "id": 40686765119,
-    "sha": "a4e1bb9762c16725ca85218626540e2612ce8f4a",
-    "short_sha": "a4e1bb9",
-    "message": "refactor: 重构 JNA 解压任务 & 仅包含 5.13.0 - 5.19.1",
-    "created_at": "2026-10-28T12:18:35Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40686765119"
-  },
-  {
-    "id": 40683603818,
-    "sha": "61b25d828945c5bdb3216c5269139586f4c1220d",
-    "short_sha": "61b25d8",
-    "message": "Merge pull request #2145 from ZalithLauncher/fix/virgl-osmesa-framebuffer\n\nfix: VirGL 颜色缓冲改用真实分配的可写内存",
-    "created_at": "2026-10-28T11:54:45Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40683603818"
-  },
-  {
-    "id": 40683558220,
-    "sha": "0bb6ea84c8b82493f498cf8795bac0aaa00d8a0a",
-    "short_sha": "0bb6ea8",
-    "message": "fix: VirGL 颜色缓冲改用真实分配的可写内存",
-    "created_at": "2026-10-28T11:54:15Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40683558220"
-  },
-  {
-    "id": 40680671507,
-    "sha": "781c517846380bf906595bd963c782a0dd8e74bf",
-    "short_sha": "781c517",
-    "message": "Merge pull request #2144 from ZalithLauncher/fix/launch-inherited-json-error-flow\n\nfix: 修复继承清单缺失与启动异常处理",
-    "created_at": "2026-10-28T11:31:51Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40680671507"
-  },
-  {
-    "id": 40680406926,
-    "sha": "608af8615789f9b22461814f79a95175e20a4b0a",
-    "short_sha": "608af86",
-    "message": "fix: 修复继承清单缺失与启动异常处理",
-    "created_at": "2026-10-28T11:29:24Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40680406926"
-  },
-  {
-    "id": 40675021854,
-    "sha": "d05901e8c218ab3331f28ea2a884c9737d93ea88",
-    "short_sha": "d05901e",
-    "message": "Merge pull request #2143 from ZalithLauncher/feat/jsound-native\n\nfeat: JSound 替换为原生 libjsound.so",
-    "created_at": "2026-10-28T10:48:25Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40675021854"
-  },
-  {
-    "id": 40674880204,
-    "sha": "c1726fed049a686297ac940f35436b9cc4c2ad39",
-    "short_sha": "c1726fe",
-    "message": "feat: JSound 替换为原生 libjsound.so",
-    "created_at": "2026-10-28T10:47:11Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40674880204"
   }
 ]

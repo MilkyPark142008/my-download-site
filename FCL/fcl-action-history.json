@@ -1,5 +1,101 @@
 [
   {
+    "id": 43588351342,
+    "sha": "de0bd0102f002722fdc876e1b7366b020c8b1a30",
+    "short_sha": "de0bd01",
+    "message": "fix: 修复安装器常驻 JVM 复用的审查问题\n\n- 换 JRE 重试链与常驻 JVM 冲突：:jvm 阶段结束写入 JRE 状态文件，主进程\n  start 前预读，JRE 不一致时先回收常驻进程再启动；服务内静态守卫降级为兜底\n- 阶段 main 补设线程上下文类加载器，失败路径统一恢复 TCCL 并只 Detach 自身\n  attach 的线程；类加载器父级改用平台类加载器，修复 JDK9+ 平台模块不可见\n- classpath 转 URL 改走 File.toURI().toURL()，支持含空格/非 ASCII 路径，\n  空 classpath 显式拒绝\n- launch() 参数解析或运行环境装配失败时补发退出码，避免界面与安装器主进程\n  等不到结束信号\n- nominal_exit 原子幂等，code 0 也回调 onExit，删除 global ref 后置空；\n  setupExitTrap 原子交换并回收旧引用\n- fcl_loader 退出陷阱与日志管道各错误路径补全资源释放；initializeHooks 改为\n  pthread_once 只执行一次；exit hook 自旋改为 pause 停车\n- 常驻 JVM 空闲自停时 onDestroy 主动结束进程释放内存；修正 ProcessService\n  过时注释与空 session 校验",
+    "created_at": "2026-11-14T11:04:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43588351342"
+  },
+  {
+    "id": 43588351193,
+    "sha": "de0bd0102f002722fdc876e1b7366b020c8b1a30",
+    "short_sha": "de0bd01",
+    "message": "fix: 修复安装器常驻 JVM 复用的审查问题\n\n- 换 JRE 重试链与常驻 JVM 冲突：:jvm 阶段结束写入 JRE 状态文件，主进程\n  start 前预读，JRE 不一致时先回收常驻进程再启动；服务内静态守卫降级为兜底\n- 阶段 main 补设线程上下文类加载器，失败路径统一恢复 TCCL 并只 Detach 自身\n  attach 的线程；类加载器父级改用平台类加载器，修复 JDK9+ 平台模块不可见\n- classpath 转 URL 改走 File.toURI().toURL()，支持含空格/非 ASCII 路径，\n  空 classpath 显式拒绝\n- launch() 参数解析或运行环境装配失败时补发退出码，避免界面与安装器主进程\n  等不到结束信号\n- nominal_exit 原子幂等，code 0 也回调 onExit，删除 global ref 后置空；\n  setupExitTrap 原子交换并回收旧引用\n- fcl_loader 退出陷阱与日志管道各错误路径补全资源释放；initializeHooks 改为\n  pthread_once 只执行一次；exit hook 自旋改为 pause 停车\n- 常驻 JVM 空闲自停时 onDestroy 主动结束进程释放内存；修正 ProcessService\n  过时注释与空 session 校验",
+    "created_at": "2026-11-14T11:04:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43588351193"
+  },
+  {
+    "id": 43588346514,
+    "sha": "de0bd0102f002722fdc876e1b7366b020c8b1a30",
+    "short_sha": "de0bd01",
+    "message": "fix: 修复安装器常驻 JVM 复用的审查问题\n\n- 换 JRE 重试链与常驻 JVM 冲突：:jvm 阶段结束写入 JRE 状态文件，主进程\n  start 前预读，JRE 不一致时先回收常驻进程再启动；服务内静态守卫降级为兜底\n- 阶段 main 补设线程上下文类加载器，失败路径统一恢复 TCCL 并只 Detach 自身\n  attach 的线程；类加载器父级改用平台类加载器，修复 JDK9+ 平台模块不可见\n- classpath 转 URL 改走 File.toURI().toURL()，支持含空格/非 ASCII 路径，\n  空 classpath 显式拒绝\n- launch() 参数解析或运行环境装配失败时补发退出码，避免界面与安装器主进程\n  等不到结束信号\n- nominal_exit 原子幂等，code 0 也回调 onExit，删除 global ref 后置空；\n  setupExitTrap 原子交换并回收旧引用\n- fcl_loader 退出陷阱与日志管道各错误路径补全资源释放；initializeHooks 改为\n  pthread_once 只执行一次；exit hook 自旋改为 pause 停车\n- 常驻 JVM 空闲自停时 onDestroy 主动结束进程释放内存；修正 ProcessService\n  过时注释与空 session 校验",
+    "created_at": "2026-11-14T11:04:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43588346514"
+  },
+  {
+    "id": 43588346712,
+    "sha": "de0bd0102f002722fdc876e1b7366b020c8b1a30",
+    "short_sha": "de0bd01",
+    "message": "fix: 修复安装器常驻 JVM 复用的审查问题\n\n- 换 JRE 重试链与常驻 JVM 冲突：:jvm 阶段结束写入 JRE 状态文件，主进程\n  start 前预读，JRE 不一致时先回收常驻进程再启动；服务内静态守卫降级为兜底\n- 阶段 main 补设线程上下文类加载器，失败路径统一恢复 TCCL 并只 Detach 自身\n  attach 的线程；类加载器父级改用平台类加载器，修复 JDK9+ 平台模块不可见\n- classpath 转 URL 改走 File.toURI().toURL()，支持含空格/非 ASCII 路径，\n  空 classpath 显式拒绝\n- launch() 参数解析或运行环境装配失败时补发退出码，避免界面与安装器主进程\n  等不到结束信号\n- nominal_exit 原子幂等，code 0 也回调 onExit，删除 global ref 后置空；\n  setupExitTrap 原子交换并回收旧引用\n- fcl_loader 退出陷阱与日志管道各错误路径补全资源释放；initializeHooks 改为\n  pthread_once 只执行一次；exit hook 自旋改为 pause 停车\n- 常驻 JVM 空闲自停时 onDestroy 主动结束进程释放内存；修正 ProcessService\n  过时注释与空 session 校验",
+    "created_at": "2026-11-14T11:04:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43588346712"
+  },
+  {
+    "id": 43583340216,
+    "sha": "0bec9070cd241f46e19d225100b6a8877dd1ad4b",
+    "short_sha": "0bec907",
+    "message": "fix: 编辑样式时切换对话框标题，管理对话框确认按钮改为关闭",
+    "created_at": "2026-11-14T10:02:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43583340216"
+  },
+  {
+    "id": 43583340265,
+    "sha": "0bec9070cd241f46e19d225100b6a8877dd1ad4b",
+    "short_sha": "0bec907",
+    "message": "fix: 编辑样式时切换对话框标题，管理对话框确认按钮改为关闭",
+    "created_at": "2026-11-14T10:02:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43583340265"
+  },
+  {
+    "id": 43583336599,
+    "sha": "0bec9070cd241f46e19d225100b6a8877dd1ad4b",
+    "short_sha": "0bec907",
+    "message": "fix: 编辑样式时切换对话框标题，管理对话框确认按钮改为关闭",
+    "created_at": "2026-11-14T10:02:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43583336599"
+  },
+  {
+    "id": 43583336922,
+    "sha": "0bec9070cd241f46e19d225100b6a8877dd1ad4b",
+    "short_sha": "0bec907",
+    "message": "fix: 编辑样式时切换对话框标题，管理对话框确认按钮改为关闭",
+    "created_at": "2026-11-14T10:02:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43583336922"
+  },
+  {
+    "id": 43583063164,
+    "sha": "61b47dbef9564967a0b1e998b4d7565cf1e18c1c",
+    "short_sha": "61b47db",
+    "message": "fix: 加载布局时挂回样式表对象并修复样式筛选文字颜色",
+    "created_at": "2026-11-14T09:58:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43583063164"
+  },
+  {
+    "id": 43583063180,
+    "sha": "61b47dbef9564967a0b1e998b4d7565cf1e18c1c",
+    "short_sha": "61b47db",
+    "message": "fix: 加载布局时挂回样式表对象并修复样式筛选文字颜色",
+    "created_at": "2026-11-14T09:58:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43583063180"
+  },
+  {
+    "id": 43583059691,
+    "sha": "61b47dbef9564967a0b1e998b4d7565cf1e18c1c",
+    "short_sha": "61b47db",
+    "message": "fix: 加载布局时挂回样式表对象并修复样式筛选文字颜色",
+    "created_at": "2026-11-14T09:58:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43583059691"
+  },
+  {
+    "id": 43583059749,
+    "sha": "61b47dbef9564967a0b1e998b4d7565cf1e18c1c",
+    "short_sha": "61b47db",
+    "message": "fix: 加载布局时挂回样式表对象并修复样式筛选文字颜色",
+    "created_at": "2026-11-14T09:58:44Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43583059749"
+  },
+  {
     "id": 43537454483,
     "sha": "e64c91055c1ec99b9e0c40a820694e5c2df447d8",
     "short_sha": "e64c910",
@@ -302,101 +398,5 @@
     "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
     "created_at": "2026-11-08T13:53:35Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487149107"
-  },
-  {
-    "id": 42487011565,
-    "sha": "95327bb1fa9cbdd3ce561a3db0556035e2625574",
-    "short_sha": "95327bb",
-    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
-    "created_at": "2026-11-08T13:51:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487011565"
-  },
-  {
-    "id": 42487011727,
-    "sha": "95327bb1fa9cbdd3ce561a3db0556035e2625574",
-    "short_sha": "95327bb",
-    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
-    "created_at": "2026-11-08T13:51:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487011727"
-  },
-  {
-    "id": 42487008187,
-    "sha": "95327bb1fa9cbdd3ce561a3db0556035e2625574",
-    "short_sha": "95327bb",
-    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
-    "created_at": "2026-11-08T13:51:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487008187"
-  },
-  {
-    "id": 42487008176,
-    "sha": "95327bb1fa9cbdd3ce561a3db0556035e2625574",
-    "short_sha": "95327bb",
-    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
-    "created_at": "2026-11-08T13:51:15Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487008176"
-  },
-  {
-    "id": 42484839386,
-    "sha": "2f6ce6d7060bbaf1f2fa504f4d96783857a1fb76",
-    "short_sha": "2f6ce6d",
-    "message": "fix: updateBuiltinJarSha1 去掉输入输出声明，规避 lintVitalAnalyzeRelease 隐式依赖校验失败",
-    "created_at": "2026-11-08T13:23:36Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42484839386"
-  },
-  {
-    "id": 42483752349,
-    "sha": "234d213690fb0d9ea07b540541bd33f270caaa78",
-    "short_sha": "234d213",
-    "message": "fix: 修复无法正常启动 Minecraft 13w16a~13w23b 快照的问题 (#2002)\n\n- 13w16a~13w23b 快照缺少非英语语言的外部语言资源，写入 lang 后启动会卡在 Mojang 加载界面，历史已写入的 lang 一并重置为默认英语\n- has_custom_resolution 特性标志增加版本门控，1.6（快照 13w25a）之前的版本不支持自定义分辨率参数\n\n参考 HMCL（https://github.com/HMCL-dev/HMCL/commit/087b2b678d51782f0d6bd64db8a2acd7608c8ee7）",
-    "created_at": "2026-11-08T13:11:17Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42483752349"
-  },
-  {
-    "id": 42483714589,
-    "sha": "d03e3a69f4b4ff90e93924d98c030da55780e443",
-    "short_sha": "d03e3a6",
-    "message": "fix: 移除游戏内按键投影阴影，elevation 仅保留堆叠 z 序 #2007 (#2008)",
-    "created_at": "2026-11-08T13:10:50Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42483714589"
-  },
-  {
-    "id": 42483113477,
-    "sha": "4ed453185f80c6e1768347947aef5c6e4f19104e",
-    "short_sha": "4ed4531",
-    "message": "optimize: 启动解包内置 jar 前按包内 .sha1 比对跳过重复释放，kts 注册 updateBuiltinJarSha1 自动续期校验文件",
-    "created_at": "2026-11-08T13:02:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42483113477"
-  },
-  {
-    "id": 42472434886,
-    "sha": "dba408c250b788e95286db4fb5cfa5604374484b",
-    "short_sha": "dba408c",
-    "message": "feat: AWT 悬浮层补齐 jre8 支持，AwtHelper 迁为 LWJGL 子模块随启动释放",
-    "created_at": "2026-11-08T10:40:39Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42472434886"
-  },
-  {
-    "id": 42472434849,
-    "sha": "dba408c250b788e95286db4fb5cfa5604374484b",
-    "short_sha": "dba408c",
-    "message": "feat: AWT 悬浮层补齐 jre8 支持，AwtHelper 迁为 LWJGL 子模块随启动释放",
-    "created_at": "2026-11-08T10:40:39Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42472434849"
-  },
-  {
-    "id": 42470165137,
-    "sha": "714e01b28111d5180ecdc29a4547f053e1851c14",
-    "short_sha": "714e01b",
-    "message": "fix: 启动时将系统 CJK 字体挂入 JRE fallback 目录修复 AWT 中文渲染",
-    "created_at": "2026-11-08T09:45:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42470165137"
-  },
-  {
-    "id": 42470165096,
-    "sha": "714e01b28111d5180ecdc29a4547f053e1851c14",
-    "short_sha": "714e01b",
-    "message": "fix: 启动时将系统 CJK 字体挂入 JRE fallback 目录修复 AWT 中文渲染",
-    "created_at": "2026-11-08T09:45:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42470165096"
   }
 ]

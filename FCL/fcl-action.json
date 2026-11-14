@@ -1,28 +1,28 @@
 {"run": {
-  "id": 43537454483,
+  "id": 43588351342,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAKIwjVkw",
-  "head_branch": "main",
-  "head_sha": "e64c91055c1ec99b9e0c40a820694e5c2df447d8",
+  "node_id": "WFR_kwLOIQeFGs8AAAAKJhF1bg",
+  "head_branch": "feat/installer-process-reuse",
+  "head_sha": "de0bd0102f002722fdc876e1b7366b020c8b1a30",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "fix: 主题色透明度为 0 时动态岛、输入框与数字滑条不可见 (#2016)",
-  "run_number": 459,
-  "event": "push",
+  "display_title": "feat: 启动层直启与安装器进程常驻复用",
+  "run_number": 465,
+  "event": "pull_request",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 117890017584,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAbcsrpMA",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43537454483",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43537454483",
+  "check_suite_id": 118023057015,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAberjudw",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43588351342",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43588351342",
   "pull_requests": [
     {
-      "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
-      "id": 4452442002,
-      "number": 364,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/pulls/1988",
+      "id": 5098739824,
+      "number": 1988,
       "head": {
-        "ref": "main",
-        "sha": "e64c91055c1ec99b9e0c40a820694e5c2df447d8",
+        "ref": "feat/installer-process-reuse",
+        "sha": "de0bd0102f002722fdc876e1b7366b020c8b1a30",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -31,63 +31,17 @@
       },
       "base": {
         "ref": "main",
-        "sha": "97dc0f6c4a5f5fada8b86aa68e1e9d4b189d1b25",
-        "repo": {
-          "id": 1026321990,
-          "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      }
-    },
-    {
-      "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher/pulls/37",
-      "id": 4452270030,
-      "number": 37,
-      "head": {
-        "ref": "main",
         "sha": "e64c91055c1ec99b9e0c40a820694e5c2df447d8",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
-        "repo": {
-          "id": 1335592322,
-          "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      }
-    },
-    {
-      "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher/pulls/400",
-      "id": 4451484148,
-      "number": 400,
-      "head": {
-        "ref": "main",
-        "sha": "e64c91055c1ec99b9e0c40a820694e5c2df447d8",
-        "repo": {
-          "id": 554140954,
-          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
-        "repo": {
-          "id": 835628097,
-          "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher",
           "name": "FoldCraftLauncher"
         }
       }
     }
   ],
-  "created_at": "2026-11-14T00:56:33Z",
-  "updated_at": "2026-11-14T00:57:47Z",
+  "created_at": "2026-11-14T11:05:30Z",
+  "updated_at": "2026-11-14T11:06:43Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +65,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-11-14T00:56:33Z",
+  "run_started_at": "2026-11-14T11:05:30Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,19 +87,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43537454483/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43537454483/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/117890017584",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43537454483/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43537454483/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43537454483/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43588351342/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43588351342/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/118023057015",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43588351342/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43588351342/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43588351342/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "e64c91055c1ec99b9e0c40a820694e5c2df447d8",
-    "tree_id": "8ca1ca369911ac70198c118935003a7511943487",
-    "message": "fix: 主题色透明度为 0 时动态岛、输入框与数字滑条不可见 (#2016)\n\n动态岛轮廓、输入框背景选中态、数字滑条按钮与填充段改用不受主题透明度影响的 opaqueDkColor；顺带清理未使用的 Log import，Kotlin 改用属性赋值语法。",
-    "timestamp": "2026-11-14T00:55:31Z",
+    "id": "de0bd0102f002722fdc876e1b7366b020c8b1a30",
+    "tree_id": "30fb0b6429fe1c5c63a9c05c531aa4fff5ed1d2f",
+    "message": "fix: 修复安装器常驻 JVM 复用的审查问题\n\n- 换 JRE 重试链与常驻 JVM 冲突：:jvm 阶段结束写入 JRE 状态文件，主进程\n  start 前预读，JRE 不一致时先回收常驻进程再启动；服务内静态守卫降级为兜底\n- 阶段 main 补设线程上下文类加载器，失败路径统一恢复 TCCL 并只 Detach 自身\n  attach 的线程；类加载器父级改用平台类加载器，修复 JDK9+ 平台模块不可见\n- classpath 转 URL 改走 File.toURI().toURL()，支持含空格/非 ASCII 路径，\n  空 classpath 显式拒绝\n- launch() 参数解析或运行环境装配失败时补发退出码，避免界面与安装器主进程\n  等不到结束信号\n- nominal_exit 原子幂等，code 0 也回调 onExit，删除 global ref 后置空；\n  setupExitTrap 原子交换并回收旧引用\n- fcl_loader 退出陷阱与日志管道各错误路径补全资源释放；initializeHooks 改为\n  pthread_once 只执行一次；exit hook 自旋改为 pause 停车\n- 常驻 JVM 空闲自停时 onDestroy 主动结束进程释放内存；修正 ProcessService\n  过时注释与空 session 校验",
+    "timestamp": "2026-11-14T11:04:48Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
