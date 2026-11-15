@@ -1,5 +1,29 @@
 [
   {
+    "id": 43721197030,
+    "sha": "d5f495b2625f3180fe3661bca35aedab2bcf5b8f",
+    "short_sha": "d5f495b",
+    "message": "chore(l10n): update Chinese (Simplified Han script) translation\n\nCo-authored-by: reducedradius <137701630+flytothehighest@users.noreply.github.com>\nLanguage: Chinese (Simplified Han script)\nProgress: 99.6% (1626 of 1632 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hans/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-11-15T13:51:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43721197030"
+  },
+  {
+    "id": 43721195708,
+    "sha": "d5f495b2625f3180fe3661bca35aedab2bcf5b8f",
+    "short_sha": "d5f495b",
+    "message": "chore(l10n): update Chinese (Simplified Han script) translation\n\nCo-authored-by: reducedradius <137701630+flytothehighest@users.noreply.github.com>\nLanguage: Chinese (Simplified Han script)\nProgress: 99.6% (1626 of 1632 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hans/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-11-15T13:51:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43721195708"
+  },
+  {
+    "id": 43721195668,
+    "sha": "d5f495b2625f3180fe3661bca35aedab2bcf5b8f",
+    "short_sha": "d5f495b",
+    "message": "chore(l10n): update Chinese (Simplified Han script) translation\n\nCo-authored-by: reducedradius <137701630+flytothehighest@users.noreply.github.com>\nLanguage: Chinese (Simplified Han script)\nProgress: 99.6% (1626 of 1632 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hans/\nTranslation: FoldCraftLauncher/FCL",
+    "created_at": "2026-11-15T13:51:26Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43721195668"
+  },
+  {
     "id": 43675406203,
     "sha": "edc13ee5021aae3382613999a8b256c9c6a614c7",
     "short_sha": "edc13ee",
@@ -64,20 +88,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43667982619"
   },
   {
-    "id": 43666762628,
-    "sha": "b1c8017100fd7e3de98b0e8d3d3a303443ce2982",
-    "short_sha": "b1c8017",
-    "message": "fix: 修复编辑已保存的按键/方向样式时因绑定属性泄漏导致的崩溃 (#2018)\n\n样式对话框中的草稿样式 name 等属性绑定在输入控件上，确认时又被直接交给样式注册表，导致列表中保存了绑定对象；之后编辑该样式时 setAll 写入绑定属性会抛 A bound value cannot be set。确认时改为回调草稿样式的副本，避免绑定随对象泄漏到数据层。",
-    "created_at": "2026-11-15T02:11:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43666762628"
-  },
-  {
     "id": 43666762675,
     "sha": "b1c8017100fd7e3de98b0e8d3d3a303443ce2982",
     "short_sha": "b1c8017",
     "message": "fix: 修复编辑已保存的按键/方向样式时因绑定属性泄漏导致的崩溃 (#2018)\n\n样式对话框中的草稿样式 name 等属性绑定在输入控件上，确认时又被直接交给样式注册表，导致列表中保存了绑定对象；之后编辑该样式时 setAll 写入绑定属性会抛 A bound value cannot be set。确认时改为回调草稿样式的副本，避免绑定随对象泄漏到数据层。",
     "created_at": "2026-11-15T02:11:38Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43666762675"
+  },
+  {
+    "id": 43666762628,
+    "sha": "b1c8017100fd7e3de98b0e8d3d3a303443ce2982",
+    "short_sha": "b1c8017",
+    "message": "fix: 修复编辑已保存的按键/方向样式时因绑定属性泄漏导致的崩溃 (#2018)\n\n样式对话框中的草稿样式 name 等属性绑定在输入控件上，确认时又被直接交给样式注册表，导致列表中保存了绑定对象；之后编辑该样式时 setAll 写入绑定属性会抛 A bound value cannot be set。确认时改为回调草稿样式的副本，避免绑定随对象泄漏到数据层。",
+    "created_at": "2026-11-15T02:11:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43666762628"
   },
   {
     "id": 43665280820,
@@ -374,29 +398,5 @@
     "message": "fix: 微软账户重新登录等待授权期间允许取消，修复退出登录页面后对话框卡死 (#2013)",
     "created_at": "2026-11-10T00:51:34Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42731653886"
-  },
-  {
-    "id": 42616714844,
-    "sha": "a6ded718d41346fa61cefe15dda4f05cf108827c",
-    "short_sha": "a6ded71",
-    "message": "optimize: 移除运行环境解压时对小文件的人为延时",
-    "created_at": "2026-11-09T12:23:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42616714844"
-  },
-  {
-    "id": 42616715010,
-    "sha": "a6ded718d41346fa61cefe15dda4f05cf108827c",
-    "short_sha": "a6ded71",
-    "message": "optimize: 移除运行环境解压时对小文件的人为延时",
-    "created_at": "2026-11-09T12:23:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42616715010"
-  },
-  {
-    "id": 42604599134,
-    "sha": "f5bb1526eb371d81cb086d74cdb8535043b51ee4",
-    "short_sha": "f5bb152",
-    "message": "fix: 主动同步 SDL 手柄设备枚举，修复 Controlify 需重连手柄才能直通（同步 ZL2 PR #2204）",
-    "created_at": "2026-11-09T10:53:14Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42604599134"
   }
 ]
