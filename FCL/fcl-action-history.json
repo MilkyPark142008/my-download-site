@@ -1,5 +1,149 @@
 [
   {
+    "id": 43675406203,
+    "sha": "edc13ee5021aae3382613999a8b256c9c6a614c7",
+    "short_sha": "edc13ee",
+    "message": "feat: 按键编辑撤销/恢复 (#1991)\n\n* feat: 按键编辑撤销/恢复——按组快照两栈历史，入口为左抽屉底部操作区\n\n* fix: 修复撤销/恢复历史快照的样式监听泄漏并清理冗余代码\n\n- 快照改存纯数据（id/文字/style 引用/位置尺寸/事件），不再持有数据实例，\n  避免样式对象长期持有已废弃的快照数据\n- 整表替换与删除控件前断开样式监听（数据类新增 detachStyleListener）\n- record 无条件清空重做栈并统一刷新按钮可用态\n- restoreViewsForGroups 改为按组绑定的 Map 参数，消除下标错位风险\n- 删除 GameMenu 中重复的 editHistoryBar 显隐代码",
+    "created_at": "2026-11-15T04:07:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43675406203"
+  },
+  {
+    "id": 43675406195,
+    "sha": "edc13ee5021aae3382613999a8b256c9c6a614c7",
+    "short_sha": "edc13ee",
+    "message": "feat: 按键编辑撤销/恢复 (#1991)\n\n* feat: 按键编辑撤销/恢复——按组快照两栈历史，入口为左抽屉底部操作区\n\n* fix: 修复撤销/恢复历史快照的样式监听泄漏并清理冗余代码\n\n- 快照改存纯数据（id/文字/style 引用/位置尺寸/事件），不再持有数据实例，\n  避免样式对象长期持有已废弃的快照数据\n- 整表替换与删除控件前断开样式监听（数据类新增 detachStyleListener）\n- record 无条件清空重做栈并统一刷新按钮可用态\n- restoreViewsForGroups 改为按组绑定的 Map 参数，消除下标错位风险\n- 删除 GameMenu 中重复的 editHistoryBar 显隐代码",
+    "created_at": "2026-11-15T04:07:57Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43675406195"
+  },
+  {
+    "id": 43675321274,
+    "sha": "6d94c57539b99d492878ec642c0665e1af470cb2",
+    "short_sha": "6d94c57",
+    "message": "fix: 修复撤销/恢复历史快照的样式监听泄漏并清理冗余代码\n\n- 快照改存纯数据（id/文字/style 引用/位置尺寸/事件），不再持有数据实例，\n  避免样式对象长期持有已废弃的快照数据\n- 整表替换与删除控件前断开样式监听（数据类新增 detachStyleListener）\n- record 无条件清空重做栈并统一刷新按钮可用态\n- restoreViewsForGroups 改为按组绑定的 Map 参数，消除下标错位风险\n- 删除 GameMenu 中重复的 editHistoryBar 显隐代码",
+    "created_at": "2026-11-15T04:05:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43675321274"
+  },
+  {
+    "id": 43675321269,
+    "sha": "6d94c57539b99d492878ec642c0665e1af470cb2",
+    "short_sha": "6d94c57",
+    "message": "fix: 修复撤销/恢复历史快照的样式监听泄漏并清理冗余代码\n\n- 快照改存纯数据（id/文字/style 引用/位置尺寸/事件），不再持有数据实例，\n  避免样式对象长期持有已废弃的快照数据\n- 整表替换与删除控件前断开样式监听（数据类新增 detachStyleListener）\n- record 无条件清空重做栈并统一刷新按钮可用态\n- restoreViewsForGroups 改为按组绑定的 Map 参数，消除下标错位风险\n- 删除 GameMenu 中重复的 editHistoryBar 显隐代码",
+    "created_at": "2026-11-15T04:05:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43675321269"
+  },
+  {
+    "id": 43675316532,
+    "sha": "6d94c57539b99d492878ec642c0665e1af470cb2",
+    "short_sha": "6d94c57",
+    "message": "fix: 修复撤销/恢复历史快照的样式监听泄漏并清理冗余代码\n\n- 快照改存纯数据（id/文字/style 引用/位置尺寸/事件），不再持有数据实例，\n  避免样式对象长期持有已废弃的快照数据\n- 整表替换与删除控件前断开样式监听（数据类新增 detachStyleListener）\n- record 无条件清空重做栈并统一刷新按钮可用态\n- restoreViewsForGroups 改为按组绑定的 Map 参数，消除下标错位风险\n- 删除 GameMenu 中重复的 editHistoryBar 显隐代码",
+    "created_at": "2026-11-15T04:05:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43675316532"
+  },
+  {
+    "id": 43675316486,
+    "sha": "6d94c57539b99d492878ec642c0665e1af470cb2",
+    "short_sha": "6d94c57",
+    "message": "fix: 修复撤销/恢复历史快照的样式监听泄漏并清理冗余代码\n\n- 快照改存纯数据（id/文字/style 引用/位置尺寸/事件），不再持有数据实例，\n  避免样式对象长期持有已废弃的快照数据\n- 整表替换与删除控件前断开样式监听（数据类新增 detachStyleListener）\n- record 无条件清空重做栈并统一刷新按钮可用态\n- restoreViewsForGroups 改为按组绑定的 Map 参数，消除下标错位风险\n- 删除 GameMenu 中重复的 editHistoryBar 显隐代码",
+    "created_at": "2026-11-15T04:05:23Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43675316486"
+  },
+  {
+    "id": 43667994194,
+    "sha": "54b8bf819f5a2246da2702175c33204edbb3645b",
+    "short_sha": "54b8bf8",
+    "message": "fix: Vulkan 检测按 linkerhook 实际加载状态判定自定义驱动，修复驱动缺失时误报加载 (#2019)",
+    "created_at": "2026-11-15T02:28:50Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43667994194"
+  },
+  {
+    "id": 43667982619,
+    "sha": "54b8bf819f5a2246da2702175c33204edbb3645b",
+    "short_sha": "54b8bf8",
+    "message": "fix: Vulkan 检测按 linkerhook 实际加载状态判定自定义驱动，修复驱动缺失时误报加载 (#2019)",
+    "created_at": "2026-11-15T02:28:50Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43667982619"
+  },
+  {
+    "id": 43666762628,
+    "sha": "b1c8017100fd7e3de98b0e8d3d3a303443ce2982",
+    "short_sha": "b1c8017",
+    "message": "fix: 修复编辑已保存的按键/方向样式时因绑定属性泄漏导致的崩溃 (#2018)\n\n样式对话框中的草稿样式 name 等属性绑定在输入控件上，确认时又被直接交给样式注册表，导致列表中保存了绑定对象；之后编辑该样式时 setAll 写入绑定属性会抛 A bound value cannot be set。确认时改为回调草稿样式的副本，避免绑定随对象泄漏到数据层。",
+    "created_at": "2026-11-15T02:11:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43666762628"
+  },
+  {
+    "id": 43666762675,
+    "sha": "b1c8017100fd7e3de98b0e8d3d3a303443ce2982",
+    "short_sha": "b1c8017",
+    "message": "fix: 修复编辑已保存的按键/方向样式时因绑定属性泄漏导致的崩溃 (#2018)\n\n样式对话框中的草稿样式 name 等属性绑定在输入控件上，确认时又被直接交给样式注册表，导致列表中保存了绑定对象；之后编辑该样式时 setAll 写入绑定属性会抛 A bound value cannot be set。确认时改为回调草稿样式的副本，避免绑定随对象泄漏到数据层。",
+    "created_at": "2026-11-15T02:11:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43666762675"
+  },
+  {
+    "id": 43665280820,
+    "sha": "95004f2f798c4e64115f23aebb2507861c4cec5f",
+    "short_sha": "95004f2",
+    "message": "fix: 删除样式后按名回退画布与数据中的克隆样式引用，修复不重进不恢复",
+    "created_at": "2026-11-15T01:54:42Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43665280820"
+  },
+  {
+    "id": 43665280813,
+    "sha": "95004f2f798c4e64115f23aebb2507861c4cec5f",
+    "short_sha": "95004f2",
+    "message": "fix: 删除样式后按名回退画布与数据中的克隆样式引用，修复不重进不恢复",
+    "created_at": "2026-11-15T01:54:42Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43665280813"
+  },
+  {
+    "id": 43665274923,
+    "sha": "95004f2f798c4e64115f23aebb2507861c4cec5f",
+    "short_sha": "95004f2",
+    "message": "fix: 删除样式后按名回退画布与数据中的克隆样式引用，修复不重进不恢复",
+    "created_at": "2026-11-15T01:54:42Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43665274923"
+  },
+  {
+    "id": 43665274982,
+    "sha": "95004f2f798c4e64115f23aebb2507861c4cec5f",
+    "short_sha": "95004f2",
+    "message": "fix: 删除样式后按名回退画布与数据中的克隆样式引用，修复不重进不恢复",
+    "created_at": "2026-11-15T01:54:42Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43665274982"
+  },
+  {
+    "id": 43663899020,
+    "sha": "2f4d4b37bcc9dad832bccd0121cf0411cd183015",
+    "short_sha": "2f4d4b3",
+    "message": "fix: 删除样式后刷新编辑对话框引用，跨布局导入前提示复制说明",
+    "created_at": "2026-11-15T01:36:05Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43663899020"
+  },
+  {
+    "id": 43663899024,
+    "sha": "2f4d4b37bcc9dad832bccd0121cf0411cd183015",
+    "short_sha": "2f4d4b3",
+    "message": "fix: 删除样式后刷新编辑对话框引用，跨布局导入前提示复制说明",
+    "created_at": "2026-11-15T01:36:05Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43663899024"
+  },
+  {
+    "id": 43663893602,
+    "sha": "2f4d4b37bcc9dad832bccd0121cf0411cd183015",
+    "short_sha": "2f4d4b3",
+    "message": "fix: 删除样式后刷新编辑对话框引用，跨布局导入前提示复制说明",
+    "created_at": "2026-11-15T01:36:05Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43663893602"
+  },
+  {
+    "id": 43663893617,
+    "sha": "2f4d4b37bcc9dad832bccd0121cf0411cd183015",
+    "short_sha": "2f4d4b3",
+    "message": "fix: 删除样式后刷新编辑对话框引用，跨布局导入前提示复制说明",
+    "created_at": "2026-11-15T01:36:05Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43663893617"
+  },
+  {
     "id": 43588351342,
     "sha": "de0bd0102f002722fdc876e1b7366b020c8b1a30",
     "short_sha": "de0bd01",
@@ -254,149 +398,5 @@
     "message": "fix: 主动同步 SDL 手柄设备枚举，修复 Controlify 需重连手柄才能直通（同步 ZL2 PR #2204）",
     "created_at": "2026-11-09T10:53:14Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42604599134"
-  },
-  {
-    "id": 42604599229,
-    "sha": "f5bb1526eb371d81cb086d74cdb8535043b51ee4",
-    "short_sha": "f5bb152",
-    "message": "fix: 主动同步 SDL 手柄设备枚举，修复 Controlify 需重连手柄才能直通（同步 ZL2 PR #2204）",
-    "created_at": "2026-11-09T10:53:14Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42604599229"
-  },
-  {
-    "id": 42565828285,
-    "sha": "7f0a40540fe9a8e53ddcbd2646b45451ba3ffe45",
-    "short_sha": "7f0a405",
-    "message": "optimize: 任务列表任务行增删改为批量刷新，修复高速下载卡顿 (#2010)\n\n* optimize: 任务列表任务行增删改为 100ms 批量刷新，修复高速下载时逐事件全量刷新 ListView 导致的卡顿\n\n* fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
-    "created_at": "2026-11-09T05:11:14Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565828285"
-  },
-  {
-    "id": 42565828223,
-    "sha": "7f0a40540fe9a8e53ddcbd2646b45451ba3ffe45",
-    "short_sha": "7f0a405",
-    "message": "optimize: 任务列表任务行增删改为批量刷新，修复高速下载卡顿 (#2010)\n\n* optimize: 任务列表任务行增删改为 100ms 批量刷新，修复高速下载时逐事件全量刷新 ListView 导致的卡顿\n\n* fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
-    "created_at": "2026-11-09T05:11:14Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565828223"
-  },
-  {
-    "id": 42565801356,
-    "sha": "272ab1dd1fbfcd4928d859827f33c76ba66e93c9",
-    "short_sha": "272ab1d",
-    "message": "fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
-    "created_at": "2026-11-09T05:10:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565801356"
-  },
-  {
-    "id": 42565801346,
-    "sha": "272ab1dd1fbfcd4928d859827f33c76ba66e93c9",
-    "short_sha": "272ab1d",
-    "message": "fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
-    "created_at": "2026-11-09T05:10:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565801346"
-  },
-  {
-    "id": 42565796497,
-    "sha": "272ab1dd1fbfcd4928d859827f33c76ba66e93c9",
-    "short_sha": "272ab1d",
-    "message": "fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
-    "created_at": "2026-11-09T05:10:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565796497"
-  },
-  {
-    "id": 42565796461,
-    "sha": "272ab1dd1fbfcd4928d859827f33c76ba66e93c9",
-    "short_sha": "272ab1d",
-    "message": "fix: release() 先摘任务监听再清理批量刷新队列，避免摘除前窗口期入队的 op 在释放后触发 flush",
-    "created_at": "2026-11-09T05:10:52Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42565796461"
-  },
-  {
-    "id": 42563870795,
-    "sha": "c13dbc03c475df243ec1f0fab43c848b37d67bbc",
-    "short_sha": "c13dbc0",
-    "message": "optimize: 任务列表任务行增删改为 100ms 批量刷新，修复高速下载时逐事件全量刷新 ListView 导致的卡顿",
-    "created_at": "2026-11-09T04:48:33Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42563870795"
-  },
-  {
-    "id": 42563870768,
-    "sha": "c13dbc03c475df243ec1f0fab43c848b37d67bbc",
-    "short_sha": "c13dbc0",
-    "message": "optimize: 任务列表任务行增删改为 100ms 批量刷新，修复高速下载时逐事件全量刷新 ListView 导致的卡顿",
-    "created_at": "2026-11-09T04:48:33Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42563870768"
-  },
-  {
-    "id": 42563828278,
-    "sha": "c13dbc03c475df243ec1f0fab43c848b37d67bbc",
-    "short_sha": "c13dbc0",
-    "message": "optimize: 任务列表任务行增删改为 100ms 批量刷新，修复高速下载时逐事件全量刷新 ListView 导致的卡顿",
-    "created_at": "2026-11-09T04:48:33Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42563828278"
-  },
-  {
-    "id": 42563828226,
-    "sha": "c13dbc03c475df243ec1f0fab43c848b37d67bbc",
-    "short_sha": "c13dbc0",
-    "message": "optimize: 任务列表任务行增删改为 100ms 批量刷新，修复高速下载时逐事件全量刷新 ListView 导致的卡顿",
-    "created_at": "2026-11-09T04:48:33Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42563828226"
-  },
-  {
-    "id": 42488542954,
-    "sha": "601f3a9f5da116c450edae00170012b276028986",
-    "short_sha": "601f3a9",
-    "message": "fix: logger 线程退出先释放全局引用再 Detach，修复安装进程 CheckJNI abort\n\ncherry-pick 审查修复时漏掉了退出顺序修正：DetachCurrentThread 必须是\n退出路径最后一个 JNI 调用，脱离后再用旧 env DeleteGlobalRef 会触发\nCheckAttachedThread JniAbort 打崩 :jvm 进程——表现为下一 processor 阶段\nredirectStdio 接管 stdio 时安装中断",
-    "created_at": "2026-11-08T14:06:11Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42488542954"
-  },
-  {
-    "id": 42488542930,
-    "sha": "601f3a9f5da116c450edae00170012b276028986",
-    "short_sha": "601f3a9",
-    "message": "fix: logger 线程退出先释放全局引用再 Detach，修复安装进程 CheckJNI abort\n\ncherry-pick 审查修复时漏掉了退出顺序修正：DetachCurrentThread 必须是\n退出路径最后一个 JNI 调用，脱离后再用旧 env DeleteGlobalRef 会触发\nCheckAttachedThread JniAbort 打崩 :jvm 进程——表现为下一 processor 阶段\nredirectStdio 接管 stdio 时安装中断",
-    "created_at": "2026-11-08T14:06:11Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42488542930"
-  },
-  {
-    "id": 42488538471,
-    "sha": "601f3a9f5da116c450edae00170012b276028986",
-    "short_sha": "601f3a9",
-    "message": "fix: logger 线程退出先释放全局引用再 Detach，修复安装进程 CheckJNI abort\n\ncherry-pick 审查修复时漏掉了退出顺序修正：DetachCurrentThread 必须是\n退出路径最后一个 JNI 调用，脱离后再用旧 env DeleteGlobalRef 会触发\nCheckAttachedThread JniAbort 打崩 :jvm 进程——表现为下一 processor 阶段\nredirectStdio 接管 stdio 时安装中断",
-    "created_at": "2026-11-08T14:06:11Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42488538471"
-  },
-  {
-    "id": 42487152884,
-    "sha": "1961d05e6c8827fe5b14117018be374c6b4e1f59",
-    "short_sha": "1961d05",
-    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
-    "created_at": "2026-11-08T13:53:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487152884"
-  },
-  {
-    "id": 42487152855,
-    "sha": "1961d05e6c8827fe5b14117018be374c6b4e1f59",
-    "short_sha": "1961d05",
-    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
-    "created_at": "2026-11-08T13:53:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487152855"
-  },
-  {
-    "id": 42487149059,
-    "sha": "1961d05e6c8827fe5b14117018be374c6b4e1f59",
-    "short_sha": "1961d05",
-    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
-    "created_at": "2026-11-08T13:53:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487149059"
-  },
-  {
-    "id": 42487149107,
-    "sha": "1961d05e6c8827fe5b14117018be374c6b4e1f59",
-    "short_sha": "1961d05",
-    "message": "fix: 常驻 JVM 复用审查修复——JRE 守卫静态化、阶段类路径隔离与失败码语义收敛\n\n- 常驻 HotSpot 的 JRE 索引随标记一并记入 FCLauncher 静态域，ProcessService 改查静态\n  校验：原 Service 实例字段在空闲自停、进程被缓存复用后重建即漏判，跨安装会话/\n  跨 JRE 会把阶段跑在错误 JVM 上；FCLConfig 增加 javaVersion 传递索引\n- 复用路径 URLClassLoader 改两参构造器传 NULL 父加载器（纯 bootstrap 委派），消除\n  常驻 JVM 首阶段 classpath 对后续阶段同名类的父优先遮蔽\n- launchJVM 在 CreateJavaVM 成功后的装配失败统一返回 1（JVM 已常驻可复用），负值\n  仅表示未创建，避免重试轮次撞 JNI_EEXIST 无法自愈；入参为空的兜底返回改 -1\n- redirectStdio 回收旧 logger 改纯 EOF 语义：去掉唤醒字节与跨线程关旧读端（close\n  不唤醒阻塞中的 read，fd 号被复用会重新引入双读者竞态），读端与回调全局引用改由\n  logger 线程按轮持有、退出自行释放\n- 删除 FCLauncher 无人调用的 readJarManifestMainClass；file:// 拼接补 snprintf 截断\n  检查；修复 jstring 直接喂 %s 的日志格式错误；VMLauncher/解析器/ProcessService\n  文档同步修订（复用路径 vmArgs 不生效、classpath 通配偏差、空闲自停行为）",
-    "created_at": "2026-11-08T13:53:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42487149107"
   }
 ]
