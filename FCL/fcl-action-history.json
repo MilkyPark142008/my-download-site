@@ -1,5 +1,69 @@
 [
   {
+    "id": 43804792664,
+    "sha": "2d9c6b85b08e42ae2cc786b4643607c7fe4382d0",
+    "short_sha": "2d9c6b8",
+    "message": "fix: 修复整合包描述对话框换行符不生效",
+    "created_at": "2026-11-16T04:33:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43804792664"
+  },
+  {
+    "id": 43804792582,
+    "sha": "2d9c6b85b08e42ae2cc786b4643607c7fe4382d0",
+    "short_sha": "2d9c6b8",
+    "message": "fix: 修复整合包描述对话框换行符不生效",
+    "created_at": "2026-11-16T04:33:06Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43804792582"
+  },
+  {
+    "id": 43804258294,
+    "sha": "cdda58761040395c107d1a9253c03caf27e75f4a",
+    "short_sha": "cdda587",
+    "message": "fix: 修复 Cleanroom 0.7.x（SDL 输入）返回游戏后鼠标按键卡在按下状态\n\nCleanroom 0.7.x 的窗口与输入改由 SDL 承载，其按键分发按事件窗口 ID 过滤；\nFCL 的虚拟光标坐标在捕获态累加视角增量后可越出 SDL 窗口，SDL 据此清除鼠标焦点，\n按键事件的窗口 ID 随之变为 0 并被整条丢弃，按下事件的释放丢失后游戏按键绑定停在按下状态。\n\n- SDL 通道下发的绝对坐标收敛进游戏窗口，避免鼠标焦点被越界清空\n- 窗口焦点转交 SDL，使 Cleanroom 失焦时释放仍按下的输入、Display.isActive() 反映真实焦点\n- 输入复位改为逐位补发鼠标键释放，避免一次性清零只换算出一个按钮",
+    "created_at": "2026-11-16T04:27:40Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43804258294"
+  },
+  {
+    "id": 43804258133,
+    "sha": "cdda58761040395c107d1a9253c03caf27e75f4a",
+    "short_sha": "cdda587",
+    "message": "fix: 修复 Cleanroom 0.7.x（SDL 输入）返回游戏后鼠标按键卡在按下状态\n\nCleanroom 0.7.x 的窗口与输入改由 SDL 承载，其按键分发按事件窗口 ID 过滤；\nFCL 的虚拟光标坐标在捕获态累加视角增量后可越出 SDL 窗口，SDL 据此清除鼠标焦点，\n按键事件的窗口 ID 随之变为 0 并被整条丢弃，按下事件的释放丢失后游戏按键绑定停在按下状态。\n\n- SDL 通道下发的绝对坐标收敛进游戏窗口，避免鼠标焦点被越界清空\n- 窗口焦点转交 SDL，使 Cleanroom 失焦时释放仍按下的输入、Display.isActive() 反映真实焦点\n- 输入复位改为逐位补发鼠标键释放，避免一次性清零只换算出一个按钮",
+    "created_at": "2026-11-16T04:27:40Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43804258133"
+  },
+  {
+    "id": 43804240035,
+    "sha": "cdda58761040395c107d1a9253c03caf27e75f4a",
+    "short_sha": "cdda587",
+    "message": "fix: 修复 Cleanroom 0.7.x（SDL 输入）返回游戏后鼠标按键卡在按下状态\n\nCleanroom 0.7.x 的窗口与输入改由 SDL 承载，其按键分发按事件窗口 ID 过滤；\nFCL 的虚拟光标坐标在捕获态累加视角增量后可越出 SDL 窗口，SDL 据此清除鼠标焦点，\n按键事件的窗口 ID 随之变为 0 并被整条丢弃，按下事件的释放丢失后游戏按键绑定停在按下状态。\n\n- SDL 通道下发的绝对坐标收敛进游戏窗口，避免鼠标焦点被越界清空\n- 窗口焦点转交 SDL，使 Cleanroom 失焦时释放仍按下的输入、Display.isActive() 反映真实焦点\n- 输入复位改为逐位补发鼠标键释放，避免一次性清零只换算出一个按钮",
+    "created_at": "2026-11-16T04:27:40Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43804240035"
+  },
+  {
+    "id": 43804240033,
+    "sha": "cdda58761040395c107d1a9253c03caf27e75f4a",
+    "short_sha": "cdda587",
+    "message": "fix: 修复 Cleanroom 0.7.x（SDL 输入）返回游戏后鼠标按键卡在按下状态\n\nCleanroom 0.7.x 的窗口与输入改由 SDL 承载，其按键分发按事件窗口 ID 过滤；\nFCL 的虚拟光标坐标在捕获态累加视角增量后可越出 SDL 窗口，SDL 据此清除鼠标焦点，\n按键事件的窗口 ID 随之变为 0 并被整条丢弃，按下事件的释放丢失后游戏按键绑定停在按下状态。\n\n- SDL 通道下发的绝对坐标收敛进游戏窗口，避免鼠标焦点被越界清空\n- 窗口焦点转交 SDL，使 Cleanroom 失焦时释放仍按下的输入、Display.isActive() 反映真实焦点\n- 输入复位改为逐位补发鼠标键释放，避免一次性清零只换算出一个按钮",
+    "created_at": "2026-11-16T04:27:40Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43804240033"
+  },
+  {
+    "id": 43791811843,
+    "sha": "b27b0799db1d0217be4e6979eabb787e1dc8a59b",
+    "short_sha": "b27b079",
+    "message": "fix: Vulkan 检测按自定义驱动实际加载状态判定，修复驱动缺失时误报已加载\n\nfix: Vulkan 检测按自定义驱动实际加载状态判定，修复驱动缺失时误报已加载",
+    "created_at": "2026-11-16T02:22:51Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43791811843"
+  },
+  {
+    "id": 43791671623,
+    "sha": "2bc822f1fb4c40b91cb79ab61fcb623121bf7930",
+    "short_sha": "2bc822f",
+    "message": "chore(l10n): update Chinese (Simplified Han script) translation (#2022)\n\nLanguage: Chinese (Simplified Han script)\nProgress: 99.6% (1626 of 1632 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hans/\nTranslation: FoldCraftLauncher/FCL\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: reducedradius <137701630+flytothehighest@users.noreply.github.com>",
+    "created_at": "2026-11-16T02:21:28Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43791671623"
+  },
+  {
     "id": 43721197030,
     "sha": "d5f495b2625f3180fe3661bca35aedab2bcf5b8f",
     "short_sha": "d5f495b",
@@ -334,69 +398,5 @@
     "message": "1.3.4.6",
     "created_at": "2026-11-12T02:57:00Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43144893930"
-  },
-  {
-    "id": 43144893801,
-    "sha": "34d5cdfaee59b39eaccc01543fb79f2399a40efe",
-    "short_sha": "34d5cdf",
-    "message": "1.3.4.6",
-    "created_at": "2026-11-12T02:57:00Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43144893801"
-  },
-  {
-    "id": 43144893841,
-    "sha": "34d5cdfaee59b39eaccc01543fb79f2399a40efe",
-    "short_sha": "34d5cdf",
-    "message": "1.3.4.6",
-    "created_at": "2026-11-12T02:57:00Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43144893841"
-  },
-  {
-    "id": 43137714853,
-    "sha": "4fbd00763ae8c9be7279d916726291198d93a977",
-    "short_sha": "4fbd007",
-    "message": "fix: 微软账户重新登录等待授权期间允许取消，修复退出登录页面后对话框卡死 (#2013)",
-    "created_at": "2026-11-12T01:54:18Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43137714853"
-  },
-  {
-    "id": 43137714858,
-    "sha": "4fbd00763ae8c9be7279d916726291198d93a977",
-    "short_sha": "4fbd007",
-    "message": "fix: 微软账户重新登录等待授权期间允许取消，修复退出登录页面后对话框卡死 (#2013)",
-    "created_at": "2026-11-12T01:54:18Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43137714858"
-  },
-  {
-    "id": 43137627283,
-    "sha": "a6ded718d41346fa61cefe15dda4f05cf108827c",
-    "short_sha": "a6ded71",
-    "message": "optimize: 移除运行环境解压时对小文件的人为延时",
-    "created_at": "2026-11-09T12:23:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43137627283"
-  },
-  {
-    "id": 43137627331,
-    "sha": "a6ded718d41346fa61cefe15dda4f05cf108827c",
-    "short_sha": "a6ded71",
-    "message": "optimize: 移除运行环境解压时对小文件的人为延时",
-    "created_at": "2026-11-09T12:23:05Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43137627331"
-  },
-  {
-    "id": 42731653731,
-    "sha": "2a9a8ade3be57deb3f362ef7c074d3d8a836ad20",
-    "short_sha": "2a9a8ad",
-    "message": "fix: 微软账户重新登录等待授权期间允许取消，修复退出登录页面后对话框卡死 (#2013)",
-    "created_at": "2026-11-10T00:51:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42731653731"
-  },
-  {
-    "id": 42731653886,
-    "sha": "2a9a8ade3be57deb3f362ef7c074d3d8a836ad20",
-    "short_sha": "2a9a8ad",
-    "message": "fix: 微软账户重新登录等待授权期间允许取消，修复退出登录页面后对话框卡死 (#2013)",
-    "created_at": "2026-11-10T00:51:34Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/42731653886"
   }
 ]
