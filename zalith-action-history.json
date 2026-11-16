@@ -1,5 +1,125 @@
 [
   {
+    "id": 43940642250,
+    "sha": "c62fdeaf0c148b597caa60efc59388b468952af0",
+    "short_sha": "c62fdea",
+    "message": "Merge pull request #2259 from ZalithLauncher/feat/gameinfobox-renderer\n\nfeat: 启动游戏时，在游戏信息内显示渲染器",
+    "created_at": "2026-11-16T19:33:51Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43940642250"
+  },
+  {
+    "id": 43940491603,
+    "sha": "f6f8327c65da8276979481b0d4c7c5b57517ad3c",
+    "short_sha": "f6f8327",
+    "message": "refactor: 在初始化 GameLauncher 时即设置渲染器",
+    "created_at": "2026-11-16T19:32:54Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43940491603"
+  },
+  {
+    "id": 43934220701,
+    "sha": "280eb0354eafc05dc12c56544950e892da8bd6c4",
+    "short_sha": "280eb03",
+    "message": "feat: 启动游戏时，在游戏信息内显示渲染器",
+    "created_at": "2026-11-16T18:56:38Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43934220701"
+  },
+  {
+    "id": 43930181079,
+    "sha": "36bd81963e6ba60ca7b314e3ff52731b2396840f",
+    "short_sha": "36bd819",
+    "message": "Merge pull request #2258 from ZalithLauncher/fix/gamepath-select\n\nfix: 选择路径屏幕内创建目录对话框未关闭",
+    "created_at": "2026-11-16T18:34:04Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43930181079"
+  },
+  {
+    "id": 43929881595,
+    "sha": "346dd6ceda76e9910ae352786981be74b2583a4e",
+    "short_sha": "346dd6c",
+    "message": "feat: 禁止用户选择外部存储根目录",
+    "created_at": "2026-11-16T18:31:50Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43929881595"
+  },
+  {
+    "id": 43920133833,
+    "sha": "b0c9bd50e84fd65510d807897d21ede14900d4fc",
+    "short_sha": "b0c9bd5",
+    "message": "fix: 选择路径屏幕内创建目录对话框未关闭",
+    "created_at": "2026-11-16T17:36:13Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43920133833"
+  },
+  {
+    "id": 43909267637,
+    "sha": "4599e3fb74da3442f6d3b6009c67c42f22ee1f6c",
+    "short_sha": "4599e3f",
+    "message": "fix: 设置状态切换到稳定的 StateFlow",
+    "created_at": "2026-11-16T16:35:48Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43909267637"
+  },
+  {
+    "id": 43894669945,
+    "sha": "d662b6f13fdff82cde2ccfffc4d790ea93e4ceaf",
+    "short_sha": "d662b6f",
+    "message": "chore: PetModelView 支持传入光照相关的参数",
+    "created_at": "2026-11-16T15:16:53Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43894669945"
+  },
+  {
+    "id": 43889647342,
+    "sha": "183f852c73fc9e368c5244a21a4adab44f9d42c1",
+    "short_sha": "183f852",
+    "message": "chore(PetLib): 优化人物预览取景与横向冗余",
+    "created_at": "2026-11-16T14:48:21Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43889647342"
+  },
+  {
+    "id": 43883613843,
+    "sha": "262a7c80bc428cfe136463aec4347ac0491eb773",
+    "short_sha": "262a7c8",
+    "message": "feat(PetLib): 自适应人物预览取景并支持安全区",
+    "created_at": "2026-11-16T14:12:07Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43883613843"
+  },
+  {
+    "id": 43876604387,
+    "sha": "3ce5f9082704f16c4a5b49f0b7b15eed447ae609",
+    "short_sha": "3ce5f90",
+    "message": "chore: 调整启动器主页面的布局",
+    "created_at": "2026-11-16T13:30:56Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43876604387"
+  },
+  {
+    "id": 43840623725,
+    "sha": "5422da6c755c564cb461ed03b9d28297e9890beb",
+    "short_sha": "5422da6",
+    "message": "Merge branch 'main' into refactor/petlib-scene",
+    "created_at": "2026-11-16T09:31:57Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43840623725"
+  },
+  {
+    "id": 43840507004,
+    "sha": "1a78ef3a581be7444e9b3709de127aadbbf1e406",
+    "short_sha": "1a78ef3",
+    "message": "Merge pull request #2248 from ZalithLauncher/fix/petlib-load\n\nfix: PetLib 控制器加载失败时导致启动器崩溃",
+    "created_at": "2026-11-16T09:31:20Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43840507004"
+  },
+  {
+    "id": 43840458565,
+    "sha": "3709dcdaa408b842843e94734bdadccb1e000d6f",
+    "short_sha": "3709dcd",
+    "message": "Merge branch 'main' into fix/petlib-load\n\n# Conflicts:\n#\tZalithLauncher/src/main/java/com/movtery/zalithlauncher/ui/screens/content/LauncherScreen.kt",
+    "created_at": "2026-11-16T09:30:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43840458565"
+  },
+  {
+    "id": 43839884397,
+    "sha": "70adfcca1e654dc4cdc74ad70b9bc50dc097fed2",
+    "short_sha": "70adfcc",
+    "message": "feat: 添加 Blender 玩家骨架动画工具链",
+    "created_at": "2026-11-16T09:14:22Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43839884397"
+  },
+  {
     "id": 43706096209,
     "sha": "3ec8ec308bdaa659168535767ffd4b8bb80a75a5",
     "short_sha": "3ec8ec3",
@@ -278,125 +398,5 @@
     "message": "Merge pull request #2151 from ZalithLauncher/fix/foreground-service\n\nfix: 修复任务保活服务快速停止导致的崩溃",
     "created_at": "2026-10-30T03:40:39Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40998714192"
-  },
-  {
-    "id": 40998608973,
-    "sha": "7e6110c1667ef8edf51cd7348987febc68f7fc9b",
-    "short_sha": "7e6110c",
-    "message": "fix: 修复任务保活服务快速停止导致的崩溃",
-    "created_at": "2026-10-30T03:35:57Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40998608973"
-  },
-  {
-    "id": 40994251030,
-    "sha": "7eca5bd1b1115f4fcb7dcf734deb34a1f02dcf73",
-    "short_sha": "7eca5bd",
-    "message": "fix: 被其他操作阻挡时，不显示上个月结算的赞助者弹窗",
-    "created_at": "2026-10-30T02:53:03Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40994251030"
-  },
-  {
-    "id": 40991793451,
-    "sha": "dcb2f9f931700c64306f5b1007f413618662efa6",
-    "short_sha": "dcb2f9f",
-    "message": "Merge branch 'weblate_terracotta'",
-    "created_at": "2026-10-30T02:26:30Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40991793451"
-  },
-  {
-    "id": 40991741008,
-    "sha": "dcb2f9f931700c64306f5b1007f413618662efa6",
-    "short_sha": "dcb2f9f",
-    "message": "Merge branch 'weblate_terracotta'",
-    "created_at": "2026-10-30T02:26:30Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40991741008"
-  },
-  {
-    "id": 40991611438,
-    "sha": "c7684976329593103ce47713dbfa11b23e9e7f29",
-    "short_sha": "c768497",
-    "message": "chore(i18n): 清理未使用的字符串",
-    "created_at": "2026-10-30T02:19:23Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40991611438"
-  },
-  {
-    "id": 40991026686,
-    "sha": "c7684976329593103ce47713dbfa11b23e9e7f29",
-    "short_sha": "c768497",
-    "message": "chore(i18n): 清理未使用的字符串",
-    "created_at": "2026-10-30T02:19:23Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40991026686"
-  },
-  {
-    "id": 40989523570,
-    "sha": "76642a047d489cb4a9454745f7171ba77c0963be",
-    "short_sha": "76642a0",
-    "message": "feat: 更新用户协议与隐私政策",
-    "created_at": "2026-10-30T02:04:11Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40989523570"
-  },
-  {
-    "id": 40883043780,
-    "sha": "dc6a2cb5fe45d0bf159f36c64a27aa383d44cfed",
-    "short_sha": "dc6a2cb",
-    "message": "Merge pull request #2149 from ZalithLauncher/feat/input-magnifier\n\nfeat: 切出输入法时，提供游戏画面放大镜功能",
-    "created_at": "2026-10-29T13:33:34Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40883043780"
-  },
-  {
-    "id": 40882963020,
-    "sha": "6d8ef144544377e75dac549b64440f3784fcb72b",
-    "short_sha": "6d8ef14",
-    "message": "fix: 放大镜在不合适的情况下弹出 & 物理键盘可能无法输入",
-    "created_at": "2026-10-29T13:32:58Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40882963020"
-  },
-  {
-    "id": 40879556783,
-    "sha": "6ac021f9dc2ac19a20f25a0b04132c5418306263",
-    "short_sha": "6ac021f",
-    "message": "fix: 放大镜唤起下拉菜单导致输入法被关闭",
-    "created_at": "2026-10-29T13:10:35Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40879556783"
-  },
-  {
-    "id": 40852591406,
-    "sha": "f58df00748d0fd25ab13814baf00b6dc78275494",
-    "short_sha": "f58df00",
-    "message": "feat: 输入时提供游戏画面放大镜",
-    "created_at": "2026-10-29T09:47:33Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40852591406"
-  },
-  {
-    "id": 40833460630,
-    "sha": "115cd7536299f3f482da5e6ffd0d439d363a24f7",
-    "short_sha": "115cd75",
-    "message": "oops: 忘给调试代码去掉了，我是🐖",
-    "created_at": "2026-10-29T07:07:46Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40833460630"
-  },
-  {
-    "id": 40831209157,
-    "sha": "1c69578edf071da0390d29af76e7bd4707d3a52a",
-    "short_sha": "1c69578",
-    "message": "Merge pull request #2148 from ZalithLauncher/feat/splash-welcome\n\nfeat: 首次打开启动器时进入欢迎页面",
-    "created_at": "2026-10-29T06:46:02Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40831209157"
-  },
-  {
-    "id": 40831038856,
-    "sha": "ed2dbd0651d54f1b9196b3c264151ccb9fc67ae5",
-    "short_sha": "ed2dbd0",
-    "message": "Merge pull request #2115 from ZalithLauncher/fix/tls-compromised-ca-keys\n\nfix: 封锁已泄露的 eMudhra CA 公钥，加固进程级 TLS 校验",
-    "created_at": "2026-10-29T06:44:26Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40831038856"
-  },
-  {
-    "id": 40830965444,
-    "sha": "c8880ea99b87238d7f7fc7684d861f240e315ebe",
-    "short_sha": "c8880ea",
-    "message": "feat: 规范化屏幕动画 & 补充用户须知内容",
-    "created_at": "2026-10-29T06:43:35Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40830965444"
   }
 ]
