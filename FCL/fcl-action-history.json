@@ -88,20 +88,20 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43667982619"
   },
   {
-    "id": 43666762675,
-    "sha": "b1c8017100fd7e3de98b0e8d3d3a303443ce2982",
-    "short_sha": "b1c8017",
-    "message": "fix: 修复编辑已保存的按键/方向样式时因绑定属性泄漏导致的崩溃 (#2018)\n\n样式对话框中的草稿样式 name 等属性绑定在输入控件上，确认时又被直接交给样式注册表，导致列表中保存了绑定对象；之后编辑该样式时 setAll 写入绑定属性会抛 A bound value cannot be set。确认时改为回调草稿样式的副本，避免绑定随对象泄漏到数据层。",
-    "created_at": "2026-11-15T02:11:38Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43666762675"
-  },
-  {
     "id": 43666762628,
     "sha": "b1c8017100fd7e3de98b0e8d3d3a303443ce2982",
     "short_sha": "b1c8017",
     "message": "fix: 修复编辑已保存的按键/方向样式时因绑定属性泄漏导致的崩溃 (#2018)\n\n样式对话框中的草稿样式 name 等属性绑定在输入控件上，确认时又被直接交给样式注册表，导致列表中保存了绑定对象；之后编辑该样式时 setAll 写入绑定属性会抛 A bound value cannot be set。确认时改为回调草稿样式的副本，避免绑定随对象泄漏到数据层。",
     "created_at": "2026-11-15T02:11:38Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43666762628"
+  },
+  {
+    "id": 43666762675,
+    "sha": "b1c8017100fd7e3de98b0e8d3d3a303443ce2982",
+    "short_sha": "b1c8017",
+    "message": "fix: 修复编辑已保存的按键/方向样式时因绑定属性泄漏导致的崩溃 (#2018)\n\n样式对话框中的草稿样式 name 等属性绑定在输入控件上，确认时又被直接交给样式注册表，导致列表中保存了绑定对象；之后编辑该样式时 setAll 写入绑定属性会抛 A bound value cannot be set。确认时改为回调草稿样式的副本，避免绑定随对象泄漏到数据层。",
+    "created_at": "2026-11-15T02:11:38Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43666762675"
   },
   {
     "id": 43665280820,
