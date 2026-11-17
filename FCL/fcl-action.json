@@ -1,20 +1,20 @@
 {"run": {
-  "id": 43804792664,
-  "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAKMvgXWA",
+  "id": 44003239034,
+  "name": "Sync version map",
+  "node_id": "WFR_kwLOIQeFGs8AAAAKPswkeg",
   "head_branch": "main",
-  "head_sha": "2d9c6b85b08e42ae2cc786b4643607c7fe4382d0",
-  "path": ".github/workflows/check-codes.yml",
-  "display_title": "fix: 修复整合包描述对话框换行符不生效",
-  "run_number": 477,
+  "head_sha": "1c536a0b81eb54bddb0d7b79e8cb2d247d654d10",
+  "path": ".github/workflows/sync-version-map.yml",
+  "display_title": "Update version_map.json",
+  "run_number": 10,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
-  "workflow_id": 351611475,
-  "check_suite_id": 118587884064,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAbnGOCIA",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43804792664",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43804792664",
+  "workflow_id": 383183163,
+  "check_suite_id": 119120667703,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAbvCUkNw",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44003239034",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44003239034",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
@@ -22,7 +22,7 @@
       "number": 364,
       "head": {
         "ref": "main",
-        "sha": "2d9c6b85b08e42ae2cc786b4643607c7fe4382d0",
+        "sha": "1c536a0b81eb54bddb0d7b79e8cb2d247d654d10",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -45,7 +45,7 @@
       "number": 37,
       "head": {
         "ref": "main",
-        "sha": "2d9c6b85b08e42ae2cc786b4643607c7fe4382d0",
+        "sha": "1c536a0b81eb54bddb0d7b79e8cb2d247d654d10",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -68,7 +68,7 @@
       "number": 400,
       "head": {
         "ref": "main",
-        "sha": "2d9c6b85b08e42ae2cc786b4643607c7fe4382d0",
+        "sha": "1c536a0b81eb54bddb0d7b79e8cb2d247d654d10",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -86,8 +86,8 @@
       }
     }
   ],
-  "created_at": "2026-11-16T04:33:12Z",
-  "updated_at": "2026-11-16T04:34:41Z",
+  "created_at": "2026-11-17T02:28:29Z",
+  "updated_at": "2026-11-17T02:28:50Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-11-16T04:33:12Z",
+  "run_started_at": "2026-11-17T02:28:29Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,19 +133,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43804792664/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43804792664/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/118587884064",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43804792664/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43804792664/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/43804792664/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44003239034/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44003239034/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/119120667703",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44003239034/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44003239034/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44003239034/rerun",
   "previous_attempt_url": null,
-  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
+  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/383183163",
   "head_commit": {
-    "id": "2d9c6b85b08e42ae2cc786b4643607c7fe4382d0",
-    "tree_id": "c0dfd020648ed629b7dd60c325b4dc6bf837f7c3",
-    "message": "fix: 修复整合包描述对话框换行符不生效",
-    "timestamp": "2026-11-16T04:33:06Z",
+    "id": "1c536a0b81eb54bddb0d7b79e8cb2d247d654d10",
+    "tree_id": "61d52f29674dd70738ad12ccd2459fa6fdb9a93f",
+    "message": "Update version_map.json",
+    "timestamp": "2026-11-17T02:28:24Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
