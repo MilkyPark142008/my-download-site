@@ -1,20 +1,20 @@
 {"run": {
-  "id": 44003239034,
-  "name": "Sync version map",
-  "node_id": "WFR_kwLOIQeFGs8AAAAKPswkeg",
+  "id": 44091503452,
+  "name": "Build",
+  "node_id": "WFR_kwLOIQeFGs8AAAAKRA7zXA",
   "head_branch": "main",
-  "head_sha": "1c536a0b81eb54bddb0d7b79e8cb2d247d654d10",
-  "path": ".github/workflows/sync-version-map.yml",
-  "display_title": "Update version_map.json",
-  "run_number": 10,
+  "head_sha": "2e3b0e55f3f42592c606f53ec718455f403c4d5f",
+  "path": ".github/workflows/build.yml",
+  "display_title": "fix: 修复 Cleanroom 0.7.x（SDL 输入）返回游戏后鼠标按键卡在按下状态 (#2023)",
+  "run_number": 1583,
   "event": "push",
   "status": "completed",
   "conclusion": "success",
-  "workflow_id": 383183163,
-  "check_suite_id": 119120667703,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAbvCUkNw",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44003239034",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44003239034",
+  "workflow_id": 200966783,
+  "check_suite_id": 119356332495,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAbyjEZzw",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44091503452",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44091503452",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
@@ -22,7 +22,7 @@
       "number": 364,
       "head": {
         "ref": "main",
-        "sha": "1c536a0b81eb54bddb0d7b79e8cb2d247d654d10",
+        "sha": "2e3b0e55f3f42592c606f53ec718455f403c4d5f",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -45,7 +45,7 @@
       "number": 37,
       "head": {
         "ref": "main",
-        "sha": "1c536a0b81eb54bddb0d7b79e8cb2d247d654d10",
+        "sha": "2e3b0e55f3f42592c606f53ec718455f403c4d5f",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -68,7 +68,7 @@
       "number": 400,
       "head": {
         "ref": "main",
-        "sha": "1c536a0b81eb54bddb0d7b79e8cb2d247d654d10",
+        "sha": "2e3b0e55f3f42592c606f53ec718455f403c4d5f",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -86,8 +86,8 @@
       }
     }
   ],
-  "created_at": "2026-11-17T02:28:29Z",
-  "updated_at": "2026-11-17T02:28:50Z",
+  "created_at": "2026-11-17T13:19:01Z",
+  "updated_at": "2026-11-17T13:24:42Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -111,7 +111,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-11-17T02:28:29Z",
+  "run_started_at": "2026-11-17T13:19:01Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -133,26 +133,26 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44003239034/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44003239034/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/119120667703",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44003239034/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44003239034/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44003239034/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44091503452/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44091503452/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/119356332495",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44091503452/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44091503452/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44091503452/rerun",
   "previous_attempt_url": null,
-  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/383183163",
+  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/200966783",
   "head_commit": {
-    "id": "1c536a0b81eb54bddb0d7b79e8cb2d247d654d10",
-    "tree_id": "61d52f29674dd70738ad12ccd2459fa6fdb9a93f",
-    "message": "Update version_map.json",
-    "timestamp": "2026-11-17T02:28:24Z",
+    "id": "2e3b0e55f3f42592c606f53ec718455f403c4d5f",
+    "tree_id": "971c743d6dae36344284e0a36eab6c0580d5c427",
+    "message": "fix: 修复 Cleanroom 0.7.x（SDL 输入）返回游戏后鼠标按键卡在按下状态 (#2023)\n\nCleanroom 0.7.x 的窗口与输入改由 SDL 承载，其按键分发按事件窗口 ID 过滤；\nFCL 的虚拟光标坐标在捕获态累加视角增量后可越出 SDL 窗口，SDL 据此清除鼠标焦点，\n按键事件的窗口 ID 随之变为 0 并被整条丢弃，按下事件的释放丢失后游戏按键绑定停在按下状态。\n\n- SDL 通道下发的绝对坐标收敛进游戏窗口，避免鼠标焦点被越界清空\n- 窗口焦点转交 SDL，使 Cleanroom 失焦时释放仍按下的输入、Display.isActive() 反映真实焦点\n- 输入复位改为逐位补发鼠标键释放，避免一次性清零只换算出一个按钮",
+    "timestamp": "2026-11-17T13:18:57Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
     },
     "committer": {
-      "name": "ShirosakiMio",
-      "email": "852468399@qq.com"
+      "name": "GitHub",
+      "email": "noreply@github.com"
     }
   },
   "repository": {
@@ -292,8 +292,107 @@
     "deployments_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/deployments"
   }
 }, "artifacts": {
-  "total_count": 0,
+  "total_count": 5,
   "artifacts": [
-
+    {
+      "id": 14333485216,
+      "node_id": "MDg6QXJ0aWZhY3QxNDMzMzQ4NTIxNg==",
+      "name": "app-arm64",
+      "size_in_bytes": 166499726,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14333485216",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14333485216/zip",
+      "expired": false,
+      "digest": "sha256:097ec95e8a079801a753653726893c64845b01a6e99dca89551f8545b0fea35d",
+      "created_at": "2026-11-17T13:23:57Z",
+      "updated_at": "2026-11-17T13:23:57Z",
+      "expires_at": "2026-11-24T13:19:01Z",
+      "workflow_run": {
+        "id": 44091503452,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "main",
+        "head_sha": "2e3b0e55f3f42592c606f53ec718455f403c4d5f"
+      }
+    },
+    {
+      "id": 14332825809,
+      "node_id": "MDg6QXJ0aWZhY3QxNDMzMjgyNTgwOQ==",
+      "name": "app-all",
+      "size_in_bytes": 319386795,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14332825809",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14332825809/zip",
+      "expired": false,
+      "digest": "sha256:b43de285784a5e62967fd0bafa0294da95cc9ac94f459dc7d01b17d2920f8977",
+      "created_at": "2026-11-17T13:24:20Z",
+      "updated_at": "2026-11-17T13:24:20Z",
+      "expires_at": "2026-11-24T13:19:01Z",
+      "workflow_run": {
+        "id": 44091503452,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "main",
+        "head_sha": "2e3b0e55f3f42592c606f53ec718455f403c4d5f"
+      }
+    },
+    {
+      "id": 14332660974,
+      "node_id": "MDg6QXJ0aWZhY3QxNDMzMjY2MDk3NA==",
+      "name": "app-arm",
+      "size_in_bytes": 159091504,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14332660974",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14332660974/zip",
+      "expired": false,
+      "digest": "sha256:e578991b15f495ea202360f8099aa5098fc294ad90d85b73d88f92dd0bf18954",
+      "created_at": "2026-11-17T13:23:32Z",
+      "updated_at": "2026-11-17T13:23:32Z",
+      "expires_at": "2026-11-24T13:19:01Z",
+      "workflow_run": {
+        "id": 44091503452,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "main",
+        "head_sha": "2e3b0e55f3f42592c606f53ec718455f403c4d5f"
+      }
+    },
+    {
+      "id": 14332211787,
+      "node_id": "MDg6QXJ0aWZhY3QxNDMzMjIxMTc4Nw==",
+      "name": "app-x86_64",
+      "size_in_bytes": 171691783,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14332211787",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14332211787/zip",
+      "expired": false,
+      "digest": "sha256:5e85e5980e213c963a5e55219014fa28a64e1a4c136e37a8a6df1b72939cf684",
+      "created_at": "2026-11-17T13:24:39Z",
+      "updated_at": "2026-11-17T13:24:39Z",
+      "expires_at": "2026-11-24T13:19:01Z",
+      "workflow_run": {
+        "id": 44091503452,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "main",
+        "head_sha": "2e3b0e55f3f42592c606f53ec718455f403c4d5f"
+      }
+    },
+    {
+      "id": 14332022065,
+      "node_id": "MDg6QXJ0aWZhY3QxNDMzMjAyMjA2NQ==",
+      "name": "app-x86",
+      "size_in_bytes": 161428211,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14332022065",
+      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14332022065/zip",
+      "expired": false,
+      "digest": "sha256:ced2ffe941cd911e1fe31ba3b288480a4805ea1db02f4324eec6b25def8eb476",
+      "created_at": "2026-11-17T13:23:07Z",
+      "updated_at": "2026-11-17T13:23:07Z",
+      "expires_at": "2026-11-24T13:19:01Z",
+      "workflow_run": {
+        "id": 44091503452,
+        "repository_id": 554140954,
+        "head_repository_id": 554140954,
+        "head_branch": "main",
+        "head_sha": "2e3b0e55f3f42592c606f53ec718455f403c4d5f"
+      }
+    }
   ]
 }}
