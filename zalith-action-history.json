@@ -1,5 +1,29 @@
 [
   {
+    "id": 44372043875,
+    "sha": "dc88d0ff65ef69664fc9922ecd8da6cf4825e78f",
+    "short_sha": "dc88d0f",
+    "message": "fix: 更新内置 JRE 21 至 21.0.13.1",
+    "created_at": "2026-11-18T18:36:52Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44372043875"
+  },
+  {
+    "id": 44308073340,
+    "sha": "ad049142ffa8207dbb50857b2a2e19ccb26c7e4a",
+    "short_sha": "ad04914",
+    "message": "合并拉取请求 #2271\n\nfix: 自动选择 Jre 功能在特定场景下导致启动器崩溃",
+    "created_at": "2026-11-18T12:52:22Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44308073340"
+  },
+  {
+    "id": 44307914252,
+    "sha": "f04d03ac8bb0550b9745422176c5d5406ba3246b",
+    "short_sha": "f04d03a",
+    "message": "fix: 自动选择 Jre 功能在特定场景下导致启动器崩溃",
+    "created_at": "2026-11-18T12:51:11Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44307914252"
+  },
+  {
     "id": 44299647626,
     "sha": "0986a018ce053662ecfcc1f48cffe339c8d391c2",
     "short_sha": "0986a01",
@@ -374,29 +398,5 @@
     "message": "perf: 移除设置恢复过程中的重复刷新",
     "created_at": "2026-11-13T13:04:23Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43430990594"
-  },
-  {
-    "id": 43418587749,
-    "sha": "448593c99cd04d430ad3b9b0337ad59fa8efe9d6",
-    "short_sha": "448593c",
-    "message": "refactor: 拆分设置项持久化并优化游戏布局缓存",
-    "created_at": "2026-11-13T11:37:07Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43418587749"
-  },
-  {
-    "id": 43388832355,
-    "sha": "64ca8033b6ad5f856906bb7656434ec8887cb1b8",
-    "short_sha": "64ca803",
-    "message": "refactor: 引入 Miuix 过度滚动效果",
-    "created_at": "2026-11-13T07:51:55Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43388832355"
-  },
-  {
-    "id": 43193921469,
-    "sha": "48b726e2574260fbdfc35cb6a697f0d27df9ef36",
-    "short_sha": "48b726e",
-    "message": "refactor: 启动配置职责下沉至 LaunchProfile",
-    "created_at": "2026-11-12T09:38:08Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43193921469"
   }
 ]
