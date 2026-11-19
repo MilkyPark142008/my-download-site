@@ -1,11 +1,35 @@
 [
   {
-    "id": 44512116900,
-    "sha": "d78b523fcf2a16c99add762a2f2c604b2b10efbb",
-    "short_sha": "d78b523",
-    "message": "fix: 修正 SDL HIDDeviceManager 创建时机，避免 libSDL3 加载前调用 native 报错",
-    "created_at": "2026-11-19T11:08:22Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44512116900"
+    "id": 44516921321,
+    "sha": "70faf60f01cd2cdb5b8dd8152f608169d22af8c6",
+    "short_sha": "70faf60",
+    "message": "optimize: 优化控制布局加载与启动扫描速度\n\n- 布局列表移除元素监听：加载/编辑任意布局不再触发保存全部布局，\n  原先会把列表内其余未加载的复杂布局完整解析后写盘\n- 新增 LayoutMetadataScanner 按字节扫描布局文件，跳过按键数据，\n  parseLightweight 与 loadViewGroupData 不再逐 token 解析整份文件\n- 组复制/新建/改名/删除补充显式保存（原依赖列表监听兜底）",
+    "created_at": "2026-11-19T11:40:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44516921321"
+  },
+  {
+    "id": 44516920798,
+    "sha": "70faf60f01cd2cdb5b8dd8152f608169d22af8c6",
+    "short_sha": "70faf60",
+    "message": "optimize: 优化控制布局加载与启动扫描速度\n\n- 布局列表移除元素监听：加载/编辑任意布局不再触发保存全部布局，\n  原先会把列表内其余未加载的复杂布局完整解析后写盘\n- 新增 LayoutMetadataScanner 按字节扫描布局文件，跳过按键数据，\n  parseLightweight 与 loadViewGroupData 不再逐 token 解析整份文件\n- 组复制/新建/改名/删除补充显式保存（原依赖列表监听兜底）",
+    "created_at": "2026-11-19T11:40:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44516920798"
+  },
+  {
+    "id": 44516887400,
+    "sha": "70faf60f01cd2cdb5b8dd8152f608169d22af8c6",
+    "short_sha": "70faf60",
+    "message": "optimize: 优化控制布局加载与启动扫描速度\n\n- 布局列表移除元素监听：加载/编辑任意布局不再触发保存全部布局，\n  原先会把列表内其余未加载的复杂布局完整解析后写盘\n- 新增 LayoutMetadataScanner 按字节扫描布局文件，跳过按键数据，\n  parseLightweight 与 loadViewGroupData 不再逐 token 解析整份文件\n- 组复制/新建/改名/删除补充显式保存（原依赖列表监听兜底）",
+    "created_at": "2026-11-19T11:40:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44516887400"
+  },
+  {
+    "id": 44516887278,
+    "sha": "70faf60f01cd2cdb5b8dd8152f608169d22af8c6",
+    "short_sha": "70faf60",
+    "message": "optimize: 优化控制布局加载与启动扫描速度\n\n- 布局列表移除元素监听：加载/编辑任意布局不再触发保存全部布局，\n  原先会把列表内其余未加载的复杂布局完整解析后写盘\n- 新增 LayoutMetadataScanner 按字节扫描布局文件，跳过按键数据，\n  parseLightweight 与 loadViewGroupData 不再逐 token 解析整份文件\n- 组复制/新建/改名/删除补充显式保存（原依赖列表监听兜底）",
+    "created_at": "2026-11-19T11:40:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44516887278"
   },
   {
     "id": 44512116892,
@@ -14,6 +38,14 @@
     "message": "fix: 修正 SDL HIDDeviceManager 创建时机，避免 libSDL3 加载前调用 native 报错",
     "created_at": "2026-11-19T11:08:22Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44512116892"
+  },
+  {
+    "id": 44512116900,
+    "sha": "d78b523fcf2a16c99add762a2f2c604b2b10efbb",
+    "short_sha": "d78b523",
+    "message": "fix: 修正 SDL HIDDeviceManager 创建时机，避免 libSDL3 加载前调用 native 报错",
+    "created_at": "2026-11-19T11:08:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44512116900"
   },
   {
     "id": 44091503452,
@@ -366,37 +398,5 @@
     "message": "fix: 加载布局时挂回样式表对象并修复样式筛选文字颜色",
     "created_at": "2026-11-14T09:58:44Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43583063164"
-  },
-  {
-    "id": 43583063180,
-    "sha": "61b47dbef9564967a0b1e998b4d7565cf1e18c1c",
-    "short_sha": "61b47db",
-    "message": "fix: 加载布局时挂回样式表对象并修复样式筛选文字颜色",
-    "created_at": "2026-11-14T09:58:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43583063180"
-  },
-  {
-    "id": 43583059691,
-    "sha": "61b47dbef9564967a0b1e998b4d7565cf1e18c1c",
-    "short_sha": "61b47db",
-    "message": "fix: 加载布局时挂回样式表对象并修复样式筛选文字颜色",
-    "created_at": "2026-11-14T09:58:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43583059691"
-  },
-  {
-    "id": 43583059749,
-    "sha": "61b47dbef9564967a0b1e998b4d7565cf1e18c1c",
-    "short_sha": "61b47db",
-    "message": "fix: 加载布局时挂回样式表对象并修复样式筛选文字颜色",
-    "created_at": "2026-11-14T09:58:44Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43583059749"
-  },
-  {
-    "id": 43537454483,
-    "sha": "e64c91055c1ec99b9e0c40a820694e5c2df447d8",
-    "short_sha": "e64c910",
-    "message": "fix: 主题色透明度为 0 时动态岛、输入框与数字滑条不可见 (#2016)\n\n动态岛轮廓、输入框背景选中态、数字滑条按钮与填充段改用不受主题透明度影响的 opaqueDkColor；顺带清理未使用的 Log import，Kotlin 改用属性赋值语法。",
-    "created_at": "2026-11-14T00:55:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43537454483"
   }
 ]

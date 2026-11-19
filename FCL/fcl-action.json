@@ -1,28 +1,28 @@
 {"run": {
-  "id": 44512116900,
+  "id": 44516921321,
   "name": "Check Codes",
-  "node_id": "WFR_kwLOIQeFGs8AAAAKXSEApA",
-  "head_branch": "main",
-  "head_sha": "d78b523fcf2a16c99add762a2f2c604b2b10efbb",
+  "node_id": "WFR_kwLOIQeFGs8AAAAKXWpP6Q",
+  "head_branch": "optimize/controller-layout-loading",
+  "head_sha": "70faf60f01cd2cdb5b8dd8152f608169d22af8c6",
   "path": ".github/workflows/check-codes.yml",
-  "display_title": "fix: 修正 SDL HIDDeviceManager 创建时机，避免 libSDL3 加载前调用 native 报错",
-  "run_number": 480,
-  "event": "push",
+  "display_title": "optimize: 优化控制布局加载与启动扫描速度",
+  "run_number": 482,
+  "event": "pull_request",
   "status": "completed",
   "conclusion": "success",
   "workflow_id": 351611475,
-  "check_suite_id": 120488102822,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAcDaaLpg",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44512116900",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44512116900",
+  "check_suite_id": 120501031187,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAcDmvREw",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44516921321",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44516921321",
   "pull_requests": [
     {
-      "url": "https://api.github.com/repos/kurtarma072-create/FoldCraftLauncher-Performance/pulls/1",
-      "id": 5375928381,
-      "number": 1,
+      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/pulls/2031",
+      "id": 5394180003,
+      "number": 2031,
       "head": {
-        "ref": "main",
-        "sha": "d78b523fcf2a16c99add762a2f2c604b2b10efbb",
+        "ref": "optimize/controller-layout-loading",
+        "sha": "70faf60f01cd2cdb5b8dd8152f608169d22af8c6",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -31,86 +31,17 @@
       },
       "base": {
         "ref": "main",
-        "sha": "cc28858597d4566843dfa10e1324f5f26bc85811",
-        "repo": {
-          "id": 1459073359,
-          "url": "https://api.github.com/repos/kurtarma072-create/FoldCraftLauncher-Performance",
-          "name": "FoldCraftLauncher-Performance"
-        }
-      }
-    },
-    {
-      "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher/pulls/364",
-      "id": 4452442002,
-      "number": 364,
-      "head": {
-        "ref": "main",
         "sha": "d78b523fcf2a16c99add762a2f2c604b2b10efbb",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "97dc0f6c4a5f5fada8b86aa68e1e9d4b189d1b25",
-        "repo": {
-          "id": 1026321990,
-          "url": "https://api.github.com/repos/A-Archives-and-Forks/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      }
-    },
-    {
-      "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher/pulls/37",
-      "id": 4452270030,
-      "number": 37,
-      "head": {
-        "ref": "main",
-        "sha": "d78b523fcf2a16c99add762a2f2c604b2b10efbb",
-        "repo": {
-          "id": 554140954,
-          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
-        "repo": {
-          "id": 1335592322,
-          "url": "https://api.github.com/repos/CiiLu/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      }
-    },
-    {
-      "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher/pulls/400",
-      "id": 4451484148,
-      "number": 400,
-      "head": {
-        "ref": "main",
-        "sha": "d78b523fcf2a16c99add762a2f2c604b2b10efbb",
-        "repo": {
-          "id": 554140954,
-          "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
-          "name": "FoldCraftLauncher"
-        }
-      },
-      "base": {
-        "ref": "main",
-        "sha": "750a474268fcaf1b05bb9f2d3b9f13bdb988a886",
-        "repo": {
-          "id": 835628097,
-          "url": "https://api.github.com/repos/zhinghu/FoldCraftLauncher",
           "name": "FoldCraftLauncher"
         }
       }
     }
   ],
-  "created_at": "2026-11-19T11:08:38Z",
-  "updated_at": "2026-11-19T11:09:59Z",
+  "created_at": "2026-11-19T11:40:29Z",
+  "updated_at": "2026-11-19T11:41:51Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -134,7 +65,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-11-19T11:08:38Z",
+  "run_started_at": "2026-11-19T11:40:29Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -156,19 +87,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44512116900/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44512116900/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/120488102822",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44512116900/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44512116900/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44512116900/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44516921321/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44516921321/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/120501031187",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44516921321/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44516921321/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/44516921321/rerun",
   "previous_attempt_url": null,
   "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "d78b523fcf2a16c99add762a2f2c604b2b10efbb",
-    "tree_id": "3a763a1397355ae7e8ea3281093c1567584fd6e7",
-    "message": "fix: 修正 SDL HIDDeviceManager 创建时机，避免 libSDL3 加载前调用 native 报错",
-    "timestamp": "2026-11-19T11:08:22Z",
+    "id": "70faf60f01cd2cdb5b8dd8152f608169d22af8c6",
+    "tree_id": "bc92f4235beef5a5dabad5bf767f8a1e549e7338",
+    "message": "optimize: 优化控制布局加载与启动扫描速度\n\n- 布局列表移除元素监听：加载/编辑任意布局不再触发保存全部布局，\n  原先会把列表内其余未加载的复杂布局完整解析后写盘\n- 新增 LayoutMetadataScanner 按字节扫描布局文件，跳过按键数据，\n  parseLightweight 与 loadViewGroupData 不再逐 token 解析整份文件\n- 组复制/新建/改名/删除补充显式保存（原依赖列表监听兜底）",
+    "timestamp": "2026-11-19T11:40:08Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
