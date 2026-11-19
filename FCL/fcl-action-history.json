@@ -1,5 +1,21 @@
 [
   {
+    "id": 44512116900,
+    "sha": "d78b523fcf2a16c99add762a2f2c604b2b10efbb",
+    "short_sha": "d78b523",
+    "message": "fix: 修正 SDL HIDDeviceManager 创建时机，避免 libSDL3 加载前调用 native 报错",
+    "created_at": "2026-11-19T11:08:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44512116900"
+  },
+  {
+    "id": 44512116892,
+    "sha": "d78b523fcf2a16c99add762a2f2c604b2b10efbb",
+    "short_sha": "d78b523",
+    "message": "fix: 修正 SDL HIDDeviceManager 创建时机，避免 libSDL3 加载前调用 native 报错",
+    "created_at": "2026-11-19T11:08:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44512116892"
+  },
+  {
     "id": 44091503452,
     "sha": "2e3b0e55f3f42592c606f53ec718455f403c4d5f",
     "short_sha": "2e3b0e5",
@@ -382,21 +398,5 @@
     "message": "fix: 主题色透明度为 0 时动态岛、输入框与数字滑条不可见 (#2016)\n\n动态岛轮廓、输入框背景选中态、数字滑条按钮与填充段改用不受主题透明度影响的 opaqueDkColor；顺带清理未使用的 Log import，Kotlin 改用属性赋值语法。",
     "created_at": "2026-11-14T00:55:31Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43537454483"
-  },
-  {
-    "id": 43537454416,
-    "sha": "e64c91055c1ec99b9e0c40a820694e5c2df447d8",
-    "short_sha": "e64c910",
-    "message": "fix: 主题色透明度为 0 时动态岛、输入框与数字滑条不可见 (#2016)\n\n动态岛轮廓、输入框背景选中态、数字滑条按钮与填充段改用不受主题透明度影响的 opaqueDkColor；顺带清理未使用的 Log import，Kotlin 改用属性赋值语法。",
-    "created_at": "2026-11-14T00:55:31Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43537454416"
-  },
-  {
-    "id": 43375410755,
-    "sha": "5fcfed357621747a763aa327d58c98c6dd1ce2fc",
-    "short_sha": "5fcfed3",
-    "message": "Update .gitignore",
-    "created_at": "2026-11-13T05:56:45Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43375410755"
   }
 ]

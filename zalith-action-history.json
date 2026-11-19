@@ -1,5 +1,37 @@
 [
   {
+    "id": 44509195610,
+    "sha": "79d6ccf6e263d7067115be78bd218e711a1ef76a",
+    "short_sha": "79d6ccf",
+    "message": "合并拉取请求 #2272\n\nfeat: assets 下载源改为官方源优先并保留镜像回退",
+    "created_at": "2026-11-19T10:49:20Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44509195610"
+  },
+  {
+    "id": 44496986852,
+    "sha": "c3f0b94619f8da5d21d92be068a7959d1b0d32e6",
+    "short_sha": "c3f0b94",
+    "message": "Merge branch 'main' into feat/update-runtime",
+    "created_at": "2026-11-19T09:29:35Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44496986852"
+  },
+  {
+    "id": 44496680707,
+    "sha": "da29999676ad06271316ec6a52c72a18e9abab2e",
+    "short_sha": "da29999",
+    "message": "Merge pull request #2262 from ZalithLauncher/fix/jvm-render-gc-storm\n\nfix: JVM 渲染循环复用帧缓冲区，消除每帧全屏 int[] 分配引发的 GC 风暴",
+    "created_at": "2026-11-19T09:28:03Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44496680707"
+  },
+  {
+    "id": 44496493153,
+    "sha": "0e9be744659ad39cfc71e98e2ff9aa80fb064bce",
+    "short_sha": "0e9be74",
+    "message": "Merge pull request #2261 from ZalithLauncher/refactor/vmactivity-init\n\nrefactor: 启动时，在协程中异步初始化，不再卡死主线程",
+    "created_at": "2026-11-19T09:26:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44496493153"
+  },
+  {
     "id": 44431489311,
     "sha": "0aa1ceac7124a30f291227a29fc44d2d74ffacae",
     "short_sha": "0aa1cea",
@@ -366,37 +398,5 @@
     "message": "Merge pull request #2245 from ZalithLauncher/feat/arch-check\n\nfeat: 打开应用时检查架构是否匹配，不匹配时拒绝进入启动器",
     "created_at": "2026-11-14T11:51:49Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43592025032"
-  },
-  {
-    "id": 43589321987,
-    "sha": "45c51e71c2dc3b0e0a4b738a5348baeee601de38",
-    "short_sha": "45c51e7",
-    "message": "chore: 持久化存储内容管理器的排序方式",
-    "created_at": "2026-11-14T11:17:26Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43589321987"
-  },
-  {
-    "id": 43447948129,
-    "sha": "6dee5eb156916a218cb8fd292aad70c363f9bccd",
-    "short_sha": "6dee5eb",
-    "message": "Merge pull request #2242 from ZalithLauncher/chore/issue#2227\n\nchore: 持久化存储内容管理器的排序方式",
-    "created_at": "2026-11-13T14:58:53Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43447948129"
-  },
-  {
-    "id": 43447782059,
-    "sha": "c0fb0612b76e94d65668eedb1443a15bb0151b68",
-    "short_sha": "c0fb061",
-    "message": "chore: 持久化存储内容管理器的排序方式",
-    "created_at": "2026-11-13T14:57:40Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43447782059"
-  },
-  {
-    "id": 43442452630,
-    "sha": "50f08ca973994e33e0ca347f289b09aa740e5b54",
-    "short_sha": "50f08ca",
-    "message": "Merge pull request #2239 from ZalithLauncher/refactor/overscroll\n\nrefactor: 引入 Miuix 过度滚动效果",
-    "created_at": "2026-11-13T14:24:38Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43442452630"
   }
 ]
