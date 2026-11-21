@@ -376,27 +376,27 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43663893617"
   },
   {
-    "id": 43588351342,
-    "sha": "de0bd0102f002722fdc876e1b7366b020c8b1a30",
-    "short_sha": "de0bd01",
-    "message": "fix: 修复安装器常驻 JVM 复用的审查问题\n\n- 换 JRE 重试链与常驻 JVM 冲突：:jvm 阶段结束写入 JRE 状态文件，主进程\n  start 前预读，JRE 不一致时先回收常驻进程再启动；服务内静态守卫降级为兜底\n- 阶段 main 补设线程上下文类加载器，失败路径统一恢复 TCCL 并只 Detach 自身\n  attach 的线程；类加载器父级改用平台类加载器，修复 JDK9+ 平台模块不可见\n- classpath 转 URL 改走 File.toURI().toURL()，支持含空格/非 ASCII 路径，\n  空 classpath 显式拒绝\n- launch() 参数解析或运行环境装配失败时补发退出码，避免界面与安装器主进程\n  等不到结束信号\n- nominal_exit 原子幂等，code 0 也回调 onExit，删除 global ref 后置空；\n  setupExitTrap 原子交换并回收旧引用\n- fcl_loader 退出陷阱与日志管道各错误路径补全资源释放；initializeHooks 改为\n  pthread_once 只执行一次；exit hook 自旋改为 pause 停车\n- 常驻 JVM 空闲自停时 onDestroy 主动结束进程释放内存；修正 ProcessService\n  过时注释与空 session 校验",
-    "created_at": "2026-11-14T11:04:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43588351342"
+    "id": 41082818872,
+    "sha": "5e4d584cc205655be77415820945bb7b712929c6",
+    "short_sha": "5e4d584",
+    "message": "fix: 键盘开关状态随输入法真实显隐自动同步，修复经输入法内按键收起后再次呼出需点两次\n\n- API 30+ 按系统 insets 真值判断键盘可见性；旧版本用可视区域高度估算（与 JVMActivity 平推同源同阈，adjustResize 下必然收缩）\n- 布局回调轮询同步：键盘真实出现过之后又消失且有焦点时，认定输入法自行收起，走统一清理（清空、隐藏、焦点与指针捕获还给游戏视图）\n- imeSeenVisible 闩锁防呼出动画期间误判，呼出请求时重置",
+    "created_at": "2026-10-30T15:38:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41082818872"
   },
   {
-    "id": 43588351193,
-    "sha": "de0bd0102f002722fdc876e1b7366b020c8b1a30",
-    "short_sha": "de0bd01",
-    "message": "fix: 修复安装器常驻 JVM 复用的审查问题\n\n- 换 JRE 重试链与常驻 JVM 冲突：:jvm 阶段结束写入 JRE 状态文件，主进程\n  start 前预读，JRE 不一致时先回收常驻进程再启动；服务内静态守卫降级为兜底\n- 阶段 main 补设线程上下文类加载器，失败路径统一恢复 TCCL 并只 Detach 自身\n  attach 的线程；类加载器父级改用平台类加载器，修复 JDK9+ 平台模块不可见\n- classpath 转 URL 改走 File.toURI().toURL()，支持含空格/非 ASCII 路径，\n  空 classpath 显式拒绝\n- launch() 参数解析或运行环境装配失败时补发退出码，避免界面与安装器主进程\n  等不到结束信号\n- nominal_exit 原子幂等，code 0 也回调 onExit，删除 global ref 后置空；\n  setupExitTrap 原子交换并回收旧引用\n- fcl_loader 退出陷阱与日志管道各错误路径补全资源释放；initializeHooks 改为\n  pthread_once 只执行一次；exit hook 自旋改为 pause 停车\n- 常驻 JVM 空闲自停时 onDestroy 主动结束进程释放内存；修正 ProcessService\n  过时注释与空 session 校验",
-    "created_at": "2026-11-14T11:04:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43588351193"
+    "id": 41082818889,
+    "sha": "5e4d584cc205655be77415820945bb7b712929c6",
+    "short_sha": "5e4d584",
+    "message": "fix: 键盘开关状态随输入法真实显隐自动同步，修复经输入法内按键收起后再次呼出需点两次\n\n- API 30+ 按系统 insets 真值判断键盘可见性；旧版本用可视区域高度估算（与 JVMActivity 平推同源同阈，adjustResize 下必然收缩）\n- 布局回调轮询同步：键盘真实出现过之后又消失且有焦点时，认定输入法自行收起，走统一清理（清空、隐藏、焦点与指针捕获还给游戏视图）\n- imeSeenVisible 闩锁防呼出动画期间误判，呼出请求时重置",
+    "created_at": "2026-10-30T15:38:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41082818889"
   },
   {
-    "id": 43588346514,
-    "sha": "de0bd0102f002722fdc876e1b7366b020c8b1a30",
-    "short_sha": "de0bd01",
-    "message": "fix: 修复安装器常驻 JVM 复用的审查问题\n\n- 换 JRE 重试链与常驻 JVM 冲突：:jvm 阶段结束写入 JRE 状态文件，主进程\n  start 前预读，JRE 不一致时先回收常驻进程再启动；服务内静态守卫降级为兜底\n- 阶段 main 补设线程上下文类加载器，失败路径统一恢复 TCCL 并只 Detach 自身\n  attach 的线程；类加载器父级改用平台类加载器，修复 JDK9+ 平台模块不可见\n- classpath 转 URL 改走 File.toURI().toURL()，支持含空格/非 ASCII 路径，\n  空 classpath 显式拒绝\n- launch() 参数解析或运行环境装配失败时补发退出码，避免界面与安装器主进程\n  等不到结束信号\n- nominal_exit 原子幂等，code 0 也回调 onExit，删除 global ref 后置空；\n  setupExitTrap 原子交换并回收旧引用\n- fcl_loader 退出陷阱与日志管道各错误路径补全资源释放；initializeHooks 改为\n  pthread_once 只执行一次；exit hook 自旋改为 pause 停车\n- 常驻 JVM 空闲自停时 onDestroy 主动结束进程释放内存；修正 ProcessService\n  过时注释与空 session 校验",
-    "created_at": "2026-11-14T11:04:48Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43588346514"
+    "id": 41073341163,
+    "sha": "20b79c9acbfb558fe7c763e2bf9d32c8760be1a0",
+    "short_sha": "20b79c9",
+    "message": "fix: 绑定控件组显隐对话框在小屏横屏下按钮被挤出屏幕、亮色模式下拉文字看不清（#1982）\n\n- 列表区由固定 320dp 改为 0dp + layout_weight，内容少时收紧、超出屏幕时由 LinearLayout 收缩列表区，确认/取消按钮始终可见\n- 允许返回键关闭对话框，避免被困\n- 条目 FCLSpinner 关闭 auto_text_tint，与同类 FCLDialog 一致继承默认文字色，修复亮色模式下文字与白底对比不足",
+    "created_at": "2026-10-30T14:36:48Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41073341163"
   }
 ]

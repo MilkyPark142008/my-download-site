@@ -1,5 +1,13 @@
 [
   {
+    "id": 44916567752,
+    "sha": "32483db128c47622d96e42abf9f5d1912a28a040",
+    "short_sha": "32483db",
+    "message": "fix: 优化背景模糊性能与渲染兼容性\n\n- 静态背景使用缓存并修复设置流实时预览\n- 动态背景按半径采样并优化三次盒式模糊\n- 修复 graphicsLayer 变换下的背景对齐\n- 添加 JVM 与 Android 沙箱回归测试\n\nCo-Authored-By: Claude Code <noreply@anthropic.com>",
+    "created_at": "2026-11-21T14:56:15Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44916567752"
+  },
+  {
     "id": 44866533734,
     "sha": "cdb6db2d9d6e19fff00f7687300273194c1e8f63",
     "short_sha": "cdb6db2",
@@ -390,13 +398,5 @@
     "message": "feat(PetLib): 自适应人物预览取景并支持安全区",
     "created_at": "2026-11-16T14:12:07Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43883613843"
-  },
-  {
-    "id": 43876604387,
-    "sha": "3ce5f9082704f16c4a5b49f0b7b15eed447ae609",
-    "short_sha": "3ce5f90",
-    "message": "chore: 调整启动器主页面的布局",
-    "created_at": "2026-11-16T13:30:56Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43876604387"
   }
 ]
