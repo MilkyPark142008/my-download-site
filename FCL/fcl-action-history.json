@@ -1,5 +1,61 @@
 [
   {
+    "id": 45003096415,
+    "sha": "b8014e340083cc933aadccbdc1fef0ca5e71e85a",
+    "short_sha": "b8014e3",
+    "message": "fix: 消除 GLFW 限帧等待中的忙等\n\nMinecraft 的 RenderSystem.limitDisplayFPS 在每帧末尾调用 glfwWaitEventsTimeout 等待到下一帧截止时间；原实现为空，渲染线程在 while 循环里反复读取时钟，造成忙等。\n\n改为 LockSupport.parkNanos 睡到截止时间，不处理事件（事件仍由主循环的 glfwPollEvents 处理），保持原有行为语义，timeout 为 0/NaN/Inf 时立即返回。同步重建 3.3.3 与 3.4.1 的 merged-modules 组件并更新资源 version 文件，使设备端重新解压新 jar。",
+    "created_at": "2026-11-22T08:08:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45003096415"
+  },
+  {
+    "id": 45003096511,
+    "sha": "b8014e340083cc933aadccbdc1fef0ca5e71e85a",
+    "short_sha": "b8014e3",
+    "message": "fix: 消除 GLFW 限帧等待中的忙等\n\nMinecraft 的 RenderSystem.limitDisplayFPS 在每帧末尾调用 glfwWaitEventsTimeout 等待到下一帧截止时间；原实现为空，渲染线程在 while 循环里反复读取时钟，造成忙等。\n\n改为 LockSupport.parkNanos 睡到截止时间，不处理事件（事件仍由主循环的 glfwPollEvents 处理），保持原有行为语义，timeout 为 0/NaN/Inf 时立即返回。同步重建 3.3.3 与 3.4.1 的 merged-modules 组件并更新资源 version 文件，使设备端重新解压新 jar。",
+    "created_at": "2026-11-22T08:08:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45003096511"
+  },
+  {
+    "id": 45003079500,
+    "sha": "b8014e340083cc933aadccbdc1fef0ca5e71e85a",
+    "short_sha": "b8014e3",
+    "message": "fix: 消除 GLFW 限帧等待中的忙等\n\nMinecraft 的 RenderSystem.limitDisplayFPS 在每帧末尾调用 glfwWaitEventsTimeout 等待到下一帧截止时间；原实现为空，渲染线程在 while 循环里反复读取时钟，造成忙等。\n\n改为 LockSupport.parkNanos 睡到截止时间，不处理事件（事件仍由主循环的 glfwPollEvents 处理），保持原有行为语义，timeout 为 0/NaN/Inf 时立即返回。同步重建 3.3.3 与 3.4.1 的 merged-modules 组件并更新资源 version 文件，使设备端重新解压新 jar。",
+    "created_at": "2026-11-22T08:08:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45003079500"
+  },
+  {
+    "id": 45003079502,
+    "sha": "b8014e340083cc933aadccbdc1fef0ca5e71e85a",
+    "short_sha": "b8014e3",
+    "message": "fix: 消除 GLFW 限帧等待中的忙等\n\nMinecraft 的 RenderSystem.limitDisplayFPS 在每帧末尾调用 glfwWaitEventsTimeout 等待到下一帧截止时间；原实现为空，渲染线程在 while 循环里反复读取时钟，造成忙等。\n\n改为 LockSupport.parkNanos 睡到截止时间，不处理事件（事件仍由主循环的 glfwPollEvents 处理），保持原有行为语义，timeout 为 0/NaN/Inf 时立即返回。同步重建 3.3.3 与 3.4.1 的 merged-modules 组件并更新资源 version 文件，使设备端重新解压新 jar。",
+    "created_at": "2026-11-22T08:08:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45003079502"
+  },
+  {
+    "id": 44979139335,
+    "sha": "e6c92a7a2165f6e9ec6b7379af99494608938b35",
+    "short_sha": "e6c92a7",
+    "message": "Update version_map.json",
+    "created_at": "2026-11-22T03:06:53Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44979139335"
+  },
+  {
+    "id": 44977854677,
+    "sha": "c5ac564103e38e03e15abfccf97e1e5cb571d7ea",
+    "short_sha": "c5ac564",
+    "message": "1.3.4.8",
+    "created_at": "2026-11-22T02:49:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44977854677"
+  },
+  {
+    "id": 44977854621,
+    "sha": "c5ac564103e38e03e15abfccf97e1e5cb571d7ea",
+    "short_sha": "c5ac564",
+    "message": "1.3.4.8",
+    "created_at": "2026-11-22T02:49:14Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44977854621"
+  },
+  {
     "id": 44977854688,
     "sha": "c5ac564103e38e03e15abfccf97e1e5cb571d7ea",
     "short_sha": "c5ac564",
@@ -240,54 +296,6 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43721195708"
   },
   {
-    "id": 43675406203,
-    "sha": "edc13ee5021aae3382613999a8b256c9c6a614c7",
-    "short_sha": "edc13ee",
-    "message": "feat: 按键编辑撤销/恢复 (#1991)\n\n* feat: 按键编辑撤销/恢复——按组快照两栈历史，入口为左抽屉底部操作区\n\n* fix: 修复撤销/恢复历史快照的样式监听泄漏并清理冗余代码\n\n- 快照改存纯数据（id/文字/style 引用/位置尺寸/事件），不再持有数据实例，\n  避免样式对象长期持有已废弃的快照数据\n- 整表替换与删除控件前断开样式监听（数据类新增 detachStyleListener）\n- record 无条件清空重做栈并统一刷新按钮可用态\n- restoreViewsForGroups 改为按组绑定的 Map 参数，消除下标错位风险\n- 删除 GameMenu 中重复的 editHistoryBar 显隐代码",
-    "created_at": "2026-11-15T04:07:57Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43675406203"
-  },
-  {
-    "id": 43675406195,
-    "sha": "edc13ee5021aae3382613999a8b256c9c6a614c7",
-    "short_sha": "edc13ee",
-    "message": "feat: 按键编辑撤销/恢复 (#1991)\n\n* feat: 按键编辑撤销/恢复——按组快照两栈历史，入口为左抽屉底部操作区\n\n* fix: 修复撤销/恢复历史快照的样式监听泄漏并清理冗余代码\n\n- 快照改存纯数据（id/文字/style 引用/位置尺寸/事件），不再持有数据实例，\n  避免样式对象长期持有已废弃的快照数据\n- 整表替换与删除控件前断开样式监听（数据类新增 detachStyleListener）\n- record 无条件清空重做栈并统一刷新按钮可用态\n- restoreViewsForGroups 改为按组绑定的 Map 参数，消除下标错位风险\n- 删除 GameMenu 中重复的 editHistoryBar 显隐代码",
-    "created_at": "2026-11-15T04:07:57Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43675406195"
-  },
-  {
-    "id": 43675321274,
-    "sha": "6d94c57539b99d492878ec642c0665e1af470cb2",
-    "short_sha": "6d94c57",
-    "message": "fix: 修复撤销/恢复历史快照的样式监听泄漏并清理冗余代码\n\n- 快照改存纯数据（id/文字/style 引用/位置尺寸/事件），不再持有数据实例，\n  避免样式对象长期持有已废弃的快照数据\n- 整表替换与删除控件前断开样式监听（数据类新增 detachStyleListener）\n- record 无条件清空重做栈并统一刷新按钮可用态\n- restoreViewsForGroups 改为按组绑定的 Map 参数，消除下标错位风险\n- 删除 GameMenu 中重复的 editHistoryBar 显隐代码",
-    "created_at": "2026-11-15T04:05:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43675321274"
-  },
-  {
-    "id": 43675321269,
-    "sha": "6d94c57539b99d492878ec642c0665e1af470cb2",
-    "short_sha": "6d94c57",
-    "message": "fix: 修复撤销/恢复历史快照的样式监听泄漏并清理冗余代码\n\n- 快照改存纯数据（id/文字/style 引用/位置尺寸/事件），不再持有数据实例，\n  避免样式对象长期持有已废弃的快照数据\n- 整表替换与删除控件前断开样式监听（数据类新增 detachStyleListener）\n- record 无条件清空重做栈并统一刷新按钮可用态\n- restoreViewsForGroups 改为按组绑定的 Map 参数，消除下标错位风险\n- 删除 GameMenu 中重复的 editHistoryBar 显隐代码",
-    "created_at": "2026-11-15T04:05:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43675321269"
-  },
-  {
-    "id": 43675316532,
-    "sha": "6d94c57539b99d492878ec642c0665e1af470cb2",
-    "short_sha": "6d94c57",
-    "message": "fix: 修复撤销/恢复历史快照的样式监听泄漏并清理冗余代码\n\n- 快照改存纯数据（id/文字/style 引用/位置尺寸/事件），不再持有数据实例，\n  避免样式对象长期持有已废弃的快照数据\n- 整表替换与删除控件前断开样式监听（数据类新增 detachStyleListener）\n- record 无条件清空重做栈并统一刷新按钮可用态\n- restoreViewsForGroups 改为按组绑定的 Map 参数，消除下标错位风险\n- 删除 GameMenu 中重复的 editHistoryBar 显隐代码",
-    "created_at": "2026-11-15T04:05:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43675316532"
-  },
-  {
-    "id": 43675316486,
-    "sha": "6d94c57539b99d492878ec642c0665e1af470cb2",
-    "short_sha": "6d94c57",
-    "message": "fix: 修复撤销/恢复历史快照的样式监听泄漏并清理冗余代码\n\n- 快照改存纯数据（id/文字/style 引用/位置尺寸/事件），不再持有数据实例，\n  避免样式对象长期持有已废弃的快照数据\n- 整表替换与删除控件前断开样式监听（数据类新增 detachStyleListener）\n- record 无条件清空重做栈并统一刷新按钮可用态\n- restoreViewsForGroups 改为按组绑定的 Map 参数，消除下标错位风险\n- 删除 GameMenu 中重复的 editHistoryBar 显隐代码",
-    "created_at": "2026-11-15T04:05:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43675316486"
-  },
-  {
     "id": 41082818872,
     "sha": "5e4d584cc205655be77415820945bb7b712929c6",
     "short_sha": "5e4d584",
@@ -390,13 +398,5 @@
     "message": "1.3.4.3",
     "created_at": "2026-10-30T01:25:24Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40985784908"
-  },
-  {
-    "id": 40984025757,
-    "sha": "e12e0615d4fcb75363c111f983dae83c0690cbf2",
-    "short_sha": "e12e061",
-    "message": "fix: 版本列表切换版本时异常跳动（#1974） (#1976)\n\n三处跳动源：\n\n1. 分类 Tab 栏 scrollFlags 含 enterAlways|snap，点按条目时的微小\n   纵向漂移即触发嵌套滚动，AppBarLayout 展开又 snap 回弹，整个列表\n   随之上下窜动。改为仅 scroll：上滑仍可收起 Tab，点按不再牵动列表。\n\n2. diff 内容变化返回 null payload → 整行重绑 + itemAnimator 交叉\n   淡出 + 入场动画（playTranslationX）重播，一次列表刷新可见条目\n   集体横滑/闪烁。改为 PAYLOAD_CONTENT 局部重绑：复用 ViewHolder\n   只刷新数据字段，无动画。\n\n3. render 的 scrollToPosition 定位选中项在选中项已在视口内时仍会\n   拽动视口，改为仅选中项不可见时才滚动。\n\nMuMu 实测：微手势/连续切换版本下列表位移消失，星标置顶、页面重进、\n选中联动正常。",
-    "created_at": "2026-10-30T01:08:23Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40984025757"
   }
 ]

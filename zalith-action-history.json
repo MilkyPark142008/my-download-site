@@ -1,5 +1,29 @@
 [
   {
+    "id": 45008380669,
+    "sha": "f056037a5a4afd1c2aa79f4413efdcc1658b7faa",
+    "short_sha": "f056037",
+    "message": "fix: 基于 futex 实现 GLFW 事件等待，消除限帧忙等",
+    "created_at": "2026-11-22T09:33:20Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45008380669"
+  },
+  {
+    "id": 44998035141,
+    "sha": "2ab10a57a5593c62eae48c30e98e54d6016072be",
+    "short_sha": "2ab10a5",
+    "message": "Merge pull request #2285 from ZalithLauncher/feat/update-runtime\n\nfeat: 更新内置的 Java 环境",
+    "created_at": "2026-11-22T07:23:40Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44998035141"
+  },
+  {
+    "id": 44997914692,
+    "sha": "7140491fb1108d31cf27ec780a4d10e6970cf094",
+    "short_sha": "7140491",
+    "message": "Merge pull request #2291 from ZalithLauncher/fix/background-blur-rendering\n\nfix: 优化背景模糊性能与渲染兼容性",
+    "created_at": "2026-11-22T07:22:07Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44997914692"
+  },
+  {
     "id": 44916567752,
     "sha": "32483db128c47622d96e42abf9f5d1912a28a040",
     "short_sha": "32483db",
@@ -374,29 +398,5 @@
     "message": "fix: 设置状态切换到稳定的 StateFlow",
     "created_at": "2026-11-16T16:35:48Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43909267637"
-  },
-  {
-    "id": 43894669945,
-    "sha": "d662b6f13fdff82cde2ccfffc4d790ea93e4ceaf",
-    "short_sha": "d662b6f",
-    "message": "chore: PetModelView 支持传入光照相关的参数",
-    "created_at": "2026-11-16T15:16:53Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43894669945"
-  },
-  {
-    "id": 43889647342,
-    "sha": "183f852c73fc9e368c5244a21a4adab44f9d42c1",
-    "short_sha": "183f852",
-    "message": "chore(PetLib): 优化人物预览取景与横向冗余",
-    "created_at": "2026-11-16T14:48:21Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43889647342"
-  },
-  {
-    "id": 43883613843,
-    "sha": "262a7c80bc428cfe136463aec4347ac0491eb773",
-    "short_sha": "262a7c8",
-    "message": "feat(PetLib): 自适应人物预览取景并支持安全区",
-    "created_at": "2026-11-16T14:12:07Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43883613843"
   }
 ]
