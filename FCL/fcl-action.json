@@ -1,20 +1,20 @@
 {"run": {
-  "id": 45003096415,
-  "name": "Build",
-  "node_id": "WFR_kwLOIQeFGs8AAAAKemTBXw",
+  "id": 45023487944,
+  "name": "Check Codes",
+  "node_id": "WFR_kwLOIQeFGs8AAAAKe5vnyA",
   "head_branch": "fix/glfw-frame-limiter-busywait",
-  "head_sha": "b8014e340083cc933aadccbdc1fef0ca5e71e85a",
-  "path": ".github/workflows/build.yml",
+  "head_sha": "d79ecdc9dfe50d63a757c5e7fef3dc6b165fbd6d",
+  "path": ".github/workflows/check-codes.yml",
   "display_title": "fix: 消除 GLFW 限帧等待中的忙等，修复CPU异常占用",
-  "run_number": 1594,
+  "run_number": 490,
   "event": "pull_request",
   "status": "completed",
   "conclusion": "success",
-  "workflow_id": 200966783,
-  "check_suite_id": 121792299605,
-  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAcW2MCVQ",
-  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/45003096415",
-  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45003096415",
+  "workflow_id": 351611475,
+  "check_suite_id": 121845760912,
+  "check_suite_node_id": "CS_kwDOIQeFGs8AAAAcXpLDkA",
+  "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/45023487944",
+  "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45023487944",
   "pull_requests": [
     {
       "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/pulls/2036",
@@ -22,7 +22,7 @@
       "number": 2036,
       "head": {
         "ref": "fix/glfw-frame-limiter-busywait",
-        "sha": "b8014e340083cc933aadccbdc1fef0ca5e71e85a",
+        "sha": "d79ecdc9dfe50d63a757c5e7fef3dc6b165fbd6d",
         "repo": {
           "id": 554140954,
           "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher",
@@ -40,8 +40,8 @@
       }
     }
   ],
-  "created_at": "2026-11-22T08:30:09Z",
-  "updated_at": "2026-11-22T08:35:05Z",
+  "created_at": "2026-11-22T12:40:18Z",
+  "updated_at": "2026-11-22T12:41:39Z",
   "actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -65,7 +65,7 @@
   },
   "run_attempt": 1,
   "referenced_workflows": [],
-  "run_started_at": "2026-11-22T08:30:09Z",
+  "run_started_at": "2026-11-22T12:40:18Z",
   "triggering_actor": {
     "login": "ShirosakiMio",
     "id": 19233890,
@@ -87,19 +87,19 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/45003096415/jobs",
-  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/45003096415/logs",
-  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/121792299605",
-  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/45003096415/artifacts",
-  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/45003096415/cancel",
-  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/45003096415/rerun",
+  "jobs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/45023487944/jobs",
+  "logs_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/45023487944/logs",
+  "check_suite_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/check-suites/121845760912",
+  "artifacts_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/45023487944/artifacts",
+  "cancel_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/45023487944/cancel",
+  "rerun_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/runs/45023487944/rerun",
   "previous_attempt_url": null,
-  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/200966783",
+  "workflow_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/workflows/351611475",
   "head_commit": {
-    "id": "b8014e340083cc933aadccbdc1fef0ca5e71e85a",
-    "tree_id": "6afd5a911e7e79b226a60d7c14bc849b27d28ae1",
-    "message": "fix: 消除 GLFW 限帧等待中的忙等\n\nMinecraft 的 RenderSystem.limitDisplayFPS 在每帧末尾调用 glfwWaitEventsTimeout 等待到下一帧截止时间；原实现为空，渲染线程在 while 循环里反复读取时钟，造成忙等。\n\n改为 LockSupport.parkNanos 睡到截止时间，不处理事件（事件仍由主循环的 glfwPollEvents 处理），保持原有行为语义，timeout 为 0/NaN/Inf 时立即返回。同步重建 3.3.3 与 3.4.1 的 merged-modules 组件并更新资源 version 文件，使设备端重新解压新 jar。",
-    "timestamp": "2026-11-22T08:08:55Z",
+    "id": "d79ecdc9dfe50d63a757c5e7fef3dc6b165fbd6d",
+    "tree_id": "b5fc92fd3823875a6ce64b34add89974c3f85dca",
+    "message": "fix: 按等待时长自适应自旋窗口，降低低帧率占用\n\n等待超过 3ms（120 帧及以下）时自旋余量降到 1.5ms，减少低帧率下的空转；高帧率等待短，保持 2ms 余量以保证 240 帧贴住上限。",
+    "timestamp": "2026-11-22T12:34:47Z",
     "author": {
       "name": "ShirosakiMio",
       "email": "852468399@qq.com"
@@ -246,107 +246,8 @@
     "deployments_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/deployments"
   }
 }, "artifacts": {
-  "total_count": 5,
+  "total_count": 0,
   "artifacts": [
-    {
-      "id": 14747045528,
-      "node_id": "MDg6QXJ0aWZhY3QxNDc0NzA0NTUyOA==",
-      "name": "app-x86",
-      "size_in_bytes": 168429938,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14747045528",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14747045528/zip",
-      "expired": false,
-      "digest": "sha256:6c9336a3aef8b7a09cec317ec186a19f1afa5093b6b03660ea05eb626c383ec2",
-      "created_at": "2026-11-22T08:33:32Z",
-      "updated_at": "2026-11-22T08:33:32Z",
-      "expires_at": "2026-11-29T08:30:09Z",
-      "workflow_run": {
-        "id": 45003096415,
-        "repository_id": 554140954,
-        "head_repository_id": 554140954,
-        "head_branch": "fix/glfw-frame-limiter-busywait",
-        "head_sha": "b8014e340083cc933aadccbdc1fef0ca5e71e85a"
-      }
-    },
-    {
-      "id": 14746867661,
-      "node_id": "MDg6QXJ0aWZhY3QxNDc0Njg2NzY2MQ==",
-      "name": "app-all",
-      "size_in_bytes": 334859910,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14746867661",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14746867661/zip",
-      "expired": false,
-      "digest": "sha256:f8819f99ba26d0539c3feded0caefe4d0ce0df013b69526c8e967c0af5eecaa9",
-      "created_at": "2026-11-22T08:35:01Z",
-      "updated_at": "2026-11-22T08:35:01Z",
-      "expires_at": "2026-11-29T08:30:09Z",
-      "workflow_run": {
-        "id": 45003096415,
-        "repository_id": 554140954,
-        "head_repository_id": 554140954,
-        "head_branch": "fix/glfw-frame-limiter-busywait",
-        "head_sha": "b8014e340083cc933aadccbdc1fef0ca5e71e85a"
-      }
-    },
-    {
-      "id": 14746573608,
-      "node_id": "MDg6QXJ0aWZhY3QxNDc0NjU3MzYwOA==",
-      "name": "app-arm",
-      "size_in_bytes": 164342164,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14746573608",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14746573608/zip",
-      "expired": false,
-      "digest": "sha256:8f56a14d656067aaa25ea3858af687af7ff17662e8b8d25bf3d5e37828a2df21",
-      "created_at": "2026-11-22T08:33:53Z",
-      "updated_at": "2026-11-22T08:33:53Z",
-      "expires_at": "2026-11-29T08:30:09Z",
-      "workflow_run": {
-        "id": 45003096415,
-        "repository_id": 554140954,
-        "head_repository_id": 554140954,
-        "head_branch": "fix/glfw-frame-limiter-busywait",
-        "head_sha": "b8014e340083cc933aadccbdc1fef0ca5e71e85a"
-      }
-    },
-    {
-      "id": 14746424229,
-      "node_id": "MDg6QXJ0aWZhY3QxNDc0NjQyNDIyOQ==",
-      "name": "app-arm64",
-      "size_in_bytes": 172746085,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14746424229",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14746424229/zip",
-      "expired": false,
-      "digest": "sha256:0f3abb5a54d4387b8e68746dbbf0076e15388849ee177875203aba51b62be013",
-      "created_at": "2026-11-22T08:33:39Z",
-      "updated_at": "2026-11-22T08:33:39Z",
-      "expires_at": "2026-11-29T08:30:09Z",
-      "workflow_run": {
-        "id": 45003096415,
-        "repository_id": 554140954,
-        "head_repository_id": 554140954,
-        "head_branch": "fix/glfw-frame-limiter-busywait",
-        "head_sha": "b8014e340083cc933aadccbdc1fef0ca5e71e85a"
-      }
-    },
-    {
-      "id": 14746409183,
-      "node_id": "MDg6QXJ0aWZhY3QxNDc0NjQwOTE4Mw==",
-      "name": "app-x86_64",
-      "size_in_bytes": 178382125,
-      "url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14746409183",
-      "archive_download_url": "https://api.github.com/repos/FCL-Team/FoldCraftLauncher/actions/artifacts/14746409183/zip",
-      "expired": false,
-      "digest": "sha256:822fda57b5e63c0cab20727da8921d803ee9a7aed0f133fec898a686edfdd818",
-      "created_at": "2026-11-22T08:33:47Z",
-      "updated_at": "2026-11-22T08:33:47Z",
-      "expires_at": "2026-11-29T08:30:09Z",
-      "workflow_run": {
-        "id": 45003096415,
-        "repository_id": 554140954,
-        "head_repository_id": 554140954,
-        "head_branch": "fix/glfw-frame-limiter-busywait",
-        "head_sha": "b8014e340083cc933aadccbdc1fef0ca5e71e85a"
-      }
-    }
+
   ]
 }}

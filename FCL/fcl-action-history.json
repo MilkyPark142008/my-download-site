@@ -1,5 +1,69 @@
 [
   {
+    "id": 45023487944,
+    "sha": "d79ecdc9dfe50d63a757c5e7fef3dc6b165fbd6d",
+    "short_sha": "d79ecdc",
+    "message": "fix: 按等待时长自适应自旋窗口，降低低帧率占用\n\n等待超过 3ms（120 帧及以下）时自旋余量降到 1.5ms，减少低帧率下的空转；高帧率等待短，保持 2ms 余量以保证 240 帧贴住上限。",
+    "created_at": "2026-11-22T12:34:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45023487944"
+  },
+  {
+    "id": 45023487957,
+    "sha": "d79ecdc9dfe50d63a757c5e7fef3dc6b165fbd6d",
+    "short_sha": "d79ecdc",
+    "message": "fix: 按等待时长自适应自旋窗口，降低低帧率占用\n\n等待超过 3ms（120 帧及以下）时自旋余量降到 1.5ms，减少低帧率下的空转；高帧率等待短，保持 2ms 余量以保证 240 帧贴住上限。",
+    "created_at": "2026-11-22T12:34:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45023487957"
+  },
+  {
+    "id": 45023483971,
+    "sha": "d79ecdc9dfe50d63a757c5e7fef3dc6b165fbd6d",
+    "short_sha": "d79ecdc",
+    "message": "fix: 按等待时长自适应自旋窗口，降低低帧率占用\n\n等待超过 3ms（120 帧及以下）时自旋余量降到 1.5ms，减少低帧率下的空转；高帧率等待短，保持 2ms 余量以保证 240 帧贴住上限。",
+    "created_at": "2026-11-22T12:34:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45023483971"
+  },
+  {
+    "id": 45023483958,
+    "sha": "d79ecdc9dfe50d63a757c5e7fef3dc6b165fbd6d",
+    "short_sha": "d79ecdc",
+    "message": "fix: 按等待时长自适应自旋窗口，降低低帧率占用\n\n等待超过 3ms（120 帧及以下）时自旋余量降到 1.5ms，减少低帧率下的空转；高帧率等待短，保持 2ms 余量以保证 240 帧贴住上限。",
+    "created_at": "2026-11-22T12:34:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45023483958"
+  },
+  {
+    "id": 45022246260,
+    "sha": "57b811fb909a52c926145591ccedcc3b5db4da8f",
+    "short_sha": "57b811f",
+    "message": "fix: 限帧等待改为先睡后自旋，保证高帧率精度\n\nglfwWaitEventsTimeout 在 parkNanos 之外增加末尾自旋窗口，吸收线程从 park 唤醒到实际被调度的延迟。剩余时间不足自旋余量时不再 park，高帧率场景退化为纯自旋以保证退出时刻精确。",
+    "created_at": "2026-11-22T11:57:18Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45022246260"
+  },
+  {
+    "id": 45022246254,
+    "sha": "57b811fb909a52c926145591ccedcc3b5db4da8f",
+    "short_sha": "57b811f",
+    "message": "fix: 限帧等待改为先睡后自旋，保证高帧率精度\n\nglfwWaitEventsTimeout 在 parkNanos 之外增加末尾自旋窗口，吸收线程从 park 唤醒到实际被调度的延迟。剩余时间不足自旋余量时不再 park，高帧率场景退化为纯自旋以保证退出时刻精确。",
+    "created_at": "2026-11-22T11:57:18Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45022246254"
+  },
+  {
+    "id": 45022242173,
+    "sha": "57b811fb909a52c926145591ccedcc3b5db4da8f",
+    "short_sha": "57b811f",
+    "message": "fix: 限帧等待改为先睡后自旋，保证高帧率精度\n\nglfwWaitEventsTimeout 在 parkNanos 之外增加末尾自旋窗口，吸收线程从 park 唤醒到实际被调度的延迟。剩余时间不足自旋余量时不再 park，高帧率场景退化为纯自旋以保证退出时刻精确。",
+    "created_at": "2026-11-22T11:57:18Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45022242173"
+  },
+  {
+    "id": 45022242127,
+    "sha": "57b811fb909a52c926145591ccedcc3b5db4da8f",
+    "short_sha": "57b811f",
+    "message": "fix: 限帧等待改为先睡后自旋，保证高帧率精度\n\nglfwWaitEventsTimeout 在 parkNanos 之外增加末尾自旋窗口，吸收线程从 park 唤醒到实际被调度的延迟。剩余时间不足自旋余量时不再 park，高帧率场景退化为纯自旋以保证退出时刻精确。",
+    "created_at": "2026-11-22T11:57:18Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45022242127"
+  },
+  {
     "id": 45003096415,
     "sha": "b8014e340083cc933aadccbdc1fef0ca5e71e85a",
     "short_sha": "b8014e3",
@@ -272,30 +336,6 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43791671623"
   },
   {
-    "id": 43721197030,
-    "sha": "d5f495b2625f3180fe3661bca35aedab2bcf5b8f",
-    "short_sha": "d5f495b",
-    "message": "chore(l10n): update Chinese (Simplified Han script) translation\n\nCo-authored-by: reducedradius <137701630+flytothehighest@users.noreply.github.com>\nLanguage: Chinese (Simplified Han script)\nProgress: 99.6% (1626 of 1632 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hans/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-11-15T13:51:26Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43721197030"
-  },
-  {
-    "id": 43721195668,
-    "sha": "d5f495b2625f3180fe3661bca35aedab2bcf5b8f",
-    "short_sha": "d5f495b",
-    "message": "chore(l10n): update Chinese (Simplified Han script) translation\n\nCo-authored-by: reducedradius <137701630+flytothehighest@users.noreply.github.com>\nLanguage: Chinese (Simplified Han script)\nProgress: 99.6% (1626 of 1632 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hans/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-11-15T13:51:26Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43721195668"
-  },
-  {
-    "id": 43721195708,
-    "sha": "d5f495b2625f3180fe3661bca35aedab2bcf5b8f",
-    "short_sha": "d5f495b",
-    "message": "chore(l10n): update Chinese (Simplified Han script) translation\n\nCo-authored-by: reducedradius <137701630+flytothehighest@users.noreply.github.com>\nLanguage: Chinese (Simplified Han script)\nProgress: 99.6% (1626 of 1632 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hans/\nTranslation: FoldCraftLauncher/FCL",
-    "created_at": "2026-11-15T13:51:26Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43721195708"
-  },
-  {
     "id": 41082818872,
     "sha": "5e4d584cc205655be77415820945bb7b712929c6",
     "short_sha": "5e4d584",
@@ -358,45 +398,5 @@
     "message": "feat: 输入法遮挡画面时提供放大镜窗口",
     "created_at": "2026-10-30T10:25:19Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41040704640"
-  },
-  {
-    "id": 41040704880,
-    "sha": "d7af735a3077e62b7b0bb91c1ba35a7d6676381a",
-    "short_sha": "d7af735",
-    "message": "feat: 输入法遮挡画面时提供放大镜窗口",
-    "created_at": "2026-10-30T10:25:19Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41040704880"
-  },
-  {
-    "id": 40987226830,
-    "sha": "cdba79fa53b92624cca2cb806f58934ac879445c",
-    "short_sha": "cdba79f",
-    "message": "Update version_map.json",
-    "created_at": "2026-10-30T01:40:20Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40987226830"
-  },
-  {
-    "id": 40985785078,
-    "sha": "d3078f3f9769420b168863990a71ff0cd0f28929",
-    "short_sha": "d3078f3",
-    "message": "1.3.4.3",
-    "created_at": "2026-10-30T01:25:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40985785078"
-  },
-  {
-    "id": 40985784832,
-    "sha": "d3078f3f9769420b168863990a71ff0cd0f28929",
-    "short_sha": "d3078f3",
-    "message": "1.3.4.3",
-    "created_at": "2026-10-30T01:25:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40985784832"
-  },
-  {
-    "id": 40985784908,
-    "sha": "d3078f3f9769420b168863990a71ff0cd0f28929",
-    "short_sha": "d3078f3",
-    "message": "1.3.4.3",
-    "created_at": "2026-10-30T01:25:24Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40985784908"
   }
 ]

@@ -1,5 +1,69 @@
 [
   {
+    "id": 45044796138,
+    "sha": "aceb68727f910bb2519141f010b4e2f8cac45b12",
+    "short_sha": "aceb687",
+    "message": "Merge branch 'main' into fix/glfw-event-wait-frame-precision",
+    "created_at": "2026-11-22T16:36:22Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45044796138"
+  },
+  {
+    "id": 45044213502,
+    "sha": "e6528a8491c95dd142a7313ee129e3f8f352894e",
+    "short_sha": "e6528a8",
+    "message": "合并拉取请求 #2297\n\nfix: 统一通行证服务器ID末尾斜杠导致无法启动游戏",
+    "created_at": "2026-11-22T16:30:24Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45044213502"
+  },
+  {
+    "id": 45044123267,
+    "sha": "e69f64c9e32f88b3f1d645209216a0e4fa663b74",
+    "short_sha": "e69f64c",
+    "message": "fix: 统一通行证服务器ID末尾斜杠导致无法启动游戏",
+    "created_at": "2026-11-22T16:28:17Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45044123267"
+  },
+  {
+    "id": 45031672260,
+    "sha": "92ca48acc25815b728a308fecfecc9fba9d08ad8",
+    "short_sha": "92ca48a",
+    "message": "chore: 调整内置的 Turnip 驱动条目的名称",
+    "created_at": "2026-11-22T14:13:31Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45031672260"
+  },
+  {
+    "id": 45028962694,
+    "sha": "4a79a1808e516ebb1c58459216f56c8f5f0555ab",
+    "short_sha": "4a79a18",
+    "message": "fix: 限帧等待补偿内核唤醒延迟造成的帧率损失\n\nfutex 睡眠唤醒的固定延迟（Android 上约 1-3ms）会被 MC 1.20.1 的\n限帧循环原样计入每帧间隔，60fps 档实达仅约 54fps。timed 等待改为\n提前唤醒：按 EWMA 学习到的唤醒延迟预扣睡眠时长，剩余一小段自旋\n精确卡点；自旋期间事件与停止仍可立即打断。EWMA 上限 4ms，覆盖\n中低端设备的内核唤醒延迟，正样本过滤线 25ms 防单次大停顿污染均值。\n\nMC 26.x 的 FramerateLimiter 自带同类补偿且不再调用\nglfwWaitEventsTimeout，因此仅 1.20.1 一类旧版本受此问题影响。",
+    "created_at": "2026-11-22T13:42:00Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45028962694"
+  },
+  {
+    "id": 45020806460,
+    "sha": "75169cc39c8f2bd86c0c60499c38a3e126fd57f0",
+    "short_sha": "75169cc",
+    "message": "fix: 去掉本地调试配置",
+    "created_at": "2026-11-22T12:09:06Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45020806460"
+  },
+  {
+    "id": 45015908525,
+    "sha": "d7fe61aff6b740beeb75fe25d688e85fe6000e22",
+    "short_sha": "d7fe61a",
+    "message": "fix: 控制布局不透明度状态未实时更新",
+    "created_at": "2026-11-22T11:09:11Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45015908525"
+  },
+  {
+    "id": 45014320443,
+    "sha": "cb10d9861b3333d4e4397254947adf75dc85e7d7",
+    "short_sha": "cb10d98",
+    "message": "Merge pull request #2292 from Eurya0x13/main\n\n修复 GLFW 限帧等待中的忙等",
+    "created_at": "2026-11-22T10:49:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45014320443"
+  },
+  {
     "id": 45008380669,
     "sha": "f056037a5a4afd1c2aa79f4413efdcc1658b7faa",
     "short_sha": "f056037",
@@ -334,69 +398,5 @@
     "message": "fix: JVM 渲染循环复用帧缓冲区，消除每帧全屏 int[] 分配引发的 GC 风暴",
     "created_at": "2026-11-16T23:59:00Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43984113123"
-  },
-  {
-    "id": 43975897629,
-    "sha": "466b7b1f9907ada444d5f96c2557202d58ef488e",
-    "short_sha": "466b7b1",
-    "message": "refactor: 启动时，在协程中异步初始化，不再卡死主线程",
-    "created_at": "2026-11-16T23:03:45Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43975897629"
-  },
-  {
-    "id": 43940642250,
-    "sha": "c62fdeaf0c148b597caa60efc59388b468952af0",
-    "short_sha": "c62fdea",
-    "message": "Merge pull request #2259 from ZalithLauncher/feat/gameinfobox-renderer\n\nfeat: 启动游戏时，在游戏信息内显示渲染器",
-    "created_at": "2026-11-16T19:33:51Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43940642250"
-  },
-  {
-    "id": 43940491603,
-    "sha": "f6f8327c65da8276979481b0d4c7c5b57517ad3c",
-    "short_sha": "f6f8327",
-    "message": "refactor: 在初始化 GameLauncher 时即设置渲染器",
-    "created_at": "2026-11-16T19:32:54Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43940491603"
-  },
-  {
-    "id": 43934220701,
-    "sha": "280eb0354eafc05dc12c56544950e892da8bd6c4",
-    "short_sha": "280eb03",
-    "message": "feat: 启动游戏时，在游戏信息内显示渲染器",
-    "created_at": "2026-11-16T18:56:38Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43934220701"
-  },
-  {
-    "id": 43930181079,
-    "sha": "36bd81963e6ba60ca7b314e3ff52731b2396840f",
-    "short_sha": "36bd819",
-    "message": "Merge pull request #2258 from ZalithLauncher/fix/gamepath-select\n\nfix: 选择路径屏幕内创建目录对话框未关闭",
-    "created_at": "2026-11-16T18:34:04Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43930181079"
-  },
-  {
-    "id": 43929881595,
-    "sha": "346dd6ceda76e9910ae352786981be74b2583a4e",
-    "short_sha": "346dd6c",
-    "message": "feat: 禁止用户选择外部存储根目录",
-    "created_at": "2026-11-16T18:31:50Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43929881595"
-  },
-  {
-    "id": 43920133833,
-    "sha": "b0c9bd50e84fd65510d807897d21ede14900d4fc",
-    "short_sha": "b0c9bd5",
-    "message": "fix: 选择路径屏幕内创建目录对话框未关闭",
-    "created_at": "2026-11-16T17:36:13Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43920133833"
-  },
-  {
-    "id": 43909267637,
-    "sha": "4599e3fb74da3442f6d3b6009c67c42f22ee1f6c",
-    "short_sha": "4599e3f",
-    "message": "fix: 设置状态切换到稳定的 StateFlow",
-    "created_at": "2026-11-16T16:35:48Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43909267637"
   }
 ]
