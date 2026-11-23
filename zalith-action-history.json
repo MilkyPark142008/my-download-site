@@ -1,5 +1,37 @@
 [
   {
+    "id": 45188424254,
+    "sha": "b6310dd0284caecfeeed47e9213eecc4cb69284c",
+    "short_sha": "b6310dd",
+    "message": "Merge pull request #2300 from ZalithLauncher/fix/expose-ffmpeg-in-path\n\nfix: 将 FFmpeg 插件以标准命令名暴露进游戏 PATH",
+    "created_at": "2026-11-23T13:53:29Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45188424254"
+  },
+  {
+    "id": 45187831367,
+    "sha": "330fee530d124571f4f146613879542b65e741b7",
+    "short_sha": "330fee5",
+    "message": "Merge pull request #2301 from ZalithLauncher/fix/dialog-fullscreen\n\nfix: 将全屏机制套用到所有 Dialog 窗口",
+    "created_at": "2026-11-23T13:49:57Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45187831367"
+  },
+  {
+    "id": 45187046797,
+    "sha": "7e83601ffa52357fa68bc62c4e7f2b04c2035e59",
+    "short_sha": "7e83601",
+    "message": "fix: 将全屏机制套用到所有 Dialog 窗口",
+    "created_at": "2026-11-23T13:39:16Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45187046797"
+  },
+  {
+    "id": 45153453974,
+    "sha": "508d1ba5cc6abef19385b2ebd605bb790cb5b020",
+    "short_sha": "508d1ba",
+    "message": "fix: 将 FFmpeg 插件以标准命令名暴露进游戏 PATH\n\n修复 Frameback 等模组因 PATH 中检索不到标准 ffmpeg 命令而误判\n未安装 FFmpeg 的问题 (Fixes #2289)。\n\n- 插件可用时在 ffmpeg_bin 目录内创建 ffmpeg/ffprobe 符号链接，\n  并将该目录加入游戏 PATH，使模组能正常检测\n- 将插件库目录加入游戏 LD_LIBRARY_PATH，保证绕过 exec hook\n  的直接执行（如 ffprobe、shell 中转）也能解析其依赖库",
+    "created_at": "2026-11-23T10:08:44Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45153453974"
+  },
+  {
     "id": 45077768231,
     "sha": "4740ff446ba4d620679d3023ce9c634cba8a3362",
     "short_sha": "4740ff4",
@@ -366,37 +398,5 @@
     "message": "feat: 为主界面的版本管理入口添加标注式引导",
     "created_at": "2026-11-18T11:46:20Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44297992528"
-  },
-  {
-    "id": 44269453014,
-    "sha": "6e276a2336fadd7bd710dab1c070e70000234810",
-    "short_sha": "6e276a2",
-    "message": "chore: 不再使用 Gradle 守护进程",
-    "created_at": "2026-11-18T08:43:20Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44269453014"
-  },
-  {
-    "id": 44267122528,
-    "sha": "c18f5115dc89f32b83cc557f2d2f2ee988c80064",
-    "short_sha": "c18f511",
-    "message": "fix: CutoutBox 同一 Measurable 不允许二次测量",
-    "created_at": "2026-11-18T08:27:14Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44267122528"
-  },
-  {
-    "id": 44105768450,
-    "sha": "a86ccc276977ed51b7768c0ff91100654a43a1c7",
-    "short_sha": "a86ccc2",
-    "message": "chore: 渲染器配置对话框内可排序组件调整为拖动排序",
-    "created_at": "2026-11-17T14:40:42Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44105768450"
-  },
-  {
-    "id": 44099579594,
-    "sha": "b8d78925ceb3ebd8b0f4db0b56ad7e253149ad1e",
-    "short_sha": "b8d7892",
-    "message": "chore: 去除历史遗留的 AutoSizeText",
-    "created_at": "2026-11-17T14:06:45Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44099579594"
   }
 ]
