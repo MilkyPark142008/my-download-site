@@ -1,5 +1,37 @@
 [
   {
+    "id": 45077768231,
+    "sha": "4740ff446ba4d620679d3023ce9c634cba8a3362",
+    "short_sha": "4740ff4",
+    "message": "合并拉取请求 #2296\n\nfix: 限帧等待补偿内核唤醒延迟造成的帧率损失",
+    "created_at": "2026-11-22T22:26:48Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45077768231"
+  },
+  {
+    "id": 45077743857,
+    "sha": "88c816cfa27c30bf1a8726d1a34ace2ed44e91ff",
+    "short_sha": "88c816c",
+    "message": "合并拉取请求 #2298\n\nfix/background-blur-rendering",
+    "created_at": "2026-11-22T22:26:33Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45077743857"
+  },
+  {
+    "id": 45077594936,
+    "sha": "ce995869f4478a98bbd5896aad1cf9da79558d0b",
+    "short_sha": "ce99586",
+    "message": "fix: 修改版本页面内 Minecraft 版本 UI 没有应用模糊效果",
+    "created_at": "2026-11-22T22:23:54Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45077594936"
+  },
+  {
+    "id": 45077072172,
+    "sha": "737e9f916880f2108030838d4e875874d9d7c28c",
+    "short_sha": "737e9f9",
+    "message": "pref: 将静态前景玻璃的白色叠层改为共享预合成",
+    "created_at": "2026-11-22T22:18:46Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45077072172"
+  },
+  {
     "id": 45044796138,
     "sha": "aceb68727f910bb2519141f010b4e2f8cac45b12",
     "short_sha": "aceb687",
@@ -366,37 +398,5 @@
     "message": "chore: 去除历史遗留的 AutoSizeText",
     "created_at": "2026-11-17T14:06:45Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44099579594"
-  },
-  {
-    "id": 44098883193,
-    "sha": "fb0edba3865af64cda6bd079ee99e23bb35a8a5b",
-    "short_sha": "fb0edba",
-    "message": "Merge pull request #2265 from ZalithLauncher/feat/marquee-effect\n\nfeat: 实现自然的跑马灯首尾淡化效果",
-    "created_at": "2026-11-17T14:02:54Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44098883193"
-  },
-  {
-    "id": 44096301897,
-    "sha": "6debd6e6e3a39fc7cff100035976bc5a24f8021f",
-    "short_sha": "6debd6e",
-    "message": "feat: 实现自然的跑马灯首尾淡化效果",
-    "created_at": "2026-11-17T13:47:00Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44096301897"
-  },
-  {
-    "id": 44087087930,
-    "sha": "1ecc7e4c8527051e94f8c5346ff898d0f381e866",
-    "short_sha": "1ecc7e4",
-    "message": "[Do not use!] Translated using Weblate (Vietnamese)\n\nCurrently translated at 93.3% (1460 of 1564 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/vi/",
-    "created_at": "2026-11-17T12:51:27Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44087087930"
-  },
-  {
-    "id": 43984113123,
-    "sha": "4c3798b1ce3fd76953205d891851c9667b5d8af0",
-    "short_sha": "4c3798b",
-    "message": "fix: JVM 渲染循环复用帧缓冲区，消除每帧全屏 int[] 分配引发的 GC 风暴",
-    "created_at": "2026-11-16T23:59:00Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/43984113123"
   }
 ]
