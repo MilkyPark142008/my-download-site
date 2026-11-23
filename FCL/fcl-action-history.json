@@ -1,5 +1,53 @@
 [
   {
+    "id": 45129475160,
+    "sha": "fffab9f5dc4abcb04ee8e037592f09536f7c8dec",
+    "short_sha": "fffab9f",
+    "message": "fix: 修复皮肤跳跃动画顶部裁切问题",
+    "created_at": "2026-11-19T06:04:11Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45129475160"
+  },
+  {
+    "id": 45129475170,
+    "sha": "fffab9f5dc4abcb04ee8e037592f09536f7c8dec",
+    "short_sha": "fffab9f",
+    "message": "fix: 修复皮肤跳跃动画顶部裁切问题",
+    "created_at": "2026-11-19T06:04:11Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45129475170"
+  },
+  {
+    "id": 45090710108,
+    "sha": "9fa60d7be7b633613955537d40cb124503a01002",
+    "short_sha": "9fa60d7",
+    "message": "fix: 模组数量显示不一致  #2034",
+    "created_at": "2026-11-23T00:46:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45090710108"
+  },
+  {
+    "id": 45090710116,
+    "sha": "9fa60d7be7b633613955537d40cb124503a01002",
+    "short_sha": "9fa60d7",
+    "message": "fix: 模组数量显示不一致  #2034",
+    "created_at": "2026-11-23T00:46:08Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45090710116"
+  },
+  {
+    "id": 45089486086,
+    "sha": "bb7342a48c2923ce7cdc3d6febddb95c5134a175",
+    "short_sha": "bb7342a",
+    "message": "fix: 消除 GLFW 限帧等待中的忙等，修复CPU异常占用 (#2036)\n\n* fix: 消除 GLFW 限帧等待中的忙等\n\nMinecraft 的 RenderSystem.limitDisplayFPS 在每帧末尾调用 glfwWaitEventsTimeout 等待到下一帧截止时间；原实现为空，渲染线程在 while 循环里反复读取时钟，造成忙等。\n\n改为 LockSupport.parkNanos 睡到截止时间，不处理事件（事件仍由主循环的 glfwPollEvents 处理），保持原有行为语义，timeout 为 0/NaN/Inf 时立即返回。同步重建 3.3.3 与 3.4.1 的 merged-modules 组件并更新资源 version 文件，使设备端重新解压新 jar。\n\n* fix: 限帧等待改为先睡后自旋，保证高帧率精度\n\nglfwWaitEventsTimeout 在 parkNanos 之外增加末尾自旋窗口，吸收线程从 park 唤醒到实际被调度的延迟。剩余时间不足自旋余量时不再 park，高帧率场景退化为纯自旋以保证退出时刻精确。\n\n* fix: 按等待时长自适应自旋窗口，降低低帧率占用\n\n等待超过 3ms（120 帧及以下）时自旋余量降到 1.5ms，减少低帧率下的空转；高帧率等待短，保持 2ms 余量以保证 240 帧贴住上限。",
+    "created_at": "2026-11-23T00:33:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45089486086"
+  },
+  {
+    "id": 45089486070,
+    "sha": "bb7342a48c2923ce7cdc3d6febddb95c5134a175",
+    "short_sha": "bb7342a",
+    "message": "fix: 消除 GLFW 限帧等待中的忙等，修复CPU异常占用 (#2036)\n\n* fix: 消除 GLFW 限帧等待中的忙等\n\nMinecraft 的 RenderSystem.limitDisplayFPS 在每帧末尾调用 glfwWaitEventsTimeout 等待到下一帧截止时间；原实现为空，渲染线程在 while 循环里反复读取时钟，造成忙等。\n\n改为 LockSupport.parkNanos 睡到截止时间，不处理事件（事件仍由主循环的 glfwPollEvents 处理），保持原有行为语义，timeout 为 0/NaN/Inf 时立即返回。同步重建 3.3.3 与 3.4.1 的 merged-modules 组件并更新资源 version 文件，使设备端重新解压新 jar。\n\n* fix: 限帧等待改为先睡后自旋，保证高帧率精度\n\nglfwWaitEventsTimeout 在 parkNanos 之外增加末尾自旋窗口，吸收线程从 park 唤醒到实际被调度的延迟。剩余时间不足自旋余量时不再 park，高帧率场景退化为纯自旋以保证退出时刻精确。\n\n* fix: 按等待时长自适应自旋窗口，降低低帧率占用\n\n等待超过 3ms（120 帧及以下）时自旋余量降到 1.5ms，减少低帧率下的空转；高帧率等待短，保持 2ms 余量以保证 240 帧贴住上限。",
+    "created_at": "2026-11-23T00:33:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45089486070"
+  },
+  {
     "id": 45023487944,
     "sha": "d79ecdc9dfe50d63a757c5e7fef3dc6b165fbd6d",
     "short_sha": "d79ecdc",
@@ -272,70 +320,6 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44001777451"
   },
   {
-    "id": 43804792664,
-    "sha": "2d9c6b85b08e42ae2cc786b4643607c7fe4382d0",
-    "short_sha": "2d9c6b8",
-    "message": "fix: 修复整合包描述对话框换行符不生效",
-    "created_at": "2026-11-16T04:33:06Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43804792664"
-  },
-  {
-    "id": 43804792582,
-    "sha": "2d9c6b85b08e42ae2cc786b4643607c7fe4382d0",
-    "short_sha": "2d9c6b8",
-    "message": "fix: 修复整合包描述对话框换行符不生效",
-    "created_at": "2026-11-16T04:33:06Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43804792582"
-  },
-  {
-    "id": 43804258294,
-    "sha": "cdda58761040395c107d1a9253c03caf27e75f4a",
-    "short_sha": "cdda587",
-    "message": "fix: 修复 Cleanroom 0.7.x（SDL 输入）返回游戏后鼠标按键卡在按下状态\n\nCleanroom 0.7.x 的窗口与输入改由 SDL 承载，其按键分发按事件窗口 ID 过滤；\nFCL 的虚拟光标坐标在捕获态累加视角增量后可越出 SDL 窗口，SDL 据此清除鼠标焦点，\n按键事件的窗口 ID 随之变为 0 并被整条丢弃，按下事件的释放丢失后游戏按键绑定停在按下状态。\n\n- SDL 通道下发的绝对坐标收敛进游戏窗口，避免鼠标焦点被越界清空\n- 窗口焦点转交 SDL，使 Cleanroom 失焦时释放仍按下的输入、Display.isActive() 反映真实焦点\n- 输入复位改为逐位补发鼠标键释放，避免一次性清零只换算出一个按钮",
-    "created_at": "2026-11-16T04:27:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43804258294"
-  },
-  {
-    "id": 43804258133,
-    "sha": "cdda58761040395c107d1a9253c03caf27e75f4a",
-    "short_sha": "cdda587",
-    "message": "fix: 修复 Cleanroom 0.7.x（SDL 输入）返回游戏后鼠标按键卡在按下状态\n\nCleanroom 0.7.x 的窗口与输入改由 SDL 承载，其按键分发按事件窗口 ID 过滤；\nFCL 的虚拟光标坐标在捕获态累加视角增量后可越出 SDL 窗口，SDL 据此清除鼠标焦点，\n按键事件的窗口 ID 随之变为 0 并被整条丢弃，按下事件的释放丢失后游戏按键绑定停在按下状态。\n\n- SDL 通道下发的绝对坐标收敛进游戏窗口，避免鼠标焦点被越界清空\n- 窗口焦点转交 SDL，使 Cleanroom 失焦时释放仍按下的输入、Display.isActive() 反映真实焦点\n- 输入复位改为逐位补发鼠标键释放，避免一次性清零只换算出一个按钮",
-    "created_at": "2026-11-16T04:27:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43804258133"
-  },
-  {
-    "id": 43804240035,
-    "sha": "cdda58761040395c107d1a9253c03caf27e75f4a",
-    "short_sha": "cdda587",
-    "message": "fix: 修复 Cleanroom 0.7.x（SDL 输入）返回游戏后鼠标按键卡在按下状态\n\nCleanroom 0.7.x 的窗口与输入改由 SDL 承载，其按键分发按事件窗口 ID 过滤；\nFCL 的虚拟光标坐标在捕获态累加视角增量后可越出 SDL 窗口，SDL 据此清除鼠标焦点，\n按键事件的窗口 ID 随之变为 0 并被整条丢弃，按下事件的释放丢失后游戏按键绑定停在按下状态。\n\n- SDL 通道下发的绝对坐标收敛进游戏窗口，避免鼠标焦点被越界清空\n- 窗口焦点转交 SDL，使 Cleanroom 失焦时释放仍按下的输入、Display.isActive() 反映真实焦点\n- 输入复位改为逐位补发鼠标键释放，避免一次性清零只换算出一个按钮",
-    "created_at": "2026-11-16T04:27:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43804240035"
-  },
-  {
-    "id": 43804240033,
-    "sha": "cdda58761040395c107d1a9253c03caf27e75f4a",
-    "short_sha": "cdda587",
-    "message": "fix: 修复 Cleanroom 0.7.x（SDL 输入）返回游戏后鼠标按键卡在按下状态\n\nCleanroom 0.7.x 的窗口与输入改由 SDL 承载，其按键分发按事件窗口 ID 过滤；\nFCL 的虚拟光标坐标在捕获态累加视角增量后可越出 SDL 窗口，SDL 据此清除鼠标焦点，\n按键事件的窗口 ID 随之变为 0 并被整条丢弃，按下事件的释放丢失后游戏按键绑定停在按下状态。\n\n- SDL 通道下发的绝对坐标收敛进游戏窗口，避免鼠标焦点被越界清空\n- 窗口焦点转交 SDL，使 Cleanroom 失焦时释放仍按下的输入、Display.isActive() 反映真实焦点\n- 输入复位改为逐位补发鼠标键释放，避免一次性清零只换算出一个按钮",
-    "created_at": "2026-11-16T04:27:40Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43804240033"
-  },
-  {
-    "id": 43791811843,
-    "sha": "b27b0799db1d0217be4e6979eabb787e1dc8a59b",
-    "short_sha": "b27b079",
-    "message": "fix: Vulkan 检测按自定义驱动实际加载状态判定，修复驱动缺失时误报已加载\n\nfix: Vulkan 检测按自定义驱动实际加载状态判定，修复驱动缺失时误报已加载",
-    "created_at": "2026-11-16T02:22:51Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43791811843"
-  },
-  {
-    "id": 43791671623,
-    "sha": "2bc822f1fb4c40b91cb79ab61fcb623121bf7930",
-    "short_sha": "2bc822f",
-    "message": "chore(l10n): update Chinese (Simplified Han script) translation (#2022)\n\nLanguage: Chinese (Simplified Han script)\nProgress: 99.6% (1626 of 1632 strings)\nTranslate-URL: https://hosted.weblate.org/projects/foldcraftlauncher/fcl/zh_Hans/\nTranslation: FoldCraftLauncher/FCL\n\nCo-authored-by: Hosted Weblate <hosted@weblate.org>\nCo-authored-by: reducedradius <137701630+flytothehighest@users.noreply.github.com>",
-    "created_at": "2026-11-16T02:21:28Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/43791671623"
-  },
-  {
     "id": 41082818872,
     "sha": "5e4d584cc205655be77415820945bb7b712929c6",
     "short_sha": "5e4d584",
@@ -398,5 +382,21 @@
     "message": "feat: 输入法遮挡画面时提供放大镜窗口",
     "created_at": "2026-10-30T10:25:19Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41040704640"
+  },
+  {
+    "id": 41040704880,
+    "sha": "d7af735a3077e62b7b0bb91c1ba35a7d6676381a",
+    "short_sha": "d7af735",
+    "message": "feat: 输入法遮挡画面时提供放大镜窗口",
+    "created_at": "2026-10-30T10:25:19Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41040704880"
+  },
+  {
+    "id": 40987226830,
+    "sha": "cdba79fa53b92624cca2cb806f58934ac879445c",
+    "short_sha": "cdba79f",
+    "message": "Update version_map.json",
+    "created_at": "2026-10-30T01:40:20Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40987226830"
   }
 ]
