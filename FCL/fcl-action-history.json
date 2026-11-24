@@ -1,5 +1,29 @@
 [
   {
+    "id": 45335967414,
+    "sha": "9f6a8142ae5292fdc5e3c8714800c152a583459f",
+    "short_sha": "9f6a814",
+    "message": "feat: 更新内置 Java 环境至 1.8.0_482 / 17.0.21.1 / 21.0.13.1 / 25.0.5.1",
+    "created_at": "2026-11-24T05:47:55Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45335967414"
+  },
+  {
+    "id": 45332732933,
+    "sha": "378714f3eafd6e9dd6100e301dc9dce255a06518",
+    "short_sha": "378714f",
+    "message": "fix: 内置 MobileGlues 默认配置落盘，避免回落到 MG 自身默认\n\n此前用户未在启动器里配置过 MG 选项时 prefs 为空，writeMobileGluesConfig 直接返回，MG 于是使用自身默认（enableExtTimerQuery=false、maxGlslCacheSize=0 等），与启动器默认不一致。新增 RendererPlugin.builtinEnvConfigMap 汇总用户配置与启动器默认值，启动时整份写入 MG/config.json；函数级 MultiDraw 异常项未启用时仍保持未配置，原生侧写入的未知键保留。",
+    "created_at": "2026-11-24T05:19:03Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45332732933"
+  },
+  {
+    "id": 45332732975,
+    "sha": "378714f3eafd6e9dd6100e301dc9dce255a06518",
+    "short_sha": "378714f",
+    "message": "fix: 内置 MobileGlues 默认配置落盘，避免回落到 MG 自身默认\n\n此前用户未在启动器里配置过 MG 选项时 prefs 为空，writeMobileGluesConfig 直接返回，MG 于是使用自身默认（enableExtTimerQuery=false、maxGlslCacheSize=0 等），与启动器默认不一致。新增 RendererPlugin.builtinEnvConfigMap 汇总用户配置与启动器默认值，启动时整份写入 MG/config.json；函数级 MultiDraw 异常项未启用时仍保持未配置，原生侧写入的未知键保留。",
+    "created_at": "2026-11-24T05:19:03Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45332732975"
+  },
+  {
     "id": 45167124442,
     "sha": "b8a41702847a66f6fe2c4d4882a056d7b0a0431b",
     "short_sha": "b8a4170",
@@ -304,22 +328,6 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44512116892"
   },
   {
-    "id": 44091503452,
-    "sha": "2e3b0e55f3f42592c606f53ec718455f403c4d5f",
-    "short_sha": "2e3b0e5",
-    "message": "fix: 修复 Cleanroom 0.7.x（SDL 输入）返回游戏后鼠标按键卡在按下状态 (#2023)\n\nCleanroom 0.7.x 的窗口与输入改由 SDL 承载，其按键分发按事件窗口 ID 过滤；\nFCL 的虚拟光标坐标在捕获态累加视角增量后可越出 SDL 窗口，SDL 据此清除鼠标焦点，\n按键事件的窗口 ID 随之变为 0 并被整条丢弃，按下事件的释放丢失后游戏按键绑定停在按下状态。\n\n- SDL 通道下发的绝对坐标收敛进游戏窗口，避免鼠标焦点被越界清空\n- 窗口焦点转交 SDL，使 Cleanroom 失焦时释放仍按下的输入、Display.isActive() 反映真实焦点\n- 输入复位改为逐位补发鼠标键释放，避免一次性清零只换算出一个按钮",
-    "created_at": "2026-11-17T13:18:57Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44091503452"
-  },
-  {
-    "id": 44091503376,
-    "sha": "2e3b0e55f3f42592c606f53ec718455f403c4d5f",
-    "short_sha": "2e3b0e5",
-    "message": "fix: 修复 Cleanroom 0.7.x（SDL 输入）返回游戏后鼠标按键卡在按下状态 (#2023)\n\nCleanroom 0.7.x 的窗口与输入改由 SDL 承载，其按键分发按事件窗口 ID 过滤；\nFCL 的虚拟光标坐标在捕获态累加视角增量后可越出 SDL 窗口，SDL 据此清除鼠标焦点，\n按键事件的窗口 ID 随之变为 0 并被整条丢弃，按下事件的释放丢失后游戏按键绑定停在按下状态。\n\n- SDL 通道下发的绝对坐标收敛进游戏窗口，避免鼠标焦点被越界清空\n- 窗口焦点转交 SDL，使 Cleanroom 失焦时释放仍按下的输入、Display.isActive() 反映真实焦点\n- 输入复位改为逐位补发鼠标键释放，避免一次性清零只换算出一个按钮",
-    "created_at": "2026-11-17T13:18:57Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44091503376"
-  },
-  {
     "id": 41082818872,
     "sha": "5e4d584cc205655be77415820945bb7b712929c6",
     "short_sha": "5e4d584",
@@ -390,13 +398,5 @@
     "message": "feat: 输入法遮挡画面时提供放大镜窗口",
     "created_at": "2026-10-30T10:25:19Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41040704880"
-  },
-  {
-    "id": 40987226830,
-    "sha": "cdba79fa53b92624cca2cb806f58934ac879445c",
-    "short_sha": "cdba79f",
-    "message": "Update version_map.json",
-    "created_at": "2026-10-30T01:40:20Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40987226830"
   }
 ]
