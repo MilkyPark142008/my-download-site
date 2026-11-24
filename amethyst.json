@@ -68,7 +68,7 @@
         "state": "uploaded",
         "size": 168391097,
         "digest": "sha256:8c6b438ea2a3319adaf673d639adfb779dfb15d694d940814cd1c6b099d323a2",
-        "download_count": 26477,
+        "download_count": 26545,
         "created_at": "2026-07-31T02:59:21Z",
         "updated_at": "2026-07-31T03:03:42Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.7/Amethyst-Debug.apk"
@@ -104,7 +104,7 @@
         "state": "uploaded",
         "size": 156535672,
         "digest": "sha256:6b5579e93f50a62f4d96279683bb447325e5a4de9015deae787eee56c248211f",
-        "download_count": 106333,
+        "download_count": 106611,
         "created_at": "2026-07-31T02:59:28Z",
         "updated_at": "2026-07-31T03:03:42Z",
         "browser_download_url": "https://github.com/AngelAuraMC/Amethyst-Android/releases/download/1.1.7/Amethyst.apk"
@@ -128,90 +128,137 @@
   },
   "action": {
     "run": {
-      "id": 44283554954,
+      "id": 45313983844,
       "name": "Android CI",
-      "node_id": "WFR_kwLOOrUn6c8AAAAKT4Fsig",
-      "head_branch": "feat/mobilegl",
-      "head_sha": "16ac84cdc128b662f13cc66dc000886a4225691f",
+      "node_id": "WFR_kwLOOrUn6c8AAAAKjOyFZA",
+      "head_branch": "v3_openjdk",
+      "head_sha": "9423d6054115767b56de7ed0b83ed18fc1eba3c2",
       "path": ".github/workflows/android.yml",
-      "display_title": "bump: mobilegl",
-      "run_number": 1031,
+      "display_title": "Merge pull request #413 from AngelAuraMC/judge/olc",
+      "run_number": 1035,
       "event": "push",
       "status": "completed",
       "conclusion": "success",
       "workflow_id": 162757109,
-      "check_suite_id": 119872629743,
-      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAb6Pcr7w",
-      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/44283554954",
-      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/44283554954",
-      "pull_requests": [],
-      "created_at": "2026-11-18T10:14:51Z",
-      "updated_at": "2026-11-18T10:44:27Z",
+      "check_suite_id": 122617466149,
+      "check_suite_node_id": "CS_kwDOOrUn6c8AAAAcjJINJQ",
+      "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/45313983844",
+      "html_url": "https://github.com/AngelAuraMC/Amethyst-Android/actions/runs/45313983844",
+      "pull_requests": [
+        {
+          "url": "https://api.github.com/repos/CopperLauncher/Copper-AAMC/pulls/133",
+          "id": 4461331187,
+          "number": 133,
+          "head": {
+            "ref": "v3_openjdk",
+            "sha": "9423d6054115767b56de7ed0b83ed18fc1eba3c2",
+            "repo": {
+              "id": 984950761,
+              "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
+              "name": "Amethyst-Android"
+            }
+          },
+          "base": {
+            "ref": "v3_openjdk",
+            "sha": "a87ac8325c6b7a89a44752d44cceebc00b1f602e",
+            "repo": {
+              "id": 1157827415,
+              "url": "https://api.github.com/repos/CopperLauncher/Copper-AAMC",
+              "name": "Copper-AAMC"
+            }
+          }
+        },
+        {
+          "url": "https://api.github.com/repos/Lapis-ORG/Lapis-Android/pulls/2",
+          "id": 3992538538,
+          "number": 2,
+          "head": {
+            "ref": "v3_openjdk",
+            "sha": "9423d6054115767b56de7ed0b83ed18fc1eba3c2",
+            "repo": {
+              "id": 984950761,
+              "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android",
+              "name": "Amethyst-Android"
+            }
+          },
+          "base": {
+            "ref": "v3_openjdk",
+            "sha": "d1df879a316be61b5c2ef7c867d898b0fb83abba",
+            "repo": {
+              "id": 1230029877,
+              "url": "https://api.github.com/repos/Lapis-ORG/Lapis-Android",
+              "name": "Lapis-Android"
+            }
+          }
+        }
+      ],
+      "created_at": "2026-11-24T02:39:25Z",
+      "updated_at": "2026-11-24T02:42:42Z",
       "actor": {
-        "login": "alexytomi",
-        "id": 60690056,
-        "node_id": "MDQ6VXNlcjYwNjkwMDU2",
-        "avatar_url": "https://avatars.githubusercontent.com/u/60690056?v=4",
+        "login": "thejudge156",
+        "id": 53906078,
+        "node_id": "MDQ6VXNlcjUzOTA2MDc4",
+        "avatar_url": "https://avatars.githubusercontent.com/u/53906078?v=4",
         "gravatar_id": "",
-        "url": "https://api.github.com/users/alexytomi",
-        "html_url": "https://github.com/alexytomi",
-        "followers_url": "https://api.github.com/users/alexytomi/followers",
-        "following_url": "https://api.github.com/users/alexytomi/following{/other_user}",
-        "gists_url": "https://api.github.com/users/alexytomi/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/alexytomi/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/alexytomi/subscriptions",
-        "organizations_url": "https://api.github.com/users/alexytomi/orgs",
-        "repos_url": "https://api.github.com/users/alexytomi/repos",
-        "events_url": "https://api.github.com/users/alexytomi/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/alexytomi/received_events",
+        "url": "https://api.github.com/users/thejudge156",
+        "html_url": "https://github.com/thejudge156",
+        "followers_url": "https://api.github.com/users/thejudge156/followers",
+        "following_url": "https://api.github.com/users/thejudge156/following{/other_user}",
+        "gists_url": "https://api.github.com/users/thejudge156/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/thejudge156/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/thejudge156/subscriptions",
+        "organizations_url": "https://api.github.com/users/thejudge156/orgs",
+        "repos_url": "https://api.github.com/users/thejudge156/repos",
+        "events_url": "https://api.github.com/users/thejudge156/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/thejudge156/received_events",
         "type": "User",
         "user_view_type": "public",
         "site_admin": false
       },
       "run_attempt": 1,
       "referenced_workflows": [],
-      "run_started_at": "2026-11-18T10:14:51Z",
+      "run_started_at": "2026-11-24T02:39:25Z",
       "triggering_actor": {
-        "login": "alexytomi",
-        "id": 60690056,
-        "node_id": "MDQ6VXNlcjYwNjkwMDU2",
-        "avatar_url": "https://avatars.githubusercontent.com/u/60690056?v=4",
+        "login": "thejudge156",
+        "id": 53906078,
+        "node_id": "MDQ6VXNlcjUzOTA2MDc4",
+        "avatar_url": "https://avatars.githubusercontent.com/u/53906078?v=4",
         "gravatar_id": "",
-        "url": "https://api.github.com/users/alexytomi",
-        "html_url": "https://github.com/alexytomi",
-        "followers_url": "https://api.github.com/users/alexytomi/followers",
-        "following_url": "https://api.github.com/users/alexytomi/following{/other_user}",
-        "gists_url": "https://api.github.com/users/alexytomi/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/alexytomi/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/alexytomi/subscriptions",
-        "organizations_url": "https://api.github.com/users/alexytomi/orgs",
-        "repos_url": "https://api.github.com/users/alexytomi/repos",
-        "events_url": "https://api.github.com/users/alexytomi/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/alexytomi/received_events",
+        "url": "https://api.github.com/users/thejudge156",
+        "html_url": "https://github.com/thejudge156",
+        "followers_url": "https://api.github.com/users/thejudge156/followers",
+        "following_url": "https://api.github.com/users/thejudge156/following{/other_user}",
+        "gists_url": "https://api.github.com/users/thejudge156/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/thejudge156/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/thejudge156/subscriptions",
+        "organizations_url": "https://api.github.com/users/thejudge156/orgs",
+        "repos_url": "https://api.github.com/users/thejudge156/repos",
+        "events_url": "https://api.github.com/users/thejudge156/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/thejudge156/received_events",
         "type": "User",
         "user_view_type": "public",
         "site_admin": false
       },
-      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/44283554954/jobs",
-      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/44283554954/logs",
-      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/119872629743",
-      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/44283554954/artifacts",
-      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/44283554954/cancel",
-      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/44283554954/rerun",
+      "jobs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/45313983844/jobs",
+      "logs_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/45313983844/logs",
+      "check_suite_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/check-suites/122617466149",
+      "artifacts_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/45313983844/artifacts",
+      "cancel_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/45313983844/cancel",
+      "rerun_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/runs/45313983844/rerun",
       "previous_attempt_url": null,
       "workflow_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/workflows/162757109",
       "head_commit": {
-        "id": "16ac84cdc128b662f13cc66dc000886a4225691f",
-        "tree_id": "7459ef3abb474273fc28b9f8c6f5352b909796bc",
-        "message": "bump: mobilegl",
-        "timestamp": "2026-11-18T10:14:42Z",
+        "id": "9423d6054115767b56de7ed0b83ed18fc1eba3c2",
+        "tree_id": "844536d2d6eb2cdf12d0517dfd371b9093b77efc",
+        "message": "Merge pull request #413 from AngelAuraMC/judge/olc\n\nDon't load libjvm twice, fixing OLC JRE compatibility",
+        "timestamp": "2026-11-24T02:39:22Z",
         "author": {
-          "name": "tomikun",
-          "email": "60690056+alexytomi@users.noreply.github.com"
+          "name": "The Judge",
+          "email": "53906078+thejudge156@users.noreply.github.com"
         },
         "committer": {
-          "name": "tomikun",
-          "email": "60690056+alexytomi@users.noreply.github.com"
+          "name": "GitHub",
+          "email": "noreply@github.com"
         }
       },
       "repository": {
@@ -353,43 +400,43 @@
     },
     "artifacts": [
       {
-        "id": 14420411812,
-        "node_id": "MDg6QXJ0aWZhY3QxNDQyMDQxMTgxMg==",
+        "id": 14885221200,
+        "node_id": "MDg6QXJ0aWZhY3QxNDg4NTIyMTIwMA==",
         "name": "app-release",
-        "size_in_bytes": 161338060,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/14420411812",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/14420411812/zip",
+        "size_in_bytes": 154758859,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/14885221200",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/14885221200/zip",
         "expired": false,
-        "digest": "sha256:5151544a4b709774dd6bc162e128a318285d1f06b9329d1684e760901d537dd2",
-        "created_at": "2026-11-18T10:44:23Z",
-        "updated_at": "2026-11-18T10:44:23Z",
-        "expires_at": "2027-02-16T10:14:51Z",
+        "digest": "sha256:80493983c56e9fa545c1dda09017a26bc3483fc95e31755ca69ffba1638e302a",
+        "created_at": "2026-11-24T02:42:27Z",
+        "updated_at": "2026-11-24T02:42:27Z",
+        "expires_at": "2027-02-22T02:39:25Z",
         "workflow_run": {
-          "id": 44283554954,
+          "id": 45313983844,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
-          "head_branch": "feat/mobilegl",
-          "head_sha": "16ac84cdc128b662f13cc66dc000886a4225691f"
+          "head_branch": "v3_openjdk",
+          "head_sha": "9423d6054115767b56de7ed0b83ed18fc1eba3c2"
         }
       },
       {
-        "id": 14420157544,
-        "node_id": "MDg6QXJ0aWZhY3QxNDQyMDE1NzU0NA==",
+        "id": 14885166229,
+        "node_id": "MDg6QXJ0aWZhY3QxNDg4NTE2NjIyOQ==",
         "name": "app-debug (recommended)",
-        "size_in_bytes": 174284918,
-        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/14420157544",
-        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/14420157544/zip",
+        "size_in_bytes": 166337123,
+        "url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/14885166229",
+        "archive_download_url": "https://api.github.com/repos/AngelAuraMC/Amethyst-Android/actions/artifacts/14885166229/zip",
         "expired": false,
-        "digest": "sha256:0ebca6b5b26c232e012a903f57d268f310b462fe263d474ac74765cf0f5ecc55",
-        "created_at": "2026-11-18T10:44:16Z",
-        "updated_at": "2026-11-18T10:44:16Z",
-        "expires_at": "2027-02-16T10:14:51Z",
+        "digest": "sha256:23f546ba7da3edf6884b5e4f67ee9a912d8b198285b7cbff412a028fd7914768",
+        "created_at": "2026-11-24T02:42:21Z",
+        "updated_at": "2026-11-24T02:42:21Z",
+        "expires_at": "2027-02-22T02:39:25Z",
         "workflow_run": {
-          "id": 44283554954,
+          "id": 45313983844,
           "repository_id": 984950761,
           "head_repository_id": 984950761,
-          "head_branch": "feat/mobilegl",
-          "head_sha": "16ac84cdc128b662f13cc66dc000886a4225691f"
+          "head_branch": "v3_openjdk",
+          "head_sha": "9423d6054115767b56de7ed0b83ed18fc1eba3c2"
         }
       }
     ]
