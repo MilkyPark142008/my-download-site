@@ -1,5 +1,21 @@
 [
   {
+    "id": 45650669346,
+    "sha": "cbfb21dd769a3ca5b07cba9847571199f4804733",
+    "short_sha": "cbfb21d",
+    "message": "fix: 修复控件下载页截图被拉伸裁剪的问题\n\nControllerScreenshotAdapter 之前直接返回无布局参数的 ImageView，并按原图分辨率加载，ListView 的 item 会被撑到原图/整屏高度，导致 2400x1080 等控制器截图被放大、裁剪和错位。改为使用独立的 item 布局（match_parent 宽、wrap_content 高、adjustViewBounds + fitCenter），Glide 解码上限设为 1280，既保持预览清晰度，也避免按原图尺寸撑开列表。",
+    "created_at": "2026-11-25T15:59:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45650669346"
+  },
+  {
+    "id": 45650669471,
+    "sha": "cbfb21dd769a3ca5b07cba9847571199f4804733",
+    "short_sha": "cbfb21d",
+    "message": "fix: 修复控件下载页截图被拉伸裁剪的问题\n\nControllerScreenshotAdapter 之前直接返回无布局参数的 ImageView，并按原图分辨率加载，ListView 的 item 会被撑到原图/整屏高度，导致 2400x1080 等控制器截图被放大、裁剪和错位。改为使用独立的 item 布局（match_parent 宽、wrap_content 高、adjustViewBounds + fitCenter），Glide 解码上限设为 1280，既保持预览清晰度，也避免按原图尺寸撑开列表。",
+    "created_at": "2026-11-25T15:59:21Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45650669471"
+  },
+  {
     "id": 45335967414,
     "sha": "9f6a8142ae5292fdc5e3c8714800c152a583459f",
     "short_sha": "9f6a814",
@@ -382,21 +398,5 @@
     "message": "fix: 游戏自定义分辨率过小时，放大镜画面被拉伸",
     "created_at": "2026-10-30T11:33:35Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41049275858"
-  },
-  {
-    "id": 41040704640,
-    "sha": "d7af735a3077e62b7b0bb91c1ba35a7d6676381a",
-    "short_sha": "d7af735",
-    "message": "feat: 输入法遮挡画面时提供放大镜窗口",
-    "created_at": "2026-10-30T10:25:19Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41040704640"
-  },
-  {
-    "id": 41040704880,
-    "sha": "d7af735a3077e62b7b0bb91c1ba35a7d6676381a",
-    "short_sha": "d7af735",
-    "message": "feat: 输入法遮挡画面时提供放大镜窗口",
-    "created_at": "2026-10-30T10:25:19Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41040704880"
   }
 ]
