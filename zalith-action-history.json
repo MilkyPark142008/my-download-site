@@ -1,5 +1,61 @@
 [
   {
+    "id": 45540746626,
+    "sha": "5822eb4fde29c97e95723eb6c045a0b593c3e5f7",
+    "short_sha": "5822eb4",
+    "message": "Merge pull request #2307 from ZalithLauncher/refactor/petlib-scene\n\nrefactor: 重构 PetLib 场景与自定义模型加载支持",
+    "created_at": "2026-11-25T03:32:56Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45540746626"
+  },
+  {
+    "id": 45540649618,
+    "sha": "52c6499e679b6775ee6be05e3ae31b22870df085",
+    "short_sha": "52c6499",
+    "message": "Merge branch 'main' into refactor/petlib-scene",
+    "created_at": "2026-11-25T03:31:17Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45540649618"
+  },
+  {
+    "id": 45540178110,
+    "sha": "e84b448a2ffe6f4b930e063c3e94ccf707f11cce",
+    "short_sha": "e84b448",
+    "message": "Merge pull request #2305 from ZalithLauncher/feat/quick-addon-dl\n\nfeat: 加入快捷 Addon 下载功能",
+    "created_at": "2026-11-25T03:28:04Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45540178110"
+  },
+  {
+    "id": 45536449625,
+    "sha": "5d28ed2f72368785f4bcceec26caa2bd02ecdb8b",
+    "short_sha": "5d28ed2",
+    "message": "Merge pull request #2306 from ZalithLauncher/fix/cve-2026-114938\n\nfix: 为受 CVE-2026-114938 影响的游戏运行时禁用 Base64 intrinsics",
+    "created_at": "2026-11-25T02:56:15Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45536449625"
+  },
+  {
+    "id": 45536340445,
+    "sha": "bae3167335b06d61184926a9b429f766a481824a",
+    "short_sha": "bae3167",
+    "message": "Merge branch 'main' into fix/cve-2026-114938",
+    "created_at": "2026-11-25T02:54:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45536340445"
+  },
+  {
+    "id": 45535239709,
+    "sha": "fc7a93f625f8b8583177ef26c0019693f843b1a2",
+    "short_sha": "fc7a93f",
+    "message": "chore: 调整下载 Addon 相关的 UI",
+    "created_at": "2026-11-25T02:45:30Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45535239709"
+  },
+  {
+    "id": 45531889508,
+    "sha": "4e2fd20cc101e1a426e3e577d867dca37bffd98c",
+    "short_sha": "4e2fd20",
+    "message": "feat: 实现 Addon 快捷下载功能",
+    "created_at": "2026-11-25T02:14:26Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45531889508"
+  },
+  {
     "id": 45188424254,
     "sha": "b6310dd0284caecfeeed47e9213eecc4cb69284c",
     "short_sha": "b6310dd",
@@ -342,61 +398,5 @@
     "message": "fix: 更新内置 JRE 21 至 21.0.13.1",
     "created_at": "2026-11-18T18:36:52Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44372043875"
-  },
-  {
-    "id": 44308073340,
-    "sha": "ad049142ffa8207dbb50857b2a2e19ccb26c7e4a",
-    "short_sha": "ad04914",
-    "message": "合并拉取请求 #2271\n\nfix: 自动选择 Jre 功能在特定场景下导致启动器崩溃",
-    "created_at": "2026-11-18T12:52:22Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44308073340"
-  },
-  {
-    "id": 44307914252,
-    "sha": "f04d03ac8bb0550b9745422176c5d5406ba3246b",
-    "short_sha": "f04d03a",
-    "message": "fix: 自动选择 Jre 功能在特定场景下导致启动器崩溃",
-    "created_at": "2026-11-18T12:51:11Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44307914252"
-  },
-  {
-    "id": 44299647626,
-    "sha": "0986a018ce053662ecfcc1f48cffe339c8d391c2",
-    "short_sha": "0986a01",
-    "message": "合并拉取请求 #2270\n\nfeat: 为主界面的版本管理入口添加标注式引导",
-    "created_at": "2026-11-18T11:49:49Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44299647626"
-  },
-  {
-    "id": 44299182825,
-    "sha": "f35ccd34124424ce8f58b1d4f79f89088db59910",
-    "short_sha": "f35ccd3",
-    "message": "Merge branch 'main' into weblate_main",
-    "created_at": "2026-11-18T11:52:05Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44299182825"
-  },
-  {
-    "id": 44298222287,
-    "sha": "0986a018ce053662ecfcc1f48cffe339c8d391c2",
-    "short_sha": "0986a01",
-    "message": "合并拉取请求 #2270\n\nfeat: 为主界面的版本管理入口添加标注式引导",
-    "created_at": "2026-11-18T11:49:49Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44298222287"
-  },
-  {
-    "id": 44298082831,
-    "sha": "9593f1d1a7497a6dba6ce2c786639145c418925e",
-    "short_sha": "9593f1d",
-    "message": "合并拉取请求 #2266\n\nchore: 渲染器配置对话框内可排序组件调整为拖动排序",
-    "created_at": "2026-11-18T11:48:53Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44298082831"
-  },
-  {
-    "id": 44297992528,
-    "sha": "3d5eaf8ad553371c9e04e1d438468f889e7fd538",
-    "short_sha": "3d5eaf8",
-    "message": "feat: 为主界面的版本管理入口添加标注式引导",
-    "created_at": "2026-11-18T11:46:20Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44297992528"
   }
 ]
