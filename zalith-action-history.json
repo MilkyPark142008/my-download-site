@@ -264,62 +264,6 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44863880920"
   },
   {
-    "id": 44616922253,
-    "sha": "dd6992315a942af338d2f18db56d7834b8cc3ea8",
-    "short_sha": "dd69923",
-    "message": "[Do not use!] Translated using Weblate (Spanish)\n\nCurrently translated at 67.5% (1064 of 1574 strings)\n\nTranslation: ZalithLauncher2/Main\nTranslate-URL: https://hosted.weblate.org/projects/zalithlauncher2/main/es/",
-    "created_at": "2026-11-19T21:05:12Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44616922253"
-  },
-  {
-    "id": 44616351158,
-    "sha": "1bbe6e73145f8c1918cb0b858894c22ae7e431f2",
-    "short_sha": "1bbe6e7",
-    "message": "Merge pull request #2274 from ZalithLauncher/fix/sfpew-version-support\n\nfix: SFPEW 关闭时，应弹出低版本不兼容的提示",
-    "created_at": "2026-11-19T21:12:01Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44616351158"
-  },
-  {
-    "id": 44616149012,
-    "sha": "cb6bef0f66e49ffaa161f87c4da398c4248f78a7",
-    "short_sha": "cb6bef0",
-    "message": "Merge pull request #2279 from ZalithLauncher/fix/neoforge-early-window-vulkan\n\nfix: 仅在潜在 Vulkan 后端下关闭 NeoForge 早期加载窗口",
-    "created_at": "2026-11-19T21:10:51Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44616149012"
-  },
-  {
-    "id": 44616117554,
-    "sha": "0ee29de90e096465e6db18ab9ea94df89efb8ca7",
-    "short_sha": "0ee29de",
-    "message": "Merge pull request #2278 from ZalithLauncher/chore/account-manage-layout\n\nchore: 调整账号管理页面入口的布局",
-    "created_at": "2026-11-19T21:10:40Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44616117554"
-  },
-  {
-    "id": 44615783654,
-    "sha": "c0c519ff607531a1a81129a8e909aaad7fcdc3cd",
-    "short_sha": "c0c519f",
-    "message": "fix: 仅在潜在 Vulkan 后端下关闭 NeoForge 早期加载窗口",
-    "created_at": "2026-11-19T20:59:25Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44615783654"
-  },
-  {
-    "id": 44615721312,
-    "sha": "8923acc839105577d92a10284b8c01ab9a16f594",
-    "short_sha": "8923acc",
-    "message": "chore: 调整账号管理页面入口的布局",
-    "created_at": "2026-11-19T20:51:31Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44615721312"
-  },
-  {
-    "id": 44574205933,
-    "sha": "3f4fa1ba4094f169d649b405888a25dbed29ab33",
-    "short_sha": "3f4fa1b",
-    "message": "feat: 用户协议与隐私政策私有化，仅随官方构建分发",
-    "created_at": "2026-11-19T17:08:47Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44574205933"
-  },
-  {
     "id": 41060394940,
     "sha": "ad23dc41da36e3338a75d86898d1016a83e0d100",
     "short_sha": "ad23dc4",
@@ -398,5 +342,61 @@
     "message": "fix: 修复任务保活服务快速停止导致的崩溃",
     "created_at": "2026-10-30T03:35:57Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40998608973"
+  },
+  {
+    "id": 40994251030,
+    "sha": "7eca5bd1b1115f4fcb7dcf734deb34a1f02dcf73",
+    "short_sha": "7eca5bd",
+    "message": "fix: 被其他操作阻挡时，不显示上个月结算的赞助者弹窗",
+    "created_at": "2026-10-30T02:53:03Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40994251030"
+  },
+  {
+    "id": 40991793451,
+    "sha": "dcb2f9f931700c64306f5b1007f413618662efa6",
+    "short_sha": "dcb2f9f",
+    "message": "Merge branch 'weblate_terracotta'",
+    "created_at": "2026-10-30T02:26:30Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40991793451"
+  },
+  {
+    "id": 40991741008,
+    "sha": "dcb2f9f931700c64306f5b1007f413618662efa6",
+    "short_sha": "dcb2f9f",
+    "message": "Merge branch 'weblate_terracotta'",
+    "created_at": "2026-10-30T02:26:30Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40991741008"
+  },
+  {
+    "id": 40991611438,
+    "sha": "c7684976329593103ce47713dbfa11b23e9e7f29",
+    "short_sha": "c768497",
+    "message": "chore(i18n): 清理未使用的字符串",
+    "created_at": "2026-10-30T02:19:23Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40991611438"
+  },
+  {
+    "id": 40991026686,
+    "sha": "c7684976329593103ce47713dbfa11b23e9e7f29",
+    "short_sha": "c768497",
+    "message": "chore(i18n): 清理未使用的字符串",
+    "created_at": "2026-10-30T02:19:23Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40991026686"
+  },
+  {
+    "id": 40989523570,
+    "sha": "76642a047d489cb4a9454745f7171ba77c0963be",
+    "short_sha": "76642a0",
+    "message": "feat: 更新用户协议与隐私政策",
+    "created_at": "2026-10-30T02:04:11Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40989523570"
+  },
+  {
+    "id": 40883043780,
+    "sha": "dc6a2cb5fe45d0bf159f36c64a27aa383d44cfed",
+    "short_sha": "dc6a2cb",
+    "message": "Merge pull request #2149 from ZalithLauncher/feat/input-magnifier\n\nfeat: 切出输入法时，提供游戏画面放大镜功能",
+    "created_at": "2026-10-29T13:33:34Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40883043780"
   }
 ]
