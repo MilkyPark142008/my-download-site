@@ -1,5 +1,21 @@
 [
   {
+    "id": 45767672243,
+    "sha": "84863f21b7a1380d71aec190e05b2df5d7f81991",
+    "short_sha": "84863f2",
+    "message": "refactor: 移除无效的 surface 级刷新率投票",
+    "created_at": "2026-11-26T06:21:43Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45767672243"
+  },
+  {
+    "id": 45760686011,
+    "sha": "b8275403823239f6a3d6ee1b93e9db5be68d2a2b",
+    "short_sha": "b827540",
+    "message": "update .gitignore",
+    "created_at": "2026-11-26T05:06:49Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/45760686011"
+  },
+  {
     "id": 45540746626,
     "sha": "5822eb4fde29c97e95723eb6c045a0b593c3e5f7",
     "short_sha": "5822eb4",
@@ -304,70 +320,6 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44574205933"
   },
   {
-    "id": 44537315863,
-    "sha": "fa5a1286bc84a7e7789b21da40fd7822e80a33a6",
-    "short_sha": "fa5a128",
-    "message": "chore: 模组管理屏幕内，无模组加载器的警告条点击后跳转至“修改版本”页面",
-    "created_at": "2026-11-19T13:49:27Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44537315863"
-  },
-  {
-    "id": 44535160360,
-    "sha": "368946caf0012d5f266bf59cc8b3a232cfe6813f",
-    "short_sha": "368946c",
-    "message": "合并拉取请求 #2275\n\nfix: 附加资源布局中，作者栏过长时导致 UI 错位",
-    "created_at": "2026-11-19T13:36:33Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44535160360"
-  },
-  {
-    "id": 44535101504,
-    "sha": "5f23d71d26607752d36dd14010c32861c503a5ec",
-    "short_sha": "5f23d71",
-    "message": "fix: 附加资源布局中，作者栏过长时导致 UI 错位",
-    "created_at": "2026-11-19T13:36:05Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44535101504"
-  },
-  {
-    "id": 44526611462,
-    "sha": "dfccdaf1c9359130c4c7ceb12442e2e9b2fbe634",
-    "short_sha": "dfccdaf",
-    "message": "fix: 渲染器配置随渲染器一同加载，SFPEW 关闭时低版本弹出不兼容提示并动态展示支持版本",
-    "created_at": "2026-11-19T12:43:17Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44526611462"
-  },
-  {
-    "id": 44509195610,
-    "sha": "79d6ccf6e263d7067115be78bd218e711a1ef76a",
-    "short_sha": "79d6ccf",
-    "message": "合并拉取请求 #2272\n\nfeat: assets 下载源改为官方源优先并保留镜像回退",
-    "created_at": "2026-11-19T10:49:20Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44509195610"
-  },
-  {
-    "id": 44496986852,
-    "sha": "c3f0b94619f8da5d21d92be068a7959d1b0d32e6",
-    "short_sha": "c3f0b94",
-    "message": "Merge branch 'main' into feat/update-runtime",
-    "created_at": "2026-11-19T09:29:35Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44496986852"
-  },
-  {
-    "id": 44496680707,
-    "sha": "da29999676ad06271316ec6a52c72a18e9abab2e",
-    "short_sha": "da29999",
-    "message": "Merge pull request #2262 from ZalithLauncher/fix/jvm-render-gc-storm\n\nfix: JVM 渲染循环复用帧缓冲区，消除每帧全屏 int[] 分配引发的 GC 风暴",
-    "created_at": "2026-11-19T09:28:03Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44496680707"
-  },
-  {
-    "id": 44496493153,
-    "sha": "0e9be744659ad39cfc71e98e2ff9aa80fb064bce",
-    "short_sha": "0e9be74",
-    "message": "Merge pull request #2261 from ZalithLauncher/refactor/vmactivity-init\n\nrefactor: 启动时，在协程中异步初始化，不再卡死主线程",
-    "created_at": "2026-11-19T09:26:49Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44496493153"
-  },
-  {
     "id": 41060394940,
     "sha": "ad23dc41da36e3338a75d86898d1016a83e0d100",
     "short_sha": "ad23dc4",
@@ -398,5 +350,53 @@
     "message": "feat: 支持使用 CurseForge CDN 访问 NeoForge 相关文件",
     "created_at": "2026-10-30T12:49:01Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41058256894"
+  },
+  {
+    "id": 41050017762,
+    "sha": "a09d9c195b0ebbb14b81938ab6447a0f74051047",
+    "short_sha": "a09d9c1",
+    "message": "fix: 过滤模组中文名中的 Emoji",
+    "created_at": "2026-10-30T11:42:21Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41050017762"
+  },
+  {
+    "id": 41047709602,
+    "sha": "99168f5e52ab0a678cea12d03a383df0469680ff",
+    "short_sha": "99168f5",
+    "message": "fix: 游戏自定义分辨率过小时，放大镜画面被拉伸",
+    "created_at": "2026-10-30T11:23:03Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41047709602"
+  },
+  {
+    "id": 41045026933,
+    "sha": "39b92c29e0d01f68317aa9c9cb9a98f10be7cac6",
+    "short_sha": "39b92c2",
+    "message": "Merge pull request #2152 from ZalithLauncher/fix/keyboard-input\n\nfix: 非SDL环境物理键盘数字键重复输入 & SDL环境下物理键盘按键不可用",
+    "created_at": "2026-10-30T11:01:24Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41045026933"
+  },
+  {
+    "id": 41044975561,
+    "sha": "158625ec8dc4a70d524d0b49933fa7adf63c01fb",
+    "short_sha": "158625e",
+    "message": "fix: 非SDL环境物理键盘数字键重复输入 & SDL环境下物理键盘按键不可用",
+    "created_at": "2026-10-30T11:00:55Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/41044975561"
+  },
+  {
+    "id": 40998714192,
+    "sha": "144767e74d26a3fd9c378b8cb13a7a92684c8635",
+    "short_sha": "144767e",
+    "message": "Merge pull request #2151 from ZalithLauncher/fix/foreground-service\n\nfix: 修复任务保活服务快速停止导致的崩溃",
+    "created_at": "2026-10-30T03:40:39Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40998714192"
+  },
+  {
+    "id": 40998608973,
+    "sha": "7e6110c1667ef8edf51cd7348987febc68f7fc9b",
+    "short_sha": "7e6110c",
+    "message": "fix: 修复任务保活服务快速停止导致的崩溃",
+    "created_at": "2026-10-30T03:35:57Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40998608973"
   }
 ]

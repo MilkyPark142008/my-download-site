@@ -312,54 +312,6 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44711911451"
   },
   {
-    "id": 44516921321,
-    "sha": "70faf60f01cd2cdb5b8dd8152f608169d22af8c6",
-    "short_sha": "70faf60",
-    "message": "optimize: 优化控制布局加载与启动扫描速度\n\n- 布局列表移除元素监听：加载/编辑任意布局不再触发保存全部布局，\n  原先会把列表内其余未加载的复杂布局完整解析后写盘\n- 新增 LayoutMetadataScanner 按字节扫描布局文件，跳过按键数据，\n  parseLightweight 与 loadViewGroupData 不再逐 token 解析整份文件\n- 组复制/新建/改名/删除补充显式保存（原依赖列表监听兜底）",
-    "created_at": "2026-11-19T11:40:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44516921321"
-  },
-  {
-    "id": 44516920798,
-    "sha": "70faf60f01cd2cdb5b8dd8152f608169d22af8c6",
-    "short_sha": "70faf60",
-    "message": "optimize: 优化控制布局加载与启动扫描速度\n\n- 布局列表移除元素监听：加载/编辑任意布局不再触发保存全部布局，\n  原先会把列表内其余未加载的复杂布局完整解析后写盘\n- 新增 LayoutMetadataScanner 按字节扫描布局文件，跳过按键数据，\n  parseLightweight 与 loadViewGroupData 不再逐 token 解析整份文件\n- 组复制/新建/改名/删除补充显式保存（原依赖列表监听兜底）",
-    "created_at": "2026-11-19T11:40:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44516920798"
-  },
-  {
-    "id": 44516887400,
-    "sha": "70faf60f01cd2cdb5b8dd8152f608169d22af8c6",
-    "short_sha": "70faf60",
-    "message": "optimize: 优化控制布局加载与启动扫描速度\n\n- 布局列表移除元素监听：加载/编辑任意布局不再触发保存全部布局，\n  原先会把列表内其余未加载的复杂布局完整解析后写盘\n- 新增 LayoutMetadataScanner 按字节扫描布局文件，跳过按键数据，\n  parseLightweight 与 loadViewGroupData 不再逐 token 解析整份文件\n- 组复制/新建/改名/删除补充显式保存（原依赖列表监听兜底）",
-    "created_at": "2026-11-19T11:40:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44516887400"
-  },
-  {
-    "id": 44516887278,
-    "sha": "70faf60f01cd2cdb5b8dd8152f608169d22af8c6",
-    "short_sha": "70faf60",
-    "message": "optimize: 优化控制布局加载与启动扫描速度\n\n- 布局列表移除元素监听：加载/编辑任意布局不再触发保存全部布局，\n  原先会把列表内其余未加载的复杂布局完整解析后写盘\n- 新增 LayoutMetadataScanner 按字节扫描布局文件，跳过按键数据，\n  parseLightweight 与 loadViewGroupData 不再逐 token 解析整份文件\n- 组复制/新建/改名/删除补充显式保存（原依赖列表监听兜底）",
-    "created_at": "2026-11-19T11:40:08Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44516887278"
-  },
-  {
-    "id": 44512116900,
-    "sha": "d78b523fcf2a16c99add762a2f2c604b2b10efbb",
-    "short_sha": "d78b523",
-    "message": "fix: 修正 SDL HIDDeviceManager 创建时机，避免 libSDL3 加载前调用 native 报错",
-    "created_at": "2026-11-19T11:08:22Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44512116900"
-  },
-  {
-    "id": 44512116892,
-    "sha": "d78b523fcf2a16c99add762a2f2c604b2b10efbb",
-    "short_sha": "d78b523",
-    "message": "fix: 修正 SDL HIDDeviceManager 创建时机，避免 libSDL3 加载前调用 native 报错",
-    "created_at": "2026-11-19T11:08:22Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44512116892"
-  },
-  {
     "id": 41082818872,
     "sha": "5e4d584cc205655be77415820945bb7b712929c6",
     "short_sha": "5e4d584",
@@ -398,5 +350,53 @@
     "message": "refactor: 放大镜迁移至 Kotlin，修复平移死区与可见性细节\n\n- 按项目惯例将 InputMagnifierView 迁移为 Kotlin\n- 修复低分辨率帧下取样区域被钉死在整帧适配的死区：zoom=1 为整帧概览，\n  任何放大立即裁切且可平移（区域 = 视口 × fitScale ÷ zoom，等比不拉伸）\n- 平移加 0.5 阻尼，小窗口内更易定位\n- 放大镜画面回读按 33ms 节流，打开时强制捕获\n- 描边改走 foreground 绘制（background 描边会被 viewport 画面盖住），\n  白色 3dp 圆角边框提示当前为放大画面\n- 手动打开放大镜时重置 dismissedForInput，避免输入法动画抖动将其自动收回\n- 移除搜索图标被运行时覆盖的 tint",
     "created_at": "2026-10-30T14:29:41Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41072205126"
+  },
+  {
+    "id": 41049276141,
+    "sha": "0b0e1ac8ae53ef65767c8f7e781fcb2ce0302611",
+    "short_sha": "0b0e1ac",
+    "message": "fix: 游戏自定义分辨率过小时，放大镜画面被拉伸",
+    "created_at": "2026-10-30T11:33:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41049276141"
+  },
+  {
+    "id": 41049275858,
+    "sha": "0b0e1ac8ae53ef65767c8f7e781fcb2ce0302611",
+    "short_sha": "0b0e1ac",
+    "message": "fix: 游戏自定义分辨率过小时，放大镜画面被拉伸",
+    "created_at": "2026-10-30T11:33:35Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41049275858"
+  },
+  {
+    "id": 41040704640,
+    "sha": "d7af735a3077e62b7b0bb91c1ba35a7d6676381a",
+    "short_sha": "d7af735",
+    "message": "feat: 输入法遮挡画面时提供放大镜窗口",
+    "created_at": "2026-10-30T10:25:19Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41040704640"
+  },
+  {
+    "id": 41040704880,
+    "sha": "d7af735a3077e62b7b0bb91c1ba35a7d6676381a",
+    "short_sha": "d7af735",
+    "message": "feat: 输入法遮挡画面时提供放大镜窗口",
+    "created_at": "2026-10-30T10:25:19Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41040704880"
+  },
+  {
+    "id": 40987226830,
+    "sha": "cdba79fa53b92624cca2cb806f58934ac879445c",
+    "short_sha": "cdba79f",
+    "message": "Update version_map.json",
+    "created_at": "2026-10-30T01:40:20Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40987226830"
+  },
+  {
+    "id": 40985785078,
+    "sha": "d3078f3f9769420b168863990a71ff0cd0f28929",
+    "short_sha": "d3078f3",
+    "message": "1.3.4.3",
+    "created_at": "2026-10-30T01:25:24Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40985785078"
   }
 ]
