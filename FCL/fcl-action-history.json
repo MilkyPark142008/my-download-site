@@ -1,5 +1,21 @@
 [
   {
+    "id": 45731171494,
+    "sha": "617ab175789c3f5436943892b6f53904e9404a99",
+    "short_sha": "617ab17",
+    "message": "fix: 将 FFmpeg 插件以标准命令名暴露进游戏 PATH (#2039)\n\n插件把 ffmpeg/ffprobe 打包成 native 目录内的 libffmpeg.so、libffprobe.so，此前只把插件目录加入 PATH，命令名对不上，游戏内按 PATH 探测 ffmpeg 的模组（如 Frameback）无法命中；java_exec_hooks.c 的 exec hook 也只覆盖程序名为 \"ffmpeg\" 的 Java 调用。\n\n- 在 files/ffmpeg_bin 内维护 ffmpeg/ffprobe 指向插件可执行文件的符号链接，启动时把该目录置于 PATH 最前\n- 保留插件目录到 LD_LIBRARY_PATH：libffmpeg.so 无 RUNPATH，依赖库同在插件目录内\n- 插件禁用、卸载或升级后重置状态并清理悬空链接；单个链接失败不影响其他命令，主命令链接不可用时目录不进入 PATH\n- 启动器缓存原始 PATH，修复重复启动时环境变量逐次叠加",
+    "created_at": "2026-11-26T00:46:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45731171494"
+  },
+  {
+    "id": 45731171471,
+    "sha": "617ab175789c3f5436943892b6f53904e9404a99",
+    "short_sha": "617ab17",
+    "message": "fix: 将 FFmpeg 插件以标准命令名暴露进游戏 PATH (#2039)\n\n插件把 ffmpeg/ffprobe 打包成 native 目录内的 libffmpeg.so、libffprobe.so，此前只把插件目录加入 PATH，命令名对不上，游戏内按 PATH 探测 ffmpeg 的模组（如 Frameback）无法命中；java_exec_hooks.c 的 exec hook 也只覆盖程序名为 \"ffmpeg\" 的 Java 调用。\n\n- 在 files/ffmpeg_bin 内维护 ffmpeg/ffprobe 指向插件可执行文件的符号链接，启动时把该目录置于 PATH 最前\n- 保留插件目录到 LD_LIBRARY_PATH：libffmpeg.so 无 RUNPATH，依赖库同在插件目录内\n- 插件禁用、卸载或升级后重置状态并清理悬空链接；单个链接失败不影响其他命令，主命令链接不可用时目录不进入 PATH\n- 启动器缓存原始 PATH，修复重复启动时环境变量逐次叠加",
+    "created_at": "2026-11-26T00:46:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45731171471"
+  },
+  {
     "id": 45650669346,
     "sha": "cbfb21dd769a3ca5b07cba9847571199f4804733",
     "short_sha": "cbfb21d",
@@ -382,21 +398,5 @@
     "message": "refactor: 放大镜迁移至 Kotlin，修复平移死区与可见性细节\n\n- 按项目惯例将 InputMagnifierView 迁移为 Kotlin\n- 修复低分辨率帧下取样区域被钉死在整帧适配的死区：zoom=1 为整帧概览，\n  任何放大立即裁切且可平移（区域 = 视口 × fitScale ÷ zoom，等比不拉伸）\n- 平移加 0.5 阻尼，小窗口内更易定位\n- 放大镜画面回读按 33ms 节流，打开时强制捕获\n- 描边改走 foreground 绘制（background 描边会被 viewport 画面盖住），\n  白色 3dp 圆角边框提示当前为放大画面\n- 手动打开放大镜时重置 dismissedForInput，避免输入法动画抖动将其自动收回\n- 移除搜索图标被运行时覆盖的 tint",
     "created_at": "2026-10-30T14:29:41Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41072205126"
-  },
-  {
-    "id": 41049276141,
-    "sha": "0b0e1ac8ae53ef65767c8f7e781fcb2ce0302611",
-    "short_sha": "0b0e1ac",
-    "message": "fix: 游戏自定义分辨率过小时，放大镜画面被拉伸",
-    "created_at": "2026-10-30T11:33:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41049276141"
-  },
-  {
-    "id": 41049275858,
-    "sha": "0b0e1ac8ae53ef65767c8f7e781fcb2ce0302611",
-    "short_sha": "0b0e1ac",
-    "message": "fix: 游戏自定义分辨率过小时，放大镜画面被拉伸",
-    "created_at": "2026-10-30T11:33:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41049275858"
   }
 ]
