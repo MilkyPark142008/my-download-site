@@ -224,14 +224,6 @@
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44997914692"
   },
   {
-    "id": 44916567752,
-    "sha": "32483db128c47622d96e42abf9f5d1912a28a040",
-    "short_sha": "32483db",
-    "message": "fix: 优化背景模糊性能与渲染兼容性\n\n- 静态背景使用缓存并修复设置流实时预览\n- 动态背景按半径采样并优化三次盒式模糊\n- 修复 graphicsLayer 变换下的背景对齐\n- 添加 JVM 与 Android 沙箱回归测试\n\nCo-Authored-By: Claude Code <noreply@anthropic.com>",
-    "created_at": "2026-11-21T14:56:15Z",
-    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/44916567752"
-  },
-  {
     "id": 41060394940,
     "sha": "ad23dc41da36e3338a75d86898d1016a83e0d100",
     "short_sha": "ad23dc4",
@@ -398,5 +390,13 @@
     "message": "oops: 忘给调试代码去掉了，我是🐖",
     "created_at": "2026-10-29T07:07:46Z",
     "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40833460630"
+  },
+  {
+    "id": 40831209157,
+    "sha": "1c69578edf071da0390d29af76e7bd4707d3a52a",
+    "short_sha": "1c69578",
+    "message": "Merge pull request #2148 from ZalithLauncher/feat/splash-welcome\n\nfeat: 首次打开启动器时进入欢迎页面",
+    "created_at": "2026-10-29T06:46:02Z",
+    "html_url": "https://github.com/ZalithLauncher/ZalithLauncher2/actions/runs/40831209157"
   }
 ]
