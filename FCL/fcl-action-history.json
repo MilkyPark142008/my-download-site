@@ -1,11 +1,91 @@
 [
   {
+    "id": 46132379680,
+    "sha": "d26e782081984365ef765cae8e04125f4e96a9c9",
+    "short_sha": "d26e782",
+    "message": "fix: 补充 FIT_CENTER 降采样策略，确保截图解码尺寸封顶在 1280 以内",
+    "created_at": "2026-11-28T09:50:46Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/46132379680"
+  },
+  {
+    "id": 46132109243,
+    "sha": "e6d6d9d68b3856c1085e88472d7d1c878b1bf048",
+    "short_sha": "e6d6d9d",
+    "message": "fix: 新阶段投递时取消空闲自停计时，常驻 JVM 标志补 volatile",
+    "created_at": "2026-11-28T09:47:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/46132109243"
+  },
+  {
+    "id": 46132109189,
+    "sha": "e6d6d9d68b3856c1085e88472d7d1c878b1bf048",
+    "short_sha": "e6d6d9d",
+    "message": "fix: 新阶段投递时取消空闲自停计时，常驻 JVM 标志补 volatile",
+    "created_at": "2026-11-28T09:47:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/46132109189"
+  },
+  {
+    "id": 46132107511,
+    "sha": "e6d6d9d68b3856c1085e88472d7d1c878b1bf048",
+    "short_sha": "e6d6d9d",
+    "message": "fix: 新阶段投递时取消空闲自停计时，常驻 JVM 标志补 volatile",
+    "created_at": "2026-11-28T09:47:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/46132107511"
+  },
+  {
+    "id": 46132107515,
+    "sha": "e6d6d9d68b3856c1085e88472d7d1c878b1bf048",
+    "short_sha": "e6d6d9d",
+    "message": "fix: 新阶段投递时取消空闲自停计时，常驻 JVM 标志补 volatile",
+    "created_at": "2026-11-28T09:47:16Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/46132107515"
+  },
+  {
+    "id": 46131961894,
+    "sha": "e6b8726b589a12aff1744e0b06944fd542612e11",
+    "short_sha": "e6b8726",
+    "message": "fix: 修复安装器常驻 JVM 复用的审查问题\n\n- 换 JRE 重试链与常驻 JVM 冲突：:jvm 阶段结束写入 JRE 状态文件，主进程\n  start 前预读，JRE 不一致时先回收常驻进程再启动；服务内静态守卫降级为兜底\n- 阶段 main 补设线程上下文类加载器，失败路径统一恢复 TCCL 并只 Detach 自身\n  attach 的线程；类加载器父级改用平台类加载器，修复 JDK9+ 平台模块不可见\n- classpath 转 URL 改走 File.toURI().toURL()，支持含空格/非 ASCII 路径，\n  空 classpath 显式拒绝\n- launch() 参数解析或运行环境装配失败时补发退出码，避免界面与安装器主进程\n  等不到结束信号\n- nominal_exit 原子幂等，code 0 也回调 onExit，删除 global ref 后置空；\n  setupExitTrap 原子交换并回收旧引用\n- fcl_loader 退出陷阱与日志管道各错误路径补全资源释放；initializeHooks 改为\n  pthread_once 只执行一次；exit hook 自旋改为 pause 停车\n- 常驻 JVM 空闲自停时 onDestroy 主动结束进程释放内存；修正 ProcessService\n  过时注释与空 session 校验",
+    "created_at": "2026-11-28T09:43:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/46131961894"
+  },
+  {
+    "id": 46131961857,
+    "sha": "e6b8726b589a12aff1744e0b06944fd542612e11",
+    "short_sha": "e6b8726",
+    "message": "fix: 修复安装器常驻 JVM 复用的审查问题\n\n- 换 JRE 重试链与常驻 JVM 冲突：:jvm 阶段结束写入 JRE 状态文件，主进程\n  start 前预读，JRE 不一致时先回收常驻进程再启动；服务内静态守卫降级为兜底\n- 阶段 main 补设线程上下文类加载器，失败路径统一恢复 TCCL 并只 Detach 自身\n  attach 的线程；类加载器父级改用平台类加载器，修复 JDK9+ 平台模块不可见\n- classpath 转 URL 改走 File.toURI().toURL()，支持含空格/非 ASCII 路径，\n  空 classpath 显式拒绝\n- launch() 参数解析或运行环境装配失败时补发退出码，避免界面与安装器主进程\n  等不到结束信号\n- nominal_exit 原子幂等，code 0 也回调 onExit，删除 global ref 后置空；\n  setupExitTrap 原子交换并回收旧引用\n- fcl_loader 退出陷阱与日志管道各错误路径补全资源释放；initializeHooks 改为\n  pthread_once 只执行一次；exit hook 自旋改为 pause 停车\n- 常驻 JVM 空闲自停时 onDestroy 主动结束进程释放内存；修正 ProcessService\n  过时注释与空 session 校验",
+    "created_at": "2026-11-28T09:43:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/46131961857"
+  },
+  {
+    "id": 46131957711,
+    "sha": "e6b8726b589a12aff1744e0b06944fd542612e11",
+    "short_sha": "e6b8726",
+    "message": "fix: 修复安装器常驻 JVM 复用的审查问题\n\n- 换 JRE 重试链与常驻 JVM 冲突：:jvm 阶段结束写入 JRE 状态文件，主进程\n  start 前预读，JRE 不一致时先回收常驻进程再启动；服务内静态守卫降级为兜底\n- 阶段 main 补设线程上下文类加载器，失败路径统一恢复 TCCL 并只 Detach 自身\n  attach 的线程；类加载器父级改用平台类加载器，修复 JDK9+ 平台模块不可见\n- classpath 转 URL 改走 File.toURI().toURL()，支持含空格/非 ASCII 路径，\n  空 classpath 显式拒绝\n- launch() 参数解析或运行环境装配失败时补发退出码，避免界面与安装器主进程\n  等不到结束信号\n- nominal_exit 原子幂等，code 0 也回调 onExit，删除 global ref 后置空；\n  setupExitTrap 原子交换并回收旧引用\n- fcl_loader 退出陷阱与日志管道各错误路径补全资源释放；initializeHooks 改为\n  pthread_once 只执行一次；exit hook 自旋改为 pause 停车\n- 常驻 JVM 空闲自停时 onDestroy 主动结束进程释放内存；修正 ProcessService\n  过时注释与空 session 校验",
+    "created_at": "2026-11-28T09:43:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/46131957711"
+  },
+  {
+    "id": 46131957705,
+    "sha": "e6b8726b589a12aff1744e0b06944fd542612e11",
+    "short_sha": "e6b8726",
+    "message": "fix: 修复安装器常驻 JVM 复用的审查问题\n\n- 换 JRE 重试链与常驻 JVM 冲突：:jvm 阶段结束写入 JRE 状态文件，主进程\n  start 前预读，JRE 不一致时先回收常驻进程再启动；服务内静态守卫降级为兜底\n- 阶段 main 补设线程上下文类加载器，失败路径统一恢复 TCCL 并只 Detach 自身\n  attach 的线程；类加载器父级改用平台类加载器，修复 JDK9+ 平台模块不可见\n- classpath 转 URL 改走 File.toURI().toURL()，支持含空格/非 ASCII 路径，\n  空 classpath 显式拒绝\n- launch() 参数解析或运行环境装配失败时补发退出码，避免界面与安装器主进程\n  等不到结束信号\n- nominal_exit 原子幂等，code 0 也回调 onExit，删除 global ref 后置空；\n  setupExitTrap 原子交换并回收旧引用\n- fcl_loader 退出陷阱与日志管道各错误路径补全资源释放；initializeHooks 改为\n  pthread_once 只执行一次；exit hook 自旋改为 pause 停车\n- 常驻 JVM 空闲自停时 onDestroy 主动结束进程释放内存；修正 ProcessService\n  过时注释与空 session 校验",
+    "created_at": "2026-11-28T09:43:22Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/46131957705"
+  },
+  {
     "id": 45937759856,
     "sha": "00c17f8404d35b224b2d3767697d8eb56deceb69",
     "short_sha": "00c17f8",
     "message": "Update version_map.json",
     "created_at": "2026-11-27T04:04:09Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45937759856"
+  },
+  {
+    "id": 45936638172,
+    "sha": "bc0f903de2721b722742a4a1d72e5d77b8afc1a8",
+    "short_sha": "bc0f903",
+    "message": "1.3.4.9",
+    "created_at": "2026-11-27T03:51:49Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45936638172"
   },
   {
     "id": 45936638235,
@@ -24,12 +104,12 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45936638236"
   },
   {
-    "id": 45936638172,
-    "sha": "bc0f903de2721b722742a4a1d72e5d77b8afc1a8",
-    "short_sha": "bc0f903",
-    "message": "1.3.4.9",
-    "created_at": "2026-11-27T03:51:49Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45936638172"
+    "id": 45731171494,
+    "sha": "617ab175789c3f5436943892b6f53904e9404a99",
+    "short_sha": "617ab17",
+    "message": "fix: 将 FFmpeg 插件以标准命令名暴露进游戏 PATH (#2039)\n\n插件把 ffmpeg/ffprobe 打包成 native 目录内的 libffmpeg.so、libffprobe.so，此前只把插件目录加入 PATH，命令名对不上，游戏内按 PATH 探测 ffmpeg 的模组（如 Frameback）无法命中；java_exec_hooks.c 的 exec hook 也只覆盖程序名为 \"ffmpeg\" 的 Java 调用。\n\n- 在 files/ffmpeg_bin 内维护 ffmpeg/ffprobe 指向插件可执行文件的符号链接，启动时把该目录置于 PATH 最前\n- 保留插件目录到 LD_LIBRARY_PATH：libffmpeg.so 无 RUNPATH，依赖库同在插件目录内\n- 插件禁用、卸载或升级后重置状态并清理悬空链接；单个链接失败不影响其他命令，主命令链接不可用时目录不进入 PATH\n- 启动器缓存原始 PATH，修复重复启动时环境变量逐次叠加",
+    "created_at": "2026-11-26T00:46:47Z",
+    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45731171494"
   },
   {
     "id": 45731171471,
@@ -38,14 +118,6 @@
     "message": "fix: 将 FFmpeg 插件以标准命令名暴露进游戏 PATH (#2039)\n\n插件把 ffmpeg/ffprobe 打包成 native 目录内的 libffmpeg.so、libffprobe.so，此前只把插件目录加入 PATH，命令名对不上，游戏内按 PATH 探测 ffmpeg 的模组（如 Frameback）无法命中；java_exec_hooks.c 的 exec hook 也只覆盖程序名为 \"ffmpeg\" 的 Java 调用。\n\n- 在 files/ffmpeg_bin 内维护 ffmpeg/ffprobe 指向插件可执行文件的符号链接，启动时把该目录置于 PATH 最前\n- 保留插件目录到 LD_LIBRARY_PATH：libffmpeg.so 无 RUNPATH，依赖库同在插件目录内\n- 插件禁用、卸载或升级后重置状态并清理悬空链接；单个链接失败不影响其他命令，主命令链接不可用时目录不进入 PATH\n- 启动器缓存原始 PATH，修复重复启动时环境变量逐次叠加",
     "created_at": "2026-11-26T00:46:47Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45731171471"
-  },
-  {
-    "id": 45731171494,
-    "sha": "617ab175789c3f5436943892b6f53904e9404a99",
-    "short_sha": "617ab17",
-    "message": "fix: 将 FFmpeg 插件以标准命令名暴露进游戏 PATH (#2039)\n\n插件把 ffmpeg/ffprobe 打包成 native 目录内的 libffmpeg.so、libffprobe.so，此前只把插件目录加入 PATH，命令名对不上，游戏内按 PATH 探测 ffmpeg 的模组（如 Frameback）无法命中；java_exec_hooks.c 的 exec hook 也只覆盖程序名为 \"ffmpeg\" 的 Java 调用。\n\n- 在 files/ffmpeg_bin 内维护 ffmpeg/ffprobe 指向插件可执行文件的符号链接，启动时把该目录置于 PATH 最前\n- 保留插件目录到 LD_LIBRARY_PATH：libffmpeg.so 无 RUNPATH，依赖库同在插件目录内\n- 插件禁用、卸载或升级后重置状态并清理悬空链接；单个链接失败不影响其他命令，主命令链接不可用时目录不进入 PATH\n- 启动器缓存原始 PATH，修复重复启动时环境变量逐次叠加",
-    "created_at": "2026-11-26T00:46:47Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/45731171494"
   },
   {
     "id": 45650669346,
@@ -296,30 +368,6 @@
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44977854688"
   },
   {
-    "id": 44857457593,
-    "sha": "722e2361f8f3013b6ebc026e52749c1bf3b5be71",
-    "short_sha": "722e236",
-    "message": "fix: 更新 lwjgl 3.4.1 资源版本，触发运行时重新解压",
-    "created_at": "2026-11-21T02:43:45Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44857457593"
-  },
-  {
-    "id": 44857229690,
-    "sha": "b6d7db4f69c2846a6f926fc8863dac480f51c679",
-    "short_sha": "b6d7db4",
-    "message": "fix: 更新 lwjgl 3.4.1 natives，修复 libshaderc 缺少 spvFuzzerOptions/spvReducerOptions 等符号",
-    "created_at": "2026-11-21T02:40:57Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44857229690"
-  },
-  {
-    "id": 44854045617,
-    "sha": "d5fb59f0c901af26aef088542702a9da76695a8f",
-    "short_sha": "d5fb59f",
-    "message": "fix: 更新 lwjgl 3.4.1 natives，修复 libshaderc 缺少 spvSoftwareVersionString 符号",
-    "created_at": "2026-11-21T02:06:37Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/44854045617"
-  },
-  {
     "id": 41082818872,
     "sha": "5e4d584cc205655be77415820945bb7b712929c6",
     "short_sha": "5e4d584",
@@ -350,53 +398,5 @@
     "message": "refactor: 放大镜迁移至 Kotlin，修复平移死区与可见性细节\n\n- 按项目惯例将 InputMagnifierView 迁移为 Kotlin\n- 修复低分辨率帧下取样区域被钉死在整帧适配的死区：zoom=1 为整帧概览，\n  任何放大立即裁切且可平移（区域 = 视口 × fitScale ÷ zoom，等比不拉伸）\n- 平移加 0.5 阻尼，小窗口内更易定位\n- 放大镜画面回读按 33ms 节流，打开时强制捕获\n- 描边改走 foreground 绘制（background 描边会被 viewport 画面盖住），\n  白色 3dp 圆角边框提示当前为放大画面\n- 手动打开放大镜时重置 dismissedForInput，避免输入法动画抖动将其自动收回\n- 移除搜索图标被运行时覆盖的 tint",
     "created_at": "2026-10-30T14:29:41Z",
     "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41072205125"
-  },
-  {
-    "id": 41072205126,
-    "sha": "d0488a25a383f095d017e1ad4a5add2a68f932f7",
-    "short_sha": "d0488a2",
-    "message": "refactor: 放大镜迁移至 Kotlin，修复平移死区与可见性细节\n\n- 按项目惯例将 InputMagnifierView 迁移为 Kotlin\n- 修复低分辨率帧下取样区域被钉死在整帧适配的死区：zoom=1 为整帧概览，\n  任何放大立即裁切且可平移（区域 = 视口 × fitScale ÷ zoom，等比不拉伸）\n- 平移加 0.5 阻尼，小窗口内更易定位\n- 放大镜画面回读按 33ms 节流，打开时强制捕获\n- 描边改走 foreground 绘制（background 描边会被 viewport 画面盖住），\n  白色 3dp 圆角边框提示当前为放大画面\n- 手动打开放大镜时重置 dismissedForInput，避免输入法动画抖动将其自动收回\n- 移除搜索图标被运行时覆盖的 tint",
-    "created_at": "2026-10-30T14:29:41Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41072205126"
-  },
-  {
-    "id": 41049276141,
-    "sha": "0b0e1ac8ae53ef65767c8f7e781fcb2ce0302611",
-    "short_sha": "0b0e1ac",
-    "message": "fix: 游戏自定义分辨率过小时，放大镜画面被拉伸",
-    "created_at": "2026-10-30T11:33:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41049276141"
-  },
-  {
-    "id": 41049275858,
-    "sha": "0b0e1ac8ae53ef65767c8f7e781fcb2ce0302611",
-    "short_sha": "0b0e1ac",
-    "message": "fix: 游戏自定义分辨率过小时，放大镜画面被拉伸",
-    "created_at": "2026-10-30T11:33:35Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41049275858"
-  },
-  {
-    "id": 41040704640,
-    "sha": "d7af735a3077e62b7b0bb91c1ba35a7d6676381a",
-    "short_sha": "d7af735",
-    "message": "feat: 输入法遮挡画面时提供放大镜窗口",
-    "created_at": "2026-10-30T10:25:19Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41040704640"
-  },
-  {
-    "id": 41040704880,
-    "sha": "d7af735a3077e62b7b0bb91c1ba35a7d6676381a",
-    "short_sha": "d7af735",
-    "message": "feat: 输入法遮挡画面时提供放大镜窗口",
-    "created_at": "2026-10-30T10:25:19Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/41040704880"
-  },
-  {
-    "id": 40987226830,
-    "sha": "cdba79fa53b92624cca2cb806f58934ac879445c",
-    "short_sha": "cdba79f",
-    "message": "Update version_map.json",
-    "created_at": "2026-10-30T01:40:20Z",
-    "html_url": "https://github.com/FCL-Team/FoldCraftLauncher/actions/runs/40987226830"
   }
 ]
